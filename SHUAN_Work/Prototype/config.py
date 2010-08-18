@@ -1,1 +1,0 @@
-../../../../../Programming/ShuanSlice/src/config.py
