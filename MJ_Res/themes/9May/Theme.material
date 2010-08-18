@@ -1,0 +1,411 @@
+
+material ThemeMaterials/Group1/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture victory_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group1/2 : ThemeMaterials/Group1/1
+{
+}
+material ThemeMaterials/Group1/3 : ThemeMaterials/Group1/1
+{
+}
+material ThemeMaterials/Group1/4 : ThemeMaterials/Group1/1
+{
+}
+
+material ThemeMaterials/Group2/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture red_star_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group2/2 : ThemeMaterials/Group2/1
+{
+}
+material ThemeMaterials/Group2/3 : ThemeMaterials/Group2/1
+{
+}
+material ThemeMaterials/Group2/4 : ThemeMaterials/Group2/1
+{
+}
+
+material ThemeMaterials/Group3/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture alexandr_nevsky_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group3/2 : ThemeMaterials/Group3/1
+{
+}
+material ThemeMaterials/Group3/3 : ThemeMaterials/Group3/1
+{
+}
+material ThemeMaterials/Group3/4 : ThemeMaterials/Group3/1
+{
+}
+
+material ThemeMaterials/Group4/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture soviet_union_hero_medal.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group4/2 : ThemeMaterials/Group4/1
+{
+}
+material ThemeMaterials/Group4/3 : ThemeMaterials/Group4/1
+{
+}
+material ThemeMaterials/Group4/4 : ThemeMaterials/Group4/1
+{
+}
+
+material ThemeMaterials/Group5/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture labor_during_war_medal.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group5/2 : ThemeMaterials/Group5/1
+{
+}
+material ThemeMaterials/Group5/3 : ThemeMaterials/Group5/1
+{
+}
+material ThemeMaterials/Group5/4 : ThemeMaterials/Group5/1
+{
+}
+
+material ThemeMaterials/Group6/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture khmelnitsky_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group6/2 : ThemeMaterials/Group6/1
+{
+}
+material ThemeMaterials/Group6/3 : ThemeMaterials/Group6/1
+{
+}
+material ThemeMaterials/Group6/4 : ThemeMaterials/Group6/1
+{
+}
+
+material ThemeMaterials/Group7/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture nakhimov_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group7/2 : ThemeMaterials/Group7/1
+{
+}
+material ThemeMaterials/Group7/3 : ThemeMaterials/Group7/1
+{
+}
+material ThemeMaterials/Group7/4 : ThemeMaterials/Group7/1
+{
+}
+
+material ThemeMaterials/Group8/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture glory_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group8/2 : ThemeMaterials/Group8/1
+{
+}
+material ThemeMaterials/Group8/3 : ThemeMaterials/Group8/1
+{
+}
+material ThemeMaterials/Group8/4 : ThemeMaterials/Group8/1
+{
+}
+
+material ThemeMaterials/Group9/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture kutuzov_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group9/2 : ThemeMaterials/Group9/1
+{
+}
+material ThemeMaterials/Group9/3 : ThemeMaterials/Group9/1
+{
+}
+material ThemeMaterials/Group9/4 : ThemeMaterials/Group9/1
+{
+}
+
+material ThemeMaterials/Group10/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture lenin_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group10/2 : ThemeMaterials/Group10/1
+{
+}
+material ThemeMaterials/Group10/3 : ThemeMaterials/Group10/1
+{
+}
+material ThemeMaterials/Group10/4 : ThemeMaterials/Group10/1
+{
+}
+
+material ThemeMaterials/Group11/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture red_banner_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group11/2 : ThemeMaterials/Group11/1
+{
+}
+material ThemeMaterials/Group11/3 : ThemeMaterials/Group11/1
+{
+}
+material ThemeMaterials/Group11/4 : ThemeMaterials/Group11/1
+{
+}
+
+material ThemeMaterials/Group12/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture suvorov_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group12/2 : ThemeMaterials/Group12/1
+{
+}
+material ThemeMaterials/Group12/3 : ThemeMaterials/Group12/1
+{
+}
+material ThemeMaterials/Group12/4 : ThemeMaterials/Group12/1
+{
+}
+
+material ThemeMaterials/Group13/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture patriotic_war_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group13/2 : ThemeMaterials/Group13/1
+{
+}
+material ThemeMaterials/Group13/3 : ThemeMaterials/Group13/1
+{
+}
+material ThemeMaterials/Group13/4 : ThemeMaterials/Group13/1
+{
+}
+
+material ThemeMaterials/Group14/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture ushakov_order.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group14/2 : ThemeMaterials/Group14/1
+{
+}
+material ThemeMaterials/Group14/3 : ThemeMaterials/Group14/1
+{
+}
+material ThemeMaterials/Group14/4 : ThemeMaterials/Group14/1
+{
+}
+
+material ThemeMaterials/Group15/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture partisan_medal.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group15/2 : ThemeMaterials/Group15/1
+{
+}
+material ThemeMaterials/Group15/3 : ThemeMaterials/Group15/1
+{
+}
+material ThemeMaterials/Group15/4 : ThemeMaterials/Group15/1
+{
+}
+
+material ThemeMaterials/Group16/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture victory_over_germany_medal.png
+            }
+        }
+    }
+}
+material ThemeMaterials/Group16/2 : ThemeMaterials/Group16/1
+{
+}
+material ThemeMaterials/Group16/3 : ThemeMaterials/Group16/1
+{
+}
+material ThemeMaterials/Group16/4 : ThemeMaterials/Group16/1
+{
+}
+
+material ThemeMaterials/Scene
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture background.png
+            }
+        }
+    }
+}
+
+material ThemeMaterials/YouLose
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture ukaz.jpg
+            }
+        }
+    }
+}
+
+material ThemeMaterials/YouWin
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture victory.png
+            }
+        }
+    }
+}
+

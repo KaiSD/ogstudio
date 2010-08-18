@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Imageset Name="Logos" Imagefile="logos.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true" >
+    <Image Name="OGS" XPos="1" YPos="1" Width="324" Height="100" />
+    <Image Name="OGRE" XPos="1" YPos="661" Width="300" Height="135" />
+    <Image Name="CEGUI" XPos="1" YPos="501" Width="300" Height="159" />
+    <Image Name="OpenAL" XPos="1" YPos="102" Width="300" Height="162" />
+    <Image Name="OpenGL" XPos="130" YPos="367" Width="300" Height="133" />
+</Imageset>

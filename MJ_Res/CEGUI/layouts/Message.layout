@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Message" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="Visible" Value="False" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/Button" Name="Message/Window" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="Text" Value="Message" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Property Name="WantsMultiClickEvents" Value="True" />
+        </Window>
+    </Window>
+</GUILayout>

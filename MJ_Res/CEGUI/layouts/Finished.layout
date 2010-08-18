@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Finished" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/StaticText" Name="Finished/Rating" >
+            <Property Name="Text" Value="Enter your name:" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.1,0},{0.5,-100},{0.9,0},{0.5,100}}" />
+            <Window Type="Vanilla/Editbox" Name="Finished/Rating/Edit" >
+                <Property Name="MaxTextLength" Value="4294967295" />
+                <Property Name="UnifiedAreaRect" Value="{{0.1,0},{0.4,0},{0.9,0},{0.6,0}}" />
+                <Property Name="TextParsingEnabled" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Finished/Holder" >
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-60},{0,1024},{1,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="MousePassThroughEnabled" Value="True" />
+            <Window Type="Vanilla/Button" Name="Finished/Restart" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Restart44&apos;]" />
+                <Property Name="UnifiedAreaRect" Value="{{0.835,0},{0.07,0},{0.885,0},{0.93,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Finished/Undo" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Undo44&apos;]" />
+                <Property Name="UnifiedAreaRect" Value="{{0.89,0},{0.07,0},{0.94,0},{0.93,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Finished/Shuffle" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Shuffle44&apos;]" />
+                <Property Name="UnifiedAreaRect" Value="{{0.945,0},{0.07,0},{0.995,0},{0.93,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Finished/Start" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:New44&apos;]" />
+                <Property Name="UnifiedAreaRect" Value="{{0.78,0},{0.07,0},{0.83,0},{0.93,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

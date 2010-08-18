@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Settings" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="DefaultWindow" Name="Settings/Options" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.995,0},{0,60}}" />
+            <Window Type="Vanilla/Button" Name="Settings/BtnGame" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Game" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.247,0},{1,0}}" />
+                <Property Name="WantsMultiClickEvents" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Settings/BtnVideo" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Video" />
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0,0},{0.497,0},{1,0}}" />
+                <Property Name="WantsMultiClickEvents" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Settings/BtnAudio" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Audio" />
+                <Property Name="UnifiedAreaRect" Value="{{0.5,0},{0,0},{0.747,0},{1,0}}" />
+                <Property Name="WantsMultiClickEvents" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Settings/BtnControls" >
+                <Property Name="Text" Value="Controls" />
+                <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0,0},{0.999,0},{1,0}}" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="Settings/Buttons" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.993,-60},{0.995,0},{0.993,0}}" />
+            <Window Type="Vanilla/Button" Name="Settings/OK" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="OK" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.3,0},{1,0}}" />
+                <Property Name="WantsMultiClickEvents" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Settings/Cancel" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Cancel" />
+                <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0,0},{0.65,0},{1,0}}" />
+                <Property Name="WantsMultiClickEvents" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Settings/Apply" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Apply" />
+                <Property Name="UnifiedAreaRect" Value="{{0.7,0},{0,0},{1,0},{1,0}}" />
+                <Property Name="WantsMultiClickEvents" Value="True" />
+            </Window>
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Settings/Game" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
+            <Window Type="Vanilla/StaticText" Name="Settings/LbDifficulty" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Difficulty:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0,0},{0.995,0},{0.072,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListDifficulties" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.995,0},{0.5,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbTheme" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="Text" Value="Theme:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.995,0},{0.567,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/MultiColumnList" Name="Settings/ListThemes" >
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.995,0},{0.993,0}}" />
+            </Window>
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Settings/Video" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListResolutions" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.789,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbResolution" >
+                <Property Name="Text" Value="Resolution:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbAA" >
+                <Property Name="Text" Value="Anti-aliasing:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.647,0},{0.995,0},{0.714,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListAA" >
+                <Property Name="Font" Value="Arial-16" />
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.714,0},{0.995,0},{0.995,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbTile" >
+                <Property Name="Text" Value="Tile:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.005,0},{0.995,0},{0.072,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListTiles" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.072,0},{0.995,0},{0.3,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/FullScreen" >
+                <Property Name="Text" Value="Full screen" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.789,0},{0.495,0},{0.856,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
+                <Property Name="Text" Value="VSync" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.856,0},{0.495,0},{0.923,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
+                <Property Name="Text" Value="Shadows" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.923,0},{0.495,0},{0.995,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbFiltering" >
+                <Property Name="Text" Value="Filtering:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.3,0},{0.995,0},{0.367,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListFiltering" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.367,0},{0.995,0},{0.647,0}}" />
+            </Window>
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Settings/Audio" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolGeneral" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="0.1" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="1" />
+                <Property Name="ScrollPosition" Value="0" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.107,0}}" />
+            </Window>
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolBG" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="0.1" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="1" />
+                <Property Name="ScrollPosition" Value="0" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.174,0},{0.495,0},{0.209,0}}" />
+            </Window>
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolActions" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="0.1" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="1" />
+                <Property Name="ScrollPosition" Value="0" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.276,0},{0.495,0},{0.311,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/VolGeneral" >
+                <Property Name="Text" Value="General volume:" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/VolBG" >
+                <Property Name="Text" Value="Background volume:" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.107,0},{0.495,0},{0.174,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/VolActions" >
+                <Property Name="Text" Value="Actions&apos; volume:" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.209,0},{0.495,0},{0.276,0}}" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListMusicPacks" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.072,0},{0.995,0},{0.992,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbMusicPacks" >
+                <Property Name="Text" Value="Music packs:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.005,0},{0.995,0},{0.072,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Settings/Controls" >
+            <Property Name="Visible" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollMouseSensitivity" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="0.1" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="1" />
+                <Property Name="ScrollPosition" Value="0" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.995,0},{0.107,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbMouseSensitivity" >
+                <Property Name="Text" Value="Mouse sensitivity:" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.995,0},{0.072,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/DynCam" >
+                <Property Name="Text" Value="DynCam" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.110,0},{0.995,0},{0.172,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

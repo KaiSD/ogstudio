@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="About" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/StaticText" Name="About/Text" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.
+ 
+[image='set:Logos image:OGS'] team:
+Michael Kapelko - code and content;
+Ivan Korystin - gameplay design, content and QA.
+ 
+Third-party resources:
+Raquel Ravanini - images for "Classic"  theme.
+Kevin MacLeod - all tracks in "Eastern" and "Piano" music packs. Tracks "Funkorama", "Neo Western" and "Protofunk" in "Modern" music pack.
+Dano - Tracks "Crazy from the message", "King or an alien", "Sun spark", "The time isnt right", "The wire" and "Today then tomorrow" in "Modern" music pack.
+Fenster - Track "Free Software" in "Modern" music pack.
+ 
+More info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.
+ 
+Libraries:
+[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']
+ 
+Thanks to:
+- Ogre3D team/community for the engine and help;
+- Lightfeather team/community for help while this game has been using Lightfeather engine;
+- OpenAL-Soft/ALURE developer KittyCat for help.
+Special thanks to CrazyEddie for good GUI system and great support.
+ 
+Web pages:
+[window='About/Link1']
+or
+[window='About/Link2']</Property>
+            <Property Name="VertScrollbar" Value="True" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,-50}}" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+            <Window Type="Vanilla/Button" Name="About/Link1" >
+                <Property Name="Text" Value="http://opengamestudio.org" />
+                <Property Name="UnifiedAreaRect" Value="{{0,6},{0,896.068},{0.4,6},{0.07,896.068}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="About/Link2" >
+                <Property Name="Text" Value="http://osrpgcreation.sf.net" />
+                <Property Name="UnifiedAreaRect" Value="{{0,6},{0,969.895},{0.4,6},{0.07,969.895}}" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="About/Holder" >
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-50},{0,1024},{1,0}}" />
+            <Window Type="Vanilla/Button" Name="About/Back" >
+                <Property Name="Text" Value="[image='set:Icons image:Back32']" />
+                <Property Name="AlwaysOnTop" Value="True" />
+                <Property Name="UnifiedAreaRect" Value="{{0.957,0},{0.1,0},{0.995,0},{0.9,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

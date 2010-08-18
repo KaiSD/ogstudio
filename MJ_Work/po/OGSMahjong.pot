@@ -1,0 +1,141 @@
+
+msgid "Start"
+msgstr ""
+
+msgid "Restart"
+msgstr ""
+
+msgid "Resume"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+msgid "Game"
+msgstr ""
+
+msgid "Video"
+msgstr ""
+
+msgid "Audio"
+msgstr ""
+
+msgid "Controls"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Difficulty:"
+msgstr ""
+
+msgid "Easy"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Classic"
+msgstr ""
+
+msgid "Theme:"
+msgstr ""
+
+msgid "Full screen"
+msgstr ""
+
+msgid "VSync"
+msgstr ""
+
+msgid "Resolution:"
+msgstr ""
+
+msgid "Anti-aliasing:"
+msgstr ""
+
+msgid "Shadows"
+msgstr ""
+
+msgid "Tile:"
+msgstr ""
+
+msgid "Filtering:"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Bilinear"
+msgstr ""
+
+msgid "Trilinear"
+msgstr ""
+
+msgid "Anisotropic"
+msgstr ""
+
+msgid "General volume:"
+msgstr ""
+
+msgid "Background volume:"
+msgstr ""
+
+msgid "Actions' volume:"
+msgstr ""
+
+msgid "Mouse sensitivity:"
+msgstr ""
+
+msgid "Invalid layout"
+msgstr ""
+
+msgid "Invalid layout version"
+msgstr ""
+
+msgid "Enter your name:"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Difficulty"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Music packs:"
+msgstr ""
+
+msgid "These changes will interrupt current party"
+msgstr ""
+
+msgid "The theme does not support selected difficulty"
+msgstr ""
+
+msgid "This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='About/Link1']\nor\n[window='About/Link2']"
+msgstr ""

@@ -1,0 +1,949 @@
+material ThemeMaterials/Group1/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group1/2 : ThemeMaterials/Group1/1
+{
+}
+material ThemeMaterials/Group1/3 : ThemeMaterials/Group1/1
+{
+}
+material ThemeMaterials/Group1/4 : ThemeMaterials/Group1/1
+{
+}
+
+material ThemeMaterials/Group2/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group2/2 : ThemeMaterials/Group2/1
+{
+}
+material ThemeMaterials/Group2/3 : ThemeMaterials/Group2/1
+{
+}
+material ThemeMaterials/Group2/4 : ThemeMaterials/Group2/1
+{
+}
+
+material ThemeMaterials/Group3/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group3/2 : ThemeMaterials/Group3/1
+{
+}
+material ThemeMaterials/Group3/3 : ThemeMaterials/Group3/1
+{
+}
+material ThemeMaterials/Group3/4 : ThemeMaterials/Group3/1
+{
+}
+
+material ThemeMaterials/Group4/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots4.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group4/2 : ThemeMaterials/Group4/1
+{
+}
+material ThemeMaterials/Group4/3 : ThemeMaterials/Group4/1
+{
+}
+material ThemeMaterials/Group4/4 : ThemeMaterials/Group4/1
+{
+}
+
+material ThemeMaterials/Group5/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots5.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group5/2 : ThemeMaterials/Group5/1
+{
+}
+material ThemeMaterials/Group5/3 : ThemeMaterials/Group5/1
+{
+}
+material ThemeMaterials/Group5/4 : ThemeMaterials/Group5/1
+{
+}
+
+material ThemeMaterials/Group6/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots6.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group6/2 : ThemeMaterials/Group6/1
+{
+}
+material ThemeMaterials/Group6/3 : ThemeMaterials/Group6/1
+{
+}
+material ThemeMaterials/Group6/4 : ThemeMaterials/Group6/1
+{
+}
+
+material ThemeMaterials/Group7/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots7.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group7/2 : ThemeMaterials/Group7/1
+{
+}
+material ThemeMaterials/Group7/3 : ThemeMaterials/Group7/1
+{
+}
+material ThemeMaterials/Group7/4 : ThemeMaterials/Group7/1
+{
+}
+
+material ThemeMaterials/Group8/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots8.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group8/2 : ThemeMaterials/Group8/1
+{
+}
+material ThemeMaterials/Group8/3 : ThemeMaterials/Group8/1
+{
+}
+material ThemeMaterials/Group8/4 : ThemeMaterials/Group8/1
+{
+}
+
+material ThemeMaterials/Group9/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dots9.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group9/2 : ThemeMaterials/Group9/1
+{
+}
+material ThemeMaterials/Group9/3 : ThemeMaterials/Group9/1
+{
+}
+material ThemeMaterials/Group9/4 : ThemeMaterials/Group9/1
+{
+}
+
+material ThemeMaterials/Group10/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dragons1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group10/2 : ThemeMaterials/Group10/1
+{
+}
+material ThemeMaterials/Group10/3 : ThemeMaterials/Group10/1
+{
+}
+material ThemeMaterials/Group10/4 : ThemeMaterials/Group10/1
+{
+}
+
+material ThemeMaterials/Group11/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dragons2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group11/2 : ThemeMaterials/Group11/1
+{
+}
+material ThemeMaterials/Group11/3 : ThemeMaterials/Group11/1
+{
+}
+material ThemeMaterials/Group11/4 : ThemeMaterials/Group11/1
+{
+}
+
+material ThemeMaterials/Group12/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture dragons3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group12/2 : ThemeMaterials/Group12/1
+{
+}
+material ThemeMaterials/Group12/3 : ThemeMaterials/Group12/1
+{
+}
+material ThemeMaterials/Group12/4 : ThemeMaterials/Group12/1
+{
+}
+
+material ThemeMaterials/Group13/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture winds1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group13/2 : ThemeMaterials/Group13/1
+{
+}
+material ThemeMaterials/Group13/3 : ThemeMaterials/Group13/1
+{
+}
+material ThemeMaterials/Group13/4 : ThemeMaterials/Group13/1
+{
+}
+
+material ThemeMaterials/Group14/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture winds2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group14/2 : ThemeMaterials/Group14/1
+{
+}
+material ThemeMaterials/Group14/3 : ThemeMaterials/Group14/1
+{
+}
+material ThemeMaterials/Group14/4 : ThemeMaterials/Group14/1
+{
+}
+
+material ThemeMaterials/Group15/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture winds3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group15/2 : ThemeMaterials/Group15/1
+{
+}
+material ThemeMaterials/Group15/3 : ThemeMaterials/Group15/1
+{
+}
+material ThemeMaterials/Group15/4 : ThemeMaterials/Group15/1
+{
+}
+
+material ThemeMaterials/Group16/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture winds4.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group16/2 : ThemeMaterials/Group16/1
+{
+}
+material ThemeMaterials/Group16/3 : ThemeMaterials/Group16/1
+{
+}
+material ThemeMaterials/Group16/4 : ThemeMaterials/Group16/1
+{
+}
+
+material ThemeMaterials/Group17/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group17/2 : ThemeMaterials/Group17/1
+{
+}
+material ThemeMaterials/Group17/3 : ThemeMaterials/Group17/1
+{
+}
+material ThemeMaterials/Group17/4 : ThemeMaterials/Group17/1
+{
+}
+
+material ThemeMaterials/Group18/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group18/2 : ThemeMaterials/Group18/1
+{
+}
+material ThemeMaterials/Group18/3 : ThemeMaterials/Group18/1
+{
+}
+material ThemeMaterials/Group18/4 : ThemeMaterials/Group18/1
+{
+}
+
+material ThemeMaterials/Group19/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group19/2 : ThemeMaterials/Group19/1
+{
+}
+material ThemeMaterials/Group19/3 : ThemeMaterials/Group19/1
+{
+}
+material ThemeMaterials/Group19/4 : ThemeMaterials/Group19/1
+{
+}
+
+material ThemeMaterials/Group20/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo4.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group20/2 : ThemeMaterials/Group20/1
+{
+}
+material ThemeMaterials/Group20/3 : ThemeMaterials/Group20/1
+{
+}
+material ThemeMaterials/Group20/4 : ThemeMaterials/Group20/1
+{
+}
+
+material ThemeMaterials/Group21/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo5.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group21/2 : ThemeMaterials/Group21/1
+{
+}
+material ThemeMaterials/Group21/3 : ThemeMaterials/Group21/1
+{
+}
+material ThemeMaterials/Group21/4 : ThemeMaterials/Group21/1
+{
+}
+
+material ThemeMaterials/Group22/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo6.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group22/2 : ThemeMaterials/Group22/1
+{
+}
+material ThemeMaterials/Group22/3 : ThemeMaterials/Group22/1
+{
+}
+material ThemeMaterials/Group22/4 : ThemeMaterials/Group22/1
+{
+}
+
+material ThemeMaterials/Group23/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo7.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group23/2 : ThemeMaterials/Group23/1
+{
+}
+material ThemeMaterials/Group23/3 : ThemeMaterials/Group23/1
+{
+}
+material ThemeMaterials/Group23/4 : ThemeMaterials/Group23/1
+{
+}
+
+material ThemeMaterials/Group24/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo8.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group24/2 : ThemeMaterials/Group24/1
+{
+}
+material ThemeMaterials/Group24/3 : ThemeMaterials/Group24/1
+{
+}
+material ThemeMaterials/Group24/4 : ThemeMaterials/Group24/1
+{
+}
+
+material ThemeMaterials/Group25/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture bamboo9.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group25/2 : ThemeMaterials/Group25/1
+{
+}
+material ThemeMaterials/Group25/3 : ThemeMaterials/Group25/1
+{
+}
+material ThemeMaterials/Group25/4 : ThemeMaterials/Group25/1
+{
+}
+
+material ThemeMaterials/Group26/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group26/2 : ThemeMaterials/Group26/1
+{
+}
+material ThemeMaterials/Group26/3 : ThemeMaterials/Group26/1
+{
+}
+material ThemeMaterials/Group26/4 : ThemeMaterials/Group26/1
+{
+}
+
+material ThemeMaterials/Group27/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group27/2 : ThemeMaterials/Group27/1
+{
+}
+material ThemeMaterials/Group27/3 : ThemeMaterials/Group27/1
+{
+}
+material ThemeMaterials/Group27/4 : ThemeMaterials/Group27/1
+{
+}
+
+material ThemeMaterials/Group28/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group28/2 : ThemeMaterials/Group28/1
+{
+}
+material ThemeMaterials/Group28/3 : ThemeMaterials/Group28/1
+{
+}
+material ThemeMaterials/Group28/4 : ThemeMaterials/Group28/1
+{
+}
+
+material ThemeMaterials/Group29/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols4.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group29/2 : ThemeMaterials/Group29/1
+{
+}
+material ThemeMaterials/Group29/3 : ThemeMaterials/Group29/1
+{
+}
+material ThemeMaterials/Group29/4 : ThemeMaterials/Group29/1
+{
+}
+
+material ThemeMaterials/Group30/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols5.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group30/2 : ThemeMaterials/Group30/1
+{
+}
+material ThemeMaterials/Group30/3 : ThemeMaterials/Group30/1
+{
+}
+material ThemeMaterials/Group30/4 : ThemeMaterials/Group30/1
+{
+}
+
+material ThemeMaterials/Group31/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols6.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group31/2 : ThemeMaterials/Group31/1
+{
+}
+material ThemeMaterials/Group31/3 : ThemeMaterials/Group31/1
+{
+}
+material ThemeMaterials/Group31/4 : ThemeMaterials/Group31/1
+{
+}
+
+material ThemeMaterials/Group32/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols7.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group32/2 : ThemeMaterials/Group32/1
+{
+}
+material ThemeMaterials/Group32/3 : ThemeMaterials/Group32/1
+{
+}
+material ThemeMaterials/Group32/4 : ThemeMaterials/Group32/1
+{
+}
+
+material ThemeMaterials/Group33/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols8.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group33/2 : ThemeMaterials/Group33/1
+{
+}
+material ThemeMaterials/Group33/3 : ThemeMaterials/Group33/1
+{
+}
+material ThemeMaterials/Group33/4 : ThemeMaterials/Group33/1
+{
+}
+
+material ThemeMaterials/Group34/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture symbols9.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group34/2 : ThemeMaterials/Group34/1
+{
+}
+material ThemeMaterials/Group34/3 : ThemeMaterials/Group34/1
+{
+}
+material ThemeMaterials/Group34/4 : ThemeMaterials/Group34/1
+{
+}
+
+material ThemeMaterials/Group35/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture flowers1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group35/2
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture flowers2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group35/3
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture flowers3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group35/4
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture flowers4.dds
+            }
+        }
+    }
+}
+
+material ThemeMaterials/Group36/1
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture seasons1.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group36/2
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture seasons2.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group36/3
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture seasons3.dds
+            }
+        }
+    }
+}
+material ThemeMaterials/Group36/4
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture seasons4.dds
+            }
+        }
+    }
+}
+
+material ThemeMaterials/YouWin
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture summerfield_msg_win.dds
+            }
+        }
+    }
+}
+
+material ThemeMaterials/YouLose
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture summerfield_msg_loss.dds
+            }
+        }
+    }
+}
+
+material ThemeMaterials/Scene
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture wood_light.dds
+            }
+        }
+    }
+}
+
+material ThemeMaterials/SkyBox
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_write off
+
+            texture_unit
+            {
+                cubic_texture cubescene.dds separateUV
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+

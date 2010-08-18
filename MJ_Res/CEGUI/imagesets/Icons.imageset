@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Imageset Name="Icons" Imagefile="icons.tga" NativeHorzRes="1024" NativeVertRes="768" AutoScaled="true" >
+    <Image Name="Cfg32" XPos="46" YPos="298" Width="32" Height="32" />
+    <Image Name="Cfg44" XPos="1" YPos="361" Width="44" Height="44" />
+    <Image Name="New32" XPos="46" YPos="232" Width="32" Height="32" />
+    <Image Name="New44" XPos="1" YPos="226" Width="44" Height="44" />
+    <Image Name="Back32" XPos="46" YPos="199" Width="32" Height="32" />
+    <Image Name="Back44" XPos="1" YPos="181" Width="44" Height="44" />
+    <Image Name="Hint32" XPos="46" YPos="67" Width="32" Height="32" />
+    <Image Name="Hint44" XPos="1" YPos="136" Width="44" Height="44" />
+    <Image Name="Undo32" XPos="46" YPos="34" Width="32" Height="32" />
+    <Image Name="Undo44" XPos="1" YPos="91" Width="44" Height="44" />
+    <Image Name="About32" XPos="46" YPos="364" Width="32" Height="32" />
+    <Image Name="About44" XPos="1" YPos="451" Width="44" Height="44" />
+    <Image Name="Clock32" XPos="46" YPos="133" Width="32" Height="32" />
+    <Image Name="Close32" XPos="46" YPos="265" Width="32" Height="32" />
+    <Image Name="Close44" XPos="1" YPos="316" Width="44" Height="44" />
+    <Image Name="Rating32" XPos="46" YPos="331" Width="32" Height="32" />
+    <Image Name="Rating44" XPos="1" YPos="406" Width="44" Height="44" />
+    <Image Name="Restart32" XPos="46" YPos="166" Width="32" Height="32" />
+    <Image Name="Restart44" XPos="1" YPos="46" Width="44" Height="44" />
+    <Image Name="Shuffle32" XPos="46" YPos="100" Width="32" Height="32" />
+    <Image Name="Shuffle44" XPos="1" YPos="271" Width="44" Height="44" />
+</Imageset>

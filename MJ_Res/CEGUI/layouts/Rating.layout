@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Rating" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/MultiColumnList" Name="Rating/MCL" >
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,-50}}" />
+        </Window>
+        <Window Type="DefaultWindow" Name="Rating/Holder" >
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-50},{0,1024},{1,0}}" />
+            <Window Type="Vanilla/Button" Name="Rating/Back" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Back32&apos;]" />
+                <Property Name="AlwaysOnTop" Value="True" />
+                <Property Name="UnifiedAreaRect" Value="{{0.957,0},{0.1,0},{0.995,0},{0.9,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>
