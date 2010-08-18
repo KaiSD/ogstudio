@@ -1,0 +1,12 @@
+
+MenuBackground
+{
+    container Panel(MenuBackground/Background)
+    {
+        left 0
+        top 0
+        width 1
+        height 1
+        material MenuBackground
+    }
+}

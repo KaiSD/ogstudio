@@ -1,0 +1,25 @@
+
+YouLose
+{
+    container Panel(YouLose/Panel)
+    {
+        left 0
+        top 0
+        width 1
+        height 1
+        material MenuBackground
+    }
+}
+
+YouWin
+{
+    container Panel(YouWin/Panel)
+    {
+        left 0
+        top 0
+        width 1
+        height 1
+        material MenuBackground
+    }
+}
+
