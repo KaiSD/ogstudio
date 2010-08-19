@@ -7,15 +7,15 @@ Shuan gameplay slice prototype
 (c) 2010 Opensource Game Studio Team (http://opengamestudio.org)
 '''
 
-import pygame
+import os, pygame
 import config
 from pygame.locals import *
 
-from Modules.Effects import HealthMessage, ScoreMessage, AmmoMessage
+from Modules.Effects import HealthMessage, ScoreMessage, AmmoMessage, ReactorMessage
 
 from Modules.Core import Context
 
-VERSION = 0.6
+VERSION = 0.7
 NAME = 'Shuan gameplay slice prototype'
 
 def main(**args):
@@ -42,11 +42,22 @@ def main(**args):
         config.playerGun = args['playerGun']
     if 'playerHeavyWeapon' in args:
         config.playerHeavyWeapon = args['playerHeavyWeapon']
+    if 'playerShield' in args:
+        config.playerShield = args['playerShield']
+    if 'playerAmmo' in args:
+        config.playerAmmo = args['playerAmmo']
+    if 'playerReactor' in args:
+        config.playerReactor = args['playerReactor']
     
     # some game init code here
     level = __import__('Modules.'+config.mission, globals(), locals(), ['Mission'], -1).Mission()
     pygame.display.set_caption(NAME + ' '+str(VERSION)+': '+level.name)
     player = __import__('Modules.Avatars.'+config.playerShip, globals(), locals(), ['Avatar'], -1).Avatar()
+    
+    player.life = player.life + int(player.life * float(config.playerShield) / 2) 
+    player.ammoMod *= 1 + float(config.playerAmmo) / 2
+    player.reactorMod *= 1 + float(config.playerReactor) / 2
+    
     weaponCounter = 0
     for i in config.playerWeapons:
         if len(player.weaponSlots) > weaponCounter:
@@ -65,6 +76,7 @@ def main(**args):
     HealthMessage.HealthMessage(context)
     ScoreMessage.ScoreMessage(context)
     AmmoMessage.AmmoMessage(context)
+    ReactorMessage.ReactorMessage(context, player.weaponsUpdate())
     
     clock = pygame.time.Clock()
     
@@ -77,6 +89,27 @@ def main(**args):
                 print 'Average time consuming: ', float(context.time) / float(context.ticks), 'ms/frame.'
                 print 'Average FPS: ', float(context.ticks)/float(context.time) * 1000
                 print '-------------------------------------------------------------------'
+                statfile = os.path.join('stat', 'missions.csv')
+                if not 'missions.csv' in os.listdir('stat'):
+                    f = open(statfile, 'w')
+                else:
+                    f = open(statfile, 'rw')
+                report = (level.name,
+                          config.playerShip,
+                          config.playerShield,
+                          config.playerReactor,
+                          config.playerAmmo,
+                          config.playerGun,
+                          config.playerWeapons,
+                          config.playerHeavyWeapon,
+                          level.finishTime,
+                          level.win,
+                          level.score,
+                          player.life,
+                          player.heavy.ammo)
+                text = '%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n' % report
+                f.write(text)
+                f.close()
                 return
         keystate = pygame.key.get_pressed()
         
@@ -92,6 +125,7 @@ def main(**args):
         context.all.draw(screen)
         context.ui.draw(screen)
         pygame.display.flip()
+        context.tick()
         context.profEnd()
         # cap the framerate
         clock.tick(60)

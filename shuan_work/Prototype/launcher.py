@@ -57,11 +57,15 @@ class Main(QtCore.QObject):
         ship = str(self.ui.comboBoxShip.currentText())
         heavy = str(self.ui.comboBoxHeavy.currentText())
         gun = str(self.ui.comboBoxGun.currentText())
+        shield = int(self.ui.comboBoxShields.currentText())
+        ammo = int(self.ui.comboBoxAmmo.currentText())
+        reactor = int(self.ui.comboBoxReactor.currentText())
         weapons = []
         for i in xrange(0, self.ui.listWidget.count()):
             weapons.append(str(self.ui.listWidget.takeItem(0).text()))
         self.ui.close()
-        game.main(mission=mission, playerShip=ship, playerWeapons=weapons, playerGun=gun, playerHeavyWeapon=heavy)
+        game.main(mission=mission, playerShip=ship, playerWeapons=weapons, playerGun=gun, playerHeavyWeapon=heavy,
+                  playerShield=shield, playerAmmo=ammo, playerReactor=reactor)
     
     def addWeapon(self):
         weapon = self.ui.comboBoxWeapons.currentText()

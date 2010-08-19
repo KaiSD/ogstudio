@@ -23,7 +23,7 @@ class BulletTemplate(pygame.sprite.Sprite):
     speed = 1
     ghost = False
     
-    def __init__(self, pos, damage, offset=0):
+    def __init__(self, pos, damage, offset=0, speedMod=1):
         '''
         Constructor
         '''
@@ -35,12 +35,13 @@ class BulletTemplate(pygame.sprite.Sprite):
         self.rect.center = pos
         self.offset = offset
         self.damage = damage
+        self.speedMod = speedMod
     
     def update(self):
         '''
         Update
         '''
-        self.rect.move_ip(self.offset, -self.speed)
+        self.rect.move_ip(self.offset, -self.speed*self.speedMod)
         self.counter = (self.counter + 1) % self.maxcount
         self.image = self.images[self.counter/self.animcycle]
         if self.rect.top < 0:

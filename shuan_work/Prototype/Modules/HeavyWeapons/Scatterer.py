@@ -15,7 +15,7 @@ class Weapon(WeaponTemplate):
     Cheatgun fires a lots of powerfull bullets with each shot
     '''
     damage = 100
-    ammo = 6
+    ammo = 4
     
     def __init__(self):
         WeaponTemplate.__init__(self, self.context.avatar.heavySlot[0], self.context.avatar.heavySlot[0])

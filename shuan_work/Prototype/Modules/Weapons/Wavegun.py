@@ -17,6 +17,7 @@ class Weapon(WeaponTemplate):
     reloadTime = 15
     damage = 150
     soundEnd = WeaponTemplate.context.loadSound('energy.wav')
+    energyCost = 60
     
     def fire(self, rect):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)

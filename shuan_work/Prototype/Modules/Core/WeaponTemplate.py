@@ -23,6 +23,8 @@ class WeaponTemplate(object):
     soundStart = None
     soundEnd = None
     ammo = 0
+    
+    energyCost = 0
 
     def __init__(self, posX, posY):
         '''
@@ -33,7 +35,7 @@ class WeaponTemplate(object):
         
         self.posX = posX
         self.posY = posY
-        
+    
         self.ammo = int(self.ammo * self.context.avatar.ammoMod)
     
     def fire(self, rect):

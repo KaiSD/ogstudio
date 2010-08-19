@@ -109,6 +109,8 @@ class Context:
     
     def profEnd(self):
         self.time += pygame.time.get_ticks() - self.timestamp
+    
+    def tick(self):
         self.ticks += 1
 
 contextObject = Context()

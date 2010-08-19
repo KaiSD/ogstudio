@@ -36,8 +36,9 @@ class AvatarTemplate(pygame.sprite.Sprite):
     weaponSlots = []
     gunSlots = []
     heavySlot = (0, 0)
-    life = 1
+    life = 200
     ammoMod = 1
+    reactorMod = 1 
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self, self.containers)
@@ -50,6 +51,20 @@ class AvatarTemplate(pygame.sprite.Sprite):
         self.weapons = []
         self.heavy = None
         self.soundsToPlay = []
+        self.reactor = 0
+    
+    def weaponsUpdate(self):
+        for i in self.weapons+self.guns:
+            self.reactor += i.energyCost
+        
+        reloadMod = 1
+        if self.reactor > 100 * self.reactorMod:
+            reloadMod = (50 * self.reactorMod + self.reactor) / 50 * self.reactorMod
+        
+        for i in self.weapons+self.guns:
+            i.reloadTime = int(i.reloadTime + reloadMod)
+        
+        return reloadMod
     
     def update(self):
         self.counter = (self.counter + 1) % self.maxcount
@@ -82,6 +97,7 @@ class AvatarTemplate(pygame.sprite.Sprite):
                 self.life = 0
                 AvatarExplosion(self)
                 DiedMessage(self.context)
+                self.context.currentLevel.finishTime = self.context.ticks
                 self.context.currentLevel.finished = True
                 if not self.soundHit is None:
                     self.soundHit.set_volume(0.5)
@@ -94,7 +110,7 @@ class AvatarTemplate(pygame.sprite.Sprite):
         localSounds = []
         for i in self.weapons + self.guns:
             if i.reloadTimer > 0:
-                i.reloadTimer = i.reloadTimer -1
+                i.reloadTimer = i.reloadTimer - 1
             firing = pygame.mouse.get_pressed()[0]
             if firing and not self.context.currentLevel.finished:
                 if not i.justFired or i.reloadTimer == 0:

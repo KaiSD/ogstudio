@@ -34,6 +34,8 @@ class MissionTemplate(object):
         self.land = pygame.Surface((self.context.rect.width, self.context.rect.height + self.tileSide)).convert()
         self.startTime = pygame.time.get_ticks()
         self.finished = False
+        self.win = False
+        self.finishTime = 0
         
         for x in range(self.context.rect.width/self.tileSide):
             for y in range(self.context.rect.height/self.tileSide + 1):
@@ -87,6 +89,7 @@ class MissionTemplate(object):
             if enemy.life > shot.damage:
                 enemy.life -= shot.damage
             else:
+                enemy.life -= shot.damage
                 if not enemy.rewarded:
                     enemy.kill()
                     Explosion(collist[shot][0])
@@ -97,4 +100,6 @@ class MissionTemplate(object):
         
         if self.objectives():
             WinMessage(self.context)
+            self.finishTime = self.context.ticks
+            self.win = True
             self.finished = True

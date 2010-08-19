@@ -18,7 +18,10 @@ screenHeight = 768
 Defaults. Works if game was launched without launcher
 '''
 mission = 'SimpleMission(2Min)'
-playerShip = 'Avatar(Basic)'
+playerShip = 'AvatarMK1'
 playerWeapons = ['Empty']
 playerGun = 'Minigun'
 playerHeavyWeapon = 'RepairCharge'
+playerShield = 0
+playerAmmo = 0
+playerReactor = 0

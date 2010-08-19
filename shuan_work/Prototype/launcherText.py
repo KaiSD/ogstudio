@@ -38,6 +38,11 @@ class Main(object):
             c += 1
         self.selectedShip = self.ships[int(raw_input('Ship number: '))] 
         
+        print 'Upgrades:'
+        self.shield = int(raw_input('Shields (0-6): '))
+        self.ammo = int(raw_input('Heavy ammo (0-6): '))
+        self.reactor = int(raw_input('Reactor (0-6): '))
+        
         for i in os.listdir(os.path.join('Modules', 'Guns')):
             if i.endswith('.py') and not i.startswith('__init__'):
                 self.guns.append(i[:-3])
@@ -81,7 +86,12 @@ class Main(object):
         heavy = str(self.selectedHeavy)
         weapons = self.selectedWeapons
         gun = str(self.selectedGun)
-        game.main(mission=mission, playerShip=ship, playerGun=gun, playerWeapons=weapons, playerHeavyWeapon=heavy)
+        shield = int(self.shield)
+        ammo = int(self.ammo)
+        reactor = int(self.reactor)
+        
+        game.main(mission=mission, playerShip=ship, playerWeapons=weapons, playerGun=gun, playerHeavyWeapon=heavy,
+                  playerShield=shield, playerAmmo=ammo, playerReactor=reactor)
 
 if __name__ == "__main__":
     launcher = Main()
