@@ -63,7 +63,6 @@ def main(**args):
     for i in config.playerWeapons:
         if len(player.weaponSlots) > weaponCounter:
             weapon = __import__('Modules.Weapons.'+i, globals(), locals(), ['Weapon'], -1).Weapon(player.weaponSlots[weaponCounter][0], player.weaponSlots[weaponCounter][1], weaponCounter - len(player.weaponSlots) / 2)
-            print weaponCounter - len(player.weaponSlots) / 2
             player.weapons.append(weapon)
             weaponCounter += 1
     

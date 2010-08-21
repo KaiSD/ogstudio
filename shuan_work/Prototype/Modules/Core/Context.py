@@ -32,6 +32,9 @@ class Context:
         self.bombs = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
         self.obstacles = pygame.sprite.Group()
+        self.tracers = pygame.sprite.Group()
+        self.enemyTracers = pygame.sprite.Group()
+        self.player = pygame.sprite.Group()
         
         self.backObjects = pygame.sprite.RenderPlain()
         self.ui = pygame.sprite.RenderPlain()

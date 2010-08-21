@@ -40,7 +40,7 @@ class WeaponTemplate(object):
     
         self.ammo = int(self.ammo * self.context.avatar.ammoMod)
     
-    def fire(self, rect, counter):
+    def fire(self, rect, counter=0):
         '''
         Fires a gun. Don't forget to implement your own fire method, or your gun will not fire at all.
         '''

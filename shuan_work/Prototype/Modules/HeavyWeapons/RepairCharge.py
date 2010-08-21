@@ -19,7 +19,7 @@ class Weapon(WeaponTemplate):
     def __init__(self):
         WeaponTemplate.__init__(self, self.context.avatar.heavySlot[0], self.context.avatar.heavySlot[0])
     
-    def fire(self, rect):
+    def fire(self, rect, counter=0):
         if self.ammo > 0:
             if self.context.avatar.life < self.context.avatar.baseLife:
                 self.context.avatar.life += self.damage

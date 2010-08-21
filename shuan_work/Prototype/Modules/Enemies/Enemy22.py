@@ -38,5 +38,5 @@ class Enemy(EnemyTemplate):
             if not self.weapon2.soundEnd is None:
                 self.weapon2.soundEnd.set_volume(0.5)
                 self.weapon2.soundEnd.play()
-            if self.isDo(self.attackTreasholdEnd) and not self.context.currentLevel.finished:
+            if self.isDo(self.attackTreasholdEnd) or self.context.currentLevel.finished:
                 self.firing2 = False

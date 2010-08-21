@@ -26,10 +26,25 @@ class EnemyRayTemplate(pygame.sprite.Sprite):
         '''
         Constructor
         '''
-        pygame.sprite.Sprite.__init__(self, self.containers)
         cur = self.images[counter % len(self.images)]
         width = cur.get_width()
         height = self.context.rect.height
+        emiHeight = emitter[1]
+        
+        tracer = pygame.sprite.Sprite()
+        tracer.containers = self.context.enemyTracers
+        tracer.image = pygame.Surface((width, height), pygame.SRCALPHA)
+        tracer.rect = tracer.image.get_rect()
+        tracer.rect.center = emitter
+        tracer.rect.top = emitter[1]
+        tracelist = pygame.sprite.spritecollide(tracer, self.context.player, False)
+        for obj in tracelist:
+            if emiHeight < obj.rect.top:
+                height = obj.rect.top - emiHeight
+        
+        height += 25
+        
+        pygame.sprite.Sprite.__init__(self, self.containers)
         self.image = pygame.Surface((width, height), pygame.SRCALPHA)
         pygame.transform.scale(cur, (cur.get_width(), height), self.image)
         

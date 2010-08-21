@@ -16,7 +16,7 @@ class Weapon(WeaponTemplate):
     '''
     reloadTime = 0
     maxReloadTime = 6
-    damage = 2
+    damage = 4
     energyCost = 24
     
     def fire(self, rect, counter=0):

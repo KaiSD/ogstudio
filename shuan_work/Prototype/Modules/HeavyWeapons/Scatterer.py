@@ -20,7 +20,7 @@ class Weapon(WeaponTemplate):
     def __init__(self):
         WeaponTemplate.__init__(self, self.context.avatar.heavySlot[0], self.context.avatar.heavySlot[0])
     
-    def fire(self, rect):
+    def fire(self, rect, counter=0):
         if self.ammo > 0:
             Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -9)
             Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -7)

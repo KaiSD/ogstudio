@@ -21,7 +21,7 @@ class AvatarTemplate(pygame.sprite.Sprite):
     '''
     context = Context.contextObject
     images = None
-    containers = context.all
+    containers = context.all, context.player
     
     #Collision rect
     crect = (0, 0, 0, 0)

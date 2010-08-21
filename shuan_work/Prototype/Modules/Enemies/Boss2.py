@@ -20,14 +20,15 @@ class Enemy(EnemyTemplate):
 
     # Mechanics params
     speed = 2
-    attackTreashold = 30
-    attackTreasholdStart = 30
-    attackTreasholdEnd = 30
+    attackTreashold = 20
+    attackTreasholdStart = 20
+    attackTreasholdEnd = 40
     firing2 = False
     life = 16000
     weapons = [Gun1(26, 79), Gun1(80, 79)]
     weapon2 = Gun2(53, 86)
     damage = 100
+    weaponTicks = 0
     
     xMove = True
     xMoveChange = True
@@ -44,9 +45,10 @@ class Enemy(EnemyTemplate):
             self.firing2 = True
         
         if self.firing2:
-            self.weapon2.fire(self.rect)
+            self.weapon2.fire(self.rect, self.weaponTicks)
+            self.weaponTicks += 1
             if not self.weapon2.soundEnd is None:
                 self.weapon2.soundEnd.set_volume(0.5)
                 self.weapon2.soundEnd.play()
-            if self.isDo(self.attackTreasholdEnd) and not self.context.currentLevel.finished:
+            if self.isDo(self.attackTreasholdEnd) or self.context.currentLevel.finished:
                 self.firing2 = False
