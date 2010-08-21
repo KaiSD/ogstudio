@@ -18,6 +18,7 @@ class WeaponTemplate(object):
     '''
     context = Context.contextObject
     reloadTime = 0
+    maxReloadTime = 400
     damage = 0
     soundLoop = None
     soundStart = None
@@ -26,7 +27,7 @@ class WeaponTemplate(object):
     
     energyCost = 0
 
-    def __init__(self, posX, posY):
+    def __init__(self, posX, posY, side=0):
         '''
         Constructor
         '''
@@ -35,10 +36,11 @@ class WeaponTemplate(object):
         
         self.posX = posX
         self.posY = posY
+        self.side = side
     
         self.ammo = int(self.ammo * self.context.avatar.ammoMod)
     
-    def fire(self, rect):
+    def fire(self, rect, counter):
         '''
         Fires a gun. Don't forget to implement your own fire method, or your gun will not fire at all.
         '''

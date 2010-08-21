@@ -18,11 +18,7 @@ class ReactorMessage(EffectTemplate):
     uiEffect = True
     
     def __init__(self, pos, mod):
-        self.text = 'Reactor OK!'
-        if mod > 1:
-            self.text = 'Reactor overloaded!'
-        if mod > 3:
-            self.text = 'Reactor critically overloaded!'
+        self.text = 'Energy: ' + str(self.context.avatar.reactor) + '/' + str(int(100 * self.context.avatar.reactorMod)) 
         self.images = [self.context.loadText('arial', 20, self.text, (200, 200/mod, 0))]
         if mod > 1:
             self.images.append(self.context.loadText('arial', 20, self.text, (240, 240/mod, 0)))

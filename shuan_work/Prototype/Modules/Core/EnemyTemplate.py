@@ -60,6 +60,8 @@ class EnemyTemplate(pygame.sprite.Sprite):
         
         self.ySpeedMod = 1
         self.appeared = False
+        
+        self.weaponTicks = 0
                 
         if self.xMove:
             self.xSpeed = random.randrange(-self.speed, self.speed)
@@ -110,17 +112,20 @@ class EnemyTemplate(pygame.sprite.Sprite):
         self.image = self.images[self.counter/self.animcycle]
         if self.rect.top > self.context.rect.bottom:
             self.kill()
+        
         if not len(self.weapons) is 0:
             if self.isDo(self.attackTreashold) and not self.context.currentLevel.finished:
                 if self.isEvil:
                     for currentGun in self.weapons:
-                        currentGun.fire(self.rect)
+                        currentGun.fire(self.rect, self.weaponTicks)
+                        self.weaponTicks += 1
                         if not currentGun.soundEnd is None:
                             currentGun.soundEnd.set_volume(0.5)
-                        currentGun.soundEnd.play()
+                            currentGun.soundEnd.play()
                 else:
                     currentGun = random.choice(self.weapons)
-                    currentGun.fire(self.rect)
+                    currentGun.fire(self.rect, self.weaponTicks)
+                    self.weaponTicks += 1
                     if not currentGun.soundEnd is None:
                         currentGun.soundEnd.set_volume(0.5)
                         currentGun.soundEnd.play()

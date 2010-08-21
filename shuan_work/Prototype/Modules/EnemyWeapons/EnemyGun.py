@@ -15,7 +15,7 @@ class Weapon(WeaponTemplate):
     Enemy gun
     '''
     reloadTime = 0
-    damage = 10
+    damage = 15
     soundEnd = WeaponTemplate.context.loadSound('enemy_shot.wav')
 
     def __init__(self, posX, posY):
@@ -28,5 +28,5 @@ class Weapon(WeaponTemplate):
         self.posX = posX
         self.posY = posY
     
-    def fire(self, rect):
+    def fire(self, rect, counter=0):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage)

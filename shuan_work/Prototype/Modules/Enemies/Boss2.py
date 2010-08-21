@@ -9,8 +9,8 @@ Shuan gameplay slice prototype mission default enemy module
 
 from ..Core.EnemyTemplate import EnemyTemplate
 
-from ..EnemyWeapons.EnemyAimGun import Weapon as Gun2
-from ..EnemyWeapons.EnemyGun import Weapon as Gun1  
+from ..EnemyWeapons.EnemyLaser import Weapon as Gun2
+from ..EnemyWeapons.EnemyAimGun import Weapon as Gun1  
 
 class Enemy(EnemyTemplate):
     '''
@@ -21,8 +21,10 @@ class Enemy(EnemyTemplate):
     # Mechanics params
     speed = 2
     attackTreashold = 30
-    attackTreashold2 = 30
-    life = 12000
+    attackTreasholdStart = 30
+    attackTreasholdEnd = 30
+    firing2 = False
+    life = 16000
     weapons = [Gun1(26, 79), Gun1(80, 79)]
     weapon2 = Gun2(53, 86)
     damage = 100
@@ -38,9 +40,13 @@ class Enemy(EnemyTemplate):
     def update(self):
         EnemyTemplate.update(self)
         
-        if self.isDo(self.attackTreashold2) and not self.context.currentLevel.finished:
+        if self.isDo(self.attackTreasholdStart) and not self.context.currentLevel.finished:
+            self.firing2 = True
+        
+        if self.firing2:
             self.weapon2.fire(self.rect)
             if not self.weapon2.soundEnd is None:
                 self.weapon2.soundEnd.set_volume(0.5)
                 self.weapon2.soundEnd.play()
-        
+            if self.isDo(self.attackTreasholdEnd) and not self.context.currentLevel.finished:
+                self.firing2 = False

@@ -22,7 +22,7 @@ class Enemy(EnemyTemplate):
     attackTreashold = 10000
     life = 600
     weapons = []
-    damage = 100
+    damage = 150
     
     xMove = True
     xMoveChange = True

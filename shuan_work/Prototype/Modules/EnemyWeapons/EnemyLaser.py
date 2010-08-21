@@ -8,15 +8,14 @@ Shuan gameplay slice prototype mission default weapon module
 '''
 
 from ..Core.WeaponTemplate import WeaponTemplate
-from ..Bullets.EnemyAimingBullet import Bullet
+from ..Bullets.EnemyRay import Ray
 
 class Weapon(WeaponTemplate):
     '''
     Enemy gun
     '''
     reloadTime = 0
-    damage = 15
-    soundEnd = WeaponTemplate.context.loadSound('enemy_shot.wav')
+    damage = 1
 
     def __init__(self, posX, posY):
         '''
@@ -29,4 +28,4 @@ class Weapon(WeaponTemplate):
         self.posY = posY
     
     def fire(self, rect, counter=0):
-        Bullet((rect.left + self.posX, rect.top + self.posY), self.damage)
+        Ray((rect.left + self.posX, rect.top + self.posY), self.damage, counter)

@@ -18,11 +18,15 @@ class HealthMessage(EffectTemplate):
     uiEffect = True
     
     def __init__(self, pos):
-        self.images = [self.context.loadText('arial', 20,'Health '+str(self.context.avatar.life), (0, 200, 0))]
+        addlife = self.context.avatar.shields
+        life = self.context.avatar.life
+        self.images = [self.context.loadText('arial', 20, 'Health ' + str(life) + ' +' + str(addlife), (0, 200, 0))]
         EffectTemplate.__init__(self, pos)
         self.rect.topleft = pos.rect.topleft
         self.rect.top += 30
     
     def update(self):
-        self.images = [self.context.loadText('arial', 20,'Health '+str(self.context.avatar.life), (0, 200, 0))]
+        addlife = self.context.avatar.shields
+        life = self.context.avatar.life
+        self.images = [self.context.loadText('arial', 20, 'Health ' + str(life) + ' +' + str(addlife), (0, 200, 0))]
         EffectTemplate.update(self)

@@ -8,17 +8,17 @@ Shuan gameplay slice prototype mission default weapon module
 '''
 
 from ..Core.WeaponTemplate import WeaponTemplate
-from ..Bullets.Bullet import Bullet
+from ..Bullets.MiniBullet import Bullet
 
 class Weapon(WeaponTemplate):
     '''
-    Default minigun
+    Additional very light gun
     '''
-    reloadTime = 5
-    damage = 15
+    reloadTime = 4
+    damage = 10
     soundLoop = WeaponTemplate.context.loadSound('minigun_loop.wav')
     soundEnd = WeaponTemplate.context.loadSound('minigun_end.wav')
-    energyCost = 18
+    energyCost = 15
     
     def fire(self, rect, counter):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)

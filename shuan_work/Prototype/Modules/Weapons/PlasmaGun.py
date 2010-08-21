@@ -8,16 +8,16 @@ Shuan gameplay slice prototype mission default weapon module
 '''
 
 from ..Core.WeaponTemplate import WeaponTemplate
-from ..Bullets.Wave import Bullet
+from ..Bullets.Plasma import Bullet
 
 class Weapon(WeaponTemplate):
     '''
     Plasma gun
     '''
-    reloadTime = 15
-    damage = 150
-    soundEnd = WeaponTemplate.context.loadSound('energy.wav')
+    reloadTime = 30
+    damage = 300
+    soundEnd = WeaponTemplate.context.loadSound('plasma.wav')
     energyCost = 60
     
-    def fire(self, rect):
+    def fire(self, rect, counter):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)

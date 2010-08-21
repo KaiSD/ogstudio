@@ -19,7 +19,7 @@ class Enemy(EnemyTemplate):
 
     # Mechanics params
     speed = 2
-    attackTreashold = 70
+    attackTreashold = 100
     life = 200
     weapons = [Gun(16, 19)]
-    damage = 20
+    damage = 80

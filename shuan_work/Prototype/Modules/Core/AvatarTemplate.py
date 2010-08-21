@@ -36,9 +36,11 @@ class AvatarTemplate(pygame.sprite.Sprite):
     weaponSlots = []
     gunSlots = []
     heavySlot = (0, 0)
-    life = 200
+    baseLife = 1
+    baseShield = 0
     ammoMod = 1
     reactorMod = 1 
+    shieldRegenTime = 30
     
     def __init__(self):
         pygame.sprite.Sprite.__init__(self, self.containers)
@@ -52,24 +54,35 @@ class AvatarTemplate(pygame.sprite.Sprite):
         self.heavy = None
         self.soundsToPlay = []
         self.reactor = 0
+        self.life = self.baseLife
+        self.shields = self.baseShield
+        self.shieldRegenTimer = 0
+        self.lastHitSound = 0
+        self.weaponTicks = 0
     
     def weaponsUpdate(self):
         for i in self.weapons+self.guns:
             self.reactor += i.energyCost
         
         reloadMod = 1
-        if self.reactor > 100 * self.reactorMod:
-            reloadMod = (50 * self.reactorMod + self.reactor) / 50 * self.reactorMod
         
-        for i in self.weapons+self.guns:
+        if self.reactor >= 100 * self.reactorMod:
+            reloadMod = (50 * self.reactorMod + self.reactor) / 50 * self.reactorMod
+            self.shieldRegenTime += int(3 * (self.reactor - 100 * self.reactorMod))
+        else:
+            self.shieldRegenTime = 5 + int((self.shieldRegenTime + 300 * self.reactorMod) / (100 * self.reactorMod - self.reactor))
+        
+        for i in self.weapons:
             i.reloadTime = int(i.reloadTime + reloadMod)
+            if i.reloadTime > i.maxReloadTime:
+                i.reloadTime = i.maxReloadTime
         
         return reloadMod
     
     def update(self):
         self.counter = (self.counter + 1) % self.maxcount
         self.image = self.images[self.counter/self.animcycle]
-                
+        
         if self.context.currentLevel.finished:
             self.rect.move_ip(0, -9)
             if self.rect.bottom < self.context.rect.top:
@@ -78,36 +91,49 @@ class AvatarTemplate(pygame.sprite.Sprite):
             self.rect.center = pygame.mouse.get_pos()
             self.rect = self.rect.clamp(self.context.rect)
         
+        if self.shieldRegenTimer <= 0:
+            self.shields += (self.shields < self.baseShield)
+            self.shieldRegenTimer = self.shieldRegenTime
+        else:
+            self.shieldRegenTimer -= 1
+        
         # Collision detection
+        localSounds = []
+        self.lastHitSound += 1
         oldrect = self.rect
         self.rect = Rect(*self.crect)
         self.rect.topleft = (oldrect.left + self.crect[0], oldrect.top + self.crect[1])
         
         collist = pygame.sprite.spritecollide(self, self.context.obstacles, False)
         if collist:
-            if self.life - collist[0].damage > 0:
-                self.life -= collist[0].damage
+            if (self.life + self.shields) - collist[0].damage > 0:
+                self.shields -= collist[0].damage
+                if self.shields < 0:  
+                    self.life += self.shields
+                    self.shields = 0
                 if self.context.enemies in collist[0].containers:
                     Explosion(collist[0])
                     self.context.currentLevel.score += 1
-                if not self.soundHit is None:
+                if not self.soundHit is None and self.lastHitSound > 10:
                     self.soundHit.set_volume(0.2)
                     self.soundHit.play()
+                    self.lastHitSound = 0
             else:
                 self.life = 0
+                self.shields = 0
                 AvatarExplosion(self)
                 DiedMessage(self.context)
                 self.context.currentLevel.finishTime = self.context.ticks
                 self.context.currentLevel.finished = True
-                if not self.soundHit is None:
+                if not self.soundHit is None and self.lastHitSound > 10:
                     self.soundHit.set_volume(0.5)
                     self.soundHit.play()
+                    self.lastHitSound = 0
                 self.kill()
             if not collist[0].isEvil:
                 collist[0].kill()
         
         # Weapons using
-        localSounds = []
         for i in self.weapons + self.guns:
             if i.reloadTimer > 0:
                 i.reloadTimer = i.reloadTimer - 1
@@ -125,7 +151,8 @@ class AvatarTemplate(pygame.sprite.Sprite):
                             i.soundEnd.set_volume(0.3)
                             i.soundEnd.play()
                             localSounds.append(i.soundEnd)
-                    i.fire(self.rect)
+                    i.fire(self.rect, self.weaponTicks)
+                    self.weaponTicks += 1
                 i.justFired = firing
             elif not i.soundLoop is None:
                 if i.soundLoop in self.soundsToPlay:
@@ -134,7 +161,6 @@ class AvatarTemplate(pygame.sprite.Sprite):
                     if not i.soundEnd is None:
                         i.soundEnd.set_volume(0.3)
                         i.soundEnd.play()
-        
         # Heavy weapons
         heavyFiring = pygame.mouse.get_pressed()[2]
         if not self.heavy is None:
@@ -144,5 +170,5 @@ class AvatarTemplate(pygame.sprite.Sprite):
             if not self.heavy.soundEnd is None:
                 self.heavy.soundEnd.set_volume(0.3)
                 self.heavy.soundEnd.play()
-        
+                
         self.rect = oldrect

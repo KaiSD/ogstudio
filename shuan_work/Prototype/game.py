@@ -15,7 +15,7 @@ from Modules.Effects import HealthMessage, ScoreMessage, AmmoMessage, ReactorMes
 
 from Modules.Core import Context
 
-VERSION = 0.7
+VERSION = 0.75
 NAME = 'Shuan gameplay slice prototype'
 
 def main(**args):
@@ -54,29 +54,36 @@ def main(**args):
     pygame.display.set_caption(NAME + ' '+str(VERSION)+': '+level.name)
     player = __import__('Modules.Avatars.'+config.playerShip, globals(), locals(), ['Avatar'], -1).Avatar()
     
-    player.life = player.life + int(player.life * float(config.playerShield) / 2) 
+    player.baseShield = int(player.baseLife * float(config.playerShield) / 4)
     player.ammoMod *= 1 + float(config.playerAmmo) / 2
     player.reactorMod *= 1 + float(config.playerReactor) / 2
+    player.reactor += player.baseShield / 2 + int(config.playerAmmo) * 10
     
     weaponCounter = 0
     for i in config.playerWeapons:
         if len(player.weaponSlots) > weaponCounter:
-            weapon = __import__('Modules.Weapons.'+i, globals(), locals(), ['Weapon'], -1).Weapon(player.weaponSlots[weaponCounter][0], player.weaponSlots[weaponCounter][1])
+            weapon = __import__('Modules.Weapons.'+i, globals(), locals(), ['Weapon'], -1).Weapon(player.weaponSlots[weaponCounter][0], player.weaponSlots[weaponCounter][1], weaponCounter - len(player.weaponSlots) / 2)
+            print weaponCounter - len(player.weaponSlots) / 2
             player.weapons.append(weapon)
             weaponCounter += 1
     
     weaponCounter = 0
     for i in player.gunSlots:
-        gun = __import__('Modules.Guns.'+config.playerGun, globals(), locals(), ['Weapon'], -1).Weapon(player.gunSlots[weaponCounter][0], player.gunSlots[weaponCounter][1])
+        gun = __import__('Modules.Guns.'+config.playerGun, globals(), locals(), ['Weapon'], -1).Weapon(player.gunSlots[weaponCounter][0], player.gunSlots[weaponCounter][1], weaponCounter * 2 - len(player.gunSlots) / 2)
         player.guns.append(gun)
         weaponCounter += 1
     
     player.heavy = __import__('Modules.HeavyWeapons.'+config.playerHeavyWeapon, globals(), locals(), ['Weapon'], -1).Weapon()
     
+    energy = int(player.weaponsUpdate())
+    player.baseShield -= energy*(energy < 0)
+    player.baseShield *= (player.baseShield > 0)
+    player.shields = player.baseShield
+    
     HealthMessage.HealthMessage(context)
     ScoreMessage.ScoreMessage(context)
     AmmoMessage.AmmoMessage(context)
-    ReactorMessage.ReactorMessage(context, player.weaponsUpdate())
+    ReactorMessage.ReactorMessage(context, energy)
     
     clock = pygame.time.Clock()
     
@@ -92,8 +99,12 @@ def main(**args):
                 statfile = os.path.join('stat', 'missions.csv')
                 if not 'missions.csv' in os.listdir('stat'):
                     f = open(statfile, 'w')
+                    prev = ''
                 else:
-                    f = open(statfile, 'rw')
+                    f = open(statfile, 'r')
+                    prev = f.read()
+                    f.close()
+                    f = open(statfile, 'w')
                 report = (level.name,
                           config.playerShip,
                           config.playerShield,
@@ -102,13 +113,13 @@ def main(**args):
                           config.playerGun,
                           config.playerWeapons,
                           config.playerHeavyWeapon,
-                          level.finishTime,
+                          level.finishTime / 1000,
                           level.win,
                           level.score,
                           player.life,
                           player.heavy.ammo)
                 text = '%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n' % report
-                f.write(text)
+                f.write(prev+text)
                 f.close()
                 return
         keystate = pygame.key.get_pressed()

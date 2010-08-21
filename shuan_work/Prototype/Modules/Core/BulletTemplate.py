@@ -46,3 +46,9 @@ class BulletTemplate(pygame.sprite.Sprite):
         self.image = self.images[self.counter/self.animcycle]
         if self.rect.top < 0:
             self.kill()
+        if self.rect.left < 0:
+            self.kill()
+        if self.rect.right > self.context.rect.width:
+            self.kill()
+        if self.rect.bottom > self.context.rect.height:
+            self.kill()

@@ -100,6 +100,6 @@ class MissionTemplate(object):
         
         if self.objectives():
             WinMessage(self.context)
-            self.finishTime = self.context.ticks
+            self.finishTime = self.getTimer()
             self.win = True
             self.finished = True

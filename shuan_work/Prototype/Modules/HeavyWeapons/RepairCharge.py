@@ -21,7 +21,8 @@ class Weapon(WeaponTemplate):
     
     def fire(self, rect):
         if self.ammo > 0:
-            self.context.avatar.life += self.damage
-            if self.context.avatar.life > self.context.avatar.__class__.life:
-                self.context.avatar.life = self.context.avatar.__class__.life
+            if self.context.avatar.life < self.context.avatar.baseLife:
+                self.context.avatar.life += self.damage
+                if self.context.avatar.life > self.context.avatar.baseLife:
+                    self.context.avatar.life = self.context.avatar.baseLife
             self.ammo -= 1
