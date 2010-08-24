@@ -18,6 +18,6 @@ class Avatar(AvatarTemplate):
                                                                   (114, 0, 57, 57)])
     crect = (0, 22, 57, 29)
     gunSlots = [(23, 0), (34, 0)]
-    weaponSlots = [(16, 2), (28, 10), (40, 2)]
+    weaponSlots = [(6, 7), (16, 5), (28, 10), (40, 5), (50, 7)]
     heavySlot = (28, 26)
     baseLife = 200

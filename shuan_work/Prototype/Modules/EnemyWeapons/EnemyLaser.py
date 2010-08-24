@@ -26,6 +26,10 @@ class Weapon(WeaponTemplate):
         
         self.posX = posX
         self.posY = posY
+        
+        if not 'EnemyLaser' in self.context.debug.keys():  
+            self.context.debug['EnemyLaser'] = 0 
     
     def fire(self, rect, counter=0):
         Ray((rect.left + self.posX, rect.top + self.posY), self.damage, counter)
+        self.context.debug['EnemyLaser'] += 1

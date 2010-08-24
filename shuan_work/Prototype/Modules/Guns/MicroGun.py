@@ -16,7 +16,7 @@ class Weapon(WeaponTemplate):
     '''
     reloadTime = 4
     damage = 10
-    energyCost = 10
+    energyCost = 12
     
     def fire(self, rect, counter):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)

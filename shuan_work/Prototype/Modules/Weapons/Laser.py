@@ -17,7 +17,7 @@ class Weapon(WeaponTemplate):
     reloadTime = 0
     maxReloadTime = 6
     damage = 4
-    energyCost = 24
+    energyCost = 36
     
     def fire(self, rect, counter=0):
         Ray((rect.left + self.posX, rect.top + self.posY), self.damage, counter)

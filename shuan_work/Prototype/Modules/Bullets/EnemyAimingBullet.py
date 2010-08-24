@@ -15,3 +15,5 @@ class Bullet(EnemyBulletTemplate):
     '''
     images = EnemyBulletTemplate.context.loadSprite('bullets.png',[(8, 0, 13, 13)])
     speed = 12
+    
+    debugName = 'EnemyAimingBullet'

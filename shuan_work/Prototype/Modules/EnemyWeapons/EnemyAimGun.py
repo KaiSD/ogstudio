@@ -27,6 +27,10 @@ class Weapon(WeaponTemplate):
         
         self.posX = posX
         self.posY = posY
+        
+        if not 'EnemyAimGun' in self.context.debug.keys():  
+            self.context.debug['EnemyAimGun'] = 0 
     
     def fire(self, rect, counter=0):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage)
+        self.context.debug['EnemyAimGun'] += 1

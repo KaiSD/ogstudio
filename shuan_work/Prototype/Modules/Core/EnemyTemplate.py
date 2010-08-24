@@ -67,6 +67,11 @@ class EnemyTemplate(pygame.sprite.Sprite):
             self.xSpeed = random.randrange(-self.speed, self.speed)
         else:
             self.xSpeed = 0
+            
+        if 'Enemies' not in self.context.debug.keys():
+            self.context.debug['Enemies'] = 1
+        else:
+            self.context.debug['Enemies'] += 1
     
     def isDo(self, treashold):
         return not random.randrange(treashold)

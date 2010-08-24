@@ -94,7 +94,10 @@ def main(**args):
                 print '-------------------------------------------------------------------'
                 print 'Average time consuming: ', float(context.time) / float(context.ticks), 'ms/frame.'
                 print 'Average FPS: ', float(context.ticks)/float(context.time) * 1000
+                print 'Time played: ', float(context.time) / 1000, ' sec.'
                 print '-------------------------------------------------------------------'
+                for i in context.debug.keys():
+                    print i, context.debug[i]
                 statfile = os.path.join('stat', 'missions.csv')
                 if not 'missions.csv' in os.listdir('stat'):
                     f = open(statfile, 'w')

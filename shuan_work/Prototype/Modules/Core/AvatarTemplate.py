@@ -59,6 +59,10 @@ class AvatarTemplate(pygame.sprite.Sprite):
         self.shieldRegenTimer = 0
         self.lastHitSound = 0
         self.weaponTicks = 0
+        
+        self.context.debug['EnemyGunHit'] = 0
+        self.context.debug['EnemyAimGunHit'] = 0
+        self.context.debug['EnemyLaserHit'] = 0
     
     def weaponsUpdate(self):
         for i in self.weapons+self.guns:
@@ -106,6 +110,14 @@ class AvatarTemplate(pygame.sprite.Sprite):
         
         collist = pygame.sprite.spritecollide(self, self.context.obstacles, False)
         if collist:
+            if collist[0].__class__.__name__ == "Bullet" or collist[0].__class__.__name__ == "Ray":
+                if collist[0].debugName is "EnemyBullet":
+                    self.context.debug['EnemyGunHit'] += 1
+                elif collist[0].debugName is "EnemyAimingBullet":
+                    self.context.debug['EnemyAimGunHit'] += 1
+                elif collist[0].debugName is "EnemyRay":
+                    self.context.debug['EnemyLaserHit'] += 1
+            
             if (self.life + self.shields) - collist[0].damage > 0:
                 self.shields -= collist[0].damage
                 if self.shields < 0:  

@@ -53,6 +53,7 @@ class Context:
         self.spriteAlbums = {}
         self.fonts = {}
         self.sound = {}
+        self.debug = {}
     
     def loadSprite(self, filename, *rects):
         '''

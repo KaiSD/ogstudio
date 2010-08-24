@@ -29,7 +29,7 @@ class RayTemplate(pygame.sprite.Sprite):
         cur = self.images[counter % len(self.images)]
         width = cur.get_width()
         height = self.context.rect.height
-        emiHeight = emitter[1] - self.context.rect.height
+        emiHeight = emitter[1]
         
         tracer = pygame.sprite.Sprite()
         tracer.containers = self.context.tracers
@@ -39,8 +39,8 @@ class RayTemplate(pygame.sprite.Sprite):
         tracer.rect.bottom = emitter[1]
         tracelist = pygame.sprite.spritecollide(tracer, self.context.enemies, False)
         for obj in tracelist:
-            if emiHeight + height > obj.rect.bottom:
-                height -= obj.rect.bottom - emiHeight 
+            if emiHeight - height < obj.rect.bottom:
+                height = emiHeight - obj.rect.bottom + 1
         tracer.kill()
         
         height += 1

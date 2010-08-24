@@ -20,4 +20,4 @@ class Avatar(AvatarTemplate):
     gunSlots = [(23, 0), (34, 0)]
     weaponSlots = [(28, 10)]
     heavySlot = (28, 26)
-    baseLife = 150
+    baseLife = 200
