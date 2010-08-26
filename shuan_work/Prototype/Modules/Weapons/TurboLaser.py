@@ -8,7 +8,7 @@ Shuan gameplay slice prototype mission default weapon module
 '''
 
 from ..Core.WeaponTemplate import WeaponTemplate
-from ..Bullets.PurpleRay import Ray
+from ..Bullets.BlueRay import Ray
 
 class Weapon(WeaponTemplate):
     '''
@@ -18,8 +18,8 @@ class Weapon(WeaponTemplate):
     maxReloadTime = 6
     soundLoop = WeaponTemplate.context.loadSound('laser_loop.wav')
     soundEnd = WeaponTemplate.context.loadSound('laser_end.wav')
-    damage = 4
-    energyCost = 36
+    damage = 8
+    energyCost = 72
     
     def fire(self, rect, counter=0):
         Ray((rect.left + self.posX, rect.top + self.posY), self.damage, counter)

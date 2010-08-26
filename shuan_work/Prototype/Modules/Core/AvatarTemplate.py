@@ -63,6 +63,7 @@ class AvatarTemplate(pygame.sprite.Sprite):
         self.context.debug['EnemyGunHit'] = 0
         self.context.debug['EnemyAimGunHit'] = 0
         self.context.debug['EnemyLaserHit'] = 0
+        self.context.debug['DamageGive'] = 0
     
     def weaponsUpdate(self):
         for i in self.weapons+self.guns:
@@ -151,6 +152,7 @@ class AvatarTemplate(pygame.sprite.Sprite):
                 i.reloadTimer = i.reloadTimer - 1
             firing = pygame.mouse.get_pressed()[0]
             if firing and not self.context.currentLevel.finished:
+                self.context.debug['DamageGive'] += i.damage
                 if not i.justFired or i.reloadTimer == 0:
                     i.reloadTimer = i.reloadTime
                     if not i.soundLoop is None:

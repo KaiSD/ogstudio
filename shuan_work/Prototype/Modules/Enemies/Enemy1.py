@@ -19,11 +19,9 @@ class Enemy(EnemyTemplate):
                                                             (27, 0, 27, 26)])
 
     # Mechanics params
-    speed = 3
-    attackTreashold = 250
-    life = 100
+    speed = 5
+    attackTreashold = 200
+    life = 171
     weapons = [Gun(16, 19)]
     damage = 50
     
-    xMove = True
-    xMoveChange = True

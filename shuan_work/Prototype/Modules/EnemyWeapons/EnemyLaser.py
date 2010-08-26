@@ -15,7 +15,7 @@ class Weapon(WeaponTemplate):
     Enemy gun
     '''
     reloadTime = 0
-    damage = 1
+    damage = 2
 
     def __init__(self, posX, posY):
         '''

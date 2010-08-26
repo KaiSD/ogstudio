@@ -7,7 +7,7 @@ Shuan gameplay slice prototype mission root module
 (c) 2010 Opensource Game Studio Team (http://opengamestudio.org)
 '''
 
-from Enemies import Enemy1, Enemy2, Enemy22, Enemy3, Boss2
+from Enemies import Enemy1, Enemy2, Enemy3, Boss1
 from Effects import BossMessage
 
 from .Core.MissionTemplate import MissionTemplate
@@ -17,7 +17,7 @@ class Mission(MissionTemplate):
     Shuan gameplay slice prototype mission root class
     '''
     name = 'Simple Mission'
-    speed = 1
+    speed = 2
     landTexture = 'mars'
     
     boss = None
@@ -30,15 +30,11 @@ class Mission(MissionTemplate):
         t = self.getTimer()
 
         if t < 115000:
-            self.randomSpawner(20 + 40000 / t, Enemy3.Enemy,
-                               Enemy2.Enemy, Enemy22.Enemy, 
-                               Enemy2.Enemy, Enemy1.Enemy, 
-                               Enemy2.Enemy, Enemy1.Enemy,
-                               Enemy2.Enemy, Enemy1.Enemy)
+            self.randomSpawner(40 + 50000 / t, Enemy1.Enemy, Enemy2.Enemy, Enemy2.Enemy)
         elif t < 120000:
-            self.randomSpawner(20 + t / 500, Enemy3.Enemy, Enemy2.Enemy, Enemy1.Enemy)
+            self.randomSpawner(40 + t / 500, Enemy2.Enemy, Enemy1.Enemy)
         elif t > 120000 and self.boss is None:
-            self.boss = Boss2.Enemy()
+            self.boss = Boss1.Enemy()
             self.bossMeter = BossMessage.BossMessage(self.context)
         
         #If you are going to rewrite the update method, fon's forget to add this call in the end.

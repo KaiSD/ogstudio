@@ -43,6 +43,8 @@ class MissionTemplate(object):
         
         self.score = 0
         
+        self.context.debug['DamageTakenByEnemies'] = 0
+        
         self.context.currentLevel = self
         
     def offset(self):
@@ -88,8 +90,10 @@ class MissionTemplate(object):
             enemy = collist[shot][0]
             if enemy.life > shot.damage:
                 enemy.life -= shot.damage
+                self.context.debug['DamageTakenByEnemies'] += shot.damage
             else:
                 enemy.life -= shot.damage
+                self.context.debug['DamageTakenByEnemies'] += shot.damage 
                 if not enemy.rewarded:
                     enemy.kill()
                     Explosion(collist[shot][0])

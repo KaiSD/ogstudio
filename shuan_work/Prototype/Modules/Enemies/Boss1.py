@@ -19,7 +19,7 @@ class Enemy(EnemyTemplate):
     images = EnemyTemplate.context.loadSprite('boss.png', [(0, 0, 107, 86)])
 
     # Mechanics params
-    speed = 2
+    speed = 4
     attackTreashold = 30
     attackTreashold2 = 30
     life = 12000

@@ -15,7 +15,7 @@ class Weapon(WeaponTemplate):
     Enemy gun
     '''
     reloadTime = 0
-    damage = 15
+    damage = 16
     soundEnd = WeaponTemplate.context.loadSound('enemy_shot.wav')
 
     def __init__(self, posX, posY):
