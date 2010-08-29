@@ -37,6 +37,7 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Restart" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Restart32&apos;]" />
+                <Property Name="Tooltip" Value="Tooltip restart" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.043,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Undo" >

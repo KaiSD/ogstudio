@@ -26,6 +26,7 @@
 	<FalagardMapping WindowType="Vanilla/MultiColumnList"   TargetType="CEGUI/MultiColumnList"   Renderer="Falagard/MultiColumnList"   LookNFeel="Vanilla/MultiColumnList" />
 	<FalagardMapping WindowType="Vanilla/Combobox" TargetType="CEGUI/Combobox" Renderer="Falagard/Default" LookNFeel="Vanilla/Combobox" />
 	<FalagardMapping WindowType="Vanilla/ProgressBar" TargetType="CEGUI/ProgressBar" Renderer="Falagard/ProgressBar" LookNFeel="Vanilla/ProgressBar" />
+	<FalagardMapping WindowType="Vanilla/Tooltip" TargetType="CEGUI/Tooltip" Renderer="Falagard/Tooltip" LookNFeel="Vanilla/Tooltip" />
 <!--	
 	<FalagardMapping WindowType="Vanilla/ScrollablePane" TargetType="Falagard/ScrollablePane" LookNFeel="Vanilla/ScrollablePane" />
 	<FalagardMapping WindowType="Vanilla/Checkbox" TargetType="Falagard/Checkbox" LookNFeel="Vanilla/Checkbox" />
