@@ -6,6 +6,14 @@
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="Vanilla/StaticText" Name="About/Text" >
+            <Window Type="Vanilla/Button" Name="About/Link1" >
+                <Property Name="Text" Value="http://opengamestudio.org" />
+                <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1229.17},{0.4,6},{0.07,1229.17}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="About/Link2" >
+                <Property Name="Text" Value="http://osrpgcreation.sf.net" />
+                <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1303},{0.4,6},{0.07,1303}}" />
+            </Window>
             <Property Name="Font" Value="Arial-16" />
             <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.
  
@@ -43,14 +51,6 @@ or
             <Property Name="VertFormatting" Value="TopAligned" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,-50}}" />
             <Property Name="HorizontalAlignment" Value="Centre" />
-            <Window Type="Vanilla/Button" Name="About/Link1" >
-                <Property Name="Text" Value="http://opengamestudio.org" />
-                <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1229.17},{0.4,6},{0.07,1229.17}}" />
-            </Window>
-            <Window Type="Vanilla/Button" Name="About/Link2" >
-                <Property Name="Text" Value="http://osrpgcreation.sf.net" />
-                <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1303},{0.4,6},{0.07,1303}}" />
-            </Window>
         </Window>
         <Window Type="DefaultWindow" Name="About/Holder" >
             <Property Name="AlwaysOnTop" Value="True" />
