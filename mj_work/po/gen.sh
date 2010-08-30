@@ -1,2 +1,2 @@
 #!/bin/bash
-msgfmt ru.po -o ../locale/ru/LC_MESSAGES/OGSMahjong.mo
+msgfmt ru.po -o ../../mj_res/locale/ru/LC_MESSAGES/OGSMahjong.mo

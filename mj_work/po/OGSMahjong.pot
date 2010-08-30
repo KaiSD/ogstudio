@@ -1,25 +1,4 @@
 
-msgid "Start"
-msgstr ""
-
-msgid "Restart"
-msgstr ""
-
-msgid "Resume"
-msgstr ""
-
-msgid "Settings"
-msgstr ""
-
-msgid "About"
-msgstr ""
-
-msgid "Rating"
-msgstr ""
-
-msgid "Quit"
-msgstr ""
-
 msgid "Game"
 msgstr ""
 
@@ -131,6 +110,9 @@ msgstr ""
 msgid "Music packs:"
 msgstr ""
 
+msgid "Dynamic camera"
+msgstr ""
+
 msgid "These changes will interrupt current party"
 msgstr ""
 
@@ -139,3 +121,46 @@ msgstr ""
 
 msgid "This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='About/Link1']\nor\n[window='About/Link2']"
 msgstr ""
+
+msgid "Restart the party"
+msgstr ""
+
+msgid "Undo"
+msgstr ""
+
+msgid "Hint"
+msgstr ""
+
+msgid "Tile pairs you can remove"
+msgstr ""
+
+msgid "Elapsed time"
+msgstr ""
+
+msgid "Removed tiles / Altogether"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Statistics"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Sound track"
+msgstr ""
+
+msgid "Quit the game"
+msgstr ""
+
+msgid "Start a new party"
+msgstr ""
+
+msgid "Shuffle"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+

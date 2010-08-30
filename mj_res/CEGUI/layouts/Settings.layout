@@ -55,6 +55,7 @@
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Game" >
             <Property Name="Font" Value="Arial-16" />
+            <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbDifficulty" >
                 <Property Name="Font" Value="Arial-16" />
@@ -201,8 +202,8 @@
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/DynCam" >
-                <Property Name="Text" Value="DynCam" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.110,0},{0.995,0},{0.172,0}}" />
+                <Property Name="Text" Value="Dynamic camera" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.11,0},{0.995,0},{0.172,0}}" />
             </Window>
         </Window>
     </Window>

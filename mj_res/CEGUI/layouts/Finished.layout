@@ -24,18 +24,22 @@
             <Property Name="MousePassThroughEnabled" Value="True" />
             <Window Type="Vanilla/Button" Name="Finished/Restart" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Restart44&apos;]" />
-                <Property Name="UnifiedAreaRect" Value="{{0.835,0},{0.07,0},{0.885,0},{0.93,0}}" />
+                <Property Name="Tooltip" Value="Restart the party" />
+                <Property Name="UnifiedAreaRect" Value="{{0.835977,0},{0.0713021,0},{0.885977,0},{0.931302,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Finished/Undo" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Undo44&apos;]" />
+                <Property Name="Tooltip" Value="Undo" />
                 <Property Name="UnifiedAreaRect" Value="{{0.89,0},{0.07,0},{0.94,0},{0.93,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Finished/Shuffle" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Shuffle44&apos;]" />
+                <Property Name="Tooltip" Value="Shuffle" />
                 <Property Name="UnifiedAreaRect" Value="{{0.945,0},{0.07,0},{0.995,0},{0.93,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Finished/Start" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:New44&apos;]" />
+                <Property Name="Tooltip" Value="Start a new party" />
                 <Property Name="UnifiedAreaRect" Value="{{0.78,0},{0.07,0},{0.83,0},{0.93,0}}" />
             </Window>
         </Window>
