@@ -113,6 +113,12 @@ msgstr "Музыкальные группы:"
 msgid "Dynamic camera"
 msgstr "Динамическая камера"
 
+msgid "Deflection of dynamic camera:"
+msgstr "Отклонение динамической камеры:"
+
+msgid "Only horizontal"
+msgstr "Только по горизонтали"
+
 msgid "These changes will interrupt current party"
 msgstr "Эти изменения прервут текущую партию"
 
