@@ -78,6 +78,9 @@
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.323,0},{0.005,0},{0.373,0},{0.055,0}}" />
             </Window>
+            <Window Type="Vanilla/Button" Name="Game/Type" >
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.07,0},{0.07,0},{0.14,0}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>
