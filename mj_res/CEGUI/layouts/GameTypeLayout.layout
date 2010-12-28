@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="GameTypeLayout" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="Visible" Value="False" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="Vanilla/StaticText" Name="GameTypeLayout/Window" >
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window Type="Vanilla/ItemListbox" Name="GameTypeLayout/List" >
+                <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.2,0},{0.8,0},{0.8,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="GameTypeLayout/Mahjong" >
+                <Property Name="Text" Value="Mahjong" />
+                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.05,0},{0.325,0},{0.15,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenSho" >
+                <Property Name="Text" Value="Shisen-Sho" />
+                <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0.05,0},{0.65,0},{0.15,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="GameTypeLayout/Rivers" >
+                <Property Name="Text" Value="Rivers" />
+                <Property Name="UnifiedAreaRect" Value="{{0.675,0},{0.05,0},{0.975,0},{0.15,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="GameTypeLayout/OK" >
+                <Property Name="Text" Value="OK" />
+                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.85,0},{0.45,0},{0.95,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="GameTypeLayout/Cancel" >
+                <Property Name="Text" Value="Cancel" />
+                <Property Name="UnifiedAreaRect" Value="{{0.55,0},{0.85,0},{0.975,0},{0.95,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

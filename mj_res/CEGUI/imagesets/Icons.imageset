@@ -16,6 +16,7 @@
     <Image Name="Clock32" XPos="46" YPos="133" Width="32" Height="32" />
     <Image Name="Close32" XPos="46" YPos="265" Width="32" Height="32" />
     <Image Name="Close44" XPos="1" YPos="316" Width="44" Height="44" />
+    <Image Name="Layout32" XPos="46" YPos="397" Width="32" Height="32" />
     <Image Name="Rating32" XPos="46" YPos="331" Width="32" Height="32" />
     <Image Name="Rating44" XPos="1" YPos="406" Width="44" Height="44" />
     <Image Name="Restart32" XPos="46" YPos="166" Width="32" Height="32" />

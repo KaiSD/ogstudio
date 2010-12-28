@@ -1464,7 +1464,7 @@
         <PropertyDefinition name="SelectedTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="ActiveSelectionColour" initialValue="FF607FFF" redrawOnWrite="true" />
         <PropertyDefinition name="InactiveSelectionColour" initialValue="FF808080" redrawOnWrite="true" />
-        <!--<Property name="SelectionBrushImage" value="set:Vanilla-Images image:GenericBrush" />-->
+        <Property name="SelectionBrushImage" value="set:Vanilla-Images image:GenericBrush" />
         <NamedArea name="TextArea">
             <Area>
                 <Dim type="LeftEdge" ><ImageDim imageset="Vanilla-Images" image="FrameLeft" dimension="Width" /></Dim>
@@ -1617,7 +1617,7 @@
     <WidgetLook name="Vanilla/ListboxItem">
 		<PropertyDefinition name="TextColour" initialValue="FF000000" redrawOnWrite="true" />
 		<PropertyDefinition name="SelectedTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
-		<PropertyDefinition name="SelectionBrush" initialValue="set:Vanilla-Images image:Background" redrawOnWrite="true" />
+		<PropertyDefinition name="SelectionBrush" initialValue="set:Vanilla-Images image:GenericBrush" redrawOnWrite="true" />
 		<PropertyDefinition name="SelectionColour" initialValue="FF3030FF" redrawOnWrite="true" />
 		<Property name="Selectable" value="True" />
         <Property name="MouseInputPropagationEnabled" value="True" />
