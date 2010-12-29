@@ -170,3 +170,15 @@ msgstr "Перемешать"
 msgid "Back"
 msgstr "Назад"
 
+msgid "Mahjong"
+msgstr "Маджонг"
+
+msgid "Shisen-Sho"
+msgstr "Шисен-Сё"
+
+msgid "Rivers"
+msgstr "Реки"
+
+msgid "Game type and layout"
+msgstr "Тип игры и раскладка"
+

@@ -164,3 +164,15 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
+msgid "Mahjong"
+msgstr ""
+
+msgid "Shisen-Sho"
+msgstr ""
+
+msgid "Rivers"
+msgstr ""
+
+msgid "Game type and layout"
+msgstr ""
+
