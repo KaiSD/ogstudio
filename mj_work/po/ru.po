@@ -176,8 +176,8 @@ msgstr "Маджонг"
 msgid "Shisen-Sho"
 msgstr "Шисен-Сё"
 
-msgid "Rivers"
-msgstr "Реки"
+msgid "Shisen-Sho + gravity"
+msgstr "Шисен-Сё + гравитация"
 
 msgid "Game type and layout"
 msgstr "Тип игры и раскладка"

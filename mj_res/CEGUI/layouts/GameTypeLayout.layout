@@ -20,8 +20,8 @@
                 <Property Name="Text" Value="Shisen-Sho" />
                 <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0.05,0},{0.65,0},{0.15,0}}" />
             </Window>
-            <Window Type="Vanilla/Button" Name="GameTypeLayout/Rivers" >
-                <Property Name="Text" Value="Rivers" />
+            <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenShoWG" >
+                <Property Name="Text" Value="Shisen-Sho + gravity" />
                 <Property Name="UnifiedAreaRect" Value="{{0.675,0},{0.05,0},{0.975,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/OK" >
