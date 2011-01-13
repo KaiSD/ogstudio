@@ -170,7 +170,7 @@ msgstr ""
 msgid "Shisen-Sho"
 msgstr ""
 
-msgid "Shisen-Sho + gravity"
+msgid "Shisen-Sho +g"
 msgstr ""
 
 msgid "Game type and layout"
