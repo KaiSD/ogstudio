@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Load" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="Visible" Value="False" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="Vanilla/StaticText" Name="Load/Window" >
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,-50}}" />
+            <Window Type="Vanilla/ItemListbox" Name="Load/List" >
+                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.05,0},{0.6,0},{0.8,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Load/Load" >
+                <Property Name="Text" Value="Load" />
+                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.85,0},{0.65,0},{0.95,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Load/Delete" >
+                <Property Name="Text" Value="Delete" />
+                <Property Name="UnifiedAreaRect" Value="{{0.7,0},{0.85,0},{0.975,0},{0.95,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Load/Info" >
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedAreaRect" Value="{{0.625,0},{0.05,0},{0.975,0},{0.8,0}}" />
+            </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="Load/Holder" >
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-50},{-0.6,1024},{1,0}}" />
+            <Window Type="Vanilla/Button" Name="Load/Back" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Back32&apos;]" />
+                <Property Name="Tooltip" Value="Back" />
+                <Property Name="AlwaysOnTop" Value="True" />
+                <Property Name="UnifiedAreaRect" Value="{{0.957,0},{0.1,0},{0.995,0},{0.9,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

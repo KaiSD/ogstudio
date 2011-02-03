@@ -9,6 +9,8 @@
     <Image Name="Back44" XPos="1" YPos="181" Width="44" Height="44" />
     <Image Name="Hint32" XPos="46" YPos="67" Width="32" Height="32" />
     <Image Name="Hint44" XPos="1" YPos="136" Width="44" Height="44" />
+    <Image Name="Load32" XPos="46" YPos="430" Width="32" Height="32" />
+    <Image Name="Save32" XPos="46" YPos="463" Width="32" Height="32" />
     <Image Name="Undo32" XPos="46" YPos="34" Width="32" Height="32" />
     <Image Name="Undo44" XPos="1" YPos="91" Width="44" Height="44" />
     <Image Name="About32" XPos="46" YPos="364" Width="32" Height="32" />

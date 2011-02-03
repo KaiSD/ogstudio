@@ -82,6 +82,16 @@
                 <Property Name="Tooltip" Value="Undo" />
                 <Property Name="UnifiedAreaRect" Value="{{0.197,0},{0.005,0},{0.236,0},{0.055,0}}" />
             </Window>
+            <Window Type="Vanilla/Button" Name="Game/Load" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Load32&apos;]" />
+                <Property Name="Tooltip" Value="Load" />
+                <Property Name="UnifiedAreaRect" Value="{{0.087,0},{0.005,0},{0.125,0},{0.055,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Game/Save" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Save32&apos;]" />
+                <Property Name="Tooltip" Value="Save" />
+                <Property Name="UnifiedAreaRect" Value="{{0.128,0},{0.005,0},{0.166,0},{0.055,0}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>

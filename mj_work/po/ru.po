@@ -176,9 +176,24 @@ msgstr "Маджонг"
 msgid "Shisen-Sho"
 msgstr "Шисен-Сё"
 
-msgid "Shisen-Sho +g"
-msgstr "Шисен-Сё +г"
+msgid "Shisen-Sho g"
+msgstr "Шисен-Сё г"
 
 msgid "Game type and layout"
 msgstr "Тип игры и раскладка"
+
+msgid "Shisen-Sho + gravity"
+msgstr "Шисен-Сё + гравитация"
+
+msgid "Load"
+msgstr "Загрузить"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "The game has been saved"
+msgstr "Игра была сохранена"
 
