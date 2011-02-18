@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Imageset Name="Vanilla-Images" Imagefile="vanilla.tga" NativeHorzRes="1024" NativeVertRes="768" >
+<Imageset Name="Vanilla" Imagefile="vanilla.tga" NativeHorzRes="1024" NativeVertRes="768" >
     <Image Name="FrameTop" XPos="18" YPos="1" Width="1" Height="6" />
     <Image Name="FrameLeft" XPos="1" YPos="18" Width="6" Height="1" />
     <Image Name="FrameRight" XPos="10" YPos="18" Width="6" Height="1" />

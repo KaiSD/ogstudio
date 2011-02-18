@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<GUIScheme Name="VanillaSkin">
+<GUIScheme Name="Vanilla">
 	<Imageset Filename="Vanilla.imageset" />
     <Font Filename="Arial-16.font" />
     <Font Filename="Arial-10.font" />
