@@ -124,13 +124,13 @@
                 <Property Name="Text" Value="Shadows" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.923,0},{0.495,0},{0.995,0}}" />
             </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbFiltering" >
-                <Property Name="Text" Value="Filtering:" />
+            <Window Type="Vanilla/StaticText" Name="Settings/LbTextureFiltering" >
+                <Property Name="Text" Value="Texture filtering:" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.3,0},{0.995,0},{0.367,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListFiltering" >
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListTextureFiltering" >
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.367,0},{0.995,0},{0.647,0}}" />
             </Window>
         </Window>

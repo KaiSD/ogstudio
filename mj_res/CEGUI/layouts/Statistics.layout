@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <GUILayout >
-    <Window Type="DefaultWindow" Name="Rating" >
+    <Window Type="DefaultWindow" Name="Statistics" >
         <Property Name="Alpha" Value="0.8" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
-        <Window Type="Vanilla/MultiColumnList" Name="Rating/MCL" >
+        <Window Type="Vanilla/MultiColumnList" Name="Statistics/MCL" >
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,-50}}" />
         </Window>
-        <Window Type="DefaultWindow" Name="Rating/Holder" >
+        <Window Type="DefaultWindow" Name="Statistics/Holder" >
             <Property Name="AlwaysOnTop" Value="True" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-50},{0,1024},{1,0}}" />
-            <Window Type="Vanilla/Button" Name="Rating/Back" >
+            <Window Type="Vanilla/Button" Name="Statistics/Back" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Back32&apos;]" />
                 <Property Name="Tooltip" Value="Back" />
                 <Property Name="AlwaysOnTop" Value="True" />

@@ -72,7 +72,7 @@
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.323,0},{0.005,0},{0.373,0},{0.055,0}}" />
             </Window>
-            <Window Type="Vanilla/Button" Name="Game/Type" >
+            <Window Type="Vanilla/Button" Name="Game/TypeLayout" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Layout32&apos;]" />
                 <Property Name="Tooltip" Value="Game type and layout" />
                 <Property Name="UnifiedAreaRect" Value="{{0.046,0},{0.005,0},{0.084,0},{0.055,0}}" />

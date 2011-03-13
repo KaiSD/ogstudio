@@ -53,8 +53,8 @@ msgstr "Тени"
 msgid "Tile:"
 msgstr "Фишка:"
 
-msgid "Filtering:"
-msgstr "Фильтрация:"
+msgid "Texture filtering:"
+msgstr "Фильтрация текстур:"
 
 msgid "None"
 msgstr "Нет"
@@ -119,8 +119,8 @@ msgstr "Отклонение динамической камеры:"
 msgid "Only horizontal"
 msgstr "Только по горизонтали"
 
-msgid "These changes will interrupt current party"
-msgstr "Эти изменения прервут текущую партию"
+msgid "This change will interrupt current game party"
+msgstr "Это изменение прервёт текущую партию"
 
 msgid "The theme does not support selected difficulty"
 msgstr "Тема не поддерживает выбранную сложность"

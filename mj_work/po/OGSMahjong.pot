@@ -53,7 +53,7 @@ msgstr ""
 msgid "Tile:"
 msgstr ""
 
-msgid "Filtering:"
+msgid "Texture filtering:"
 msgstr ""
 
 msgid "None"
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Dynamic camera"
 msgstr ""
 
-msgid "These changes will interrupt current party"
+msgid "This change will interrupt current game party"
 msgstr ""
 
 msgid "The theme does not support selected difficulty"
