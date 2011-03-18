@@ -3,12 +3,11 @@
 <GUILayout >
     <Window Type="DefaultWindow" Name="MessageBox" >
         <Property Name="Alpha" Value="0.8" />
-        <Property Name="Visible" Value="False" />
         <Property Name="AlwaysOnTop" Value="True" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Window Type="Vanilla/StaticText" Name="MessageBox/Text" >
             <Property Name="Text" Value="Are you sure?" />
-            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="HorzFormatting" Value="WordWrapCentred" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
             <Window Type="Vanilla/Button" Name="MessageBox/Yes" >
                 <Property Name="Text" Value="Yes" />
