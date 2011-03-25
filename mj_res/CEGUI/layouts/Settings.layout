@@ -75,7 +75,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.995,0},{0.567,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-            <Window Type="Vanilla/MultiColumnList" Name="Settings/ListThemes" >
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListThemes" >
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.995,0},{0.993,0}}" />
             </Window>
         </Window>
