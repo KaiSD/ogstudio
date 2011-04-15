@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Info" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/StaticText" Name="Info/BG" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window Type="Vanilla/Button" Name="Info/TabRules" >
+                <Property Name="Text" Value="Rules" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.33,0},{0.08,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Info/TabAbout" >
+                <Property Name="Text" Value="About" />
+                <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.01,0},{0.66,0},{0.08,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Info/TabLicense" >
+                <Property Name="Text" Value="License" />
+                <Property Name="UnifiedAreaRect" Value="{{0.67,0},{0.01,0},{0.99,0},{0.08,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Info/OK" >
+                <Property Name="Text" Value="OK" />
+                <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.92,0},{0.66,0},{0.99,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Info/Rules" >
+                <Property Name="Text" Value="Some rules" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Info/About" >
+                <Window Type="Vanilla/Button" Name="Info/Link1" >
+                    <Property Name="Text" Value="http://opengamestudio.org" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.4,6},{0.07,961.517}}" />
+                </Window>
+                <Window Type="Vanilla/Button" Name="Info/Link2" >
+                    <Property Name="Text" Value="http://osrpgcreation.sf.net" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1014.14},{0.4,6},{0.07,1014.14}}" />
+                </Window>
+                <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.
+ 
+[image=&apos;set:Logos image:OGS&apos;] team:
+Michael Kapelko - code and content;
+Ivan Korystin - gameplay design, content and QA.
+ 
+Third-party resources:
+Raquel Ravanini - images for &quot;Classic&quot;  theme.
+Kevin MacLeod - all tracks in &quot;Eastern&quot; and &quot;Piano&quot; music packs. Tracks &quot;Funkorama&quot;, &quot;Neo Western&quot; and &quot;Protofunk&quot; in &quot;Modern&quot; music pack.
+Dano - Tracks &quot;Crazy from the message&quot;, &quot;King or an alien&quot;, &quot;Sun spark&quot;, &quot;The time isnt right&quot;, &quot;The wire&quot; and &quot;Today then tomorrow&quot; in &quot;Modern&quot; music pack.
+Fenster - Track &quot;Free Software&quot; in &quot;Modern&quot; music pack.
+ 
+More info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.
+ 
+Libraries:
+[image=&apos;set:Logos image:OGRE&apos;] with [image=&apos;set:Logos image:OpenGL&apos;] backend
+ 
+[image=&apos;set:Logos image:CEGUI&apos;]
+ 
+[image=&apos;set:Logos image:OpenAL&apos;]
+ 
+Thanks to:
+- Ogre3D team/community for the engine and help;
+- Lightfeather team/community for help while this game has been using Lightfeather engine;
+- OpenAL-Soft/ALURE developer KittyCat for help.
+Special thanks to CrazyEddie for good GUI system and great support.
+ 
+Web pages:
+[window=&apos;Info/Link1&apos;]
+or
+[window=&apos;Info/Link2&apos;]</Property>
+                <Property Name="VertScrollbar" Value="True" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
+                <Property Name="HorizontalAlignment" Value="Centre" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Info/License" >
+                <Window Type="Vanilla/Button" Name="Info/Link3" >
+                    <Property Name="Text" Value="http://www.gnu.org/licenses" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,321.882},{0.4,6},{0.07,321.882}}" />
+                </Window>
+                <Property Name="Text" >Copyright (C) 2010-2011, Opensource Game Studio
+
+Mahjong-0.7 is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Mahjong-0.7 is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Foobar.  If not, see
+[window=&apos;Info/Link3&apos;]
+                </Property>
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>
