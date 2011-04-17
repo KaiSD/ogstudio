@@ -19,7 +19,7 @@ class Mission(MissionTemplate):
     name = 'Simple Mission'
     speed = 2
     landTexture = 'mars'
-    music = 'Dirty_Road_Blues'
+    music = ''
     
     sequence = (
                 ('Wait',5),

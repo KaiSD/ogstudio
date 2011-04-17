@@ -23,7 +23,7 @@ class Mission(MissionTemplate):
     boss = None
     bossMeter = None
     
-    music = 'Dirty_Road_Blues'
+    music = ''
     
     sequence = (
                 ('Wait',50),
