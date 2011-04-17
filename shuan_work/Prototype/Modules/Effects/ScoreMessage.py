@@ -18,10 +18,10 @@ class ScoreMessage(EffectTemplate):
     uiEffect = True
     
     def __init__(self, pos):
-        self.images = [self.context.loadText('arial', 20, 'Score '+str(self.context.currentLevel.score), (0, 0, 200))]
+        self.images = [self.context.loadText('arial', 20, u'Очки '+str(self.context.currentLevel.score), (0, 0, 200))]
         EffectTemplate.__init__(self, pos)
         self.rect.topleft = pos.rect.topleft
     
     def update(self):
-        self.images = [self.context.loadText('arial', 20, 'Score '+str(self.context.currentLevel.score), (0, 0, 200))]
+        self.images = [self.context.loadText('arial', 20, u'Очки '+str(self.context.currentLevel.score), (0, 0, 200))]
         EffectTemplate.update(self)

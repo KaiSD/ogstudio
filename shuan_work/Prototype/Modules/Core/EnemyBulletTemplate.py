@@ -53,12 +53,14 @@ class EnemyBulletTemplate(pygame.sprite.Sprite):
         """
         self.fpx = self.rect.centerx
         self.fpy = self.rect.centery
+        
     def setint(self):
         """
         use whenever floating point rect values are adjusted
         """
         self.rect.centerx = self.fpx
         self.rect.centery = self.fpy
+        
     def update(self):
         self.fpx = self.fpx + self.fpdx
         self.fpy = self.fpy + self.fpdy

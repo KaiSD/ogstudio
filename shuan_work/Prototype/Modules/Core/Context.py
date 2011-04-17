@@ -16,6 +16,7 @@ class Context:
     Context
     '''
     obj = None
+    config = None
     def __new__(cls,*dt,**mp):
         '''
         Singleton checker
@@ -107,6 +108,14 @@ class Context:
             filename = os.path.join('data', filename)
             self.sound['filename'] = pygame.mixer.Sound(filename)
         return self.sound['filename']
+    
+    def playMusic(self, filename):
+        '''
+        Loads a music
+        '''
+        if self.config.music:
+            pygame.mixer.music.load(os.path.join('data', filename))
+            pygame.mixer.music.play(-1)
     
     def profStart(self):
         self.timestamp = pygame.time.get_ticks()

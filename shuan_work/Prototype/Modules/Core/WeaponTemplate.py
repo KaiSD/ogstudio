@@ -19,6 +19,7 @@ class WeaponTemplate(object):
     context = Context.contextObject
     reloadTime = 0
     maxReloadTime = 400
+    keepFire = 0
     damage = 0
     soundLoop = None
     soundStart = None
@@ -33,12 +34,21 @@ class WeaponTemplate(object):
         '''
         self.reloadTimer = 0
         self.justFired = 0
+        self.keepTimer = 0
         
         self.posX = posX
         self.posY = posY
         self.side = side
     
         self.ammo = int(self.ammo * self.context.avatar.ammoMod)
+        self.avatar = self.context.avatar
+        self.target = None
+    
+    def aim(self):
+        '''
+        Takes target data from avatar
+        '''
+        self.target = self.avatar.target
     
     def fire(self, rect, counter=0):
         '''

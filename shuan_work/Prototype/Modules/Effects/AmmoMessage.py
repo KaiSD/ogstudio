@@ -18,11 +18,11 @@ class AmmoMessage(EffectTemplate):
     uiEffect = True
     
     def __init__(self, pos):
-        self.images = [self.context.loadText('arial', 20, 'Heavy '+str(self.context.avatar.heavy.ammo), (200, 0, 0))]
+        self.images = [self.context.loadText('arial', 20, u'Заряды '+str(self.context.avatar.heavy.ammo), (200, 0, 0))]
         EffectTemplate.__init__(self, pos)
         self.rect.topleft = pos.rect.topleft
         self.rect.top += 60
     
     def update(self):
-        self.images = [self.context.loadText('arial', 20, 'Heavy '+str(self.context.avatar.heavy.ammo), (200, 0, 0))]
+        self.images = [self.context.loadText('arial', 20, u'Заряды '+str(self.context.avatar.heavy.ammo), (200, 0, 0))]
         EffectTemplate.update(self)

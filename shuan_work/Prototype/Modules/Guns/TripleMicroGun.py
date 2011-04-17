@@ -18,7 +18,7 @@ class Weapon(WeaponTemplate):
     damage = 10
     soundLoop = WeaponTemplate.context.loadSound('minigun_loop.wav')
     soundEnd = WeaponTemplate.context.loadSound('minigun_end.wav')
-    energyCost = 40
+    energyCost = 24
     
     def fire(self, rect, counter):
         Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)

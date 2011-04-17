@@ -62,6 +62,7 @@ class EnemyTemplate(pygame.sprite.Sprite):
         self.appeared = False
         
         self.weaponTicks = 0
+        self.active = True
                 
         if self.xMove:
             self.xSpeed = random.randrange(-self.speed, self.speed)
@@ -134,3 +135,12 @@ class EnemyTemplate(pygame.sprite.Sprite):
                     if not currentGun.soundEnd is None:
                         currentGun.soundEnd.set_volume(0.5)
                         currentGun.soundEnd.play()
+        
+        if self.active:
+            self.context.currentLevel.enemiesOnScreen[self] = (self.rect.centerx, self.rect.centery)
+    
+    def kill(self):
+        if self.context.currentLevel.enemiesOnScreen.has_key(self):
+            del self.context.currentLevel.enemiesOnScreen[self]
+        self.active = False
+        pygame.sprite.Sprite.kill(self)

@@ -23,7 +23,7 @@ class Enemy(EnemyTemplate):
     attackTreasholdStart = 70
     attackTreasholdEnd = 50
     firing2 = False
-    life = 560
+    life = 475
     weapon2 = Gun(16, 19)
     damage = 100
     

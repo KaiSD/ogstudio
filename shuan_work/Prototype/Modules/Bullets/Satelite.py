@@ -15,16 +15,26 @@ class Bullet(BulletTemplate):
     Explosion visual effect
     '''
     images = BulletTemplate.context.loadSprite('satelite.png', [(0, 0, 13, 13)])
-    speed = 1
-    shootSpeed = 4
+    speed = 0
+    shootSpeed = 5
     shootTimer = 0
+    reAiming = True
+    isAccelerating = True
+    maxSpeed = 3
+    lifetime = 660
     
-    shotDamage = 50
+    shotDamage = 20
     
     def update(self):
         if self.shootTimer <= 0: 
+            MiniBullet.Bullet((self.rect.centerx, self.rect.centery), self.shotDamage, -1, 1)
+            MiniBullet.Bullet((self.rect.centerx, self.rect.centery), self.shotDamage, 1, 1)
             MiniBullet.Bullet((self.rect.centerx, self.rect.centery), self.shotDamage, 0, 1)
             self.shootTimer = self.shootSpeed
         else:
             self.shootTimer -= 1
-        BulletTemplate.update(self)
+        if self.lifetime == 0:
+            self.kill()
+        else:
+            self.lifetime -= 1
+            BulletTemplate.update(self)

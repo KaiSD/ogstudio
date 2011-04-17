@@ -8,19 +8,21 @@ Shuan gameplay slice prototype mission default weapon module
 '''
 
 from ..Core.WeaponTemplate import WeaponTemplate
-from ..Bullets.Satelite2 import Bullet
+from ..Bullets.Missile import Bullet
 
 class Weapon(WeaponTemplate):
     '''
     Self repair weapon
     '''
-    damage = 120
-    ammo = 4
+    damage = 180
+    ammo = 10
+    reloadTime = 30
     
     def __init__(self):
         WeaponTemplate.__init__(self, self.context.avatar.heavySlot[0], self.context.avatar.heavySlot[0])
     
     def fire(self, rect, counter=0):
         if self.ammo > 0:
-            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)
+            self.aim()
+            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0, 1, self.target)
             self.ammo -= 1

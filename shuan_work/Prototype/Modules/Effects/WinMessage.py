@@ -18,7 +18,7 @@ class WinMessage(EffectTemplate):
     uiEffect = True
     
     def __init__(self, pos):
-        self.images = [self.context.loadText('arial', 50, 'Mission is completed!', (220, 220, 220))]
+        self.images = [self.context.loadText('arial', 50, u'Победа!', (220, 220, 220))]
         EffectTemplate.__init__(self, pos)
     
     

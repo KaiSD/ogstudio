@@ -15,19 +15,17 @@ from Modules.Effects import HealthMessage, ScoreMessage, AmmoMessage, ReactorMes
 
 from Modules.Core import Context
 
-VERSION = 0.75
-NAME = 'Shuan gameplay slice prototype'
+VERSION = 0.9
+NAME = "Shuan Prototype"
+DESC = "Shuan gameplay slice prototype"
 
-def main(**args):
-    pygame.mixer.init(44100, -16, 2, 512)
-    pygame.init()
-    
+def main(screen, **args):    
     context = Context.contextObject
+    context.config = config
     context.rect = Rect(0, 0, config.screenWidth, config.screenHeight)
     
-    winstyle = 0
-    bestdepth = pygame.display.mode_ok(context.rect.size, winstyle, 32)
-    screen = pygame.display.set_mode(context.rect.size, winstyle, bestdepth)
+    if config.fullScreen:
+        pygame.display.toggle_fullscreen()
     
     # decorate the game window
     pygame.mouse.set_visible(False)
@@ -57,7 +55,7 @@ def main(**args):
     player.baseShield = int(player.baseLife * float(config.playerShield) / 4)
     player.ammoMod *= 1 + float(config.playerAmmo) / 2
     player.reactorMod *= 1 + float(config.playerReactor) / 2
-    player.reactor += player.baseShield / 2 + int(config.playerAmmo) * 10
+    player.reactor += int(config.playerShield) * 10 + int(config.playerAmmo) * 10
     
     weaponCounter = 0
     for i in config.playerWeapons:
@@ -96,7 +94,9 @@ def main(**args):
                 print 'Average FPS: ', float(context.ticks)/float(context.time) * 1000
                 print 'Time played: ', float(context.time) / 1000, ' sec.'
                 print '-------------------------------------------------------------------'
-                for i in context.debug.keys():
+                output = context.debug.keys()
+                output.sort()
+                for i in output:
                     print i, context.debug[i]
                 statfile = os.path.join('stat', 'missions.csv')
                 if not 'missions.csv' in os.listdir('stat'):
@@ -142,7 +142,3 @@ def main(**args):
         context.profEnd()
         # cap the framerate
         clock.tick(60)
-    
-
-if __name__ == '__main__':
-    main()

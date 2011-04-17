@@ -18,24 +18,40 @@ class EffectTemplate(pygame.sprite.Sprite):
     context = Context.contextObject
     images = None
     sound = None
+    scale = 1
     
     animcycle = 4
     loop = False
     
     uiEffect = False
+    explosionEffect = None
     
-    def __init__(self, pos):
+    def __init__(self, pos, damage=0):
         '''
         Constructor
         '''
         if self.uiEffect:
             self.containers = self.context.ui
+        elif damage > 0:
+            self.containers = self.context.shots, self.context.all
+            self.isExplode = False
+            self.isAE = False
+            self.damage = damage
+            self.ghost = True
+            if not self.context.debug.has_key('WeaponDamage['+str(self.__class__)+']'):
+                self.context.debug['WeaponDamage['+str(self.__class__)+']'] = 0
         else:
             self.containers = self.context.all
         
         pygame.sprite.Sprite.__init__(self, self.containers)
         
-        self.image = self.images[0]
+        image = self.images[0]
+        if self.scale == 1:
+            self.image = image
+        else:
+            newSize = (image.get_width()*self.scale,image.get_height()*self.scale)
+            self.image = pygame.transform.smoothscale(image, newSize)
+            
         self.counter = 0
         self.maxcount = len(self.images)*self.animcycle
         self.rect = self.image.get_rect()
@@ -50,9 +66,19 @@ class EffectTemplate(pygame.sprite.Sprite):
         '''
         if self.loop:
             self.counter = (self.counter + 1) % self.maxcount
-            self.image = self.images[self.counter/self.animcycle]
+            image = self.images[self.counter/self.animcycle]
+            if self.scale == 1:
+                self.image = image
+            else:
+                newSize = (image.get_width()*self.scale,image.get_height()*self.scale)
+                self.image = pygame.transform.smoothscale(image, newSize)
         else:
-            self.image = self.images[self.counter/self.animcycle]
+            image = self.images[self.counter/self.animcycle]
+            if self.scale == 1:
+                self.image = image
+            else:
+                newSize = (image.get_width()*self.scale,image.get_height()*self.scale)
+                self.image = pygame.transform.smoothscale(image, newSize)
             self.counter = self.counter + 1
             if self.counter == self.maxcount:
                 self.kill()

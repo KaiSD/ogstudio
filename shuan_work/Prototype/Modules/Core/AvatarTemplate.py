@@ -59,11 +59,16 @@ class AvatarTemplate(pygame.sprite.Sprite):
         self.shieldRegenTimer = 0
         self.lastHitSound = 0
         self.weaponTicks = 0
+        self.target = None
+        self.aimed = False
         
         self.context.debug['EnemyGunHit'] = 0
         self.context.debug['EnemyAimGunHit'] = 0
         self.context.debug['EnemyLaserHit'] = 0
         self.context.debug['DamageGive'] = 0
+        
+        if not self.context.debug.has_key('WeaponDamage['+str(self.__class__)+']'):
+            self.context.debug['WeaponDamage['+str(self.__class__)+']'] = 0
     
     def weaponsUpdate(self):
         for i in self.weapons+self.guns:
@@ -77,12 +82,33 @@ class AvatarTemplate(pygame.sprite.Sprite):
         else:
             self.shieldRegenTime = 5 + int((self.shieldRegenTime + 300 * self.reactorMod) / (100 * self.reactorMod - self.reactor))
         
-        for i in self.weapons:
-            i.reloadTime = int(i.reloadTime + reloadMod)
+        for i in self.weapons+self.guns:
+            i.reloadTime = int(i.reloadTime * reloadMod)
             if i.reloadTime > i.maxReloadTime:
                 i.reloadTime = i.maxReloadTime
         
         return reloadMod
+    
+    def aim(self):
+        target = self.target
+        enemies = self.context.currentLevel.enemiesOnScreen
+        posX = self.rect.centerx
+        posY = self.rect.top
+        if target in enemies: 
+            if target.rect.centery < posY:
+                return
+            else:
+                target = None
+        dist = 999999
+        for i in enemies.keys():
+            ep = enemies[i]
+            if ep[1] < posY:
+                d = (posX - ep[0])+abs(posY - ep[1])/3
+                if d < dist:
+                    target = i
+                    dist = d
+        self.target = target
+        self.aimed = True
     
     def update(self):
         self.counter = (self.counter + 1) % self.maxcount
@@ -147,6 +173,7 @@ class AvatarTemplate(pygame.sprite.Sprite):
                 collist[0].kill()
         
         # Weapons using
+        self.aim()
         for i in self.weapons + self.guns:
             if i.reloadTimer > 0:
                 i.reloadTimer = i.reloadTimer - 1
@@ -167,6 +194,11 @@ class AvatarTemplate(pygame.sprite.Sprite):
                             localSounds.append(i.soundEnd)
                     i.fire(self.rect, self.weaponTicks)
                     self.weaponTicks += 1
+                    i.keepTimer = i.keepFire
+                elif not i.justFired or i.keepTimer > 0:
+                    i.fire(self.rect, self.weaponTicks)
+                    self.weaponTicks += 1
+                    i.keepTimer -= 1
                 i.justFired = firing
             elif not i.soundLoop is None:
                 if i.soundLoop in self.soundsToPlay:
@@ -178,11 +210,15 @@ class AvatarTemplate(pygame.sprite.Sprite):
         # Heavy weapons
         heavyFiring = pygame.mouse.get_pressed()[2]
         if not self.heavy is None:
-            if heavyFiring and (not self.heavy.justFired):
+            if heavyFiring and not (self.heavy.justFired or self.heavy.reloadTimer > 0):
                 self.heavy.fire(self.rect)
+                self.heavy.reloadTimer = self.heavy.reloadTime 
             self.heavy.justFired = heavyFiring
+            if self.heavy.reloadTimer > 0:
+                self.heavy.reloadTimer -= 1
             if not self.heavy.soundEnd is None:
                 self.heavy.soundEnd.set_volume(0.3)
                 self.heavy.soundEnd.play()
                 
         self.rect = oldrect
+        self.aimed = False

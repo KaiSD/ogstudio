@@ -22,13 +22,17 @@ class Weapon(WeaponTemplate):
     
     def fire(self, rect, counter):
         if self.side > 0:
-            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 20, 0, None, 3.158)
+            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 14, 1, None, 2.369)
+            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 14, -1, None, 3.948)
         elif self.side < 0:
-            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -20, 0)
+            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -14, 1, None, 0.79)
+            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -14, -1, None, -0.79)
         else:
             if counter % 2 == 1:
-                Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 20, 0, None, 3.158)
+                Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 14, 1, None, 2.369)
+                Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 14, -1, None, 3.948)
                 self.tick = False
             else:
-                Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -20, 0)
+                Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -14, 1, None, 0.79)
+                Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, -14, -1, None, -0.79)
                 self.tick = True

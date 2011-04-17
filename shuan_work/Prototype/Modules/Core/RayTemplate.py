@@ -20,9 +20,11 @@ class RayTemplate(pygame.sprite.Sprite):
     containers = context.shots, context.all
     
     animcycle = 1
+    
+    explosionEffect = None
     ghost = True
     
-    def __init__(self, emitter, damage, counter=0):
+    def __init__(self, emitter, damage, counter=0, lifetime=1):
         '''
         Constructor
         '''
@@ -53,13 +55,15 @@ class RayTemplate(pygame.sprite.Sprite):
         self.rect.center = emitter
         self.rect.bottom = emitter[1]
         self.damage = damage
+        self.lifetime = lifetime
         
-        self.killOnThisFrame = False
+        if not self.context.debug.has_key('WeaponDamage['+str(self.__class__)+']'):
+            self.context.debug['WeaponDamage['+str(self.__class__)+']'] = 0
     
     def update(self):
         '''
         Update
         '''
-        if self.killOnThisFrame:
+        if self.lifetime == 0:
             self.kill()
-        self.killOnThisFrame = True
+        self.lifetime -= 1

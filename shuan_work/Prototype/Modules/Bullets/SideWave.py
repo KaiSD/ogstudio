@@ -8,12 +8,11 @@ Shuan gameplay slice prototype bullet effect module
 '''
 
 from ..Core.BulletTemplate import BulletTemplate
-from ..Effects import PlasmaDamagingExplosion 
 
 class Bullet(BulletTemplate):
     '''
     Explosion visual effect
     '''
-    images = BulletTemplate.context.loadSprite('bullets.png', [(9, 13, 12, 18)])
+    images = BulletTemplate.context.loadSprite('bullets.png', [(47, 17, 10, 15)])
     speed = 14
-    explosionEffect = PlasmaDamagingExplosion.Explosion
+    isRotating = True

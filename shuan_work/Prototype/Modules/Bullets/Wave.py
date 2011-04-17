@@ -14,4 +14,4 @@ class Bullet(BulletTemplate):
     Explosion visual effect
     '''
     images = BulletTemplate.context.loadSprite('bullets.png', [(41, 0, 24, 16)])
-    speed = 22
+    speed = 20

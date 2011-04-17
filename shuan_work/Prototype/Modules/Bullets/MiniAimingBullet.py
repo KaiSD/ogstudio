@@ -13,5 +13,6 @@ class Bullet(BulletTemplate):
     '''
     Explosion visual effect
     '''
-    images = BulletTemplate.context.loadSprite('bullets.png', [(47, 17, 10, 15)])
-    speed = 22
+    images = BulletTemplate.context.loadSprite('bullets.png', [(21, 1, 11, 11)])
+    speed = 16
+    reAiming = True

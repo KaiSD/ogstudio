@@ -14,13 +14,14 @@ class Weapon(WeaponTemplate):
     '''
     Self repair weapon
     '''
-    damage = 120
+    damage = 500
     ammo = 5
+    reloadTime = 660
     
     def __init__(self):
         WeaponTemplate.__init__(self, self.context.avatar.heavySlot[0], self.context.avatar.heavySlot[0])
     
     def fire(self, rect, counter=0):
         if self.ammo > 0:
-            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0)
+            Bullet((rect.left + self.posX, rect.top + self.posY), self.damage, 0, 1, self.avatar)
             self.ammo -= 1
