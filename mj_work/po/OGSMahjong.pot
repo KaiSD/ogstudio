@@ -191,3 +191,15 @@ msgstr ""
 msgid "The game has been saved"
 msgstr ""
 
+msgid "Cannot open file"
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
