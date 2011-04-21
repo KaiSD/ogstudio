@@ -1,199 +1,318 @@
-
-msgid "Game"
-msgstr "Игра"
-
-msgid "Video"
-msgstr "Видео"
-
-msgid "Audio"
-msgstr "Аудио"
-
-msgid "Controls"
-msgstr "Управление"
-
-msgid "OK"
-msgstr ""
-
-msgid "Cancel"
-msgstr "Отмена"
-
-msgid "Apply"
-msgstr "Применить"
-
-msgid "Difficulty:"
-msgstr "Сложность:"
-
-msgid "Easy"
-msgstr "Легко"
-
-msgid "Medium"
-msgstr "Средне"
-
-msgid "Classic"
-msgstr "Классика"
-
-msgid "Theme:"
-msgstr "Тема:"
-
-msgid "Full screen"
-msgstr "На весь экран"
-
-msgid "VSync"
-msgstr "Верт. синхронизация"
-
-msgid "Resolution:"
-msgstr "Разрешение:"
-
-msgid "Anti-aliasing:"
-msgstr "Сглаживание:"
-
-msgid "Shadows"
-msgstr "Тени"
-
-msgid "Tile:"
-msgstr "Фишка:"
-
-msgid "Texture filtering:"
-msgstr "Фильтрация текстур:"
-
-msgid "None"
-msgstr "Нет"
-
-msgid "Bilinear"
-msgstr "Билинейная"
-
-msgid "Trilinear"
-msgstr "Трилинейная"
-
-msgid "Anisotropic"
-msgstr "Анизотропная"
-
-msgid "General volume:"
-msgstr "Общая громкость:"
-
-msgid "Background volume:"
-msgstr "Громкость фона:"
+msgid "About"
+msgstr "О программе"
 
 msgid "Actions' volume:"
 msgstr "Громкость действий:"
 
-msgid "Mouse sensitivity:"
-msgstr "Чувствительность мыши:"
+msgid "Anti-aliasing:"
+msgstr "Сглаживание:"
 
-msgid "Invalid layout"
-msgstr "Неверная раскладка"
-
-msgid "Invalid layout version"
-msgstr "Неверная версия раскладки"
-
-msgid "Enter your name:"
-msgstr "Введите своё имя:"
-
-msgid "Name"
-msgstr "Имя"
-
-msgid "Layout"
-msgstr "Раскладка"
-
-msgid "Difficulty"
-msgstr "Сложность"
+msgid "Apply"
+msgstr "Применить"
 
 msgid "Are you sure?"
 msgstr "Вы уверены?"
 
-msgid "Yes"
-msgstr "Да"
+msgid "Audio"
+msgstr "Аудио"
 
-msgid "No"
-msgstr "Нет"
+msgid "Background volume:"
+msgstr "Громкость фона:"
 
-msgid "Music packs:"
-msgstr "Музыкальные группы:"
+msgid "Cancel"
+msgstr "Отмена"
 
-msgid "Dynamic camera"
-msgstr "Динамическая камера"
+msgid "Cannot create directory"
+msgstr "Не удаётся создать директорию"
+
+msgid "Cannot get list of files"
+msgstr "Не удаётся получить список файлов"
+
+msgid "Cannot initialize sound system"
+msgstr "Не удаётся инициализировать звуковую систему"
+
+msgid "Cannot load sound buffer from memory"
+msgstr "Не удаётся загрузить звуковой буфер из памяти"
+
+msgid "Cannot open save file"
+msgstr "Не удаётся открыть файл сохранения"
+
+msgid "Cannot open statistics file"
+msgstr "Не удаётся открыть файл статистики"
+
+msgid "Cannot read statistics from file"
+msgstr "Не удаётся прочитать статистику из файла"
+
+msgid "Cannot remove file or directory"
+msgstr "Не удаётся удалить файл или директорию"
+
+msgid "Cannot save config file"
+msgstr "Не удаётся сохранить файл настроек"
+
+msgid "Cannot save statistics file"
+msgstr "Не удаётся сохранить файл статистики"
+
+msgid "Cannot set ALURE IO callbacks"
+msgstr "Не удаётся установить ALURE IO callbacks"
+
+msgid "Cannot set negative timer resolution"
+msgstr "Нельзя установить отрицательное разрешение таймера"
+
+msgid "Classic"
+msgstr "Классика"
+
+msgid "Controls"
+msgstr "Управление"
+
+msgid "Copyright (C) 2010-2011, Opensource Game Studio\n\nMahjong-0.7 is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nMahjong-0.7 is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with Foobar.  If not, see\n[window='Info/Link3']\n                "
+msgstr "MISSING"
+
+msgid "Could not get path to 'My Documents' directory"
+msgstr "Не удалось получить путь к директории 'Мои Документы'"
 
 msgid "Deflection of dynamic camera:"
 msgstr "Отклонение динамической камеры:"
 
-msgid "Only horizontal"
-msgstr "Только по горизонтали"
+msgid "Delete"
+msgstr "Удалить"
 
-msgid "This change will interrupt current game party"
-msgstr "Это изменение прервёт текущую партию"
+msgid "Difficulty:"
+msgstr "Сложность:"
 
-msgid "The theme does not support selected difficulty"
-msgstr "Тема не поддерживает выбранную сложность"
+msgid "Dynamic camera"
+msgstr "Динамическая камера"
 
-msgid "This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='About/Link1']\nor\n[window='About/Link2']"
-msgstr "Это классическая игра \"Пасьянс Маджонг\". Это первый кирпичик в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.\n \nКоманда [image='set:Logos image:OGS']:\nМихаил Капелько - код и наполнение;\nИван Корыстин - игровой дизайн, наполнение и контроль качества.\n \nСторонние ресурсы:\nRaquel Ravanini - изображения для темы оформления \"Classic\".\nKevin MacLeod - все музыкальные треки в разделах \"Eastern\" и \"Piano\". Треки \"Funkorama\", \"Neo Western\" и \"Protofunk\" в разделе \"Modern\".\nDano - Музыкальные треки \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" и \"Today then tomorrow\" в разделе \"Modern\".\nFenster - Музыкальный трек \"Free Software\" в разделе \"Modern\".\n  \nБолее подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.\n \nБиблиотеки:\n[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nБлагодарим:\n- команду/сообщество Ogre3D за движок и помощь;\n- команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;\n- разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.\nОсобая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.\n \nВеб-страницы:\n[window='About/Link1']\nили\n[window='About/Link2']"
-
-msgid "Restart the party"
-msgstr "Перезапустить партию"
-
-msgid "Undo"
-msgstr "Отменить"
-
-msgid "Hint"
-msgstr "Подсказка"
-
-msgid "Tile pairs you can remove"
-msgstr "Пары фишек, которые можно удалить"
+msgid "Easy"
+msgstr "Легко"
 
 msgid "Elapsed time"
 msgstr "Прошедшее время"
 
-msgid "Removed tiles / Altogether"
-msgstr "Убранные фишки / Всего"
+msgid "Empty save file"
+msgstr "Пустой файл сохранения"
 
-msgid "Settings"
-msgstr "Настройки"
+msgid "Enter your name:"
+msgstr "Введите своё имя:"
 
-msgid "Statistics"
-msgstr "Статистика"
+msgid "Full screen"
+msgstr "На весь экран"
 
-msgid "About"
-msgstr "О программе"
-
-msgid "Sound track"
-msgstr "Музыкальная дорожка"
-
-msgid "Quit the game"
-msgstr "Выйти из игры"
-
-msgid "Start a new party"
-msgstr "Начать новую партию"
-
-msgid "Shuffle"
-msgstr "Перемешать"
-
-msgid "Back"
-msgstr "Назад"
-
-msgid "Mahjong"
-msgstr "Маджонг"
-
-msgid "Shisen-Sho"
-msgstr "Шисен-Сё"
-
-msgid "Shisen-Sho g"
-msgstr "Шисен-Сё г"
+msgid "Game"
+msgstr "Игра"
 
 msgid "Game type and layout"
 msgstr "Тип игры и раскладка"
 
-msgid "Shisen-Sho + gravity"
-msgstr "Шисен-Сё + гравитация"
+msgid "General volume:"
+msgstr "Общая громкость:"
+
+msgid "Hint"
+msgstr "Подсказка"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Internal sound system error"
+msgstr "Внутренняя ошибка звуковой системы"
+
+msgid "Invalid 'Resolution' config value"
+msgstr "Неверное значение 'Resolution' в настройках"
+
+msgid "Invalid CEGUI::Window pointer"
+msgstr "Неверный указатель CEGUI::Window"
+
+msgid "Invalid button"
+msgstr "Неверная кнопка"
+
+msgid "Invalid command type"
+msgstr "Неверный тип команды"
+
+msgid "Invalid draw axis"
+msgstr "Неверная ось черчения"
+
+msgid "Invalid game difficulty"
+msgstr "Неверная сложность игры"
+
+msgid "Invalid game difficulty ID"
+msgstr "Неверное значение ID сложности игры"
+
+msgid "Invalid game strategy"
+msgstr "Неверная стратегия игры"
+
+msgid "Invalid game type"
+msgstr "Неверный тип игры"
+
+msgid "Invalid game type ID"
+msgstr "Неверное значение ID типа игры"
+
+msgid "Invalid input points"
+msgstr "Неверные входные точки"
+
+msgid "Invalid layout dimensions"
+msgstr "Неверные размеры раскладки"
+
+msgid "Invalid layout file"
+msgstr "Неверный файл раскладки"
+
+msgid "Invalid save file command type"
+msgstr "Неверная команда файла сохранения"
+
+msgid "Invalid scene type"
+msgstr "Неверный тип сцены"
+
+msgid "Invalid state"
+msgstr "Неверное состояние"
+
+msgid "Invalid texture filtering ID"
+msgstr "Неверное значение ID фильтрации текстур"
+
+msgid "Invalid usage"
+msgstr "Неверное использование"
+
+msgid "Invalid window type"
+msgstr "Неверный тип окна"
+
+msgid "License"
+msgstr "Лицензия"
 
 msgid "Load"
 msgstr "Загрузить"
 
-msgid "Delete"
-msgstr "Удалить"
+msgid "Localization failed"
+msgstr "Локализация не удалась"
+
+msgid "Mahjong"
+msgstr "Маджонг"
+
+msgid "Medium"
+msgstr "Средне"
+
+msgid "Mouse sensitivity:"
+msgstr "Чувствительность мыши:"
+
+msgid "Music packs:"
+msgstr "Музыкальные группы:"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "No layouts found for the game type ID"
+msgstr "Не найдено раскладок для игры с этим ID"
+
+msgid "No such command"
+msgstr "Нет такой команды"
+
+msgid "No such config entry key"
+msgstr "Нет такой настройки"
+
+msgid "No such item"
+msgstr "Нет такого элемента"
+
+msgid "No such layout"
+msgstr "Нет такой раскладки"
+
+msgid "No themes found"
+msgstr "Тем не найдено"
+
+msgid "Not an OGS Mahjong save file"
+msgstr "Не файл сохранения OGS Mahjong"
+
+msgid "Not an OGS Mahjong statistics file"
+msgstr "Не файл статистики OGS Mahjong"
+
+msgid "Number of positions of the layout is not aliquot to 2"
+msgstr "Количество позиций раскладки не кратно 2"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Only horizontal"
+msgstr "Только по горизонтали"
+
+msgid "Quit the game"
+msgstr "Выйти из игры"
+
+msgid "Removed tiles / Altogether"
+msgstr "Убранные фишки / Всего"
+
+msgid "Resolution:"
+msgstr "Разрешение:"
+
+msgid "Restart the party"
+msgstr "Перезапустить партию"
+
+msgid "Rules"
+msgstr "Правила"
 
 msgid "Save"
 msgstr "Сохранить"
 
-msgid "The game has been saved"
-msgstr "Игра была сохранена"
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Shadows"
+msgstr "Тени"
+
+msgid "Shisen-Sho"
+msgstr "Шисен-Сё"
+
+msgid "Shisen-Sho + gravity"
+msgstr "Шисен-Сё + гравитация"
+
+msgid "Shisen-Sho g"
+msgstr "Шисен-Сё г"
+
+msgid "Shuffle"
+msgstr "Перемешать"
+
+msgid "Some rules"
+msgstr "MISSING"
+
+msgid "Sound track"
+msgstr "Музыкальная дорожка"
+
+msgid "Start a new party"
+msgstr "Начать новую партию"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Stats"
+msgstr "Статистика"
+
+msgid "Texture filtering:"
+msgstr "Фильтрация текстур:"
+
+msgid "Theme:"
+msgstr "Тема:"
+
+msgid "This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
+msgstr "MISSING"
+
+msgid "Tile pairs you can remove"
+msgstr "Пары фишек, которые можно удалить"
+
+msgid "Tile:"
+msgstr "Фишка:"
+
+msgid "Undefined HOME environment variable"
+msgstr "Неопределённая переменная окружения HOME"
+
+msgid "Undo"
+msgstr "Отменить"
+
+msgid "Unsupported save file format version"
+msgstr "Неподдерживаемая версия формата файла сохранений"
+
+msgid "Unsupported statistics file format version"
+msgstr "Неподдерживаемая версия формата файла статистики"
+
+msgid "VSync"
+msgstr "Верт. синхронизация"
+
+msgid "Video"
+msgstr "Видео"
+
+msgid "Yes"
+msgstr "Да"
 
