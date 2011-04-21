@@ -4,6 +4,9 @@ msgstr "О программе"
 msgid "Actions' volume:"
 msgstr "Громкость действий:"
 
+msgid "Anisotropic"
+msgstr "Анизотропная"
+
 msgid "Anti-aliasing:"
 msgstr "Сглаживание:"
 
@@ -18,6 +21,9 @@ msgstr "Аудио"
 
 msgid "Background volume:"
 msgstr "Громкость фона:"
+
+msgid "Bilinear"
+msgstr "Билинейная"
 
 msgid "Cancel"
 msgstr "Отмена"
@@ -175,6 +181,9 @@ msgstr "Неверный тип окна"
 msgid "License"
 msgstr "Лицензия"
 
+msgid "Linear"
+msgstr "Линейная"
+
 msgid "Load"
 msgstr "Загрузить"
 
@@ -213,6 +222,9 @@ msgstr "Нет такой раскладки"
 
 msgid "No themes found"
 msgstr "Тем не найдено"
+
+msgid "None"
+msgstr "Нет"
 
 msgid "Not an OGS Mahjong save file"
 msgstr "Не файл сохранения OGS Mahjong"
@@ -294,6 +306,9 @@ msgstr "Пары фишек, которые можно удалить"
 
 msgid "Tile:"
 msgstr "Фишка:"
+
+msgid "Trilinear"
+msgstr "Трилинейная"
 
 msgid "Undefined HOME environment variable"
 msgstr "Неопределённая переменная окружения HOME"
