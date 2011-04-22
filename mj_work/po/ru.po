@@ -70,9 +70,6 @@ msgstr "Классика"
 msgid "Controls"
 msgstr "Управление"
 
-msgid "Copyright (C) 2010-2011, Opensource Game Studio\n\nMahjong-0.7 is free software: you can redistribute it and/or modify\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nMahjong-0.7 is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License\nalong with Foobar.  If not, see\n[window='Info/Link3']\n                "
-msgstr "MISSING"
-
 msgid "Could not get path to 'My Documents' directory"
 msgstr "Не удалось получить путь к директории 'Мои Документы'"
 
@@ -84,6 +81,9 @@ msgstr "Удалить"
 
 msgid "Difficulty:"
 msgstr "Сложность:"
+
+msgid "Do you want save the game before exit?"
+msgstr "Сохранить игру перед выходом?"
 
 msgid "Dynamic camera"
 msgstr "Динамическая камера"
@@ -278,7 +278,7 @@ msgid "Shuffle"
 msgstr "Перемешать"
 
 msgid "Some rules"
-msgstr "MISSING"
+msgstr "Какие-то правила"
 
 msgid "Sound track"
 msgstr "Музыкальная дорожка"
@@ -295,11 +295,20 @@ msgstr "Статистика"
 msgid "Texture filtering:"
 msgstr "Фильтрация текстур:"
 
+msgid "The game has been saved as: '%s'"
+msgstr "Игра была сохранена как: '%s'"
+
+msgid "The layout you've played last time can no longer be found. Another one was used instead."
+msgstr "Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен."
+
 msgid "Theme:"
 msgstr "Тема:"
 
+msgid "This change will interrupt current game party"
+msgstr "Это изменение прервёт текущую партию"
+
 msgid "This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
-msgstr "MISSING"
+msgstr "Это классическая игра \"Пасьянс Маджонг\". Это первый кирпичик в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.\n \nКоманда [image='set:Logos image:OGS']:\nМихаил Капелько - код и наполнение;\nИван Корыстин - игровой дизайн, наполнение и контроль качества.\n \nСторонние ресурсы:\nRaquel Ravanini - изображения для темы оформления \"Classic\".\nKevin MacLeod - все музыкальные треки в разделах \"Eastern\" и \"Piano\". Треки \"Funkorama\", \"Neo Western\" и \"Protofunk\" в разделе \"Modern\".\nDano - Музыкальные треки \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" и \"Today then tomorrow\" в разделе \"Modern\".\nFenster - Музыкальный трек \"Free Software\" в разделе \"Modern\".\n  \nБолее подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.\n \nБиблиотеки:\n[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nБлагодарим:\n- команду/сообщество Ogre3D за движок и помощь;\n- команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;\n- разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.\nОсобая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.\n \nВеб-страницы:\n[window='Info/Link1']\nили\n[window='Info/Link2']"
 
 msgid "Tile pairs you can remove"
 msgstr "Пары фишек, которые можно удалить"
@@ -309,6 +318,9 @@ msgstr "Фишка:"
 
 msgid "Trilinear"
 msgstr "Трилинейная"
+
+msgid "Type: %s\nDifficulty: %s\nLayout: %s\nHints: %s\nUndos: %s\nTime: %s"
+msgstr "Тип: %s\nСложность: %s\nРаскладка: %s\nПодсказок: %s\nОтмен: %s\nВремя: %s"
 
 msgid "Undefined HOME environment variable"
 msgstr "Неопределённая переменная окружения HOME"
@@ -330,4 +342,13 @@ msgstr "Видео"
 
 msgid "Yes"
 msgstr "Да"
+
+msgid "Name"
+msgstr "Название"
+
+msgid "Layout"
+msgstr "Раскладка"
+
+msgid "Difficulty"
+msgstr "Сложность"
 
