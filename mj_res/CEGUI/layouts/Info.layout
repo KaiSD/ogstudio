@@ -30,6 +30,14 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/About" >
+                <Window Type="Vanilla/Button" Name="Info/Link1" >
+                    <Property Name="Text" Value="http://opengamestudio.org" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,887.015},{0.4,6},{0.07,887.015}}" />
+                </Window>
+                <Window Type="Vanilla/Button" Name="Info/Link2" >
+                    <Property Name="Text" Value="http://osrpgcreation.sf.net" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,939.64},{0.4,6},{0.07,939.64}}" />
+                </Window>
                 <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.
  
 [image=&apos;set:Logos image:OGS&apos;] team:
@@ -63,16 +71,12 @@ or
 [window=&apos;Info/Link2&apos;]</Property>
                 <Property Name="VertScrollbar" Value="True" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
-                <Window Type="Vanilla/Button" Name="Info/Link1" >
-                    <Property Name="Text" Value="http://opengamestudio.org" />
-                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,887.015},{0.4,6},{0.07,887.015}}" />
-                </Window>
-                <Window Type="Vanilla/Button" Name="Info/Link2" >
-                    <Property Name="Text" Value="http://osrpgcreation.sf.net" />
-                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,939.64},{0.4,6},{0.07,939.64}}" />
-                </Window>
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/License" >
+                <Window Type="Vanilla/Button" Name="Info/Link3" >
+                    <Property Name="Text" Value="http://www.gnu.org/licenses" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,321.882},{0.4,6},{0.07,321.882}}" />
+                </Window>
                 <Property Name="Text" >Copyright (C) 2010-2011, Opensource Game Studio
 
 Mahjong-0.7 is free software: you can redistribute it and/or modify
@@ -91,10 +95,6 @@ along with Foobar.  If not, see
                 </Property>
                 <Property Name="Visible" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
-                <Window Type="Vanilla/Button" Name="Info/Link3" >
-                    <Property Name="Text" Value="http://www.gnu.org/licenses" />
-                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,321.882},{0.4,6},{0.07,321.882}}" />
-                </Window>
             </Window>
         </Window>
     </Window>
