@@ -46,6 +46,9 @@ msgstr "Не удаётся открыть файл сохранения"
 msgid "Cannot open statistics file"
 msgstr "Не удаётся открыть файл статистики"
 
+msgid "Cannot open X11 display"
+msgstr "Не удаётся открыть дисплей X11"
+
 msgid "Cannot read statistics from file"
 msgstr "Не удаётся прочитать статистику из файла"
 
