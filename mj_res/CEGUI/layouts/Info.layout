@@ -31,7 +31,7 @@ Goal of the game is to clear the playing field by taking away pairs of identical
  
 Shisen-Sho.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running on a free space.
-[image=&apos;set:Rules image:ShisenSho&apos;]
+[image=&apos;set:Rules image:ShisenSho&apos;] [image=&apos;set:Rules image:ShisenSho2&apos;]
  
 Shisen-Sho with gravity.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running on a free space. After each turn, tiles, that are free at the bottom, will be pushed down to come into contact with other tiles or to be in the bottom row.
