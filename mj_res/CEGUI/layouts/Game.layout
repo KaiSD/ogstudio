@@ -33,7 +33,7 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Restart" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Restart32&apos;]" />
-                <Property Name="Tooltip" Value="Restart the party" />
+                <Property Name="Tooltip" Value="Restart the game" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.043,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Undo" >
@@ -63,7 +63,7 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Quit" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Close32&apos;]" />
-                <Property Name="Tooltip" Value="Quit the game" />
+                <Property Name="Tooltip" Value="Quit" />
                 <Property Name="UnifiedAreaRect" Value="{{0.957,0},{0.005,0},{0.995,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Game/Turns" >

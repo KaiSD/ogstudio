@@ -39,7 +39,7 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Finished/Start" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:New44&apos;]" />
-                <Property Name="Tooltip" Value="Start a new party" />
+                <Property Name="Tooltip" Value="Start a new game" />
                 <Property Name="UnifiedAreaRect" Value="{{0.78,0},{0.07,0},{0.83,0},{0.93,0}}" />
             </Window>
         </Window>

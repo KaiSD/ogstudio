@@ -30,22 +30,22 @@ Goal of the game is to clear the playing field by taking away pairs of identical
 [image=&apos;set:Rules image:Mahjong&apos;]
  
 Shisen-Sho.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running on a free space.
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space.
 [image=&apos;set:Rules image:ShisenSho&apos;] [image=&apos;set:Rules image:ShisenSho2&apos;]
  
 Shisen-Sho with gravity.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running on a free space. After each turn, tiles, that are free at the bottom, will be pushed down to come into contact with other tiles or to be in the bottom row.
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space. After each turn, tiles, that are free at the bottom, will be pushed down to the other tiles or to the bottom row.
  
 Classic mahjong tiles:
-1. Bamboos - tiles with dignity 1 to 9. The &quot;Bamboo&quot; tiles with the same color and dignity are identical.
-2. Symbols - tiles with dignity 1 to 9. The &quot;Symbols&quot; tiles with the same color and dignity are identical.
-3. Dots - tiles with dignity 1 to 9. The &quot;Dots&quot; tiles with the same color and dignity are identical.
+1. Bamboos - tiles with value 1 to 9. The &quot;Bamboo&quot; tiles with the same color and value are identical.
+2. Symbols - tiles with value 1 to 9. The &quot;Symbols&quot; tiles with the same color and value are identical.
+3. Dots - tiles with value 1 to 9. The &quot;Dots&quot; tiles with the same color and value are identical.
 4. Dragons - 3 tiles of different colors. The &quot;Dragons&quot; tiles with the same color are identical.
 5. Winds - 4 pieces with the symbols of different sides of the world. &quot;Winds&quot; tiles with the same symbol are identical.
 6. Seasons - 4 pieces depicting the seasons. All &quot;seasons&quot; tiles are identical.
 7. Flowers - 4 pieces with images of flowers. All &quot;flowers&quot; tiles are identical.
  
-In various themes tiles may look different.</Property>
+Tiles in various themes may look different.</Property>
                 <Property Name="Visible" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
@@ -60,7 +60,7 @@ In various themes tiles may look different.</Property>
                     <Property Name="Text" Value="http://osrpgcreation.sf.net" />
                     <Property Name="UnifiedAreaRect" Value="{{0,6},{0,939.64},{0.4,6},{0.07,939.64}}" />
                 </Window>
-                <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first brick in the long road to an Open source RPG we (OGS team) wish to create.
+                <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
  
 [image=&apos;set:Logos image:OGS&apos;] team:
 Michael Kapelko - code and content;
