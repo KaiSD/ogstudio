@@ -79,7 +79,7 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Shuffle" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Shuffle32&apos;]" />
-                <Property Name="Tooltip" Value="Undo" />
+                <Property Name="Tooltip" Value="Shuffle" />
                 <Property Name="UnifiedAreaRect" Value="{{0.197,0},{0.005,0},{0.236,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Load" >
