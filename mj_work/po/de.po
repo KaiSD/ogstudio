@@ -3,7 +3,7 @@ msgid "About"
 msgstr "Programm Info"
 
 msgid "Actions' volume:"
-msgstr "Aktionenlautstärke"
+msgstr "Aktionenlautstärke:"
 
 msgid "Anisotropic"
 msgstr "Anisotrop"
@@ -21,7 +21,7 @@ msgid "Audio"
 msgstr "Audio"
 
 msgid "Background volume:"
-msgstr "Hintergrundlautstärke"
+msgstr "Hintergrundlautstärke:"
 
 msgid "Bilinear"
 msgstr "Bilinear"
@@ -78,13 +78,13 @@ msgid "Could not get path to 'My Documents' directory"
 msgstr "Einen Pfad zum Verzeichnis 'Eigene Dateien' kann nicht erhalten werden"
 
 msgid "Deflection of dynamic camera:"
-msgstr "Ablenkung des dynamischen Kamera"
+msgstr "Ablenkung des dynamischen Kamera:"
 
 msgid "Delete"
 msgstr "Loeschen"
 
 msgid "Difficulty:"
-msgstr "Schwierigkeit"
+msgstr "Schwierigkeit:"
 
 msgid "Do you want  to save the game before exit?"
 msgstr "Wollen Sie das Spiel speichern, bevor beenden?"
@@ -102,9 +102,9 @@ msgid "Empty save file"
 msgstr "Leehre Datei"
 
 msgid "Enter your name:"
-msgstr "Bitte Ihre Name einfuehren\eingaben"
+msgstr "Bitte Ihre Name einfuehren:"
 
-msgid "Full screen
+msgid "Full screen"
 msgstr "Vollbild"
 
 msgid "Game"
@@ -114,7 +114,7 @@ msgid "Game type and layout"
 msgstr "Spieltyp und Layout"
 
 msgid "General volume:"
-msgstr "Lautstärke"
+msgstr "Lautstärke:"
 
 msgid "Hint"
 msgstr "Vorsagen"
@@ -156,10 +156,10 @@ msgid "Invalid game type ID"
 msgstr "Ungueltig Spieltyp ID"
 
 msgid "Invalid input points"
-msgstr "Ungültige Eingabe Punkte""
+msgstr "Ungültige Eingabe Punkte"
 
 msgid "Invalid layout dimensions"
-msgstr "Ungültige Layout Dimensionen""
+msgstr "Ungültige Layout Dimensionen"
 
 msgid "Invalid layout file"
 msgstr "Ungueltige Layout Datei"
@@ -186,25 +186,25 @@ msgid "License"
 msgstr "Lizenz"
 
 msgid "Linear"
-msgstr "linear"
+msgstr "Linear"
 
 msgid "Load"
 msgstr "Laden"
 
 msgid "Localization failed"
-msgstr "Lokalisierung ist nicht geratet\ nicht geklappt"
+msgstr "Lokalisierung ist nicht geratet"
 
 msgid "Mahjong"
 msgstr "Mahjong"
 
 msgid "Medium"
-msgstr "mittelmassig"
+msgstr "Mittelmassig"
 
 msgid "Mouse sensitivity:"
-msgstr "Mouse-Empfindlichkeit"
+msgstr "Mouse-Empfindlichkeit:"
 
 msgid "Music packs:"
-msgstr "Musikalische Gruppen"
+msgstr "Musikalische Gruppen:"
 
 msgid "No"
 msgstr "Nein"
@@ -243,19 +243,19 @@ msgid "OK"
 msgstr "OK"
 
 msgid "Only horizontal"
-msgstr "nur waagerecht"
+msgstr "Nur waagerecht"
 
 msgid "Quit"
 msgstr "Das Spiel verlassen"
 
 msgid "Removed tiles / Altogether"
-msgstr "wegschaffenden Spielsteine \ gesammt"
+msgstr "Wegschaffenden Spielsteine"
 
 msgid "Resolution:"
-msgstr "Trennung"
+msgstr "Trennung:"
 
 msgid "Restart the game"
-msgstr "Partie neustarten\wiederanlaufen"
+msgstr "Partie neustarten"
 
 msgid "Rules"
 msgstr "Regeln"
@@ -285,7 +285,7 @@ msgid "Mahjong Solitaire.\n\nGoal of the game is to clear the playing field by t
 msgstr "Mahjong Solitaire.\n\nZiel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.\nDer Spielstein kann nur dann entfernt werden, wenn er frei ist, so dass es keine anderen Steine ​​links oder rechts gibt (so dass sich keine anderen Steine ​​links oder rechts befinden).\n\nSchisen-Sö.\n\nZiel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.\nEin Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.\n\nSchisen-Sö+ Gravitation.\n\nEin Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.\nNach jedem Zug werden die Spielsteine, die von der Unterseite frei sind, nach unten verschoben, bis zum sie im Kontakt mit anderen Spielsteinen kommen oder den anderen Spielsteine oder sein Platz an der erste Spiellinie nehmen.\n\nKlassische Mahjong Spielsteine sind:\n\n die \"Bambus\" Spielsteine haben Wert von 1 bis 9.Die\"Bambus\"  Spielsteine mit der gleichen Farbe und Wert sind identisch. \ndie \"Symbol\" Spielsteine haben Wert von 1 bis 9. Die Spielsteine mit der gleichen Farbe und Wert sind identisch.\ndie \"Punkten\" Spielsteine haben Wert von 1 bis 9. Die\"Punkten\"  Spielsteine mit der gleichen Farbe und Wert sind identisch.\nDrachen - 3 Spielsteine in verschiedenen Farben.\nWinds - 4 Stück mit den Symbolen der verschiedenen Seiten der Welt. Die Spielsteine mit dem gleichen Symbol sind identisch.\nJahreszeiten - 4 Stück mit der Darstellung der Jahreszeiten. Alle \"Jahreszeiten\" Spielsteine sind identisch.\nBlumen - 4 Stück mit Bildern von Blumen. Alle \"Blumen\" Spielsteine sind identisch.\n\nSpielsteinen in verschiedenen Themen können anders aussehen."
 
 msgid "Sound track"
-msgstr ""Sound track""
+msgstr "Sound track"
 
 msgid "Start a new party"
 msgstr "Neue Partie starten"
@@ -297,10 +297,10 @@ msgid "Stats"
 msgstr "Statistik"
 
 msgid "Texture filtering:"
-msgstr ""Texture filtering:""
+msgstr "Texture filtering:"
 
 msgid "The game has been saved as: '%s'"
-msgstr "Das Spiel wurde gesichert als: '%s'""
+msgstr "Das Spiel wurde gesichert als: '%s'"
 
 msgid "The layout you've played last time can no longer be found. Another one was used instead."
 msgstr "Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Statt dessen wurde ein anderes verwendet / genutzt"
@@ -309,27 +309,25 @@ msgid "Theme:"
 msgstr "Thema:"
 
 msgid "This change will interrupt current game party"
-msgstr "diese Aenderung wird die laufeunde Partie unterbrechen"
+msgstr "Diese Aenderung wird die laufeunde Partie unterbrechen"
 
 msgid "This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
 msgstr "Dies ist ein klassisches Mahjong Solitaire Spiel. Es sit der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (OGS-Team) erarbeiten / ausarbeiten.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code und content;\nIvan Korystin - gameplay design, content und QA.\n \nAndere Ressoursen:\nRaquel Ravanini - Bilder fuer \"Classic\"  theme.\nKevin MacLeod - alle Tracks in \"Eastern\" und \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMehr Infos über Andere Ressoursen, ihre Lizenzen und Urheberrechte kann man in Readme-Dateien finden, die in Themen oder Musik-Packs Verzeichnisse sich stattfinden.\n \nLibraries:\n[image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nVielen Dank:\n- Ogre3D team/community fuer Engine und Hilfe;\n- Lightfeather team/community fuer due Hilfe mit Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat fuer Hilfe.\nBesonderer Dank geht an CrazyEddie fuer schoenes GUI System und eine große Unterstützung .\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
-"
 
 msgid "Tile pairs you can remove"
 msgstr "Paaren der Spielsteinen die kann geloesht werdem"
 
 msgid "Tile:"
-msgstr "der Spielsteine"
+msgstr "Der Spielsteine:"
 
 msgid "Trilinear"
 msgstr "Dreieckig"
 
 msgid "Type: %s\nDifficulty: %s\nLayout: %s\nHints: %s\nUndos: %s\nTime: %s"
-msgstr ""Typ: %s\nSchweirigleit: %s\nLayout: %s\nTips: %s\nRuecknahmen: %s\nDauerzeit: %s""
+msgstr "Typ: %s\nSchweirigleit: %s\nLayout: %s\nTips: %s\nRuecknahmen: %s\nDauerzeit: %s"
 
 msgid "Undefined HOME environment variable"
-msgstr "Unbestimmt HOME Umgebungsvariable
-"
+msgstr "Unbestimmt HOME Umgebungsvariable"
 
 msgid "Undo"
 msgstr "Ablehnen"
@@ -341,7 +339,7 @@ msgid "Unsupported statistics file format version"
 msgstr "Nicht unterstütztes Statistiken-Dateiformat  Version"
 
 msgid "VSync"
-msgstr ""VSync""
+msgstr "Vsync"
 
 msgid "Video"
 msgstr "Video"
@@ -350,10 +348,13 @@ msgid "Yes"
 msgstr "Ja"
 
 msgid "Name"
-msgstr "der Name"
+msgstr "Der Name"
 
 msgid "Layout"
 msgstr "Layout"
 
 msgid "Difficulty"
 msgstr "Schwierigkeit"
+
+msgid "Distros"
+msgstr "Distributionen"

@@ -104,7 +104,7 @@ msgstr "Пустой файл сохранения"
 msgid "Enter your name:"
 msgstr "Введите своё имя:"
 
-msgid "Full screen
+msgid "Full screen"
 msgstr "На весь экран"
 
 msgid "Game"
@@ -355,3 +355,6 @@ msgstr "Раскладка"
 
 msgid "Difficulty"
 msgstr "Сложность"
+
+msgid "Distros"
+msgstr "Дистрибутивы"
