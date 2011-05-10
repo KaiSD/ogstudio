@@ -167,11 +167,11 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VolBG" >
-                <Property Name="Text" Value="Background volume:" />
+                <Property Name="Text" Value="Music volume:" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.107,0},{0.495,0},{0.174,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VolActions" >
-                <Property Name="Text" Value="Actions&apos; volume:" />
+                <Property Name="Text" Value="Sound effects&apos; volume:" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.209,0},{0.495,0},{0.276,0}}" />
             </Window>
             <Window Type="Vanilla/ItemListbox" Name="Settings/ListMusicPacks" >
