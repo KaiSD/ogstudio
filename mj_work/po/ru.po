@@ -2,8 +2,8 @@
 msgid "About"
 msgstr "О программе"
 
-msgid "Actions' volume:"
-msgstr "Громкость действий:"
+msgid "Sound effects' volume:"
+msgstr "Громкость звуковых эффектов:"
 
 msgid "Anisotropic"
 msgstr "Анизотропная"
@@ -20,8 +20,8 @@ msgstr "Вы уверены?"
 msgid "Audio"
 msgstr "Аудио"
 
-msgid "Background volume:"
-msgstr "Громкость фона:"
+msgid "Music volume:"
+msgstr "Громкость музыки:"
 
 msgid "Bilinear"
 msgstr "Билинейная"
