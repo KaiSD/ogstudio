@@ -86,7 +86,7 @@ msgstr "Удалить"
 msgid "Difficulty:"
 msgstr "Сложность:"
 
-msgid "Do you want  to save the game before exit?"
+msgid "Do you want to save the game before exit?"
 msgstr "Сохранить игру перед выходом?"
 
 msgid "Dynamic camera"
@@ -255,7 +255,7 @@ msgid "Resolution:"
 msgstr "Разрешение:"
 
 msgid "Restart the game"
-msgstr "Перезапустить партию"
+msgstr "Перезапустить игру"
 
 msgid "Rules"
 msgstr "Правила"
@@ -287,8 +287,8 @@ msgstr "Пасьянс маджонг.\nЦель игры - очистить и�
 msgid "Sound track"
 msgstr "Музыкальная дорожка"
 
-msgid "Start a new party"
-msgstr "Начать новую партию"
+msgid "Start a new game"
+msgstr "Начать новую игру"
 
 msgid "Statistics"
 msgstr "Статистика"
@@ -308,8 +308,8 @@ msgstr "Раскладка, в которую вы играли в предыд�
 msgid "Theme:"
 msgstr "Тема:"
 
-msgid "This change will interrupt current game party"
-msgstr "Это изменение прервёт текущую партию"
+msgid "This change will interrupt current game"
+msgstr "Это изменение прервёт текущую игру"
 
 msgid "This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
 msgstr "Это классическая игра \"Пасьянс Маджонг\". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.\n \nКоманда [image='set:Logos image:OGS']:\nМихаил Капелько - код и наполнение;\nИван Корыстин - игровой дизайн, наполнение и контроль качества.\n \nСторонние ресурсы:\nRaquel Ravanini - изображения для темы оформления \"Classic\".\nKevin MacLeod - все музыкальные треки в разделах \"Eastern\" и \"Piano\". Треки \"Funkorama\", \"Neo Western\" и \"Protofunk\" в разделе \"Modern\".\nDano - Музыкальные треки \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" и \"Today then tomorrow\" в разделе \"Modern\".\nFenster - Музыкальный трек \"Free Software\" в разделе \"Modern\".\n  \nБолее подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.\n \nБиблиотеки:\n[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nБлагодарим:\n- команду/сообщество Ogre3D за движок и помощь;\n- команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;\n- разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.\nОсобая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.\n \nВеб-страницы:\n[window='Info/Link1']\nили\n[window='Info/Link2']"

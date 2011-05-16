@@ -86,7 +86,7 @@ msgstr "Löschen"
 msgid "Difficulty:"
 msgstr "Schwierigkeit:"
 
-msgid "Do you want  to save the game before exit?"
+msgid "Do you want to save the game before exit?"
 msgstr "Wollen Sie das Spiel vor dem Beenden speichern?"
 
 msgid "Dynamic camera"
@@ -287,8 +287,8 @@ msgstr "Mahjong Solitaire.\nZiel des Spieles ist das Spielfeld durch Wegnahme vo
 msgid "Sound track"
 msgstr "Sound track"
 
-msgid "Start a new party"
-msgstr "Neue Partie starten"
+msgid "Start a new game"
+msgstr "Neues Spiel starten"
 
 msgid "Statistics"
 msgstr "Statistik"
@@ -308,8 +308,8 @@ msgstr "Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. S
 msgid "Theme:"
 msgstr "Thema:"
 
-msgid "This change will interrupt current game party"
-msgstr "Diese Aenderung wird die laufeunde Partie unterbrechen"
+msgid "This change will interrupt current game"
+msgstr "Diese Aenderung wird die laufeundes Spiel unterbrechen"
 
 msgid "This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code and content;\nIvan Korystin - gameplay design, content and QA.\n \nThird-party resources:\nRaquel Ravanini - images for \"Classic\"  theme.\nKevin MacLeod - all tracks in \"Eastern\" and \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMore info on third-party resources, their licenses and copyrights you can find in README files, placed in themes or music packs directories.\n \nLibraries:\n[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nThanks to:\n- Ogre3D team/community for the engine and help;\n- Lightfeather team/community for help while this game has been using Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat for help.\nSpecial thanks to CrazyEddie for good GUI system and great support.\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
 msgstr "Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.\n \n[image='set:Logos image:OGS'] team:\nMichael Kapelko - code und content;\nIvan Korystin - gameplay design, content und QA.\n \nAndere Ressoursen:\nRaquel Ravanini - Bilder fuer \"Classic\"  theme.\nKevin MacLeod - alle Tracks in \"Eastern\" und \"Piano\" music packs. Tracks \"Funkorama\", \"Neo Western\" and \"Protofunk\" in \"Modern\" music pack.\nDano - Tracks \"Crazy from the message\", \"King or an alien\", \"Sun spark\", \"The time isnt right\", \"The wire\" and \"Today then tomorrow\" in \"Modern\" music pack.\nFenster - Track \"Free Software\" in \"Modern\" music pack.\n \nMehr Infos über Andere Ressoursen, ihre Lizenzen und Urheberrechte kann man in Readme-Dateien finden, die in Themen oder Musik-Packs Verzeichnisse sich stattfinden.\n \nLibraries:\n[image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend\n \n[image='set:Logos image:CEGUI']\n \n[image='set:Logos image:OpenAL']\n \nVielen Dank:\n- Ogre3D team/community fuer Engine und Hilfe;\n- Lightfeather team/community fuer due Hilfe mit Lightfeather engine;\n- OpenAL-Soft/ALURE developer KittyCat für Hilfe.\nBesonderer Dank geht an CrazyEddie für ein schönes GUI System und eine große Unterstützung .\n \nWeb pages:\n[window='Info/Link1']\nor\n[window='Info/Link2']"
