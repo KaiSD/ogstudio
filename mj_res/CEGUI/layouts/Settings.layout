@@ -222,6 +222,10 @@
                 <Property Name="Text" Value="Only horizontal" />
                 <Property Name="UnifiedAreaRect" Value="{{0.0668372,0},{0.166623,0},{0.553759,0},{0.228623,0}}" />
             </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/HighlightLayers" >
+                <Property Name="Text" Value="Highlight layers" />
+                <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.333,0},{0.534783,0},{0.395,0}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>
