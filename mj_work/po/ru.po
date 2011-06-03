@@ -358,3 +358,6 @@ msgstr "Сложность"
 
 msgid "Distros"
 msgstr "Дистрибутивы"
+
+msgid "Highlight layers"
+msgstr "Подсвечивать слои"
