@@ -15,20 +15,5 @@
             <Property Name="BackgroundEnabled" Value="False" />
             <Property Name="MousePassThroughEnabled" Value="True" />
         </Window>
-        <Window Type="Vanilla/StaticText" Name="Debug/Output" >
-            <Property Name="Alpha" Value="0.7" />
-            <Property Name="Visible" Value="False" />
-            <Property Name="VertScrollbar" Value="True" />
-            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
-            <Property Name="VertFormatting" Value="TopAligned" />
-            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0.95,0}}" />
-        </Window>
-        <Window Type="Vanilla/Editbox" Name="Debug/Input" >
-            <Property Name="Alpha" Value="0.7" />
-            <Property Name="Visible" Value="False" />
-            <Property Name="MaxTextLength" Value="4294967295" />
-            <Property Name="UnifiedAreaRect" Value="{{0,0},{0.95,0},{1,0},{1,0}}" />
-            <Property Name="TextParsingEnabled" Value="False" />
-        </Window>
     </Window>
 </GUILayout>

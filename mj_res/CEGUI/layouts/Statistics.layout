@@ -12,7 +12,11 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Statistics/OK" >
                 <Property Name="Text" Value="OK" />
-                <Property Name="UnifiedAreaRect" Value="{{0.3,0},{0.85,0},{0.7,0},{0.95,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.57,0},{0.85,0},{0.97,0},{0.95,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Statistics/FairGamesOnly" >
+                <Property Name="Text" Value="Fair games only" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.81,0},{0.5,0},{0.872,0}}" />
             </Window>
         </Window>
     </Window>

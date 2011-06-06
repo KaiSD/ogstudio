@@ -361,3 +361,6 @@ msgstr "Дистрибутивы"
 
 msgid "Highlight layers"
 msgstr "Подсвечивать слои"
+
+msgid "Fair games only"
+msgstr "Только честные партии"
