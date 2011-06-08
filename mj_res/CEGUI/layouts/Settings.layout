@@ -226,6 +226,10 @@
                 <Property Name="Text" Value="Highlight layers" />
                 <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.333,0},{0.534783,0},{0.395,0}}" />
             </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/RestrictCameraRotation" >
+                <Property Name="Text" Value="Restrict camera rotation" />
+                <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.400,0},{0.534783,0},{0.462,0}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>

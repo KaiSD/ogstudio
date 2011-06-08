@@ -364,3 +364,6 @@ msgstr "Подсвечивать слои"
 
 msgid "Fair games only"
 msgstr "Только честные партии"
+
+msgid "Restrict camera rotation"
+msgstr "Ограничивать вращение камеры"
