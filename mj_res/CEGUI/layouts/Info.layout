@@ -25,7 +25,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.92,0},{0.66,0},{0.99,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/Rules" >
-                <Property Name="Text" >Mahjong Solitaire.
+                <Property Name="Text" >Solitaire.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
 [image=&apos;set:Rules image:Mahjong&apos;]
  
@@ -102,18 +102,18 @@ or
                 </Window>
                 <Property Name="Text" >Copyright (C) 2010-2011, Opensource Game Studio
 
-OGS Mahjong Solitaire is free software: you can redistribute it and/or modify
+OGS Mahjong is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-OGS Mahjong Solitaire is distributed in the hope that it will be useful,
+OGS Mahjong is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with OGS Mahjong Solitaire.  If not, see
+along with OGS Mahjong.  If not, see
 [window=&apos;Info/Link3&apos;]
                 </Property>
                 <Property Name="Visible" Value="False" />

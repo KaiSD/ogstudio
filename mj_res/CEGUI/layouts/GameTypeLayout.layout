@@ -12,7 +12,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.2,0},{0.8,0},{0.8,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/Mahjong" >
-                <Property Name="Text" Value="Mahjong" />
+                <Property Name="Text" Value="Solitaire" />
                 <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.05,0},{0.325,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenSho" >
