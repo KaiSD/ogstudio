@@ -92,6 +92,9 @@
                 <Property Name="Tooltip" Value="Save" />
                 <Property Name="UnifiedAreaRect" Value="{{0.128,0},{0.005,0},{0.166,0},{0.055,0}}" />
             </Window>
+            <Window Type="Vanilla/StaticImage" Name="Game/Look" >
+                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.1,0},{0.325,0},{0.4,0}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>
