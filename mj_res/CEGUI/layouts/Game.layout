@@ -94,6 +94,7 @@
             </Window>
             <Window Type="Vanilla/StaticImage" Name="Game/Look" >
                 <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.1,0},{0.325,0},{0.4,0}}" />
+                <Property Name="Visible" Value="False" />
             </Window>
         </Window>
     </Window>
