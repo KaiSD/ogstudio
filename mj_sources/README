@@ -1,4 +1,14 @@
-There will be no sources here until release of MJ-0.7
+The sources are located at SourceForge.net Mercurial repository.
 
-Try our Mercurial repositary:
-    hg clone http://osrpgcreation.hg.sourceforge.net:8000/hgroot/osrpgcreation/osrpgcreation
+MJIN:
+    http://osrpgcreation.hg.sourceforge.net:8000/hgroot/osrpgcreation/mjin
+MJ:
+    http://osrpgcreation.hg.sourceforge.net:8000/hgroot/osrpgcreation/mj
+
+You can get them with the following command:
+    hg clone URL [DIR]
+
+To build it, read the following Wiki pages:
+    1. http://code.google.com/p/ogstudio/wiki/InstallMJIN
+    2. http://code.google.com/p/ogstudio/wiki/InstallMJ
+
