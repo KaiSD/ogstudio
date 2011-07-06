@@ -46,19 +46,18 @@ Classic mahjong tiles:
 7. Flowers - 4 pieces with images of flowers. All &quot;flowers&quot; tiles are identical.
  
 Tiles in various themes may look different.</Property>
-                <Property Name="Visible" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
-                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertScrollbar" Value="True" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/About" >
                 <Window Type="Vanilla/Button" Name="Info/Link1" >
                     <Property Name="Text" Value="http://opengamestudio.org" />
-                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,887.015},{0.4,6},{0.07,887.015}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.4,6},{0.07,961.517}}" />
                 </Window>
                 <Window Type="Vanilla/Button" Name="Info/Link2" >
                     <Property Name="Text" Value="http://osrpgcreation.sf.net" />
-                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,939.64},{0.4,6},{0.07,939.64}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1014.14},{0.4,6},{0.07,1014.14}}" />
                 </Window>
                 <Property Name="Text" >This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
  
@@ -91,9 +90,10 @@ Web pages:
 [window=&apos;Info/Link1&apos;]
 or
 [window=&apos;Info/Link2&apos;]</Property>
+                <Property Name="Visible" Value="False" />
                 <Property Name="VertScrollbar" Value="True" />
-                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/License" >
                 <Window Type="Vanilla/Button" Name="Info/Link3" >

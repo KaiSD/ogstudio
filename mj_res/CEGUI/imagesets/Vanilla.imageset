@@ -21,6 +21,8 @@
     <Image Name="ScrollbarThumb" XPos="43" YPos="22" Width="20" Height="20" />
     <Image Name="TooltipTopEdge" XPos="12" YPos="70" Width="6" Height="4" />
     <Image Name="TooltipTopLeft" XPos="1" YPos="70" Width="4" Height="4" />
+    <Image Name="TreeListClosed" XPos="33" YPos="63" Width="7" Height="14" />
+    <Image Name="TreeListOpened" XPos="41" YPos="66" Width="14" Height="7" />
     <Image Name="FrameBottomLeft" XPos="1" YPos="10" Width="6" Height="6" />
     <Image Name="HeaderBarSortUp" XPos="89" YPos="51" Width="10" Height="10" />
     <Image Name="MouseEsWeCursor" XPos="33" YPos="52" Width="18" Height="8" />

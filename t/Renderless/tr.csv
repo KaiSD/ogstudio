@@ -1,0 +1,5 @@
+"id","en","ru"
+"TEXT","String with "", in it and "";
+You don't see it often","Строка с "", внутри и "";
+Не часто это увидишь"
+"OTHER","Here's another one. With some ['cegui' Images] embedded","Ещё одна. С некоторыми ['изображениями' Сегуи] внутри"
