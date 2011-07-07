@@ -25,27 +25,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.92,0},{0.66,0},{0.99,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/Rules" >
-                <Property Name="Text" >Solitaire.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
-[image=&apos;set:Rules image:Mahjong&apos;]
- 
-Shisen-Sho.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space.
-[image=&apos;set:Rules image:ShisenSho&apos;] [image=&apos;set:Rules image:ShisenSho2&apos;]
- 
-Shisen-Sho with gravity.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space. After each turn, tiles, that are free at the bottom, will be pushed down to the other tiles or to the bottom row.
- 
-Classic mahjong tiles:
-1. Bamboos - tiles with value 1 to 9. The &quot;Bamboo&quot; tiles with the same color and value are identical.
-2. Symbols - tiles with value 1 to 9. The &quot;Symbols&quot; tiles with the same color and value are identical.
-3. Dots - tiles with value 1 to 9. The &quot;Dots&quot; tiles with the same color and value are identical.
-4. Dragons - 3 tiles of different colors. The &quot;Dragons&quot; tiles with the same color are identical.
-5. Winds - 4 pieces with the symbols of different sides of the world. &quot;Winds&quot; tiles with the same symbol are identical.
-6. Seasons - 4 pieces depicting the seasons. All &quot;seasons&quot; tiles are identical.
-7. Flowers - 4 pieces with images of flowers. All &quot;flowers&quot; tiles are identical.
- 
-Tiles in various themes may look different.</Property>
+                <Property Name="Text" >INFO_RULES</Property>
                 <Property Name="VertScrollbar" Value="True" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
