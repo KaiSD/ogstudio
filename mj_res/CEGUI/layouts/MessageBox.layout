@@ -6,15 +6,15 @@
         <Property Name="AlwaysOnTop" Value="True" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Window Type="Vanilla/StaticText" Name="MessageBox/Text" >
-            <Property Name="Text" Value="Are you sure?" />
+            <Property Name="Text" Value="ARE_YOU_SURE" />
             <Property Name="HorzFormatting" Value="WordWrapCentred" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
             <Window Type="Vanilla/Button" Name="MessageBox/Yes" >
-                <Property Name="Text" Value="Yes" />
+                <Property Name="Text" Value="YES" />
                 <Property Name="UnifiedAreaRect" Value="{{0,5},{0.85,0},{0.45,0},{1,-5}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="MessageBox/No" >
-                <Property Name="Text" Value="No" />
+                <Property Name="Text" Value="NO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.55,0},{0.85,0},{1,-5},{1,-5}}" />
             </Window>
         </Window>

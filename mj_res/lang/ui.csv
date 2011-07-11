@@ -1,0 +1,119 @@
+"id";"en";"ru";"de"
+"ABOUT";"About";"О программе";"Über"
+"APPLY";"Apply";"Применить";"Anwenden"
+"ARE_YOU_SURE";"Are you sure?";"Вы уверены?";"Sind Sie sicher?"
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+"CANCEL";"Cancel";"Отмена";"Abbrechen"
+"DELETE";"Delete";"Удалить";"Löschen"
+;;;
+;;;
+"INFO_RULES";"Solitaire.
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
+[image='set:Rules image:Mahjong']
+ 
+Shisen-Sho.
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Shisen-Sho with gravity.
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space. After each turn, tiles, that are free at the bottom, will be pushed down to the other tiles or to the bottom row.
+ 
+Classic mahjong tiles:
+1. Bamboos - tiles with value 1 to 9. The Bamboo tiles with the same color and value are identical.
+2. Symbols - tiles with value 1 to 9. The Symbols tiles with the same color and value are identical.
+3. Dots - tiles with value 1 to 9. The Dots tiles with the same color and value are identical.
+4. Dragons - 3 tiles of different colors. The Dragons tiles with the same color are identical.
+5. Winds - 4 pieces with the symbols of different sides of the world. The Winds tiles with the same symbol are identical.
+6. Seasons - 4 pieces depicting the seasons. All Seasons tiles are identical.
+7. Flowers - 4 pieces with images of flowers. All Flowers tiles are identical.
+ 
+Tiles in various themes may look different.";"Пасьянс.
+Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
+Фишка может быть убрана только если она свободна, то есть если слева от нее, справа от нее или на ней нет других фишек.
+[image='set:Rules image:Mahjong']
+ 
+Шисен-се.
+Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
+Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами,проходящей по свободному игровому пространству.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Шисен-се с гравитацией.
+Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
+Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами, проходящей по свободному игровому пространству.
+После каждого хода фишки, свободные с нижней стороны, сдвигаются вниз так, чтобы соприкасаться с другими фишками либо находиться в нижнем ряду.
+ 
+Масти фишек классического маджонга:
+1. Бамбуки - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Бамбуки одного и того же достоинства.
+2. Символы - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Символы одного и того же достоинства.
+3. Точки - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Точки одного и того же достоинства.
+4. Драконы - 3 фишки разных цветов. Одинаковыми считаются фишки масти Дракон одного и того же цвета.
+5. Стороны света - 4 фишки с символами  разных сторон света. Одинаковыми считаются фишки масти Стороны света с одним и тем же символом.
+6. Времена года - 4 фишки с изображением времен года. Одинаковыми считаются все фишки масти Времена года.
+7. Цветы - 4 фишки с изображениями цветов. Одинаковыми считаются все фишки масти Цветы.
+ 
+В различных темах масти фишек могут выглядеть по-разному.";"Solitaire.
+Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
+Der Spielstein kann nur dann entfernt werden, wenn er frei ist, so dass es keine anderen Steine links oder rechts gibt (so dass sich keine anderen Steine links oder rechts befinden).
+[image='set:Rules image:Mahjong']
+ 
+Schisen-Sö.
+Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
+Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Schisen-Sö+ Gravitation.
+Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.
+Nach jedem Zug werden die Spielsteine, die von der Unterseite frei sind, nach unten verschoben, bis zum sie im Kontakt mit anderen Spielsteinen kommen oder den anderen Spielsteine oder sein Platz an der erste Spiellinie nehmen.
+ 
+Klassische Mahjong Spielsteine sind:
+1. Die Bambus Spielsteine haben Wert von 1 bis 9. Die Bambus Spielsteine mit der gleichen Farbe und Wert sind identisch.
+2. Die Symbol Spielsteine haben Wert von 1 bis 9. Die Spielsteine mit der gleichen Farbe und Wert sind identisch.
+3. Die Punkten Spielsteine haben Wert von 1 bis 9. Die Punkten Spielsteine mit der gleichen Farbe und Wert sind identisch.
+4. Drachen - 3 Spielsteine in verschiedenen Farben.
+5. Winds - 4 Stück mit den Symbolen der verschiedenen Seiten der Welt. Die Spielsteine mit dem gleichen Symbol sind identisch.
+6. Jahreszeiten - 4 Stück mit der Darstellung der Jahreszeiten. Alle Jahreszeiten Spielsteine sind identisch.
+7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen Spielsteine sind identisch.
+ 
+Spielsteinen in verschiedenen Themen können anders aussehen."
+"OK";;;
+;;;
+;;;
+;;;
+"SAVE_GAME_BEFORE_EXIT";"Do you want to save the game before exit?";"Сохранить игру перед выходом?";"Wollen Sie das Spiel vor dem Beenden speichern?"
+;;;
+;;;
+;;;
+"SETTINGS_ANTIALIASING";"Anti-aliasing:";"Сглаживание:";"Anti-aliasing:"
+;;;
+"SETTINGS_AUDIO";"Audio";"Аудио";"Audio"
+"SETTINGS_CONTROLS";"Controls";"Управление";"Steuerung"
+"SETTINGS_GAME";"Game";"Игра";"Spiel"
+"SETTINGS_DIFFICULTY";"Difficulty:";"Сложность:";"Schwierigkeit:"
+"SETTINGS_DYNCAM";"Dynamic camera";"Динамическая камера";"Dynamische Kamera"
+"SETTINGS_DYNCAM_DEFLECTION";"Deflection of dynamic camera:";"Отклонение динамической камеры:";"Ablenkung der dynamischen Kamera:"
+"SETTINGS_MUSIC_VOLUME";"Music volume:";"Громкость музыки:";"Musik-Lautstärke:"
+;;;
+"SETTINGS_SOUND_FX_VOLUME";"Sound effects' volume:";"Громкость звуковых эффектов:";"Soundeffekt-Lautstärke:"
+;;;
+;;;
+"TEXTURE_FILTERING_ANISOTROPIC";"Anisotropic";"Анизотропная";"Anisotropisch"
+;;;
+"TEXTURE_FILTERING_BILINEAR";"Bilinear";"Билинейная";"Bilinear"
+;;;
+;;;
+;;;
+;;;
+;;;
+"THEME_CLASSIC";"Classic";"Классика";"Classic"

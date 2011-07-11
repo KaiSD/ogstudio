@@ -1,0 +1,4 @@
+"id";"en";"ru";"de"
+"CANNOT_GET_PATH_TO_MY_DOCUMENTS";"Could not get path to 'My Documents' directory";"Не удалось получить путь к директории 'Мои Документы'";"Pfad zum Verzeichnis 'Eigene Dateien' konnte nicht gefunden werden"
+"CANNOT_OPEN_SAVEFILE";"Cannot open save file";"Не удаётся открыть файл сохранения";"Kann die Datei nicht öffnen"
+"CANNOT_REMOVE_FILE_OR_DIR";"Cannot remove file or directory";"Не удаётся удалить файл или директорию";"Kann Datei oder Verzeichnis nicht löschen"
