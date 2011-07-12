@@ -1,25 +1,143 @@
 "id";"en";"ru";"de"
-"ABOUT";"About";"О программе";"Über"
 "APPLY";"Apply";"Применить";"Anwenden"
 "ARE_YOU_SURE";"Are you sure?";"Вы уверены?";"Sind Sie sicher?"
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
 "CANCEL";"Cancel";"Отмена";"Abbrechen"
 "DELETE";"Delete";"Удалить";"Löschen"
-;;;
-;;;
-"INFO_RULES";"Solitaire.
+"DIFFICULTY_EASY";"Easy";"Легко";"Leicht"
+"DIFFICULTY_MEDIUM";"Medium";"Средне";"Mittel"
+"FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Bitte geben Sie Ihren Namen ein:"
+"GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Statt dessen wurde ein anderes verwendet / genutzt"
+"GAME_CHANGE_INTERRUPTS";"This change will interrupt current game";"Это изменение прервёт текущую игру";"Diese Aenderung wird die laufeundes Spiel unterbrechen"
+"GAME_ELAPSED_TIME";"Elapsed time";"Прошедшее время";"Vergangene Zeit"
+"GAME_GAME_TYPE_AND_LAYOUT";"Game type and layout";"Тип игры и раскладка";"Spieltyp und Layout"
+"GAME_HINT";"Hint";"Подсказка";"Hinweise"
+"GAME_INFO";"Info";"Информация";"Info"
+"GAME_HAS_BEEN_SAVED_AS";"The game has been saved as: '%s'";"Игра была сохранена как: '%s'";"Das Spiel wurde gesichert als: '%s'"
+"GAME_LOAD";"Load";"Загрузить";"Laden"
+"GAME_TYPE_AND_LAYOUT_SOLITAIRE";"Solitaire";"Пасьянс";
+"GAME_TYPE_AND_LAYOUT_SHISENSHO";"Shisen-Sho";"Шисен-Сё";"Shisen-Sho"
+"GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY";"Shisen-Sho + gravity";"Шисен-Сё + гравитация";"Shisen-Sho + Gravitation"
+"GAME_REMOVED_TILES_ALTOGETHER";"Removed tiles / Altogether";"Убранные фишки / Всего";"Wegschaffenden Spielsteine"
+"GAME_RESTART";"Restart the game";"Перезапустить игру";"Spiel neustarten"
+"GAME_SAVE";"Save";"Сохранить";"Sichern"
+"GAME_SETTINGS";"Settings";"Настройки";"Einstellungen"
+"GAME_SHUFFLE";"Shuffle";"Перемешать";"Vermischen"
+"GAME_SOUND_TRACK";"Sound track";"Музыкальная дорожка";"Sound track"
+"GAME_START";"Start a new game";"Начать новую игру";"Neues Spiel starten"
+"GAME_STATS";"Statistics";"Статистика";"Statistik"
+"GAME_TILE_PAIRS_YOU_CAN_REMOVE";"Tile pairs you can remove";"Пары фишек, которые можно удалить";"Spielstein-Paare die gelöscht werden können"
+"GAME_QUIT";"Quit";"Выйти из игры";"Spiel verlassen"
+"GAME_UNDO";"Undo";"Отменить";"Rücknehmen"
+"INFO_ABOUT";"About";"О программе";"Über"
+"INFO_ABOUT_TXT";"This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
+ 
+[image='set:Logos image:OGS'] team:
+Michael Kapelko - code and content;
+Ivan Korystin - gameplay design, content and QA.
+ 
+Third-party resources:
+Raquel Ravanini - images for ""Classic"" theme.
+Kevin MacLeod - all tracks in ""Eastern"" and ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
+Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" and ""Today then tomorrow"" in ""Modern"" music pack.
+Fenster - Track ""Free Software"" in ""Modern"" music pack.
+ 
+You can find more info on third-party resources, their licenses and copyrights in README files, placed in themes or music packs directories.
+ 
+Libraries:
+[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']
+ 
+Thanks to:
+- Ogre3D team/community for the engine and help;
+- Lightfeather team/community for help while this game has been using Lightfeather engine;
+- OpenAL-Soft/ALURE developer KittyCat for help.
+Special thanks to CrazyEddie for good GUI system and great support.
+ 
+Web pages:
+[window='Info/Link1']
+or
+[window='Info/Link2']";"Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
+ 
+Команда [image='set:Logos image:OGS']:
+Михаил Капелько - код и наполнение;
+Иван Корыстин - игровой дизайн, наполнение и контроль качества.
+ 
+Сторонние ресурсы:
+Raquel Ravanini - изображения для темы оформления ""Classic"".
+Kevin MacLeod - все музыкальные треки в разделах ""Eastern"" и ""Piano"". Треки ""Funkorama"", ""Neo Western"" и ""Protofunk"" в разделе ""Modern"".
+Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" и ""Today then tomorrow"" в разделе ""Modern"".
+Fenster — Музыкальный трек ""Free Software"" в разделе ""Modern"".
+ 
+Более подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.
+ 
+Библиотеки:
+[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']
+ 
+Благодарим:
+- команду/сообщество Ogre3D за движок и помощь;
+- команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;
+- разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.
+Особая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.
+ 
+Веб-страницы:
+[window='Info/Link1']
+или
+[window='Info/Link2']";"Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
+ 
+[image='set:Logos image:OGS'] team:
+Michael Kapelko - code und content;
+Ivan Korystin - gameplay design, content und QA.
+ 
+Andere Ressoursen:
+Raquel Ravanini - Bilder fuer ""Classic"" theme.
+Kevin MacLeod - alle Tracks in ""Eastern"" und ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
+Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" and ""Today then tomorrow"" in ""Modern"" music pack.
+Fenster - Track ""Free Software"" in ""Modern"" music pack.
+ 
+Mehr Infos über Andere Ressoursen, ihre Lizenzen und Urheberrechte kann man in Readme-Dateien finden, die in Themen oder Musik-Packs Verzeichnisse sich stattfinden.
+ 
+Libraries:
+[image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']
+ 
+Vielen Dank:
+- Ogre3D team/community fuer Engine und Hilfe;
+- Lightfeather team/community fuer due Hilfe mit Lightfeather engine;
+- OpenAL-Soft/ALURE developer KittyCat für Hilfe.
+Besonderer Dank geht an CrazyEddie für ein schönes GUI System und eine große Unterstützung.
+ 
+Web pages:
+[window='Info/Link1']
+or
+[window='Info/Link2']"
+"INFO_LICENSE";"License";"Лицензия";"Lizenz"
+"INFO_LICENSE_TXT";"Copyright (C) 2010-2011, Opensource Game Studio
+
+OGS Mahjong is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+OGS Mahjong is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with OGS Mahjong.  If not, see
+[window='Info/Link3']";;
+"INFO_RULES";"Rules";"Правила";"Regeln"
+"INFO_RULES_TXT";"Solitaire.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
 [image='set:Rules image:Mahjong']
  
@@ -87,33 +205,44 @@ Klassische Mahjong Spielsteine sind:
 7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen Spielsteine sind identisch.
  
 Spielsteinen in verschiedenen Themen können anders aussehen."
+"LOAD_LOAD";"Load";"Загрузить";"Laden"
+"LOAD_INFO";"Type: %s\nDifficulty: %s\nLayout: %s\nHints: %s\nUndos: %s\nTime: %s";"Тип: %s\nСложность: %s\nРаскладка: %s\nПодсказок: %s\nОтмен: %s\nВремя: %s";"Typ: %s\nSchwierigkeit: %s\nLayout: %s\nTipps: %s\nRücknahmen: %s\nDauer: %s"
+"NO";"No";"Нет";"Nein"
 "OK";;;
-;;;
-;;;
-;;;
 "SAVE_GAME_BEFORE_EXIT";"Do you want to save the game before exit?";"Сохранить игру перед выходом?";"Wollen Sie das Spiel vor dem Beenden speichern?"
-;;;
-;;;
-;;;
 "SETTINGS_ANTIALIASING";"Anti-aliasing:";"Сглаживание:";"Anti-aliasing:"
-;;;
 "SETTINGS_AUDIO";"Audio";"Аудио";"Audio"
 "SETTINGS_CONTROLS";"Controls";"Управление";"Steuerung"
+"SETTINGS_FULLSCREEN";"Full screen";"На весь экран";"Vollbild"
 "SETTINGS_GAME";"Game";"Игра";"Spiel"
+"SETTINGS_GENERAL_VOLUME";"General volume:";"Общая громкость:";"Allgemeine Lautstärke:"
 "SETTINGS_DIFFICULTY";"Difficulty:";"Сложность:";"Schwierigkeit:"
 "SETTINGS_DYNCAM";"Dynamic camera";"Динамическая камера";"Dynamische Kamera"
 "SETTINGS_DYNCAM_DEFLECTION";"Deflection of dynamic camera:";"Отклонение динамической камеры:";"Ablenkung der dynamischen Kamera:"
+"SETTINGS_HIGHLIGHT_LAYERS";"Highlight layers";"Подсвечивать слои";
+"SETTINGS_MOUSE_SENSITIVITY";"Mouse sensitivity:";"Чувствительность мыши:";"Maus-Empfindlichkeit:"
+"SETTINGS_MUSIC_PACKS";"Music packs:";"Музыкальные группы:";"Musik-Pakete:"
 "SETTINGS_MUSIC_VOLUME";"Music volume:";"Громкость музыки:";"Musik-Lautstärke:"
-;;;
+"SETTINGS_ONLY_HORIZONTAL";"Only horizontal";"Только по горизонтали";"Nur waagerecht"
+"SETTINGS_RES";"Resolution:";"Разрешение:";"Auflösung:"
+"SETTINGS_RESTRICT_CAM_ROTATION";"Restrict camera rotation";"Ограничивать вращение камеры";
 "SETTINGS_SOUND_FX_VOLUME";"Sound effects' volume:";"Громкость звуковых эффектов:";"Soundeffekt-Lautstärke:"
-;;;
-;;;
+"SETTINGS_SHADOWS";"Shadows";"Тени";"Schatten"
+"SETTINGS_TEXTURE_FILTERING";"Texture filtering:";"Фильтрация текстур:";"Texture filtering:"
+"SETTINGS_THEME";"Theme:";"Тема:";"Thema:"
+"SETTINGS_TILE";"Tile:";"Фишка:";"Spielstein:"
+"SETTINGS_VIDEO";"Video";"Видео";"Video"
+"SETTINGS_VSYNC";"VSync";"Верт. синхронизация";"Vsync"
+"STATISTICS_DIFFICULTY";"Difficulty";"Сложность";"Schwierigkeit"
+"STATISTICS_FAIR_GAMES_ONLY";"Fair games only";"Только честные партии";
+"STATISTICS_LAYOUT";"Layout";"Раскладка";"Layout"
+"STATISTICS_NAME";"Name";"Имя";"Name"
+"STATISTICS_SHISENSHO_G";"Shisen-Sho g";"Шисен-Сё г";"Shisen-Sho g"
 "TEXTURE_FILTERING_ANISOTROPIC";"Anisotropic";"Анизотропная";"Anisotropisch"
-;;;
+"TEXTURE_FILTERING_LINEAR";"Linear";"Линейная";"Linear"
 "TEXTURE_FILTERING_BILINEAR";"Bilinear";"Билинейная";"Bilinear"
-;;;
-;;;
-;;;
-;;;
-;;;
+"TEXTURE_FILTERING_NONE";"None";"Нет";"Keine"
+"TEXTURE_FILTERING_TRILINEAR";"Trilinear";"Трилинейная";"Trilinear"
 "THEME_CLASSIC";"Classic";"Классика";"Classic"
+"THEME_DISTROS";"Distros";"Дистрибутивы";"Distros"
+"YES";"Yes";"Да";"Ja"

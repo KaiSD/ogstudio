@@ -15,81 +15,81 @@
             <Window Type="Vanilla/StaticText" Name="Game/Tiles" >
                 <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="444/444" />
-                <Property Name="Tooltip" Value="Removed tiles / Altogether" />
+                <Property Name="Tooltip" Value="GAME_REMOVED_TILES_ALTOGETHER" />
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.469,0},{0.005,0},{0.563,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Game/Time" >
                 <Property Name="Text" Value="0:00:00" />
-                <Property Name="Tooltip" Value="Elapsed time" />
+                <Property Name="Tooltip" Value="GAME_ELAPSED_TIME" />
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.376,0},{0.005,0},{0.466,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Combobox" Name="Game/CBMusicList" >
-                <Property Name="Tooltip" Value="Sound track" />
+                <Property Name="Tooltip" Value="GAME_SOUND_TRACK" />
                 <Property Name="UnifiedAreaRect" Value="{{0.693,0},{0.005,0},{0.952,0},{0.6,0}}" />
                 <Property Name="MaxEditTextLength" Value="4294967295" />
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Restart" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Restart32&apos;]" />
-                <Property Name="Tooltip" Value="Restart the game" />
+                <Property Name="Tooltip" Value="GAME_RESTART" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.043,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Undo" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Undo32&apos;]" />
-                <Property Name="Tooltip" Value="Undo" />
+                <Property Name="Tooltip" Value="GAME_UNDO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.239,0},{0.005,0},{0.277,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Hint" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Hint32&apos;]" />
-                <Property Name="Tooltip" Value="Hint" />
+                <Property Name="Tooltip" Value="GAME_HINT" />
                 <Property Name="UnifiedAreaRect" Value="{{0.28,0},{0.005,0},{0.318,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Settings" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Cfg32&apos;]" />
-                <Property Name="Tooltip" Value="Settings" />
+                <Property Name="Tooltip" Value="GAME_SETTINGS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.568,0},{0.005,0},{0.606,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Rating" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Rating32&apos;]" />
-                <Property Name="Tooltip" Value="Statistics" />
+                <Property Name="Tooltip" Value="GAME_STATS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.609,0},{0.005,0},{0.647,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Info" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:About32&apos;]" />
-                <Property Name="Tooltip" Value="Info" />
+                <Property Name="Tooltip" Value="GAME_INFO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.65,0},{0.005,0},{0.688,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Quit" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Close32&apos;]" />
-                <Property Name="Tooltip" Value="Quit" />
+                <Property Name="Tooltip" Value="GAME_QUIT" />
                 <Property Name="UnifiedAreaRect" Value="{{0.957,0},{0.005,0},{0.995,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Game/Turns" >
                 <Property Name="Text" Value="177" />
-                <Property Name="Tooltip" Value="Tile pairs you can remove" />
+                <Property Name="Tooltip" Value="GAME_TILE_PAIRS_YOU_CAN_REMOVE" />
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.323,0},{0.005,0},{0.373,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/TypeLayout" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Layout32&apos;]" />
-                <Property Name="Tooltip" Value="Game type and layout" />
+                <Property Name="Tooltip" Value="GAME_GAME_TYPE_AND_LAYOUT" />
                 <Property Name="UnifiedAreaRect" Value="{{0.046,0},{0.005,0},{0.084,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Shuffle" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Shuffle32&apos;]" />
-                <Property Name="Tooltip" Value="Shuffle" />
+                <Property Name="Tooltip" Value="GAME_SHUFFLE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.197,0},{0.005,0},{0.236,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Load" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Load32&apos;]" />
-                <Property Name="Tooltip" Value="Load" />
+                <Property Name="Tooltip" Value="GAME_LOAD" />
                 <Property Name="UnifiedAreaRect" Value="{{0.087,0},{0.005,0},{0.125,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Game/Save" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Save32&apos;]" />
-                <Property Name="Tooltip" Value="Save" />
+                <Property Name="Tooltip" Value="GAME_SAVE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.128,0},{0.005,0},{0.166,0},{0.055,0}}" />
             </Window>
         </Window>

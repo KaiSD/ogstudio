@@ -70,7 +70,7 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbTheme" >
                 <Property Name="Font" Value="Arial-16" />
-                <Property Name="Text" Value="Theme:" />
+                <Property Name="Text" Value="SETTINGS_THEME" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.995,0},{0.567,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
@@ -88,7 +88,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.789,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbResolution" >
-                <Property Name="Text" Value="Resolution:" />
+                <Property Name="Text" Value="SETTINGS_RES" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
@@ -104,7 +104,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.714,0},{0.995,0},{0.995,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbTile" >
-                <Property Name="Text" Value="Tile:" />
+                <Property Name="Text" Value="SETTINGS_TILE" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.005,0},{0.995,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
@@ -113,19 +113,19 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.072,0},{0.995,0},{0.3,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/FullScreen" >
-                <Property Name="Text" Value="Full screen" />
+                <Property Name="Text" Value="SETTINGS_FULLSCREEN" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.789,0},{0.495,0},{0.856,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
-                <Property Name="Text" Value="VSync" />
+                <Property Name="Text" Value="SETTINGS_VSYNC" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.856,0},{0.495,0},{0.923,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
-                <Property Name="Text" Value="Shadows" />
+                <Property Name="Text" Value="SETTINGS_SHADOWS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.923,0},{0.495,0},{0.995,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbTextureFiltering" >
-                <Property Name="Text" Value="Texture filtering:" />
+                <Property Name="Text" Value="SETTINGS_TEXTURE_FILTERING" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.3,0},{0.995,0},{0.367,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
@@ -162,7 +162,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.276,0},{0.495,0},{0.311,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VolGeneral" >
-                <Property Name="Text" Value="General volume:" />
+                <Property Name="Text" Value="SETTINGS_GENERAL_VOLUME" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VolBG" >
@@ -177,7 +177,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.072,0},{0.995,0},{0.992,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbMusicPacks" >
-                <Property Name="Text" Value="Music packs:" />
+                <Property Name="Text" Value="SETTINGS_MUSIC_PACKS" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.005,0},{0.995,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
@@ -195,7 +195,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.995,0},{0.107,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbMouseSensitivity" >
-                <Property Name="Text" Value="Mouse sensitivity:" />
+                <Property Name="Text" Value="SETTINGS_MOUSE_SENSITIVITY" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.995,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
@@ -219,15 +219,15 @@
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/DynCamHor" >
-                <Property Name="Text" Value="Only horizontal" />
+                <Property Name="Text" Value="SETTINGS_ONLY_HORIZONTAL" />
                 <Property Name="UnifiedAreaRect" Value="{{0.0668372,0},{0.166623,0},{0.553759,0},{0.228623,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/HighlightLayers" >
-                <Property Name="Text" Value="Highlight layers" />
+                <Property Name="Text" Value="SETTINGS_HIGHLIGHT_LAYERS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.333,0},{0.534783,0},{0.395,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/RestrictCameraRotation" >
-                <Property Name="Text" Value="Restrict camera rotation" />
+                <Property Name="Text" Value="SETTINGS_RESTRICT_CAM_ROTATION" />
                 <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.4,0},{0.534783,0},{0.462,0}}" />
             </Window>
         </Window>
