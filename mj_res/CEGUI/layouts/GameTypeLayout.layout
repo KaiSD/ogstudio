@@ -12,15 +12,15 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.2,0},{0.625,0},{0.8,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/Mahjong" >
-                <Property Name="Text" Value="Solitaire" />
+                <Property Name="Text" Value="GAME_TYPE_AND_LAYOUT_SOLITAIRE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.05,0},{0.325,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenSho" >
-                <Property Name="Text" Value="Shisen-Sho" />
+                <Property Name="Text" Value="GAME_TYPE_AND_LAYOUT_SHISENSHO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0.05,0},{0.65,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenShoWG" >
-                <Property Name="Text" Value="Shisen-Sho + gravity" />
+                <Property Name="Text" Value="GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.675,0},{0.05,0},{0.975,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/OK" >
