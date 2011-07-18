@@ -7,6 +7,7 @@
 "DIFFICULTY_MEDIUM";"Medium";"Средне";"Mittel"
 "FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Bitte geben Sie Ihren Namen ein:"
 "GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Statt dessen wurde ein anderes verwendet / genutzt"
+"GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE";"The layout is no longer available. The save file cannot be used.";"Раскладка не найдена. Файл сохранения не может быть использован.";
 "GAME_CHANGE_INTERRUPTS";"This change will interrupt current game";"Это изменение прервёт текущую игру";"Diese Aenderung wird die laufeundes Spiel unterbrechen"
 "GAME_ELAPSED_TIME";"Elapsed time";"Прошедшее время";"Vergangene Zeit"
 "GAME_GAME_TYPE_AND_LAYOUT";"Game type and layout";"Тип игры и раскладка";"Spieltyp und Layout"
@@ -17,6 +18,17 @@
 "GAME_TYPE_AND_LAYOUT_SOLITAIRE";"Solitaire";"Пасьянс";
 "GAME_TYPE_AND_LAYOUT_SHISENSHO";"Shisen-Sho";"Шисен-Сё";"Shisen-Sho"
 "GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY";"Shisen-Sho + gravity";"Шисен-Сё + гравитация";"Shisen-Sho + Gravitation"
+"GAME_TYPE_DIFFICULTY_LAYOUT_HINTS_UNDOS_TIME";"Type: %s
+Difficulty: %s
+Layout: %s
+Hints: %s
+Undos: %s
+Time: %s";"Тип: %s
+Сложность: %s
+Раскладка: %s
+Подсказки: %s
+Отмены: %s
+Время: %s";
 "GAME_REMOVED_TILES_ALTOGETHER";"Removed tiles / Altogether";"Убранные фишки / Всего";"Wegschaffenden Spielsteine"
 "GAME_RESTART";"Restart the game";"Перезапустить игру";"Spiel neustarten"
 "GAME_SAVE";"Save";"Сохранить";"Sichern"

@@ -1,4 +1,6 @@
 "id";"en";"ru";"de"
+"CANNOT_BIND_UDP_SOCKET";"Cannot bind UDP socket";"Не удаётся привязать сокет UDP";
+"CANNOT_CREATE_UDP_SOCKET";"Cannot create UDP socket";"Не удаётся создать сокет UDP";
 "CANNOT_CREATE_DIR";"Cannot create directory";"Не удаётся создать директорию";"Verzeichnis kann nicht erstellt werden"
 "CANNOT_GET_FILELIST";"Cannot get list of files";"Не удаётся получить список файлов";"Kann Dateiliste nicht erstellen"
 "CANNOT_GET_PATH_TO_MY_DOCUMENTS";"Could not get path to 'My Documents' directory";"Не удалось получить путь к директории 'Мои Документы'";"Pfad zum Verzeichnis 'Eigene Dateien' konnte nicht gefunden werden"
@@ -9,7 +11,8 @@
 "CANNOT_OPEN_DISPLAY";"Cannot open display";"Не удаётся открыть дисплей";"Kann das Display nicht öffnen"
 "CANNOT_READ_STAT";"Cannot read statistics from file";"Не удаётся прочитать статистику из файла";"Kann keine Statistik aus der der Datei lesen"
 "CANNOT_REMOVE_FILE_OR_DIR";"Cannot remove file or directory";"Не удаётся удалить файл или директорию";"Kann Datei oder Verzeichnis nicht löschen"
-"CANNOT_SAVE_CFG";"Cannot save config file";"Не удаётся сохранить файл настроек";"Kann die Konfigurationsdatei nicht sichern"
+"CANNOT_REMOVE_SNAPSHOT";"Cannot remove a snapshot";"Не удаётся удалить снимок";
+"CANNOT_SAVE_CFGFILE";"Cannot save config file";"Не удаётся сохранить файл настроек";"Kann die Konfigurationsdatei nicht sichern"
 "CANNOT_SAVE_STATFILE";"Cannot save statistics file";"Не удаётся сохранить файл статистики";"Kann die Statistikdatei nicht sichern"
 "CANNOT_SET_ALURE_IO_CALLBACKS";"Cannot set ALURE IO callbacks";"Не удаётся установить ALURE IO callbacks";"ALURE IO callbacks konnten nicht eingestellt werden"
 "CANNOT_SET_NEGATIVE_TIMER_RES";"Cannot set negative timer resolution";"Нельзя установить отрицательное разрешение таймера";"Negative Timer-Auflösung kann nicht eingestellt werden"
