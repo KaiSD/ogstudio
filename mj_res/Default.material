@@ -12,6 +12,9 @@ material BaseWhite
 material Material : BaseWhite
 {
 }
+material Material.002 : BaseWhite
+{
+}
 
 material MenuBackground
 {
