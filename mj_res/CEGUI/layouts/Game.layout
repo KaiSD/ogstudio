@@ -93,5 +93,10 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.128,0},{0.005,0},{0.166,0},{0.055,0}}" />
             </Window>
         </Window>
+        <Window Type="Vanilla/StaticText" Name="Game/Tooltip" >
+            <Property Name="Visible" Value="False" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedAreaRect" Value="{{0.05,0},{0.1,0},{0.95,0},{0.2,0}}" />
+        </Window>
     </Window>
 </GUILayout>
