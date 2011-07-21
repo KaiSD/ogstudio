@@ -270,4 +270,17 @@ Spielsteinen in verschiedenen Themen können anders aussehen."
 "TEXTURE_FILTERING_TRILINEAR";"Trilinear";"Трилинейная";"Trilinear"
 "THEME_CLASSIC";"Classic";"Классика";"Classic"
 "THEME_DISTROS";"Distros";"Дистрибутивы";"Distros"
+"TUTORIAL_LOSS";"There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.";"Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.";
+"TUTORIAL_START";"To select a tile, click it with the left mouse button.
+Select a pair of tiles to remove them.
+ 
+To control the camera, hold the right mouse button and move the mouse. Or use arrow/+/- keys with/out shift.
+To reset camera position, press X.";"Для выбора фишки кликните на ней левой кнопкой мыши.
+Выбирите пару фишек, чтобы убрать их.
+ 
+Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки/+/- с/без шифта.
+Для возврата камеры в исходное положение нажмите X.";
+"TUTORIAL_VICTORY";"Congratulations! You won!
+Check out statistics to see if you made it to the top.";"Поздравляем! Вы победили!
+Проверьте статистику, может быть, вы поставили рекорд.";
 "YES";"Yes";"Да";"Ja"
