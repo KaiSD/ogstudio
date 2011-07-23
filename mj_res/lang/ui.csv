@@ -275,12 +275,16 @@ Spielsteinen in verschiedenen Themen können anders aussehen."
 Select a pair of tiles to remove them.
  
 To control the camera, hold the right mouse button and move the mouse. Or use arrow/+/- keys with/out shift.
-To reset camera position, press X.";"Для выбора фишки кликните на ней левой кнопкой мыши.
+To reset camera position, press X.
+ 
+To hide this message, press any key.";"Для выбора фишки кликните на ней левой кнопкой мыши.
 Выбирите пару фишек, чтобы убрать их.
  
 Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки/+/- с/без шифта.
-Для возврата камеры в исходное положение нажмите X.";
+Для возврата камеры в исходное положение нажмите X.
+ 
+Чтобы убрать это сообщение, нажмите любую кнопку.";
 "TUTORIAL_VICTORY";"Congratulations! You won!
-Check out statistics to see if you made it to the top.";"Поздравляем! Вы победили!
-Проверьте статистику, может быть, вы поставили рекорд.";
+Enter your name and check out statistics to see if you made it to the top.";"Поздравляем! Вы победили!
+Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.";
 "YES";"Yes";"Да";"Ja"
