@@ -6,7 +6,7 @@ material ThemeMaterials/Group1/1
         {
             texture_unit
             {
-                texture bsd1.png
+                texture bsd1.dds
             }
         }
     }
@@ -29,7 +29,7 @@ material ThemeMaterials/Group2/1
         {
             texture_unit
             {
-                texture bsd2.png
+                texture bsd2.dds
             }
         }
     }
@@ -52,7 +52,7 @@ material ThemeMaterials/Group3/1
         {
             texture_unit
             {
-                texture bsd3.png
+                texture bsd3.dds
             }
         }
     }
@@ -75,7 +75,7 @@ material ThemeMaterials/Group4/1
         {
             texture_unit
             {
-                texture linux1.png
+                texture linux1.dds
             }
         }
     }
@@ -98,7 +98,7 @@ material ThemeMaterials/Group5/1
         {
             texture_unit
             {
-                texture linux2.png
+                texture linux2.dds
             }
         }
     }
@@ -121,7 +121,7 @@ material ThemeMaterials/Group6/1
         {
             texture_unit
             {
-                texture linux3.png
+                texture linux3.dds
             }
         }
     }
@@ -144,7 +144,7 @@ material ThemeMaterials/Group7/1
         {
             texture_unit
             {
-                texture linux4.png
+                texture linux4.dds
             }
         }
     }
@@ -167,7 +167,7 @@ material ThemeMaterials/Group8/1
         {
             texture_unit
             {
-                texture linux5.png
+                texture linux5.dds
             }
         }
     }
@@ -190,7 +190,7 @@ material ThemeMaterials/Group9/1
         {
             texture_unit
             {
-                texture linux6.png
+                texture linux6.dds
             }
         }
     }
@@ -213,7 +213,7 @@ material ThemeMaterials/Group10/1
         {
             texture_unit
             {
-                texture linux7.png
+                texture linux7.dds
             }
         }
     }
@@ -236,7 +236,7 @@ material ThemeMaterials/Group11/1
         {
             texture_unit
             {
-                texture linux8.png
+                texture linux8.dds
             }
         }
     }
@@ -259,7 +259,7 @@ material ThemeMaterials/Group12/1
         {
             texture_unit
             {
-                texture linux9.png
+                texture linux9.dds
             }
         }
     }
@@ -282,7 +282,7 @@ material ThemeMaterials/Group13/1
         {
             texture_unit
             {
-                texture linux10.png
+                texture linux10.dds
             }
         }
     }
@@ -305,7 +305,7 @@ material ThemeMaterials/Group14/1
         {
             texture_unit
             {
-                texture linux11.png
+                texture linux11.dds
             }
         }
     }
@@ -328,7 +328,7 @@ material ThemeMaterials/Group15/1
         {
             texture_unit
             {
-                texture linux12.png
+                texture linux12.dds
             }
         }
     }
@@ -351,7 +351,7 @@ material ThemeMaterials/Group16/1
         {
             texture_unit
             {
-                texture linux13.png
+                texture linux13.dds
             }
         }
     }
@@ -374,7 +374,7 @@ material ThemeMaterials/Group17/1
         {
             texture_unit
             {
-                texture linux14.png
+                texture linux14.dds
             }
         }
     }
@@ -397,7 +397,7 @@ material ThemeMaterials/Group18/1
         {
             texture_unit
             {
-                texture linux15.png
+                texture linux15.dds
             }
         }
     }
@@ -420,7 +420,7 @@ material ThemeMaterials/Group19/1
         {
             texture_unit
             {
-                texture linux16.png
+                texture linux16.dds
             }
         }
     }
@@ -443,7 +443,7 @@ material ThemeMaterials/Group20/1
         {
             texture_unit
             {
-                texture linux17.png
+                texture linux17.dds
             }
         }
     }
@@ -466,7 +466,7 @@ material ThemeMaterials/Group21/1
         {
             texture_unit
             {
-                texture linux18.png
+                texture linux18.dds
             }
         }
     }
@@ -489,7 +489,7 @@ material ThemeMaterials/Group22/1
         {
             texture_unit
             {
-                texture linux19.png
+                texture linux19.dds
             }
         }
     }
@@ -512,7 +512,7 @@ material ThemeMaterials/Group23/1
         {
             texture_unit
             {
-                texture linux20.png
+                texture linux20.dds
             }
         }
     }
@@ -535,7 +535,7 @@ material ThemeMaterials/Group24/1
         {
             texture_unit
             {
-                texture linux21.png
+                texture linux21.dds
             }
         }
     }
@@ -558,7 +558,7 @@ material ThemeMaterials/Group25/1
         {
             texture_unit
             {
-                texture linux22.png
+                texture linux22.dds
             }
         }
     }
@@ -581,7 +581,7 @@ material ThemeMaterials/Group26/1
         {
             texture_unit
             {
-                texture linux23.png
+                texture linux23.dds
             }
         }
     }
@@ -604,7 +604,7 @@ material ThemeMaterials/Group27/1
         {
             texture_unit
             {
-                texture linux24.png
+                texture linux24.dds
             }
         }
     }
@@ -627,7 +627,7 @@ material ThemeMaterials/Group28/1
         {
             texture_unit
             {
-                texture linux25.png
+                texture linux25.dds
             }
         }
     }
@@ -650,7 +650,7 @@ material ThemeMaterials/Group29/1
         {
             texture_unit
             {
-                texture linux26.png
+                texture linux26.dds
             }
         }
     }
@@ -673,7 +673,7 @@ material ThemeMaterials/Group30/1
         {
             texture_unit
             {
-                texture linux27.png
+                texture linux27.dds
             }
         }
     }
@@ -696,7 +696,7 @@ material ThemeMaterials/Group31/1
         {
             texture_unit
             {
-                texture linux28.png
+                texture linux28.dds
             }
         }
     }
@@ -719,7 +719,7 @@ material ThemeMaterials/Group32/1
         {
             texture_unit
             {
-                texture linux29.png
+                texture linux29.dds
             }
         }
     }
@@ -742,7 +742,7 @@ material ThemeMaterials/Group33/1
         {
             texture_unit
             {
-                texture linux30.png
+                texture linux30.dds
             }
         }
     }
@@ -765,7 +765,7 @@ material ThemeMaterials/Group34/1
         {
             texture_unit
             {
-                texture linux31.png
+                texture linux31.dds
             }
         }
     }
@@ -788,7 +788,7 @@ material ThemeMaterials/Group35/1
         {
             texture_unit
             {
-                texture buntu1.png
+                texture buntu1.dds
             }
         }
     }
@@ -801,7 +801,7 @@ material ThemeMaterials/Group35/2
         {
             texture_unit
             {
-                texture buntu2.png
+                texture buntu2.dds
             }
         }
     }
@@ -814,7 +814,7 @@ material ThemeMaterials/Group35/3
         {
             texture_unit
             {
-                texture buntu3.png
+                texture buntu3.dds
             }
         }
     }
@@ -827,7 +827,7 @@ material ThemeMaterials/Group35/4
         {
             texture_unit
             {
-                texture buntu4.png
+                texture buntu4.dds
             }
         }
     }
@@ -841,7 +841,7 @@ material ThemeMaterials/Group36/1
         {
             texture_unit
             {
-                texture chars1.png
+                texture chars1.dds
             }
         }
     }
@@ -854,7 +854,7 @@ material ThemeMaterials/Group36/2
         {
             texture_unit
             {
-                texture chars2.png
+                texture chars2.dds
             }
         }
     }
@@ -867,7 +867,7 @@ material ThemeMaterials/Group36/3
         {
             texture_unit
             {
-                texture chars3.png
+                texture chars3.dds
             }
         }
     }
@@ -880,7 +880,7 @@ material ThemeMaterials/Group36/4
         {
             texture_unit
             {
-                texture chars4.png
+                texture chars4.dds
             }
         }
     }
@@ -894,7 +894,7 @@ material ThemeMaterials/YouWin
         {
             texture_unit
             {
-                texture msg_win.png
+                texture msg_win.dds
             }
         }
     }
@@ -908,7 +908,7 @@ material ThemeMaterials/YouLose
         {
             texture_unit
             {
-                texture msg_loss.png
+                texture msg_loss.dds
             }
         }
     }
@@ -922,7 +922,7 @@ material ThemeMaterials/Scene
         {
             texture_unit
             {
-                texture background.png
+                texture background.dds
             }
         }
     }
@@ -939,7 +939,7 @@ material ThemeMaterials/SkyBox
 
             texture_unit
             {
-                cubic_texture cubescene.png separateUV
+                cubic_texture cubescene.dds separateUV
                 tex_address_mode clamp
             }
         }

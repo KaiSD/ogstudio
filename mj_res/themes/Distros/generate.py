@@ -45,7 +45,7 @@ template = {
     ('buntu1','buntu2','buntu3','buntu4'),
     ('chars1','chars2','chars3','chars4')
     ],
-'Type':'png',
+'Type':'dds',
 'YouWin':'msg_win',
 'YouLose':'msg_loss',
 'Scene':'background',
