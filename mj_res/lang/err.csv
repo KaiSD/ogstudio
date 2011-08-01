@@ -1,6 +1,6 @@
 "id";"en";"ru";"de"
-"CANNOT_BIND_UDP_SOCKET";"Cannot bind UDP socket";"Не удаётся привязать сокет UDP";
-"CANNOT_CREATE_UDP_SOCKET";"Cannot create UDP socket";"Не удаётся создать сокет UDP";
+"CANNOT_BIND_UDP_SOCKET";"Cannot bind UDP socket";"Не удаётся привязать сокет UDP";"Kann UDP-Socket nicht binden"
+"CANNOT_CREATE_UDP_SOCKET";"Cannot create UDP socket";"Не удаётся создать сокет UDP";"Kann UDP-Socket nicht erstellen"
 "CANNOT_CREATE_DIR";"Cannot create directory";"Не удаётся создать директорию";"Verzeichnis kann nicht erstellt werden"
 "CANNOT_GET_FILELIST";"Cannot get list of files";"Не удаётся получить список файлов";"Kann Dateiliste nicht erstellen"
 "CANNOT_GET_PATH_TO_MY_DOCUMENTS";"Could not get path to 'My Documents' directory";"Не удалось получить путь к директории 'Мои Документы'";"Pfad zum Verzeichnis 'Eigene Dateien' konnte nicht gefunden werden"
@@ -14,7 +14,7 @@
 "CANNOT_REMOVE_SNAPSHOT";"Cannot remove a snapshot";"Не удаётся удалить снимок";
 "CANNOT_SAVE_CFGFILE";"Cannot save config file";"Не удаётся сохранить файл настроек";"Kann die Konfigurationsdatei nicht sichern"
 "CANNOT_SAVE_STATFILE";"Cannot save statistics file";"Не удаётся сохранить файл статистики";"Kann die Statistikdatei nicht sichern"
-"CANNOT_SET_ALURE_IO_CALLBACKS";"Cannot set ALURE IO callbacks";"Не удаётся установить ALURE IO callbacks";"ALURE IO callbacks konnten nicht eingestellt werden"
+"CANNOT_SET_ALURE_IO_CALLBACKS";"Cannot set ALURE IO callbacks";"Не удаётся установить ALURE IO callbacks";"ALURE IO Rückrufe konnten nicht eingestellt werden"
 "CANNOT_SET_NEGATIVE_TIMER_RES";"Cannot set negative timer resolution";"Нельзя установить отрицательное разрешение таймера";"Negative Timer-Auflösung kann nicht eingestellt werden"
 "EMPTY_SAVEFILE";"Empty save file";"Пустой файл сохранения";"Leere Speicherdatei"
 "INTERNAL_SOUND_SYSTEM_ERROR";"Internal sound system error";"Внутренняя ошибка звуковой системы";"Interner Soundsystem Fehler"
@@ -30,12 +30,12 @@
 "INVALID_INPUT_POINTS";"Invalid input points";"Неверные входные точки";"Ungültige Eingabe Punkte"
 "INVALID_LAYOUT_DIM";"Invalid layout dimensions";"Неверные размеры раскладки";"Ungültige Layout Dimensionen"
 "INVALID_LAYOUT_FILE";"Invalid layout file";"Неверный файл раскладки";"Ungültige Layout-Datei"
-"INVALID_RES_CFG_VALUE";"Invalid 'Resolution' config value";"Неверное значение 'Resolution' в настройках";"Ungültiger Wert 'Resolution'"
+"INVALID_RES_CFG_VALUE";"Invalid 'Resolution' config value";"Неверное значение 'Resolution' в настройках";"Ungültiger 'Resolution' Wert"
 "INVALID_SAVEFILE_CMD_TYPE";"Invalid save file command type";"Неверная команда файла сохранения";"Ungültiger Datei-speichern Befehlstyp"
 "INVALID_SCENE_TYPE";"Invalid scene type";"Неверный тип сцены";"Ungültiger Szene-Typ"
 "INVALID_STATE";"Invalid state";"Неверное состояние";"Ungültiger Zustand"
 "INVALID_TEXTURE_FILTERING_ID";"Invalid texture filtering ID";"Неверное значение ID фильтрации текстур";"Ungültige Textur-Filterungs ID"
-"INVALID_TILE_POS";"Invalid tile position";"Неверная позиция фишки";
+"INVALID_TILE_POS";"Invalid tile position";"Неверная позиция фишки";"Ungültige Tile-Position"
 "INVALID_USAGE";"Invalid usage";"Неверное использование";"Falsche Benutzung"
 "INVALID_WND_TYPE";"Invalid window type";"Неверный тип окна";"Falscher Fenstertyp"
 "LOCALIZATION_FAILED";"Localization failed";"Локализация не удалась";"Lokalisierung fehlgeschlagen"

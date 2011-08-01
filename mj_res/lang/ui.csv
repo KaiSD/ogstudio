@@ -5,9 +5,9 @@
 "DELETE";"Delete";"Удалить";"Löschen"
 "DIFFICULTY_EASY";"Easy";"Легко";"Leicht"
 "DIFFICULTY_MEDIUM";"Medium";"Средне";"Mittel"
-"FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Bitte geben Sie Ihren Namen ein:"
-"GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Statt dessen wurde ein anderes verwendet / genutzt"
-"GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE";"The layout is no longer available. The save file cannot be used.";"Раскладка не найдена. Файл сохранения не может быть использован.";
+"FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Geben Sie Ihren Name ein:"
+"GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes verwendet / genutzt"
+"GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE";"The layout is no longer available. The save file cannot be used.";"Раскладка не найдена. Файл сохранения не может быть использован.";"Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
 "GAME_CHANGE_INTERRUPTS";"This change will interrupt current game";"Это изменение прервёт текущую игру";"Diese Aenderung wird die laufeundes Spiel unterbrechen"
 "GAME_ELAPSED_TIME";"Elapsed time";"Прошедшее время";"Vergangene Zeit"
 "GAME_GAME_TYPE_AND_LAYOUT";"Game type and layout";"Тип игры и раскладка";"Spieltyp und Layout"
@@ -15,7 +15,7 @@
 "GAME_INFO";"Info";"Информация";"Info"
 "GAME_HAS_BEEN_SAVED_AS";"The game has been saved as: '%s'";"Игра была сохранена как: '%s'";"Das Spiel wurde gesichert als: '%s'"
 "GAME_LOAD";"Load";"Загрузить";"Laden"
-"GAME_TYPE_AND_LAYOUT_SOLITAIRE";"Solitaire";"Пасьянс";
+"GAME_TYPE_AND_LAYOUT_SOLITAIRE";"Solitaire";"Пасьянс";"Solitär"
 "GAME_TYPE_AND_LAYOUT_SHISENSHO";"Shisen-Sho";"Шисен-Сё";"Shisen-Sho"
 "GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY";"Shisen-Sho + gravity";"Шисен-Сё + гравитация";"Shisen-Sho + Gravitation"
 "GAME_TYPE_DIFFICULTY_LAYOUT_HINTS_UNDOS_TIME";"Type: %s
@@ -28,8 +28,13 @@ Time: %s";"Тип: %s
 Раскладка: %s
 Подсказки: %s
 Отмены: %s
-Время: %s";
-"GAME_REMOVED_TILES_ALTOGETHER";"Removed tiles / Altogether";"Убранные фишки / Всего";"Wegschaffenden Spielsteine"
+Время: %s";"Typ: %s
+Schwierigkeit: %s
+Layout: %s
+Hinweise: %s
+Anz. Rückgängig: %s
+Zeit: %s"
+"GAME_REMOVED_TILES_ALTOGETHER";"Removed tiles / Altogether";"Убранные фишки / Всего";"Entfernte Spielsteine / Insgesamt"
 "GAME_RESTART";"Restart the game";"Перезапустить игру";"Spiel neustarten"
 "GAME_SAVE";"Save";"Сохранить";"Sichern"
 "GAME_SETTINGS";"Settings";"Настройки";"Einstellungen"
@@ -112,37 +117,37 @@ Jürgen Rauscher - исправление Немецкого перевода.
 [window='Info/Link2']";"Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
  
 [image='set:Logos image:OGS'] team:
-Michael Kapelko - code und content;
-Ivan Korystin - gameplay design, content und QA.
+Michael Kapelko — Programmcode und Inhalte;
+Ivan Korystin - Gameplay Design, Inhalte und QS.
  
-Andere Ressoursen:
-Raquel Ravanini - Bilder fuer ""Classic"" theme.
-Kevin MacLeod - alle Tracks in ""Eastern"" und ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
-Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" and ""Today then tomorrow"" in ""Modern"" music pack.
-Fenster - Track ""Free Software"" in ""Modern"" music pack.
+Andere Ressourcen:
+Raquel Ravanini - Bilder für ""Classic"" theme.
+Kevin MacLeod - alle Musikstücke in den ""Eastern"" und ""Piano"" Musik-Paketen. Musikstücke ""Funkorama"", ""Neo Western"" und ""Protofunk"" im ""Modern"" Musikpaket.
+Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" und ""Today then tomorrow"" im ""Modern"" Musikpaket.
+Fenster - Musikstück ""Free Software"" im""Modern"" Musikpaket.
  
-Mehr Infos über Andere Ressoursen, ihre Lizenzen und Urheberrechte kann man in Readme-Dateien finden, die in Themen oder Musik-Packs Verzeichnisse sich stattfinden.
+Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpaketen als Readme-Datei zu finden.
  
-Libraries:
+Bibliotheken:
 [image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
  
 [image='set:Logos image:CEGUI']
  
 [image='set:Logos image:OpenAL']
  
-Vielen Dank:
-- Ogre3D team/community fuer Engine und Hilfe;
-- Lightfeather team/community fuer due Hilfe mit Lightfeather engine;
-- OpenAL-Soft/ALURE developer KittyCat für Hilfe.
-Besonderer Dank geht an CrazyEddie für ein schönes GUI System und eine große Unterstützung.
+Vielen Dank an:
+- das Ogre3D Team & Community für die Engine und Ihre Hilfe;
+- das Lightfeather Team & Community für die Hilfe mit der Lightfeather Engine;
+- den OpenAL-Soft/ALURE Entwickler KittyCat für seine Hilfe.
+Besonderer Dank geht an CrazyEddie für sein schönes GUI System und seine große Unterstützung.
  
-Translators:
-Ekaterina Kamshilina - original German translation.
-Jürgen Rauscher - corrected the original German translation.
+Übersetzer:
+Ekaterina Kamshilina — ursprüngliche Deutsche Übersetzung.
+Jürgen Rauscher — Korrektur der ursprünglichen Übersetzung.
  
-Web pages:
+Webseiten:
 [window='Info/Link1']
-or
+oder
 [window='Info/Link2']"
 "INFO_LICENSE";"License";"Лицензия";"Lizenz"
 "INFO_LICENSE_TXT";"Copyright (C) 2010-2011, Opensource Game Studio
@@ -230,7 +235,22 @@ Klassische Mahjong Spielsteine sind:
  
 Spielsteinen in verschiedenen Themen können anders aussehen."
 "LOAD_LOAD";"Load";"Загрузить";"Laden"
-"LOAD_INFO";"Type: %s\nDifficulty: %s\nLayout: %s\nHints: %s\nUndos: %s\nTime: %s";"Тип: %s\nСложность: %s\nРаскладка: %s\nПодсказок: %s\nОтмен: %s\nВремя: %s";"Typ: %s\nSchwierigkeit: %s\nLayout: %s\nTipps: %s\nRücknahmen: %s\nDauer: %s"
+"LOAD_INFO";"Type: %s
+Difficulty: %s
+Layout: %s
+Hints: %s
+Undos: %s
+Time: %s";"Тип: %s
+Сложность: %s
+Раскладка: %s
+Подсказок: %s
+Отмена: %s
+Время: %s";"Typ: %s
+Schwierigkeit: %s
+Layout: %s
+Tipps: %s
+Rücknahmen: %s
+Dauer: %s"
 "NO";"No";"Нет";"Nein"
 "OK";;;
 "SAVE_GAME_BEFORE_EXIT";"Do you want to save the game before exit?";"Сохранить игру перед выходом?";"Wollen Sie das Spiel vor dem Beenden speichern?"
@@ -243,22 +263,22 @@ Spielsteinen in verschiedenen Themen können anders aussehen."
 "SETTINGS_DIFFICULTY";"Difficulty:";"Сложность:";"Schwierigkeit:"
 "SETTINGS_DYNCAM";"Dynamic camera";"Динамическая камера";"Dynamische Kamera"
 "SETTINGS_DYNCAM_DEFLECTION";"Deflection of dynamic camera:";"Отклонение динамической камеры:";"Ablenkung der dynamischen Kamera:"
-"SETTINGS_HIGHLIGHT_LAYERS";"Highlight layers";"Подсвечивать слои";
+"SETTINGS_HIGHLIGHT_LAYERS";"Highlight layers";"Подсвечивать слои";"Ebenen hervorheben"
 "SETTINGS_MOUSE_SENSITIVITY";"Mouse sensitivity:";"Чувствительность мыши:";"Maus-Empfindlichkeit:"
 "SETTINGS_MUSIC_PACKS";"Music packs:";"Музыкальные группы:";"Musik-Pakete:"
 "SETTINGS_MUSIC_VOLUME";"Music volume:";"Громкость музыки:";"Musik-Lautstärke:"
 "SETTINGS_ONLY_HORIZONTAL";"Only horizontal";"Только по горизонтали";"Nur waagerecht"
 "SETTINGS_RES";"Resolution:";"Разрешение:";"Auflösung:"
-"SETTINGS_RESTRICT_CAM_ROTATION";"Restrict camera rotation";"Ограничивать вращение камеры";
+"SETTINGS_RESTRICT_CAM_ROTATION";"Restrict camera rotation";"Ограничивать вращение камеры";"Kameradrehung einschränken"
 "SETTINGS_SOUND_FX_VOLUME";"Sound effects' volume:";"Громкость звуковых эффектов:";"Soundeffekt-Lautstärke:"
 "SETTINGS_SHADOWS";"Shadows";"Тени";"Schatten"
-"SETTINGS_TEXTURE_FILTERING";"Texture filtering:";"Фильтрация текстур:";"Texture filtering:"
+"SETTINGS_TEXTURE_FILTERING";"Texture filtering:";"Фильтрация текстур:";"Texturfilterung:"
 "SETTINGS_THEME";"Theme:";"Тема:";"Thema:"
 "SETTINGS_TILE";"Tile:";"Фишка:";"Spielstein:"
 "SETTINGS_VIDEO";"Video";"Видео";"Video"
 "SETTINGS_VSYNC";"VSync";"Верт. синхронизация";"Vsync"
 "STATISTICS_DIFFICULTY";"Difficulty";"Сложность";"Schwierigkeit"
-"STATISTICS_FAIR_GAMES_ONLY";"Fair games only";"Только честные партии";
+"STATISTICS_FAIR_GAMES_ONLY";"Fair games only";"Только честные партии";"Nur faire Spiele"
 "STATISTICS_GAME";"Game";"Игра";"Spiel"
 "STATISTICS_LAYOUT";"Layout";"Раскладка";"Layout"
 "STATISTICS_NAME";"Name";"Имя";"Name"
@@ -270,7 +290,7 @@ Spielsteinen in verschiedenen Themen können anders aussehen."
 "TEXTURE_FILTERING_TRILINEAR";"Trilinear";"Трилинейная";"Trilinear"
 "THEME_CLASSIC";"Classic";"Классика";"Classic"
 "THEME_DISTROS";"Distros";"Дистрибутивы";"Distros"
-"TUTORIAL_LOSS";"There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.";"Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.";
+"TUTORIAL_LOSS";"There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.";"Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.";"Es sind keine Züge mehr übrig. Sie können den letzten Zug rückgängig machen, Spielstein mischen oder ein neues Spiel starten."
 "TUTORIAL_START";"To select a tile, click it with the left mouse button.
 Select a pair of tiles to remove them.
  
@@ -283,8 +303,14 @@ To hide this message, press any key.";"Для выбора фишки кликн
 Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки/+/- с/без шифта.
 Для возврата камеры в исходное положение нажмите X.
  
-Чтобы убрать это сообщение, нажмите любую кнопку.";
+Чтобы убрать это сообщение, нажмите любую кнопку.";"Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
+ 
+Um die Kamera zu kontrollieren halten Sie die rechte Maustaste gedrückt und bewegen die Maus umher. Alternativ können Sie Pfeil/+/- Tasten mit/ohne Shift-Taste benutzen.
+Um die Kamera zurückzusetzen, drücken Sie X.
+ 
+Um diese Nachricht zu verstecken, drücken Sie eine beliebige Taste."
 "TUTORIAL_VICTORY";"Congratulations! You won!
 Enter your name and check out statistics to see if you made it to the top.";"Поздравляем! Вы победили!
-Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.";
+Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.";"Glückwunsch! Sie haben gewonnen!
+Geben Sie Ihren Namen ein und sehen Sie sich die Statistiken an um herauszufinden ob Sie es zur Spitze geschafft haben."
 "YES";"Yes";"Да";"Ja"
