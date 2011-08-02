@@ -5,6 +5,7 @@
 "DELETE";"Delete";"Удалить";"Löschen"
 "DIFFICULTY_EASY";"Easy";"Легко";"Leicht"
 "DIFFICULTY_MEDIUM";"Medium";"Средне";"Mittel"
+"DIFFICULTY_CLASSIC";"Classic";"Классика";"Classic"
 "FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Geben Sie Ihren Name ein:"
 "GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes verwendet / genutzt"
 "GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE";"The layout is no longer available. The save file cannot be used.";"Раскладка не найдена. Файл сохранения не может быть использован.";"Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
