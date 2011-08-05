@@ -38,12 +38,8 @@
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
                 <Window Type="Vanilla/Button" Name="Info/Link1" >
-                    <Property Name="Text" Value="http://opengamestudio.org" />
+                    <Property Name="Text" Value="INFO_ABOUT_HOME_URL" />
                     <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.4,6},{0.07,961.517}}" />
-                </Window>
-                <Window Type="Vanilla/Button" Name="Info/Link2" >
-                    <Property Name="Text" Value="http://osrpgcreation.sf.net" />
-                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,1014.14},{0.4,6},{0.07,1014.14}}" />
                 </Window>
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/License" >

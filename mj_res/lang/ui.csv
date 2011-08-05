@@ -47,6 +47,7 @@ Zeit: %s"
 "GAME_QUIT";"Quit";"Выйти из игры";"Spiel verlassen"
 "GAME_UNDO";"Undo";"Отменить";"Rücknehmen"
 "INFO_ABOUT";"About";"О программе";"Über"
+"INFO_ABOUT_HOME_URL";"http://opengamestudio.org/lang/en/ogs-mahjong";"http://opengamestudio.org/lang/ru/ogs-mahjong";"http://opengamestudio.org/lang/en/ogs-mahjong"
 "INFO_ABOUT_TXT";"This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
  
 [image='set:Logos image:OGS'] team:
@@ -78,10 +79,8 @@ Translators:
 Ekaterina Kamshilina - original German translation.
 Jürgen Rauscher - corrected the original German translation.
  
-Web pages:
-[window='Info/Link1']
-or
-[window='Info/Link2']";"Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
+Web page:
+[window='Info/Link1']";"Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
  
 Команда [image='set:Logos image:OGS']:
 Михаил Капелько - код и наполнение;
@@ -112,10 +111,8 @@ Fenster — Музыкальный трек ""Free Software"" в разделе 
 Екатерина Камшилина - Немецкий перевод.
 Jürgen Rauscher - исправление Немецкого перевода.
  
-Веб-страницы:
-[window='Info/Link1']
-или
-[window='Info/Link2']";"Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
+Веб-страница:
+[window='Info/Link1']";"Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
  
 [image='set:Logos image:OGS'] team:
 Michael Kapelko — Programmcode und Inhalte;
@@ -146,10 +143,8 @@ Besonderer Dank geht an CrazyEddie für sein schönes GUI System und seine groß
 Ekaterina Kamshilina — ursprüngliche Deutsche Übersetzung.
 Jürgen Rauscher — Korrektur der ursprünglichen Übersetzung.
  
-Webseiten:
-[window='Info/Link1']
-oder
-[window='Info/Link2']"
+Webseit:
+[window='Info/Link1']"
 "INFO_LICENSE";"License";"Лицензия";"Lizenz"
 "INFO_LICENSE_TXT";"Copyright (C) 2010-2011, Opensource Game Studio
 
