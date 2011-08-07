@@ -6,10 +6,10 @@
 "DIFFICULTY_EASY";"Easy";"Легко";"Leicht"
 "DIFFICULTY_MEDIUM";"Medium";"Средне";"Mittel"
 "DIFFICULTY_CLASSIC";"Classic";"Классика";"Classic"
-"FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Geben Sie Ihren Name ein:"
-"GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes verwendet / genutzt"
+"FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Geben Sie Ihren Namen ein:"
+"GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt."
 "GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE";"The layout is no longer available. The save file cannot be used.";"Раскладка не найдена. Файл сохранения не может быть использован.";"Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
-"GAME_CHANGE_INTERRUPTS";"This change will interrupt current game";"Это изменение прервёт текущую игру";"Diese Aenderung wird die laufeundes Spiel unterbrechen"
+"GAME_CHANGE_INTERRUPTS";"This change will interrupt current game";"Это изменение прервёт текущую игру";"Diese Änderung wird das laufende Spiel unterbrechen"
 "GAME_ELAPSED_TIME";"Elapsed time";"Прошедшее время";"Vergangene Zeit"
 "GAME_GAME_TYPE_AND_LAYOUT";"Game type and layout";"Тип игры и раскладка";"Spieltyp und Layout"
 "GAME_HINT";"Hint";"Подсказка";"Hinweise"
@@ -33,17 +33,17 @@ Time: %s";"Тип: %s
 Schwierigkeit: %s
 Layout: %s
 Hinweise: %s
-Anz. Rückgängig: %s
+Rücknahmen: %s
 Zeit: %s"
 "GAME_REMOVED_TILES_ALTOGETHER";"Removed tiles / Altogether";"Убранные фишки / Всего";"Entfernte Spielsteine / Insgesamt"
 "GAME_RESTART";"Restart the game";"Перезапустить игру";"Spiel neustarten"
 "GAME_SAVE";"Save";"Сохранить";"Sichern"
 "GAME_SETTINGS";"Settings";"Настройки";"Einstellungen"
 "GAME_SHUFFLE";"Shuffle";"Перемешать";"Vermischen"
-"GAME_SOUND_TRACK";"Sound track";"Музыкальная дорожка";"Sound track"
+"GAME_SOUND_TRACK";"Sound track";"Музыкальная дорожка";"Soundtrack"
 "GAME_START";"Start a new game";"Начать новую игру";"Neues Spiel starten"
 "GAME_STATS";"Statistics";"Статистика";"Statistik"
-"GAME_TILE_PAIRS_YOU_CAN_REMOVE";"Tile pairs you can remove";"Пары фишек, которые можно удалить";"Spielstein-Paare die gelöscht werden können"
+"GAME_TILE_PAIRS_YOU_CAN_REMOVE";"Tile pairs you can remove";"Пары фишек, которые можно удалить";"Spielstein-Paare, die gelöscht werden können"
 "GAME_QUIT";"Quit";"Выйти из игры";"Spiel verlassen"
 "GAME_UNDO";"Undo";"Отменить";"Rücknehmen"
 "INFO_ABOUT";"About";"О программе";"Über"
@@ -55,9 +55,10 @@ Michael Kapelko - code and content;
 Ivan Korystin - gameplay design, content and QA.
  
 Third-party resources:
+Timur Malikin - TileHigh and TileMed tile models.
 Raquel Ravanini - images for ""Classic"" theme.
 Kevin MacLeod - all tracks in ""Eastern"" and ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
-Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" and ""Today then tomorrow"" in ""Modern"" music pack.
+Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" and ""What you think"" in ""Modern"" music pack.
 Fenster - Track ""Free Software"" in ""Modern"" music pack.
  
 You can find more info on third-party resources, their licenses and copyrights in README files, placed in themes or music packs directories.
@@ -87,9 +88,10 @@ Web page:
 Иван Корыстин - игровой дизайн, наполнение и контроль качества.
  
 Сторонние ресурсы:
+Тимур Маликин — модели фишек: TileHigh и TileMed.
 Raquel Ravanini - изображения для темы оформления ""Classic"".
 Kevin MacLeod - все музыкальные треки в разделах ""Eastern"" и ""Piano"". Треки ""Funkorama"", ""Neo Western"" и ""Protofunk"" в разделе ""Modern"".
-Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" и ""Today then tomorrow"" в разделе ""Modern"".
+Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" и ""What you think"" в разделе ""Modern"".
 Fenster — Музыкальный трек ""Free Software"" в разделе ""Modern"".
  
 Более подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.
@@ -119,12 +121,13 @@ Michael Kapelko — Programmcode und Inhalte;
 Ivan Korystin - Gameplay Design, Inhalte und QS.
  
 Andere Ressourcen:
+Timur Malikin - TileHigh and TileMed tile models.
 Raquel Ravanini - Bilder für ""Classic"" theme.
 Kevin MacLeod - alle Musikstücke in den ""Eastern"" und ""Piano"" Musik-Paketen. Musikstücke ""Funkorama"", ""Neo Western"" und ""Protofunk"" im ""Modern"" Musikpaket.
-Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"" und ""Today then tomorrow"" im ""Modern"" Musikpaket.
+Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" und ""What you think"" im ""Modern"" Musikpaket.
 Fenster - Musikstück ""Free Software"" im""Modern"" Musikpaket.
  
-Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpaketen als Readme-Datei zu finden.
+Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpakete als Readme-Datei zu finden.
  
 Bibliotheken:
 [image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
@@ -207,27 +210,27 @@ Tiles in various themes may look different.";"Пасьянс.
 7. Цветы - 4 фишки с изображениями цветов. Одинаковыми считаются все фишки масти Цветы.
  
 В различных темах масти фишек могут выглядеть по-разному.";"Solitaire.
-Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
-Der Spielstein kann nur dann entfernt werden, wenn er frei ist, so dass es keine anderen Steine links oder rechts gibt (so dass sich keine anderen Steine links oder rechts befinden).
+Ziel des Spieles ist es, das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
+Der Spielstein kann nur dann entfernt werden, wenn er frei ist, d. h.wenn er auf mindestens einer Seite keinen anderen Stein berührt.
 [image='set:Rules image:Mahjong']
  
-Schisen-Sö.
+Shisen-So.
 Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
 Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.
 [image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
  
-Schisen-Sö+ Gravitation.
+Shisen-So + Gravitation.
 Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.
 Nach jedem Zug werden die Spielsteine, die von der Unterseite frei sind, nach unten verschoben, bis zum sie im Kontakt mit anderen Spielsteinen kommen oder den anderen Spielsteine oder sein Platz an der erste Spiellinie nehmen.
  
 Klassische Mahjong Spielsteine sind:
-1. Die Bambus Spielsteine haben Wert von 1 bis 9. Die Bambus Spielsteine mit der gleichen Farbe und Wert sind identisch.
-2. Die Symbol Spielsteine haben Wert von 1 bis 9. Die Spielsteine mit der gleichen Farbe und Wert sind identisch.
-3. Die Punkten Spielsteine haben Wert von 1 bis 9. Die Punkten Spielsteine mit der gleichen Farbe und Wert sind identisch.
+1. Die Bambus-Spielsteine haben einen Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
+2. Die Symbol-Spielsteine haben einen Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
+3. Die Punkte-Spielsteine haben Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
 4. Drachen - 3 Spielsteine in verschiedenen Farben.
-5. Winds - 4 Stück mit den Symbolen der verschiedenen Seiten der Welt. Die Spielsteine mit dem gleichen Symbol sind identisch.
-6. Jahreszeiten - 4 Stück mit der Darstellung der Jahreszeiten. Alle Jahreszeiten Spielsteine sind identisch.
-7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen Spielsteine sind identisch.
+5. Himmelsrichtungen - 4 Stück mit den Symbolen der verschiedenen Himmelsrichtungen. Die Spielsteine mit dem gleichen Symbol sind identisch.
+6. Jahreszeiten - 4 Stück mit der Darstellung der Jahreszeiten. Alle Jahreszeiten-Spielsteine sind identisch.
+7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen-Spielsteine sind identisch.
  
 Spielsteinen in verschiedenen Themen können anders aussehen."
 "LOAD_LOAD";"Load";"Загрузить";"Laden"
@@ -250,7 +253,7 @@ Dauer: %s"
 "NO";"No";"Нет";"Nein"
 "OK";;;
 "SAVE_GAME_BEFORE_EXIT";"Do you want to save the game before exit?";"Сохранить игру перед выходом?";"Wollen Sie das Spiel vor dem Beenden speichern?"
-"SETTINGS_ANTIALIASING";"Anti-aliasing:";"Сглаживание:";"Anti-aliasing:"
+"SETTINGS_ANTIALIASING";"Anti-aliasing:";"Сглаживание:";"Anti-Aliasing:"
 "SETTINGS_AUDIO";"Audio";"Аудио";"Audio"
 "SETTINGS_CONTROLS";"Controls";"Управление";"Steuerung"
 "SETTINGS_FULLSCREEN";"Full screen";"На весь экран";"Vollbild"
@@ -286,7 +289,7 @@ Dauer: %s"
 "TEXTURE_FILTERING_TRILINEAR";"Trilinear";"Трилинейная";"Trilinear"
 "THEME_CLASSIC";"Classic";"Классика";"Classic"
 "THEME_DISTROS";"Distros";"Дистрибутивы";"Distros"
-"TUTORIAL_LOSS";"There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.";"Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.";"Es sind keine Züge mehr übrig. Sie können den letzten Zug rückgängig machen, Spielstein mischen oder ein neues Spiel starten."
+"TUTORIAL_LOSS";"There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.";"Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.";"Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten."
 "TUTORIAL_START";"To select a tile, click it with the left mouse button.
 Select a pair of tiles to remove them.
  
@@ -308,5 +311,5 @@ Um diese Nachricht zu verstecken, drücken Sie eine beliebige Taste."
 "TUTORIAL_VICTORY";"Congratulations! You won!
 Enter your name and check out statistics to see if you made it to the top.";"Поздравляем! Вы победили!
 Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.";"Glückwunsch! Sie haben gewonnen!
-Geben Sie Ihren Namen ein und sehen Sie sich die Statistiken an um herauszufinden ob Sie es zur Spitze geschafft haben."
+Geben Sie Ihren Namen ein und sehen Sie sich die Statistiken an, um herauszufinden, ob Sie es zur Spitze geschafft haben."
 "YES";"Yes";"Да";"Ja"
