@@ -4,6 +4,16 @@ material ThemeMaterials/Group1/1
     {
         pass
         {
+
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture bsd1.dds
@@ -27,6 +37,15 @@ material ThemeMaterials/Group2/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture bsd2.dds
@@ -50,6 +69,15 @@ material ThemeMaterials/Group3/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture bsd3.dds
@@ -73,6 +101,15 @@ material ThemeMaterials/Group4/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux1.dds
@@ -96,6 +133,15 @@ material ThemeMaterials/Group5/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux2.dds
@@ -119,6 +165,15 @@ material ThemeMaterials/Group6/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux3.dds
@@ -142,6 +197,15 @@ material ThemeMaterials/Group7/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux4.dds
@@ -165,6 +229,15 @@ material ThemeMaterials/Group8/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux5.dds
@@ -188,6 +261,15 @@ material ThemeMaterials/Group9/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux6.dds
@@ -211,6 +293,15 @@ material ThemeMaterials/Group10/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux7.dds
@@ -234,6 +325,15 @@ material ThemeMaterials/Group11/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux8.dds
@@ -257,6 +357,15 @@ material ThemeMaterials/Group12/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux9.dds
@@ -280,6 +389,15 @@ material ThemeMaterials/Group13/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux10.dds
@@ -303,6 +421,15 @@ material ThemeMaterials/Group14/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux11.dds
@@ -326,6 +453,15 @@ material ThemeMaterials/Group15/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux12.dds
@@ -349,6 +485,15 @@ material ThemeMaterials/Group16/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux13.dds
@@ -372,6 +517,15 @@ material ThemeMaterials/Group17/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux14.dds
@@ -395,6 +549,15 @@ material ThemeMaterials/Group18/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux15.dds
@@ -418,6 +581,15 @@ material ThemeMaterials/Group19/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux16.dds
@@ -441,6 +613,15 @@ material ThemeMaterials/Group20/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux17.dds
@@ -464,6 +645,15 @@ material ThemeMaterials/Group21/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux18.dds
@@ -487,6 +677,15 @@ material ThemeMaterials/Group22/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux19.dds
@@ -510,6 +709,15 @@ material ThemeMaterials/Group23/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux20.dds
@@ -533,6 +741,15 @@ material ThemeMaterials/Group24/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux21.dds
@@ -556,6 +773,15 @@ material ThemeMaterials/Group25/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux22.dds
@@ -579,6 +805,15 @@ material ThemeMaterials/Group26/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux23.dds
@@ -602,6 +837,15 @@ material ThemeMaterials/Group27/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux24.dds
@@ -625,6 +869,15 @@ material ThemeMaterials/Group28/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux25.dds
@@ -648,6 +901,15 @@ material ThemeMaterials/Group29/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux26.dds
@@ -671,6 +933,15 @@ material ThemeMaterials/Group30/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux27.dds
@@ -694,6 +965,15 @@ material ThemeMaterials/Group31/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux28.dds
@@ -717,6 +997,15 @@ material ThemeMaterials/Group32/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux29.dds
@@ -740,6 +1029,15 @@ material ThemeMaterials/Group33/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux30.dds
@@ -763,6 +1061,15 @@ material ThemeMaterials/Group34/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture linux31.dds
@@ -786,6 +1093,15 @@ material ThemeMaterials/Group35/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture buntu1.dds
@@ -799,6 +1115,15 @@ material ThemeMaterials/Group35/2
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture buntu2.dds
@@ -812,6 +1137,15 @@ material ThemeMaterials/Group35/3
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture buntu3.dds
@@ -825,6 +1159,15 @@ material ThemeMaterials/Group35/4
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture buntu4.dds
@@ -839,6 +1182,15 @@ material ThemeMaterials/Group36/1
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture chars1.dds
@@ -852,6 +1204,15 @@ material ThemeMaterials/Group36/2
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture chars2.dds
@@ -865,6 +1226,15 @@ material ThemeMaterials/Group36/3
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture chars3.dds
@@ -878,6 +1248,15 @@ material ThemeMaterials/Group36/4
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture chars4.dds
@@ -892,6 +1271,15 @@ material ThemeMaterials/YouWin
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture msg_win.dds
@@ -906,6 +1294,15 @@ material ThemeMaterials/YouLose
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture msg_loss.dds
@@ -920,6 +1317,15 @@ material ThemeMaterials/Scene
     {
         pass
         {
+            ambient 1.0 1.0 1.0
+            specular 1.0 1.0 1.0 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
             texture_unit
             {
                 texture background.dds

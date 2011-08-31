@@ -1,0 +1,8 @@
+vertex_program vertPerPixelLighting glsl {
+    source ppl.vert
+}
+
+fragment_program fragPerPixelLighting glsl {
+    source ppl.frag
+}
+
