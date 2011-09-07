@@ -113,6 +113,8 @@
 
 
     <WidgetLook name="Vanilla/Button">
+        <PropertyDefinition name="TextID" initialValue="" redrawOnWrite="true" />
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <PropertyDefinition name="NormalTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="HoverTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="PushedTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
@@ -836,6 +838,8 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/StaticText">
+        <PropertyDefinition name="TextID" initialValue="" redrawOnWrite="true" />
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <Property name="BackgroundEnabled" value="True" />
         <Property name="FrameEnabled" value="True" />
         <NamedArea name="WithFrameTextRenderArea">
@@ -1715,6 +1719,8 @@
     ***************************************************
     -->
     <WidgetLook name="Vanilla/Checkbox">
+        <PropertyDefinition name="TextID" initialValue="" redrawOnWrite="true" />
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
 		<PropertyDefinition name="NormalTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="HoverTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="PushedTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
@@ -1836,6 +1842,8 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/Combobox">
+        <PropertyDefinition name="TextID" initialValue="" redrawOnWrite="true" />
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <PropertyDefinition name = "EditboxHeight" initialValue = "15" layoutOnWrite = "true" />
         <PropertyLinkDefinition name="NormalEditTextColour" widget="__auto_editbox__" targetProperty="NormalTextColour" initialValue="FF000000" />
         <PropertyLinkDefinition name="SelectedEditTextColour" widget="__auto_editbox__" targetProperty="SelectedTextColour" initialValue="FFFFFFFF" />
