@@ -48,3 +48,21 @@ material Default/SkyBox
     }
 }
 
+material PerPixelLighting
+{
+    technique
+    {
+        pass
+        {
+            specular 0.3 0.3 0.3 1.0
+            vertex_program_ref vertPerPixelLighting
+            {
+            }
+            fragment_program_ref fragPerPixelLighting
+            {
+                param_named tex int 0
+            }
+        }
+    }
+}
+
