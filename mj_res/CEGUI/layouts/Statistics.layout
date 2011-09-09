@@ -16,6 +16,7 @@
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Statistics/FairGamesOnly" >
                 <Property Name="Text" Value="STATISTICS_FAIR_GAMES_ONLY" />
+                <Property Name="TextID" Value="STATISTICS_FAIR_GAMES_ONLY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.81,0},{0.5,0},{0.872,0}}" />
             </Window>
         </Window>

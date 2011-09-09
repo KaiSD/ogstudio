@@ -13,14 +13,17 @@
             </Window>
             <Window Type="Vanilla/Button" Name="Load/Load" >
                 <Property Name="Text" Value="LOAD_LOAD" />
+                <Property Name="TextID" Value="LOAD_LOAD" />
                 <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.85,0},{0.365,0},{0.95,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Load/Delete" >
                 <Property Name="Text" Value="DELETE" />
+                <Property Name="TextID" Value="DELETE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.415,0},{0.85,0},{0.67,0},{0.95,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Load/Cancel" >
                 <Property Name="Text" Value="CANCEL" />
+                <Property Name="TextID" Value="CANCEL" />
                 <Property Name="UnifiedAreaRect" Value="{{0.72,0},{0.85,0},{0.975,0},{0.95,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Load/Info" >
