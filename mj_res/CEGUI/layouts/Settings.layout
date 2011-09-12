@@ -151,6 +151,7 @@
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Audio" >
             <Property Name="Font" Value="Arial-16" />
+            <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolGeneral" >
                 <Property Name="PageSize" Value="0" />
@@ -203,7 +204,6 @@
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Controls" >
-            <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollMouseSensitivity" >
                 <Property Name="PageSize" Value="0" />
@@ -237,7 +237,7 @@
                 <Property Name="Text" Value="SETTINGS_DYNCAM_DEFLECTION" />
                 <Property Name="TextID" Value="SETTINGS_DYNCAM_DEFLECTION" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.0076515,0},{0.229848,0},{0.997652,0},{0.296847,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.229848,0},{0.995,0},{0.296847,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/DynCamHor" >
@@ -254,6 +254,16 @@
                 <Property Name="Text" Value="SETTINGS_RESTRICT_CAM_ROTATION" />
                 <Property Name="TextID" Value="SETTINGS_RESTRICT_CAM_ROTATION" />
                 <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.4,0},{0.534783,0},{0.462,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/Language" >
+                <Property Name="Text" Value="SETTINGS_LANGUAGE" />
+                <Property Name="TextID" Value="SETTINGS_LANGUAGE" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.467,0},{0.995,0},{0.529,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListLanguages" >
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.534,0},{0.995,0},{0.99,0}}" />
             </Window>
         </Window>
     </Window>
