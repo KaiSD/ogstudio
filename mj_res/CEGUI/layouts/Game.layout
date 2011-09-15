@@ -14,13 +14,11 @@
             <Property Name="MousePassThroughEnabled" Value="True" />
             <Window Type="Vanilla/StaticText" Name="Game/Tiles" >
                 <Property Name="Font" Value="Arial-16" />
-                <Property Name="Text" Value="444/444" />
                 <Property Name="Tooltip" Value="GAME_REMOVED_TILES_ALTOGETHER" />
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.469,0},{0.005,0},{0.563,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Game/Time" >
-                <Property Name="Text" Value="0:00:00" />
                 <Property Name="Tooltip" Value="GAME_ELAPSED_TIME" />
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.376,0},{0.005,0},{0.466,0},{0.055,0}}" />
@@ -67,7 +65,6 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.957,0},{0.005,0},{0.995,0},{0.055,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Game/Turns" >
-                <Property Name="Text" Value="177" />
                 <Property Name="Tooltip" Value="GAME_TILE_PAIRS_YOU_CAN_REMOVE" />
                 <Property Name="HorzFormatting" Value="HorzCentred" />
                 <Property Name="UnifiedAreaRect" Value="{{0.323,0},{0.005,0},{0.373,0},{0.055,0}}" />

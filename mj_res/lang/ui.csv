@@ -1,54 +1,54 @@
-"id";"en";"ru";"de"
-"APPLY";"Apply";"Применить";"Anwenden"
-"ARE_YOU_SURE";"Are you sure?";"Вы уверены?";"Sind Sie sicher?"
-"CANCEL";"Cancel";"Отмена";"Abbrechen"
-"DELETE";"Delete";"Удалить";"Löschen"
-"DIFFICULTY_EASY";"Easy";"Легко";"Leicht"
-"DIFFICULTY_MEDIUM";"Medium";"Средне";"Mittel"
-"DIFFICULTY_CLASSIC";"Classic";"Классика";"Classic"
-"FINISHED_ENTER_YOUR_NAME";"Enter your name:";"Введите своё имя:";"Geben Sie Ihren Namen ein:"
-"GAME_CANNOT_LOAD_LAST_LAYOUT";"The layout you've played last time can no longer be found. Another one was used instead.";"Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.";"Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt."
-"GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE";"The layout is no longer available. The save file cannot be used.";"Раскладка не найдена. Файл сохранения не может быть использован.";"Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
-"GAME_CHANGE_INTERRUPTS";"This change will interrupt current game";"Это изменение прервёт текущую игру";"Diese Änderung wird das laufende Spiel unterbrechen"
-"GAME_ELAPSED_TIME";"Elapsed time";"Прошедшее время";"Vergangene Zeit"
-"GAME_GAME_TYPE_AND_LAYOUT";"Game type and layout";"Тип игры и раскладка";"Spieltyp und Layout"
-"GAME_HINT";"Hint";"Подсказка";"Hinweise"
-"GAME_INFO";"Info";"Информация";"Info"
-"GAME_HAS_BEEN_SAVED_AS";"The game has been saved as: '%s'";"Игра была сохранена как: '%s'";"Das Spiel wurde gesichert als: '%s'"
-"GAME_LOAD";"Load";"Загрузить";"Laden"
-"GAME_TYPE_AND_LAYOUT_SOLITAIRE";"Solitaire";"Пасьянс";"Solitär"
-"GAME_TYPE_AND_LAYOUT_SHISENSHO";"Shisen-Sho";"Шисен-Сё";"Shisen-Sho"
-"GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY";"Shisen-Sho + gravity";"Шисен-Сё + гравитация";"Shisen-Sho + Gravitation"
-"GAME_TYPE_DIFFICULTY_LAYOUT_HINTS_UNDOS_TIME";"Type: %s
+"id","en","ru","de"
+"APPLY","Apply","Применить","Anwenden"
+"ARE_YOU_SURE","Are you sure?","Вы уверены?","Sind Sie sicher?"
+"CANCEL","Cancel","Отмена","Abbrechen"
+"DELETE","Delete","Удалить","Löschen"
+"DIFFICULTY_EASY","Easy","Легко","Leicht"
+"DIFFICULTY_MEDIUM","Medium","Средне","Mittel"
+"DIFFICULTY_CLASSIC","Classic","Классика","Classic"
+"FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:"
+"GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt."
+"GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE","The layout is no longer available. The save file cannot be used.","Раскладка не найдена. Файл сохранения не может быть использован.","Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
+"GAME_CHANGE_INTERRUPTS","This change will interrupt current game","Это изменение прервёт текущую игру","Diese Änderung wird das laufende Spiel unterbrechen"
+"GAME_ELAPSED_TIME","Elapsed time","Прошедшее время","Vergangene Zeit"
+"GAME_GAME_TYPE_AND_LAYOUT","Game type and layout","Тип игры и раскладка","Spieltyp und Layout"
+"GAME_HINT","Hint","Подсказка","Hinweise"
+"GAME_INFO","Info","Информация","Info"
+"GAME_HAS_BEEN_SAVED_AS","The game has been saved as: '%s'","Игра была сохранена как: '%s'","Das Spiel wurde gesichert als: '%s'"
+"GAME_LOAD","Load","Загрузить","Laden"
+"GAME_TYPE_AND_LAYOUT_SOLITAIRE","Solitaire","Пасьянс","Solitär"
+"GAME_TYPE_AND_LAYOUT_SHISENSHO","Shisen-Sho","Шисен-Сё","Shisen-Sho"
+"GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY","Shisen-Sho + gravity","Шисен-Сё + гравитация","Shisen-Sho + Gravitation"
+"GAME_TYPE_DIFFICULTY_LAYOUT_HINTS_UNDOS_TIME","Type: %s
 Difficulty: %s
 Layout: %s
 Hints: %s
 Undos: %s
-Time: %s";"Тип: %s
+Time: %s","Тип: %s
 Сложность: %s
 Раскладка: %s
 Подсказки: %s
 Отмены: %s
-Время: %s";"Typ: %s
+Время: %s","Typ: %s
 Schwierigkeit: %s
 Layout: %s
 Hinweise: %s
 Rücknahmen: %s
 Zeit: %s"
-"GAME_REMOVED_TILES_ALTOGETHER";"Removed tiles / Altogether";"Убранные фишки / Всего";"Entfernte Spielsteine / Insgesamt"
-"GAME_RESTART";"Restart the game";"Перезапустить игру";"Spiel neustarten"
-"GAME_SAVE";"Save";"Сохранить";"Sichern"
-"GAME_SETTINGS";"Settings";"Настройки";"Einstellungen"
-"GAME_SHUFFLE";"Shuffle";"Перемешать";"Vermischen"
-"GAME_SOUND_TRACK";"Sound track";"Музыкальная дорожка";"Soundtrack"
-"GAME_START";"Start a new game";"Начать новую игру";"Neues Spiel starten"
-"GAME_STATS";"Statistics";"Статистика";"Statistik"
-"GAME_TILE_PAIRS_YOU_CAN_REMOVE";"Tile pairs you can remove";"Пары фишек, которые можно удалить";"Spielstein-Paare, die gelöscht werden können"
-"GAME_QUIT";"Quit";"Выйти из игры";"Spiel verlassen"
-"GAME_UNDO";"Undo";"Отменить";"Rücknehmen"
-"INFO_ABOUT";"About";"О программе";"Über"
-"INFO_ABOUT_HOME_URL";"http://opengamestudio.org/lang/en/ogs-mahjong";"http://opengamestudio.org/lang/ru/ogs-mahjong";"http://opengamestudio.org/lang/en/ogs-mahjong"
-"INFO_ABOUT_TXT";"This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
+"GAME_REMOVED_TILES_ALTOGETHER","Removed tiles / Altogether","Убранные фишки / Всего","Entfernte Spielsteine / Insgesamt"
+"GAME_RESTART","Restart the game","Перезапустить игру","Spiel neustarten"
+"GAME_SAVE","Save","Сохранить","Sichern"
+"GAME_SETTINGS","Settings","Настройки","Einstellungen"
+"GAME_SHUFFLE","Shuffle","Перемешать","Vermischen"
+"GAME_SOUND_TRACK","Sound track","Музыкальная дорожка","Soundtrack"
+"GAME_START","Start a new game","Начать новую игру","Neues Spiel starten"
+"GAME_STATS","Statistics","Статистика","Statistik"
+"GAME_TILE_PAIRS_YOU_CAN_REMOVE","Tile pairs you can remove","Пары фишек, которые можно удалить","Spielstein-Paare, die gelöscht werden können"
+"GAME_QUIT","Quit","Выйти из игры","Spiel verlassen"
+"GAME_UNDO","Undo","Отменить","Rücknehmen"
+"INFO_ABOUT","About","О программе","Über"
+"INFO_ABOUT_HOME_URL","http://opengamestudio.org/lang/en/ogs-mahjong","http://opengamestudio.org/lang/ru/ogs-mahjong","http://opengamestudio.org/lang/en/ogs-mahjong"
+"INFO_ABOUT_TXT","This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
  
 [image='set:Logos image:OGS'] team:
 Michael Kapelko - code and content;
@@ -82,7 +82,7 @@ Jürgen Rauscher - corrected the original German translation.
 Dirk Pervölz - corrected the original German translation.
  
 Web page:
-[window='Info/Link1']";"Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
+[window='Info/Link1']","Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
  
 Команда [image='set:Logos image:OGS']:
 Михаил Капелько - код и наполнение;
@@ -116,7 +116,7 @@ Jürgen Rauscher - исправление Немецкого перевода.
 Dirk Pervölz - исправление Немецкого перевода.
  
 Веб-страница:
-[window='Info/Link1']";"Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
+[window='Info/Link1']","Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
  
 [image='set:Logos image:OGS'] team:
 Michael Kapelko — Programmcode und Inhalte;
@@ -151,8 +151,8 @@ Dirk Pervölz - Korrektur der ursprünglichen Übersetzung.
  
 Web-Seite:
 [window='Info/Link1']"
-"INFO_LICENSE";"License";"Лицензия";"Lizenz"
-"INFO_LICENSE_TXT";"Copyright (C) 2010-2011, Opensource Game Studio
+"INFO_LICENSE","License","Лицензия","Lizenz"
+"INFO_LICENSE_TXT","Copyright (C) 2010-2011, Opensource Game Studio
 
 OGS Mahjong is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -166,9 +166,9 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with OGS Mahjong.  If not, see
-[window='Info/Link3']";;
-"INFO_RULES";"Rules";"Правила";"Regeln"
-"INFO_RULES_TXT";"Solitaire.
+[window='Info/Link3']",,
+"INFO_RULES","Rules","Правила","Regeln"
+"INFO_RULES_TXT","Solitaire.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
 [image='set:Rules image:Mahjong']
  
@@ -188,7 +188,7 @@ Classic mahjong tiles:
 6. Seasons - 4 pieces depicting the seasons. All Seasons tiles are identical.
 7. Flowers - 4 pieces with images of flowers. All Flowers tiles are identical.
  
-Tiles in various themes may look different.";"Пасьянс.
+Tiles in various themes may look different.","Пасьянс.
 Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
 Фишка может быть убрана только если она свободна, то есть если слева от нее, справа от нее или на ней нет других фишек.
 [image='set:Rules image:Mahjong']
@@ -212,7 +212,7 @@ Tiles in various themes may look different.";"Пасьянс.
 6. Времена года - 4 фишки с изображением времен года. Одинаковыми считаются все фишки масти Времена года.
 7. Цветы - 4 фишки с изображениями цветов. Одинаковыми считаются все фишки масти Цветы.
  
-В различных темах масти фишек могут выглядеть по-разному.";"Solitaire.
+В различных темах масти фишек могут выглядеть по-разному.","Solitaire.
 Ziel des Spieles ist es, das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
 Der Spielstein kann nur dann entfernt werden, wenn er frei ist, d. h.wenn er auf mindestens einer Seite keinen anderen Stein berührt.
 [image='set:Rules image:Mahjong']
@@ -236,83 +236,84 @@ Klassische Mahjong Spielsteine sind:
 7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen-Spielsteine sind identisch.
  
 Spielsteinen in verschiedenen Themen können anders aussehen."
-"LOAD_LOAD";"Load";"Загрузить";"Laden"
-"LOAD_INFO";"Type: %s
+"LOAD_LOAD","Load","Загрузить","Laden"
+"LOAD_INFO","Type: %s
 Difficulty: %s
 Layout: %s
 Hints: %s
 Undos: %s
-Time: %s";"Тип: %s
+Time: %s","Тип: %s
 Сложность: %s
 Раскладка: %s
 Подсказок: %s
 Отмена: %s
-Время: %s";"Typ: %s
+Время: %s","Typ: %s
 Schwierigkeit: %s
 Layout: %s
 Tipps: %s
 Rücknahmen: %s
 Dauer: %s"
-"NO";"No";"Нет";"Nein"
-"OK";;;
-"SAVE_GAME_BEFORE_EXIT";"Do you want to save the game before exit?";"Сохранить игру перед выходом?";"Wollen Sie das Spiel vor dem Beenden speichern?"
-"SETTINGS_ANTIALIASING";"Anti-aliasing:";"Сглаживание:";"Anti-Aliasing:"
-"SETTINGS_AUDIO";"Audio";"Аудио";"Audio"
-"SETTINGS_CONTROLS";"Controls";"Управление";"Steuerung"
-"SETTINGS_FULLSCREEN";"Full screen";"На весь экран";"Vollbild"
-"SETTINGS_GAME";"Game";"Игра";"Spiel"
-"SETTINGS_GENERAL_VOLUME";"General volume:";"Общая громкость:";"Allgemeine Lautstärke:"
-"SETTINGS_DIFFICULTY";"Difficulty:";"Сложность:";"Schwierigkeit:"
-"SETTINGS_DYNCAM";"Dynamic camera";"Динамическая камера";"Dynamische Kamera"
-"SETTINGS_DYNCAM_DEFLECTION";"Deflection of dynamic camera:";"Отклонение динамической камеры:";"Ablenkung der dynamischen Kamera:"
-"SETTINGS_HIGHLIGHT_LAYERS";"Highlight layers";"Подсвечивать слои";"Ebenen hervorheben"
-"SETTINGS_MOUSE_SENSITIVITY";"Mouse sensitivity:";"Чувствительность мыши:";"Maus-Empfindlichkeit:"
-"SETTINGS_MUSIC_PACKS";"Music packs:";"Музыкальные группы:";"Musik-Pakete:"
-"SETTINGS_MUSIC_VOLUME";"Music volume:";"Громкость музыки:";"Musik-Lautstärke:"
-"SETTINGS_ONLY_HORIZONTAL";"Only horizontal";"Только по горизонтали";"Nur waagerecht"
-"SETTINGS_RES";"Resolution:";"Разрешение:";"Auflösung:"
-"SETTINGS_RESTRICT_CAM_ROTATION";"Restrict camera rotation";"Ограничивать вращение камеры";"Kameradrehung einschränken"
-"SETTINGS_SOUND_FX_VOLUME";"Sound effects' volume:";"Громкость звуковых эффектов:";"Soundeffekt-Lautstärke:"
-"SETTINGS_SHADOWS";"Shadows";"Тени";"Schatten"
-"SETTINGS_TEXTURE_FILTERING";"Texture filtering:";"Фильтрация текстур:";"Texturfilterung:"
-"SETTINGS_THEME";"Theme:";"Тема:";"Thema:"
-"SETTINGS_TILE";"Tile:";"Фишка:";"Spielstein:"
-"SETTINGS_VIDEO";"Video";"Видео";"Video"
-"SETTINGS_VSYNC";"VSync";"Верт. синхронизация";"Vsync"
-"STATISTICS_DIFFICULTY";"Difficulty";"Сложность";"Schwierigkeit"
-"STATISTICS_FAIR_GAMES_ONLY";"Fair games only";"Только честные партии";"Nur faire Spiele"
-"STATISTICS_GAME";"Game";"Игра";"Spiel"
-"STATISTICS_LAYOUT";"Layout";"Раскладка";"Layout"
-"STATISTICS_NAME";"Name";"Имя";"Name"
-"STATISTICS_SHISENSHO_G";"Shisen-Sho g";"Шисен-Сё г";"Shisen-Sho g"
-"TEXTURE_FILTERING_ANISOTROPIC";"Anisotropic";"Анизотропная";"Anisotropisch"
-"TEXTURE_FILTERING_LINEAR";"Linear";"Линейная";"Linear"
-"TEXTURE_FILTERING_BILINEAR";"Bilinear";"Билинейная";"Bilinear"
-"TEXTURE_FILTERING_NONE";"None";"Нет";"Keine"
-"TEXTURE_FILTERING_TRILINEAR";"Trilinear";"Трилинейная";"Trilinear"
-"THEME_CLASSIC";"Classic";"Классика";"Classic"
-"THEME_DISTROS";"Distros";"Дистрибутивы";"Distros"
-"TUTORIAL_LOSS";"There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.";"Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.";"Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten."
-"TUTORIAL_START";"To select a tile, click it with the left mouse button.
+"NO","No","Нет","Nein"
+"OK",,,
+"SAVE_GAME_BEFORE_EXIT","Do you want to save the game before exit?","Сохранить игру перед выходом?","Wollen Sie das Spiel vor dem Beenden speichern?"
+"SETTINGS_ANTIALIASING","Anti-aliasing:","Сглаживание:","Anti-Aliasing:"
+"SETTINGS_AUDIO","Audio","Аудио","Audio"
+"SETTINGS_CONTROLS","Controls","Управление","Steuerung"
+"SETTINGS_FULLSCREEN","Full screen","На весь экран","Vollbild"
+"SETTINGS_GAME","Game","Игра","Spiel"
+"SETTINGS_GENERAL_VOLUME","General volume:","Общая громкость:","Allgemeine Lautstärke:"
+"SETTINGS_DIFFICULTY","Difficulty:","Сложность:","Schwierigkeit:"
+"SETTINGS_DYNCAM","Dynamic camera","Динамическая камера","Dynamische Kamera"
+"SETTINGS_DYNCAM_DEFLECTION","Deflection of dynamic camera:","Отклонение динамической камеры:","Ablenkung der dynamischen Kamera:"
+"SETTINGS_HIGHLIGHT_LAYERS","Highlight layers","Подсвечивать слои","Ebenen hervorheben"
+"SETTINGS_LANGUAGE","Language:","Язык:","Sprache:"
+"SETTINGS_MOUSE_SENSITIVITY","Mouse sensitivity:","Чувствительность мыши:","Maus-Empfindlichkeit:"
+"SETTINGS_MUSIC_PACKS","Music packs:","Музыкальные группы:","Musik-Pakete:"
+"SETTINGS_MUSIC_VOLUME","Music volume:","Громкость музыки:","Musik-Lautstärke:"
+"SETTINGS_ONLY_HORIZONTAL","Only horizontal","Только по горизонтали","Nur waagerecht"
+"SETTINGS_RES","Resolution:","Разрешение:","Auflösung:"
+"SETTINGS_RESTRICT_CAM_ROTATION","Restrict camera rotation","Ограничивать вращение камеры","Kameradrehung einschränken"
+"SETTINGS_SOUND_FX_VOLUME","Sound effects' volume:","Громкость звуковых эффектов:","Soundeffekt-Lautstärke:"
+"SETTINGS_SHADOWS","Shadows","Тени","Schatten"
+"SETTINGS_TEXTURE_FILTERING","Texture filtering:","Фильтрация текстур:","Texturfilterung:"
+"SETTINGS_THEME","Theme:","Тема:","Thema:"
+"SETTINGS_TILE","Tile:","Фишка:","Spielstein:"
+"SETTINGS_VIDEO","Video","Видео","Video"
+"SETTINGS_VSYNC","VSync","Верт. синхронизация","Vsync"
+"STATISTICS_DIFFICULTY","Difficulty","Сложность","Schwierigkeit"
+"STATISTICS_FAIR_GAMES_ONLY","Fair games only","Только честные партии","Nur faire Spiele"
+"STATISTICS_GAME","Game","Игра","Spiel"
+"STATISTICS_LAYOUT","Layout","Раскладка","Layout"
+"STATISTICS_NAME","Name","Имя","Name"
+"STATISTICS_SHISENSHO_G","Shisen-Sho g","Шисен-Сё г","Shisen-Sho g"
+"TEXTURE_FILTERING_ANISOTROPIC","Anisotropic","Анизотропная","Anisotropisch"
+"TEXTURE_FILTERING_LINEAR","Linear","Линейная","Linear"
+"TEXTURE_FILTERING_BILINEAR","Bilinear","Билинейная","Bilinear"
+"TEXTURE_FILTERING_NONE","None","Нет","Keine"
+"TEXTURE_FILTERING_TRILINEAR","Trilinear","Трилинейная","Trilinear"
+"THEME_CLASSIC","Classic","Классика","Classic"
+"THEME_DISTROS","Distros","Дистрибутивы","Distros"
+"TUTORIAL_LOSS","There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten."
+"TUTORIAL_START","To select a tile, click it with the left mouse button.
 Select a pair of tiles to remove them.
  
 To control the camera, hold the right mouse button and move the mouse. Or use arrow/+/- keys with/out shift.
 To reset camera position, press X.
  
-To hide this message, press any key.";"Для выбора фишки кликните на ней левой кнопкой мыши.
-Выбирите пару фишек, чтобы убрать их.
+To hide this message, press any key.","Для выбора фишки кликните на ней левой кнопкой мыши.
+Выберите пару фишек, чтобы убрать их.
  
 Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки/+/- с/без шифта.
 Для возврата камеры в исходное положение нажмите X.
  
-Чтобы убрать это сообщение, нажмите любую кнопку.";"Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
+Чтобы убрать это сообщение, нажмите любую кнопку.","Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
  
 Um die Kamera zu kontrollieren halten Sie die rechte Maustaste gedrückt und bewegen die Maus umher. Alternativ können Sie Pfeil/+/- Tasten mit/ohne Shift-Taste benutzen.
 Um die Kamera zurückzusetzen, drücken Sie X.
  
 Um diese Nachricht zu verstecken, drücken Sie eine beliebige Taste."
-"TUTORIAL_VICTORY";"Congratulations! You won!
-Enter your name and check out statistics to see if you made it to the top.";"Поздравляем! Вы победили!
-Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.";"Glückwunsch! Sie haben gewonnen!
+"TUTORIAL_VICTORY","Congratulations! You won!
+Enter your name and check out statistics to see if you made it to the top.","Поздравляем! Вы победили!
+Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.","Glückwunsch! Sie haben gewonnen!
 Geben Sie Ihren Namen ein und sehen Sie sich die Statistiken an, um herauszufinden, ob Sie es zur Spitze geschafft haben."
-"YES";"Yes";"Да";"Ja"
+"YES","Yes","Да","Ja"
