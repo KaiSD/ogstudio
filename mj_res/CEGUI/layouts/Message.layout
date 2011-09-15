@@ -7,7 +7,6 @@
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Window Type="Vanilla/StaticText" Name="Message/Text" >
             <Property Name="Text" Value="ARE_YOU_SURE" />
-            <Property Name="TextID" Value="ARE_YOU_SURE" />
             <Property Name="HorzFormatting" Value="WordWrapCentred" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         </Window>

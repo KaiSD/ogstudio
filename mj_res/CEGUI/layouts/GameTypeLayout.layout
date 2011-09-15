@@ -13,17 +13,14 @@
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/Mahjong" >
                 <Property Name="Text" Value="GAME_TYPE_AND_LAYOUT_SOLITAIRE" />
-                <Property Name="TextID" Value="GAME_TYPE_AND_LAYOUT_SOLITAIRE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.05,0},{0.325,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenSho" >
                 <Property Name="Text" Value="GAME_TYPE_AND_LAYOUT_SHISENSHO" />
-                <Property Name="TextID" Value="GAME_TYPE_AND_LAYOUT_SHISENSHO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0.05,0},{0.65,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenShoWG" >
                 <Property Name="Text" Value="GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY" />
-                <Property Name="TextID" Value="GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.675,0},{0.05,0},{0.975,0},{0.15,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/OK" >
@@ -32,7 +29,6 @@
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/Cancel" >
                 <Property Name="Text" Value="CANCEL" />
-                <Property Name="TextID" Value="CANCEL" />
                 <Property Name="UnifiedAreaRect" Value="{{0.55,0},{0.85,0},{0.975,0},{0.95,0}}" />
             </Window>
             <Window Type="Vanilla/StaticImage" Name="GameTypeLayout/Look" >

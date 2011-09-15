@@ -10,17 +10,14 @@
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
             <Window Type="Vanilla/Button" Name="Info/TabRules" >
                 <Property Name="Text" Value="INFO_RULES" />
-                <Property Name="TextID" Value="INFO_RULES" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.33,0},{0.08,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Info/TabAbout" >
                 <Property Name="Text" Value="INFO_ABOUT" />
-                <Property Name="TextID" Value="INFO_ABOUT" />
                 <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.01,0},{0.66,0},{0.08,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Info/TabLicense" >
                 <Property Name="Text" Value="INFO_LICENSE" />
-                <Property Name="TextID" Value="INFO_LICENSE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.67,0},{0.01,0},{0.99,0},{0.08,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Info/OK" >
@@ -29,7 +26,6 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/Rules" >
                 <Property Name="Text" Value="INFO_RULES_TXT" />
-                <Property Name="TextID" Value="INFO_RULES_TXT" />
                 <Property Name="Visible" Value="False" />
                 <Property Name="VertScrollbar" Value="True" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
@@ -37,20 +33,17 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/About" >
                 <Property Name="Text" Value="INFO_ABOUT_TXT" />
-                <Property Name="TextID" Value="INFO_ABOUT_TXT" />
                 <Property Name="Visible" Value="False" />
                 <Property Name="VertScrollbar" Value="True" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
                 <Window Type="Vanilla/Button" Name="Info/Link1" >
                     <Property Name="Text" Value="INFO_ABOUT_HOME_URL" />
-                    <Property Name="TextID" Value="INFO_ABOUT_HOME_URL" />
                     <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.7,6},{0.07,961.517}}" />
                 </Window>
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/License" >
                 <Property Name="Text" Value="INFO_LICENSE_TXT" />
-                <Property Name="TextID" Value="INFO_LICENSE_TXT" />
                 <Property Name="Visible" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.09,0},{0.99,0},{0.91,0}}" />
                 <Window Type="Vanilla/Button" Name="Info/Link3" >
