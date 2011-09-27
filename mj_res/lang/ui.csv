@@ -3,22 +3,19 @@
 "ARE_YOU_SURE","Are you sure?","Вы уверены?","Sind Sie sicher?"
 "CANCEL","Cancel","Отмена","Abbrechen"
 "DELETE","Delete","Удалить","Löschen"
-"DIFFICULTY_EASY","Easy","Легко","Leicht"
-"DIFFICULTY_MEDIUM","Medium","Средне","Mittel"
-"DIFFICULTY_CLASSIC","Classic","Классика","Classic"
 "FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:"
 "GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt."
 "GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE","The layout is no longer available. The save file cannot be used.","Раскладка не найдена. Файл сохранения не может быть использован.","Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
 "GAME_CHANGE_INTERRUPTS","This change will interrupt current game","Это изменение прервёт текущую игру","Diese Änderung wird das laufende Spiel unterbrechen"
+"GAME_DIFFICULTY_EASY","Easy","Легко","Leicht"
+"GAME_DIFFICULTY_MEDIUM","Medium","Средне","Mittel"
+"GAME_DIFFICULTY_CLASSIC","Classic","Классика","Classic"
 "GAME_ELAPSED_TIME","Elapsed time","Прошедшее время","Vergangene Zeit"
 "GAME_GAME_TYPE_AND_LAYOUT","Game type and layout","Тип игры и раскладка","Spieltyp und Layout"
 "GAME_HINT","Hint","Подсказка","Hinweise"
 "GAME_INFO","Info","Информация","Info"
 "GAME_HAS_BEEN_SAVED_AS","The game has been saved as: '%s'","Игра была сохранена как: '%s'","Das Spiel wurde gesichert als: '%s'"
 "GAME_LOAD","Load","Загрузить","Laden"
-"GAME_TYPE_AND_LAYOUT_SOLITAIRE","Solitaire","Пасьянс","Solitär"
-"GAME_TYPE_AND_LAYOUT_SHISENSHO","Shisen-Sho","Шисен-Сё","Shisen-Sho"
-"GAME_TYPE_AND_LAYOUT_SHISENSHO_GRAVITY","Shisen-Sho + gravity","Шисен-Сё + гравитация","Shisen-Sho + Gravitation"
 "GAME_TYPE_DIFFICULTY_LAYOUT_HINTS_UNDOS_TIME","Type: %s
 Difficulty: %s
 Layout: %s
@@ -35,6 +32,9 @@ Layout: %s
 Hinweise: %s
 Rücknahmen: %s
 Zeit: %s"
+"GAME_TYPE_SHISENSHO","Shisen-Sho","Шисен-Сё","Shisen-Sho"
+"GAME_TYPE_SHISENSHO_GRAVITY","Shisen-Sho + gravity","Шисен-Сё + гравитация","Shisen-Sho + Gravitation"
+"GAME_TYPE_SOLITAIRE","Solitaire","Пасьянс","Solitär"
 "GAME_REMOVED_TILES_ALTOGETHER","Removed tiles / Altogether","Убранные фишки / Всего","Entfernte Spielsteine / Insgesamt"
 "GAME_RESTART","Restart the game","Перезапустить игру","Spiel neustarten"
 "GAME_SAVE","Save","Сохранить","Sichern"
