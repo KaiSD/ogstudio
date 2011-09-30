@@ -40,6 +40,7 @@
 "INVALID_WND_TYPE","Invalid window type","Неверный тип окна","Falscher Fenstertyp"
 "LOCALIZATION_FAILED","Localization failed","Локализация не удалась","Lokalisierung fehlgeschlagen"
 "NO_LAYOUTS_FOR_GAME_TYPE_ID","No layouts found for the game type ID","Не найдено раскладок для игры с этим ID","Keine Layouts für die Spiel-ID gefunden"
+"NO_SCENES","No scenes found","Сцен не найдено","TRANSLATE ME"
 "NO_SUCH_CMD","No such command","Нет такой команды","Dieser Befehl steht nicht zur Verfügung"
 "NO_SUCH_CFG_KEY","No such config entry key","Нет такой настройки","Dieser Konfigurations-Eintrag steht nicht zur Verfügung"
 "NO_SUCH_ITEM","No such item","Нет такого элемента","Dieses Element steht nicht zur Verfügung"

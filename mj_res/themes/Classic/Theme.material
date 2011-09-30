@@ -914,36 +914,3 @@ material ThemeMaterials/YouLose
     }
 }
 
-material ThemeMaterials/Scene
-{
-    technique
-    {
-        pass
-        {
-            texture_unit
-            {
-                texture wood_light.dds
-            }
-        }
-    }
-}
-
-material ThemeMaterials/SkyBox
-{
-    technique
-    {
-        pass
-        {
-            lighting off
-            depth_write off
-
-            texture_unit
-            {
-                cubic_texture cubescene.dds separateUV
-                tex_address_mode clamp
-            }
-        }
-    }
-}
-
-
