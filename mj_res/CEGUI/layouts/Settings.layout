@@ -55,7 +55,6 @@
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Game" >
             <Property Name="Font" Value="Arial-16" />
-            <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbDifficulty" >
                 <Property Name="Font" Value="Arial-16" />
@@ -72,11 +71,20 @@
                 <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_THEME" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.995,0},{0.567,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.495,0},{0.567,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/ItemListbox" Name="Settings/ListThemes" >
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.995,0},{0.993,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.495,0},{0.993,0}}" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListScenes" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.567,0},{0.995,0},{0.993,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbScene" >
+                <Property Name="Text" Value="SETTINGS_SCENE" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.5,0},{0.995,0},{0.567,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Video" >
@@ -185,6 +193,7 @@
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Controls" >
+            <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollMouseSensitivity" >
                 <Property Name="PageSize" Value="0" />

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Imageset Name="Vanilla" Imagefile="vanilla.tga" NativeHorzRes="1024" NativeVertRes="768" >
+    <Image Name="FrameTop" XPos="18" YPos="1" Width="1" Height="6" />
+    <Image Name="FrameLeft" XPos="1" YPos="18" Width="6" Height="1" />
+    <Image Name="FrameRight" XPos="10" YPos="18" Width="6" Height="1" />
+    <Image Name="MouseArrow" XPos="69" YPos="7" Width="17" Height="25" />
+    <Image Name="FrameBottom" XPos="18" YPos="10" Width="1" Height="6" />
+    <Image Name="ShadowBrush" XPos="4" YPos="45" Width="24" Height="24" />
+    <Image Name="CheckboxMark" XPos="91" YPos="3" Width="20" Height="20" />
+    <Image Name="FrameTopLeft" XPos="1" YPos="1" Width="6" Height="6" />
+    <Image Name="GenericBrush" XPos="46" YPos="46" Width="3" Height="3" />
+    <Image Name="MultiListTop" XPos="18" YPos="1" Width="1" Height="6" />
+    <Image Name="CheckboxHover" XPos="90" YPos="28" Width="20" Height="20" />
+    <Image Name="FrameTopRight" XPos="10" YPos="1" Width="6" Height="6" />
+    <Image Name="MultiListLeft" XPos="1" YPos="18" Width="6" Height="1" />
+    <Image Name="ScrollUpArrow" XPos="1" YPos="22" Width="20" Height="20" />
+    <Image Name="TooltipMiddle" XPos="12" YPos="81" Width="6" Height="6" />
+    <Image Name="CheckboxNormal" XPos="43" YPos="22" Width="20" Height="20" />
+    <Image Name="MultiListRight" XPos="10" YPos="18" Width="6" Height="1" />
+    <Image Name="ScrollbarThumb" XPos="43" YPos="22" Width="20" Height="20" />
+    <Image Name="TooltipTopEdge" XPos="12" YPos="70" Width="6" Height="4" />
+    <Image Name="TooltipTopLeft" XPos="1" YPos="70" Width="4" Height="4" />
+    <Image Name="FrameBottomLeft" XPos="1" YPos="10" Width="6" Height="6" />
+    <Image Name="HeaderBarSortUp" XPos="89" YPos="51" Width="10" Height="10" />
+    <Image Name="MouseEsWeCursor" XPos="33" YPos="52" Width="18" Height="8" />
+    <Image Name="MouseMoveCursor" XPos="53" YPos="47" Width="18" Height="18" />
+    <Image Name="MultiListBottom" XPos="18" YPos="10" Width="1" Height="6" />
+    <Image Name="ScrollDownArrow" XPos="22" YPos="22" Width="20" Height="20" />
+    <Image Name="ScrollLeftArrow" XPos="21" YPos="1" Width="20" Height="20" />
+    <Image Name="TooltipLeftEdge" XPos="1" YPos="81" Width="4" Height="6" />
+    <Image Name="TooltipTopRight" XPos="25" YPos="70" Width="5" Height="4" />
+    <Image Name="FrameBottomRight" XPos="10" YPos="10" Width="6" Height="6" />
+    <Image Name="MultiListTopLeft" XPos="1" YPos="1" Width="6" Height="6" />
+    <Image Name="ScrollRightArrow" XPos="42" YPos="1" Width="20" Height="20" />
+    <Image Name="TooltipRightEdge" XPos="25" YPos="81" Width="5" Height="6" />
+    <Image Name="HeaderBarSortDown" XPos="100" YPos="51" Width="10" Height="10" />
+    <Image Name="MultiListBackdrop" XPos="46" YPos="46" Width="3" Height="3" />
+    <Image Name="MultiListTopRight" XPos="10" YPos="1" Width="6" Height="6" />
+    <Image Name="TooltipBottomEdge" XPos="12" YPos="94" Width="6" Height="5" />
+    <Image Name="TooltipBottomLeft" XPos="1" YPos="94" Width="4" Height="5" />
+    <Image Name="TooltipBottomRight" XPos="25" YPos="94" Width="5" Height="5" />
+    <Image Name="HorzScrollContainer" XPos="65" YPos="1" Width="1" Height="20" />
+    <Image Name="MultiListBottomLeft" XPos="1" YPos="10" Width="6" Height="6" />
+    <Image Name="VertScrollContainer" XPos="69" YPos="3" Width="20" Height="1" />
+    <Image Name="MultiListBottomRight" XPos="10" YPos="10" Width="6" Height="6" />
+    <Image Name="HeaderBarBackdropHover" XPos="77" YPos="50" Width="10" Height="12" />
+    <Image Name="HeaderBarSplitterHover" XPos="111" YPos="51" Width="3" Height="16" />
+    <Image Name="HeaderBarBackdropNormal" XPos="77" YPos="50" Width="10" Height="12" />
+    <Image Name="HeaderBarSplitterNormal" XPos="72" YPos="48" Width="3" Height="16" />
+</Imageset>

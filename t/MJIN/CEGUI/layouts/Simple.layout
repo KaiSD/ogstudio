@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="DefaultWindow" >
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="Vanilla/Button" Name="Simple/Button" >
+            <Property Name="Text" Value="MJIN test. Press this button or any key to quit" />
+            <Property Name="Tooltip" Value="Quit the app" />
+            <Property Name="UnifiedAreaRect" Value="{{0.2,0},{0.2,0},{0.8,0},{0.8,0}}" />
+        </Window>
+    </Window>
+</GUILayout>
