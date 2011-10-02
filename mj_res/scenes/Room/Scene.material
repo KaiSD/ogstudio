@@ -10,14 +10,10 @@ material Scene : PerPixelLighting
 			diffuse 0.4704000066280365 0.4704000066280365 0.4704000066280365 1.0
 			specular 0.0 0.0 0.0 1.0 1.25
 			emissive 0.0 0.0 0.0 1.0
-			
-			alpha_rejection greater 128
-			
+
 			texture_unit
 			{
 				texture interior.png
-				tex_coord_set 0
-				colour_op modulate
 			}
 		}
 	}
