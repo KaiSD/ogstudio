@@ -1,27 +1,21 @@
-#import * from Default.material
-import * from DepthShadowMap.material
+import * from Default.material
 
-#material Scene : PerPixelLighting
-#{
-#	technique
-#	{
-#		pass
-#		{
-#			ambient 0.5879999995231628 0.5879999995231628 0.5879999995231628 1.0
-#			diffuse 0.4704000066280365 0.4704000066280365 0.4704000066280365 1.0
-#			specular 0.0 0.0 0.0 1.0 1.25
-#			emissive 0.0 0.0 0.0 1.0
-#
-#			texture_unit
-#			{
-#				texture interior.png
-#			}
-#		}
-#	}
-#}
-
-material Scene: DepthShadowMap/Receiver
+material Scene : PerPixelLighting
 {
-    set_texture_alias MainTexture interior.png
+	technique
+	{
+		pass
+		{
+			ambient 0.5879999995231628 0.5879999995231628 0.5879999995231628 1.0
+			diffuse 0.4704000066280365 0.4704000066280365 0.4704000066280365 1.0
+			specular 0.0 0.0 0.0 1.0 1.25
+			emissive 0.0 0.0 0.0 1.0
+
+			texture_unit
+			{
+				texture interior.png
+			}
+		}
+	}
 }
 
