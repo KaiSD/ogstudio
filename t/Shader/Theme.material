@@ -1,0 +1,28 @@
+
+vertex_program vBrick glsl
+{
+    source brick.vert
+}
+
+fragment_program fBrick glsl
+{
+    source brick.frag
+}
+
+material Cube
+{
+    technique
+    {
+        pass
+        {
+            vertex_program_ref vBrick
+            {
+                param_named lightPosition float3 0 50 50
+            }
+            fragment_program_ref fBrick
+            {
+            }
+        }
+    }
+}
+
