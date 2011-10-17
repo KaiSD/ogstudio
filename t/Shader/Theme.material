@@ -21,6 +21,11 @@ material Cube
             }
             fragment_program_ref fBrick
             {
+                param_named tex int 0
+            }
+            texture_unit
+            {
+                texture background.dds
             }
         }
     }
