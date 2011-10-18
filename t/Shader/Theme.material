@@ -1,12 +1,12 @@
 
-vertex_program vBrick glsl
+vertex_program vStripe glsl
 {
-    source brick.vert
+    source stripe.vert
 }
 
-fragment_program fBrick glsl
+fragment_program fStripe glsl
 {
-    source brick.frag
+    source stripe.frag
 }
 
 material Cube
@@ -15,17 +15,17 @@ material Cube
     {
         pass
         {
-            vertex_program_ref vBrick
+            vertex_program_ref vStripe
             {
                 param_named lightPosition float3 0 50 50
+                param_named lightColor float3 0.0 1.0 1.0
+                param_named eyePosition float3 0.0 0.0 0.0
+                param_named specular float3 1.0 1.0 1.0
+                param_named ambient float3 0.3 0.3 0.3
+                param_named kd float 2.0
             }
-            fragment_program_ref fBrick
+            fragment_program_ref fStripe
             {
-                param_named tex int 0
-            }
-            texture_unit
-            {
-                texture background.dds
             }
         }
     }
