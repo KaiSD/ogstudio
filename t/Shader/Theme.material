@@ -1,12 +1,12 @@
 
-vertex_program vStripe glsl
+vertex_program vBump glsl
 {
-    source stripe.vert
+    source bump.vert
 }
 
-fragment_program fStripe glsl
+fragment_program fBump glsl
 {
-    source stripe.frag
+    source bump.frag
 }
 
 material Cube
@@ -15,16 +15,10 @@ material Cube
     {
         pass
         {
-            vertex_program_ref vStripe
+            vertex_program_ref vBump
             {
-                param_named lightPosition float3 0 50 50
-                param_named lightColor float3 0.0 1.0 1.0
-                param_named eyePosition float3 0.0 0.0 0.0
-                param_named specular float3 1.0 1.0 1.0
-                param_named ambient float3 0.3 0.3 0.3
-                param_named kd float 2.0
             }
-            fragment_program_ref fStripe
+            fragment_program_ref fBump
             {
             }
         }

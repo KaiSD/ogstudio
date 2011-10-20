@@ -1,5 +1,5 @@
 
-uniform vec3 lightPosition;
+const vec3 lightPosition = vec3(0, 50, 50);
 attribute vec3 tangent;
 varying vec3 lightDir;
 varying vec3 eyeDir;

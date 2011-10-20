@@ -20,7 +20,7 @@ void main() {
     }
     vec3 normDelta = vec3(p.x, p.y, 1.0) * f;
     litColor = surfaceColor * max(dot(normDelta, lightDir), 0.0);
-    vec3 reflectDir = reflect(lightDir, normalDelta);
+    vec3 reflectDir = reflect(lightDir, normDelta);
     float spec = max(dot(eyeDir, reflectDir), 0.0);
     spec = pow(spec, 6.0);
     spec *= specularFactor;
