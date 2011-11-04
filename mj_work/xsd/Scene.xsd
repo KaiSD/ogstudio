@@ -1,41 +1,111 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
     <xsd:element name="Scene" type="SceneType" />
 
-    <xsd:complexType name="SceneType">
+    <xsd:complexType name="CameraTrackType">
         <xsd:sequence>
-            <xsd:element name="Node"  type="NodeType"  minOccurs="0" maxOccurs="unbounded" />
-            <xsd:element name="Light" type="LightType" minOccurs="0" maxOccurs="unbounded" />
-            <xsd:choice minOccurs="0">
-                <xsd:element name="SkyBox"  type="SkyType" />
-                <xsd:element name="SkyDome" type="SkyType" />
-            </xsd:choice>
+            <xsd:element name="TrackNode" type="TrackNodeType" minOccurs="2" maxOccurs="unbounded" />
         </xsd:sequence>
+        <xsd:attribute name="Name" type="xsd:string" />
     </xsd:complexType>
 
-    <xsd:complexType name="NodeType">
-        <xsd:sequence>
-            <xsd:element name="Entity"   type="EntityType"  minOccurs="0" />
-            <xsd:element name="Position" type="Vector3Type" minOccurs="0" />
-            <xsd:element name="Rotation" type="Vector4Type" minOccurs="0" />
-            <xsd:element name="Scale"    type="Vector3Type" minOccurs="0" />
-            <xsd:choice minOccurs="0">
-                <xsd:element name="SkyBox"  type="SkyType" />
-                <xsd:element name="SkyDome" type="SkyType" />
-            </xsd:choice>
-        </xsd:sequence>
+    <xsd:complexType name="ColourType">
+        <xsd:attribute name="r" type="ColourValueType" />
+        <xsd:attribute name="g" type="ColourValueType" />
+        <xsd:attribute name="b" type="ColourValueType" />
+        <xsd:attribute name="a" type="ColourValueType" use="optional" default="1.0"/>
     </xsd:complexType>
+
+    <xsd:simpleType name="ColourValueType">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="0.0" />
+            <xsd:maxInclusive value="1.0" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="EntityType">
+        <xsd:attribute name="Name"        type="xsd:string" />
+        <xsd:attribute name="Material"    type="xsd:string" />
+        <xsd:attribute name="Mesh"        type="xsd:string" />
+        <xsd:attribute name="CastShadows" type="xsd:boolean" use="optional" default="false" />
+    </xsd:complexType>
+
+    <xsd:simpleType name="InterpolationTimeType">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="0.0" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="InterpolationType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Linear" />
+            <xsd:enumeration value="Spline" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
     <xsd:complexType name="LightType">
         <xsd:sequence>
             <xsd:element name="Diffuse"   type="ColourType"  minOccurs="0" />
             <xsd:element name="Specular"  type="ColourType"  minOccurs="0" />
-            <xsd:element name="Position"  type="Vector3Type" minOccurs="0" />
             <xsd:element name="Direction" type="Vector3Type" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:attribute name="Name" type="xsd:string" />
+    </xsd:complexType>
+
+    <xsd:complexType name="SceneNodeType">
+        <xsd:sequence>
+            <xsd:element name="Entity"   type="EntityType"  minOccurs="0" />
+            <xsd:element name="Position" type="Vector3Type" minOccurs="0" />
+            <xsd:element name="Scale"    type="Vector3Type" minOccurs="0" />
+            <xsd:choice minOccurs="0">
+                <xsd:element name="Rotation"    type="Vector3Type" />
+                <xsd:element name="Orientation" type="Vector4Type" />
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="Name" type="xsd:string" />
+    </xsd:complexType>
+
+    <xsd:complexType name="SceneType">
+        <xsd:sequence>
+            <xsd:element name="Ambient"     type="ColourType"      minOccurs="0" />
+            <xsd:element name="CameraTrack" type="CameraTrackType" minOccurs="0" />
+            <xsd:element name="Light"       type="LightType"       minOccurs="0" />
+            <xsd:element name="SceneNode"   type="SceneNodeType"   minOccurs="0" maxOccurs="unbounded" />
+            <xsd:choice minOccurs="0">
+                <xsd:element name="SkyBox"  type="SkyType" />
+                <xsd:element name="SkyDome" type="SkyType" />
+            </xsd:choice>
         </xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="SkyType">
         <xsd:attribute name="Material" type="xsd:string" />
+    </xsd:complexType>
+
+    <xsd:complexType name="TrackNodeType">
+        <xsd:sequence>
+            <xsd:element name="Position" type="Vector3Type" minOccurs="0"/>
+            <xsd:choice minOccurs="0">
+                <xsd:element name="Rotation"    type="Vector3Type" />
+                <xsd:element name="Orientation" type="Vector4Type" />
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="Name"          type="xsd:string" use="optional"/>
+        <xsd:attribute name="Time"          type="InterpolationTimeType" use="optional"/>
+        <xsd:attribute name="Interpolation" type="InterpolationType" use="optional" default="Linear"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="Vector3Type">
+        <xsd:attribute name="x" type="xsd:decimal" />
+        <xsd:attribute name="y" type="xsd:decimal" />
+        <xsd:attribute name="z" type="xsd:decimal" />
+    </xsd:complexType>
+
+    <xsd:complexType name="Vector4Type">
+        <xsd:attribute name="x" type="xsd:decimal" />
+        <xsd:attribute name="y" type="xsd:decimal" />
+        <xsd:attribute name="z" type="xsd:decimal" />
+        <xsd:attribute name="w" type="xsd:decimal" />
     </xsd:complexType>
 
 </xsd:schema>
