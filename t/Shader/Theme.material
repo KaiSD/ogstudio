@@ -26,16 +26,18 @@ material Cube
             texture_unit
             {
                 //texture color_map.jpg
-                texture Panels_Diffuse.png
+                //texture Panels_Diffuse.png
                 //texture rockwall.png
+                texture masonry-wall-texture.jpg
             }
             texture_unit
             {
                 //texture normal_map.jpg
-                texture Panels_Normal_Tangent.png
+                //texture Panels_Normal_Tangent.png
                 //texture rockwall_NH.png
+                texture masonry-wall-normal-map.jpg
             }
-        }
+        }   
     }
 }
 
