@@ -57,10 +57,7 @@
             <xsd:element name="Entity"   type="EntityType"  minOccurs="0" />
             <xsd:element name="Position" type="Vector3Type" minOccurs="0" />
             <xsd:element name="Scale"    type="Vector3Type" minOccurs="0" />
-            <xsd:choice minOccurs="0">
-                <xsd:element name="Rotation"    type="Vector3Type" />
-                <xsd:element name="Orientation" type="Vector4Type" />
-            </xsd:choice>
+            <xsd:element name="Rotation" type="Vector3Type" minOccurs="0" />
         </xsd:sequence>
         <xsd:attribute name="Name" type="xsd:string" />
     </xsd:complexType>

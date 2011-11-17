@@ -20,9 +20,9 @@
         </TrackNode>
     </CameraTrack>
     <SceneNode Name="Room">
-        <Entity Name="Room" Material="Room" Mesh="Room.mesh" />
+        <Entity Name="Room" Material="Scene" Mesh="Room.mesh" />
     </SceneNode>
     <SceneNode Name="Table">
-        <Entity Name="Table" Material="Table" Mesh="Table.mesh" />
+        <Entity Name="Table" Material="Scene" Mesh="Table.mesh" />
     </SceneNode>
 </Scene>
