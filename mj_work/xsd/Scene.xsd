@@ -47,7 +47,7 @@
         <xsd:sequence>
             <xsd:element name="Diffuse"   type="ColourType"  minOccurs="0" />
             <xsd:element name="Specular"  type="ColourType"  minOccurs="0" />
-            <xsd:element name="Direction" type="Vector3Type" minOccurs="0" />
+            <xsd:element name="Position"  type="Vector3Type" minOccurs="0" />
         </xsd:sequence>
         <xsd:attribute name="Name" type="xsd:string" />
     </xsd:complexType>

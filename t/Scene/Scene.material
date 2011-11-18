@@ -1,18 +1,35 @@
 
+vertex_program vBump glsl
+{
+    source bump.vert
+}
+
+fragment_program fBump glsl
+{
+    source bump.frag
+}
+
 material Scene
 {
 	technique
 	{
 		pass
 		{
-			#ambient 0.5879999995231628 0.5879999995231628 0.5879999995231628 1.0
-			#diffuse 0.4704000066280365 0.4704000066280365 0.4704000066280365 1.0
-			#specular 0.0 0.0 0.0 1.0 1.25
-			#emissive 0.0 0.0 0.0 1.0
-
+            vertex_program_ref vBump
+            {
+            }
+            fragment_program_ref fBump
+            {
+                param_named colorMap  int 0
+                param_named normalMap int 1
+            }
 			texture_unit
 			{
 				texture interior.png
+			}
+			texture_unit
+			{
+				texture interior_bump.png
 			}
 		}
 	}
