@@ -1,28 +1,36 @@
 <?xml version="1.0" ?>
 <Scene>
     <Ambient r="0.3" g="0.3" b="0.3" />
-    <SkyBox Material="Default/SkyBox" />
+    <SkyBox Material="SkyBox" />
     <Light Name="Light">
         <Diffuse  r="0"   g="0.5" b="0.5" />
         <Specular r="0.3" g="0.3" b="0.3" />
         <Position x="-50" y="50" z="0" />
     </Light>
-    <CameraTrack Name="StartTrack">
-        <TrackNode Name="Start">
+    <Track Name="StartTrack">
+        <Node Name="Start">
             <Position x="-50" y="100" z="0" />
-        </TrackNode>
-        <TrackNode Time="0.3">
+        </Node>
+        <Node Time="0.3">
             <Rotation x="45" y="20" z="0" />
-        </TrackNode>
-        <TrackNode Name="End" Time="1.0">
+        </Node>
+        <Node Name="End" Time="1.0">
             <Position x="0" y="10" z="0" />
             <Rotation x="45" y="20" z="0" />
-        </TrackNode>
-    </CameraTrack>
-    <SceneNode Name="Room">
+        </Node>
+    </Track>
+    <Node Name="Room">
         <Entity Name="Room" Material="Scene" Mesh="Room.mesh" />
-    </SceneNode>
-    <SceneNode Name="Table">
+    </Node>
+    <Node Name="Table">
         <Entity Name="Table" Material="Scene" Mesh="Table.mesh" CastShadows="true" />
-    </SceneNode>
+    </Node>
+    <Node Name="Tile">
+        <Entity Name="Tile" Material="Tile" Mesh="TileHigh.mesh" CastShadows="true" />
+        <Position x="0" y="5" z="0" />
+    </Node>
+    <Node Name="TileSolid">
+        <Entity Name="TileSolid" Material="TileSolid" Mesh="TileHigh.mesh" CastShadows="true" />
+        <Position x="-10" y="5" z="0" />
+    </Node>
 </Scene>

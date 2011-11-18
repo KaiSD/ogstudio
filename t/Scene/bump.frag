@@ -1,5 +1,5 @@
 
-const float specularFactor = 0.5;
+const float specularFactor = 0.2;
 uniform sampler2D colorMap;
 uniform sampler2D normalMap;
 varying vec3 lightDir;
