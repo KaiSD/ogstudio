@@ -5,7 +5,7 @@
     <Light Name="Light">
         <Diffuse  r="0"   g="0.5" b="0.5" />
         <Specular r="0.3" g="0.3" b="0.3" />
-        <Position x="-50" y="50" z="0" />
+        <Position x="-50" y="100" z="-50" />
     </Light>
     <Track Name="StartTrack">
         <Node Name="Start">
