@@ -32,5 +32,7 @@
     <Node Name="TileSolid">
         <Entity Name="TileSolid" Material="TileSolid" Mesh="TileHigh.mesh" CastShadows="true" />
         <Position x="-10" y="5" z="0" />
+        <Rotation x="45" y="0" z="0" />
+        <Scale x="2.5" y="1" z="1" />
     </Node>
 </Scene>
