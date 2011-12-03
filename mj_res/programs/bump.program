@@ -1,0 +1,8 @@
+vertex_program vBump glsl {
+    source bump.vert
+}
+
+fragment_program fBump glsl {
+    source bump.frag
+}
+
