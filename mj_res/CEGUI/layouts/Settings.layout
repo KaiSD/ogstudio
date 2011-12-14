@@ -14,9 +14,9 @@
                 <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.247,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
-            <Window Type="Vanilla/Button" Name="Settings/BtnVideo" >
+            <Window Type="Vanilla/Button" Name="Settings/BtnThemes" >
                 <Property Name="Font" Value="Arial-16" />
-                <Property Name="Text" Value="SETTINGS_VIDEO" />
+                <Property Name="Text" Value="SETTINGS_THEMES" />
                 <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0,0},{0.497,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
@@ -26,8 +26,8 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.5,0},{0,0},{0.747,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
-            <Window Type="Vanilla/Button" Name="Settings/BtnControls" >
-                <Property Name="Text" Value="SETTINGS_CONTROLS" />
+            <Window Type="Vanilla/Button" Name="Settings/BtnVideo" >
+                <Property Name="Text" Value="SETTINGS_VIDEO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.75,0},{0,0},{0.999,0},{1,0}}" />
             </Window>
         </Window>
@@ -55,91 +55,103 @@
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Game" >
             <Property Name="Font" Value="Arial-16" />
+            <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbDifficulty" >
                 <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_DIFFICULTY" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0,0},{0.995,0},{0.072,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0,0},{0.25,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListDifficulties" >
-                <Property Name="Font" Value="Arial-16" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.995,0},{0.5,0}}" />
+            <Window Type="Vanilla/Combobox" Name="Settings/CBDifficulties" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.009,0},{0.495,0},{0.4,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbMouseSensitivity" >
+                <Property Name="Text" Value="SETTINGS_MOUSE_SENSITIVITY" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.139,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollMouseSensitivity" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="0.1" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="1" />
+                <Property Name="ScrollPosition" Value="0" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.139,0},{0.495,0},{0.176,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/RestrictCameraRotation" >
+                <Property Name="Text" Value="SETTINGS_RESTRICT_CAM_ROTATION" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.176,0},{0.495,0},{0.243,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/DynCam" >
+                <Property Name="Text" Value="SETTINGS_DYNCAM" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.243,0},{0.495,0},{0.31,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbDynCamDeflection" >
+                <Property Name="Text" Value="SETTINGS_DYNCAM_DEFLECTION" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.31,0},{0.495,0},{0.377,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollDynCamDeflection" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="0.1" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="3" />
+                <Property Name="ScrollPosition" Value="0" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.377,0},{0.495,0},{0.414,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/DynCamHor" >
+                <Property Name="Text" Value="SETTINGS_ONLY_HORIZONTAL" />
+                <Property Name="UnifiedAreaRect" Value="{{0.066837,0},{0.414,0},{0.495,0},{0.481,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/HighlightLayers" >
+                <Property Name="Text" Value="SETTINGS_HIGHLIGHT_LAYERS" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.481,0},{0.495,0},{0.548,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/Language" >
+                <Property Name="Text" Value="SETTINGS_LANGUAGE" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.548,0},{0.25,0},{0.615,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/Combobox" Name="Settings/CBLanguages" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.548,0},{0.495,0},{0.9,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/GameDesc" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
+            </Window>
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Settings/Themes" >
+            <Property Name="Visible" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbTheme" >
                 <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_THEME" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.495,0},{0.567,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0,0},{0.495,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/ItemListbox" Name="Settings/ListThemes" >
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.495,0},{0.993,0}}" />
-            </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListScenes" >
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.567,0},{0.995,0},{0.993,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.5,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbScene" >
                 <Property Name="Text" Value="SETTINGS_SCENE" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.5,0},{0.995,0},{0.567,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.495,0},{0.567,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-        </Window>
-        <Window Type="Vanilla/StaticText" Name="Settings/Video" >
-            <Property Name="Font" Value="Arial-16" />
-            <Property Name="Visible" Value="False" />
-            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListResolutions" >
-                <Property Name="Font" Value="Arial-16" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.789,0}}" />
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListScenes" >
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.495,0},{0.991,0}}" />
             </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbResolution" >
-                <Property Name="Text" Value="SETTINGS_RES" />
-                <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
-                <Property Name="BackgroundEnabled" Value="False" />
-            </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbAA" >
-                <Property Name="Text" Value="SETTINGS_ANTIALIASING" />
-                <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.647,0},{0.995,0},{0.714,0}}" />
-                <Property Name="BackgroundEnabled" Value="False" />
-            </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListAA" >
-                <Property Name="Font" Value="Arial-16" />
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.714,0},{0.995,0},{0.995,0}}" />
-            </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbTile" >
-                <Property Name="Text" Value="SETTINGS_TILE" />
-                <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.005,0},{0.995,0},{0.072,0}}" />
-                <Property Name="BackgroundEnabled" Value="False" />
-            </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListTiles" >
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.072,0},{0.995,0},{0.3,0}}" />
-            </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/FullScreen" >
-                <Property Name="Text" Value="SETTINGS_FULLSCREEN" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.789,0},{0.495,0},{0.856,0}}" />
-            </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
-                <Property Name="Text" Value="SETTINGS_VSYNC" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.856,0},{0.495,0},{0.923,0}}" />
-            </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
-                <Property Name="Text" Value="SETTINGS_SHADOWS" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.923,0},{0.495,0},{0.995,0}}" />
-            </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbTextureFiltering" >
-                <Property Name="Text" Value="SETTINGS_TEXTURE_FILTERING" />
-                <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.3,0},{0.995,0},{0.367,0}}" />
-                <Property Name="BackgroundEnabled" Value="False" />
-            </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListTextureFiltering" >
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.367,0},{0.995,0},{0.647,0}}" />
+            <Window Type="Vanilla/StaticText" Name="Settings/ThemesDesc" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Audio" >
@@ -162,14 +174,6 @@
                 <Property Name="ScrollPosition" Value="0" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.174,0},{0.495,0},{0.209,0}}" />
             </Window>
-            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolActions" >
-                <Property Name="PageSize" Value="0" />
-                <Property Name="StepSize" Value="0.1" />
-                <Property Name="OverlapSize" Value="0" />
-                <Property Name="DocumentSize" Value="1" />
-                <Property Name="ScrollPosition" Value="0" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.276,0},{0.495,0},{0.311,0}}" />
-            </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VolGeneral" >
                 <Property Name="Text" Value="SETTINGS_GENERAL_VOLUME" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
@@ -182,71 +186,104 @@
                 <Property Name="Text" Value="SETTINGS_SOUND_FX_VOLUME" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.209,0},{0.495,0},{0.276,0}}" />
             </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListMusicPacks" >
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.072,0},{0.995,0},{0.992,0}}" />
-            </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbMusicPacks" >
-                <Property Name="Text" Value="SETTINGS_MUSIC_PACKS" />
-                <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.005,0},{0.995,0},{0.072,0}}" />
-                <Property Name="BackgroundEnabled" Value="False" />
-            </Window>
-        </Window>
-        <Window Type="Vanilla/StaticText" Name="Settings/Controls" >
-            <Property Name="Visible" Value="False" />
-            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
-            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollMouseSensitivity" >
+            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolActions" >
                 <Property Name="PageSize" Value="0" />
                 <Property Name="StepSize" Value="0.1" />
                 <Property Name="OverlapSize" Value="0" />
                 <Property Name="DocumentSize" Value="1" />
                 <Property Name="ScrollPosition" Value="0" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.995,0},{0.107,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.276,0},{0.495,0},{0.311,0}}" />
             </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbMouseSensitivity" >
-                <Property Name="Text" Value="SETTINGS_MOUSE_SENSITIVITY" />
+            <Window Type="Vanilla/StaticText" Name="Settings/LbMusicPacks" >
+                <Property Name="Text" Value="SETTINGS_MUSIC_PACKS" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.995,0},{0.072,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.311,0},{0.495,0},{0.378,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/DynCam" >
-                <Property Name="Text" Value="SETTINGS_DYNCAM" />
-                <Property Name="UnifiedAreaRect" Value="{{0.00795928,0},{0.112649,0},{0.494884,0},{0.174649,0}}" />
+            <Window Type="Vanilla/ItemListbox" Name="Settings/ListMusicPacks" >
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.378,0},{0.495,0},{0.991,0}}" />
             </Window>
-            <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollDynCamDeflection" >
-                <Property Name="PageSize" Value="0" />
-                <Property Name="StepSize" Value="0.1" />
-                <Property Name="OverlapSize" Value="0" />
-                <Property Name="DocumentSize" Value="3" />
-                <Property Name="ScrollPosition" Value="0" />
-                <Property Name="UnifiedAreaRect" Value="{{0.00598643,0},{0.291471,0},{0.993886,0},{0.328559,0}}" />
+            <Window Type="Vanilla/StaticText" Name="Settings/AudioDesc" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/LbDynCamDeflection" >
-                <Property Name="Text" Value="SETTINGS_DYNCAM_DEFLECTION" />
+        </Window>
+        <Window Type="Vanilla/StaticText" Name="Settings/Video" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
+            <Window Type="Vanilla/StaticText" Name="Settings/LbResolution" >
+                <Property Name="Text" Value="SETTINGS_RES" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.229848,0},{0.995,0},{0.296847,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.25,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/DynCamHor" >
-                <Property Name="Text" Value="SETTINGS_ONLY_HORIZONTAL" />
-                <Property Name="UnifiedAreaRect" Value="{{0.0668372,0},{0.166623,0},{0.553759,0},{0.228623,0}}" />
+            <Window Type="Vanilla/Combobox" Name="Settings/CBResolutions" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.009,0},{0.495,0},{0.9,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/HighlightLayers" >
-                <Property Name="Text" Value="SETTINGS_HIGHLIGHT_LAYERS" />
-                <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.333,0},{0.534783,0},{0.395,0}}" />
+            <Window Type="Vanilla/Checkbox" Name="Settings/FullScreen" >
+                <Property Name="Text" Value="SETTINGS_FULLSCREEN" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.139,0}}" />
             </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/RestrictCameraRotation" >
-                <Property Name="Text" Value="SETTINGS_RESTRICT_CAM_ROTATION" />
-                <Property Name="UnifiedAreaRect" Value="{{0.007959,0},{0.4,0},{0.534783,0},{0.462,0}}" />
-            </Window>
-            <Window Type="Vanilla/StaticText" Name="Settings/Language" >
-                <Property Name="Text" Value="SETTINGS_LANGUAGE" />
+            <Window Type="Vanilla/StaticText" Name="Settings/LbGFXDetails" >
+                <Property Name="Text" Value="SETTINGS_GFX_DETAILS" />
                 <Property Name="FrameEnabled" Value="False" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.467,0},{0.995,0},{0.529,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.139,0},{0.25,0},{0.206,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
-            <Window Type="Vanilla/ItemListbox" Name="Settings/ListLanguages" >
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.534,0},{0.995,0},{0.99,0}}" />
+            <Window Type="Vanilla/Combobox" Name="Settings/CBGFXDetails" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.139,0},{0.495,0},{0.9,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
+                <Property Name="Text" Value="SETTINGS_SHADOWS" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.206,0},{0.495,0},{0.273,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/Shaders" >
+                <Property Name="Text" Value="SETTINGS_SHADERS" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.273,0},{0.495,0},{0.340,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
+                <Property Name="Text" Value="SETTINGS_VSYNC" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.340,0},{0.495,0},{0.407,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbAA" >
+                <Property Name="Text" Value="SETTINGS_ANTIALIASING" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.407,0},{0.25,0},{0.474,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/Combobox" Name="Settings/CBAA" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.407,0},{0.495,0},{0.8,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbTile" >
+                <Property Name="Text" Value="SETTINGS_TILE" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.474,0},{0.25,0},{0.541,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/Combobox" Name="Settings/CBTile" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.474,0},{0.495,0},{0.9,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/LbTextureFiltering" >
+                <Property Name="Text" Value="SETTINGS_TEXTURE_FILTERING" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.541,0},{0.25,0},{0.608,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+            </Window>
+            <Window Type="Vanilla/Combobox" Name="Settings/CBTextureFiltering" >
+                <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.541,0},{0.495,0},{0.9,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/VideoDesc" >
+                <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
         </Window>
     </Window>
