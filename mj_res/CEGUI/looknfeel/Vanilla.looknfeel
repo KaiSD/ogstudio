@@ -1724,7 +1724,7 @@
 		<PropertyDefinition name="NormalTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="HoverTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <PropertyDefinition name="PushedTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
-        <PropertyDefinition name="DisabledTextColour" initialValue="FF7F7F7F" redrawOnWrite="true" />
+        <PropertyDefinition name="DisabledTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
         <ImagerySection name="label">
             <TextComponent>
                 <Area>
