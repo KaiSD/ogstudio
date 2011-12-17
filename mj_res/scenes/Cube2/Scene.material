@@ -1,6 +1,6 @@
 import * from Default.material
 
-material Scene : PerPixelLighting
+material Scene
 {
     technique
     {
