@@ -540,6 +540,7 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/HorizontalScrollbarThumb">
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <Property name="HorzFree" value="True" />
         <ImagerySection name="thumb">
             <ImageryComponent>

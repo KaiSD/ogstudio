@@ -60,22 +60,26 @@
             <Window Type="Vanilla/StaticText" Name="Settings/LbDifficulty" >
                 <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_DIFFICULTY" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_DIFFICULTY" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0,0},{0.25,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Combobox" Name="Settings/CBDifficulties" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_DIFFICULTY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.009,0},{0.495,0},{0.4,0}}" />
                 <Property Name="MaxEditTextLength" Value="4294967295" />
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbMouseSensitivity" >
                 <Property Name="Text" Value="SETTINGS_MOUSE_SENSITIVITY" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_MOUSE_SENSITIVITY" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.139,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollMouseSensitivity" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_MOUSE_SENSITIVITY" />
                 <Property Name="PageSize" Value="0" />
                 <Property Name="StepSize" Value="0.1" />
                 <Property Name="OverlapSize" Value="0" />
@@ -85,19 +89,23 @@
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/RestrictCameraRotation" >
                 <Property Name="Text" Value="SETTINGS_RESTRICT_CAM_ROTATION" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_RESTRICT_CAM_ROTATION" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.176,0},{0.495,0},{0.243,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/DynCam" >
                 <Property Name="Text" Value="SETTINGS_DYNCAM" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_DYNCAM" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.243,0},{0.495,0},{0.31,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbDynCamDeflection" >
                 <Property Name="Text" Value="SETTINGS_DYNCAM_DEFLECTION" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_DYNCAM_DEFLECTION" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.31,0},{0.495,0},{0.377,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollDynCamDeflection" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_DYNCAM_DEFLECTION" />
                 <Property Name="PageSize" Value="0" />
                 <Property Name="StepSize" Value="0.1" />
                 <Property Name="OverlapSize" Value="0" />
@@ -107,24 +115,30 @@
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/DynCamHor" >
                 <Property Name="Text" Value="SETTINGS_ONLY_HORIZONTAL" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_ONLY_HORIZONTAL" />
                 <Property Name="UnifiedAreaRect" Value="{{0.066837,0},{0.414,0},{0.495,0},{0.481,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/HighlightLayers" >
                 <Property Name="Text" Value="SETTINGS_HIGHLIGHT_LAYERS" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_HIGHLIGHT_LAYERS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.481,0},{0.495,0},{0.548,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/Language" >
                 <Property Name="Text" Value="SETTINGS_LANGUAGE" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_LANGUAGE" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.548,0},{0.25,0},{0.615,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Combobox" Name="Settings/CBLanguages" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_LANGUAGE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.548,0},{0.495,0},{0.9,0}}" />
                 <Property Name="MaxEditTextLength" Value="4294967295" />
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/GameDesc" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_GAME" />
+                <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
         </Window>
@@ -134,23 +148,29 @@
             <Window Type="Vanilla/StaticText" Name="Settings/LbTheme" >
                 <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_THEME" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_THEME" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0,0},{0.495,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/ItemListbox" Name="Settings/ListThemes" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_THEME" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.5,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbScene" >
                 <Property Name="Text" Value="SETTINGS_SCENE" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_SCENE" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.5,0},{0.495,0},{0.567,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/ItemListbox" Name="Settings/ListScenes" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_SCENE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.567,0},{0.495,0},{0.991,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/ThemesDesc" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_THEMES" />
+                <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
         </Window>
@@ -158,7 +178,13 @@
             <Property Name="Font" Value="Arial-16" />
             <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
+            <Window Type="Vanilla/Checkbox" Name="Settings/VolGeneral" >
+                <Property Name="Text" Value="SETTINGS_GENERAL_VOLUME" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_GENERAL_VOLUME" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
+            </Window>
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolGeneral" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_GENERAL_VOLUME" />
                 <Property Name="PageSize" Value="0" />
                 <Property Name="StepSize" Value="0.1" />
                 <Property Name="OverlapSize" Value="0" />
@@ -166,7 +192,13 @@
                 <Property Name="ScrollPosition" Value="0" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.107,0}}" />
             </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/VolBG" >
+                <Property Name="Text" Value="SETTINGS_MUSIC_VOLUME" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_MUSIC_VOLUME" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.107,0},{0.495,0},{0.174,0}}" />
+            </Window>
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolBG" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_MUSIC_VOLUME" />
                 <Property Name="PageSize" Value="0" />
                 <Property Name="StepSize" Value="0.1" />
                 <Property Name="OverlapSize" Value="0" />
@@ -174,19 +206,13 @@
                 <Property Name="ScrollPosition" Value="0" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.174,0},{0.495,0},{0.209,0}}" />
             </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/VolGeneral" >
-                <Property Name="Text" Value="SETTINGS_GENERAL_VOLUME" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.495,0},{0.072,0}}" />
-            </Window>
-            <Window Type="Vanilla/Checkbox" Name="Settings/VolBG" >
-                <Property Name="Text" Value="SETTINGS_MUSIC_VOLUME" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.107,0},{0.495,0},{0.174,0}}" />
-            </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/VolActions" >
                 <Property Name="Text" Value="SETTINGS_SOUND_FX_VOLUME" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_SOUND_FX_VOLUME" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.209,0},{0.495,0},{0.276,0}}" />
             </Window>
             <Window Type="Vanilla/HorizontalScrollbar" Name="Settings/ScrollVolActions" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_SOUND_FX_VOLUME" />
                 <Property Name="PageSize" Value="0" />
                 <Property Name="StepSize" Value="0.1" />
                 <Property Name="OverlapSize" Value="0" />
@@ -196,14 +222,18 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbMusicPacks" >
                 <Property Name="Text" Value="SETTINGS_MUSIC_PACKS" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_MUSIC_PACKS" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.311,0},{0.495,0},{0.378,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/ItemListbox" Name="Settings/ListMusicPacks" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_MUSIC_PACKS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.378,0},{0.495,0},{0.991,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/AudioDesc" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_AUDIO" />
+                <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
         </Window>
@@ -213,79 +243,96 @@
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbResolution" >
                 <Property Name="Text" Value="SETTINGS_RES" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_RES" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.25,0},{0.072,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Combobox" Name="Settings/CBResolutions" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_RES" />
                 <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.009,0},{0.495,0},{0.995,0}}" />
                 <Property Name="MaxEditTextLength" Value="4294967295" />
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/FullScreen" >
                 <Property Name="Text" Value="SETTINGS_FULLSCREEN" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_FULLSCREEN" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.072,0},{0.495,0},{0.139,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/LbGFXQuality" >
                 <Property Name="Text" Value="SETTINGS_GFX_QUALITY" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_GFX_QUALITY" />
                 <Property Name="FrameEnabled" Value="False" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.139,0},{0.25,0},{0.206,0}}" />
                 <Property Name="BackgroundEnabled" Value="False" />
             </Window>
             <Window Type="Vanilla/Combobox" Name="Settings/CBGFXQuality" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_GFX_QUALITY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0.139,0},{0.495,0},{0.6,0}}" />
                 <Property Name="MaxEditTextLength" Value="4294967295" />
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/BoxGFXQuality" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_GFX_QUALITY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.236,0},{0.495,0},{0.991,0}}" />
                 <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
                     <Property Name="Text" Value="SETTINGS_SHADOWS" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_SHADOWS" />
                     <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.99,0},{0.144,0}}" />
                 </Window>
                 <Window Type="Vanilla/Checkbox" Name="Settings/Shaders" >
                     <Property Name="Text" Value="SETTINGS_SHADERS" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_SHADERS" />
                     <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.144,0},{0.99,0},{0.278,0}}" />
                 </Window>
                 <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
                     <Property Name="Text" Value="SETTINGS_VSYNC" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_VSYNC" />
                     <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.278,0},{0.99,0},{0.412,0}}" />
                 </Window>
                 <Window Type="Vanilla/StaticText" Name="Settings/LbAA" >
                     <Property Name="Text" Value="SETTINGS_ANTIALIASING" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_ANTIALIASING" />
                     <Property Name="FrameEnabled" Value="False" />
                     <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.412,0},{0.49,0},{0.546,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBAA" >
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_ANTIALIASING" />
                     <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.412,0},{0.99,0},{0.991,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
                 <Window Type="Vanilla/StaticText" Name="Settings/LbTile" >
                     <Property Name="Text" Value="SETTINGS_TILE" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_TILE" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.546,0},{0.49,0},{0.680,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.546,0},{0.49,0},{0.68,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBTile" >
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_TILE" />
                     <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.546,0},{0.99,0},{0.991,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
                 <Window Type="Vanilla/StaticText" Name="Settings/LbTextureFiltering" >
                     <Property Name="Text" Value="SETTINGS_TEXTURE_FILTERING" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_TEXTURE_FILTERING" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.680,0},{0.49,0},{0.814,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.68,0},{0.49,0},{0.814,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBTextureFiltering" >
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.680,0},{0.99,0},{0.991,0}}" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_TEXTURE_FILTERING" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.68,0},{0.99,0},{0.991,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/VideoDesc" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_VIDEO" />
+                <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
         </Window>
