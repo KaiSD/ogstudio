@@ -8,31 +8,36 @@
         <Window Type="Vanilla/StaticText" Name="GameTypeLayout/Window" >
             <Property Name="HorzFormatting" Value="HorzCentred" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
-            <Window Type="Vanilla/ItemListbox" Name="GameTypeLayout/List" >
-                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.2,0},{0.625,0},{0.8,0}}" />
-            </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/Mahjong" >
                 <Property Name="Text" Value="GAME_TYPE_SOLITAIRE" />
-                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.05,0},{0.325,0},{0.15,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.02,0},{0.02,0},{0.325,0},{0.12,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenSho" >
                 <Property Name="Text" Value="GAME_TYPE_SHISENSHO" />
-                <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0.05,0},{0.65,0},{0.15,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0.02,0},{0.65,0},{0.12,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/ShisenShoWG" >
                 <Property Name="Text" Value="GAME_TYPE_SHISENSHO_GRAVITY" />
-                <Property Name="UnifiedAreaRect" Value="{{0.675,0},{0.05,0},{0.975,0},{0.15,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.675,0},{0.02,0},{0.98,0},{0.12,0}}" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="GameTypeLayout/List" >
+                <Property Name="UnifiedAreaRect" Value="{{0.02,0},{0.14,0},{0.49,0},{0.86,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticImage" Name="GameTypeLayout/Look" >
+                <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.14,0},{0.98,0},{0.55,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="GameTypeLayout/Desc" >
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.57,0},{0.98,0},{0.86,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/OK" >
                 <Property Name="Text" Value="OK" />
-                <Property Name="UnifiedAreaRect" Value="{{0.025,0},{0.85,0},{0.45,0},{0.95,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.02,0},{0.88,0},{0.45,0},{0.98,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="GameTypeLayout/Cancel" >
                 <Property Name="Text" Value="CANCEL" />
-                <Property Name="UnifiedAreaRect" Value="{{0.55,0},{0.85,0},{0.975,0},{0.95,0}}" />
-            </Window>
-            <Window Type="Vanilla/StaticImage" Name="GameTypeLayout/Look" >
-                <Property Name="UnifiedAreaRect" Value="{{0.65,0},{0.2,0},{0.975,0},{0.55,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.55,0},{0.88,0},{0.98,0},{0.98,0}}" />
             </Window>
         </Window>
     </Window>
