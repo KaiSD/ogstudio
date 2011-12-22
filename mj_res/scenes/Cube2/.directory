@@ -1,3 +1,8 @@
 [Desktop Entry]
 Name=Cube2
 Name[ru]=Куб2
+Description=Second cube that is used for testing
+Description[ru]=Второй куб, используемый для тестов
+Author=Opensource Game Studio team
+Author[ru]=Команда Opensource Game Studio
+AuthorEmail=bugs@opengamestudio.org

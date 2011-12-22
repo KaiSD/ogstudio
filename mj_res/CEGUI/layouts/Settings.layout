@@ -138,6 +138,7 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/GameDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_GAME" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
@@ -170,6 +171,7 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/ThemesDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_THEMES" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
@@ -233,6 +235,7 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/AudioDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_AUDIO" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
             </Window>
@@ -332,8 +335,14 @@
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/VideoDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_VIDEO" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
+                <Window Type="Vanilla/Button" Name="Settings/LinkForumVideoSettings" >
+                    <Property Name="Text" Value="SETTINGS_FORUM" />
+                    <Property Name="Tooltip" Value="SETTINGS_LINK_FORUM_VIDEO_SETTINGS" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.01,0},{0.3,0},{0.07,0}" />
+                </Window>
             </Window>
         </Window>
     </Window>
