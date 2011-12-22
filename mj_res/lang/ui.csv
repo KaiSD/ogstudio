@@ -304,7 +304,7 @@ If video settings has been selected inappropriatly the first time you run the ga
 Если настройки видео были выбраны неверно во время первого запуска игры, пожалуйста, сообщите верные настройки на наш [window='Settings/LinkForumVideoSettings']. Инструкции в первом сообщении.","TRANSLATE Video quality.
  
 If video settings has been selected inappropriatly the first time you run the game, please, report correct settings to our [window='Settings/LinkForumVideoSettings']. Instructions are in the first post."
-"SETTINGS_DESC_VSYNC","Enable this if you experience screen tearing","Включите это, если изображение на экране ""рвётся""","TRANSLATE Enable this if you experience screen tearing"
+"SETTINGS_DESC_VSYNC","Enable this if you experience screen tearing","Включите это, если изображение на экране «рвётся»","TRANSLATE Enable this if you experience screen tearing"
 "SETTINGS_DIFFICULTY","Difficulty:","Сложность:","Schwierigkeit:"
 "SETTINGS_DYNCAM","Dynamic camera","Динамическая камера","Dynamische Kamera"
 "SETTINGS_DYNCAM_DEFLECTION","Deflection of dynamic camera:","Отклонение динамической камеры:","Ablenkung der dynamischen Kamera:"
