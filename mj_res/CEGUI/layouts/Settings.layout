@@ -278,31 +278,16 @@
             <Window Type="Vanilla/StaticText" Name="Settings/BoxGFXQuality" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_GFX_QUALITY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.236,0},{0.495,0},{0.991,0}}" />
-                <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
-                    <Property Name="Text" Value="SETTINGS_SHADOWS" />
-                    <Property Name="Tooltip" Value="SETTINGS_DESC_SHADOWS" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.99,0},{0.144,0}}" />
-                </Window>
-                <Window Type="Vanilla/Checkbox" Name="Settings/Shaders" >
-                    <Property Name="Text" Value="SETTINGS_SHADERS" />
-                    <Property Name="Tooltip" Value="SETTINGS_DESC_SHADERS" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.144,0},{0.99,0},{0.278,0}}" />
-                </Window>
-                <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
-                    <Property Name="Text" Value="SETTINGS_VSYNC" />
-                    <Property Name="Tooltip" Value="SETTINGS_DESC_VSYNC" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.278,0},{0.99,0},{0.412,0}}" />
-                </Window>
                 <Window Type="Vanilla/StaticText" Name="Settings/LbAA" >
                     <Property Name="Text" Value="SETTINGS_ANTIALIASING" />
                     <Property Name="Tooltip" Value="SETTINGS_DESC_ANTIALIASING" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.412,0},{0.49,0},{0.546,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.49,0},{0.144,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBAA" >
                     <Property Name="Tooltip" Value="SETTINGS_DESC_ANTIALIASING" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.412,0},{0.99,0},{0.991,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.01,0},{0.99,0},{0.7,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
@@ -310,12 +295,12 @@
                     <Property Name="Text" Value="SETTINGS_TILE" />
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TILE" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.546,0},{0.49,0},{0.68,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.144,0},{0.49,0},{0.278,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBTile" >
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TILE" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.546,0},{0.99,0},{0.991,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.144,0},{0.99,0},{0.6,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
@@ -323,14 +308,29 @@
                     <Property Name="Text" Value="SETTINGS_TEXTURE_FILTERING" />
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TEXTURE_FILTERING" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.68,0},{0.49,0},{0.814,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.278,0},{0.49,0},{0.412,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBTextureFiltering" >
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TEXTURE_FILTERING" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.68,0},{0.99,0},{0.991,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.278,0},{0.99,0},{0.8,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
+                </Window>
+                <Window Type="Vanilla/Checkbox" Name="Settings/Shadows" >
+                    <Property Name="Text" Value="SETTINGS_SHADOWS" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_SHADOWS" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.412,0},{0.99,0},{0.546,0}}" />
+                </Window>
+                <Window Type="Vanilla/Checkbox" Name="Settings/Shaders" >
+                    <Property Name="Text" Value="SETTINGS_SHADERS" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_SHADERS" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.546,0},{0.99,0},{0.68,0}}" />
+                </Window>
+                <Window Type="Vanilla/Checkbox" Name="Settings/VSync" >
+                    <Property Name="Text" Value="SETTINGS_VSYNC" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_VSYNC" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.68,0},{0.99,0},{0.814,0}}" />
                 </Window>
             </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/VideoDesc" >

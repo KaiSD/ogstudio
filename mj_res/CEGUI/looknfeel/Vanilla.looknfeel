@@ -540,7 +540,6 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/HorizontalScrollbarThumb">
-        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <Property name="HorzFree" value="True" />
         <ImagerySection name="thumb">
             <ImageryComponent>
@@ -574,6 +573,7 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/HorizontalScrollbar">
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <NamedArea name="ThumbTrackArea">
             <Area>
                 <Dim type="LeftEdge"><WidgetDim widget="__auto_decbtn__" dimension="RightEdge" /></Dim>
@@ -1406,6 +1406,7 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/ItemListbox">
+        <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <Property name="ForceVertScrollbar" value="True" />
         <!--<Property name="SelectionBrushImage" value="set:Vanilla image:GenericBrush" />-->
         <NamedArea name="ItemRenderArea">
