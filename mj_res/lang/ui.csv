@@ -3,16 +3,16 @@
 "ARE_YOU_SURE","Are you sure?","Вы уверены?","Sind Sie sicher?"
 "CANCEL","Cancel","Отмена","Abbrechen"
 "DELETE","Delete","Удалить","Löschen"
-"DESC_AUTHOR","Author:","Автор:","TRANSLATE Author:"
-"DESC_AUTHOR_EMAIL","Author email:","Почта автора:","TRANSLATE Author email:"
-"DESC_DESCRIPTION","Description:","Описание:","TRANSLATE Description:"
+"DESC_AUTHOR","Author:","Автор:","Autor:"
+"DESC_AUTHOR_EMAIL","Author email:","Почта автора:","Autor E-Mail:"
+"DESC_DESCRIPTION","Description:","Описание:","Beschreibung:"
 "FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:"
-"GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das zum letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt."
+"GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das beim letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt."
 "GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE","The layout is no longer available. The save file cannot be used.","Раскладка не найдена. Файл сохранения не может быть использован.","Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden."
 "GAME_CHANGE_INTERRUPTS","This change will interrupt current game","Это изменение прервёт текущую игру","Diese Änderung wird das laufende Spiel unterbrechen"
 "GAME_DIFFICULTY_EASY","Easy","Легко","Leicht"
 "GAME_DIFFICULTY_MEDIUM","Medium","Средне","Mittel"
-"GAME_DIFFICULTY_CLASSIC","Classic","Классика","Classic"
+"GAME_DIFFICULTY_CLASSIC","Classic","Классика","Klassisch"
 "GAME_ELAPSED_TIME","Elapsed time","Прошедшее время","Vergangene Zeit"
 "GAME_GAME_TYPE_AND_LAYOUT","Game type and layout","Тип игры и раскладка","Spieltyp und Layout"
 "GAME_HINT","Hint","Подсказка","Hinweise"
@@ -39,8 +39,8 @@ Zeit: %s"
 "GAME_TYPE_SHISENSHO_GRAVITY","Shisen-Sho + gravity","Шисен-Сё + гравитация","Shisen-Sho + Gravitation"
 "GAME_TYPE_SOLITAIRE","Solitaire","Пасьянс","Solitär"
 "GAME_REMOVED_TILES_ALTOGETHER","Removed tiles / Altogether","Убранные фишки / Всего","Entfernte Spielsteine / Insgesamt"
-"GAME_RESTART","Restart the game","Перезапустить игру","Spiel neustarten"
-"GAME_SAVE","Save","Сохранить","Sichern"
+"GAME_RESTART","Restart the game","Перезапустить игру","Spiel neu starten"
+"GAME_SAVE","Save","Сохранить","Speichern"
 "GAME_SETTINGS","Settings","Настройки","Einstellungen"
 "GAME_SHUFFLE","Shuffle","Перемешать","Vermischen"
 "GAME_SOUND_TRACK","Sound track","Музыкальная дорожка","Soundtrack"
@@ -48,115 +48,115 @@ Zeit: %s"
 "GAME_STATS","Statistics","Статистика","Statistik"
 "GAME_TILE_PAIRS_YOU_CAN_REMOVE","Tile pairs you can remove","Пары фишек, которые можно удалить","Spielstein-Paare, die gelöscht werden können"
 "GAME_QUIT","Quit","Выйти из игры","Spiel verlassen"
-"GAME_UNDO","Undo","Отменить","Rücknehmen"
-"GFX_QUALITY_LOW","Low","Низкое","TRANSLATE Low"
-"GFX_QUALITY_MEDIUM","Medium","Среднее","TRANSLATE Medium"
-"GFX_QUALITY_HIGH","High","Высокое","TRANSLATE High"
-"GFX_QUALITY_CUSTOM","Custom","Настроить","TRANSLATE Custom"
-"HW_NO_SHADER_SUPPORT","Your hardware does not support Shader Model 2.0. This may crash the applications.","Ваше железо не поддерживает Shader Model 2.0. Это может уронить программу.","TRANSLATE ZOMG WE ALL DIE"
+"GAME_UNDO","Undo","Отменить","Zurücknehmen"
+"GFX_QUALITY_LOW","Low","Низкое","Niedrig"
+"GFX_QUALITY_MEDIUM","Medium","Среднее","Mittel"
+"GFX_QUALITY_HIGH","High","Высокое","Hoch"
+"GFX_QUALITY_CUSTOM","Custom","Настроить","Benutzerdefiniert"
+"HW_NO_SHADER_SUPPORT","Your hardware does not support Shader Model 2.0. This may crash the applications.","Похоже что ваша система не поддерживает Shader Model 2.0. Это может привести к падению приложения.","Ihre Hardware unterstützt kein Shader Modell 2.0. Dies kann zur Spielabstürzen führen."
 "INFO_ABOUT","About","О программе","Über"
 "INFO_ABOUT_HOME_URL","http://opengamestudio.org/lang/en/ogs-mahjong","http://opengamestudio.org/lang/ru/ogs-mahjong","http://opengamestudio.org/lang/en/ogs-mahjong"
 "INFO_ABOUT_TXT","This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
- 
+
 [image='set:Logos image:OGS'] team:
 Michael Kapelko - code and content;
 Ivan Korystin - gameplay design, content and QA.
- 
+
 Third-party resources:
 Timur Malikin - TileHigh and TileMed tile models.
 Raquel Ravanini - images for ""Classic"" theme.
 Kevin MacLeod - all tracks in ""Eastern"" and ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
 Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" and ""What you think"" in ""Modern"" music pack.
 Fenster - Track ""Free Software"" in ""Modern"" music pack.
- 
+
 You can find more info on third-party resources, their licenses and copyrights in README files, placed in themes or music packs directories.
- 
+
 Libraries:
 [image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend
- 
+
 [image='set:Logos image:CEGUI']
- 
+
 [image='set:Logos image:OpenAL']
- 
+
 Thanks to:
 - Ogre3D team/community for the engine and help;
 - Lightfeather team/community for help while this game has been using Lightfeather engine;
 - OpenAL-Soft/ALURE developer KittyCat for help.
 Special thanks to CrazyEddie for good GUI system and great support.
- 
+
 Translators:
 Ekaterina Kamshilina - original German translation.
 Jürgen Rauscher - corrected the original German translation.
 Dirk Pervölz - corrected the original German translation.
- 
+
 Web page:
 [window='Info/Link1']","Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
- 
+
 Команда [image='set:Logos image:OGS']:
 Михаил Капелько - код и наполнение;
 Иван Корыстин - игровой дизайн, наполнение и контроль качества.
- 
+
 Сторонние ресурсы:
 Тимур Маликин — модели фишек: TileHigh и TileMed.
 Raquel Ravanini - изображения для темы оформления ""Classic"".
 Kevin MacLeod - все музыкальные треки в разделах ""Eastern"" и ""Piano"". Треки ""Funkorama"", ""Neo Western"" и ""Protofunk"" в разделе ""Modern"".
 Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" и ""What you think"" в разделе ""Modern"".
 Fenster — Музыкальный трек ""Free Software"" в разделе ""Modern"".
- 
+
 Более подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.
- 
+
 Библиотеки:
 [image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']
- 
+
 [image='set:Logos image:CEGUI']
- 
+
 [image='set:Logos image:OpenAL']
- 
+
 Благодарим:
 - команду/сообщество Ogre3D за движок и помощь;
 - команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;
 - разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.
 Особая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.
- 
+
 Переводчики:
 Екатерина Камшилина - Немецкий перевод.
 Jürgen Rauscher - исправление Немецкого перевода.
 Dirk Pervölz - исправление Немецкого перевода.
- 
+
 Веб-страница:
 [window='Info/Link1']","Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
- 
+
 [image='set:Logos image:OGS'] team:
 Michael Kapelko — Programmcode und Inhalte;
 Ivan Korystin - Gameplay Design, Inhalte und QS.
- 
+
 Andere Ressourcen:
 Timur Malikin - Spielsteinmodelle TileHigh und TileMed.
 Raquel Ravanini - Bilder für ""Classic"" theme.
 Kevin MacLeod - alle Musikstücke in den ""Eastern"" und ""Piano"" Musik-Paketen. Musikstücke ""Funkorama"", ""Neo Western"" und ""Protofunk"" im ""Modern"" Musikpaket.
 Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" und ""What you think"" im ""Modern"" Musikpaket.
 Fenster - Musikstück ""Free Software"" im""Modern"" Musikpaket.
- 
+
 Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpakete als Readme-Datei zu finden.
- 
+
 Bibliotheken:
 [image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
- 
+
 [image='set:Logos image:CEGUI']
- 
+
 [image='set:Logos image:OpenAL']
- 
+
 Vielen Dank an:
 - das Ogre3D Team & Community für die Engine und Ihre Hilfe;
 - das Lightfeather Team & Community für die Hilfe mit der Lightfeather Engine;
 - den OpenAL-Soft/ALURE Entwickler KittyCat für seine Hilfe.
 Besonderer Dank geht an CrazyEddie für sein schönes GUI System und seine große Unterstützung.
- 
+
 Übersetzer:
 Ekaterina Kamshilina — ursprüngliche Deutsche Übersetzung.
 Jürgen Rauscher — Korrektur der ursprünglichen Übersetzung.
 Dirk Pervölz - Korrektur der ursprünglichen Übersetzung.
- 
+
 Web-Seite:
 [window='Info/Link1']"
 "INFO_LICENSE","License","Лицензия","Lizenz"
@@ -169,24 +169,24 @@ the Free Software Foundation, either version 3 of the License, or
 
 OGS Mahjong is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with OGS Mahjong.  If not, see
+along with OGS Mahjong. If not, see
 [window='Info/Link3']",,
 "INFO_RULES","Rules","Правила","Regeln"
 "INFO_RULES_TXT","Solitaire.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
 [image='set:Rules image:Mahjong']
- 
+
 Shisen-Sho.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space.
 [image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
- 
+
 Shisen-Sho with gravity.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space. After each turn, tiles, that are free at the bottom, will be pushed down to the other tiles or to the bottom row.
- 
+
 Classic mahjong tiles:
 1. Bamboos - tiles with value 1 to 9. The Bamboo tiles with the same color and value are identical.
 2. Symbols - tiles with value 1 to 9. The Symbols tiles with the same color and value are identical.
@@ -195,45 +195,45 @@ Classic mahjong tiles:
 5. Winds - 4 pieces with the symbols of different sides of the world. The Winds tiles with the same symbol are identical.
 6. Seasons - 4 pieces depicting the seasons. All Seasons tiles are identical.
 7. Flowers - 4 pieces with images of flowers. All Flowers tiles are identical.
- 
+
 Tiles in various themes may look different.","Пасьянс.
 Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
 Фишка может быть убрана только если она свободна, то есть если слева от нее, справа от нее или на ней нет других фишек.
 [image='set:Rules image:Mahjong']
- 
+
 Шисен-се.
 Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
 Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами,проходящей по свободному игровому пространству.
 [image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
- 
+
 Шисен-се с гравитацией.
 Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
 Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами, проходящей по свободному игровому пространству.
 После каждого хода фишки, свободные с нижней стороны, сдвигаются вниз так, чтобы соприкасаться с другими фишками либо находиться в нижнем ряду.
- 
+
 Масти фишек классического маджонга:
 1. Бамбуки - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Бамбуки одного и того же достоинства.
 2. Символы - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Символы одного и того же достоинства.
 3. Точки - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Точки одного и того же достоинства.
 4. Драконы - 3 фишки разных цветов. Одинаковыми считаются фишки масти Дракон одного и того же цвета.
-5. Стороны света - 4 фишки с символами  разных сторон света. Одинаковыми считаются фишки масти Стороны света с одним и тем же символом.
+5. Стороны света - 4 фишки с символами разных сторон света. Одинаковыми считаются фишки масти Стороны света с одним и тем же символом.
 6. Времена года - 4 фишки с изображением времен года. Одинаковыми считаются все фишки масти Времена года.
 7. Цветы - 4 фишки с изображениями цветов. Одинаковыми считаются все фишки масти Цветы.
- 
+
 В различных темах масти фишек могут выглядеть по-разному.","Solitaire.
 Ziel des Spieles ist es, das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
 Der Spielstein kann nur dann entfernt werden, wenn er frei ist, d. h.wenn er auf mindestens einer Seite keinen anderen Stein berührt.
 [image='set:Rules image:Mahjong']
- 
+
 Shisen-So.
 Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
-Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.
+Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen / verbunden werden kann.
 [image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
- 
+
 Shisen-So + Gravitation.
-Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen  / verbunden werden kann.
+Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen / verbunden werden kann.
 Nach jedem Zug werden die Spielsteine, die von der Unterseite frei sind, nach unten verschoben, bis zum sie im Kontakt mit anderen Spielsteinen kommen oder den anderen Spielsteine oder sein Platz an der erste Spiellinie nehmen.
- 
+
 Klassische Mahjong Spielsteine sind:
 1. Die Bambus-Spielsteine haben einen Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
 2. Die Symbol-Spielsteine haben einen Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
@@ -242,7 +242,7 @@ Klassische Mahjong Spielsteine sind:
 5. Himmelsrichtungen - 4 Stück mit den Symbolen der verschiedenen Himmelsrichtungen. Die Spielsteine mit dem gleichen Symbol sind identisch.
 6. Jahreszeiten - 4 Stück mit der Darstellung der Jahreszeiten. Alle Jahreszeiten-Spielsteine sind identisch.
 7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen-Spielsteine sind identisch.
- 
+
 Spielsteinen in verschiedenen Themen können anders aussehen."
 "LOAD_LOAD","Load","Загрузить","Laden"
 "LOAD_INFO","Type: %s
@@ -262,7 +262,7 @@ Tipps: %s
 Rücknahmen: %s
 Dauer: %s"
 "NO","No","Нет","Nein"
-"NO_DESC","No description","Нет описания","TRANSLATE No description"
+"NO_DESC","No description","Нет описания","Keine Beschreibung"
 "OK",,,
 "SAVE_GAME_BEFORE_EXIT","Do you want to save the game before exit?","Сохранить игру перед выходом?","Wollen Sie das Spiel vor dem Beenden speichern?"
 "SETTINGS_ANTIALIASING","Anti-aliasing:","Сглаживание:","Anti-Aliasing:"
@@ -271,44 +271,44 @@ Dauer: %s"
 "SETTINGS_FULLSCREEN","Full screen","На весь экран","Vollbild"
 "SETTINGS_GAME","Game","Игра","Spiel"
 "SETTINGS_GENERAL_VOLUME","General volume:","Общая громкость:","Allgemeine Lautstärke:"
-"SETTINGS_GFX_QUALITY","Graphics quality:","Качество графики:","TRANSLATE Graphics quality:"
-"SETTINGS_DESC_ANTIALIASING","The larger is the antialiasing factor, the smoother are object edges","Чем выше сглаживание, тем более гладкие грани объектов","TRANSLATE The larger is the antialiasing factor, the smoother are object edges"
-"SETTINGS_DESC_AUDIO","Game sounding","Звучание игры","TRANSLATE Game sounding"
-"SETTINGS_DESC_DIFFICULTY","Classic difficulty corresponds to a normal Mahjong with full tile set. Lower difficulties have reduced tile sets.","Классическая сложность соответствует обычному Маджонгу с полным набором фишек. Другие сложности имеют уменьшенные наборы фишек.","TRANSLATE Classic difficulty corresponds to a normal Mahjong with full tile set. Lower difficulties have reduced tile sets."
-"SETTINGS_DESC_DYNCAM","If enabled, camera is deflected slightly when you move the mouse around","Если включено, камера слегка отклоняется при движении мыши","TRANSLATE If enabled, camera is deflected slightly when you move the mouse around"
-"SETTINGS_DESC_DYNCAM_DEFLECTION","Camera deflection factor","Степень отклонения камеры","TRANSLATE Camera deflection factor"
-"SETTINGS_DESC_FULLSCREEN","Use the whole screen for the game","Использовать весь экран для игры","TRANSLATE Use the whole screen for the game"
-"SETTINGS_DESC_GAME","Game behaviour","Поведение игры","TRANSLATE Game behaviour"
-"SETTINGS_DESC_GENERAL_VOLUME","General volume controls the volume of both sound effects and background music. If you disable it, the game will make no sound.","Общая громкость контролирует громкость как звуковых эффектов, так и фоновой музыки. Если вы выключите её, игра будет без звука.","TRANSLATE General volume controls the volume of both sound effects and background music. If you disable it, the game will make no sound."
-"SETTINGS_DESC_GFX_QUALITY","Select desired quality instead of tweaking each video parameter. If you want to tweak everything manually, select Custom.","Выберите желаемое качество вместо настройки каждого видеопараметра. Если вы хотите настроить всё самостоятельно, выберите Настроить.","TRANSLATE Select desired quality instead of tweaking each video parameter. If you want to tweak everything manually, select Custom."
-"SETTINGS_DESC_HIGHLIGHT_LAYERS","Highlight layers of tiles to easier tell them apart","Подсвечивать слои фишек, чтобы легче различать их","TRANSLATE Highlight layers of tiles to easier tell them apart"
-"SETTINGS_DESC_LANGUAGE","Language of the game","Язык игры","TRANSLATE Language of the game"
-"SETTINGS_DESC_MOUSE_SENSITIVITY","The higher the sensitivity, the faster the mouse moves","Чем выше чувствительность, тем быстрее двигается мышь","TRANSLATE The higher the sensitivity, the faster the mouse moves"
-"SETTINGS_DESC_MUSIC_PACKS","Music packs contain various groups of music tracks. If you disable them all, there will be no background music.","Музыкальные группы содержат разные комбинации музыкальных дорожек. Если вы выключите их все, фоновой музыки не будет.","TRANSLATE Music packs contain various groups of music tracks. If you disable them all, there will be no background music."
-"SETTINGS_DESC_MUSIC_VOLUME","Background music volume","Громкость фоновой музыки","TRANSLATE Background music volume"
-"SETTINGS_DESC_ONLY_HORIZONTAL","Horizontal deflection only","Отклонение лишь по горизонтали","TRANSLATE Horizontal deflection only"
-"SETTINGS_DESC_RES","Game window resolution. Contains several standard resolutions and current one on the last line if it differs from standard ones. Try to resize the window and you'll see it changing.","Разрешение окна игры. Содержит несколько стандартных разрешений и текущее на последней строке, если оно отличается от стандартных. Попробуйте изменить размер окна и увидите, как оно меняется.","TRANSLATE Game window resolution. Contains several standard resolutions and current one on the last line if it differs from standard ones. Try to resize the window and you'll see it changing."
-"SETTINGS_DESC_RESTRICT_CAM_ROTATION","When restricted, camera is only allowed to move in a range that is most suitable for playing. However, if you want to look around, you can remove the restriction and rotate freely.","При ограничении камере дозволено двигаться лишь в пределах, наиболее удобных для игры. Тем не менее, если вы хотите осмотреться вокруг, можете убрать ограничение и вращать камеру свободно.","TRANSLATE When restricted, camera is only allowed to move in a range that is most suitable for playing. However, if you want to look around, you can remove the restriction and rotate freely."
-"SETTINGS_DESC_SCENE","Scene deifines the look of environment for tiles","Сцена определяет вид окружения для фишек","TRANSLATE Scene deifines the look of environment for tiles"
-"SETTINGS_DESC_SHADERS","If enabled, objects will look more natural","Если включено, объекты будут выглядеть более правдоподобно","TRANSLATE If enabled, objects will look more natural"
-"SETTINGS_DESC_SHADOWS","If enabled, objects cast shadows","Если включено, объекты отбрасывают тень","TRANSLATE If enabled, objects cast shadows"
+"SETTINGS_GFX_QUALITY","Graphics quality:","Качество графики:","Grafikqualität:"
+"SETTINGS_DESC_ANTIALIASING","The larger is the antialiasing factor, the smoother are object edges","Чем выше сглаживание, тем более гладкими будут грани объектов.","Je höher der Anti-Aliasing-Faktor, desto glatter werden die Objektkanten dargestellt."
+"SETTINGS_DESC_AUDIO","Game sounding","Звучание игры","Spielgeräusche"
+"SETTINGS_DESC_DIFFICULTY","Classic difficulty corresponds to a normal Mahjong with full tile set. Lower difficulties have reduced tile sets.","Классическая сложность соответствует обычному Маджонгу с полным набором фишек. Другие сложности имеют уменьшенные наборы фишек.","Der klassische Schwierigkeitsgrad ergibt ein normales Mahjong-Spielfeld mit allen Spielsteinarten. Niedrigere Schwierigkeitsgrade ergeben Spielfelder mit weniger Spielsteinarten."
+"SETTINGS_DESC_DYNCAM","If enabled, camera is deflected slightly when you move the mouse around","Если включено, камера слегка отклоняется при движении мыши","Wenn aktiviert, neigt sich die Ansicht bei Bewegungen der Maus"
+"SETTINGS_DESC_DYNCAM_DEFLECTION","Camera deflection factor","Степень отклонения камеры","Neigungsfaktor der Ansicht"
+"SETTINGS_DESC_FULLSCREEN","Use the whole screen for the game","Использовать весь экран для игры","Benutze den ganzen Bildschirm für das Spiel"
+"SETTINGS_DESC_GAME","Game behaviour","Поведение игры","Spielverhalten"
+"SETTINGS_DESC_GFX_QUALITY","Select desired quality instead of tweaking each video parameter. If you want to tweak everything manually, select Custom.","Выберите желаемое качество вместо настройки каждого видеопараметра. Если вы хотите настроить всё самостоятельно, выберите Настроить.","Wählen Sie eine Qualitätseinstellung, wenn Sie nicht jeden einzelnen Grafikparameter einstellen wollen. Wählen Sie Benutzerdefiniert, wenn Sie jede Einstellung selber vornehmen möchten."
+"SETTINGS_DESC_HIGHLIGHT_LAYERS","Highlight layers of tiles to easier tell them apart","Подсвечивать слои фишек, чтобы легче различать их","Ebenen werden hervorgehoben, um einen besseren Überblick zu bekommen"
+"SETTINGS_DESC_GENERAL_VOLUME","General volume controls the volume of both sound effects and background music. If you disable it, the game will make no sound.","Общая громкость контролирует громкость как звуковых эффектов, так и фоновой музыки. Если вы выключите её, игра будет без звука.","Die Allgemeine Lautstärke regelt die Lautstärke sowohl der Soundeffekte als auch der Musik. Wenn Sie es deaktivieren, wird das Spiel keinen Sound ausgeben."
+"SETTINGS_DESC_LANGUAGE","Language of the game","Язык игры","Sprache des Spiels"
+"SETTINGS_DESC_MOUSE_SENSITIVITY","The higher the sensitivity, the faster the mouse moves","Чем выше чувствительность, тем быстрее двигается мышь","Je höher die Sensitivität, desto schneller wird sich die Maus bewegen"
+"SETTINGS_DESC_MUSIC_PACKS","Music packs contain various groups of music tracks. If you disable them all, there will be no background music.","Музыкальные группы содержат разные комбинации музыкальных дорожек. Если вы выключите их все, фоновой музыки не будет.","Musikpakete enthalten verschiedene Gruppen von Musikstücken. Wenn Sie alle deaktivieren, wird keine Hintergrundmusik ausgegeben."
+"SETTINGS_DESC_MUSIC_VOLUME","Background music volume","Громкость фоновой музыки","Lautstärke Hintergrundmusik"
+"SETTINGS_DESC_ONLY_HORIZONTAL","Horizontal deflection only","Отклонение лишь по горизонтали","Nur horizontale Neigung"
+"SETTINGS_DESC_RES","Game window resolution. Contains several standard resolutions and current one on the last line if it differs from standard ones. Try to resize the window and you'll see it changing.","Разрешение окна игры. Содержит несколько стандартных разрешений и текущее на последней строке, если оно отличается от стандартных. Попробуйте изменить размер окна и увидите, как оно меняется.","Größe des Spielfensters. Enthält diverse Standardgrößen und die aktuelle Fenstergröße als letzte Linie (wenn es keine Standardgröße ist). Versuchen Sie, die Fenstergröße zu ändern und Sie werden die Änderung sehen."
+"SETTINGS_DESC_RESTRICT_CAM_ROTATION","When restricted, camera is only allowed to move in a range that is most suitable for playing. However, if you want to look around, you can remove the restriction and rotate freely.","При ограничении камере дозволено двигаться лишь в пределах, наиболее удобных для игры. Тем не менее, если вы хотите осмотреться вокруг, можете убрать ограничение и вращать камеру свободно.","Wenn begrenzt, ist die Spielansicht auf einen Bereich begrenzt, der optimal für das Spielen ist. Wenn Sie sich umschauen wollen, können Sie diese Begrenzung herausnehmen und die Ansicht damit frei auswählen."
+"SETTINGS_DESC_SCENE","Scene deifines the look of environment for tiles","Сцена определяет вид окружения для фишек","Szene definiert das Aussehen der Umgebung  für die Spielsteine"
+"SETTINGS_DESC_SHADERS","If enabled, objects will look more natural","Если включено, объекты будут выглядеть более правдоподобно","Wenn aktiviert, sehen die Objekte natürlicher aus."
+"SETTINGS_DESC_SHADOWS","If enabled, objects cast shadows","Если включено, объекты отбрасывают тень","Wenn aktiviert, werfen die Objekte Schatten."
 "SETTINGS_DESC_SOUND_FX_VOLUME","Sound effects' volume","Громкость звуковых эффектов","Soundeffekt-Lautstärke"
-"SETTINGS_DESC_TEXTURE_FILTERING","Defines smoothness of textures on objects","Определяет гладкость текстур на объектах","TRANSLATE Defines smoothness of textures on objects"
-"SETTINGS_DESC_THEME","Theme defines the look of tiles and victory/loss sounds/screens","Тема определяет вид фишек и звуки/экраны победы/поражения","TRANSLATE Theme defines the look of tiles and victory/loss sounds/screens"
-"SETTINGS_DESC_THEMES","Game look","Вид игры","TRANSLATE Game look"
-"SETTINGS_DESC_TILE","The higher the quality, the better tiles look","Чем выше качество, тем лучше фишки выглядят","TRANSLATE The higher the quality, the better tiles look"
+"SETTINGS_DESC_TEXTURE_FILTERING","Defines smoothness of textures on objects","Определяет гладкость текстур на объектах","Definiert die Gleichmäßigkeit der Texturen auf Objekten"
+"SETTINGS_DESC_THEME","Theme defines the look of tiles and victory/loss sounds/screens","Тема определяет вид фишек и звуки/экраны победы/поражения","Das Theme definiert das Aussehen der Spielsteine und der Sounds & Grafiken bei Sieg/Niederlage."
+"SETTINGS_DESC_THEMES","Game look","Вид игры","Aussehen des Spiels"
+"SETTINGS_DESC_TILE","The higher the quality, the better tiles look","Чем выше качество, тем лучше фишки выглядят","Je höher die Qualität, desto besser sehen die Spielsteine aus"
 "SETTINGS_DESC_VIDEO","Video quality.
- 
+
 If video settings has been selected inappropriatly the first time you run the game, please, report correct settings to our [window='Settings/LinkForumVideoSettings']. Instructions are in the first post.","Качество видео.
- 
-Если настройки видео были выбраны неверно во время первого запуска игры, пожалуйста, сообщите верные настройки на наш [window='Settings/LinkForumVideoSettings']. Инструкции в первом сообщении.","TRANSLATE Video quality.
- 
-If video settings has been selected inappropriatly the first time you run the game, please, report correct settings to our [window='Settings/LinkForumVideoSettings']. Instructions are in the first post."
-"SETTINGS_DESC_VSYNC","Enable this if you experience screen tearing","Включите это, если изображение на экране «рвётся»","TRANSLATE Enable this if you experience screen tearing"
+
+Если настройки видео были выбраны неверно во время первого запуска игры, пожалуйста, сообщите верные настройки на наш [window='Settings/LinkForumVideoSettings']. Инструкции в первом сообщении.","Videoqualität.
+
+Falls die Videoeinstellungen beim ersten Starten des Spiels falsch eingestellt wurden, berichten Sie die korrekten Einstellungen an [window='Settings/LinkForumVideoSettings']. Instruktionen dazu finden Sie im ersten Beitrag."
+"SETTINGS_DESC_VSYNC","Enable this if you experience screen tearing","Включите это, если изображение на экране «рвётся»","Aktivieren Sie diese Einstellung, wenn Sie Tearing feststellen"
 "SETTINGS_DIFFICULTY","Difficulty:","Сложность:","Schwierigkeit:"
 "SETTINGS_DYNCAM","Dynamic camera","Динамическая камера","Dynamische Kamera"
 "SETTINGS_DYNCAM_DEFLECTION","Deflection of dynamic camera:","Отклонение динамической камеры:","Ablenkung der dynamischen Kamera:"
-"SETTINGS_FORUM","forum","форум","TRANSLATE forum"
+"SETTINGS_FORUM","forum","форум","Forum"
 "SETTINGS_HIGHLIGHT_LAYERS","Highlight layers","Подсвечивать слои","Ebenen hervorheben"
 "SETTINGS_LINK_FORUM_VIDEO_SETTINGS","http://opengamestudio.org/lang/en/forum/ogs-mahjong-project-forum/video-settings-autodetection",,
 "SETTINGS_LANGUAGE","Language:","Язык:","Sprache:"
@@ -318,14 +318,14 @@ If video settings has been selected inappropriatly the first time you run the ga
 "SETTINGS_ONLY_HORIZONTAL","Only horizontal","Только по горизонтали","Nur waagerecht"
 "SETTINGS_RES","Resolution:","Разрешение:","Auflösung:"
 "SETTINGS_RESTRICT_CAM_ROTATION","Restrict camera rotation","Ограничивать вращение камеры","Kameradrehung einschränken"
-"SETTINGS_SCENE","Scene:","Сцена:","TRANSLATE Scene"
+"SETTINGS_SCENE","Scene:","Сцена:","Szene"
 "SETTINGS_SOUND_FX_VOLUME","Sound effects' volume:","Громкость звуковых эффектов:","Soundeffekt-Lautstärke:"
-"SETTINGS_SHADERS","Shaders","Шейдеры","TRANSLATE Shaders"
+"SETTINGS_SHADERS","Shaders","Шейдеры","Shader"
 "SETTINGS_SHADOWS","Shadows","Тени","Schatten"
 "SETTINGS_TEXTURE_FILTERING","Texture filtering:","Фильтрация текстур:","Texturfilterung:"
-"SETTINGS_THEMES","Themes","Темы","TRANSLATE Themes"
+"SETTINGS_THEMES","Themes","Темы","Theme"
 "SETTINGS_THEME","Theme:","Тема:","Thema:"
-"SETTINGS_TILE","Tile detalization:","Детализация фишки:","TRANSLATE Tile detalization:"
+"SETTINGS_TILE","Tile detalization:","Детализация фишки:","Details der Spielsteine:"
 "SETTINGS_VIDEO","Video","Видео","Video"
 "SETTINGS_VSYNC","VSync","Верт. синхронизация","Vsync"
 "STATISTICS_DIFFICULTY","Difficulty","Сложность","Schwierigkeit"
@@ -339,32 +339,31 @@ If video settings has been selected inappropriatly the first time you run the ga
 "TEXTURE_FILTERING_BILINEAR","Bilinear","Билинейная","Bilinear"
 "TEXTURE_FILTERING_NONE","None","Нет","Keine"
 "TEXTURE_FILTERING_TRILINEAR","Trilinear","Трилинейная","Trilinear"
-"THEME_CLASSIC","Classic","Классика","Classic"
+"THEME_CLASSIC","Classic","Классика","Klassisch"
 "THEME_DISTROS","Distros","Дистрибутивы","Distros"
-"TILE_LOW","Low","Низкая","TRANSLATE Low"
-"TILE_MEDIUM","Medium","Средняя","TRANSLATE Medium"
-"TILE_HIGH","High","Высокая","TRANSLATE High"
+"TILE_LOW","Low","Низкая","Niedrig"
+"TILE_MEDIUM","Medium","Средняя","Mittel"
+"TILE_HIGH","High","Высокая","Hoch"
 "TUTORIAL_LOSS","There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten."
 "TUTORIAL_START","To select a tile, click it with the left mouse button.
 Select a pair of tiles to remove them.
- 
+
 To control the camera, hold the right mouse button and move the mouse. Or use arrow/+/- keys with/out shift.
 To reset camera position, press X.
- 
+
 To hide this message, press any key.","Для выбора фишки кликните на ней левой кнопкой мыши.
 Выберите пару фишек, чтобы убрать их.
- 
+
 Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки/+/- с/без шифта.
 Для возврата камеры в исходное положение нажмите X.
- 
+
 Чтобы убрать это сообщение, нажмите любую кнопку.","Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
- 
+
 Um die Kamera zu kontrollieren halten Sie die rechte Maustaste gedrückt und bewegen die Maus umher. Alternativ können Sie Pfeil/+/- Tasten mit/ohne Shift-Taste benutzen.
 Um die Kamera zurückzusetzen, drücken Sie X.
- 
+
 Um diese Nachricht zu verstecken, drücken Sie eine beliebige Taste."
 "TUTORIAL_VICTORY","Congratulations! You won!
 Enter your name and check out statistics to see if you made it to the top.","Поздравляем! Вы победили!
-Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.","Glückwunsch! Sie haben gewonnen!
-Geben Sie Ihren Namen ein und sehen Sie sich die Statistiken an, um herauszufinden, ob Sie es zur Spitze geschafft haben."
+Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.","ве"
 "YES","Yes","Да","Ja"
