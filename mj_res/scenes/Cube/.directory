@@ -1,8 +1,11 @@
 [Desktop Entry]
 Name=Cube
 Name[ru]=Куб
+Name[de]=Würfel
 Description=Simple cube that was the only scene for Mahjong versions before 0.9
 Description[ru]=Простой куб. который был единственной сценой для версий Маджонга до 0.9
+Description[de]=Einfacher Würfel, der die einzige Szene in Mahjong-Versionen vor 0.9 war
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
 AuthorEmail=bugs@opengamestudio.org

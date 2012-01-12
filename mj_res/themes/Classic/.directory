@@ -1,8 +1,11 @@
 [Desktop Entry]
 Name=Classic
 Name[ru]=Классическая
+Name[de]=Klassisch
 Description=Classic theme known to all Mahjong players
 Description[ru]=Классическая тема, знакомая всем игрокам Маджонга
+Description[de]=Klassisches Theme, welches allen Mahjong-Spielern bekannt ist
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
 AuthorEmail=bugs@opengamestudio.org

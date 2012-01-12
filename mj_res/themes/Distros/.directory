@@ -1,8 +1,11 @@
 [Desktop Entry]
 Name=Distros
 Name[ru]=Дистрибутивы
+Name[de]=Distributionen
 Description=Various open source distributions, Linux mostly
 Description[ru]=Разные открытые дистрибутивы, в основном Линукс
+Description[de]=Verschiedene Open Source Distributionen, größtenteils Linux
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
 AuthorEmail=bugs@opengamestudio.org

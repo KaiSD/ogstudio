@@ -1,8 +1,11 @@
 [Desktop Entry]
 Name=Room
 Name[ru]=Комната
+Name[de]=Raum
 Description=Chinese room with a table for Mahjong
 Description[ru]=Китайская комната со столом для Маджонга
+Description[de]=Chinesischer Raum mit einem Tisch für Mahjong
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
 AuthorEmail=bugs@opengamestudio.org
