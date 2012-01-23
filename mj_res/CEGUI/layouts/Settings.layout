@@ -282,12 +282,12 @@
                     <Property Name="Text" Value="SETTINGS_ANTIALIASING" />
                     <Property Name="Tooltip" Value="SETTINGS_DESC_ANTIALIASING" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.49,0},{0.144,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.54,0},{0.144,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBAA" >
                     <Property Name="Tooltip" Value="SETTINGS_DESC_ANTIALIASING" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.01,0},{0.99,0},{0.7,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.56,0},{0.01,0},{0.99,0},{0.7,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
@@ -295,12 +295,12 @@
                     <Property Name="Text" Value="SETTINGS_TILE" />
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TILE" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.144,0},{0.49,0},{0.278,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.144,0},{0.54,0},{0.278,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBTile" >
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TILE" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.144,0},{0.99,0},{0.6,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.56,0},{0.144,0},{0.99,0},{0.6,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
@@ -308,12 +308,12 @@
                     <Property Name="Text" Value="SETTINGS_TEXTURE_FILTERING" />
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TEXTURE_FILTERING" />
                     <Property Name="FrameEnabled" Value="False" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.278,0},{0.49,0},{0.412,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.278,0},{0.54,0},{0.412,0}}" />
                     <Property Name="BackgroundEnabled" Value="False" />
                 </Window>
                 <Window Type="Vanilla/Combobox" Name="Settings/CBTextureFiltering" >
                     <Property Name="Tooltip" Value="SETTINGS_DESC_TEXTURE_FILTERING" />
-                    <Property Name="UnifiedAreaRect" Value="{{0.51,0},{0.278,0},{0.99,0},{0.8,0}}" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.56,0},{0.278,0},{0.99,0},{0.8,0}}" />
                     <Property Name="MaxEditTextLength" Value="4294967295" />
                     <Property Name="ForceVertScrollbar" Value="True" />
                 </Window>
