@@ -1,5 +1,5 @@
 "id","en","ru","de","fr"
-"CANNOT_BIND_TCP_SOCKET","Cannot bind TCP socket","Не удаётся привязать сокет TCP","Kann TCP-Socket nicht binden","Impossible de lier un connecteur UDP"
+"CANNOT_BIND_TCP_SOCKET","Cannot bind TCP socket","Не удаётся привязать сокет TCP","Kann TCP-Socket nicht binden","Impossible de lier un socket TCP"
 "CANNOT_CREATE_DIR","Cannot create directory","Не удаётся создать директорию","Verzeichnis kann nicht erstellt werden","Impossible de créer le dossier"
 "CANNOT_CREATE_TCP_SOCKET","Cannot create TCP socket","Не удаётся создать сокет TCP","Kann TCP-Socket nicht erstellen","Impossible de créer un socket TCP"
 "CANNOT_GET_FILELIST","Cannot get list of files","Не удаётся получить список файлов","Kann Dateiliste nicht erstellen","Impossible de récupérer la liste des fichiers"
