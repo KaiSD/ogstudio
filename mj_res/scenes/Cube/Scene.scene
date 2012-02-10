@@ -8,6 +8,7 @@
         <Position x="-50" y="100" z="100" />
     </Light>
     <Node Name="Cube">
-        <Entity Name="Cube" Material="Scene" Mesh="Cube.mesh" />
+		<Scale x="1" y="0.01" z="1" />
+        <Entity Name="Cube" Material="Scene" Mesh="Cube.mesh" h="0"/>
     </Node>
 </Scene>
