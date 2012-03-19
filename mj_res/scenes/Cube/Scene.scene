@@ -9,6 +9,6 @@
     </Light>
     <Node Name="Cube">
 		<Scale x="1" y="0.01" z="1" />
-        <Entity Name="Cube" Material="Scene" Mesh="Cube.mesh" h="0"/>
+        <Entity Name="Cube" Material="Scene" Mesh="Cube.mesh" />
     </Node>
 </Scene>

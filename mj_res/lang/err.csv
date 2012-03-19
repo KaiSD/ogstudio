@@ -30,6 +30,7 @@
 "INVALID_INPUT_POINTS","Invalid input points","Неверные входные точки","Ungültige Eingabe Punkte","Points d'entrée invalides"
 "INVALID_LAYOUT_DIM","Invalid layout dimensions","Неверные размеры раскладки","Ungültige Layout-Dimensionen","Dimensions de disposition invalides"
 "INVALID_LAYOUT_FILE","Invalid layout file","Неверный файл раскладки","Ungültige Layout-Datei","Fichier de disposition invalide"
+"INVALID_RES_DIR","Invalid resource directory","Неверная директория ресурсов",,
 "INVALID_RES_CFG_VALUE","Invalid 'Resolution' config value","Неверное значение 'Resolution' в настройках","Ungültiger 'Resolution' Wert","Valeur de configuration 'Résolution' invalide"
 "INVALID_SAVEFILE_CMD_TYPE","Invalid save file command type","Неверная команда файла сохранения","Ungültiger Datei-speichern Befehlstyp","Type de commande de fichier de sauvegarde invalide"
 "INVALID_SCENE_FILE","Invalid scene file","Неверный файл сцены","Ungültige Szene-Datei","Fichier de scène invalide"
