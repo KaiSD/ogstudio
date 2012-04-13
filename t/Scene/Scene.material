@@ -74,6 +74,20 @@ material TileSolid
 	}
 }
 
+material TileSolidTexture
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture bsd1.png
+			}
+		}
+	}
+}
+
 material SkyBox
 {
     technique

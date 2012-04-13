@@ -35,4 +35,9 @@
         <Rotation x="45" y="0" z="0" />
         <Scale x="2.5" y="1" z="1" />
     </Node>
+    <Node Name="TileSolidTexture">
+        <Entity Name="TileSolidTexture" Material="TileSolidTexture" Mesh="TileHigh.mesh" CastShadows="true" />
+        <Position x="-20" y="5" z="0" />
+        <Rotation x="20" y="20" z="0" />
+    </Node>
 </Scene>
