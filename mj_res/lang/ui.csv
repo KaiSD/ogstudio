@@ -230,6 +230,8 @@ OGS Mahjong est distribué avec l'espoir qu'il sera utile, mais SANS AUCUNE GARA
 Vous pourriez avoir reçu une copie de la GNU General Public License avec OGS Mahjong. Si non, voir
 [window='Info/Link3']"
 "INFO_RULES","Rules","Правила","Regeln","Règles"
+"INFO_RULES_MAHJONG_SOLITAIRE","    Solitaire","    Пасьянс","    Solitär","    Solitaire"
+"INFO_RULES_SHISEN_SHO","    Shisen-Sho","    Шисен-Сё","    Shisen-Sho","    Shisen-Sho"
 "INFO_RULES_TXT","Solitaire.
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
 [image='set:Rules image:Mahjong']
@@ -318,6 +320,15 @@ Tuiles du mahjong classique :
 7. Fleurs - 4 pièces avec des images de fleurs. Toutes les tuiles de fleurs sont identiques.
  
 Les tuiles dans les divers thèmes peuvent être différentes."
+"INFO_TEAM","Team","Команда",,
+"INFO_TEAM_DEVELOPMENT","    Development","    Разработка",,
+"INFO_TEAM_TRANSLATION","    Translation","    Перевод",,
+"INFO_THIRD_PARTIES","Third parties","Третьи стороны",,
+"INFO_THIRD_PARTIES_LIBRARIES","    Libraries","    Библиотеки",,
+"INFO_THIRD_PARTIES_MEDIA","    Media","    Медиа",,
+"INFO_YOUR_HELP","Your help","Ваша помощь",,
+"INFO_YOUR_HELP_DONATION","    Donation","    Пожертвование",,
+"INFO_YOUR_HELP_JOINING","    Join us","    Присоединяйтесь к нам",,
 "LOAD_LOAD","Load","Загрузить","Laden","Charger"
 "LOAD_INFO","Type: %s
 Difficulty: %s

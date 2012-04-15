@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Info" >
+        <Property Name="Alpha" Value="0.8" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/StaticText" Name="Info/BG" >
+            <Property Name="Font" Value="Arial-16" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window Type="Vanilla/Button" Name="Info/OK" >
+                <Property Name="Text" Value="OK" />
+                <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.92,0},{0.66,0},{0.99,0}}" />
+            </Window>
+            <Window Type="Vanilla/ItemListbox" Name="Info/Topics" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_THEME" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.33,0},{0.91,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Info/Rules" >
+                <Property Name="Text" Value="INFO_RULES_TXT" />
+                <Property Name="VertScrollbar" Value="True" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.01,0},{0.99,0},{0.91,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>
