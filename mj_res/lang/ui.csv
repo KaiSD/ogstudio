@@ -62,150 +62,36 @@ Temps : %s"
 "INFO_ABOUT","About","О программе","Über","A propos"
 "INFO_ABOUT_HOME_URL","http://opengamestudio.org/lang/en/ogs-mahjong","http://opengamestudio.org/lang/ru/ogs-mahjong","http://opengamestudio.org/lang/en/ogs-mahjong","http://opengamestudio.org/lang/en/ogs-mahjong"
 "INFO_ABOUT_TXT","This is a classic Mahjong Solitaire game. It is a first step on the long road to an Open source RPG we (OGS team) wish to create.
-
-[image='set:Logos image:OGS'] team:
-Michael Kapelko - code and content;
-Ivan Korystin - gameplay design, content and QA.
-
-Third-party resources:
-Anton Chernov - Room model.
-Timur Malikin - TileHigh and TileMed tile models.
-Raquel Ravanini - images for ""Classic"" theme.
-Kevin MacLeod - all tracks in ""Eastern"" and ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
-Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" and ""What you think"" in ""Modern"" music pack.
-Fenster - Track ""Free Software"" in ""Modern"" music pack.
-
-You can find more info on third-party resources, their licenses and copyrights in README files, placed in themes or music packs directories.
-
-Libraries:
-[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend
-
-[image='set:Logos image:CEGUI']
-
-[image='set:Logos image:OpenAL']
-
-Thanks to:
-- Ogre3D team/community for the engine and help;
-- Lightfeather team/community for help while this game has been using Lightfeather engine;
-- OpenAL-Soft/ALURE developer KittyCat for help.
-Special thanks to CrazyEddie for good GUI system and great support.
-
-Translators:
-Ekaterina Kamshilina - original German translation.
-Jürgen Rauscher - corrected the original German translation.
-Dirk Pervölz - corrected the original German translation.
-Thierry Delaunay - French translation.
-
+ 
 Web page:
 [window='Info/LinkHome']","Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
-
-Команда [image='set:Logos image:OGS']:
-Михаил Капелько - код и наполнение;
-Иван Корыстин - игровой дизайн, наполнение и контроль качества.
-
-Сторонние ресурсы:
-Антон Чернов - модель Комнаты.
-Тимур Маликин - модели фишек: TileHigh и TileMed.
-Raquel Ravanini - изображения для темы оформления ""Classic"".
-Kevin MacLeod - все музыкальные треки в разделах ""Eastern"" и ""Piano"". Треки ""Funkorama"", ""Neo Western"" и ""Protofunk"" в разделе ""Modern"".
-Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" и ""What you think"" в разделе ""Modern"".
-Fenster — Музыкальный трек ""Free Software"" в разделе ""Modern"".
-
-Более подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.
-
-Библиотеки:
-[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']
-
-[image='set:Logos image:CEGUI']
-
-[image='set:Logos image:OpenAL']
-
-Благодарим:
-- команду/сообщество Ogre3D за движок и помощь;
-- команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;
-- разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.
-Особая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.
-
-Переводчики:
-Екатерина Камшилина - Немецкий перевод.
-Jürgen Rauscher - исправление Немецкого перевода.
-Dirk Pervölz - исправление Немецкого перевода.
-Thierry Delaunay - Французский перевод.
-
+ 
 Веб-страница:
 [window='Info/LinkHome']","Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
-
-[image='set:Logos image:OGS'] team:
-Michael Kapelko — Programmcode und Inhalte;
-Ivan Korystin - Gameplay Design, Inhalte und QS.
-
-Andere Ressourcen:
-Anton Chernov - Raum-Modell.
-Timur Malikin - Spielsteinmodelle TileHigh und TileMed.
-Raquel Ravanini - Bilder für ""Classic"" theme.
-Kevin MacLeod - alle Musikstücke in den ""Eastern"" und ""Piano"" Musik-Paketen. Musikstücke ""Funkorama"", ""Neo Western"" und ""Protofunk"" im ""Modern"" Musikpaket.
-Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" und ""What you think"" im ""Modern"" Musikpaket.
-Fenster - Musikstück ""Free Software"" im""Modern"" Musikpaket.
-
-Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpakete als Readme-Datei zu finden.
-
-Bibliotheken:
-[image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
-
-[image='set:Logos image:CEGUI']
-
-[image='set:Logos image:OpenAL']
-
-Vielen Dank an:
-- das Ogre3D Team & Community für die Engine und Ihre Hilfe;
-- das Lightfeather Team & Community für die Hilfe mit der Lightfeather Engine;
-- den OpenAL-Soft/ALURE Entwickler KittyCat für seine Hilfe.
-Besonderer Dank geht an CrazyEddie für sein schönes GUI System und seine große Unterstützung.
-
-Übersetzer:
-Ekaterina Kamshilina — ursprüngliche Deutsche Übersetzung.
-Jürgen Rauscher — Korrektur der ursprünglichen Übersetzung.
-Dirk Pervölz - Korrektur der ursprünglichen Übersetzung.
-Thierry Delaunay - Französische Übersetzung.
-
+ 
 Web-Seite:
 [window='Info/LinkHome']","Ceci est un jeu de Mahjong solitaire classique. C'est la premère étape sur la longue route vers un RPG Open Source que nous (équipe OGS) souhaitons créer.
  
-Equipe [image='set:Logos image:OGS'] :
-Michael Kapelko - code et contenu ;
-Ivan Korystin - conception du gameplay, contenu et QA.
- 
-Ressources tierces :
-Anton Chernov - Modèle de pièce.
-Timur Malikin - modèles de tuiles TileHigh et TileMed.
-Raquel Ravanini - images pour le thème ""Classic"".
-Kevin MacLeod - toutes les pistes dans les packs de musique ""Eastern"" et ""Piano"". Pistes ""Funkorama"", ""Neo Western"" et ""Protofunk"" dans le pack de musique ""Modern"".
-Dano - pistes ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" et ""What you think"" dans le pack de musique ""Modern"".
-Fenster - piste ""Free Software"" dans le pack de musique ""Modern"".
- 
-Vous pouvez trouver plus d'informations sur les ressources tierces, leurs licences et droits de copie dans les fichiers README, placés dans les dossiers des thèmes ou packs de musique.
- 
-Bibliothèques :
-[image='set:Logos image:OGRE'] avec backend [image='set:Logos image:OpenGL']
- 
-[image='set:Logos image:CEGUI']
- 
-[image='set:Logos image:OpenAL']
- 
-Remerciements à  :
+Page Web :
+[window='Info/LinkHome']"
+"INFO_GRATITUDE","Gratitude","Благодарность",,
+"INFO_GRATITUDE_TXT","Thanks to:
+- Ogre3D team/community for the engine and help;
+- Lightfeather team/community for help while this game has been using Lightfeather engine;
+- OpenAL-Soft/ALURE developer KittyCat for help.
+Special thanks to CrazyEddie for good GUI system and great support.","Благодарим:
+- команду/сообщество Ogre3D за движок и помощь;
+- команду/сообщество Lightfeather за помощь, когда эта игра использовала движок Lightfeather;
+- разработчика OpenAL-Soft/ALURE под псевдонимом KittyCat за помощь.
+Особая благодарность CrazyEddie за хорошую систему GUI и отличную поддержку.","Vielen Dank an:
+- das Ogre3D Team & Community für die Engine und Ihre Hilfe;
+- das Lightfeather Team & Community für die Hilfe mit der Lightfeather Engine;
+- den OpenAL-Soft/ALURE Entwickler KittyCat für seine Hilfe.
+Besonderer Dank geht an CrazyEddie für sein schönes GUI System und seine große Unterstützung.","Remerciements à  :
 - Communautéé/équipe Ogre3D pour le moteur et l'aide ;
 - Communauté/équipe Lightfeather pour l'aide durant la période où ce jeu a utilisé le moteur Lightfeather ;
 - KittyCat, développeur OpenAL-Soft/ALURE pour l'aide.
-Remerciements spéciaux à  CrazyEddie pour le bon système de GUI et le grand soutien.
- 
-Traducteurs :
-Ekaterina Kamshilina - traduction originale allemande.
-Jürgen Rauscher - a corrigé la traduction originale allemande.
-Dirk Pervölz - a corrigé la traduction originale allemande.
-Thierry Delaunay - traduction originale française.
- 
-Page Web :
-[window='Info/LinkHome']"
+Remerciements spéciaux à  CrazyEddie pour le bon système de GUI et le grand soutien."
 "INFO_LICENSE","License","Лицензия","Lizenz","Licence"
 "INFO_LICENSE_TXT","Copyright (C) 2010-2011, Opensource Game Studio
 
@@ -320,13 +206,87 @@ Shisen-Sho avec gravité
 Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. Une paire de tuiles peut être supprimée seulement si elles peuvent êre connectées par une ligne avec deux angles droits au plus traversant un espace libre. Après chaque tour, les tuiles qui sont libres en-dessous seront poussées vers le bas vers les autres tuiles ou vers le rang du bas."
 "INFO_TEAM","Team","Команда",,
 "INFO_TEAM_DEVELOPMENT","    Development","    Разработка",,
+"INFO_TEAM_DEVELOPMENT_TXT","[image='set:Logos image:OGS'] team:
+Michael Kapelko - code and content;
+Ivan Korystin - gameplay design, content and QA.","Команда [image='set:Logos image:OGS']:
+Михаил Капелько - код и наполнение;
+Иван Корыстин - игровой дизайн, наполнение и контроль качества.","[image='set:Logos image:OGS'] team:
+Michael Kapelko — Programmcode und Inhalte;
+Ivan Korystin - Gameplay Design, Inhalte und QS.","Equipe [image='set:Logos image:OGS'] :
+Michael Kapelko - code et contenu ;
+Ivan Korystin - conception du gameplay, contenu et QA."
 "INFO_TEAM_TRANSLATION","    Translation","    Перевод",,
+"INFO_TEAM_TRANSLATION_TXT","Ekaterina Kamshilina - original German translation.
+Jürgen Rauscher - corrected the original German translation.
+Dirk Pervölz - corrected the original German translation.
+Thierry Delaunay - French translation.","Екатерина Камшилина - Немецкий перевод.
+Jürgen Rauscher - исправление Немецкого перевода.
+Dirk Pervölz - исправление Немецкого перевода.
+Thierry Delaunay - Французский перевод.","Ekaterina Kamshilina — ursprüngliche Deutsche Übersetzung.
+Jürgen Rauscher — Korrektur der ursprünglichen Übersetzung.
+Dirk Pervölz - Korrektur der ursprünglichen Übersetzung.
+Thierry Delaunay - Französische Übersetzung.","Ekaterina Kamshilina - traduction originale allemande.
+Jürgen Rauscher - a corrigé la traduction originale allemande.
+Dirk Pervölz - a corrigé la traduction originale allemande.
+Thierry Delaunay - traduction originale française."
 "INFO_THIRD_PARTIES","Third parties","Третьи стороны",,
 "INFO_THIRD_PARTIES_LIBRARIES","    Libraries","    Библиотеки",,
-"INFO_THIRD_PARTIES_MEDIA","    Media","    Медиа",,
-"INFO_YOUR_HELP","Your help","Ваша помощь",,
+"INFO_THIRD_PARTIES_LIBRARIES_TXT","[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE'] avec backend [image='set:Logos image:OpenGL']
+ 
+[image='set:Logos image:CEGUI']
+ 
+[image='set:Logos image:OpenAL']"
+"INFO_THIRD_PARTIES_MEDIA","    Media","    Медиа",," "
+"INFO_THIRD_PARTIES_MEDIA_TXT","Third-party resources:
+Anton Chernov - Room model.
+Timur Malikin - TileHigh and TileMed tile models.
+Raquel Ravanini - images for ""Classic"" theme.
+Kevin MacLeod - all tracks in ""Eastern"" and ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
+Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" and ""What you think"" in ""Modern"" music pack.
+Fenster - Track ""Free Software"" in ""Modern"" music pack.
+ 
+You can find more info on third-party resources, their licenses and copyrights in README files, placed in themes or music packs directories.","Сторонние ресурсы:
+Антон Чернов - модель Комнаты.
+Тимур Маликин - модели фишек: TileHigh и TileMed.
+Raquel Ravanini - изображения для темы оформления ""Classic"".
+Kevin MacLeod - все музыкальные треки в разделах ""Eastern"" и ""Piano"". Треки ""Funkorama"", ""Neo Western"" и ""Protofunk"" в разделе ""Modern"".
+Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" и ""What you think"" в разделе ""Modern"".
+Fenster — Музыкальный трек ""Free Software"" в разделе ""Modern"".
+ 
+Более подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.","Andere Ressourcen:
+Anton Chernov - Raum-Modell.
+Timur Malikin - Spielsteinmodelle TileHigh und TileMed.
+Raquel Ravanini - Bilder für ""Classic"" theme.
+Kevin MacLeod - alle Musikstücke in den ""Eastern"" und ""Piano"" Musik-Paketen. Musikstücke ""Funkorama"", ""Neo Western"" und ""Protofunk"" im ""Modern"" Musikpaket.
+Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" und ""What you think"" im ""Modern"" Musikpaket.
+Fenster - Musikstück ""Free Software"" im""Modern"" Musikpaket.
+ 
+Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpakete als Readme-Datei zu finden.","Ressources tierces :
+Anton Chernov - Modèle de pièce.
+Timur Malikin - modèles de tuiles TileHigh et TileMed.
+Raquel Ravanini - images pour le thème ""Classic"".
+Kevin MacLeod - toutes les pistes dans les packs de musique ""Eastern"" et ""Piano"". Pistes ""Funkorama"", ""Neo Western"" et ""Protofunk"" dans le pack de musique ""Modern"".
+Dano - pistes ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" et ""What you think"" dans le pack de musique ""Modern"".
+Fenster - piste ""Free Software"" dans le pack de musique ""Modern"".
+ 
+Vous pouvez trouver plus d'informations sur les ressources tierces, leurs licences et droits de copie dans les fichiers README, placés dans les dossiers des thèmes ou packs de musique."
+"INFO_YOUR_HELP","Your help","Ваша помощь",," "
 "INFO_YOUR_HELP_DONATION","    Donation","    Пожертвование",,
-"INFO_YOUR_HELP_JOINING","    Join us","    Присоединяйтесь к нам",,
+"INFO_YOUR_HELP_DONATION_TXT",,,,
+"INFO_YOUR_HELP_JOIN_US","    Join us","    Присоединяйтесь к нам",,
+"INFO_YOUR_HELP_JOIN_US_TXT",,,,
 "LOAD_LOAD","Load","Загрузить","Laden","Charger"
 "LOAD_INFO","Type: %s
 Difficulty: %s

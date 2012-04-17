@@ -19,6 +19,7 @@
             <Window Type="Vanilla/StaticText" Name="Info/Text" >
                 <Property Name="VertScrollbar" Value="True" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.01,0},{0.99,0},{0.91,0}}" />
                 <Window Type="Vanilla/Button" Name="Info/LinkHome" >
                     <Property Name="Text" Value="INFO_ABOUT_HOME_URL" />
