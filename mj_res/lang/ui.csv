@@ -97,7 +97,7 @@ Dirk Pervölz - corrected the original German translation.
 Thierry Delaunay - French translation.
 
 Web page:
-[window='Info/Link1']","Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
+[window='Info/LinkHome']","Это классическая игра ""Пасьянс Маджонг"". Это первый шаг в длинной дороге к нашей РПГ, которую мы (команда OGS), хотим создать.
 
 Команда [image='set:Logos image:OGS']:
 Михаил Капелько - код и наполнение;
@@ -133,7 +133,7 @@ Dirk Pervölz - исправление Немецкого перевода.
 Thierry Delaunay - Французский перевод.
 
 Веб-страница:
-[window='Info/Link1']","Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
+[window='Info/LinkHome']","Dies ist ein klassisches Mahjong Solitaire Spiel. Es ist der erste Schritt auf den langen Weg zum Open-Source-RPG, das wir (das OGS-Team) kreieren möchten.
 
 [image='set:Logos image:OGS'] team:
 Michael Kapelko — Programmcode und Inhalte;
@@ -169,7 +169,7 @@ Dirk Pervölz - Korrektur der ursprünglichen Übersetzung.
 Thierry Delaunay - Französische Übersetzung.
 
 Web-Seite:
-[window='Info/Link1']","Ceci est un jeu de Mahjong solitaire classique. C'est la premère étape sur la longue route vers un RPG Open Source que nous (équipe OGS) souhaitons créer.
+[window='Info/LinkHome']","Ceci est un jeu de Mahjong solitaire classique. C'est la premère étape sur la longue route vers un RPG Open Source que nous (équipe OGS) souhaitons créer.
  
 Equipe [image='set:Logos image:OGS'] :
 Michael Kapelko - code et contenu ;
@@ -205,7 +205,7 @@ Dirk Pervölz - a corrigé la traduction originale allemande.
 Thierry Delaunay - traduction originale française.
  
 Page Web :
-[window='Info/Link1']"
+[window='Info/LinkHome']"
 "INFO_LICENSE","License","Лицензия","Lizenz","Licence"
 "INFO_LICENSE_TXT","Copyright (C) 2010-2011, Opensource Game Studio
 
@@ -221,28 +221,14 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with OGS Mahjong. If not, see
-[window='Info/Link3']",,,"Copyright (C) 2010-2011, Opensource Game Studio
-
-OGS Mahjong est un logiciel gratuit : vous pouvez le redistribuer et/ou le modifier dans les termes de la GNU General Public License comme publié par la Free Software Foundation, que ce soit la version 3 de la licence, ou (selon votre option) toute version ultérieure.
-
-OGS Mahjong est distribué avec l'espoir qu'il sera utile, mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de COMMERCIALISATION  ou D'ADAPTATION POUR UN BUT PARTICULIER. Voir la GNU General Public License pour plus de détails.
-
-Vous pourriez avoir reçu une copie de la GNU General Public License avec OGS Mahjong. Si non, voir
-[window='Info/Link3']"
+[window='Info/LinkLicense']",,,
 "INFO_RULES","Rules","Правила","Regeln","Règles"
 "INFO_RULES_MAHJONG_SOLITAIRE","    Solitaire","    Пасьянс","    Solitär","    Solitaire"
-"INFO_RULES_SHISEN_SHO","    Shisen-Sho","    Шисен-Сё","    Shisen-Sho","    Shisen-Sho"
-"INFO_RULES_TXT","Solitaire.
+"INFO_RULES_MAHJONG_SOLITAIRE_TXT","Mahjong Solitaire
+ 
 Goal of the game is to clear the playing field by taking away pairs of identical tiles. The tile can be removed only if it is free, that means there are no other tiles to the left, to the right or on top of it.
 [image='set:Rules image:Mahjong']
-
-Shisen-Sho.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space.
-[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
-
-Shisen-Sho with gravity.
-Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space. After each turn, tiles, that are free at the bottom, will be pushed down to the other tiles or to the bottom row.
-
+ 
 Classic mahjong tiles:
 1. Bamboos - tiles with value 1 to 9. The Bamboo tiles with the same color and value are identical.
 2. Symbols - tiles with value 1 to 9. The Symbols tiles with the same color and value are identical.
@@ -251,22 +237,13 @@ Classic mahjong tiles:
 5. Winds - 4 pieces with the symbols of different sides of the world. The Winds tiles with the same symbol are identical.
 6. Seasons - 4 pieces depicting the seasons. All Seasons tiles are identical.
 7. Flowers - 4 pieces with images of flowers. All Flowers tiles are identical.
-
-Tiles in various themes may look different.","Пасьянс.
+ 
+Tiles in various themes may look different.","Пасьянс Маджонг
+ 
 Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
 Фишка может быть убрана только если она свободна, то есть если слева от нее, справа от нее или на ней нет других фишек.
 [image='set:Rules image:Mahjong']
-
-Шисен-се.
-Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
-Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами,проходящей по свободному игровому пространству.
-[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
-
-Шисен-се с гравитацией.
-Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
-Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами, проходящей по свободному игровому пространству.
-После каждого хода фишки, свободные с нижней стороны, сдвигаются вниз так, чтобы соприкасаться с другими фишками либо находиться в нижнем ряду.
-
+ 
 Масти фишек классического маджонга:
 1. Бамбуки - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Бамбуки одного и того же достоинства.
 2. Символы - фишки достоинством от 1 до 9. Одинаковыми считаются фишки масти Символы одного и того же достоинства.
@@ -275,21 +252,13 @@ Tiles in various themes may look different.","Пасьянс.
 5. Стороны света - 4 фишки с символами разных сторон света. Одинаковыми считаются фишки масти Стороны света с одним и тем же символом.
 6. Времена года - 4 фишки с изображением времен года. Одинаковыми считаются все фишки масти Времена года.
 7. Цветы - 4 фишки с изображениями цветов. Одинаковыми считаются все фишки масти Цветы.
-
-В различных темах масти фишек могут выглядеть по-разному.","Solitaire.
+ 
+В различных темах масти фишек могут выглядеть по-разному.","Mahjong Solitaire
+ 
 Ziel des Spieles ist es, das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
 Der Spielstein kann nur dann entfernt werden, wenn er frei ist, d. h.wenn er auf mindestens einer Seite keinen anderen Stein berührt.
 [image='set:Rules image:Mahjong']
-
-Shisen-So.
-Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
-Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen / verbunden werden kann.
-[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
-
-Shisen-So + Gravitation.
-Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen / verbunden werden kann.
-Nach jedem Zug werden die Spielsteine, die von der Unterseite frei sind, nach unten verschoben, bis zum sie im Kontakt mit anderen Spielsteinen kommen oder den anderen Spielsteine oder sein Platz an der erste Spiellinie nehmen.
-
+ 
 Klassische Mahjong Spielsteine sind:
 1. Die Bambus-Spielsteine haben einen Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
 2. Die Symbol-Spielsteine haben einen Wert von 1 bis 9. Die Spielsteine mit gleicher Farbe und gleichem Wert sind identisch.
@@ -298,17 +267,11 @@ Klassische Mahjong Spielsteine sind:
 5. Himmelsrichtungen - 4 Stück mit den Symbolen der verschiedenen Himmelsrichtungen. Die Spielsteine mit dem gleichen Symbol sind identisch.
 6. Jahreszeiten - 4 Stück mit der Darstellung der Jahreszeiten. Alle Jahreszeiten-Spielsteine sind identisch.
 7. Blumen - 4 Stück mit Bildern von Blumen. Alle Blumen-Spielsteine sind identisch.
-
-Spielsteinen in verschiedenen Themen können anders aussehen.","Solitaire.
+ 
+Spielsteinen in verschiedenen Themen können anders aussehen.","Mahjong solitaire
+ 
 Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. La tuile peut êre enlevée seulement si elle est libre, ce qui signifie qu'il n'y a pas d'autre tuile à  gauche, à  droite ou sur le dessus de celle-ci.
 [image='set:Rules image:Mahjong']
- 
-Shisen-Sho.
-Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. Une paire de tuiles peut êre supprimée seulement si elles peuvent être connectées par une ligne avec deux angles droits au plus traversant un espace libre.
-[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
- 
-Shisen-Sho avec gravité.
-Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. Une paire de tuiles peut être supprimée seulement si elles peuvent êre connectées par une ligne avec deux angles droits au plus traversant un espace libre. Après chaque tour, les tuiles qui sont libres en-dessous seront poussées vers le bas vers les autres tuiles ou vers le rang du bas.
  
 Tuiles du mahjong classique :
 1. Bambous - tuiles avec une valeur de 1 à  9. Les tuiles de bambous avec la même couleur et valeur sont identiques.
@@ -320,6 +283,41 @@ Tuiles du mahjong classique :
 7. Fleurs - 4 pièces avec des images de fleurs. Toutes les tuiles de fleurs sont identiques.
  
 Les tuiles dans les divers thèmes peuvent être différentes."
+"INFO_RULES_SHISEN_SHO","    Shisen-Sho","    Шисен-Сё","    Shisen-Sho","    Shisen-Sho"
+"INFO_RULES_SHISEN_SHO_TXT","Shisen-Sho
+ 
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Shisen-Sho with gravity
+ 
+Goal of the game is to clear the playing field by taking away pairs of identical tiles. A pair of tiles can be removed only if they can be connected by the line with no more than two right angles running through a free space. After each turn, tiles, that are free at the bottom, will be pushed down to the other tiles or to the bottom row.","Шисен-се
+ 
+Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
+Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами,проходящей по свободному игровому пространству.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Шисен-се с гравитацией
+ 
+Цель игры - очистить игровое поле, каждый ход убирая с него попарно одинаковые фишки.
+Пара фишек может быть убрана только если их можно соединить линией с не более чем двумя прямыми углами, проходящей по свободному игровому пространству.
+После каждого хода фишки, свободные с нижней стороны, сдвигаются вниз так, чтобы соприкасаться с другими фишками либо находиться в нижнем ряду.","Shisen-So
+ 
+Ziel des Spieles ist das Spielfeld durch Wegnahme von den Paaren identischer Steine frei zu machen.
+Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen / verbunden werden kann.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Shisen-So + Gravitation
+ 
+Ein Paar von Spielsteinen kann nur dann entfernt werden, wenn sie durch die Linie mit nicht mehr als zwei rechten Winkeln angeschlossen / verbunden werden kann.
+Nach jedem Zug werden die Spielsteine, die von der Unterseite frei sind, nach unten verschoben, bis zum sie im Kontakt mit anderen Spielsteinen kommen oder den anderen Spielsteine oder sein Platz an der erste Spiellinie nehmen.","Shisen-Sho
+ 
+Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. Une paire de tuiles peut êre supprimée seulement si elles peuvent être connectées par une ligne avec deux angles droits au plus traversant un espace libre.
+[image='set:Rules image:ShisenSho'] [image='set:Rules image:ShisenSho2']
+ 
+Shisen-Sho avec gravité
+ 
+Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. Une paire de tuiles peut être supprimée seulement si elles peuvent êre connectées par une ligne avec deux angles droits au plus traversant un espace libre. Après chaque tour, les tuiles qui sont libres en-dessous seront poussées vers le bas vers les autres tuiles ou vers le rang du bas."
 "INFO_TEAM","Team","Команда",,
 "INFO_TEAM_DEVELOPMENT","    Development","    Разработка",,
 "INFO_TEAM_TRANSLATION","    Translation","    Перевод",,
