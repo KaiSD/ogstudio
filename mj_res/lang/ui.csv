@@ -231,19 +231,27 @@ Dirk Pervölz - a corrigé la traduction originale allemande.
 Thierry Delaunay - traduction originale française."
 "INFO_THIRD_PARTIES","Third parties","Третьи стороны",,
 "INFO_THIRD_PARTIES_LIBRARIES","    Libraries","    Библиотеки",,
-"INFO_THIRD_PARTIES_LIBRARIES_TXT","[image='set:Logos image:OGRE'] with [image='set:Logos image:OpenGL'] backend
+"INFO_THIRD_PARTIES_LIBRARIES_TXT","[image='set:Logos image:OGRE']
+ 
+[image='set:Logos image:OpenGL']
  
 [image='set:Logos image:CEGUI']
  
-[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE'] с [image='set:Logos image:OpenGL']
+[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE']
+ 
+[image='set:Logos image:OpenGL']
  
 [image='set:Logos image:CEGUI']
  
-[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE'] mit [image='set:Logos image:OpenGL'] backend
+[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE']
+ 
+[image='set:Logos image:OpenGL']
  
 [image='set:Logos image:CEGUI']
  
-[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE'] avec backend [image='set:Logos image:OpenGL']
+[image='set:Logos image:OpenAL']","[image='set:Logos image:OGRE']
+ 
+[image='set:Logos image:OpenGL']
  
 [image='set:Logos image:CEGUI']
  
