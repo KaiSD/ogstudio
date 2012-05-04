@@ -7,16 +7,26 @@
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="Vanilla/StaticText" Name="Statistics/Window" >
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window Type="Vanilla/Checkbox" Name="Statistics/FairGamesOnly" >
+                <Property Name="Text" Value="STATISTICS_FAIR_GAMES_ONLY" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.015,0},{0.305,0},{0.082,0}}" />
+            </Window>
+            <Window Type="Vanilla/Combobox" Name="Statistics/FilterGameTypes" >
+                <Property Name="UnifiedAreaRect" Value="{{0.355,0},{0.015,0},{0.655,0},{0.3,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
+            <Window Type="Vanilla/Combobox" Name="Statistics/FilterDifficulties" >
+                <Property Name="UnifiedAreaRect" Value="{{0.695,0},{0.015,0},{0.995,0},{0.3,0}}" />
+                <Property Name="MaxEditTextLength" Value="4294967295" />
+                <Property Name="ForceVertScrollbar" Value="True" />
+            </Window>
             <Window Type="Vanilla/MultiColumnList" Name="Statistics/MCL" >
-                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0.8,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0.095,0},{1,0},{0.9,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Statistics/OK" >
                 <Property Name="Text" Value="OK" />
-                <Property Name="UnifiedAreaRect" Value="{{0.57,0},{0.85,0},{0.97,0},{0.95,0}}" />
-            </Window>
-            <Window Type="Vanilla/Checkbox" Name="Statistics/FairGamesOnly" >
-                <Property Name="Text" Value="STATISTICS_FAIR_GAMES_ONLY" />
-                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.81,0},{0.5,0},{0.872,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.915,0},{0.66,0},{0.985,0}}" />
             </Window>
         </Window>
     </Window>
