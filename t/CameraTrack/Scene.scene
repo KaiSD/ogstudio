@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<Scene>
+    <Ambient r="0.3" g="0.3" b="0.3" />
+    <SkyBox Material="SkyBox" />
+    <Light Name="Light">
+        <Diffuse  r="0"   g="0.5" b="0.5" />
+        <Specular r="0.3" g="0.3" b="0.3" />
+        <Position x="-50" y="100" z="-50" />
+    </Light>
+    <CameraTrack Name="Start" Interpolation = "Spline">
+        <Node>
+            <Position x="0" y="0" z="-100" />
+        </Node>
+        <Node Time="2000">
+            <Position x="-50" y="0" z="-150" />
+            <Rotation x="45" y="0" z="0" />
+        </Node>
+        <Node Time="2000">
+            <Position x="0" y="0" z="-200" />
+            <Rotation x="45" y="-45" z="0" />
+        </Node>
+        <Node Time="2000">
+            <Position x="50" y="0" z="-150" />
+            <Rotation x="0" y="-45" z="0" />
+        </Node>
+        <Node Time="2000">
+            <Position x="0" y="0" z="-100" />
+        </Node>
+    </CameraTrack>
+    <CameraTrack Name="Strict" Interpolation = "Linear">
+        <Node>
+            <Position x="0" y="0" z="-100" />
+        </Node>
+        <Node Time="1000">
+            <Position x="-50" y="0" z="-150" />
+            <Rotation x="45" y="0" z="0" />
+        </Node>
+        <Node Time="3000">
+            <Position x="0" y="0" z="-200" />
+            <Rotation x="45" y="-45" z="0" />
+        </Node>
+        <Node Time="3000">
+            <Position x="50" y="0" z="-150" />
+            <Rotation x="0" y="-45" z="0" />
+        </Node>
+        <Node Time="1000">
+            <Position x="0" y="0" z="-100" />
+        </Node>
+    </CameraTrack>
+    <Node Name="Room">
+        <Entity Name="Room" Material="Scene" Mesh="Room.mesh" />
+    </Node>
+    <Node Name="Table">
+        <Entity Name="Table" Material="Scene" Mesh="Table.mesh" CastShadows="true" />
+    </Node>
+    <Node Name="Tile">
+        <Entity Name="Tile" Material="Tile" Mesh="TileHigh.mesh" CastShadows="true" />
+        <Position x="0" y="5" z="0" />
+    </Node>
+    <Node Name="TileSolid">
+        <Entity Name="TileSolid" Material="TileSolid" Mesh="TileHigh.mesh" CastShadows="true" />
+        <Position x="-10" y="5" z="0" />
+        <Rotation x="45" y="0" z="0" />
+        <Scale x="2.5" y="1" z="1" />
+    </Node>
+    <Node Name="TileSolidTexture">
+        <Entity Name="TileSolidTexture" Material="TileSolidTexture" Mesh="TileHigh.mesh" CastShadows="true" />
+        <Position x="-20" y="5" z="0" />
+        <Rotation x="20" y="20" z="0" />
+    </Node>
+</Scene>
