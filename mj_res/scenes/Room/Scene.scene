@@ -12,4 +12,32 @@
     <Node Name="Table">
         <Entity Name="Table" Material="Scene" Mesh="Table.mesh" CastShadows="true" />
     </Node>
+    <CameraTrack Name="Start" Interpolation = "Spline">
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+        <Node Time="2000">
+            <Position x="0" y="-80" z="30" />
+            <Rotation x="75" y="0" z="0" />
+        </Node>
+        <Node Time="1000">
+            <Position x="0" y="-80" z="30" />
+            <Rotation x="59" y="0" z="0" />
+        </Node>
+        <Node Time="1000">
+            <Position x="0" y="-80" z="30" />
+            <Rotation x="59" y="-50" z="-25" />
+        </Node>
+        <Node Time="2000">
+            <Position x="0" y="-80" z="30" />
+            <Rotation x="59" y="50" z="25" />
+        </Node>
+        <Node Time="1000">
+            <Position x="0" y="-80" z="30" />
+            <Rotation x="59" y="0" z="0" />
+        </Node>
+        <Node Time="2000">
+            <Position x="0" y="0" z="0" />
+        </Node>
+    </CameraTrack>
 </Scene>
