@@ -22,9 +22,10 @@ material MenuBackground
     {
         pass
         {
+            scene_blend alpha_blend
             texture_unit
             {
-                texture MenuBackground.png
+                texture MenuBackgroundTransparent.png
             }
         }
     }
