@@ -3,7 +3,7 @@
 <GUILayout >
     <Window Type="DefaultWindow" Name="GameTypeLayout" >
         <Property Name="Font" Value="Arial-16" />
-        <Property Name="Alpha" Value="0.8" />
+        <Property Name="Alpha" Value="0.7" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Window Type="Vanilla/StaticText" Name="GameTypeLayout/Window" >
             <Property Name="HorzFormatting" Value="HorzCentred" />

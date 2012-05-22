@@ -2,7 +2,7 @@
 
 <GUILayout >
     <Window Type="DefaultWindow" Name="Finished" >
-        <Property Name="Alpha" Value="0.8" />
+        <Property Name="Alpha" Value="0.7" />
         <Property Name="AlwaysOnTop" Value="True" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />

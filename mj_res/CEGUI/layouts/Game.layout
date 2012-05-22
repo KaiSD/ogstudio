@@ -3,7 +3,7 @@
 <GUILayout >
     <Window Type="DefaultWindow" Name="Game" >
         <Property Name="Font" Value="Arial-16" />
-        <Property Name="Alpha" Value="0.8" />
+        <Property Name="Alpha" Value="0.7" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="Vanilla/StaticText" Name="Game/Holder" >

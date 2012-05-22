@@ -894,9 +894,10 @@ material ThemeMaterials/YouWin
     {
         pass
         {
+            scene_blend alpha_blend
             texture_unit
             {
-                texture msg_win.dds
+                texture msg_win.png
             }
         }
     }
@@ -908,9 +909,10 @@ material ThemeMaterials/YouLose
     {
         pass
         {
+            scene_blend alpha_blend
             texture_unit
             {
-                texture msg_loss.dds
+                texture msg_loss.png
             }
         }
     }

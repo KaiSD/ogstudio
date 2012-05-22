@@ -40,4 +40,48 @@
             <Position x="0" y="0" z="0" />
         </Node>
     </CameraTrack>
+    <CameraTrack Name="Pause" Interpolation = "Linear">
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+        <Node Time="500">
+            <Position x="0" y="0" z="200" />
+        </Node>
+    </CameraTrack>
+    <CameraTrack Name="Unpause" Interpolation = "Linear">
+        <Node>
+            <Position x="0" y="0" z="200" />
+        </Node>
+        <Node Time="500">
+            <Position x="0" y="0" z="0" />
+        </Node>
+    </CameraTrack>
+    <CameraTrack Name="Victory" Interpolation = "Spline">
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+        <Node Time="500">
+            <Position x="0" y="30" z="100" />
+        </Node>
+        <Node Time="500">
+            <Position x="0" y="30" z="0" />
+        </Node>
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+    </CameraTrack>
+    <CameraTrack Name="Loss" Interpolation = "Spline">
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+        <Node Time="500">
+            <Position x="-30" y="0" z="100" />
+        </Node>
+        <Node Time="500">
+            <Position x="-90" y="0" z="50" />
+        </Node>
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+    </CameraTrack>
 </Scene>
