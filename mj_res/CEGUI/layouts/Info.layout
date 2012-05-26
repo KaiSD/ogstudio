@@ -6,7 +6,6 @@
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="Vanilla/StaticText" Name="Info/BG" >
-            <Property Name="Font" Value="Arial-16" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
             <Window Type="Vanilla/Button" Name="Info/OK" >
                 <Property Name="Text" Value="OK" />

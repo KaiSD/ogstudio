@@ -6,22 +6,18 @@
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="DefaultWindow" Name="Settings/Options" >
-            <Property Name="Font" Value="Arial-16" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,0},{0.995,0},{0,60}}" />
             <Window Type="Vanilla/Button" Name="Settings/BtnGame" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_GAME" />
                 <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.247,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
             <Window Type="Vanilla/Button" Name="Settings/BtnThemes" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_THEMES" />
                 <Property Name="UnifiedAreaRect" Value="{{0.25,0},{0,0},{0.497,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
             <Window Type="Vanilla/Button" Name="Settings/BtnAudio" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_AUDIO" />
                 <Property Name="UnifiedAreaRect" Value="{{0.5,0},{0,0},{0.747,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
@@ -32,33 +28,27 @@
             </Window>
         </Window>
         <Window Type="DefaultWindow" Name="Settings/Buttons" >
-            <Property Name="Font" Value="Arial-16" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.993,-60},{0.995,0},{0.993,0}}" />
             <Window Type="Vanilla/Button" Name="Settings/OK" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="OK" />
                 <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.3,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
             <Window Type="Vanilla/Button" Name="Settings/Cancel" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="CANCEL" />
                 <Property Name="UnifiedAreaRect" Value="{{0.35,0},{0,0},{0.65,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
             <Window Type="Vanilla/Button" Name="Settings/Apply" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="APPLY" />
                 <Property Name="UnifiedAreaRect" Value="{{0.7,0},{0,0},{1,0},{1,0}}" />
                 <Property Name="WantsMultiClickEvents" Value="True" />
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Game" >
-            <Property Name="Font" Value="Arial-16" />
             <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbDifficulty" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_DIFFICULTY" />
                 <Property Name="Tooltip" Value="SETTINGS_DESC_DIFFICULTY" />
                 <Property Name="FrameEnabled" Value="False" />
@@ -147,7 +137,6 @@
             <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbTheme" >
-                <Property Name="Font" Value="Arial-16" />
                 <Property Name="Text" Value="SETTINGS_THEME" />
                 <Property Name="Tooltip" Value="SETTINGS_DESC_THEME" />
                 <Property Name="FrameEnabled" Value="False" />
@@ -180,7 +169,6 @@
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Audio" >
-            <Property Name="Font" Value="Arial-16" />
             <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/Checkbox" Name="Settings/VolGeneral" >
@@ -244,7 +232,6 @@
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Video" >
-            <Property Name="Font" Value="Arial-16" />
             <Property Name="Visible" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.005,60},{0.995,0},{0.988,-60}}" />
             <Window Type="Vanilla/StaticText" Name="Settings/LbResolution" >
