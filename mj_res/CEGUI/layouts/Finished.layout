@@ -3,7 +3,6 @@
 <GUILayout >
     <Window Type="DefaultWindow" Name="Finished" >
         <Property Name="Alpha" Value="0.7" />
-        <Property Name="AlwaysOnTop" Value="True" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="Vanilla/StaticText" Name="Finished/Rating" >
@@ -17,7 +16,6 @@
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Finished/Holder" >
-            <Property Name="AlwaysOnTop" Value="True" />
             <Property Name="FrameEnabled" Value="False" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-60},{-0.28,1024},{1,0}}" />
             <Property Name="BackgroundEnabled" Value="False" />

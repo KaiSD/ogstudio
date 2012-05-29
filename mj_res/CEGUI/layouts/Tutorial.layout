@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="Tutorial" >
+        <Property Name="Alpha" Value="0.7" />
+        <Property Name="AlwaysOnTop" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="MousePassThroughEnabled" Value="True" />
+        <Window Type="Vanilla/StaticText" Name="Tutorial/Holder" >
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0.95,-60},{-0.28,1024},{0.95,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="MousePassThroughEnabled" Value="True" />
+            <Window Type="Vanilla/Button" Name="Tutorial/Button" >
+                <Property Name="Text" Value="!" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.071,0},{0.06,0},{0.931,0}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>
