@@ -404,8 +404,14 @@ Si les réglages vidéo n'ont pas été sélectionnés de façon appropriée la 
 "TILE_LOW","Low","Низкая","Niedrig","Bas"
 "TILE_MEDIUM","Medium","Средняя","Mittel","Moyen"
 "TILE_HIGH","High","Высокая","Hoch","Haut"
-"TUTORIAL_LOSS","There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau."
-"TUTORIAL_START","To select a tile, click it with the left mouse button.
+"TUTORIAL_DYNCAM","Dynamic camera","Динамическая камера","Dynamische Kamera","Caméra dynamique"
+"TUTORIAL_DYNCAM_TXT","Dynamic camera is turned on by default. It rotates the scene as you move the mouse.
+
+Do you want to leave it enabled or disable it? (You can enabled/disable it later in Settings)","По умолчанию динамическая камера включена. Она вращает сцену, когда вы двигаете мышь.
+
+Вы хотите оставить её включенной или отключить? (Вы можете включить/отключить позже в Настройках)",,
+"TUTORIAL_FIRST_RUN","First run","Первый запуск",,
+"TUTORIAL_FIRST_RUN_TXT","To select a tile, click it with the left mouse button.
 Select a pair of tiles to remove them.
 
 To control the camera, hold the right mouse button and move the mouse. Or use arrow/+/- keys with/out shift.
@@ -429,7 +435,10 @@ Pour contrôler la caméra, maintenir le bouton droit de la souris et déplacer 
 Pour réinitialiser la position de la caméra, presser X.
  
 Pour cacher ce message, presser n'importe quelle touche."
-"TUTORIAL_VICTORY","Congratulations! You won!
+"TUTORIAL_LOSS","Loss","Поражение",,
+"TUTORIAL_LOSS_TXT","There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau."
+"TUTORIAL_VICTORY","Victory","Победа",,
+"TUTORIAL_VICTORY_TXT","Congratulations! You won!
 Enter your name and check out statistics to see if you made it to the top.","Поздравляем! Вы победили!
 Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.","ве","Félicitations ! Vous avez gagné !
 Entrez votre nom et vérifiez les statistiques pour voir si vous êtes en tête."
