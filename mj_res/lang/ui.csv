@@ -421,6 +421,8 @@ Do you want to leave it enabled or disable it? (You can enabled/disable it later
 По умолчанию динамическая камера включена. Она вращает сцену, когда вы двигаете мышь.
  
 Вы хотите оставить её включенной или отключить? (Вы можете включить/отключить позже в Настройках)",,
+"TUTORIAL_DYNCAM_DISABLE","Disable","Отключить",,
+"TUTORIAL_DYNCAM_LEAVE_ENABLED","Leave enabled","Оставить включенной",,
 "TUTORIAL_FIRST_RUN","First run
  
  
