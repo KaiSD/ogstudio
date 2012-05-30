@@ -404,25 +404,47 @@ Si les réglages vidéo n'ont pas été sélectionnés de façon appropriée la 
 "TILE_LOW","Low","Низкая","Niedrig","Bas"
 "TILE_MEDIUM","Medium","Средняя","Mittel","Moyen"
 "TILE_HIGH","High","Высокая","Hoch","Haut"
-"TUTORIAL_DYNCAM","Dynamic camera","Динамическая камера","Dynamische Kamera","Caméra dynamique"
-"TUTORIAL_DYNCAM_TXT","Dynamic camera is turned on by default. It rotates the scene as you move the mouse.
-
-Do you want to leave it enabled or disable it? (You can enabled/disable it later in Settings)","По умолчанию динамическая камера включена. Она вращает сцену, когда вы двигаете мышь.
-
+"TUTORIAL_DYNCAM","Dynamic camera
+ 
+ 
+ 
+ 
+ 
+Dynamic camera is turned on by default. It rotates the scene as you move the mouse.
+ 
+Do you want to leave it enabled or disable it? (You can enabled/disable it later in Settings)","Динамическая камера
+ 
+ 
+ 
+ 
+ 
+По умолчанию динамическая камера включена. Она вращает сцену, когда вы двигаете мышь.
+ 
 Вы хотите оставить её включенной или отключить? (Вы можете включить/отключить позже в Настройках)",,
-"TUTORIAL_FIRST_RUN","First run","Первый запуск",,
-"TUTORIAL_FIRST_RUN_TXT","To select a tile, click it with the left mouse button.
+"TUTORIAL_FIRST_RUN","First run
+ 
+ 
+ 
+ 
+ 
+To select a tile, click it with the left mouse button.
 Select a pair of tiles to remove them.
-
+ 
 To control the camera, hold the right mouse button and move the mouse. Or use arrow/+/- keys with/out shift.
 To reset camera position, press X.
-
-To hide this message, press any key.","Для выбора фишки кликните на ней левой кнопкой мыши.
+ 
+To hide this message, press any key.","Первый запуск
+ 
+ 
+ 
+ 
+ 
+Для выбора фишки кликните на ней левой кнопкой мыши.
 Выберите пару фишек, чтобы убрать их.
-
+ 
 Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки/+/- с/без шифта.
 Для возврата камеры в исходное положение нажмите X.
-
+ 
 Чтобы убрать это сообщение, нажмите любую кнопку.","Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
 
 Um die Kamera zu kontrollieren halten Sie die rechte Maustaste gedrückt und bewegen die Maus umher. Alternativ können Sie Pfeil/+/- Tasten mit/ohne Shift-Taste benutzen.
@@ -435,11 +457,33 @@ Pour contrôler la caméra, maintenir le bouton droit de la souris et déplacer 
 Pour réinitialiser la position de la caméra, presser X.
  
 Pour cacher ce message, presser n'importe quelle touche."
-"TUTORIAL_LOSS","Loss","Поражение",,
-"TUTORIAL_LOSS_TXT","There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau."
-"TUTORIAL_VICTORY","Victory","Победа",,
-"TUTORIAL_VICTORY_TXT","Congratulations! You won!
-Enter your name and check out statistics to see if you made it to the top.","Поздравляем! Вы победили!
-Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.","ве","Félicitations ! Vous avez gagné !
+"TUTORIAL_LOSS","Loss
+ 
+ 
+ 
+ 
+ 
+There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Поражение
+ 
+ 
+ 
+ 
+ 
+Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau."
+"TUTORIAL_VICTORY","Victory
+ 
+ 
+ 
+ 
+ 
+Congratulations! You won!
+Enter your name and check out statistics to see if you made it to the top.","Победа
+ 
+ 
+ 
+ 
+ 
+Поздравляем! Вы победили!
+Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.",,"Félicitations ! Vous avez gagné !
 Entrez votre nom et vérifiez les statistiques pour voir si vous êtes en tête."
 "YES","Yes","Да","Ja","Oui"
