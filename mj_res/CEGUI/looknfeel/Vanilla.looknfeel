@@ -113,6 +113,21 @@
 
 
     <WidgetLook name="Vanilla/Button">
+        <AnimationDefinition name="Attention" duration="3" replayMode="once">
+            <Affector property="Alpha" interpolator="float">
+                <KeyFrame position="0.0" value="0.0" />
+                <KeyFrame position="1.0" value="1.0" />
+                <KeyFrame position="2.0" value="0.0" />
+                <KeyFrame position="3.0" value="1.0" />
+            </Affector>
+            <Affector property="YRotation" interpolator="float">
+                <KeyFrame position="0.0" value="0.0" />
+                <KeyFrame position="1.0" value="-45.0" />
+                <KeyFrame position="2.0" value="45.0" />
+                <KeyFrame position="3.0" value="0.0" />
+            </Affector>
+            <Subscription event="PayAttention" action="Start" />
+        </AnimationDefinition>
         <PropertyDefinition name="TextID" initialValue="" redrawOnWrite="true" />
         <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <PropertyDefinition name="NormalTextColour" initialValue="FFFFFFFF" redrawOnWrite="true" />
