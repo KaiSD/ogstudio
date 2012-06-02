@@ -472,6 +472,21 @@ There are no more turns left. You can undo the last turn, shuffle tiles, restart
  
  
 Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau."
+"TUTORIAL_SURVEY","Survey
+ 
+ 
+ 
+ 
+ 
+You're using an unstable version of OGS Mahjong. Would you like to participate in a survey to help us make the game even better?","Опрос
+ 
+ 
+ 
+ 
+ 
+Вы используете нестабильную версию OGS Маджонг. Хотите ли вы принять участие в опросе, чтобы помочь нам сделать игру ещё лучше?",,
+"TUTORIAL_SURVEY_LATER","Later","Позже",,
+"TUTORIAL_SURVEY_URL","http://opengamestudio.org/forum/main",,,
 "TUTORIAL_VICTORY","Victory
  
  
