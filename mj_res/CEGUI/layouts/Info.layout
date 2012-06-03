@@ -16,6 +16,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.33,0},{0.91,0}}" />
             </Window>
             <Window Type="Vanilla/StaticText" Name="Info/Text" >
+                <Property Name="Font" Value="Medium" />
                 <Property Name="VertScrollbar" Value="True" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertFormatting" Value="TopAligned" />
@@ -29,6 +30,11 @@
                     <Property Name="Text" Value="http://www.gnu.org/licenses" />
                     <Property Name="Visible" Value="False" />
                     <Property Name="UnifiedAreaRect" Value="{{0,6},{0,321.882},{0.5,6},{0.07,321.882}}" />
+                </Window>
+                <Window Type="Vanilla/Button" Name="Info/LinkSurvey" >
+                    <Property Name="Text" Value="URL_SURVEY" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.8,6},{0.07,961.517}}" />
                 </Window>
             </Window>
         </Window>
