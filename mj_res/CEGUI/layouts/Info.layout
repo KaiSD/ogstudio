@@ -36,6 +36,16 @@
                     <Property Name="Visible" Value="False" />
                     <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.8,6},{0.07,961.517}}" />
                 </Window>
+				<Window Type="Vanilla/Button" Name="Info/LinkDonate" >
+                    <Property Name="Text" Value="URL_DONATE" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.8,6},{0.07,961.517}}" />
+                </Window>
+				<Window Type="Vanilla/Button" Name="Info/LinkJoin" >
+                    <Property Name="Text" Value="URL_JOIN" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,6},{0,961.517},{0.8,6},{0.07,961.517}}" />
+                </Window>
             </Window>
         </Window>
     </Window>
