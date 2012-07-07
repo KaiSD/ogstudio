@@ -126,6 +126,11 @@
                 <Property Name="MaxEditTextLength" Value="4294967295" />
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/CameraTracks" >
+                <Property Name="Text" Value="SETTINGS_CAMERA_TRACKS" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_CAMERA_TRACKS" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.615,0},{0.495,0},{0.682,0}}" />
+            </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/GameDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_GAME" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />

@@ -339,9 +339,11 @@ Temps : %s"
 "SAVE_GAME_BEFORE_EXIT","Do you want to save the game before exit?","Сохранить игру перед выходом?","Wollen Sie das Spiel vor dem Beenden speichern?","Voulez-vous sauvegarder le jeu avant de quitter ?"
 "SETTINGS_ANTIALIASING","Anti-aliasing:","Сглаживание:","Anti-Aliasing:","Anti-aliasing :"
 "SETTINGS_AUDIO","Audio","Аудио","Audio","Audio"
+"SETTINGS_CAMERA_TRACKS","Camera animation","Анимация камеры",,
 "SETTINGS_CONTROLS","Controls","Управление","Steuerung","Contrôles"
 "SETTINGS_DESC_ANTIALIASING","The larger is the antialiasing factor, the smoother are object edges","Чем выше сглаживание, тем более гладкими будут грани объектов.","Je höher der Anti-Aliasing-Faktor, desto glatter werden die Objektkanten dargestellt.","Plus grand est le facteur d'antialiasing, plus les angles des objets sont lisses"
 "SETTINGS_DESC_AUDIO","Game sounding","Звучание игры","Spielgeräusche","Sonorisation du jeu"
+"SETTINGS_DESC_CAMERA_TRACKS","Camera animations take place at start, end, pause, unpause of the game. Not all scenes have camera animations.","Анимация камеры происходит при старте, окончании, паузе игры. Не все сцены содержат анимацию камеры.",,
 "SETTINGS_DESC_DIFFICULTY","Classic difficulty corresponds to a normal Mahjong with full tile set. Lower difficulties have reduced tile sets.","Классическая сложность соответствует обычному Маджонгу с полным набором фишек. Другие сложности имеют уменьшенные наборы фишек.","Der klassische Schwierigkeitsgrad ergibt ein normales Mahjong-Spielfeld mit allen Spielsteinarten. Niedrigere Schwierigkeitsgrade ergeben Spielfelder mit weniger Spielsteinarten.","La difficulté classique corresponds à un Mahjong normal avec le jeu complet de tuiles. Les difficultés plus basses ont des jeux de tuiles réduits."
 "SETTINGS_DESC_DYNCAM","If enabled, camera is deflected slightly when you move the mouse around","Если включено, камера слегка отклоняется при движении мыши","Wenn aktiviert, neigt sich die Ansicht bei Bewegungen der Maus","Si activée, la caméra défléchit légèrement lorsque vous bougez la souris autour"
 "SETTINGS_DESC_DYNCAM_DEFLECTION","Camera deflection factor","Степень отклонения камеры","Neigungsfaktor der Ansicht","Faction de déflection de la caméra"
