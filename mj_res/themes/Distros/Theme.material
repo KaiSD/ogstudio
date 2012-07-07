@@ -888,33 +888,3 @@ material ThemeMaterials/Group36/4
     }
 }
 
-material ThemeMaterials/YouWin
-{
-    technique
-    {
-        pass
-        {
-            scene_blend alpha_blend
-            texture_unit
-            {
-                texture msg_win.png
-            }
-        }
-    }
-}
-
-material ThemeMaterials/YouLose
-{
-    technique
-    {
-        pass
-        {
-            scene_blend alpha_blend
-            texture_unit
-            {
-                texture msg_loss.png
-            }
-        }
-    }
-}
-

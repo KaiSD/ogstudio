@@ -886,31 +886,3 @@ material ThemeMaterials/Group36/4
     }
 }
 
-material ThemeMaterials/YouWin
-{
-    technique
-    {
-        pass
-        {
-            texture_unit
-            {
-                texture win.dds
-            }
-        }
-    }
-}
-
-material ThemeMaterials/YouLose
-{
-    technique
-    {
-        pass
-        {
-            texture_unit
-            {
-                texture lose.dds
-            }
-        }
-    }
-}
-

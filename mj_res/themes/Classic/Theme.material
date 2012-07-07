@@ -886,31 +886,3 @@ material ThemeMaterials/Group36/4
     }
 }
 
-material ThemeMaterials/YouWin
-{
-    technique
-    {
-        pass
-        {
-            texture_unit
-            {
-                texture summerfield_msg_win.dds
-            }
-        }
-    }
-}
-
-material ThemeMaterials/YouLose
-{
-    technique
-    {
-        pass
-        {
-            texture_unit
-            {
-                texture summerfield_msg_loss.dds
-            }
-        }
-    }
-}
-
