@@ -12,29 +12,10 @@
     <Node Name="Table">
         <Entity Name="Table" Material="Scene" Mesh="Table.mesh" CastShadows="true" />
     </Node>
-    <CameraTrack Name="Start" Interpolation = "Spline">
-        <Node>
-            <Position x="0" y="0" z="0" />
-        </Node>
-        <Node Time="2000">
-            <Position x="0" y="-80" z="30" />
-            <Rotation x="75" y="0" z="0" />
-        </Node>
-        <Node Time="1000">
-            <Position x="0" y="-80" z="30" />
-            <Rotation x="59" y="0" z="0" />
-        </Node>
-        <Node Time="1000">
-            <Position x="0" y="-80" z="30" />
-            <Rotation x="59" y="-50" z="-25" />
-        </Node>
-        <Node Time="2000">
-            <Position x="0" y="-80" z="30" />
-            <Rotation x="59" y="50" z="25" />
-        </Node>
-        <Node Time="1000">
-            <Position x="0" y="-80" z="30" />
-            <Rotation x="59" y="0" z="0" />
+	<CameraTrack Name="Start" Interpolation = "Spline">
+		<Node>
+            <Position x="0" y="-100" z="-20" />
+			<Rotation x="70" y="0" z="0" />
         </Node>
         <Node Time="2000">
             <Position x="0" y="0" z="0" />
@@ -45,12 +26,14 @@
             <Position x="0" y="0" z="0" />
         </Node>
         <Node Time="500">
-            <Position x="0" y="0" z="200" />
+            <Position x="0" y="-50" z="0" />
+            <Rotation x="70" y="0" z="0" />
         </Node>
     </CameraTrack>
     <CameraTrack Name="Unpause" Interpolation = "Linear">
-        <Node>
-            <Position x="0" y="0" z="200" />
+        <Node Time="0">
+            <Position x="0" y="-50" z="0" />
+            <Rotation x="70" y="0" z="0" />
         </Node>
         <Node Time="500">
             <Position x="0" y="0" z="0" />
@@ -60,27 +43,30 @@
         <Node>
             <Position x="0" y="0" z="0" />
         </Node>
-        <Node Time="500">
-            <Position x="0" y="30" z="100" />
+        <Node Time="4000">
+            <Position x="0" y="0" z="40" />
         </Node>
-        <Node Time="500">
-            <Position x="0" y="30" z="0" />
+        <Node Time="2000">
+            <Position x="0" y="30" z="40" />
+			<Rotation x="70" y="0" z="0" />
         </Node>
-        <Node>
+		<Node  Time="20000">
             <Position x="0" y="0" z="0" />
         </Node>
     </CameraTrack>
     <CameraTrack Name="Loss" Interpolation = "Spline">
-        <Node>
+        		<Node>
             <Position x="0" y="0" z="0" />
         </Node>
-        <Node Time="500">
-            <Position x="-30" y="0" z="100" />
+        <Node Time="1000">
+            <Position x="0" y="-40" z="10" />
+			<Rotation x="-10" y="0" z="0" />
         </Node>
-        <Node Time="500">
-            <Position x="-90" y="0" z="50" />
+        <Node Time="1000">
+            <Position x="0" y="-40" z="10" />
+			<Rotation x="-30" y="0" z="0" />
         </Node>
-        <Node>
+		<Node  Time="20000">
             <Position x="0" y="0" z="0" />
         </Node>
     </CameraTrack>

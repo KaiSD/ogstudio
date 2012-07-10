@@ -1,0 +1,7 @@
+[OGSMahjongResource]
+Name=Neo-Classic
+Name[ru]=Нео-Классика
+Author=Opensource Game Studio
+AuthorEmail=main@opengamestudio.org
+Description=This tileset utilizes the set of images from the famous Gnome Mahjongg tileset called "Postmodern"
+Description[ru]=Этот тайлсет использует изображения фишек из известной темы для Gnome Mahjongg под названием "Постмодерн"

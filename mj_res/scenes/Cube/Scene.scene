@@ -11,4 +11,22 @@
 		<Scale x="1" y="0.01" z="1" />
         <Entity Name="Cube" Material="Scene" Mesh="Cube.mesh" />
     </Node>
+	<CameraTrack Name="Pause" Interpolation = "Linear">
+        <Node>
+            <Position x="0" y="0" z="0" />
+        </Node>
+        <Node Time="500">
+            <Position x="0" y="-50" z="0" />
+            <Rotation x="70" y="0" z="0" />
+        </Node>
+    </CameraTrack>
+    <CameraTrack Name="Unpause" Interpolation = "Linear">
+        <Node Time="0">
+            <Position x="0" y="-50" z="0" />
+            <Rotation x="70" y="0" z="0" />
+        </Node>
+        <Node Time="500">
+            <Position x="0" y="0" z="0" />
+        </Node>
+    </CameraTrack>
 </Scene>
