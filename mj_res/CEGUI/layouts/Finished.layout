@@ -20,10 +20,20 @@
             <Property Name="UnifiedAreaRect" Value="{{0,0},{1,-60},{-0.28,1024},{1,0}}" />
             <Property Name="BackgroundEnabled" Value="False" />
             <Property Name="MousePassThroughEnabled" Value="True" />
+            <Window Type="Vanilla/Button" Name="Finished/Stats" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:Rating44&apos;]" />
+                <Property Name="Tooltip" Value="GAME_STATS" />
+                <Property Name="UnifiedAreaRect" Value="{{0.725,0},{0.07,0},{0.775,0},{0.93,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Finished/Start" >
+                <Property Name="Text" Value="[image=&apos;set:Icons image:New44&apos;]" />
+                <Property Name="Tooltip" Value="GAME_START" />
+                <Property Name="UnifiedAreaRect" Value="{{0.78,0},{0.07,0},{0.83,0},{0.93,0}}" />
+            </Window>
             <Window Type="Vanilla/Button" Name="Finished/Restart" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Restart44&apos;]" />
                 <Property Name="Tooltip" Value="GAME_RESTART" />
-                <Property Name="UnifiedAreaRect" Value="{{0.835977,0},{0.0713021,0},{0.885977,0},{0.931302,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0.835,0},{0.07,0},{0.885,0},{0.93,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Finished/Undo" >
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Undo44&apos;]" />
@@ -34,11 +44,6 @@
                 <Property Name="Text" Value="[image=&apos;set:Icons image:Shuffle44&apos;]" />
                 <Property Name="Tooltip" Value="GAME_SHUFFLE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.945,0},{0.07,0},{0.995,0},{0.93,0}}" />
-            </Window>
-            <Window Type="Vanilla/Button" Name="Finished/Start" >
-                <Property Name="Text" Value="[image=&apos;set:Icons image:New44&apos;]" />
-                <Property Name="Tooltip" Value="GAME_START" />
-                <Property Name="UnifiedAreaRect" Value="{{0.78,0},{0.07,0},{0.83,0},{0.93,0}}" />
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Finished/Tooltip" >
