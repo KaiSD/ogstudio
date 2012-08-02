@@ -7,12 +7,12 @@
 "DESC_AUTHOR_EMAIL","Author email:","Почта автора:","Autor E-Mail:","Courriel de l'auteur :"
 "DESC_DESCRIPTION","Description:","Описание:","Beschreibung:","Description :"
 "FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:","Entrer votre nom :"
-"FINISHED_TITLE_VICTORY","Victory","Победа",,
-"FINISHED_TITLE_LOSS","Loss","Поражение",,
+"FINISHED_TITLE_VICTORY","Victory","Победа","Sieg","Victoire"
+"FINISHED_TITLE_LOSS","Loss","Поражение","Niederlage","Perdu"
 "GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das beim letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt.","La disposition jouée la dernière fois est introuvable. Une autre a été utilisée à  la place."
 "GAME_CANNOT_LOAD_LAST_LAYOUT_SAVE","The layout is no longer available. The save file cannot be used.","Раскладка не найдена. Файл сохранения не может быть использован.","Das Layout ist nicht länger verfügbar. Die gespeicherte Datei kann nicht verwendet werden.","La disposition n'est plus disponible. Le jeu sauvegardé ne peut être utilisé."
 "GAME_CHANGE_INTERRUPTS","This change will interrupt current game","Это изменение прервёт текущую игру","Diese Änderung wird das laufende Spiel unterbrechen","Ce changement interrompra le jeu en cours"
-"GAME_DIFFICULTY_ALL","All difficulties","Все уровни",,
+"GAME_DIFFICULTY_ALL","All difficulties","Все уровни","Alle Schwierigkeitsstufen","Toutes les difficultés"
 "GAME_DIFFICULTY_CLASSIC","Classic","Классика","Klassisch","Classique"
 "GAME_DIFFICULTY_EASY","Easy","Легко","Leicht","Facile"
 "GAME_DIFFICULTY_MEDIUM","Medium","Средне","Mittel","Moyenne"
@@ -32,7 +32,7 @@
 "GAME_START","Start a new game","Начать новую игру","Neues Spiel starten","Démarrer un nouveau jeu"
 "GAME_STATS","Statistics","Статистика","Statistik","Statistiques"
 "GAME_TILE_PAIRS_YOU_CAN_REMOVE","Tile pairs you can remove","Пары фишек, которые можно удалить","Spielstein-Paare, die gelöscht werden können","Paires de tuiles que vous pouvez enlever"
-"GAME_TYPE_ALL","All game types","Все типы игр",,
+"GAME_TYPE_ALL","All game types","Все типы игр","Alle Spieltypen","Tous les types de jeux"
 "GAME_TYPE_DIFFICULTY_LAYOUT_HINTS_UNDOS_TIME","Type: %s
 Difficulty: %s
 Layout: %s
@@ -79,7 +79,7 @@ Web-Seite:
  
 Page Web :
 [window='Info/LinkHome']"
-"INFO_GRATITUDE","Gratitude","Благодарность",,
+"INFO_GRATITUDE","Gratitude","Благодарность","Danksagung","Gratitude"
 "INFO_GRATITUDE_TXT","Thanks to:
 - Ogre3D team/community for the engine and help;
 - Lightfeather team/community for help while this game has been using Lightfeather engine;
@@ -98,7 +98,7 @@ Besonderer Dank geht an CrazyEddie für sein schönes GUI System und seine groß
 - KittyCat, développeur OpenAL-Soft/ALURE pour l'aide.
 Remerciements spéciaux à  CrazyEddie pour le bon système de GUI et le grand soutien."
 "INFO_LICENSE","License","Лицензия","Lizenz","Licence"
-"INFO_LICENSE_TXT","Copyright (C) 2010-2011, Opensource Game Studio
+"INFO_LICENSE_TXT","Copyright (C) 2010-2012, Opensource Game Studio
 
 OGS Mahjong is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -209,14 +209,18 @@ Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles i
 Shisen-Sho avec gravité
  
 Le but du jeu est de nettoyer l'espace de jeu en enlevant les paires de tuiles identiques. Une paire de tuiles peut être supprimée seulement si elles peuvent êre connectées par une ligne avec deux angles droits au plus traversant un espace libre. Après chaque tour, les tuiles qui sont libres en-dessous seront poussées vers le bas vers les autres tuiles ou vers le rang du bas."
-"INFO_SURVEY","Survey","Опрос",,
+"INFO_SURVEY","Survey","Опрос","Umfrage","Enquête"
 "INFO_SURVEY_TXT","You're using an unstable version of OGS Mahjong. Would you like to participate in a survey to help us make the game even better?
  
 [window='Info/LinkSurvey']","Вы используете нестабильную версию OGS Маджонг. Хотите ли вы принять участие в опросе, чтобы помочь нам сделать игру ещё лучше?
  
-[window='Info/LinkSurvey']",,
-"INFO_TEAM","Team","Команда",,
-"INFO_TEAM_DEVELOPMENT","    Development","    Разработка",,
+[window='Info/LinkSurvey']","Sie benutzen eine instabile Version von OGS Mahjong. Möchten Sie bei unserer Umfrage teilnehmen, damit wir dieses Spiel noch besser machen können?
+
+[window='Info/LinkSurvey']","Vous utilisez une version test instable de OGS Mahjong. Voudriez-vous participer à une enquête pour nous aider à rendre le jeu encore meilleur ?
+
+[window='Info/LinkSurvey']"
+"INFO_TEAM","Team","Команда","Team","Equipe"
+"INFO_TEAM_DEVELOPMENT","    Development","    Разработка","    Entwicklung","    Développement"
 "INFO_TEAM_DEVELOPMENT_TXT","[image='set:Logos image:OGS'] team:
 Michael Kapelko - code and content;
 Ivan Korystin - gameplay design, content and QA.","Команда [image='set:Logos image:OGS']:
@@ -226,7 +230,7 @@ Michael Kapelko — Programmcode und Inhalte;
 Ivan Korystin - Gameplay Design, Inhalte und QS.","Equipe [image='set:Logos image:OGS'] :
 Michael Kapelko - code et contenu ;
 Ivan Korystin - conception du gameplay, contenu et QA."
-"INFO_TEAM_TRANSLATION","    Translation","    Перевод",,
+"INFO_TEAM_TRANSLATION","    Translation","    Перевод","    Übersetzung","    Traduction"
 "INFO_TEAM_TRANSLATION_TXT","Ekaterina Kamshilina - original German translation.
 Jürgen Rauscher - corrected the original German translation.
 Dirk Pervölz - corrected the original German translation.
@@ -240,8 +244,8 @@ Thierry Delaunay - Französische Übersetzung.","Ekaterina Kamshilina - traducti
 Jürgen Rauscher - a corrigé la traduction originale allemande.
 Dirk Pervölz - a corrigé la traduction originale allemande.
 Thierry Delaunay - traduction originale française."
-"INFO_THIRD_PARTIES","Third parties","Третьи стороны",,
-"INFO_THIRD_PARTIES_LIBRARIES","    Libraries","    Библиотеки",,
+"INFO_THIRD_PARTIES","Third parties","Третьи стороны","Software von Drittanbietern","Tierces parties"
+"INFO_THIRD_PARTIES_LIBRARIES","    Libraries","    Библиотеки","    Bibliotheken","    Bibliothèques"
 "INFO_THIRD_PARTIES_LIBRARIES_TXT","[image='set:Logos image:OGRE']
  
 [image='set:Logos image:OpenGL']
@@ -267,7 +271,7 @@ Thierry Delaunay - traduction originale française."
 [image='set:Logos image:CEGUI']
  
 [image='set:Logos image:OpenAL']"
-"INFO_THIRD_PARTIES_MEDIA","    Media","    Медиа",," "
+"INFO_THIRD_PARTIES_MEDIA","    Media","    Медиа","    Medien","    Médias"
 "INFO_THIRD_PARTIES_MEDIA_TXT","Third-party resources:
 Anton Chernov - Room model.
 Timur Malikin - TileHigh and TileMed tile models.
@@ -301,19 +305,27 @@ Dano - pistes ""Crazy from the message"", ""King or an alien"", ""Sun spark"", "
 Fenster - piste ""Free Software"" dans le pack de musique ""Modern"".
  
 Vous pouvez trouver plus d'informations sur les ressources tierces, leurs licences et droits de copie dans les fichiers README, placés dans les dossiers des thèmes ou packs de musique."
-"INFO_YOUR_HELP","Your help","Ваша помощь",," "
-"INFO_YOUR_HELP_DONATION","    Donation","    Пожертвование",,
+"INFO_YOUR_HELP","Your help","Ваша помощь","Ihre Hilfe","Votre aide"
+"INFO_YOUR_HELP_DONATION","    Donation","    Пожертвование","    Spende","    Contribution"
 "INFO_YOUR_HELP_DONATION_TXT","If you like our work, you can support us. It will help us maintain our site and domain, and will also encourage us to work further.
 [window='Info/LinkDonate']","Если вам нравится то, что мы делаем, вы можете поддержать нас. Пожертвовав нам небольшую сумму денег, вы поможете нам поддерживать домен и сайт, а также вдохновите нас на дальнейшую работу.
-[window='Info/LinkDonate']",,
-"INFO_YOUR_HELP_JOIN_US","    Join us","    Присоединяйтесь к нам",,
+[window='Info/LinkDonate']","Wenn Sie unsere Arbeit mögen, können Sie uns unterstützen. Es hilft uns, unsere Webseite aufrecht zu erhalten und ermutigt uns, unsere Arbeit weiterzuführen
+[window='Info/LinkDonate']","Si vous aimez notre travail, vous pouvez nous soutenir. Cela nous aidera à maintenir notre site et domaine, et aussi nous encouragera à travailler davantage.
+[window='Info/LinkDonate']"
+"INFO_YOUR_HELP_JOIN_US","    Join us","    Присоединяйтесь к нам","    Treten Sie unserem Team bei","    Rejoignez-nous"
 "INFO_YOUR_HELP_JOIN_US_TXT","Right now there are only three active members and several contributors in the Opensource Game Studio team. We desperately need more people.
 If you want to help us work faster, or do better games (and tools), please consider joining our humble team. Even if you don’t have enough time to be an active member (and I can assure you, this project takes a lot of our spare time), you can still contribute to the project.
 You can find more details at this page:
 [window='Info/LinkJoin']","В настоящий момент в команде Opensource Game Studio три активных участника и несколько эпизодических. И нам очень нужны новые люди.
 Если хотите помочь нам работать быстрее, делать более качественные игры (а также средства разработки), подумайте, пожалуйста, о том, чтобы присоединиться к нашей скромной команде. Даже если у вас недостаточно свободного времени (а вы можете мне поверить, этот проект требует огромного количества свободного времени), вы можете внести свой вклад.
 Подробности вы можете узнать на этой странице:
-[window='Info/LinkJoin']",,
+[window='Info/LinkJoin']","Zur Zeit haben wir nur 3 aktive Mitglieder und diverse Mithelfer im Team des Opensource Game Studios. Wir benötigen dringend weitere Helfer.
+Wenn Sie uns helfen wollen, schneller zu arbeiten oder bessere Spiele (und Tools) zu erstellen, treten Sie unserem bescheidenem Team bei. Selbst wenn Sie nicht genug Zeit haben, um als aktives Mitglied (und glauben Sie uns, dieses Projekt nimmt eine Menge unserer wenigen freien Zeit ein) mitzuwirken, können Sie uns dennoch helfen.
+Mehr Details dazu finden Sie hier:
+[window='Info/LinkJoin']","Actuellement il n'y a que trois membres actifs et quelques contributeurs dans l'équipe de Opensource Game Studio. Nous avons désespérément besoin de plus de personnes.
+Si vous voulez nous aider à travailler plus vite ou créer de meilleurs jeux (et outils), merci d'envisager de rejoindre notre humble équipe. Même si vous n'avez pas assez de temps pour être un membre actif (et je peux vous assurer que ce projet prends beaucoup de notre temps libre), vous pouvez quand même contribuer au projet.
+Vous pouvez trouver plus de détails sur cette page :
+[window='Info/LinkJoin']"
 "LOAD_INFO","Type: %s
 Difficulty: %s
 Layout: %s
@@ -338,7 +350,7 @@ Temps : %s"
 "LOAD_LOAD","Load","Загрузить","Laden","Charger"
 "NO","No","Нет","Nein","Non"
 "NO_DESC","No description","Нет описания","Keine Beschreibung","Pas de description"
-"OK","OK","OK",,
+"OK","OK","OK","OK","OK"
 "SAVE_GAME_BEFORE_EXIT","Do you want to save the game before exit?","Сохранить игру перед выходом?","Wollen Sie das Spiel vor dem Beenden speichern?","Voulez-vous sauvegarder le jeu avant de quitter ?"
 "SETTINGS_ANTIALIASING","Anti-aliasing:","Сглаживание:","Anti-Aliasing:","Anti-aliasing :"
 "SETTINGS_AUDIO","Audio","Аудио","Audio","Audio"
@@ -431,9 +443,17 @@ Do you want to leave it enabled or disable it? (You can enabled/disable it later
  
 В игре используется динамическая камера. Она призвана сделать игру более комфортной, чуть поворачивая игровое поле, когда вы двигаете мышью. По-умолчанию она включена.
  
-Желаете ли вы оставить её включенной? (Вы можете включить/отключить её позже в Настройках)",,
-"TUTORIAL_DYNCAM_DISABLE","Disable","Отключить",,
-"TUTORIAL_DYNCAM_LEAVE_ENABLED","Leave enabled","Оставить включенной",,
+Желаете ли вы оставить её включенной? (Вы можете включить/отключить её позже в Настройках)","Dynamische Kamera
+
+Das Spiel nutzt eine dynamische Kamera, um das Gameplay komfortabler zu machen. Wenn Sie die Maus bewegen, dreht sich das Spielfeld leicht. Standardmässig ist diese Kamera aktiviert.
+
+Möchten Sie dies Einstellung behalten oder deaktivieren? (Sie können dies auch später in den Einstellungen ändern)","Caméra dynamique
+ 
+Le jeu utilise la fonction de caméra dynamique. Elle est conçue pour rendre le jeu plus confortable en faisant tourner légèrement la table quand vous bougez la souris. Elle est activée par défaut.
+ 
+Voulez-vous la laisser activée ou la désactiver ? (Vous pouvez l'activer/la désactiver plus tard dans les Paramètres)"
+"TUTORIAL_DYNCAM_DISABLE","Disable","Отключить","Deaktivieren","Désactiver"
+"TUTORIAL_DYNCAM_LEAVE_ENABLED","Leave enabled","Оставить включенной","Aktiviert lassen","Laisser activé"
 "TUTORIAL_FIRST_RUN","First run
  
 To select a tile, click it with the left mouse button.
@@ -471,15 +491,24 @@ There are no more turns left. You can undo the last turn, shuffle tiles, restart
  
 You're using a testing version of OGS Mahjong. It's incomplete and can be unstable. Would you like to participate in a survey to help us make the game better?","Опрос
  
-Вы используете тестовую версию OGS Маджонг. Она может быть не совсем завершена и несколько нестабильна. Согласны ли вы принять участие в опросе, чтобы помочь нам улучшить игру?",,
-"TUTORIAL_SURVEY_LATER","Later","Позже",,
+Вы используете тестовую версию OGS Маджонг. Она может быть не совсем завершена и несколько нестабильна. Согласны ли вы принять участие в опросе, чтобы помочь нам улучшить игру?","Umfrage
+ 
+Sie nutzen eine Testversion von OGS Mahjong. Es ist derzeit unvollständig und kann instabil sein. Möchten Sie an unserer Umfrage teilnehmen, um dieses Spiel besser zu machen?","Enquête
+ 
+Vous utilisez une version test de OGS Mahjong. Elle est incomplète et peut être instable. Voudriez-vous participer à une enquête pour nous aider à rendre le jeu meilleur ?"
+"TUTORIAL_SURVEY_LATER","Later","Позже","Später","Plus tard"
 "TUTORIAL_VICTORY","Victory
  
 Congratulations! You have won!
 Enter your name and check out statistics to see if you made it to the top.","Победа
  
 Поздравляем! Вы победили!
-Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.",,"Félicitations ! Vous avez gagné !
+Введите своё имя и проверьте статистику, может быть, вы поставили рекорд.","Sieg
+ 
+Herzlichen Glückwunsch! Sie haben gewonnen!
+Geben Sie Ihren Namen ein und überprüfen Sie in der Statistik, ob Sie es an die Spitze geschafft haben.","Victoire
+ 
+Félicitations ! Vous avez gagné !
 Entrez votre nom et vérifiez les statistiques pour voir si vous êtes en tête."
 "URL_DONATE","http://opengamestudio.org/donate","http://opengamestudio.org/donate","http://opengamestudio.org/donate","http://opengamestudio.org/donate"
 "URL_JOIN","http://opengamestudio.org/lang/en/join-us ","http://opengamestudio.org/lang/ru/join-us ","http://opengamestudio.org/lang/en/join-us ","http://opengamestudio.org/lang/en/join-us "
