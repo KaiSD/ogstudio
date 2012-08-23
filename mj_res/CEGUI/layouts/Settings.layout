@@ -131,6 +131,11 @@
                 <Property Name="Tooltip" Value="SETTINGS_DESC_CAMERA_TRACKS" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.615,0},{0.495,0},{0.682,0}}" />
             </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/UpdateCheck" >
+                <Property Name="Text" Value="SETTINGS_UPDATE_CHECK" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_UPDATE_CHECK" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.682,0},{0.495,0},{0.749,0}}" />
+            </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/GameDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_GAME" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
