@@ -1,0 +1,31 @@
+material Scene
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture interior.png
+			}
+		}
+	}
+}
+
+material Scene/SkyBox
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            depth_write off
+
+            texture_unit
+            {
+                cubic_texture back.png separateUV
+                tex_address_mode clamp
+            }
+        }
+    }
+}
