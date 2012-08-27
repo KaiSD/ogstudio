@@ -3,7 +3,6 @@
 <GUILayout >
     <Window Type="DefaultWindow" Name="MessageBox" >
         <Property Name="Alpha" Value="0.7" />
-		<Property Name="FrameEnabled" Value="False" />
         <Property Name="AlwaysOnTop" Value="True" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Window Type="Vanilla/StaticText" Name="MessageBox/Text" >
