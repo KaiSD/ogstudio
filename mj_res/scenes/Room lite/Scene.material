@@ -6,7 +6,7 @@ material Scene
 		{
 			texture_unit
 			{
-				texture interior.png
+				texture interior.dds
 			}
 		}
 	}
@@ -23,7 +23,7 @@ material Scene/SkyBox
 
             texture_unit
             {
-                cubic_texture back.png separateUV
+                cubic_texture back.dds separateUV
                 tex_address_mode clamp
             }
         }

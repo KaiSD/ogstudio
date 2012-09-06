@@ -10,7 +10,7 @@ material Scene
 			set_alpha_rejection greater 128
             texture_unit
             {
-                texture background.png
+                texture background.dds
             }
         }
     }
@@ -27,7 +27,7 @@ material Scene/SkyBox
 
             texture_unit
             {
-                cubic_texture back.png separateUV
+                cubic_texture back.dds separateUV
                 tex_address_mode clamp
             }
         }
