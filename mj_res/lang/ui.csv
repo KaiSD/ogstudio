@@ -284,10 +284,12 @@ Thierry Delaunay - Французский перевод.
 Miguel de Dios - Испанский перевод.","Ekaterina Kamshilina - ursprüngliche Deutsche Übersetzung.
 Jürgen Rauscher - Korrektur der ursprünglichen Übersetzung.
 Dirk Pervölz - Korrektur der ursprünglichen Übersetzung.
-Thierry Delaunay - Französische Übersetzung.","Ekaterina Kamshilina - traduction originale allemande.
+Thierry Delaunay - Französische Übersetzung.
+Miguel de Dios - Spanische Übersetzung.","Ekaterina Kamshilina - traduction originale allemande.
 Jürgen Rauscher - a corrigé la traduction originale allemande.
 Dirk Pervölz - a corrigé la traduction originale allemande.
-Thierry Delaunay - traduction originale française.","Ekaterina Kamshilina - traducción original al Aleman.
+Thierry Delaunay - traduction originale française.
+Miguel de Dios - traduction espagnole.","Ekaterina Kamshilina - traducción original al Aleman.
 Jürgen Rauscher - corrección de la traducción original al Aleman.
 Dirk Pervölz - corrección de la traducción original al Aleman.
 Thierry Delaunay - Traducción al Francés.
@@ -453,7 +455,7 @@ Tiempo: %s"
 "SETTINGS_DESC_THEME","Theme defines the look of tiles and victory/loss sounds/screens","Тема определяет вид фишек и звуки/экраны победы/поражения","Das Theme definiert das Aussehen der Spielsteine und der Sounds & Grafiken bei Sieg/Niederlage.","Le thème définit l'aspect des tuiles ainsi que les sons/écrans en cas de victoire/défaite","Tema define el aspecto de las fichas y la victoria / pérdida sonidos / pantallas"
 "SETTINGS_DESC_THEMES","Game look","Вид игры","Aussehen des Spiels","Aspect du jeu","Aspecto del juego"
 "SETTINGS_DESC_TILE","The higher the quality, the better tiles look","Чем выше качество, тем лучше фишки выглядят","Je höher die Qualität, desto besser sehen die Spielsteine aus","Plus la qualité est haute, meilleur est l'aspect des tuiles","La mejor calidad, hace que se vean mejor las fichas"
-"SETTINGS_DESC_UPDATE_CHECK","Check for updates happens at startup.","Проверка обновлений происходит при старте.",,,
+"SETTINGS_DESC_UPDATE_CHECK","Check for updates happens at startup.","Проверка обновлений происходит при старте.","Updates werden beim Spielstart gesucht.","La vérification des mises à jour se produit au démarrage","La comprobación de actualizaciones se hace al comienzo"
 "SETTINGS_DESC_VIDEO","Video quality.
  
 If video settings has been selected inappropriatly the first time you run the game, please, report correct settings to our [window='Settings/LinkForumVideoSettings']. Instructions are in the first post.","Качество видео.
@@ -491,7 +493,7 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "SETTINGS_THEME","Theme:","Тема:","Thema:","Thème :","Tema:"
 "SETTINGS_THEMES","Themes","Темы","Theme","Thèmes","Temas"
 "SETTINGS_TILE","Tile detalization:","Детализация фишки:","Details der Spielsteine:","Niveau de détail de la tuile :","Nivel de detalle de las fichas:"
-"SETTINGS_UPDATE_CHECK","Check for updates.","Проверять обновления.",,,
+"SETTINGS_UPDATE_CHECK","Check for updates","Проверять обновления","Nach Updates suchen","Vérifier les mises à jour","Comprobando actualizaciones"
 "SETTINGS_VIDEO","Video","Видео","Video","Vidéo","Vídeo"
 "SETTINGS_VSYNC","VSync","Верт. синхронизация","Vsync","VSync","VSync"
 "STATISTICS_DIFFICULTY","Difficulty","Сложность","Schwierigkeit","Difficulté","Dificultad"
@@ -549,18 +551,24 @@ To hide this message, press any key.","Первый запуск
 Для управления камерой зажмите правую кнопку мыши и двигайте мышь. Или используйте стрелки и +/- с/ без Шифта.
 Для возврата камеры в исходное положение нажмите X.
  
-Чтобы убрать это сообщение, нажмите любую кнопку.","Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
+Чтобы убрать это сообщение, нажмите любую кнопку.","Erster Lauf
+ 
+Um einen Spielstein auszuwählen, klicken Sie Ihn mit der linken Maustaste an. Wählen Sie ein Paar Spielsteine um diese zu entfernen.
  
 Um die Kamera zu kontrollieren halten Sie die rechte Maustaste gedrückt und bewegen die Maus umher. Alternativ können Sie Pfeil/+/- Tasten mit/ohne Shift-Taste benutzen.
 Um die Kamera zurückzusetzen, drücken Sie X.
  
-Um diese Nachricht zu verstecken, drücken Sie eine beliebige Taste.","Pour sélectionner une tuile, cliquer dessus avec le bouton gauche de la souris.
+Um diese Nachricht zu verstecken, drücken Sie eine beliebige Taste.","Premier démarrage
+ 
+Pour sélectionner une tuile, cliquer dessus avec le bouton gauche de la souris.
 Sélectionner une paire de tuiles pour les enlever.
  
 Pour contrôler la caméra, maintenir le bouton droit de la souris et déplacer la souris. Ou utiliser les touches fléchées/+/- sans maj.
 Pour réinitialiser la position de la caméra, presser X.
  
-Pour cacher ce message, presser n'importe quelle touche.","Para seleccionar una ficha, haga clic con el botón izquierdo del ratón.
+Pour cacher ce message, presser n'importe quelle touche.","Primera ejecución
+ 
+Para seleccionar una ficha, haga clic con el botón izquierdo del ratón.
 Seleccione un par de fichas para eliminarlos.
  
 Para el control de la cámara, mantenga pulsado el botón derecho del ratón y mueva el ratón. O utilice las teclas de dirección /+/- sin may.
@@ -571,7 +579,11 @@ Para ocultar este mensaje, pulse cualquier tecla."
  
 There are no more turns left. You can undo the last turn, shuffle tiles, restart the game, or start a new one.","Поражение
  
-Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau.","Pérdida
+Не осталось ни одного доступного хода. Вы можете отменить последний ход, перемешать фишки, перезапустить партию или начать новую.","Niederlage
+ 
+Es sind keine Züge mehr möglich. Sie können den letzten Zug rückgängig machen, die Spielsteine neu mischen oder ein neues Spiel starten.","Perdu
+ 
+Il ne reste pas d'autre tour. Vous pouvez défaire le dernier tour, mélanger les tuiles, redémarrer le jeu ou en démarrer un nouveau.","Pérdida
  
 No hay más vueltas a la izquierda. Puede deshacer la última vuelta, mezclar las fichas, reiniciar el juego, o iniciar uno nuevo."
 "TUTORIAL_SURVEY","Survey
