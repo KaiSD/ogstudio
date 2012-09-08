@@ -1,5 +1,21 @@
 [OGSMahjongResource]
-Name=
-Description=
+Name=Room Lite
+Name[ru]=Упрощённая комната
+Name[de]=Raum (Lite-Version)
+Name[fr]=Pièce allégée
+Name[es]=Habitación pequeña
+
+Description=Lite version of chinese room.
+Description[ru]=Упрощённая версия Китайской комнаты.
+Description[de]=Die Lite-Version des chinesischen Raumes
+Description[fr]=Version allégée de la pièce chinoise,
+Description[es]=Pequeña versión de una habitación china.
+
 Author=Opensource Game Studio team
+Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
+Author[fr]=Equipe Opensource Game Studio
+Author[es]=Equipo de Opensource Game Studio
+
+
 AuthorEmail=main@opengamestudio.org

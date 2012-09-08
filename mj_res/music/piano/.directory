@@ -1,0 +1,21 @@
+[OGSMahjongResource]
+Name=Piano
+Name[ru]=Пианино
+Name[de]=Piano
+Name[fr]=Piano
+Name[es]=Piano
+
+Description=Sweet melodic motives
+Description[ru]=Нежные мелодичные мотивы
+Description[de]=Süße und melodische Klänge
+Description[fr]=Motifs mélodiques doux
+Description[es]=Motivos de dulces melodias
+
+Author=The full list of tracks can be found in the music pack README file
+Author[ru]=Полный список трэков находится в файле README пакета музыки
+Author[de]=Die komplette Liste der Tracks befinden sich in die Musik Ordner README-Datei
+Author[fr]=La liste complète des pistes se trouve dans le fichier README du pack de musique
+Author[es]=La lista completa de las pistas puede encontrarlas en el fichero README del paquete de música
+
+
+

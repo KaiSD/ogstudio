@@ -1,7 +1,17 @@
 [KMahjonggLayout]
 Name=Volcano
 Name[ru]=Вулкан
-VersionFormat=1
+Name[de]=Vulkan
+Name[fr]=Volcan
+Name[es]=Volcan
+
+
 Author=KDE Games team
+Author[ru]=Команда KDE Games
+Author[de]=Das Team von KDE Games
+Author[fr]=Equipe des jeux KDE
+Author[es]=Equipo de KDE de juegos
+
+VersionFormat=1
+FileName=volcano.layout.layout
 AuthorEmail=kde-games-devel@kde.org
-FileName=volcano.layout

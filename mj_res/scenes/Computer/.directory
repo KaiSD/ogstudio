@@ -1,5 +1,21 @@
 [OGSMahjongResource]
-Name=
-Description=
+Name=Inside the computer
+Name[ru]=Внутри компьютера
+Name[de]=Innerhalb des Computers
+Name[fr]=A l'intérieur de l'ordinateur
+Name[es]=Dentro del ordenador
+
+Description=Our view of a digital world.
+Description[ru]=Наш взгляд на цифровой мир.
+Description[de]=Unsere Sicht einer digitalen Welt
+Description[fr]=Notre vision d'un monde numérique.
+Description[es]=Nuestra visión de un mundo digital.
+
 Author=Opensource Game Studio team
+Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
+Author[fr]=Equipe Opensource Game Studio
+Author[es]=Equipo de Opensource Game Studio
+
+
 AuthorEmail=main@opengamestudio.org

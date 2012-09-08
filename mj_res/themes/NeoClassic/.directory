@@ -1,7 +1,21 @@
 [OGSMahjongResource]
 Name=Neo-Classic
 Name[ru]=Нео-Классика
-Author=Opensource Game Studio
+Name[de]=Neoklassisch
+Name[fr]=Néo classique
+Name[es]=Neo-Clásico
+
+Description=This tileset utilizes the set of images from the famous Gnome Mahjongg tileset called Postmodern""
+Description[ru]=Этот тайлсет использует изображения фишек из известной темы для Gnome Mahjongg под названием Постмодерн""
+Description[de]=Dieses Layout wendet die Zusammenstellung von Bilder vom berühmten Gnome Mahjong Design namens Postmodern
+Description[fr]=Ce jeu de tuiles utilise l'ensemble d'images du fameux Mahjongg Gnome appelé Postmodern
+Description[es]=Este set de fichas utiliza el conjunto de imágenes del famoso juego de fichas Gnome Mahjongg llamado posmoderno ""
+
+Author=Opensource Game Studio team
+Author[ru]=Команда Opensource Game Studio
+Author[de]=Das Team von Open Source Game Studio
+Author[fr]=Equipe Opensource Game Studio
+Author[es]=Equipo de Opensource Game Studio
+
+
 AuthorEmail=main@opengamestudio.org
-Description=This tileset utilizes the set of images from the famous Gnome Mahjongg tileset called "Postmodern"
-Description[ru]=Этот тайлсет использует изображения фишек из известной темы для Gnome Mahjongg под названием "Постмодерн"

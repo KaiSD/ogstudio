@@ -1,7 +1,17 @@
 [KMahjonggLayout]
 Name=Butterfly
 Name[ru]=Бабочка
-VersionFormat=1
+Name[de]=Schmetterling
+Name[fr]=Papillon
+Name[es]=Mariposa
+
+
 Author=KDE Games team
+Author[ru]=Команда KDE Games
+Author[de]=Das Team von KDE Games
+Author[fr]=Equipe des jeux KDE
+Author[es]=Equipo de KDE de juegos
+
+VersionFormat=1
+FileName=butterfly.layout.layout
 AuthorEmail=kde-games-devel@kde.org
-FileName=butterfly.layout

@@ -1,14 +1,21 @@
 [OGSMahjongResource]
 Name=Flowers
+Name[ru]=Цветы
 Name[de]=Blumen
 Name[fr]=Fleurs
-Name[ru]=Цветы
+Name[es]=Flores
+
 Description=The spring-inspired tileset. Original flower images were taken from: http://www.snap2objects.com
-Description[de]=Die tileset von der Feder inspiriert. Blumen-Bilder wurden entnommen aus: http://www.snap2objects.com
-Description[fr]=Le tileset inspire par le printemps. Images de fleurs ont ete prises a partir de: http://www.snap2objects.com
 Description[ru]=Весенняя тема. Изображения цветов взяты с сайта http://www.snap2objects.com
+Description[de]=Die tileset von der Feder inspiriert. Blumen-Bilder wurden entnommen aus: http://www.snap2objects.com
+Description[fr]=Le jeu de tuiles inspiré par le printemps. Les images de fleurs originales proviennent de : http://www.snap2objects.com
+Description[es]=El conjunto de fichas inspiradas en la primavera. Las imágenes originales florales fueron tomados de: http://www.snap2objects.com
+
 Author=Opensource Game Studio team
+Author[ru]=Команда Opensource Game Studio
 Author[de]=Das Team von Open Source Game Studio
 Author[fr]=Equipe de Opensource Game Studio
-Author[ru]=Команда Opensource Game Studio
+Author[es]=Equipo de Opensource Game Studio
+
+
 AuthorEmail=main@opengamestudio.org
