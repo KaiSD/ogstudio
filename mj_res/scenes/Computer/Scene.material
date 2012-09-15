@@ -7,7 +7,7 @@ material Scene
         pass
         {
 			scene_blend alpha_blend
-			set_alpha_rejection greater 128
+			alpha_rejection greater 128
             texture_unit
             {
                 texture background.dds
