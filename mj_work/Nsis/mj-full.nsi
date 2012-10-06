@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "OGS Mahjong"
-!define PRODUCT_VERSION "1.0"
+!define PRODUCT_VERSION "1.0.0"
 !define PRODUCT_PUBLISHER "Opensource Game Studio"
 !define PRODUCT_WEB_SITE "http://opengamestudio.org/"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\mj-bin.exe"
@@ -64,7 +64,7 @@ var ICONS_GROUP
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "ogs-mahjong-1.0-full-windows32.exe"
+OutFile "ogs-mahjong-full-1.0.0-windows32.exe"
 InstallDir "$PROGRAMFILES\OGS Mahjong"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -86,7 +86,7 @@ Section "Game" SEC01
   File "Game\libFreeImage.dll"
   File "Game\libfreetype.dll"
   File "Game\libgcc_s_dw2-1.dll"
-  File "Game\libmjin-0.9.dll"
+  File "Game\libmjin-1.0.dll"
   File "Game\libOIS.dll"
   File "Game\libpcre.dll"
   File "Game\libsndfile-1.dll"
@@ -293,7 +293,6 @@ Section "Game" SEC01
   File "Game\res\layouts\X_shaped.layout"
   SetOutPath "$INSTDIR\res\materials"
   File "Game\res\materials\Default.material"
-  File "Game\res\materials\DepthShadowMap.material"
   SetOutPath "$INSTDIR\res"
   File "Game\res\MenuBackground.overlay"
   File "Game\res\MenuBackgroundTransparent.png"
@@ -367,7 +366,7 @@ Section "Game" SEC01
   File "Game\res\scenes\Room\interior_bump.dds"
   File "Game\res\scenes\Room\Room.mesh"
   File "Game\res\scenes\Room\Scene.material"
-  File "Game\res\scenes\Room\Scene.old"
+
   File "Game\res\scenes\Room\Scene.scene"
   File "Game\res\scenes\Room\Table.mesh"
   SetOutPath "$INSTDIR\res\scenes\Room lite"
@@ -531,6 +530,7 @@ Section "Game" SEC01
   File "Game\res\themes\Flowers\winds2.dds"
   File "Game\res\themes\Flowers\winds3.dds"
   File "Game\res\themes\Flowers\winds4.dds"
+  File "Game\res\themes\Flowers\README"
   SetOutPath "$INSTDIR\res\themes\NeoClassic"
   File "Game\res\themes\NeoClassic\.directory"
   File "Game\res\themes\NeoClassic\bamboo1.dds"
@@ -576,8 +576,10 @@ Section "Game" SEC01
   File "Game\res\themes\NeoClassic\winds2.dds"
   File "Game\res\themes\NeoClassic\winds3.dds"
   File "Game\res\themes\NeoClassic\winds4.dds"
+  File "Game\res\themes\NeoClassic\README"
   SetOutPath "$INSTDIR\res"
   File "Game\res\VERSION"
+  SetOutPath "$INSTDIR"
 
 ; Shortcuts
   SetShellVarContext all
@@ -589,7 +591,7 @@ Section "Game" SEC01
 SectionEnd
 
 Section "Tools" SEC02
-  SetOutPath "$INSTDIR"
+  SetOutPath "$INSTDIR\Tools"
   File "Game\Tools\LayoutEditor.exe"
   File "Game\Tools\pyexpat.pyd"
   File "Game\Tools\PyQt4.QtCore.pyd"
@@ -601,19 +603,21 @@ Section "Tools" SEC02
   File "Game\Tools\SSLEAY32.dll"
   File "Game\Tools\TextureLayout.png"
   File "Game\Tools\TilesetBuilder.exe"
-  SetOutPath "$INSTDIR\UI"
+  SetOutPath "$INSTDIR\Tools\UI"
   File "Game\Tools\UI\layout.ui"
   File "Game\Tools\UI\new_layout.ui"
   File "Game\Tools\UI\setup.ui"
   File "Game\Tools\UI\tileset.ui"
-  SetOutPath "$INSTDIR"
+  SetOutPath "$INSTDIR\Tools"
   File "Game\Tools\unicodedata.pyd"
+  File "Game\Tools\_ctypes.pyd"
+  SetOutPath "$INSTDIR\Tools"
 
 ; Shortcuts
   SetShellVarContext all
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\LayoutEditor.lnk" "$INSTDIR\LayoutEditor.exe"
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\TilesetBuilder.lnk" "$INSTDIR\TilesetBuilder.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\LayoutEditor.lnk" "$INSTDIR\Tools\LayoutEditor.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\TilesetBuilder.lnk" "$INSTDIR\Tools\TilesetBuilder.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -623,6 +627,7 @@ Section -AdditionalIcons
   CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Website.lnk" "$INSTDIR\${PRODUCT_NAME}.url"
   CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk" "$INSTDIR\uninst.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
+  SetOutPath "$INSTDIR"
 SectionEnd
 
 Section -Post
@@ -657,23 +662,25 @@ Section Uninstall
   !insertmacro MUI_STARTMENU_GETFOLDER "Application" $ICONS_GROUP
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\unicodedata.pyd"
-  Delete "$INSTDIR\UI\tileset.ui"
-  Delete "$INSTDIR\UI\setup.ui"
-  Delete "$INSTDIR\UI\new_layout.ui"
-  Delete "$INSTDIR\UI\layout.ui"
-  Delete "$INSTDIR\TilesetBuilder.exe"
-  Delete "$INSTDIR\TextureLayout.png"
-  Delete "$INSTDIR\SSLEAY32.dll"
-  Delete "$INSTDIR\sip.pyd"
-  Delete "$INSTDIR\QtGui4.dll"
-  Delete "$INSTDIR\QtCore4.dll"
-  Delete "$INSTDIR\python26.dll"
-  Delete "$INSTDIR\PyQt4.QtGui.pyd"
-  Delete "$INSTDIR\PyQt4.QtCore.pyd"
-  Delete "$INSTDIR\pyexpat.pyd"
-  Delete "$INSTDIR\LayoutEditor.exe"
+  Delete "$INSTDIR\Tools\unicodedata.pyd"
+  Delete "$INSTDIR\Tools\UI\tileset.ui"
+  Delete "$INSTDIR\Tools\UI\setup.ui"
+  Delete "$INSTDIR\Tools\UI\new_layout.ui"
+  Delete "$INSTDIR\Tools\UI\layout.ui"
+  Delete "$INSTDIR\Tools\TilesetBuilder.exe"
+  Delete "$INSTDIR\Tools\TextureLayout.png"
+  Delete "$INSTDIR\Tools\SSLEAY32.dll"
+  Delete "$INSTDIR\Tools\sip.pyd"
+  Delete "$INSTDIR\Tools\QtGui4.dll"
+  Delete "$INSTDIR\Tools\QtCore4.dll"
+  Delete "$INSTDIR\Tools\python26.dll"
+  Delete "$INSTDIR\Tools\PyQt4.QtGui.pyd"
+  Delete "$INSTDIR\Tools\PyQt4.QtCore.pyd"
+  Delete "$INSTDIR\Tools\pyexpat.pyd"
+  Delete "$INSTDIR\Tools\_ctypes.pyd"
+  Delete "$INSTDIR\Tools\LayoutEditor.exe"
   Delete "$INSTDIR\res\VERSION"
+  Delete "$INSTDIR\res\themes\NeoClassic\README"
   Delete "$INSTDIR\res\themes\NeoClassic\winds4.dds"
   Delete "$INSTDIR\res\themes\NeoClassic\winds3.dds"
   Delete "$INSTDIR\res\themes\NeoClassic\winds2.dds"
@@ -718,6 +725,7 @@ Section Uninstall
   Delete "$INSTDIR\res\themes\NeoClassic\bamboo2.dds"
   Delete "$INSTDIR\res\themes\NeoClassic\bamboo1.dds"
   Delete "$INSTDIR\res\themes\NeoClassic\.directory"
+  Delete "$INSTDIR\res\themes\Flowers\README"
   Delete "$INSTDIR\res\themes\Flowers\winds4.dds"
   Delete "$INSTDIR\res\themes\Flowers\winds3.dds"
   Delete "$INSTDIR\res\themes\Flowers\winds2.dds"
@@ -876,7 +884,6 @@ Section Uninstall
   Delete "$INSTDIR\res\scenes\Room lite\.directory"
   Delete "$INSTDIR\res\scenes\Room\Table.mesh"
   Delete "$INSTDIR\res\scenes\Room\Scene.scene"
-  Delete "$INSTDIR\res\scenes\Room\Scene.old"
   Delete "$INSTDIR\res\scenes\Room\Scene.material"
   Delete "$INSTDIR\res\scenes\Room\Room.mesh"
   Delete "$INSTDIR\res\scenes\Room\interior_bump.dds"
@@ -942,7 +949,6 @@ Section Uninstall
   Delete "$INSTDIR\res\meshes\Desk.mesh"
   Delete "$INSTDIR\res\MenuBackgroundTransparent.png"
   Delete "$INSTDIR\res\MenuBackground.overlay"
-  Delete "$INSTDIR\res\materials\DepthShadowMap.material"
   Delete "$INSTDIR\res\materials\Default.material"
   Delete "$INSTDIR\res\layouts\X_shaped.layout"
   Delete "$INSTDIR\res\layouts\X_shaped.desktop"
@@ -1140,7 +1146,7 @@ Section Uninstall
   Delete "$INSTDIR\libsndfile-1.dll"
   Delete "$INSTDIR\libpcre.dll"
   Delete "$INSTDIR\libOIS.dll"
-  Delete "$INSTDIR\libmjin-0.9.dll"
+  Delete "$INSTDIR\libmjin-1.0.dll"
   Delete "$INSTDIR\libgcc_s_dw2-1.dll"
   Delete "$INSTDIR\libfreetype.dll"
   Delete "$INSTDIR\libFreeImage.dll"
@@ -1152,7 +1158,8 @@ Section Uninstall
   Delete "$INSTDIR\ALURE32.dll"
 
   RMDir "$SMPROGRAMS\$ICONS_GROUP"
-  RMDir "$INSTDIR\UI"
+  RMDir "$INSTDIR\Tools\UI"
+  RMDir "$INSTDIR\Tools"
   RMDir "$INSTDIR\res\themes\NeoClassic"
   RMDir "$INSTDIR\res\themes\Flowers"
   RMDir "$INSTDIR\res\themes\Distros"
@@ -1165,15 +1172,19 @@ Section Uninstall
   RMDir "$INSTDIR\res\music\piano"
   RMDir "$INSTDIR\res\music\modern"
   RMDir "$INSTDIR\res\music\eastern"
+  RMDir "$INSTDIR\res\music"
+  RMDir "$INSTDIR\res\themes"
   RMDir "$INSTDIR\res\meshes"
   RMDir "$INSTDIR\res\materials"
   RMDir "$INSTDIR\res\layouts"
   RMDir "$INSTDIR\res\lang"
+  RMDir "$INSTDIR\res\scenes"
   RMDir "$INSTDIR\res\CEGUI\schemes"
   RMDir "$INSTDIR\res\CEGUI\looknfeel"
   RMDir "$INSTDIR\res\CEGUI\layouts"
   RMDir "$INSTDIR\res\CEGUI\imagesets"
   RMDir "$INSTDIR\res\CEGUI\fonts"
+  RMDir "$INSTDIR\res\CEGUI"
   RMDir "$INSTDIR\res"
   RMDir "$INSTDIR"
   
@@ -1184,6 +1195,7 @@ Section Uninstall
   Delete "$SMPROGRAMS\$ICONS_GROUP\LayoutEditor.lnk"
   Delete "$DESKTOP\OGS Mahjong.lnk"
   Delete "$SMPROGRAMS\$ICONS_GROUP\OGS Mahjong.lnk"
+  RMDir "$SMPROGRAMS\$ICONS_GROUP"
 
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
