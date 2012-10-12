@@ -1,0 +1,6 @@
+<World>
+    <Event name="onStart">
+        <Handler path="scripts/world/start" />
+    </Event>
+    <Scene path="scenes/intro" />
+</World>
