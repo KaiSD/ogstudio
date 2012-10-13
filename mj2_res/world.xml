@@ -1,6 +1,8 @@
 <World>
     <Event name="onStart">
-        <Handler path="scripts/world/start" />
+        <Handler path="scripts/world/onStart" />
+        <Handler path="scripts/world/onVeryStart" />
     </Event>
     <Scene path="scenes/intro" />
+    <Scene path="scenes/mj" />
 </World>
