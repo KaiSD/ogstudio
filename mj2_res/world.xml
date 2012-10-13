@@ -5,7 +5,7 @@
     </Event>
     <Event Name="onFinish">
         <Handler Path="scripts/world/onFinish" />
-    s<s/sEvent>
+    </Event>
     <Scene Path="scenes/intro" />
     <Scene Path="scenes/mj" />
 </World>
