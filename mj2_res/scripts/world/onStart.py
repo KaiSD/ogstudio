@@ -1,5 +1,4 @@
-#import World from World
 
-def run(world):
+def run(listener):
     print "World onStart listeners:"
-    print world.onStart
+    print listener.parent.listeners["onStart"]
