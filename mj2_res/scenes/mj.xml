@@ -1,2 +1,6 @@
 <Scene>
+    <Node Name="Box" Mesh="meshes/box" />
+    <Node Name="Table" Mesh="meshes/table">
+        <Position x="0" y="-20" z="0" />
+    </Node>
 </Scene>
