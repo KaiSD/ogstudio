@@ -1,6 +1,8 @@
 <Scene>
+    <EventOnStart>scripts/scenes/mj/onStart</EventOnStart>
+    <EventOnFinish>scripts/scenes/mj/onFinish</EventOnFinish>
     <Node Name="Box" Mesh="meshes/box" />
-    <Node Name="Table" Mesh="meshes/table">
+    <Node Name="Table" Mesh="meshes/box">
         <Position x="0" y="-20" z="0" />
     </Node>
 </Scene>
