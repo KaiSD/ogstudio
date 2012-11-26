@@ -1,7 +1,7 @@
 <World>
-    <EventOnStart>scripts/world/onVeryStart</EventOnStart>
-    <EventOnStart>scripts/world/onStart</EventOnStart>
-    <EventOnFinish>scripts/world/onFinish</EventOnFinish>
-    <Scene>scenes/intro</Scene>
-    <Scene>scenes/mj</Scene>
+    <EventOnStart>scripts/world/onVeryStart.py</EventOnStart>
+    <EventOnStart>scripts/world/onStart.py</EventOnStart>
+    <EventOnFinish>scripts/world/onFinish.py</EventOnFinish>
+    <Scene>scenes/intro.xml</Scene>
+    <Scene>scenes/mj.xml</Scene>
 </World>

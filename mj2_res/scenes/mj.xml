@@ -1,8 +1,8 @@
 <Scene>
-    <EventOnStart>scripts/scenes/mj/onStart</EventOnStart>
-    <EventOnFinish>scripts/scenes/mj/onFinish</EventOnFinish>
-    <Node Name="Box" Mesh="meshes/box" />
-    <Node Name="Table" Mesh="meshes/box">
+    <EventOnStart>scripts/scenes/mj/onStart.py</EventOnStart>
+    <EventOnFinish>scripts/scenes/mj/onFinish.py</EventOnFinish>
+    <Node Name="Box" Mesh="meshes/box.osgt" />
+    <Node Name="Table" Mesh="meshes/box.osgt">
         <Position x="0" y="-20" z="0" />
     </Node>
 </Scene>
