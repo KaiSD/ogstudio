@@ -3,6 +3,6 @@
     <OnFinish>scripts/scenes/mj/onFinish.py</OnFinish>
     <Node Name="Box" Mesh="meshes/box.osgt" />
     <Node Name="Table" Mesh="meshes/box.osgt">
-        <Position x="0" y="-20" z="0" />
+        <Position x="0" y="0" z="-5" />
     </Node>
 </Scene>

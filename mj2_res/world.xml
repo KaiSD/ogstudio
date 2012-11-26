@@ -1,7 +1,6 @@
 <World>
+    <OnStart>scripts/world/StartSingleScene.py</OnStart>
     <OnStart>scripts/world/onVeryStart.py</OnStart>
-    <OnStart>scripts/world/onStart.py</OnStart>
-    <OnFinish>scripts/world/onFinish.py</OnFinish>
-    <Scene>scenes/intro.xml</Scene>
+    <OnFinish>scripts/world/FinishSingleScene.py</OnFinish>
     <Scene>scenes/mj.xml</Scene>
 </World>
