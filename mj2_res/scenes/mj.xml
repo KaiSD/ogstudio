@@ -3,12 +3,12 @@
     <OnFinish>scripts/scenes/mj/onFinish.py</OnFinish>
     <Node Name="Box" Mesh="meshes/box.osgt" />
     <Node Name="Table" Mesh="meshes/box.osgt">
-        <Position x="0" y="0" z="-5" />
-        <Scale x="10" y="1" z="10" />
+        <Position x="0" y="20" z="-10" />
+        <Scale x="5" y="1" z="5" />
     </Node>
     <Light>
-        <Ambient  x="0.2" y="0.2" z="0.2" w="1" />
-        <Diffuse  x="0.8" y="0.5" z="0.8" w="1" />
+        <Ambient  x="0.2" y="0.2" z="0.3" w="1" />
+        <Diffuse  x="0.8" y="0.6" z="0.8" w="1" />
         <Position x="4"   y="-20" z="5"   w="0" />
     </Light>
 </Scene>
