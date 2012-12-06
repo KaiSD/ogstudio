@@ -1,6 +1,10 @@
 <Scene>
     <OnStart>scripts/scenes/mj/onStart.py</OnStart>
     <OnFinish>scripts/scenes/mj/onFinish.py</OnFinish>
+    <Camera>
+        <Position x="0" y="-60" z="0" />
+        <Rotation x="90" y="15" z="0" />
+    </Camera>
     <Node Name="Box" Mesh="meshes/box.osgt" />
     <Node Name="Table" Mesh="meshes/box.osgt">
         <Position x="0" y="20" z="-10" />
