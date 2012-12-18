@@ -1,15 +1,15 @@
 <Scene>
     <OnStart>scripts/scenes/mj/onStart.py</OnStart>
     <OnFinish>scripts/scenes/mj/onFinish.py</OnFinish>
-    <Camera>
+    <Camera Name="main">
         <Position x="0" y="-60" z="0" />
         <Rotation x="90" y="15" z="0" />
     </Camera>
-    <Node Name="Box" Mesh="meshes/box.osgt" />
-    <Node Name="Table" Mesh="meshes/box.osgt">
+    <Mesh Name="Box" Mesh="meshes/box.osgt" />
+    <Mesh Name="Table" Mesh="meshes/box.osgt">
         <Position x="0" y="20" z="-10" />
         <Scale x="5" y="1" z="5" />
-    </Node>
+    </Mesh>
     <Light>
         <Ambient  x="0.2" y="0.2" z="0.3" w="1" />
         <Diffuse  x="0.8" y="0.6" z="0.8" w="1" />
