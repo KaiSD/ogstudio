@@ -4,5 +4,9 @@ def run(listener):
     world = listener.parent
     if (len(world.scenes) == 1):
         print "There's only one Scene found in the World. Starting it."
-        print "Scene to start: {0}".format(world.scenes.keys()[0])
-        world.startScene(world.scenes.keys()[0])
+        sceneName = world.scenes.keys()[0]
+        print "Scene to start: {0}".format(sceneName)
+        world.startScene(sceneName)
+        scene = world.scenes[sceneName]
+        world.player.setScene(scene.scene)
+        world.player.setActiveCamera(scene.scene.camera("main"))
