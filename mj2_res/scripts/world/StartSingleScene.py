@@ -1,4 +1,6 @@
 
+from CameraController import *
+
 def run(listener):
     print "Scenes in the World: {0}".format(len(listener.parent.scenes))
     world = listener.parent
@@ -8,5 +10,8 @@ def run(listener):
         print "Scene to start: {0}".format(sceneName)
         world.startScene(sceneName)
         scene = world.scenes[sceneName]
-        world.player.setScene(scene.scene)
-        world.player.setActiveCamera(scene.scene.camera("main"))
+        player = world.player
+        player.setScene(scene.scene)
+        player.setActiveCamera(scene.scene.camera("main"))
+        cc = CameraController()
+        player.setActiveCameraController(cc)
