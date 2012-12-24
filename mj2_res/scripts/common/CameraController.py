@@ -8,7 +8,7 @@ class CameraController(pymjin2.InputListener):
     def __init__(self):
         pymjin2.InputListener.__init__(self)
         self.camera = None
-        self.rotation = pymjin2.Vec3(90, 0, 0)
+        #self.rotation = pymjin2.Vec3(90, 0, 0)
         self.x = None
         self.y = None
         self.speed = 0.1
@@ -25,9 +25,10 @@ class CameraController(pymjin2.InputListener):
             dy = e.y - self.y
             dx *= self.speed
             dy *= self.speed
-            self.rotation.z -= dx
-            self.rotation.x -= dy
-            self.camera.setRotation(pymjin2.degreeToQuaternion(self.rotation))
+            rotation = self.camera.rotation()
+            rotation.z -= dx
+            rotation.x -= dy
+            self.camera.setRotation(rotation)
             self.x = e.x
             self.y = e.y
     def setCamera(self, camera):
