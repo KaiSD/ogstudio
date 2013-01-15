@@ -12,6 +12,6 @@ def run(listener):
         scene = world.scenes[sceneName]
         player = world.player
         player.setScene(scene.scene)
-        player.setActiveCamera(scene.scene.camera("main"))
+        player.setSceneCamera(scene.scene.child("MainPlayer").child("MainCamera"))
         cc = CameraController()
-        player.setActiveCameraController(cc)
+        player.setSceneCameraController(cc)
