@@ -1,4 +1,5 @@
 
+import pymjin2
 from CameraController import *
 
 def run(listener):
@@ -12,6 +13,8 @@ def run(listener):
         scene = world.scenes[sceneName]
         player = world.player
         player.setScene(scene.scene)
-        player.setSceneCamera(scene.scene.child("MainPlayer").child("MainCamera"))
+        player.setSceneCamera(
+            pymjin2.castSceneNodeToSceneCamera(
+                scene.scene.child("MainPlayer").child("MainCamera")))
         cc = CameraController()
         player.setSceneCameraController(cc)
