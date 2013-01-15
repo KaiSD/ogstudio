@@ -1,6 +1,7 @@
 
 import pymjin2
 from CameraController import *
+from MovementController import *
 
 def run(listener):
     print "Scenes in the World: {0}".format(len(listener.parent.scenes))
@@ -13,8 +14,14 @@ def run(listener):
         scene = world.scenes[sceneName]
         player = world.player
         player.setScene(scene.scene)
-        player.setSceneCamera(
-            pymjin2.castSceneNodeToSceneCamera(
-                scene.scene.child("MainPlayer").child("MainCamera")))
+        # Scene player.
+        scenePlayer = pymjin2.castSceneNodeToScenePlayer(
+            scene.scene.child("MainPlayer"))
+        player.setScenePlayer(scenePlayer)
+        mc = MovementController()
+        player.setScenePlayerController(mc)
+        # Scene camera.
+        player.setSceneCamera(pymjin2.castSceneNodeToSceneCamera(
+            scenePlayer.child("MainCamera")))
         cc = CameraController()
         player.setSceneCameraController(cc)

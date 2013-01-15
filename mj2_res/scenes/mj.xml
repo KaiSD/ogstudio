@@ -14,7 +14,7 @@
     <Mesh Name="Box" Mesh="meshes/box.osgt" />
     <Mesh Name="Table" Mesh="meshes/box.osgt">
         <Position x="0" y="20" z="-10" />
-        <Scale x="1" y="1" z="1" />
+        <Scale x="8" y="2" z="5" />
     </Mesh>
     <Light>
         <Ambient  x="0.2" y="0.2" z="0.3" w="1" />

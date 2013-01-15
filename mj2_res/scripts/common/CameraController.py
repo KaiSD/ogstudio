@@ -33,4 +33,5 @@ class CameraController(pymjin2.InputListener):
     def setCamera(self, camera):
         self.camera = camera
         if (self.camera):
+            self.camera.setPosition(self.camera.position())
             self.camera.setRotation(self.camera.rotation())
