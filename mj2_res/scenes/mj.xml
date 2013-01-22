@@ -18,18 +18,11 @@
         <Position x="0" y="20" z="-10" />
         <Scale x="8" y="2" z="5" />
     </Mesh>
-    <Mesh Name="RoomTable" Mesh="meshes/Table.osgt">
-        <!--<Scale x="0.2" y="0.2" z="0.2" />-->
-    </Mesh>
+    <Mesh Name="RoomTable" Mesh="meshes/Table.osgt" />
     <Light>
         <Ambient  x="0.9" y="0.9" z="0.9" w="1" />
         <Diffuse  x="1" y="1" z="1" w="1" />
-        <Position x="-4" y="-20" z="15"  w="0" />
+        <Position x="-4" y="-30" z="30"  w="0" />
     </Light>
-    <!--
-    <Mesh Name="LightBox" Mesh="meshes/box.osgt">
-        <Position x="4" y="-20" z="15" />
-        <Scale x="0.2" y="0.2" z="0.2" />
-    </Mesh>
-    -->
+    <!--<Mesh Name="Room" Mesh="meshes/Room.osgt" />-->
 </Scene>
