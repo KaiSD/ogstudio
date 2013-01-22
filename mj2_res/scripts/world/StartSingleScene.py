@@ -1,6 +1,6 @@
 
 import pymjin2
-#from ActionController import *
+from ActionController import *
 from CameraController import *
 from MovementController import *
 
@@ -27,5 +27,7 @@ def run(listener):
         cc = CameraController()
         player.setSceneCameraController(cc)
         # Action controller.
-        #ac = ActionController()
-        #player.setActionController(ac)
+        ac = ActionController()
+        ac.sceneNodeSelector.addNode(scene.scene.child("Box"))
+        ac.sceneNodeSelector.addNode(scene.scene.child("Table"))
+        player.setActionController(ac)

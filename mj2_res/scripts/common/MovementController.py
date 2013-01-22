@@ -21,6 +21,8 @@ class MovementController(pymjin2.InputListener):
                 rot.z -= self.speed * 5
             elif (e.input == pymjin2.INPUT_KEY_RIGHT):
                 rot.z += self.speed * 5
+            else:
+                return
             print "Moving to ({0}, {1}, {2})".format(pos.x, pos.y, pos.z)
             self.player.setPosition(pos)
             print "Rotating ({0}, {1}, {2})".format(rot.x, rot.y, rot.z)
