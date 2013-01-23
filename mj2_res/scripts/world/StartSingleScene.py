@@ -29,5 +29,5 @@ def run(listener):
         # Action controller.
         ac = ActionController()
         ac.sceneNodeSelector.addNode(scene.scene.child("Box"))
-        ac.sceneNodeSelector.addNode(scene.scene.child("Table"))
+        #ac.sceneNodeSelector.addNode(scene.scene.child("Table"))
         player.setActionController(ac)
