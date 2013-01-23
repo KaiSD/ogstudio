@@ -2,29 +2,24 @@
     <OnStart>scripts/scenes/mj/onStart.py</OnStart>
     <OnFinish>scripts/scenes/mj/onFinish.py</OnFinish>
     <Player Name="MainPlayer">
+        <Position x="0" y="0" z="20" />
         <!--
-        <Position x="0" y="-50" z="0" />
         <Rotation x="90" y="5" z="0" />
         -->
         <Camera Name="MainCamera">
             <Position x="0" y="-70" z="20" />
-            <Rotation x="70" y="0" z="0" />
+            <!--<Position x="0" y="0" z="30" />-->
+            <Rotation x="60" y="0" z="0" />
         </Camera>
+        <Light Name="MainLight">
+            <Ambient  x="0.9" y="0.9" z="0.9" w="1" />
+            <Diffuse  x="1"   y="1"   z="1"   w="1" />
+            <!--<Position x="-10" y="-40" z="15"  w="1" />-->
+        </Light>
     </Player>
     <Mesh Name="Box" Mesh="meshes/box.osgt" CastShadows="true">
         <Position x="0" y="-20" z="5" />
     </Mesh>
-    <!--
-    <Mesh Name="Table" Mesh="meshes/box.osgt" CastShadows="true">
-        <Position x="0" y="20" z="-10" />
-        <Scale x="8" y="2" z="5" />
-    </Mesh>
-    -->
-    <Mesh Name="RoomTable" Mesh="meshes/Table.osgt" CastShadows="true" />
-    <Light>
-        <Ambient  x="0.9" y="0.9" z="0.9" w="1" />
-        <Diffuse  x="1" y="1" z="1" w="1" />
-        <Position x="-10" y="-50" z="15"  w="1" />
-    </Light>
-    <Mesh Name="Room" Mesh="meshes/Room.osgt" />
+    <Mesh Name="Table" Mesh="meshes/Table.osgt" CastShadows="true" />
+    <Mesh Name="Room" Mesh="meshes/Room.osgt" CastShadows="false" />
 </Scene>
