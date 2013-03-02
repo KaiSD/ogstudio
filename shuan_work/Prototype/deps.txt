@@ -1,0 +1,5 @@
+To run the game, you need these python packages (you can install them with the easy_install):
+1. cocos2d-0.5.5
+2. simplui-1.0.4
+
+The game was created and tested with Python 2.7. If you want to run it with Python 3, do it on your own.
