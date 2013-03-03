@@ -12,10 +12,12 @@ import json
 class Settings(object):
     obj = None
     
-    fullscreen = False
-    sound = True
     width = 800
     height = 600
+    
+    fullscreen = False
+    sound = True
+    music = True
     fps = False
     
     mission = 0
@@ -57,5 +59,5 @@ class Settings(object):
             json.dump(data, f)
             f.close()
         except:
-            pass
+            print 
             

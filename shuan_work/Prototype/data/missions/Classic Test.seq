@@ -1,4 +1,5 @@
 [
+["Music", "data/music/In a Heartbeat.ogg"],
 ["Wait", 3],
 ["Spawn", "Aimer", 0.5],
 ["Spawn", "Straighter", 0.4],
@@ -182,7 +183,7 @@
 ["Spawn", "Rayer", 0.9],
 ["BackgroundSpeed", 0.01, 2],
 ["Wait", 2],
-["Spawn", "LastBoss", 0.5, "Boss"],
+["Spawn", "TestBoss", 0.5, "Boss"],
 ["Wait", 2],
 ["WaitEnemyHealth", "Boss", 1500],
 ["SwitchBrains", "Boss", 1],

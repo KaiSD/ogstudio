@@ -28,13 +28,20 @@ class EnemyLaser(WeaponKind):
     isGood = False
     anchor = 8, 0
     rotation = 180
-
+class EnemySpawnAimer(WeaponKind):
+    type = SPAWN
+    spawnID = 'Aimer'
+class EnemySpawnKami(WeaponKind):
+    type = SPAWN
+    spawnID = 'Kami'
 '''
 AVATAR WEAPONS
 '''
 class Empty(WeaponKind):
     type = EMPTY
     name = "None"
+    energy = 0
+    energyIdle = 0
 class Minigun(WeaponKind):
     type = PROJECTILE
     image = 'data/graphics/bullet1.png'

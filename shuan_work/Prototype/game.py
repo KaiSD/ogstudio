@@ -60,6 +60,7 @@ class MainMenu(layer.Layer):
             coui.Button('Mission', action = self.missions),
             coui.Button('Ship', action = self.ships),
             coui.Button('Options', action = self.options),
+            coui.Button('About', action = self.about),
             coui.Button('Quit', action = self.quit),
             ])
         )
@@ -79,6 +80,9 @@ class MainMenu(layer.Layer):
     def options(self, *args):
         director.push(scene.Scene(Background(), Options()))
     
+    def about(self, *args):
+        director.push(scene.Scene(Background(), About()))
+    
     def missions(self, *args):
         director.push(scene.Scene(Background(), Missions()))
     
@@ -96,9 +100,10 @@ class Options(layer.Layer):
         pos = rel(0.1, 0.25)
         dia = coui.Dialogue('Options', name='Options', moveable=False, x=pos[0], y=pos[1], content=
         coui.VLayout(children=[
-            coui.Checkbox('Fullscreen', h=100, value=settings.fullscreen, action=self.changeFullScreen),
-            coui.Checkbox('Sounds', h=100, value=settings.sound, action=self.changeSound),
-            coui.Checkbox('FPS', h=100, value=settings.fps, action=self.changeFPS),
+            coui.Checkbox('Fullscreen', h=100, value=Settings().fullscreen, action=self.changeFullScreen),
+            coui.Checkbox('Sounds', h=100, value=Settings().sound, action=self.changeSound),
+            coui.Checkbox('Music', h=100, value=Settings().music, action=self.changeMusic),
+            coui.Checkbox('FPS', h=100, value=Settings().fps, action=self.changeFPS),
             coui.Button('Back', action = self.back),
             ])
         )
@@ -108,28 +113,35 @@ class Options(layer.Layer):
     
     def back(self, *args):
         director.pop()
+        Settings().save('.settings')
     
     def changeFullScreen(self, *args):
-        if settings.fullscreen == True:
-            settings.fullscreen = False
+        if Settings().fullscreen == True:
+            Settings().fullscreen = False
             director.window.set_fullscreen(False)
         else:
-            settings.fullscreen = True
+            Settings().fullscreen = True
             director.window.set_fullscreen(True)
     
     def changeSound(self, *args):
-        if settings.sound == True:
-            settings.sound = False
+        if Settings().sound == True:
+            Settings().sound = False
         else:
-            settings.sound = True
+            Settings().sound = True
     
+    def changeMusic(self, *args):
+        if Settings().music == True:
+            Settings().music = False
+        else:
+            Settings().music = True
+
     def changeFPS(self, *args):
-        if settings.fps == True:
+        if Settings().fps == True:
             director.show_FPS = False
-            settings.fps = False
+            Settings().fps = False
         else:
             director.show_FPS = True
-            settings.fps = True
+            Settings().fps = True
 
 class Missions(layer.Layer):
     def __init__(self):
@@ -139,7 +151,7 @@ class Missions(layer.Layer):
         self.add(logo, z=1)
         #Missions list
         l = [coui.Label('Current mission:'),
-             coui.Label(missionsList[settings.mission].name, name='Current')
+             coui.Label(missionsList[Settings().mission].name, name='Current')
              ]
         for i in xrange(0, len(missionsList)):
             m = missionsList[i]
@@ -156,9 +168,42 @@ class Missions(layer.Layer):
     
     def SetMissionConstructor(self, idx):
         def setMission(*args):
-            settings.mission = idx
+            Settings().mission = idx
             self.gui.get_element_by_name('Current').text = missionsList[idx].name
         return setMission
+    
+    def back(self, button):
+        director.pop()
+        Settings().save('.settings')
+
+class About(layer.Layer):
+    def __init__(self):
+        super(About, self).__init__()
+        logo = sprite.Sprite('data/graphics/Shuan2D.png')
+        logo.position = rel(0.65,0.3)
+        self.add(logo, z=1)
+        # Ships, weapons and devices list
+        # Ships UI
+        self.gui = coui.CocosUIFrame()
+        pos = rel(0.1, 0.1)
+        dia = coui.Dialogue('Shuan 2D gameplay prototype', moveable=False, x=pos[0], y=pos[1], content=
+        coui.VLayout(children=[
+            coui.Label('This is not a game, it\'s a playable prototype,'),
+            coui.Label('To find a latest news about the game, visit the Opensource Game Studio Website.'),
+            coui.Label(''),
+            coui.Label('(с) 2012-2013 Opensource Game Studio'),
+            coui.Label('License: GPL v3'),
+            coui.Label('Third party graphics used:'),
+            coui.Label('"SpriteLib" by Ari Feldman (http://www.widgetworx.com)'),
+            coui.Label('"Spaceships" and "Fighters" by Skorpio (http://opengameart.org/users/skorpio)'),
+            coui.Label('"Free Airplane Sprite" by Mark Simpson (http://prinzeugn.deviantart.com/)'),
+            coui.Label('Music:'),
+            coui.Label('"In a Heartbeat" by Kevin MacLeod is licensed under a CC Attribution 3.0.'),
+            coui.Button('Back', action = self.back),
+            ])
+        )
+        self.gui.add(dia)
+        self.add(self.gui, z=99)
     
     def back(self, button):
         director.pop()
@@ -178,12 +223,12 @@ class Ships(layer.Layer):
             coui.HLayout(children=[
                    coui.VLayout(children=[
                         coui.Label('Current ship'),
-                        coui.Button(playerShips[settings.avatarKind].name, action=self.cycleShips, name="ShipSelector"),
-                        coui.HLayout(children=[coui.Button(playerShields[settings.avatarShields][0], name="ShieldSelector", action=self.cycleShields),
-                        coui.Button(playerReactors[settings.avatarReactor][0], name="ReactorSelector", action=self.cycleReactors)]),
-                        coui.Button(playerEngines[settings.avatarEngine][0], name="EngineSelector", action=self.cycleEngines),
+                        coui.Button(playerShips[Settings().avatarKind].name, action=self.cycleShips, name="ShipSelector"),
+                        coui.HLayout(children=[coui.Button(playerShields[Settings().avatarShields][0], name="ShieldSelector", action=self.cycleShields),
+                        coui.Button(playerReactors[Settings().avatarReactor][0], name="ReactorSelector", action=self.cycleReactors)]),
+                        coui.Button(playerEngines[Settings().avatarEngine][0], name="EngineSelector", action=self.cycleEngines),
                         coui.Label('Main gun'),
-                        coui.Button(playerGuns[settings.avatarGun].name, action=self.cycleGuns, name="GunSelector"),
+                        coui.Button(playerGuns[Settings().avatarGun].name, action=self.cycleGuns, name="GunSelector"),
                         coui.Label('Additional weapons'),
                         coui.Button('Weapon', name="Weapon1Selector", action=self.cycleWeaponConstructor(1)),
                         coui.Button('Weapon', name="Weapon2Selector", action=self.cycleWeaponConstructor(2)),
@@ -216,143 +261,143 @@ class Ships(layer.Layer):
         self.gui.add(dia)
         
         element = self.gui.get_element_by_name('Weapon5Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 7:
-            while len(settings.avatarWeapons) < 5:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[4]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 7:
+            while len(Settings().avatarWeapons) < 5:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[4]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon4Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 6:
-            while len(settings.avatarWeapons) < 4:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[3]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 6:
+            while len(Settings().avatarWeapons) < 4:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[3]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon3Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 5:
-            while len(settings.avatarWeapons) < 3:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[2]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 5:
+            while len(Settings().avatarWeapons) < 3:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[2]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon2Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 4:
-            while len(settings.avatarWeapons) < 2:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[1]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 4:
+            while len(Settings().avatarWeapons) < 2:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[1]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon1Selector')
-        if len(settings.avatarWeapons) < 1:
-                settings.avatarWeapons.append(0)
-        element.text = playerWeapons[settings.avatarWeapons[0]].name
+        if len(Settings().avatarWeapons) < 1:
+                Settings().avatarWeapons.append(0)
+        element.text = playerWeapons[Settings().avatarWeapons[0]].name
         
         self.add(self.gui, z=99)
     
     def cycleShips(self, *args):
-        if settings.avatarKind < len(playerShips) - 1:
-            settings.avatarKind += 1
+        if Settings().avatarKind < len(playerShips) - 1:
+            Settings().avatarKind += 1
         else:
-            settings.avatarKind = 0
+            Settings().avatarKind = 0
         
         element = self.gui.get_element_by_name('ShipSelector')
-        element.text = playerShips[settings.avatarKind].name
+        element.text = playerShips[Settings().avatarKind].name
         element = self.gui.get_element_by_name('Weapon5Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 7:
-            if len(settings.avatarWeapons) < 5:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[4]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 7:
+            if len(Settings().avatarWeapons) < 5:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[4]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon4Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 6:
-            if len(settings.avatarWeapons) < 4:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[3]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 6:
+            if len(Settings().avatarWeapons) < 4:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[3]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon3Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 5:
-            if len(settings.avatarWeapons) < 3:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[2]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 5:
+            if len(Settings().avatarWeapons) < 3:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[2]].name
             element.visible = True
         else:
             element.visible = False
         element = self.gui.get_element_by_name('Weapon2Selector')
-        if len(playerShips[settings.avatarKind].weaponSlots) >= 4:
-            if len(settings.avatarWeapons) < 2:
-                settings.avatarWeapons.append(0)
-            element.text = playerWeapons[settings.avatarWeapons[1]].name
+        if len(playerShips[Settings().avatarKind].weaponSlots) >= 4:
+            if len(Settings().avatarWeapons) < 2:
+                Settings().avatarWeapons.append(0)
+            element.text = playerWeapons[Settings().avatarWeapons[1]].name
             element.visible = True
         else:
             element.visible = False
     
     def cycleShields(self, *args):
-        if settings.avatarShields < len(playerShields) - 1:
-            settings.avatarShields += 1
+        if Settings().avatarShields < len(playerShields) - 1:
+            Settings().avatarShields += 1
         else:
-            settings.avatarShields = 0
+            Settings().avatarShields = 0
         element = self.gui.get_element_by_name('ShieldSelector')
-        element.text = playerShields[settings.avatarShields][0]
+        element.text = playerShields[Settings().avatarShields][0]
         self.gui.ui.update_layout()
     
     def cycleReactors(self, *args):
-        if settings.avatarReactor < len(playerReactors) - 1:
-            settings.avatarReactor += 1
+        if Settings().avatarReactor < len(playerReactors) - 1:
+            Settings().avatarReactor += 1
         else:
-            settings.avatarReactor = 0
+            Settings().avatarReactor = 0
         element = self.gui.get_element_by_name('ReactorSelector')
-        element.text = playerReactors[settings.avatarReactor][0]
+        element.text = playerReactors[Settings().avatarReactor][0]
         self.gui.ui.update_layout()
     
     def cycleEngines(self, *args):
-        if settings.avatarEngine < len(playerEngines) - 1:
-            settings.avatarEngine += 1
+        if Settings().avatarEngine < len(playerEngines) - 1:
+            Settings().avatarEngine += 1
         else:
-            settings.avatarEngine = 0
+            Settings().avatarEngine = 0
         element = self.gui.get_element_by_name('EngineSelector')
-        element.text = playerEngines[settings.avatarEngine][0]
+        element.text = playerEngines[Settings().avatarEngine][0]
         self.gui.ui.update_layout()
     
     def cycleGuns(self, *args):
-        if settings.avatarGun < len(playerGuns) - 1:
-            settings.avatarGun += 1
+        if Settings().avatarGun < len(playerGuns) - 1:
+            Settings().avatarGun += 1
         else:
-            settings.avatarGun = 0
+            Settings().avatarGun = 0
         element = self.gui.get_element_by_name('GunSelector')
-        element.text = playerGuns[settings.avatarGun].name
+        element.text = playerGuns[Settings().avatarGun].name
         self.gui.ui.update_layout()
     
     def cycleWeaponConstructor(self, idx):
         def cycleWeapon(*args):
-            while len(settings.avatarWeapons) < idx:
-                settings.avatarWeapons.append(0)
-            if settings.avatarWeapons[idx - 1] < len(playerWeapons) - 1:
-                settings.avatarWeapons[idx - 1] += 1
+            while len(Settings().avatarWeapons) < idx:
+                Settings().avatarWeapons.append(0)
+            if Settings().avatarWeapons[idx - 1] < len(playerWeapons) - 1:
+                Settings().avatarWeapons[idx - 1] += 1
             else:
-                settings.avatarWeapons[idx - 1] = 0
+                Settings().avatarWeapons[idx - 1] = 0
             element = self.gui.get_element_by_name('Weapon' + str(idx) + 'Selector')
-            element.text = playerWeapons[settings.avatarWeapons[idx - 1]].name
+            element.text = playerWeapons[Settings().avatarWeapons[idx - 1]].name
             self.gui.ui.update_layout()
         
         return cycleWeapon
 
-    
     def back(self, *args):
         director.pop()
+        Settings().save('.settings')
 
 if __name__ == "__main__":
     settings = Settings()
-    settings.load('.settings')
-    director.init(width=settings.width, height=settings.height, caption="Shuan 2D " + VERSION, fullscreen=settings.fullscreen, vsync=False)
+    Settings().load('.settings')
+    director.init(width=Settings().width, height=Settings().height, caption="Shuan 2D " + VERSION, fullscreen=Settings().fullscreen, vsync=False)
     
     missionsList.append(SurvivalTemplate())
     for i in os.listdir('data/missions'):
@@ -364,6 +409,5 @@ if __name__ == "__main__":
             missionsList.append(m)
     
     startMenu = scene.Scene(Background(), Start())
-    director.show_FPS = settings.fps
+    director.show_FPS = Settings().fps
     director.run(startMenu)
-    settings.save('.settings')

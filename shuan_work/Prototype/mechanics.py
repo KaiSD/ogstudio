@@ -199,7 +199,7 @@ class Mission(layer.Layer):
     def addExplosion(self, pos, kind=0):
         def die(object):
             object.kill()
-        explosion = sprite.Sprite(loadAnimation('data/graphics/miniExplosion.png', 6, 1, 0.05))
+        explosion = sprite.Sprite(loadAnimation('data/graphics/basicExplosion.png', 9, 1, 0.05))
         explosion.position = pos
         self.add(explosion)
         explosion.do(actions.Delay(0.3) + actions.CallFuncS(die))

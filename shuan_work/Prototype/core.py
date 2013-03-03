@@ -20,6 +20,7 @@ EMPTY = -1
 PROJECTILE = 0
 RAY = 1
 TURRET = 2
+SPAWN = 3
 
 '''
 ACTION CLASSES
@@ -35,6 +36,20 @@ class ActionShoot(actions.InstantAction):
 class ActionAimAndShoot(actions.InstantAction):
     def start(self):
         self.target.shoot(True)
+
+class ActionAimMovement(actions.InstantAction):
+    def __init__(self, speed, lifetime):
+        super(ActionAimMovement, self).__init__()
+        self.speed = speed
+        self.lifetime = lifetime
+    def start(self):
+        actor = self.target
+        target = actor.target
+        angle = math.atan2(target.position[1] - actor.position[1], target.position[0] - actor.position[0])
+        dy = self.speed * math.sin(angle)
+        dx = self.speed * math.cos(angle)
+        self.target.velocity = dx, dy
+        actor.do(actions.Move() | actions.Delay(self.lifetime) +  ActionDie())
 
 class ActionStopShooting(actions.InstantAction):
     def start(self):
@@ -90,6 +105,9 @@ class WeaponKind(object):
     # Ray params
     anchor = 0, 0
     rotation = 0
+    
+    # Spawn params
+    spawnID = ''
     
     startSound = None
     loopSound = None
@@ -295,6 +313,8 @@ class Avatar(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
+            else:
+                self.playShield()
         else:
             self.takenDamage += damage
         
@@ -327,11 +347,15 @@ class Avatar(ASprite):
         
         self.setTimeScale(modSpeed)
     
-    def kill(self):
-        super(Avatar, self).kill()
+    def playShield(self):
+        def die(object):
+            object.kill()
+        shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatar.png', 4, 1, 0.05))
+        self.add(shield)
+        shield.do(actions.Delay(0.3) + actions.CallFuncS(die))
 
 class Enemy(ASprite):
-    def __init__(self, owner, kind, x, y):
+    def __init__(self, owner, kind, x, y, target=None):
         super(Enemy, self).__init__(kind.image)
         self.owner = owner
         self.life = kind.life
@@ -341,7 +365,7 @@ class Enemy(ASprite):
         self.settings = Settings()
         self.rays = []
         self.position = rel(x,y)
-        self.target = None
+        self.target = target
         owner.enemies.append(self)
         owner.add(self, z=4)
         self.soundList = []
@@ -368,6 +392,9 @@ class Enemy(ASprite):
                     Bullet(self, w)
             elif laser and w.type == RAY:
                 self.rays.append(Ray(self, w))
+            elif w.type == SPAWN:
+                pos = abs2rel(self.position[0], self.position[1])
+                Enemy(self.owner, enemies[w.spawnID], pos[0], pos[1], self.target)
             if self.settings.sound:
                 if not w.startSound is None:
                     w.startSound.play()

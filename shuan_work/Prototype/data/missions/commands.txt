@@ -20,3 +20,15 @@ _AvatarHealth_ - avatar health
 _AvatarHPosition_ - Avatar horizontal on-screen position
 _AvatarVPosition_ - Avatar vertical ob-screen position
 _Score_ - Current game score
+
+Valid enemies:
+Dummy
+Aimer
+Straighter
+Kami
+Burster
+Rayer
+Behemoth
+
+Miniboss
+LastBoss

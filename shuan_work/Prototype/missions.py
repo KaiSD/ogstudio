@@ -51,16 +51,21 @@ MISSIONS
 '''
 class SurvivalTemplate(Mission):
     name = "Survival"
-    music = 'data/music/Dirty_Road_Blues.mp3'
+    music = 'data/music/In a Heartbeat.ogg'
     backgroundLayer = AnimatedBackground
     
-    enemyKinds = (enemies['Aimer'],
+#    enemyKinds = [enemies['Summoner']]
+    
+    enemyKinds = (
+                  enemies['Dummy'],
                   enemies['Aimer'],
                   enemies['Aimer'],
                   enemies['Straighter'],
                   enemies['Straighter'],
+                  enemies['Kami'],
                   enemies['Burster'],
-                  enemies['Rayer'])
+                  enemies['Rayer']
+                  )
     
     def __init__(self):
         super(SurvivalTemplate, self).__init__()
@@ -70,9 +75,8 @@ class SurvivalTemplate(Mission):
         if self.timer == 0:
             if not self.music is None:
                 playMusic(self.music)
-            self.backgroundLayer.setTimeScale(4, 18)
         if random.random() < (self.timer + 10) / 1000.0:
-            Enemy(self, self.enemyKinds[random.randint(0,int(self.timer / (20.0 + self.timer / self.ecount)))], random.random(), -0.1).target = self.avatar
+            Enemy(self, self.enemyKinds[random.randint(0,int(self.timer / (20.0 + self.timer / self.ecount)))], random.random(), -0.1, self.avatar)
         self.timer += 1
 
 missionsList = (SurvivalTemplate)
@@ -102,8 +106,7 @@ class SequenceTemplate(Mission):
             if len(args) == 2:
                 Enemy(self, enemies[args[0]], args[1], -0.1).target = self.avatar
             elif len(args) == 3:
-                enemy = Enemy(self, enemies[args[0]], args[1], -0.1)
-                enemy.target = self.avatar
+                enemy = Enemy(self, enemies[args[0]], args[1], -0.1, self.avatar)
                 meter = text.Label('',
                         font_name='Times New Roman',
                         font_size=16,

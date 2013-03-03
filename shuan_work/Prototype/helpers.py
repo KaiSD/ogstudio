@@ -19,6 +19,15 @@ LIBRARIES
 animations = {}
 sounds = {}
 
+enemies = {}
+playerShips = tuple()
+playerGuns = tuple()
+playerWeapons = tuple()
+playerDevices = tuple()
+playerShields = tuple()
+playerEngines = tuple()
+playerReactors = tuple()
+
 '''
 HELPERS
 '''
@@ -32,7 +41,7 @@ def relY(yRel):
 
 def abs2rel(x, y):
     size = director.get_window_size()
-    return int(x/size[0]), 1-int(y/size[1])
+    return x/size[0], 1-y/size[1]
 
 def loadAnimation(filename, cols, rows, period, loop=False):
     if not filename in animations.keys():
@@ -43,7 +52,7 @@ def loadAnimation(filename, cols, rows, period, loop=False):
 
 def loadSound(filename, volume=1):
     if not Settings().sound:
-        print 'ignoring ', filename
+#        print 'ignoring ', filename
         return
     if len(sounds) == 0:
         mixer.init()
@@ -54,7 +63,7 @@ def loadSound(filename, volume=1):
     return sounds[filename]
 
 def playMusic(filename):
-    if not Settings().sound:
+    if not Settings().music:
         return
     mixer.music.load(filename)
     mixer.music.play(-1)
