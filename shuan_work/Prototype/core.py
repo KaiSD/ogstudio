@@ -7,7 +7,7 @@ Shuan gameplay prototype core module
 (c) 2012 Opensource Game Studio Team (http://opengamestudio.org)
 '''
 
-from cocos import menu, layer, scene, scenes, text, sprite, actions, collision_model, euclid
+from cocos import menu, layer, scene, scenes, text, sprite, actions, collision_model, euclid, cocosnode
 import math
 import random
 import copy
@@ -21,6 +21,7 @@ PROJECTILE = 0
 RAY = 1
 TURRET = 2
 SPAWN = 3
+AURA = 4
 
 '''
 ACTION CLASSES
@@ -139,6 +140,8 @@ class AvatarKind(object):
 class EnemyKind(object):
     image = loadAnimation('data/graphics/enemy1.png', 2, 1, 0.5, True)
     life = 10
+    shields = 0
+    shieldsRegen = 0
     damage = 10
     score = 1
     actions = actions.MoveBy((0,-900),duration=6) + ActionDie()
@@ -147,13 +150,25 @@ class EnemyKind(object):
     def __init__(self):
         super(EnemyKind, self).__init__()
     
-    def switchBrains(self, idx):
+    def switchBrains(self, instance, idx):
         pass
 
 class EffectKind(object):
-    def __init__(self):
-        super(EffectKind, self).__init__()
-
+    name = 'Null'
+    duration = 0
+    
+    def start(self, instance):
+        pass
+    
+    def effect(self, instance):
+        pass
+    
+    def check(self, instance):
+        return True
+    
+    def end(self, instance):
+        pass
+    
 '''
 TS-SPRITE CLASS
 '''
@@ -198,10 +213,68 @@ class ASprite(sprite.Sprite):
         for j in self.actions:
             if issubclass(j.__class__, self.ActionScalableInterval):
                 j.setTimeScale(ts)
+'''
+INTERNAL KINDS
+'''
+class ShieldOverloadKind(EffectKind):
+    name = 'Shields overloaded'
+    
+    def start(self, instance):
+        target = instance.target
+        instance.duration = target.shields / target.shieldsRegen
+        target.playShield(-1)
+    
+    def effect(self, instance):
+        instance.absorbedDamage = instance.shields
+    
+    def end(self, instance):
+        instance.absorbedDamage = 0
+        instance.playShield(1)
 
+EffectShieldOverload = ShieldOverloadKind()
 '''
 ELEMENT CLASSES
 '''
+class EffectRunner(cocosnode.CocosNode):
+    
+    def __init__(self, kind, target, source=None):
+        super(EffectRunner, self).__init__()
+        self.target = target
+        self.name = kind.name
+        self.duration = kind.duration
+        if source == None:
+            self.source = target
+        else:
+            self.source = source
+        kind.start(self)
+        
+        if self.duration == 0:
+            self.constant = True
+        else:
+            self.constant = False
+        
+        self.effect = kind.effect
+        self.check = kind.check
+        self.end = kind.end
+        target.runners.append(self)
+        self.schedule_interval(self.update, 1)
+        target.add(self)
+    
+    def set_batch(self, batch, groups=None, z=0):
+        pass
+        
+    def update(self, *args):
+        if not self.check(self):
+            self.end(self.target)
+            self.target.runners.remove(self)
+            self.kill()
+        elif not self.constant:
+            self.duration -= 1
+            if self.duration == 0:
+                self.end(self.target)
+                self.target.runners.remove(self)
+                self.kill()
+
 class Bullet(ASprite):
     def __init__(self, owner, kind, target=None):
         super(Bullet, self).__init__(kind.image)
@@ -268,13 +341,15 @@ class Ray(ASprite):
         super(Ray, self).kill()
 
 class Avatar(ASprite):
+
+    
     def __init__(self, owner, kind):
         self.settings = Settings()
         super(Avatar, self).__init__(kind.image)
         self.owner = owner
         self.life = kind.life
         self.shields = 0
-        self.shiendsRegen = 0
+        self.shieldsRegen = 0
         self.absorbedDamage = 0.0
         self.takenDamage = 0
         self.weapons = ()
@@ -284,12 +359,13 @@ class Avatar(ASprite):
         self.consume = 0
         self.hp = self.life
         self.sp = self.shields
+        self.runners = []
         self.schedule_interval(self.regen, 0.1)
     
     def setup(self, gunsList, weaponsList, devicesList, shieldsList, enginesList, reactorList):
         settings = self.settings
         self.shields = shieldsList[settings.avatarShields][1]
-        self.shiendsRegen = shieldsList[settings.avatarShields][2]
+        self.shieldsRegen = shieldsList[settings.avatarShields][2]
         self.engine = enginesList[settings.avatarEngine][1]
         self.reactor = reactorList[settings.avatarReactor][1]
         self.consume = enginesList[settings.avatarEngine][2] + shieldsList[settings.avatarShields][3]
@@ -313,6 +389,7 @@ class Avatar(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
+                  EffectRunner(EffectShieldOverload, self)
             else:
                 self.playShield()
         else:
@@ -340,17 +417,25 @@ class Avatar(ASprite):
             modSpeed = modSpeed * 80 / rc
         
         if self.absorbedDamage > 0:
-            self.absorbedDamage -= self.shiendsRegen*modShields/10
+            self.absorbedDamage -= self.shieldsRegen*modShields/10
         if self.absorbedDamage < 0:
             self.absorbedDamage = 0
-        self.sp = self.shields - self.absorbedDamage
         
+        for r in self.runners:
+            r.effect(self)
+        
+        self.sp = self.shields - self.absorbedDamage
         self.setTimeScale(modSpeed)
     
-    def playShield(self):
+    def playShield(self, idx=0):
         def die(object):
             object.kill()
-        shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatar.png', 4, 1, 0.05))
+        if idx == 0:
+            shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatar.png', 4, 1, 0.05))
+        elif idx > 0:
+            shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatarRevived.png', 4, 1, 0.05))
+        elif idx < 0:
+            shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatarBlocked.png', 4, 1, 0.05))
         self.add(shield)
         shield.do(actions.Delay(0.3) + actions.CallFuncS(die))
 
@@ -359,6 +444,10 @@ class Enemy(ASprite):
         super(Enemy, self).__init__(kind.image)
         self.owner = owner
         self.life = kind.life
+        self.shields = kind.shields
+        self.shieldsRegen = kind.shieldsRegen
+        self.absorbedDamage = 0.0
+        self.takenDamage = 0
         self.damage = kind.damage
         self.score = kind.score
         self.weapons = kind.weapons
@@ -370,14 +459,31 @@ class Enemy(ASprite):
         owner.add(self, z=4)
         self.soundList = []
         self.switchBrains = kind.switchBrains
+        self.runners = []
+        self.aura = None 
+        self.schedule_interval(self.regen, 1)
         self.do(kind.actions)
+        self._gonnaDie = False
+        self._shieldSize = kind.image.get_max_height() / 36.0
+        self._auraCache = []
     
     def takeDamage(self, damage):
-        self.life -= damage
-        if self.life <= 0:
+        if self.shields - self.absorbedDamage > 0:
+            self.absorbedDamage += damage
+            if self.absorbedDamage > self.shields:
+                  self.takenDamage += self.absorbedDamage - self.shields
+                  self.absorbedDamage = self.shields
+                  EffectRunner(EffectShieldOverload, self)
+            else:
+                self.playShield()
+        else:
+            self.takenDamage += damage
+        
+        if self.takenDamage > self.life:
             self.owner.addExplosion(self.position)
             self.owner.score += self.score
             self.kill()
+            
     
     def shoot(self, aim=False):
         if len(self.rays) > 0:
@@ -392,6 +498,8 @@ class Enemy(ASprite):
                     Bullet(self, w)
             elif laser and w.type == RAY:
                 self.rays.append(Ray(self, w))
+            elif w.type == AURA:
+                self.aura = w.runner
             elif w.type == SPAWN:
                 pos = abs2rel(self.position[0], self.position[1])
                 Enemy(self.owner, enemies[w.spawnID], pos[0], pos[1], self.target)
@@ -406,17 +514,55 @@ class Enemy(ASprite):
     def stopShooting(self):
         for i in self.rays:
             i.kill()
+        self.aura = None
         for i in self.soundList:
             i.stop()
         del self.soundList[:]
     
     def kill(self):
-        if self in self.owner.enemies:
-            self.owner.enemies.remove(self)
-#        self.owner.cmea.remove_tricky(self)
-        if self.owner.target == self:
-                self.owner.target = None
-        super(Enemy, self).kill()
+        if not self._gonnaDie:
+            self._gonnaDie = True
+            if self in self.owner.enemies:
+                self.owner.enemies.remove(self)
+#            self.owner.cmea.remove_tricky(self)
+            if self.owner.target == self:
+                    self.owner.target = None
+            super(Enemy, self).kill()
     
     def disarm(self):
         self.weapons = tuple()
+    
+    def regen(self, *args):
+        if self.absorbedDamage > 0:
+            self.absorbedDamage -= self.shieldsRegen
+        if self.absorbedDamage < 0:
+            self.absorbedDamage = 0
+        
+        for r in self.runners:
+            r.effect(self)
+        
+        if self.aura:
+            aura = self.aura
+            for e in self.owner.enemies:
+                p = self.position
+                ep = e.position
+                if (p[0] - ep[0]) ** 2 - (p[1] - ep[1]) ** 2 <= aura.distance**2:
+                    if not e in self._auraCache:
+                        self._auraCache.append(e)
+                        EffectRunner(aura, e, self)
+                elif e in self._auraCache:
+                    self._auraCache.remove(e)
+                
+    
+    def playShield(self, idx=0):
+        def die(object):
+            object.kill()
+        if idx == 0:
+            shield = sprite.Sprite(loadAnimation('data/graphics/ShieldEnemy.png', 4, 1, 0.05))
+        elif idx > 0:
+            shield = sprite.Sprite(loadAnimation('data/graphics/ShieldEnemyRevived.png', 4, 1, 0.05))
+        elif idx < 0:
+            shield = sprite.Sprite(loadAnimation('data/graphics/ShieldEnemyBlocked.png', 4, 1, 0.05))
+        shield.scale = self._shieldSize
+        self.add(shield)
+        shield.do(actions.Delay(0.3) + actions.CallFuncS(die))

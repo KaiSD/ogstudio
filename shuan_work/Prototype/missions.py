@@ -54,7 +54,11 @@ class SurvivalTemplate(Mission):
     music = 'data/music/In a Heartbeat.ogg'
     backgroundLayer = AnimatedBackground
     
-#    enemyKinds = [enemies['Summoner']]
+#    enemyKinds = [enemies['Buffer'],
+#                  enemies['Dummy'],
+#                  enemies['Aimer'],
+#                  enemies['Straighter'],
+#                  ]
     
     enemyKinds = (
                   enemies['Dummy'],

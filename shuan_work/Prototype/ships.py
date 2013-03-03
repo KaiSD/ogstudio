@@ -57,6 +57,7 @@ class EnemyDummy(EnemyKind):
     damage = 10
     score = 1
     actions = actions.MoveTo((int(random.random()*800),-900),duration=9) + ActionDie()
+
 class EnemyAimer(EnemyKind):
     """
     Тарелка
@@ -67,6 +68,7 @@ class EnemyAimer(EnemyKind):
     score = 1
     weapons = (EnemyGun(),)
     actions = actions.MoveBy((0,-900),duration=6) + ActionDie() | actions.Repeat(actions.RandomDelay(1, 3) + ActionAimAndShoot())
+
 class EnemyStraighter(EnemyKind):
     """
     Мясо
@@ -77,6 +79,7 @@ class EnemyStraighter(EnemyKind):
     score = 1
     weapons = (EnemyGun(),)
     actions = actions.MoveTo((int(random.random()*800),-900),duration=6) + ActionDie() | actions.Repeat(actions.RandomDelay(0.5, 2) + ActionShoot())
+
 class EnemyKami(EnemyKind):
     """
     Камикадзе
@@ -86,6 +89,7 @@ class EnemyKami(EnemyKind):
     damage = 20
     score = 1
     actions = actions.MoveBy((0,-100),duration=1) + ActionAimMovement(400, 3)
+
 class EnemyRayer(EnemyKind):
     """
     Фонарь
@@ -96,6 +100,7 @@ class EnemyRayer(EnemyKind):
     score = 3
     weapons = (EnemyLaser(),)
     actions = actions.MoveTo((int(random.random()*800),-900),duration=10) + ActionDie() | actions.Repeat(actions.RandomDelay(0.5, 2) + ActionShoot() + actions.RandomDelay(2, 4) + ActionStopShooting())
+
 class EnemyBurster(EnemyKind):
     """
     Спаммер
@@ -106,6 +111,19 @@ class EnemyBurster(EnemyKind):
     score = 2
     weapons = (EnemyGun(),)
     actions = actions.MoveTo((int(random.random()*800),-900),duration=12) + ActionDie() | actions.Repeat(actions.Delay(0.5) + ActionShoot())
+
+class EnemyBuffer(EnemyKind):
+    """
+    Болельщица
+    """
+    image = loadAnimation('data/graphics/enemy3.png', 2, 1, 0.5, True)
+    life = 20
+    damage = 20
+    shields = 20
+    shieldsRegen = 1
+    score = 5
+    weapons = (EnemyShieldProjector(),)
+    actions = ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + actions.MoveBy((0,-900),duration=5) + ActionDie() | actions.Repeat(actions.RandomDelay(0.5, 2) + ActionShoot() + actions.RandomDelay(2, 4) + ActionStopShooting())
 
 class EnemyBehemoth(EnemyKind):
     """
@@ -154,13 +172,13 @@ class EnemyTestBoss(EnemyKind):
     
     def switchBrains(self, instance, idx):
         if idx == 0:
-            instance.weapons = EnemyLastBoss.weapons
-            newActions = EnemyLastBoss.actions
+            instance.weapons = EnemyTestBoss.weapons
+            newActions = EnemyTestBoss.actions
         elif idx == 1:
-            instance.weapons = EnemyLastBoss.weapons2
+            instance.weapons = EnemyTestBoss.weapons2
             newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(ActionRandomMovement(duration=8)) | actions.Repeat(actions.Delay(0.5) + ActionAimAndShoot()) | actions.Repeat(actions.Delay(2) + ActionStopShooting())
         elif idx == 2:
-            instance.weapons = EnemyLastBoss.weapons2
+            instance.weapons = EnemyTestBoss.weapons2
             newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(ActionRandomMovement(duration=4)) | actions.Repeat(actions.Delay(0.2) + ActionAimAndShoot())    
         instance.stop()
         instance.do(ActionStopShooting() + newActions)
@@ -171,6 +189,7 @@ enemies['Straighter'] = EnemyStraighter()
 enemies['Kami'] = EnemyKami()
 enemies['Burster'] = EnemyBurster()
 enemies['Rayer'] = EnemyRayer()
+enemies['Buffer'] = EnemyBuffer()
 enemies['Behemoth'] = EnemyBehemoth()
 enemies['Summoner'] = EnemySummoner()
 enemies['Miniboss'] = EnemyMiniBoss()

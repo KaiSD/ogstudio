@@ -349,10 +349,21 @@ class Mission(layer.Layer):
         # Updating labels
         if self.avatar.shields > 0:
             self.lifeLabel.element.text = 'Armor (Shields): %i (%i)' % (self.avatar.hp, self.avatar.sp)
+            if self.avatar.sp == 0:
+                self.lifeLabel.element.color = (255, 255, 0, 255)
+            else:
+                self.lifeLabel.element.color = (255, 255, 255, 255)
         else:
             self.lifeLabel.element.text = 'Armor: %i' % (self.avatar.hp)
-        self.scoreLabel.element.text = 'Score: %i' % (self.score)
+        
         self.energyLaber.element.text = 'Energy: %i%%' % (int(self.avatar.consume * 100 / self.avatar.reactor))
+        if self.avatar.consume > self.avatar.reactor:
+            self.energyLaber.element.color = (255, 255, 0, 255)
+        else:
+            self.energyLaber.element.color = (255, 255, 255, 255)
+        
+        self.scoreLabel.element.text = 'Score: %i' % (self.score)
+        
         for e in self.namedEnemies.keys():
             self.meters[e].element.text = '%s: %i' % (e, self.namedEnemies[e].life)
 
