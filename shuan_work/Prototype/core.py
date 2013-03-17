@@ -22,6 +22,11 @@ RAY = 1
 TURRET = 2
 SPAWN = 3
 AURA = 4
+EFFECT = 5 
+
+EGSIMPLE = 0
+EGNOSHIELDS = 1
+EGBOOSTSHIELDS = 2
 
 '''
 ACTION CLASSES
@@ -88,20 +93,31 @@ class ActionFadeTimescale(actions.IntervalAction ):
 '''
 KINDS
 '''
-class WeaponKind(object):
+class DeviceKind(object):
     position = 0, 9
     damage = 2
     energy = 20
     energyIdle = 5 
     damageToShieldsMod = 1
+    ammo = 0
     isGood = True
-    name = "Weapon"
+    name = "Unknown device"
+    image = ""
     
     type = PROJECTILE
     # Projectile and turret params
     velocity = 0, 1600
     lifetime = 0.5
     pof = 1
+    
+    # Turret params
+    rotation = False
+    keepTarget = False
+    
+    # Projectile params
+    directions = 0
+    angle = 0
+    spread = 0
     
     # Ray params
     anchor = 0, 0
@@ -110,20 +126,29 @@ class WeaponKind(object):
     # Spawn params
     spawnID = ''
     
+    # Effect and Aura params
+    runner = None
+    
+    # Sound
     startSound = None
     loopSound = None
     endSound = None
     soundVolume = 0.5
     
     def __init__(self, dx=0, dy=0):
-        super(WeaponKind, self).__init__()
+        super(DeviceKind, self).__init__()
         self.position = self.position[0] + dx, self.position[1] + dy 
         if not self.startSound is None:
             self.startSound = loadSound(self.startSound, self.soundVolume)
         if not self.endSound is None:
             self.endSound = loadSound(self.endSound, self.soundVolume)
         if not self.loopSound is None:
-            self.loopSound = loadSound(self.loopSound, self.soundVolume) 
+            self.loopSound = loadSound(self.loopSound, self.soundVolume)
+        
+        if self.ammo == 0:
+            self.infinite = True
+        else:
+            self.infinite = False
 
 class AvatarKind(object):
     image = loadAnimation('data/graphics/avatarShip.png', 3, 1, 0.1, True)
@@ -156,17 +181,18 @@ class EnemyKind(object):
 class EffectKind(object):
     name = 'Null'
     duration = 0
+    group = EGSIMPLE
     
     def start(self, instance):
         pass
     
-    def effect(self, instance):
+    def effect(self, target):
         pass
     
-    def check(self, instance):
+    def check(self, target):
         return True
     
-    def end(self, instance):
+    def end(self, target):
         pass
     
 '''
@@ -218,18 +244,21 @@ INTERNAL KINDS
 '''
 class ShieldOverloadKind(EffectKind):
     name = 'Shields overloaded'
+    group = EGNOSHIELDS
     
     def start(self, instance):
         target = instance.target
         instance.duration = target.shields / target.shieldsRegen
         target.playShield(-1)
     
-    def effect(self, instance):
-        instance.absorbedDamage = instance.shields
+    def effect(self, target):
+        target.absorbedDamage = target.shields
     
     def end(self, instance):
-        instance.absorbedDamage = 0
-        instance.playShield(1)
+        if not instance.timeToDie:
+            target = instance.target
+            target.absorbedDamage = 0
+            target.playShield(1)
 
 EffectShieldOverload = ShieldOverloadKind()
 '''
@@ -241,6 +270,7 @@ class EffectRunner(cocosnode.CocosNode):
         super(EffectRunner, self).__init__()
         self.target = target
         self.name = kind.name
+        self.group = kind.group
         self.duration = kind.duration
         if source == None:
             self.source = target
@@ -259,29 +289,39 @@ class EffectRunner(cocosnode.CocosNode):
         target.runners.append(self)
         self.schedule_interval(self.update, 1)
         target.add(self)
+        self.timeToDie = False
     
     def set_batch(self, batch, groups=None, z=0):
         pass
         
     def update(self, *args):
-        if not self.check(self):
-            self.end(self.target)
+        if (not self.check(self)) or self.timeToDie:
+            self.end(self)
             self.target.runners.remove(self)
             self.kill()
         elif not self.constant:
             self.duration -= 1
             if self.duration == 0:
-                self.end(self.target)
+                self.end(self)
                 self.target.runners.remove(self)
                 self.kill()
 
 class Bullet(ASprite):
-    def __init__(self, owner, kind, target=None):
+    def __init__(self, owner, kind, target=None, angle=0):
         super(Bullet, self).__init__(kind.image)
         self.position = owner.position[0] + kind.position[0], owner.position[1] + kind.position[1]
         self.damage = kind.damage
-        self.velocity = kind.velocity
+        if angle == 0:
+            self.velocity = kind.velocity
+        else:
+            speed = kind.velocity[1]
+            a = (90 - angle)/57.3
+            self.velocity = speed * math.cos(a), speed * math.sin(a)
+            self.rotation = angle
         self.isGood = kind.isGood
+        self.needRotate = kind.rotation
+        self.speed = abs(self.velocity[1])
+        
         lifetime = kind.lifetime
         
         self.layer = owner.owner
@@ -293,16 +333,35 @@ class Bullet(ASprite):
         
         if not target is None:
             self.aim(target)
+            if kind.keepTarget:
+                self.target = target
+                self.schedule_interval(self.reAim, 0.1)
         
         self.layer.add(self, z=5)
         self.do(actions.Move() | actions.Delay(lifetime) +  ActionDie())
     
-    def aim(self, target):
-        speed = abs(self.velocity[1])
+    def aim(self, target=None):
+        speed = self.speed
         angle = math.atan2(target.position[1] - self.position[1], target.position[0] - self.position[0])
         dy = speed * math.sin(angle)
         dx = speed * math.cos(angle)
         self.velocity = dx, dy
+        if self.needRotate:
+            self.rotation = int(90 - angle*57.3)
+    
+    def reAim(self, *args):
+        if self.target == None or self.target._gonnaDie:
+            self.unschedule(self.reAim)
+            return
+        else:
+            speed = self.speed
+            target = self.target
+            angle = math.atan2(target.position[1] - self.position[1], target.position[0] - self.position[0])
+            dy = speed * math.sin(angle)
+            dx = speed * math.cos(angle)
+            self.velocity = dx, dy
+            if self.needRotate:
+                self.rotation = int(90 - angle*57.3)
     
     def kill(self):
         if self.isGood:
@@ -352,7 +411,8 @@ class Avatar(ASprite):
         self.shieldsRegen = 0
         self.absorbedDamage = 0.0
         self.takenDamage = 0
-        self.weapons = ()
+        self.weapons = tuple()
+        self.devices = kind.devices
         self._wSlots = kind.weaponSlots
         self._dSlots = kind.deviceSlots
         self.engine = kind.engine

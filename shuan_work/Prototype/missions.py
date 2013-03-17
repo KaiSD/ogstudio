@@ -53,22 +53,30 @@ class SurvivalTemplate(Mission):
     name = "Survival"
     music = 'data/music/In a Heartbeat.ogg'
     backgroundLayer = AnimatedBackground
-    
-#    enemyKinds = [enemies['Buffer'],
-#                  enemies['Dummy'],
-#                  enemies['Aimer'],
-#                  enemies['Straighter'],
-#                  ]
+    min = 0.05
+    max = 0.5
     
     enemyKinds = (
+                  enemies['Dummy'],
                   enemies['Dummy'],
                   enemies['Aimer'],
                   enemies['Aimer'],
                   enemies['Straighter'],
                   enemies['Straighter'],
                   enemies['Kami'],
+                  enemies['Kami'],
+                  enemies['Straighter'],
+                  enemies['Straighter'],
                   enemies['Burster'],
-                  enemies['Rayer']
+                  enemies['Rayer'],
+                  enemies['Aimer'],
+                  enemies['Aimer'],
+                  enemies['Straighter'],
+                  enemies['Buffer'],
+                  enemies['Burster'],
+                  enemies['Minador'],
+                  enemies['Behemoth'],
+                  enemies['Summoner'],
                   )
     
     def __init__(self):
@@ -79,8 +87,8 @@ class SurvivalTemplate(Mission):
         if self.timer == 0:
             if not self.music is None:
                 playMusic(self.music)
-        if random.random() < (self.timer + 10) / 1000.0:
-            Enemy(self, self.enemyKinds[random.randint(0,int(self.timer / (20.0 + self.timer / self.ecount)))], random.random(), -0.1, self.avatar)
+        if random.random() < min(max((self.timer + 10) / 2000.0, self.min), self.max):
+            Enemy(self, self.enemyKinds[random.randint(0,int(self.timer / (10 + self.timer / self.ecount)))], random.random(), -0.1, self.avatar)
         self.timer += 1
 
 missionsList = (SurvivalTemplate)

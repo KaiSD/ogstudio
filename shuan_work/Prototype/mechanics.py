@@ -63,12 +63,18 @@ class Mission(layer.Layer):
                                 font_name='Times New Roman',
                                 font_size=16,
                                 anchor_x='left', anchor_y='center')
+        self.devicesLabel =  text.Label('[1] - Recharge, [2] - Rocket, [3] - ...',
+                                font_name='Times New Roman',
+                                font_size=16,
+                                anchor_x='center', anchor_y='bottom')
         self.lifeLabel.position = rel(0.1,0.1)
         self.energyLaber.position = rel(0.1,0.15)
         self.scoreLabel.position = rel(0.1,0.2)
+        self.devicesLabel.position = rel(0.5,1)
         self.add(self.lifeLabel, z=10)
         self.add(self.energyLaber, z=10)
         self.add(self.scoreLabel, z=10)
+        self.add(self.devicesLabel, z=10)
         self.add(self.cursor, z=99)
     
     def setup(self):
@@ -101,21 +107,22 @@ class Mission(layer.Layer):
     def on_mouse_press (self, x, y, button, modifiers):
         if button == pyglet.window.mouse.LEFT:
             for w in self.avatar.weapons:
-                if w.type == TURRET:
-                    self.schedule_interval(self.autoAim, 0.5)
-                    self.schedule_interval(self.shootTurret, w.pof, w)
-                elif w.type == PROJECTILE:
-                    self.shootBullet(0, w)
-                    self.schedule_interval(self.shootBullet, w.pof, w)
-                elif w.type == RAY:
-                    self.shootLaser(w)
-                if self.avatar.settings.sound:
-                    if not w.startSound is None:
-                        w.startSound.play()
-                    if not w.loopSound is None:
-                        if not w.loopSound in self.soundList:
-                            w.loopSound.play(-1)
-                            self.soundList.append(w.loopSound)
+                if w.infinite or w.ammo > 0:
+                    if w.type == TURRET:
+                        self.schedule_interval(self.autoAim, 0.5)
+                        self.schedule_interval(self.shootTurret, w.pof, w)
+                    elif w.type == PROJECTILE:
+                        self.shootBullet(0, w)
+                        self.schedule_interval(self.shootBullet, w.pof, w)
+                    elif w.type == RAY:
+                        self.shootLaser(w)
+                    if self.avatar.settings.sound:
+                        if not w.startSound is None:
+                            w.startSound.play()
+                        if not w.loopSound is None:
+                            if not w.loopSound in self.soundList:
+                                w.loopSound.play(-1)
+                                self.soundList.append(w.loopSound)
                 self.avatar.consume += w.energy
         elif button == pyglet.window.mouse.RIGHT:
             pass
@@ -166,16 +173,49 @@ class Mission(layer.Layer):
             stopAllSounds()
             stopMusic()
             self.missionAborted()
+        elif symbol == pyglet.window.key._1:
+            if len(self.avatar.devices) > 0:
+                w = self.avatar.devices[0]
+                if w.type == EFFECT:
+                    if w.infinite or w.ammo > 0:
+                        EffectRunner(w.runner, self.avatar)
+                        w.ammo -= 1
+                if w.type == TURRET:
+                    self.autoAim()
+                    self.shootTurret(0, w)
+                if w.type == PROJECTILE:
+                    self.shootBullet(0, w)
+        elif symbol == pyglet.window.key._2:
+            if len(self.avatar.devices) > 1:
+                w = self.avatar.devices[1]
+                if w.type == EFFECT:
+                    if w.infinite or w.ammo > 0:
+                        EffectRunner(w.runner, self.avatar)
+                        w.ammo -= 1
+                if w.type == TURRET:
+                    self.autoAim()
+                    self.shootTurret(0, w)
+                if w.type == PROJECTILE:
+                    self.shootBullet(0, w)
         return True
     
-    def shootBullet(self, *args):
-        Bullet(self.avatar, args[1], None)
+    def shootBullet(self, timer, weapon):
+        if weapon.infinite or weapon.ammo > 0:
+            if weapon.directions > 1:
+                for i in xrange(0, weapon.directions):
+                    Bullet(self.avatar, weapon, None, weapon.angle + (2.0 * i / (weapon.directions - 1) - 1) * weapon.spread)
+            else:
+                Bullet(self.avatar, weapon)
+            weapon.ammo -= 1
     
-    def shootTurret(self, *args):
-        Bullet(self.avatar, args[1], self.target)
+    def shootTurret(self, timer, weapon):
+        if weapon.infinite or weapon.ammo > 0:
+            Bullet(self.avatar, weapon, self.target)
+            weapon.ammo -= 1
     
-    def shootLaser(self, *args):
-        Ray(self.avatar, args[0])
+    def shootLaser(self, weapon):
+        Ray(self.avatar, weapon)
+        weapon.ammo -= 1
     
     def stopLaser(self, *args):
         for ray in self.avatarRay:

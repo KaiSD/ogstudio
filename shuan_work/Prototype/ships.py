@@ -19,6 +19,7 @@ class AvatarMK1(AvatarKind):
     name = "Avatar MK1"
     
     weaponSlots = (-5, 7, 0)
+    devices = (Recharger(), Swarm())
     
     def __init__(self):
         super(AvatarKind, self).__init__()
@@ -30,6 +31,7 @@ class AvatarMK2(AvatarKind):
     name = "Avatar MK2"
     
     weaponSlots = (-5, 7, -13, 13)
+    devices = (Recharger(), Swarm())
     
     def __init__(self):
         super(AvatarKind, self).__init__()
@@ -41,6 +43,7 @@ class AvatarMK3(AvatarKind):
     name = "Avatar MK3"
     
     weaponSlots = (-5, 7, 0, -13, 13)
+    devices = (Recharger(), Swarm())
     
     def __init__(self):
         super(AvatarKind, self).__init__()
@@ -57,6 +60,26 @@ class EnemyDummy(EnemyKind):
     damage = 10
     score = 1
     actions = actions.MoveTo((int(random.random()*800),-900),duration=9) + ActionDie()
+
+class EnemyMine(EnemyKind):
+    """
+    Мина
+    """
+    image = loadAnimation('data/graphics/enemyMine.png', 2, 1, 0.5, True)
+    life = 10
+    damage = 10
+    score = 0
+    actions = actions.MoveBy((0,60),duration=1) + ActionAimMovement(100, 9)
+
+class EnemyDumbMine(EnemyKind):
+    """
+    Глупая Мина
+    """
+    image = loadAnimation('data/graphics/enemyMine.png', 2, 1, 0.5, True)
+    life = 10
+    damage = 10
+    score = 0
+    actions = actions.MoveBy((0,60),duration=1) + actions.MoveBy((0,-900),duration=9) + ActionDie()
 
 class EnemyAimer(EnemyKind):
     """
@@ -116,14 +139,14 @@ class EnemyBuffer(EnemyKind):
     """
     Болельщица
     """
-    image = loadAnimation('data/graphics/enemy3.png', 2, 1, 0.5, True)
+    image = loadAnimation('data/graphics/enemy7.png', 2, 1, 0.5, True)
     life = 20
     damage = 20
     shields = 20
     shieldsRegen = 1
     score = 5
     weapons = (EnemyShieldProjector(),)
-    actions = ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + actions.MoveBy((0,-900),duration=5) + ActionDie() | actions.Repeat(actions.RandomDelay(0.5, 2) + ActionShoot() + actions.RandomDelay(2, 4) + ActionStopShooting())
+    actions = ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + actions.MoveBy((0,-900),duration=5) + ActionDie() | ActionShoot()
 
 class EnemyBehemoth(EnemyKind):
     """
@@ -133,19 +156,30 @@ class EnemyBehemoth(EnemyKind):
     life = 100
     damage = 50
     score = 5
-    weapons = (EnemyGun(-15,-30), EnemyGun(15,-30))
+    weapons = (EnemyGun(-15,-30), EnemyGun(0,-30), EnemyGun(15,-30))
     actions = ActionRandomMovement(duration=3) + ActionRandomMovement(duration=3) + ActionRandomMovement(duration=3) + actions.MoveBy((0,-900),duration=6) + ActionDie() | actions.Repeat(actions.RandomDelay(0.5, 2) + ActionAimAndShoot()) | actions.Repeat(actions.Delay(0.5) + ActionShoot())
 
 class EnemySummoner(EnemyKind):
     """
     Нянька
     """
-    image = loadAnimation('data/graphics/enemy6.png', 2, 1, 0.1, True)
+    image = loadAnimation('data/graphics/enemy8.png', 2, 1, 0.1, True)
     life = 100
     damage = 50
     score = 5
-    weapons = (EnemySpawnAimer(), )
+    weapons = (EnemySpawnAimer(), EnemyGun(-15,-30), EnemyGun(15,-30))
     actions = ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + actions.MoveBy((0,-900),duration=5) + ActionDie() | actions.Repeat(actions.Delay(3) + ActionShoot())
+
+class EnemyMinador(EnemyKind):
+    """
+    Минадор
+    """
+    image = loadAnimation('data/graphics/enemy9.png', 2, 1, 0.1, True)
+    life = 100
+    damage = 50
+    score = 5
+    weapons = (EnemySpawnMine(), )
+    actions = ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + ActionRandomMovement(duration=5) + actions.MoveBy((0,-900),duration=5) + ActionDie() | actions.Repeat(actions.Delay(2) + ActionShoot())
 
 class EnemyMiniBoss(EnemyKind):
     """
@@ -184,14 +218,18 @@ class EnemyTestBoss(EnemyKind):
         instance.do(ActionStopShooting() + newActions)
 
 enemies['Dummy'] = EnemyDummy()
+enemies['Mine'] = EnemyMine()
+enemies['DumbMine'] = EnemyDumbMine()
 enemies['Aimer'] = EnemyAimer()
 enemies['Straighter'] = EnemyStraighter()
 enemies['Kami'] = EnemyKami()
 enemies['Burster'] = EnemyBurster()
 enemies['Rayer'] = EnemyRayer()
 enemies['Buffer'] = EnemyBuffer()
+enemies['Minador'] = EnemyMinador()
 enemies['Behemoth'] = EnemyBehemoth()
 enemies['Summoner'] = EnemySummoner()
+
 enemies['Miniboss'] = EnemyMiniBoss()
 enemies['TestBoss'] = EnemyTestBoss()
 

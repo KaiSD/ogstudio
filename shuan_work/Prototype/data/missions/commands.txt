@@ -28,7 +28,9 @@ Straighter
 Kami
 Burster
 Rayer
+Buffer
 Behemoth
+Summoner
 
 Miniboss
 LastBoss
