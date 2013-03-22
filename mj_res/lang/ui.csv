@@ -7,6 +7,9 @@
 "DESC_AUTHOR_EMAIL","Author email:","Почта автора:","Autor E-Mail:","Courriel de l'auteur :","Correo electrónico del Autor:"
 "DESC_DESCRIPTION","Description:","Описание:","Beschreibung:","Description :","Descripción:"
 "FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:","Entrer votre nom :","Introduce tu nombre:"
+"FINISHED_ON_LINE_MSG_NONE",,,,,
+"FINISHED_ON_LINE_MSG_READY","Your game has successfully been rated on-line.",,,,
+"FINISHED_ON_LINE_MSG_WAITING","Please, wait while the server validates your game.",,,,
 "FINISHED_TITLE_VICTORY","Victory","Победа","Sieg","Victoire","Victoria"
 "FINISHED_TITLE_LOSS","Loss","Поражение","Niederlage","Perdu","Derrota"
 "GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das beim letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt.","La disposition jouée la dernière fois est introuvable. Une autre a été utilisée à  la place.","La capa con la que has jugado la última vez no ha sido encontrada. Otra se utilizó una vez."
@@ -332,31 +335,41 @@ Miguel de Dios - Traducción al Español."
 Anton Chernov - Room model.
 Timur Malikin - TileHigh and TileMed tile models.
 Raquel Ravanini - images for ""Classic"" theme.
-Kevin MacLeod, Dano, Fenster, JewelBeat  - music.
+Kevin MacLeod - all tracks in ""Eastern"" and ""Piano"" music packs. Tracks ""Funkorama"", ""Neo Western"" and ""Protofunk"" in ""Modern"" music pack.
+Dano - Tracks ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" and ""What you think"" in ""Modern"" music pack.
+Fenster - Track ""Free Software"" in ""Modern"" music pack.
  
 You can find more info on third-party resources, their licenses and copyrights in README files, placed in themes or music packs directories.","Сторонние ресурсы:
 Антон Чернов - модель Комнаты.
 Тимур Маликин - модели фишек: TileHigh и TileMed.
 Raquel Ravanini - изображения для темы оформления ""Classic"".
-Kevin MacLeod, Dano, Fenster, JewelBeat  - музыка.
+Kevin MacLeod - все музыкальные треки в разделах ""Eastern"" и ""Piano"". Треки ""Funkorama"", ""Neo Western"" и ""Protofunk"" в разделе ""Modern"".
+Dano - Музыкальные треки ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" и ""What you think"" в разделе ""Modern"".
+Fenster — Музыкальный трек ""Free Software"" в разделе ""Modern"".
  
 Более подробно об использованных сторонних ресурсах, их лицензиях и копирайтах вы можете узнать из файлов README, расположенных в папках тем оформления и музыкальных разделов.","Andere Ressourcen:
 Anton Chernov - Raum-Modell.
 Timur Malikin - Spielsteinmodelle TileHigh und TileMed.
 Raquel Ravanini - Bilder für ""Classic"" theme.
-Kevin MacLeod, Dano, Fenster, JewelBeat  - musik.
+Kevin MacLeod - alle Musikstücke in den ""Eastern"" und ""Piano"" Musik-Paketen. Musikstücke ""Funkorama"", ""Neo Western"" und ""Protofunk"" im ""Modern"" Musikpaket.
+Dano - Musikstücke ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" und ""What you think"" im ""Modern"" Musikpaket.
+Fenster - Musikstück ""Free Software"" im""Modern"" Musikpaket.
  
 Mehr Infos über andere Ressourcen, ihre Lizenzen und Urheberrechte sind in den Verzeichnissen der Themen oder Musikpakete als Readme-Datei zu finden.","Ressources tierces :
 Anton Chernov - Modèle de pièce.
 Timur Malikin - modèles de tuiles TileHigh et TileMed.
 Raquel Ravanini - images pour le thème ""Classic"".
-Kevin MacLeod, Dano, Fenster, JewelBeat  - musique.
+Kevin MacLeod - toutes les pistes dans les packs de musique ""Eastern"" et ""Piano"". Pistes ""Funkorama"", ""Neo Western"" et ""Protofunk"" dans le pack de musique ""Modern"".
+Dano - pistes ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" et ""What you think"" dans le pack de musique ""Modern"".
+Fenster - piste ""Free Software"" dans le pack de musique ""Modern"".
  
 Vous pouvez trouver plus d'informations sur les ressources tierces, leurs licences et droits de copie dans les fichiers README, placés dans les dossiers des thèmes ou packs de musique.","Terceros recursos multimedia:
 Anton Chernov - Modelo de la habitación.
 Timur Malikin - TileHigh y TileMed de los modelos de fichas.
 Raquel Ravanini - imágenes para el tema ""Classic"".
-Kevin MacLeod, Dano, Fenster, JewelBeat  - música.
+Kevin MacLeod - todas las pistas de música en ""Eastern"" y ""Piano"" de los paquetes de música. Las pistas ""Funkorama"", ""Neo Western"" y ""Protofunk"" en el paquete de música ""Modern"".
+Dano - pistas de música ""Crazy from the message"", ""King or an alien"", ""Sun spark"", ""The time isnt right"", ""The wire"", ""Today then tomorrow"" y ""What you think"" en el paquete de música ""Modern"".
+Fenster - pista de música ""Free Software"" en el paquete de música ""Modern"".
  
 Puedes encontrar mas información de los recursos de terceros, sus licencias y derechos de autor en los ficheros README, que estan en los directorios de los temas visuales o los paquetes de música."
 "INFO_YOUR_HELP","Your help","Ваша помощь","Ihre Hilfe","Votre aide","Tu ayuda"
@@ -604,6 +617,7 @@ Entrez votre nom et vérifiez les statistiques pour voir si vous êtes en tête.
  
 ¡Felicitaciones! ¡Has ganado!
 Escriba su nombre y echa un vistazo a las estadísticas para ver si has llegado a la cima de puntuaciones."
+"TUTORIAL_VICTORY_ON_LINE","Victory in an on-line game",,,,
 "URL_DONATE","http://opengamestudio.org/donate","http://opengamestudio.org/donate","http://opengamestudio.org/donate","http://opengamestudio.org/donate","http://opengamestudio.org/donate"
 "URL_JOIN","http://opengamestudio.org/lang/en/join-us ","http://opengamestudio.org/lang/ru/join-us ","http://opengamestudio.org/lang/en/join-us ","http://opengamestudio.org/lang/en/join-us ","http://opengamestudio.org/lang/en/join-us "
 "URL_SURVEY","http://opengamestudio.org/lang/en/ogs-mahjong-testing-survey","http://opengamestudio.org/lang/ru/ogs-mahjong-testing-survey","http://opengamestudio.org/lang/en/ogs-mahjong-testing-survey","http://opengamestudio.org/lang/en/ogs-mahjong-testing-survey","http://opengamestudio.org/lang/en/ogs-mahjong-testing-survey"

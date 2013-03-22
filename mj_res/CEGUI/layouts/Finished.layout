@@ -13,6 +13,10 @@
             <Property Name="HorzFormatting" Value="HorzCentred" />
             <Property Name="Font" Value="Large" />
         </Window>
+        <Window Type="Vanilla/StaticText" Name="Finished/OnLine" >
+            <Property Name="UnifiedAreaRect" Value="{{0.1,0},{0.5,-100},{0.9,0},{0.5,100}}" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
         <Window Type="Vanilla/StaticText" Name="Finished/Rating" >
             <Property Name="Text" Value="FINISHED_ENTER_YOUR_NAME" />
             <Property Name="VertFormatting" Value="TopAligned" />
