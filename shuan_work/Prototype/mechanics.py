@@ -24,14 +24,14 @@ class Mission(layer.Layer):
         
         self.bounds = (20, director.get_window_size()[0]-20, 30, director.get_window_size()[1]-10)
         self.cursor = sprite.Sprite('data/graphics/target.png')
-        self.avatar = None
         
         # Game Mechanics init
-        self.schedule_interval(self.logic, 0.2)
         self.timer = 0
         self.lastTimerValue = 0
         self.score = 0
         self.target = None
+        self.schedule_interval(self.logic, 0.2)
+        self.schedule_interval(self.autoAim, 0.5)
         
         self.namedEnemies = {}
         self.meters = {}
@@ -63,7 +63,7 @@ class Mission(layer.Layer):
                                 font_name='Times New Roman',
                                 font_size=16,
                                 anchor_x='left', anchor_y='center')
-        self.devicesLabel =  text.Label('[1] - Recharge, [2] - Rocket, [3] - ...',
+        self.devicesLabel =  text.Label('[1] - Recharge, [2] - Rocket, [3] - Satelite',
                                 font_name='Times New Roman',
                                 font_size=16,
                                 anchor_x='center', anchor_y='bottom')
@@ -83,11 +83,13 @@ class Mission(layer.Layer):
             self.backgroundLayer = self.__class__.backgroundLayer
             self.reset()
         # Avatar setup
-        self.avatar = Avatar(self, playerShips[Settings().avatarKind])
-        self.avatar.setup(playerGuns, playerWeapons, playerDevices, playerShields, playerEngines, playerReactors)
-        self.avatarHelpers.append(self.avatar)
-        self.avatar.position = rel(0.5,0.5)
-        self.add(self.avatar, z=6)
+        avatar = Avatar(self, playerShips[Settings().avatarKind])
+        avatar.setup(playerGuns, playerWeapons, playerDevices, playerShields, playerEngines, playerReactors)
+        self.avatarHelpers.append(avatar)
+        avatar.position = rel(0.5,0.5)
+        self.add(avatar, z=6)
+        currents['layerObject'] = self
+        currents['avatarObject'] = avatar
         self.ready = False
     
     def reset(self):
@@ -96,43 +98,41 @@ class Mission(layer.Layer):
     def on_mouse_motion (self, x, y, dx, dy):
         bounds = self.bounds
         mouse = euclid.Vector2(x,y)
-        apos = euclid.Vector2(self.avatar.position[0],self.avatar.position[1])
+        apos = euclid.Vector2(currents['avatarObject'].position[0],currents['avatarObject'].position[1])
         dist = len(apos - mouse)
         self.cursor.position = x,y
-        self.avatar.stop()
-        self.avatar.do(actions.MoveTo((max(bounds[0],min(x,bounds[1])),
+        currents['avatarObject'].stop()
+        currents['avatarObject'].do(actions.MoveTo((max(bounds[0],min(x,bounds[1])),
                                        max(bounds[2],min(y,bounds[3]))),
-                                       duration=dist/self.avatar.engine))
+                                       duration=dist/currents['avatarObject'].engine))
     
     def on_mouse_press (self, x, y, button, modifiers):
         if button == pyglet.window.mouse.LEFT:
-            for w in self.avatar.weapons:
+            for w in currents['avatarObject'].weapons:
                 if w.infinite or w.ammo > 0:
                     if w.type == TURRET:
-                        self.schedule_interval(self.autoAim, 0.5)
                         self.schedule_interval(self.shootTurret, w.pof, w)
                     elif w.type == PROJECTILE:
                         self.shootBullet(0, w)
                         self.schedule_interval(self.shootBullet, w.pof, w)
                     elif w.type == RAY:
                         self.shootLaser(w)
-                    if self.avatar.settings.sound:
+                    if currents['avatarObject'].settings.sound:
                         if not w.startSound is None:
                             w.startSound.play()
                         if not w.loopSound is None:
                             if not w.loopSound in self.soundList:
                                 w.loopSound.play(-1)
                                 self.soundList.append(w.loopSound)
-                self.avatar.consume += w.energy
+                currents['avatarObject'].consume += w.energy
         elif button == pyglet.window.mouse.RIGHT:
             pass
         self.on_mouse_drag(x, y, 0, 0, 0, 0)
     
     def on_mouse_release (self, x, y, button, modifiers):
         if button == pyglet.window.mouse.LEFT:
-            for w in self.avatar.weapons:
+            for w in currents['avatarObject'].weapons:
                 if w.type == TURRET:
-                    self.unschedule(self.autoAim)
                     self.unschedule(self.shootTurret)
                 elif w.type == PROJECTILE:
                     self.unschedule(self.shootBullet)
@@ -140,33 +140,33 @@ class Mission(layer.Layer):
                     self.stopLaser()
                 elif w.type == EMPTY:
                     pass
-                if self.avatar.settings.sound:
+                if currents['avatarObject'].settings.sound:
                     if not w.endSound is None:
                         w.endSound.play()
                     if not w.loopSound is None:
                         w.loopSound.stop()
                         if w.loopSound in self.soundList:
                             self.soundList.remove(w.loopSound)
-                self.avatar.consume -= w.energy
+                currents['avatarObject'].consume -= w.energy
         if button == pyglet.window.mouse.RIGHT:
             pass
     
     def on_mouse_drag(self, x, y, dx, dy, buttons, modifiers):
         bounds = self.bounds
         mouse = euclid.Vector2(x,y)
-        apos = euclid.Vector2(self.avatar.position[0],self.avatar.position[1])
+        apos = euclid.Vector2(currents['avatarObject'].position[0],currents['avatarObject'].position[1])
         dist = len(apos - mouse)
         self.cursor.position = x,y
-        self.avatar.stop()
-        self.avatar.do(actions.MoveTo((max(bounds[0],min(x,bounds[1])),
+        currents['avatarObject'].stop()
+        currents['avatarObject'].do(actions.MoveTo((max(bounds[0],min(x,bounds[1])),
                                        max(bounds[2],min(y,bounds[3]))),
-                                       duration=dist/self.avatar.engine))
+                                       duration=dist/currents['avatarObject'].engine))
         for ray in self.avatarRay:
             ray.stop()
-            ray.timeScale = self.avatar.timeScale
+            ray.timeScale = currents['avatarObject'].timeScale
             ray.do(actions.MoveTo((max(bounds[0]+ray.offset[0],min(x+ray.offset[0],bounds[1]+ray.offset[0])),
                                        max(bounds[2]+ray.offset[1],min(y+ray.offset[1],bounds[3]+ray.offset[1]))),
-                                       duration=dist/self.avatar.engine))
+                                       duration=dist/currents['avatarObject'].engine))
     
     def on_key_press(self, symbol, modifiers):
         if symbol == pyglet.window.key.ESCAPE:
@@ -174,47 +174,87 @@ class Mission(layer.Layer):
             stopMusic()
             self.missionAborted()
         elif symbol == pyglet.window.key._1:
-            if len(self.avatar.devices) > 0:
-                w = self.avatar.devices[0]
+            if len(currents['avatarObject'].devices) > 0:
+                w = currents['avatarObject'].devices[0]
                 if w.type == EFFECT:
                     if w.infinite or w.ammo > 0:
-                        EffectRunner(w.runner, self.avatar)
+                        EffectRunner(w.runner, currents['avatarObject'])
                         w.ammo -= 1
                 if w.type == TURRET:
-                    self.autoAim()
                     self.shootTurret(0, w)
                 if w.type == PROJECTILE:
                     self.shootBullet(0, w)
+                if w.type == SPAWN:
+                    pos = abs2rel(*currents['avatarObject'].position)
+                    Helper(self.owner, helpers[w.spawnID], pos[0], pos[1])
         elif symbol == pyglet.window.key._2:
-            if len(self.avatar.devices) > 1:
-                w = self.avatar.devices[1]
+            if len(currents['avatarObject'].devices) > 1:
+                w = currents['avatarObject'].devices[1]
                 if w.type == EFFECT:
                     if w.infinite or w.ammo > 0:
-                        EffectRunner(w.runner, self.avatar)
+                        EffectRunner(w.runner, currents['avatarObject'])
                         w.ammo -= 1
                 if w.type == TURRET:
-                    self.autoAim()
                     self.shootTurret(0, w)
                 if w.type == PROJECTILE:
                     self.shootBullet(0, w)
+                if w.type == SPAWN:
+                    pos = abs2rel(*currents['avatarObject'].position)
+                    Helper(self.owner, helpers[w.spawnID], pos[0], pos[1])
+        elif symbol == pyglet.window.key._3:
+            if len(currents['avatarObject'].devices) > 2:
+                w = currents['avatarObject'].devices[2]
+                if w.type == EFFECT:
+                    if w.infinite or w.ammo > 0:
+                        EffectRunner(w.runner, currents['avatarObject'])
+                        w.ammo -= 1
+                if w.type == TURRET:
+                    self.shootTurret(0, w)
+                if w.type == PROJECTILE:
+                    self.shootBullet(0, w)
+                if w.type == SPAWN:
+                    pos = abs2rel(*currents['avatarObject'].position)
+                    Helper(self, helpers[w.spawnID], pos[0], pos[1])
         return True
     
     def shootBullet(self, timer, weapon):
+        free = bulletsFree.get(weapon, []) 
+        avatar = currents['avatarObject']
         if weapon.infinite or weapon.ammo > 0:
             if weapon.directions > 1:
-                for i in xrange(0, weapon.directions):
-                    Bullet(self.avatar, weapon, None, weapon.angle + (2.0 * i / (weapon.directions - 1) - 1) * weapon.spread)
+                if not weapon.oneByOne:
+                    for i in xrange(0, weapon.directions):
+                        if free:
+                            free[0].reinstate(avatar, None, weapon.angle + (2.0 * i / (weapon.directions - 1) - 1) * weapon.spread)
+                        else:
+                            Bullet(avatar, weapon, None, weapon.angle + (2.0 * i / (weapon.directions - 1) - 1) * weapon.spread)
+                else:
+                    i = weapon.tick % weapon.directions
+                    angle = (weapon.angle + (2.0 * i / (weapon.directions - 1) - 1) * weapon.spread) * weapon.amod
+                    if free:
+                        free[0].reinstate(avatar, None, angle)
+                    else:
+                        Bullet(avatar, weapon, None, angle)
+                    weapon.tick += 1
             else:
-                Bullet(self.avatar, weapon)
+                if free:
+                    free[0].reinstate(avatar, None, weapon.angle * weapon.amod)
+                else:
+                    Bullet(avatar, weapon, None, weapon.angle * weapon.amod)
             weapon.ammo -= 1
     
     def shootTurret(self, timer, weapon):
+        free = bulletsFree.get(weapon, []) 
+        avatar = currents['avatarObject']
         if weapon.infinite or weapon.ammo > 0:
-            Bullet(self.avatar, weapon, self.target)
+            if free:
+                free[0].reinstate(avatar, self.target)
+            else:
+                Bullet(currents['avatarObject'], weapon, self.target)
             weapon.ammo -= 1
     
     def shootLaser(self, weapon):
-        Ray(self.avatar, weapon)
+        Ray(currents['avatarObject'], weapon)
         weapon.ammo -= 1
     
     def stopLaser(self, *args):
@@ -224,8 +264,8 @@ class Mission(layer.Layer):
     def autoAim(self, *args):
         target = self.target
         enemies = self.enemies
-        posX = self.avatar.position[0]
-        posY = self.avatar.position[1]
+        posX = currents['avatarObject'].position[0]
+        posY = currents['avatarObject'].position[1]
         dist = 99999
         for i in enemies:
             ep = i.position
@@ -235,6 +275,8 @@ class Mission(layer.Layer):
                     target = i
                     dist = d
         self.target = target
+        for h in self.avatarHelpers:
+            h.target = target
     
     def addExplosion(self, pos, kind=0):
         def die(object):
@@ -242,7 +284,7 @@ class Mission(layer.Layer):
         explosion = sprite.Sprite(loadAnimation('data/graphics/basicExplosion.png', 9, 1, 0.05))
         explosion.position = pos
         self.add(explosion)
-        explosion.do(actions.Delay(0.3) + actions.CallFuncS(die))
+        explosion.do(actionDelay03 + actions.CallFuncS(die))
         sound = loadSound('data/sounds/explosion.wav', 0.7)
         if not sound is None:
             sound.play()
@@ -256,22 +298,22 @@ class Mission(layer.Layer):
     
     def missionCompleted(self):
         self.stopGame()
-        self.avatar.stop()
+        currents['avatarObject'].stop()
         self.is_event_handler = False
-        self.avatar.do(actions.MoveBy((0,-100),1))
+        currents['avatarObject'].do(actions.MoveBy((0,-100),1))
         director.scene.endMission()
         self.is_event_handler = True
     
     def missionAborted(self):
         self.stopGame()
         director.scene.endMission()
-        self.backgroundLayer.do(actions.Delay(EXITDURATION) + ActionDie())
-        self.do(actions.Delay(EXITDURATION) + ActionDie())
+        self.backgroundLayer.do(actions.Delay(EXITDURATION) + actionDieInst)
+        self.do(actions.Delay(EXITDURATION) + actionDieInst)
     
     def stopGame(self):
         stopMusic()
         
-        for w in self.avatar.weapons:
+        for w in currents['avatarObject'].weapons:
             if w.type == TURRET:
                 self.unschedule(self.autoAim)
                 self.unschedule(self.shootTurret)
@@ -279,7 +321,7 @@ class Mission(layer.Layer):
                 self.unschedule(self.shootBullet)
             elif w.type == RAY:
                 self.stopLaser()
-            if self.avatar.settings.sound:
+            if currents['avatarObject'].settings.sound:
                 if not w.endSound is None:
                     w.endSound.play()
                 if not w.loopSound is None:
@@ -296,8 +338,8 @@ class Mission(layer.Layer):
         
     
     def killAvatar(self):
-        self.addExplosion(self.avatar.position)
-        self.avatar.kill()
+        self.addExplosion(currents['avatarObject'].position)
+        currents['avatarObject'].kill()
         label = text.Label('Rest in pieces! Your score is:%i' % (self.score),
                      font_name='Times New Roman',
                      font_size=32,
@@ -308,8 +350,8 @@ class Mission(layer.Layer):
     
     def frameUpdate(self, *args):
         # Updating rays
-        x = self.avatar.position[0]
-        y = self.avatar.position[1]
+        x = currents['avatarObject'].position[0]
+        y = currents['avatarObject'].position[1]
         for ray in self.avatarRay:
             height = 600
             enemy = None
@@ -387,17 +429,17 @@ class Mission(layer.Layer):
                 elif i in self.enemyBullets:
                     i.kill()
         # Updating labels
-        if self.avatar.shields > 0:
-            self.lifeLabel.element.text = 'Armor (Shields): %i (%i)' % (self.avatar.hp, self.avatar.sp)
-            if self.avatar.sp == 0:
+        if currents['avatarObject'].shields > 0:
+            self.lifeLabel.element.text = 'Armor (Shields): %i (%i)' % (currents['avatarObject'].hp, currents['avatarObject'].sp)
+            if currents['avatarObject'].sp == 0:
                 self.lifeLabel.element.color = (255, 255, 0, 255)
             else:
                 self.lifeLabel.element.color = (255, 255, 255, 255)
         else:
-            self.lifeLabel.element.text = 'Armor: %i' % (self.avatar.hp)
+            self.lifeLabel.element.text = 'Armor: %i' % (currents['avatarObject'].hp)
         
-        self.energyLaber.element.text = 'Energy: %i%%' % (int(self.avatar.consume * 100 / self.avatar.reactor))
-        if self.avatar.consume > self.avatar.reactor:
+        self.energyLaber.element.text = 'Energy: %i%%' % (int(currents['avatarObject'].consume * 100 / currents['avatarObject'].reactor))
+        if currents['avatarObject'].consume > currents['avatarObject'].reactor:
             self.energyLaber.element.color = (255, 255, 0, 255)
         else:
             self.energyLaber.element.color = (255, 255, 255, 255)
@@ -423,7 +465,7 @@ class Game(scene.Scene):
     def endMission(self):
         director.replace(scenes.FadeTransition(self.returnScene, duration=EXITDURATION))
         director.window.set_mouse_visible(True)
-        self.do(actions.Delay(EXITDURATION) + ActionDie())
+        self.do(actions.Delay(EXITDURATION) + actionDieInst)
     
     def setTimeScale(self, ts):
         pass

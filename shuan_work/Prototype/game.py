@@ -13,6 +13,7 @@ from sys import exit
 from missions import *
 
 VERSION = '0.4'
+CPROFILE = True
 missionsList = []
 pyglet.options['debug_gl'] = False
 
@@ -410,4 +411,8 @@ if __name__ == "__main__":
     
     startMenu = scene.Scene(Background(), Start())
     director.show_FPS = Settings().fps
-    director.run(startMenu)
+    if CPROFILE:
+        import cProfile
+        cProfile.run('director.run(startMenu)', 'gameinfo.profile')
+    else:
+        director.run(startMenu)

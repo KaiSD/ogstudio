@@ -56,7 +56,7 @@ class SurvivalTemplate(Mission):
     min = 0.05
     max = 0.5
     
-    enemyKinds = (
+    NPCKinds = (
                   enemies['Dummy'],
                   enemies['Dummy'],
                   enemies['Aimer'],
@@ -81,14 +81,14 @@ class SurvivalTemplate(Mission):
     
     def __init__(self):
         super(SurvivalTemplate, self).__init__()
-        self.ecount = len(self.enemyKinds)
+        self.ecount = len(self.NPCKinds)
     
     def logic(self, *args):
         if self.timer == 0:
             if not self.music is None:
                 playMusic(self.music)
         if random.random() < min(max((self.timer + 10) / 2000.0, self.min), self.max):
-            Enemy(self, self.enemyKinds[random.randint(0,int(self.timer / (10 + self.timer / self.ecount)))], random.random(), -0.1, self.avatar)
+            Enemy(self, self.NPCKinds[random.randint(0,int(self.timer / (10 + self.timer / self.ecount)))], random.random(), -0.1, currents['avatarObject'])
         self.timer += 1
 
 missionsList = (SurvivalTemplate)
@@ -116,9 +116,9 @@ class SequenceTemplate(Mission):
         
         def commandSpawn(*args):
             if len(args) == 2:
-                Enemy(self, enemies[args[0]], args[1], -0.1).target = self.avatar
+                Enemy(self, enemies[args[0]], args[1], -0.1).target = currents['avatarObject']
             elif len(args) == 3:
-                enemy = Enemy(self, enemies[args[0]], args[1], -0.1, self.avatar)
+                enemy = Enemy(self, enemies[args[0]], args[1], -0.1, currents['avatarObject'])
                 meter = text.Label('',
                         font_name='Times New Roman',
                         font_size=16,
@@ -129,7 +129,7 @@ class SequenceTemplate(Mission):
                 self.namedEnemies[args[2]] = enemy
                 self.meters[args[2]] = meter
             else:
-                Enemy(self, enemies[args[0]], random.random(), -0.1).target = self.avatar
+                Enemy(self, enemies[args[0]], random.random(), -0.1).target = currents['avatarObject']
         
         def commandWaitHealth(*args):
             if len(args) == 1:
@@ -259,6 +259,6 @@ class SequenceTemplate(Mission):
                 self.missionCompleted()
         self.timer += 1
         # Update vars
-        self.vars['_AvatarHealth_'] = self.avatar.life
-        self.vars['_AvatarHPosition_'], self.vars['_AvatarVPosition_'] = abs2rel(*self.avatar.position)
+        self.vars['_AvatarHealth_'] = currents['avatarObject'].life
+        self.vars['_AvatarHPosition_'], self.vars['_AvatarVPosition_'] = abs2rel(*currents['avatarObject'].position)
         self.vars['_Score_'] = self.score

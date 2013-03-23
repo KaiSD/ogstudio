@@ -31,17 +31,37 @@ EGBOOSTSHIELDS = 2
 '''
 ACTION CLASSES
 '''
+actionMoveInst = actions.Move()
+actionDelay01 = actions.Delay(0.1)
+actionDelay03 = actions.Delay(0.3)
+actionDelay1 = actions.Delay(1)
+actionMove900D5 = actions.MoveBy((0,-900),duration=5)
+actionMove900D6 = actions.MoveBy((0,-900),duration=6)
+actionMove900D9 = actions.MoveBy((0,-900),duration=9)
+
 class ActionDie(actions.InstantAction):
     def start(self):
         self.target.kill()
+
+actionDieInst = ActionDie()
 
 class ActionShoot(actions.InstantAction):
     def start(self):
         self.target.shoot()
 
+actionShootInst = ActionShoot()
+
 class ActionAimAndShoot(actions.InstantAction):
     def start(self):
         self.target.shoot(True)
+
+actionAimAndShootInst = ActionAimAndShoot()
+
+class ActionStopShooting(actions.InstantAction):
+    def start(self):
+        self.target.stopShooting()
+
+actionStopShootingInst = ActionStopShooting()
 
 class ActionAimMovement(actions.InstantAction):
     def __init__(self, speed, lifetime):
@@ -55,25 +75,60 @@ class ActionAimMovement(actions.InstantAction):
         dy = self.speed * math.sin(angle)
         dx = self.speed * math.cos(angle)
         self.target.velocity = dx, dy
-        actor.do(actions.Move() | actions.Delay(self.lifetime) +  ActionDie())
+        actor.do(actionMoveInst | actions.Delay(self.lifetime) +  actionDieInst)
 
-class ActionStopShooting(actions.InstantAction):
+class ActionFollowAvatar(actions.IntervalAction ):
+    def init(self, speed, duration):
+        self.duration = duration
+        self.speed = speed
+        self.wait = True
+    
     def start(self):
-        self.target.stopShooting()
+        actor = self.target
+        actor.do(actionMoveInst)
 
-class ActionRandomMovement(actions.IntervalAction ):
-    def init( self, duration ):
+    def update(self, t):
+        actor = self.target
+        target = currents['avatarObject']
+        angle = math.atan2(target.position[1] - actor.position[1], target.position[0] - actor.position[0])
+        distq = (target.position[1] - actor.position[1]) ** 2 + (target.position[0] - actor.position[0]) ** 2
+        dy = self.speed * math.sin(angle)
+        dx = self.speed * math.cos(angle)
+        if self.wait:
+            if distq > 3000:
+                actor.velocity = dx, dy
+                self.wait = False
+            elif distq > 1200:
+                actor.velocity = dx / 5, dy / 5
+            elif distq > 800:
+                actor.velocity = dx / 10, dy / 10
+            else:
+                actor.velocity = 0, 0
+        else:
+            if distq < 1000:
+                self.wait = True
+            else:
+                actor.velocity = dx, dy
+
+actionFollowAvatarInstD5 = ActionFollowAvatar(speed=200, duration=5)
+
+class ActionRandomMovement(actions.IntervalAction):
+    def init(self, duration):
         self.duration = duration
         self.initial = None
         self.destination = None
 
-    def update( self, t ):
+    def update(self, t):
         if self.initial == None:
             self.initial = self.target.position
             self.destination = rel(random.random(), random.random())
         x = self.initial[0] + (self.destination[0] - self.initial[0]) * t
         y = self.initial[1] + (self.destination[1] - self.initial[1]) * t
         self.target.position = x,y
+
+actionRandomMovementD5 = ActionRandomMovement(duration=5)
+actionRandomMovementD4 = ActionRandomMovement(duration=4)
+actionRandomMovementD3 = ActionRandomMovement(duration=3) 
 
 class ActionFadeTimescale(actions.IntervalAction ):
     '''
@@ -118,6 +173,7 @@ class DeviceKind(object):
     directions = 0
     angle = 0
     spread = 0
+    oneByOne = False
     
     # Ray params
     anchor = 0, 0
@@ -149,6 +205,10 @@ class DeviceKind(object):
             self.infinite = True
         else:
             self.infinite = False
+        
+        if self.oneByOne:
+            self.tick = 0
+        self.amod = 1
 
 class AvatarKind(object):
     image = loadAnimation('data/graphics/avatarShip.png', 3, 1, 0.1, True)
@@ -162,18 +222,18 @@ class AvatarKind(object):
     def __init__(self):
         super(AvatarKind, self).__init__()
 
-class EnemyKind(object):
+class NPCKind(object):
     image = loadAnimation('data/graphics/enemy1.png', 2, 1, 0.5, True)
     life = 10
     shields = 0
     shieldsRegen = 0
     damage = 10
     score = 1
-    actions = actions.MoveBy((0,-900),duration=6) + ActionDie()
+    actions = actionMove900D6 + actionDieInst
     weapons = ()
 
     def __init__(self):
-        super(EnemyKind, self).__init__()
+        super(NPCKind, self).__init__()
     
     def switchBrains(self, instance, idx):
         pass
@@ -319,9 +379,10 @@ class Bullet(ASprite):
             self.velocity = speed * math.cos(a), speed * math.sin(a)
             self.rotation = angle
         self.isGood = kind.isGood
-        self.needRotate = kind.rotation
-        self.speed = abs(self.velocity[1])
-        
+        self._needRotate = kind.rotation
+        self._kind = kind
+        self._speed = kind.velocity[1]
+
         lifetime = kind.lifetime
         
         self.layer = owner.owner
@@ -337,16 +398,21 @@ class Bullet(ASprite):
                 self.target = target
                 self.schedule_interval(self.reAim, 0.1)
         
+        used = bulletsUsed.get(kind, [])
+        used.append(self)
+        bulletsUsed[kind] = used
+        self._actions = actionMoveInst | actions.Delay(lifetime) +  actionDieInst
+        
         self.layer.add(self, z=5)
-        self.do(actions.Move() | actions.Delay(lifetime) +  ActionDie())
+        self.do(self._actions)
     
     def aim(self, target=None):
-        speed = self.speed
+        speed = abs(self._kind.velocity[1])
         angle = math.atan2(target.position[1] - self.position[1], target.position[0] - self.position[0])
         dy = speed * math.sin(angle)
         dx = speed * math.cos(angle)
         self.velocity = dx, dy
-        if self.needRotate:
+        if self._needRotate:
             self.rotation = int(90 - angle*57.3)
     
     def reAim(self, *args):
@@ -354,13 +420,13 @@ class Bullet(ASprite):
             self.unschedule(self.reAim)
             return
         else:
-            speed = self.speed
+            speed = self._speed
             target = self.target
             angle = math.atan2(target.position[1] - self.position[1], target.position[0] - self.position[0])
             dy = speed * math.sin(angle)
             dx = speed * math.cos(angle)
             self.velocity = dx, dy
-            if self.needRotate:
+            if self._needRotate:
                 self.rotation = int(90 - angle*57.3)
     
     def kill(self):
@@ -370,7 +436,44 @@ class Bullet(ASprite):
         else:
             self.layer.enemyBullets.remove(self)
 #            self.layer.cmea.remove_tricky(self)
-        super(Bullet, self).kill()
+        if self._kind.keepTarget:
+            self.unschedule(self.reAim)
+        
+        kind = self._kind
+        bulletsUsed[kind].remove(self)
+        free = bulletsFree.get(kind, [])
+        free.append(self)
+        bulletsFree[kind] = free
+        self.layer.remove(self)
+        self.stop()
+    
+    def reinstate(self, owner, target=None, angle=0):
+        kind = self._kind
+        self.position = owner.position[0] + kind.position[0], owner.position[1] + kind.position[1]
+        if angle == 0:
+            self.velocity = kind.velocity
+        else:
+            speed = kind.velocity[1]
+            a = (90 - angle)/57.3
+            self.velocity = speed * math.cos(a), speed * math.sin(a)
+            self.rotation = angle
+        
+        if self.isGood:
+            self.layer.avatarBullets.append(self)
+        else:
+            self.layer.enemyBullets.append(self)
+        
+        if not target is None:
+            self.aim(target)
+            if kind.keepTarget:
+                self.target = target
+                self.schedule_interval(self.reAim, 0.1)
+        
+        bulletsFree[kind].remove(self)
+        bulletsUsed[kind].append(self)
+        
+        self.layer.add(self, z=5)
+        self.do(self._actions)
 
 class Ray(ASprite):
     def __init__(self, owner, kind):
@@ -435,6 +538,7 @@ class Avatar(ASprite):
             self.consume += gunsList[settings.avatarGun].energyIdle
         if len(self._wSlots) >= 2:
             weapons.append(gunsList[settings.avatarGun](self._wSlots[1]))
+            weapons[-1].amod = -1
             self.consume += gunsList[settings.avatarGun].energyIdle
         for i in self.settings.avatarWeapons:
             if len(weapons) < len(self._wSlots):
@@ -497,11 +601,11 @@ class Avatar(ASprite):
         elif idx < 0:
             shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatarBlocked.png', 4, 1, 0.05))
         self.add(shield)
-        shield.do(actions.Delay(0.3) + actions.CallFuncS(die))
+        shield.do(actionDelay03 + actions.CallFuncS(die))
 
-class Enemy(ASprite):
-    def __init__(self, owner, kind, x, y, target=None):
-        super(Enemy, self).__init__(kind.image)
+class NPCShip(ASprite):
+    def __init__(self, owner, kind, x, y, target=None, coordZ=4):
+        super(NPCShip, self).__init__(kind.image)
         self.owner = owner
         self.life = kind.life
         self.shields = kind.shields
@@ -515,8 +619,6 @@ class Enemy(ASprite):
         self.rays = []
         self.position = rel(x,y)
         self.target = target
-        owner.enemies.append(self)
-        owner.add(self, z=4)
         self.soundList = []
         self.switchBrains = kind.switchBrains
         self.runners = []
@@ -526,6 +628,8 @@ class Enemy(ASprite):
         self._gonnaDie = False
         self._shieldSize = kind.image.get_max_height() / 36.0
         self._auraCache = []
+        self.velocity = 0, 0
+        owner.add(self, z=coordZ)
     
     def takeDamage(self, damage):
         if self.shields - self.absorbedDamage > 0:
@@ -552,16 +656,23 @@ class Enemy(ASprite):
             laser = True
         for w in self.weapons:
             if w.type == PROJECTILE or w.type == TURRET:
+                free = bulletsFree.get(w, []) 
                 if aim:
-                    Bullet(self, w, self.target)
+                    if free:
+                        free[0].reinstate(self, self.target)
+                    else:
+                        Bullet(self, w, self.target)
                 else:
-                    Bullet(self, w)
+                    if free:
+                        free[0].reinstate(self)
+                    else:
+                        Bullet(self, w)
             elif laser and w.type == RAY:
                 self.rays.append(Ray(self, w))
             elif w.type == AURA:
                 self.aura = w.runner
             elif w.type == SPAWN:
-                pos = abs2rel(self.position[0], self.position[1])
+                pos = abs2rel(*self.position)
                 Enemy(self.owner, enemies[w.spawnID], pos[0], pos[1], self.target)
             if self.settings.sound:
                 if not w.startSound is None:
@@ -582,12 +693,12 @@ class Enemy(ASprite):
     def kill(self):
         if not self._gonnaDie:
             self._gonnaDie = True
-            if self in self.owner.enemies:
-                self.owner.enemies.remove(self)
+            if self in currents['layerObject'].enemies:
+                currents['layerObject'].enemies.remove(self)
 #            self.owner.cmea.remove_tricky(self)
             if self.owner.target == self:
                     self.owner.target = None
-            super(Enemy, self).kill()
+            super(NPCShip, self).kill()
     
     def disarm(self):
         self.weapons = tuple()
@@ -603,7 +714,7 @@ class Enemy(ASprite):
         
         if self.aura:
             aura = self.aura
-            for e in self.owner.enemies:
+            for e in currents['layerObject'].enemies:
                 p = self.position
                 ep = e.position
                 if (p[0] - ep[0]) ** 2 - (p[1] - ep[1]) ** 2 <= aura.distance**2:
@@ -625,4 +736,14 @@ class Enemy(ASprite):
             shield = sprite.Sprite(loadAnimation('data/graphics/ShieldEnemyBlocked.png', 4, 1, 0.05))
         shield.scale = self._shieldSize
         self.add(shield)
-        shield.do(actions.Delay(0.3) + actions.CallFuncS(die))
+        shield.do(actionDelay03 + actions.CallFuncS(die))
+
+class Enemy(NPCShip):
+    def __init__(self, owner, kind, x, y, target=None):
+        super(Enemy, self).__init__(owner, kind, x, y, target)
+        owner.enemies.append(self)
+
+class Helper(NPCShip):
+    def __init__(self, owner, kind, x, y, target=None):
+        super(Helper, self).__init__(owner, kind, x, y, target, 8)
+        owner.avatarHelpers.append(self)

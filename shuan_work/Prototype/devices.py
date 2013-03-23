@@ -65,6 +65,19 @@ class EnemyShieldProjector(DeviceKind):
         
     type = AURA
     runner = LocalKind()
+
+'''
+HELPER WEAPONS
+'''
+class HelperGun(DeviceKind):
+    type = PROJECTILE
+    image = 'data/graphics/bullet2.png'
+    position = 0, 0
+    damage = 4
+    velocity = 0, 1000
+    isGood = True
+    lifetime = 1
+    startSound = 'data/sounds/enemy_shot.wav'
     
 '''
 AVATAR WEAPONS
@@ -81,7 +94,7 @@ class Minigun(DeviceKind):
     position = 0, 10
     damage = 2
     isGood = True
-    velocity = 0, 1600
+    velocity = 0, 1500
     lifetime = 0.5
     pof = 0.1
     loopSound = 'data/sounds/minigun_loop.wav'
@@ -160,7 +173,11 @@ class Swarm(DeviceKind):
     damage = 20
     isGood = True
     velocity = 0, 500
-    lifetime = 0.5
+    lifetime = 1.5
     name = "Swarm"
-    directions = 20
+    directions = 10
     spread = 45
+
+class Satelite(DeviceKind):
+    type = SPAWN
+    spawnID = 'Aimer'

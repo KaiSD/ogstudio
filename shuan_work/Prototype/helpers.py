@@ -18,8 +18,11 @@ LIBRARIES
 '''
 animations = {}
 sounds = {}
+bulletsUsed = {}
+bulletsFree = {} 
 
 enemies = {}
+helpers = {}
 playerShips = tuple()
 playerGuns = tuple()
 playerWeapons = tuple()
@@ -27,6 +30,11 @@ playerDevices = tuple()
 playerShields = tuple()
 playerEngines = tuple()
 playerReactors = tuple()
+
+currents = {
+            'avatarObject': None,
+            'layerObject': None
+            }
 
 '''
 HELPERS
