@@ -20,6 +20,9 @@ animations = {}
 sounds = {}
 bulletsUsed = {}
 bulletsFree = {} 
+shipsUsed = {}
+shipsFree = {}
+followers = []
 
 enemies = {}
 helpers = {}

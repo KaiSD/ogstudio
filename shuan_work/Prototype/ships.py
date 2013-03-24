@@ -18,8 +18,7 @@ class AvatarMK1(AvatarKind):
     engine = 1
     name = "Avatar MK1"
     
-    weaponSlots = (-5, 7, 0)
-    devices = (Recharger(), RocketLauncher(), Satelite())
+    weaponSlots = (-5, 5, 0)
     
     def __init__(self):
         super(AvatarKind, self).__init__()
@@ -30,8 +29,7 @@ class AvatarMK2(AvatarKind):
     engine = 1
     name = "Avatar MK2"
     
-    weaponSlots = (-5, 7, -13, 13)
-    devices = (Recharger(), RocketLauncher(), Satelite())
+    weaponSlots = (-5, 5, -13, 13)
     
     def __init__(self):
         super(AvatarKind, self).__init__()
@@ -42,8 +40,7 @@ class AvatarMK3(AvatarKind):
     engine = 1
     name = "Avatar MK3"
     
-    weaponSlots = (-5, 7, 0, -13, 13)
-    devices = (Recharger(), RocketLauncher(), Satelite())
+    weaponSlots = (-5, 5, 0, -13, 13)
     
     def __init__(self):
         super(AvatarKind, self).__init__()
@@ -59,7 +56,7 @@ class HelperAimer(NPCKind):
     damage = 10
     score = 1
     weapons = (HelperGun(),)
-    actions = actions.Repeat(actionFollowAvatarInstD5) | actions.Repeat(actionDelay03 + actionAimAndShootInst)
+    actions = actions.Repeat(ActionFollowAvatar(speed=200, duration=0.5)) | actions.Repeat(actionDelay1 + actionAimAndShootInst)
 '''
 ENEMIES
 '''
@@ -197,7 +194,7 @@ class EnemyMiniBoss(NPCKind):
     """
     Тестовый минибосс
     """
-    image = 'data/graphics/miniboss.png'
+    image = loadAnimation('data/graphics/miniboss.png', 1, 1, 0.1, True)
     life = 1000
     damage = 1000
     score = 100
@@ -208,7 +205,7 @@ class EnemyTestBoss(NPCKind):
     """
     Тестовый босс
     """
-    image = 'data/graphics/boss.png'
+    image = loadAnimation('data/graphics/boss.png', 1, 1, 0.1, True)
     life = 3000
     damage = 1000
     score = 300
@@ -228,6 +225,14 @@ class EnemyTestBoss(NPCKind):
             newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(actionRandomMovementD4) | actions.Repeat(actions.Delay(0.2) + actionAimAndShootInst)    
         instance.stop()
         instance.do(actionStopShootingInst + newActions)
+
+class ShipKindLoader(NPCKind):
+    """
+    Загрузчик кайндов кораблей
+    """
+    def __init__(self, filename):
+        data = jsonLoad(filename)
+        
 
 enemies['Dummy'] = EnemyDummy()
 enemies['Mine'] = EnemyMine()
@@ -250,7 +255,7 @@ helpers['Aimer'] = HelperAimer()
 playerShips += (AvatarMK1, AvatarMK2, AvatarMK3)
 playerGuns += (Empty, Minigun)
 playerWeapons += (Empty, Laser, Turret)
-playerDevices += tuple()
+playerDevices += (Empty, Recharger, RocketLauncher, Swarm, Satelite)
 playerShields += (('No Shield',0,0,0), ('Shield MK1',10,1,0))
 playerEngines += (('Engine MK1',5.0,12), ('Engine MK2', 10.0,50))
 playerReactors += (('Reactor MK1',100), ('Reactor MK2', 150))

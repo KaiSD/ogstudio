@@ -39,32 +39,8 @@ class EnemySpawnMine(DeviceKind):
     spawnID = 'DumbMine'
 
 class EnemyShieldProjector(DeviceKind):
-    class LocalKind(EffectKind):
-        name = "Defended"
-        distance = 200
-        
-        def start(self, instance):
-            target = instance.target
-            target.shields += 10
-            target.shieldsRegen += 1
-            target.playShield(1)
-        
-        def check(self, instance):
-            if instance.source._gonnaDie:
-                return False
-            s = instance.source.position
-            t = instance.target.position
-            return (s[0] - t[0])**2 + (s[1] - t[1])**2 <= self.distance**2 
-        
-        def end(self, instance):
-            target = instance.target
-            target.shields -= 10
-            target.shieldsRegen -= 1            
-            if target.shields == 0:
-                target.playShield(-1)
-        
     type = AURA
-    runner = LocalKind()
+    runner = effectDefended
 
 '''
 HELPER WEAPONS
@@ -129,30 +105,10 @@ class Turret(DeviceKind):
 AVATAR DEVICES
 '''
 class Recharger(DeviceKind):
-    class LocalKind(EffectKind):
-        name = "Recharge"
-        duration = 2
-        
-        def start(self, instance):
-            target = instance.target
-            for i in target.runners:
-                if i.group == EGNOSHIELDS:
-                    i.timeToDie = True
-            target.playShield(1)
-        
-        def check(self, instance):
-            if instance.target.absorbedDamage == 0:
-                return False
-            else:
-                return True
-        
-        def effect(self, target):
-            if target.absorbedDamage > 0:
-                target.absorbedDamage -= 1
-    
     type = EFFECT
     name = "Recharger"
-    runner = LocalKind()
+    runner = effectRecharger
+    ammo = 3
 
 class RocketLauncher(DeviceKind):
     type = TURRET
@@ -165,6 +121,7 @@ class RocketLauncher(DeviceKind):
     velocity = 0, 500
     lifetime = 2
     name = "Rockets"
+    ammo = 10
 
 class Swarm(DeviceKind):
     type = PROJECTILE
@@ -177,7 +134,10 @@ class Swarm(DeviceKind):
     name = "Swarm"
     directions = 10
     spread = 45
+    ammo = 3
 
 class Satelite(DeviceKind):
     type = SPAWN
     spawnID = 'Aimer'
+    name = "Satelite"
+    ammo = 2

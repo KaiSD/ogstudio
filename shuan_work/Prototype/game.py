@@ -232,12 +232,18 @@ class Ships(layer.Layer):
                         coui.Button(playerGuns[Settings().avatarGun].name, action=self.cycleGuns, name="GunSelector"),
                         coui.Label('Additional weapons'),
                         coui.Button('Weapon', name="Weapon1Selector", action=self.cycleWeaponConstructor(1)),
+                        coui.HLayout(children=[
                         coui.Button('Weapon', name="Weapon2Selector", action=self.cycleWeaponConstructor(2)),
-                        coui.Button('Weapon', name="Weapon3Selector", action=self.cycleWeaponConstructor(3)),
+                        coui.Button('Weapon', name="Weapon3Selector", action=self.cycleWeaponConstructor(3))
+                        ]),
+                        coui.HLayout(children=[
                         coui.Button('Weapon', name="Weapon4Selector", action=self.cycleWeaponConstructor(4)),
-                        coui.Button('Weapon', name="Weapon5Selector", action=self.cycleWeaponConstructor(5)),
+                        coui.Button('Weapon', name="Weapon5Selector", action=self.cycleWeaponConstructor(5))
+                        ]),
                         coui.Label('Devices'),
-                        coui.Label('Can\'t change devices'),
+                        coui.Button('Device', name="Device1Selector", action=self.cycleDeviceConstructor(1)),
+                        coui.Button('Device', name="Device2Selector", action=self.cycleDeviceConstructor(2)),
+                        coui.Button('Device', name="Device3Selector", action=self.cycleDeviceConstructor(3))
                         ]),
                    coui.FlowLayout(w=300, children=[
                         coui.Label('Credits ($):'),
@@ -253,7 +259,9 @@ class Ships(layer.Layer):
                         coui.Label('Energy production:'),
                         coui.Label('150', name='PowerIn'),
                         coui.Label('Energy consumption:'),
-                        coui.Label('130', name='PowerOut')
+                        coui.Label('130', name='PowerOut'),
+                        coui.Label('Peak energy consumption:'),
+                        coui.Label('130', name='PeakPowerOut')
                         ])
                    ]),
             coui.Button('Back', action = self.back),
@@ -297,6 +305,27 @@ class Ships(layer.Layer):
         if len(Settings().avatarWeapons) < 1:
                 Settings().avatarWeapons.append(0)
         element.text = playerWeapons[Settings().avatarWeapons[0]].name
+        
+        element = self.gui.get_element_by_name('Device3Selector')
+        if len(playerShips[Settings().avatarKind].deviceSlots) >= 3:
+            while len(Settings().avatarDevices) < 3:
+                Settings().avatarDevices.append(0)
+            element.text = playerDevices[Settings().avatarDevices[2]].name
+            element.visible = True
+        else:
+            element.visible = False
+        element = self.gui.get_element_by_name('Device2Selector')
+        if len(playerShips[Settings().avatarKind].deviceSlots) >= 2:
+            while len(Settings().avatarDevices) < 2:
+                Settings().avatarDevices.append(0)
+            element.text = playerDevices[Settings().avatarDevices[1]].name
+            element.visible = True
+        else:
+            element.visible = False
+        element = self.gui.get_element_by_name('Device1Selector')
+        if len(Settings().avatarDevices) < 1:
+                Settings().avatarDevices.append(0)
+        element.text = playerDevices[Settings().avatarDevices[0]].name
         
         self.add(self.gui, z=99)
     
@@ -390,6 +419,20 @@ class Ships(layer.Layer):
             self.gui.ui.update_layout()
         
         return cycleWeapon
+    
+    def cycleDeviceConstructor(self, idx):
+        def cycleDevice(*args):
+            while len(Settings().avatarDevices) < idx:
+                Settings().avatarDevices.append(0)
+            if Settings().avatarDevices[idx - 1] < len(playerDevices) - 1:
+                Settings().avatarDevices[idx - 1] += 1
+            else:
+                Settings().avatarDevices[idx - 1] = 0
+            element = self.gui.get_element_by_name('Device' + str(idx) + 'Selector')
+            element.text = playerDevices[Settings().avatarDevices[idx - 1]].name
+            self.gui.ui.update_layout()
+        
+        return cycleDevice
 
     def back(self, *args):
         director.pop()

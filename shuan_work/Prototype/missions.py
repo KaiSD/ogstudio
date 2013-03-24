@@ -56,7 +56,7 @@ class SurvivalTemplate(Mission):
     min = 0.05
     max = 0.5
     
-    NPCKinds = (
+    enemyKinds = (
                   enemies['Dummy'],
                   enemies['Dummy'],
                   enemies['Aimer'],
@@ -81,14 +81,19 @@ class SurvivalTemplate(Mission):
     
     def __init__(self):
         super(SurvivalTemplate, self).__init__()
-        self.ecount = len(self.NPCKinds)
+        self.ecount = len(self.enemyKinds)
     
     def logic(self, *args):
         if self.timer == 0:
             if not self.music is None:
                 playMusic(self.music)
         if random.random() < min(max((self.timer + 10) / 2000.0, self.min), self.max):
-            Enemy(self, self.NPCKinds[random.randint(0,int(self.timer / (10 + self.timer / self.ecount)))], random.random(), -0.1, currents['avatarObject'])
+            kind = self.enemyKinds[random.randint(0,int(self.timer / (10 + self.timer / self.ecount)))]
+            free = shipsFree.get(kind, [])
+            if free:
+                free[0].reinstate(random.random(), -0.1, currents['avatarObject'])
+            else:
+                Enemy(self, kind, random.random(), -0.1, currents['avatarObject'])
         self.timer += 1
 
 missionsList = (SurvivalTemplate)
@@ -115,26 +120,36 @@ class SequenceTemplate(Mission):
             self.nextTick += int(args[0]*5)
         
         def commandSpawn(*args):
-            if len(args) == 2:
-                Enemy(self, enemies[args[0]], args[1], -0.1).target = currents['avatarObject']
-            elif len(args) == 3:
-                enemy = Enemy(self, enemies[args[0]], args[1], -0.1, currents['avatarObject'])
+            kind = enemies[args[0]]
+            if len(args) >= 2:
+                pos = args[1]
+            else:
+                pos = random.random()
+            
+            free = shipsFree.get(kind, [])
+            if free:
+                e = free[0]
+                e.reinstate(pos, -0.1, currents['avatarObject'])
+            else:
+                e = Enemy(self, kind, pos, -0.1, currents['avatarObject'])
+            
+            if len(args) == 3:
                 meter = text.Label('',
                         font_name='Times New Roman',
                         font_size=16,
                         color = (255, 0, 0, 255),
                         anchor_x='left', anchor_y='center')
-                meter.position = rel(0.8,0.05*(len(self.meters)+1)+0.05)
+                meter.position = rel(0.8, 0.05*(len(self.meters)+1)+0.05)
                 self.add(meter, z=10)
-                self.namedEnemies[args[2]] = enemy
+                self.namedEnemies[args[2]] = e
                 self.meters[args[2]] = meter
-            else:
-                Enemy(self, enemies[args[0]], random.random(), -0.1).target = currents['avatarObject']
         
         def commandWaitHealth(*args):
+            ship = self.namedEnemies[args[0]]
+            h = ship.life - ship.takenDamage
             if len(args) == 1:
                 if args[0] in self.namedEnemies:
-                    if self.namedEnemies[args[0]].life > 0:
+                    if h > 0:
                         self.sequenceEntry -= 1
                     else:
                         self.meters[args[0]].kill()
@@ -142,9 +157,9 @@ class SequenceTemplate(Mission):
                         del self.namedEnemies[args[0]]
             if len(args) == 2:
                 if args[0] in self.namedEnemies:
-                    if self.namedEnemies[args[0]].life > args[1]:
+                    if h > args[1]:
                         self.sequenceEntry -= 1
-                    elif self.namedEnemies[args[0]].life <= 0:
+                    elif h <= 0:
                         self.meters[args[0]].kill()
                         del self.meters[args[0]]
                         del self.namedEnemies[args[0]]
@@ -238,7 +253,6 @@ class SequenceTemplate(Mission):
                            'Var':commandSetVar,
                            'IncVar':commandIncVar,
                            'CheckVar':commandCheckVar,
-                           'WaitEnemyHealth':commandCheckHealth,
                            'Shift':commandShift,
                            'Mark':commandSetLable,
                            'ToMark':commandToLable,

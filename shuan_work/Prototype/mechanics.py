@@ -63,14 +63,14 @@ class Mission(layer.Layer):
                                 font_name='Times New Roman',
                                 font_size=16,
                                 anchor_x='left', anchor_y='center')
-        self.devicesLabel =  text.Label('[1] - Recharge, [2] - Rocket, [3] - Satelite',
+        self.devicesLabel =  text.Label('[connecting...',
                                 font_name='Times New Roman',
                                 font_size=16,
                                 anchor_x='center', anchor_y='bottom')
         self.lifeLabel.position = rel(0.1,0.1)
         self.energyLaber.position = rel(0.1,0.15)
         self.scoreLabel.position = rel(0.1,0.2)
-        self.devicesLabel.position = rel(0.5,1)
+        self.devicesLabel.position = rel(0.5,0.95)
         self.add(self.lifeLabel, z=10)
         self.add(self.energyLaber, z=10)
         self.add(self.scoreLabel, z=10)
@@ -185,8 +185,14 @@ class Mission(layer.Layer):
                 if w.type == PROJECTILE:
                     self.shootBullet(0, w)
                 if w.type == SPAWN:
-                    pos = abs2rel(*currents['avatarObject'].position)
-                    Helper(self.owner, helpers[w.spawnID], pos[0], pos[1])
+                    if w.infinite or w.ammo > 0:
+                        pos = abs2rel(*currents['avatarObject'].position)
+                        free = shipsFree.get(helpers[w.spawnID],[])
+                        if free:
+                            free[0].reinstate(pos[0], pos[1])
+                        else:
+                            Helper(self, helpers[w.spawnID], pos[0], pos[1])
+                        w.ammo -= 1
         elif symbol == pyglet.window.key._2:
             if len(currents['avatarObject'].devices) > 1:
                 w = currents['avatarObject'].devices[1]
@@ -199,8 +205,14 @@ class Mission(layer.Layer):
                 if w.type == PROJECTILE:
                     self.shootBullet(0, w)
                 if w.type == SPAWN:
-                    pos = abs2rel(*currents['avatarObject'].position)
-                    Helper(self.owner, helpers[w.spawnID], pos[0], pos[1])
+                    if w.infinite or w.ammo > 0:
+                        pos = abs2rel(*currents['avatarObject'].position)
+                        free = shipsFree.get(helpers[w.spawnID],[])
+                        if free:
+                            free[0].reinstate(pos[0], pos[1])
+                        else:
+                            Helper(self, helpers[w.spawnID], pos[0], pos[1])
+                        w.ammo -= 1
         elif symbol == pyglet.window.key._3:
             if len(currents['avatarObject'].devices) > 2:
                 w = currents['avatarObject'].devices[2]
@@ -213,8 +225,14 @@ class Mission(layer.Layer):
                 if w.type == PROJECTILE:
                     self.shootBullet(0, w)
                 if w.type == SPAWN:
-                    pos = abs2rel(*currents['avatarObject'].position)
-                    Helper(self, helpers[w.spawnID], pos[0], pos[1])
+                    if w.infinite or w.ammo > 0:
+                        pos = abs2rel(*currents['avatarObject'].position)
+                        free = shipsFree.get(helpers[w.spawnID],[])
+                        if free:
+                            free[0].reinstate(pos[0], pos[1])
+                        else:
+                            Helper(self, helpers[w.spawnID], pos[0], pos[1])
+                        w.ammo -= 1
         return True
     
     def shootBullet(self, timer, weapon):
@@ -349,9 +367,10 @@ class Mission(layer.Layer):
         self.missionFailed()
     
     def frameUpdate(self, *args):
+        avatar = currents['avatarObject'] 
         # Updating rays
-        x = currents['avatarObject'].position[0]
-        y = currents['avatarObject'].position[1]
+        x = avatar.position[0]
+        y = avatar.position[1]
         for ray in self.avatarRay:
             height = 600
             enemy = None
@@ -366,7 +385,7 @@ class Mission(layer.Layer):
             ray.image.height = int(height)
             ray.do(actions.Show())
             if not enemy is None:
-                if enemy.life > 0 and self.timer > self.lastTimerValue:
+                if enemy.takenDamage > enemy.life and self.timer > self.lastTimerValue:
                     enemy.takeDamage(ray.damage)
                     self.lastTimerValue = self.timer
         for ray in self.enemyRay:
@@ -374,7 +393,7 @@ class Mission(layer.Layer):
                 x = ray.owner.position[0]
                 y = ray.owner.position[1]
                 height = 600
-                avatar = None
+                av = None
                 for i in self.avatarHelpers:
                     ep = i.position
                     if abs(ep[0] - x) <= i.width + 8:
@@ -382,12 +401,12 @@ class Mission(layer.Layer):
                             h = y - ep[1] + i.height / 3
                             if h < height:
                                 height = h
-                                avatar = i
+                                av = i
                 ray.image.height = int(height)
                 ray.do(actions.Place((x,y)))
-                if not avatar is None:
-                    if avatar.life > 0 and self.timer > self.lastTimerValue:
-                        avatar.takeDamage(ray.damage)
+                if not av is None:
+                    if av.takenDamage < av.life and av.timer > self.lastTimerValue:
+                        av.takeDamage(ray.damage)
                         self.lastTimerValue = self.timer
             else:
                 ray.kill()
@@ -411,12 +430,12 @@ class Mission(layer.Layer):
                 if enemy.life > 0:
                     enemy.takeDamage(i.damage)
         # Manage Enemies2Avatar Collision
-        for avatar in self.avatarHelpers:
-            setCollision(avatar)
+        for av in self.avatarHelpers:
+            setCollision(av)
             colls = self.cmea.objs_colliding(avatar)
             for i in colls:
-                if avatar.life > 0:
-                    avatar.takeDamage(i.damage)
+                if av.life > 0:
+                    av.takeDamage(i.damage)
                     sound = loadSound('data/sounds/hit.wav', 0.1)
                     if not sound is None:
                         sound.play()
@@ -429,17 +448,17 @@ class Mission(layer.Layer):
                 elif i in self.enemyBullets:
                     i.kill()
         # Updating labels
-        if currents['avatarObject'].shields > 0:
-            self.lifeLabel.element.text = 'Armor (Shields): %i (%i)' % (currents['avatarObject'].hp, currents['avatarObject'].sp)
-            if currents['avatarObject'].sp == 0:
+        if avatar.shields > 0:
+            self.lifeLabel.element.text = 'Armor (Shields): %i (%i)' % (avatar.hp, avatar.sp)
+            if avatar.sp == 0:
                 self.lifeLabel.element.color = (255, 255, 0, 255)
             else:
                 self.lifeLabel.element.color = (255, 255, 255, 255)
         else:
-            self.lifeLabel.element.text = 'Armor: %i' % (currents['avatarObject'].hp)
+            self.lifeLabel.element.text = 'Armor: %i' % (avatar.hp)
         
-        self.energyLaber.element.text = 'Energy: %i%%' % (int(currents['avatarObject'].consume * 100 / currents['avatarObject'].reactor))
-        if currents['avatarObject'].consume > currents['avatarObject'].reactor:
+        self.energyLaber.element.text = 'Energy: %i%%' % (int(avatar.consume * 100 / avatar.reactor))
+        if avatar.consume > avatar.reactor:
             self.energyLaber.element.color = (255, 255, 0, 255)
         else:
             self.energyLaber.element.color = (255, 255, 255, 255)
@@ -447,7 +466,12 @@ class Mission(layer.Layer):
         self.scoreLabel.element.text = 'Score: %i' % (self.score)
         
         for e in self.namedEnemies.keys():
-            self.meters[e].element.text = '%s: %i' % (e, self.namedEnemies[e].life)
+            ship = self.namedEnemies[e]
+            self.meters[e].element.text = '%s: %i' % (e, ship.life - ship.takenDamage)
+        
+        devices = avatar.devices
+        dlist = (devices[0].name, devices[0].ammo, devices[1].name, devices[1].ammo, devices[2].name, devices[2].ammo)
+        self.devicesLabel.element.text = '1:[%s-%i] 2:[%s-%i] 3:[%s-%i]' % dlist
 
 class Game(scene.Scene):
     is_event_handler = True

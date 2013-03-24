@@ -82,35 +82,30 @@ class ActionFollowAvatar(actions.IntervalAction ):
         self.duration = duration
         self.speed = speed
         self.wait = True
+        shiftX = 0
+        shiftY = 0
     
     def start(self):
         actor = self.target
         actor.do(actionMoveInst)
-
-    def update(self, t):
-        actor = self.target
+        if not actor in followers:
+            followers.append(actor)
+        point = followers.index(actor)
+        
+        self.shiftX = point % 2 * 60 - 30
+        self.shiftY = point / 2 * -30 + 60
+        
         target = currents['avatarObject']
-        angle = math.atan2(target.position[1] - actor.position[1], target.position[0] - actor.position[0])
-        distq = (target.position[1] - actor.position[1]) ** 2 + (target.position[0] - actor.position[0]) ** 2
-        dy = self.speed * math.sin(angle)
-        dx = self.speed * math.cos(angle)
-        if self.wait:
-            if distq > 3000:
-                actor.velocity = dx, dy
-                self.wait = False
-            elif distq > 1200:
-                actor.velocity = dx / 5, dy / 5
-            elif distq > 800:
-                actor.velocity = dx / 10, dy / 10
-            else:
-                actor.velocity = 0, 0
-        else:
-            if distq < 1000:
-                self.wait = True
-            else:
-                actor.velocity = dx, dy
-
-actionFollowAvatarInstD5 = ActionFollowAvatar(speed=200, duration=5)
+        deltaY = target.position[1] + self.shiftY - actor.position[1]
+        deltaX = target.position[0] + self.shiftX - actor.position[0]
+        dist = math.sqrt(deltaX**2 + deltaY**2)
+        actor.do(actions.MoveBy((deltaX, deltaY), duration = dist/self.speed))
+    
+    def stop(self):
+        actor = self.target
+        if actor in followers:
+            if actor._gonnaDie: 
+                followers.remove(actor)
 
 class ActionRandomMovement(actions.IntervalAction):
     def init(self, duration):
@@ -216,7 +211,7 @@ class AvatarKind(object):
     engine = 1
     weapons = ()
     weaponSlots = ()
-    deviceSlots = ()
+    deviceSlots = (1, 2, 3)
     name = 'Avatar'
     
     def __init__(self):
@@ -320,7 +315,57 @@ class ShieldOverloadKind(EffectKind):
             target.absorbedDamage = 0
             target.playShield(1)
 
-EffectShieldOverload = ShieldOverloadKind()
+effectShieldOverload = ShieldOverloadKind()
+
+class RechargerKind(EffectKind):
+    name = "Recharge"
+    duration = 2
+    
+    def start(self, instance):
+        target = instance.target
+        for i in target.runners:
+            if i.group == EGNOSHIELDS:
+                i.timeToDie = True
+        target.playShield(1)
+    
+    def check(self, instance):
+        if instance.target.absorbedDamage == 0:
+            return False
+        else:
+            return True
+    
+    def effect(self, target):
+        if target.absorbedDamage > 0:
+            target.absorbedDamage -= 1
+
+effectRecharger = RechargerKind()
+
+class DefenderKind(EffectKind):
+    name = "Defended"
+    distance = 200
+    
+    def start(self, instance):
+        target = instance.target
+        target.shields += 10
+        target.shieldsRegen += 1
+        target.playShield(1)
+    
+    def check(self, instance):
+        if instance.source._gonnaDie:
+            return False
+        s = instance.source.position
+        t = instance.target.position
+        return (s[0] - t[0])**2 + (s[1] - t[1])**2 <= self.distance**2 
+    
+    def end(self, instance):
+        target = instance.target
+        target.shields -= 10
+        target.shieldsRegen -= 1            
+        if target.shields == 0:
+            target.playShield(-1)
+
+effectDefended = DefenderKind()
+
 '''
 ELEMENT CLASSES
 '''
@@ -373,6 +418,7 @@ class Bullet(ASprite):
         self.damage = kind.damage
         if angle == 0:
             self.velocity = kind.velocity
+            self.rotation = 0
         else:
             speed = kind.velocity[1]
             a = (90 - angle)/57.3
@@ -385,12 +431,10 @@ class Bullet(ASprite):
 
         lifetime = kind.lifetime
         
-        self.layer = owner.owner
-        
         if self.isGood:
-            self.layer.avatarBullets.append(self)
+            currents['layerObject'].avatarBullets.append(self)
         else:
-            self.layer.enemyBullets.append(self)
+            currents['layerObject'].enemyBullets.append(self)
         
         if not target is None:
             self.aim(target)
@@ -403,7 +447,7 @@ class Bullet(ASprite):
         bulletsUsed[kind] = used
         self._actions = actionMoveInst | actions.Delay(lifetime) +  actionDieInst
         
-        self.layer.add(self, z=5)
+        currents['layerObject'].add(self, z=5)
         self.do(self._actions)
     
     def aim(self, target=None):
@@ -431,11 +475,9 @@ class Bullet(ASprite):
     
     def kill(self):
         if self.isGood:
-            self.layer.avatarBullets.remove(self)
-#            self.layer.cmae.remove_tricky(self)
+            currents['layerObject'].avatarBullets.remove(self)
         else:
-            self.layer.enemyBullets.remove(self)
-#            self.layer.cmea.remove_tricky(self)
+            currents['layerObject'].enemyBullets.remove(self)
         if self._kind.keepTarget:
             self.unschedule(self.reAim)
         
@@ -444,7 +486,7 @@ class Bullet(ASprite):
         free = bulletsFree.get(kind, [])
         free.append(self)
         bulletsFree[kind] = free
-        self.layer.remove(self)
+        currents['layerObject'].remove(self)
         self.stop()
     
     def reinstate(self, owner, target=None, angle=0):
@@ -452,6 +494,7 @@ class Bullet(ASprite):
         self.position = owner.position[0] + kind.position[0], owner.position[1] + kind.position[1]
         if angle == 0:
             self.velocity = kind.velocity
+            self.rotation = 0
         else:
             speed = kind.velocity[1]
             a = (90 - angle)/57.3
@@ -459,9 +502,9 @@ class Bullet(ASprite):
             self.rotation = angle
         
         if self.isGood:
-            self.layer.avatarBullets.append(self)
+            currents['layerObject'].avatarBullets.append(self)
         else:
-            self.layer.enemyBullets.append(self)
+            currents['layerObject'].enemyBullets.append(self)
         
         if not target is None:
             self.aim(target)
@@ -472,7 +515,7 @@ class Bullet(ASprite):
         bulletsFree[kind].remove(self)
         bulletsUsed[kind].append(self)
         
-        self.layer.add(self, z=5)
+        currents['layerObject'].add(self, z=5)
         self.do(self._actions)
 
 class Ray(ASprite):
@@ -553,7 +596,7 @@ class Avatar(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
-                  EffectRunner(EffectShieldOverload, self)
+                  EffectRunner(effectShieldOverload, self)
             else:
                 self.playShield()
         else:
@@ -628,7 +671,11 @@ class NPCShip(ASprite):
         self._gonnaDie = False
         self._shieldSize = kind.image.get_max_height() / 36.0
         self._auraCache = []
+        self._kind =  kind
         self.velocity = 0, 0
+        used = shipsUsed.get(kind, [])
+        used.append(self)
+        shipsUsed[kind] = used
         owner.add(self, z=coordZ)
     
     def takeDamage(self, damage):
@@ -637,7 +684,7 @@ class NPCShip(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
-                  EffectRunner(EffectShieldOverload, self)
+                  EffectRunner(effectShieldOverload, self)
             else:
                 self.playShield()
         else:
@@ -692,13 +739,51 @@ class NPCShip(ASprite):
     
     def kill(self):
         if not self._gonnaDie:
+            layer = currents['layerObject']
             self._gonnaDie = True
-            if self in currents['layerObject'].enemies:
-                currents['layerObject'].enemies.remove(self)
-#            self.owner.cmea.remove_tricky(self)
+            if self.good:
+                layer.avatarHelpers.remove(self)
+            else:
+                layer.enemies.remove(self)
             if self.owner.target == self:
                     self.owner.target = None
-            super(NPCShip, self).kill()
+            kind = self._kind
+            shipsUsed[kind].remove(self)
+            free = shipsFree.get(kind, [])
+            free.append(self)
+            shipsFree[kind] = free
+            self.unschedule(self.regen)
+            layer.remove(self)
+            self.stop()
+    
+    def reinstate(self, x, y, target=None, coordZ=4):
+        layer = currents['layerObject']
+        kind = self._kind
+        self.absorbedDamage = 0.0
+        self.takenDamage = 0
+        self.weapons = kind.weapons
+        self.settings = Settings()
+        self.rays = []
+        self.position = rel(x,y)
+        self.target = target
+        self.soundList = []
+        self.runners = []
+        self.aura = None 
+        self.schedule_interval(self.regen, 1)
+        self.do(kind.actions)
+        self._gonnaDie = False
+        self._auraCache = []
+        self.velocity = 0, 0
+        layer.add(self, z=coordZ)
+        if self.good:
+            layer.avatarHelpers.append(self)
+        else:
+            layer.enemies.append(self)
+        
+        shipsFree[kind].remove(self)
+        shipsUsed[kind].append(self)
+        
+        layer.add(self, z=5)
     
     def disarm(self):
         self.weapons = tuple()
@@ -742,8 +827,10 @@ class Enemy(NPCShip):
     def __init__(self, owner, kind, x, y, target=None):
         super(Enemy, self).__init__(owner, kind, x, y, target)
         owner.enemies.append(self)
+        self.good = False
 
 class Helper(NPCShip):
     def __init__(self, owner, kind, x, y, target=None):
         super(Helper, self).__init__(owner, kind, x, y, target, 8)
         owner.avatarHelpers.append(self)
+        self.good = True
