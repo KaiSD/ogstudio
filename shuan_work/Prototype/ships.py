@@ -56,7 +56,7 @@ class HelperAimer(NPCKind):
     damage = 10
     score = 1
     weapons = (HelperGun(),)
-    actions = actions.Repeat(ActionFollowAvatar(speed=200, duration=0.5)) | actions.Repeat(actionDelay1 + actionAimAndShootInst)
+    actions = actions.Repeat(ActionFollowAvatar(speed=200, duration=0.5)) | actions.Repeat(data['aDelay1'] + data['aAimShoot'])
 '''
 ENEMIES
 '''
@@ -68,7 +68,7 @@ class EnemyDummy(NPCKind):
     life = 10
     damage = 10
     score = 1
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=9) + actionDieInst
+    actions = actions.MoveTo((int(random.random()*800),-900),duration=9) + data['aDie']
 
 class EnemyMine(NPCKind):
     """
@@ -78,7 +78,7 @@ class EnemyMine(NPCKind):
     life = 10
     damage = 10
     score = 0
-    actions = actions.MoveBy((0,60),duration=1) + ActionAimMovement(100, 9)
+    actions = data['aFloat60'] + data['aAimMove100']
 
 class EnemyDumbMine(NPCKind):
     """
@@ -88,7 +88,7 @@ class EnemyDumbMine(NPCKind):
     life = 10
     damage = 10
     score = 0
-    actions = actions.MoveBy((0,60),duration=1) + actionMove900D9 + actionDieInst
+    actions = data['aFloat60'] + data['aDown9'] + data['aDie']
 
 class EnemyAimer(NPCKind):
     """
@@ -99,7 +99,7 @@ class EnemyAimer(NPCKind):
     damage = 10
     score = 1
     weapons = (EnemyGun(),)
-    actions = actionMove900D6 + actionDieInst | actions.Repeat(actions.RandomDelay(1, 3) + actionAimAndShootInst)
+    actions = data['aDown6'] + data['aDie'] | actions.Repeat(actions.RandomDelay(1, 3) + data['aAimShoot'])
 
 class EnemyStraighter(NPCKind):
     """
@@ -110,7 +110,7 @@ class EnemyStraighter(NPCKind):
     damage = 10
     score = 1
     weapons = (EnemyGun(),)
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=6) + actionDieInst | actions.Repeat(actions.RandomDelay(0.5, 2) + actionShootInst)
+    actions = actions.MoveTo((int(random.random()*800),-900),duration=6) + data['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + data['aShoot'])
 
 class EnemyKami(NPCKind):
     """
@@ -120,7 +120,7 @@ class EnemyKami(NPCKind):
     life = 20
     damage = 20
     score = 1
-    actions = actions.MoveBy((0,-100),duration=1) + ActionAimMovement(400, 3)
+    actions = data['aFloat100'] + data['aAimMove400']
 
 class EnemyRayer(NPCKind):
     """
@@ -131,7 +131,7 @@ class EnemyRayer(NPCKind):
     damage = 20
     score = 3
     weapons = (EnemyLaser(),)
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=10) + actionDieInst | actions.Repeat(actions.RandomDelay(0.5, 2) + actionShootInst + actions.RandomDelay(2, 4) + actionStopShootingInst)
+    actions = actions.MoveTo((int(random.random()*800),-900),duration=10) + data['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + data['aShoot'] + actions.RandomDelay(2, 4) + data['aStopShooting'])
 
 class EnemyBurster(NPCKind):
     """
@@ -142,7 +142,7 @@ class EnemyBurster(NPCKind):
     damage = 10
     score = 2
     weapons = (EnemyGun(),)
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=12) + actionDieInst | actions.Repeat(actions.Delay(0.5) + actionShootInst)
+    actions = actions.MoveTo((int(random.random()*800),-900),duration=12) + data['aDie'] | actions.Repeat(actions.Delay(0.5) + data['aShoot'])
 
 class EnemyBuffer(NPCKind):
     """
@@ -155,7 +155,7 @@ class EnemyBuffer(NPCKind):
     shieldsRegen = 1
     score = 5
     weapons = (EnemyShieldProjector(),)
-    actions = actionRandomMovementD5 + actionRandomMovementD5 + actionRandomMovementD5 + actionMove900D5 + actionDieInst | actionShootInst
+    actions = data['aRandMove5'] + data['aRandMove5'] + data['aRandMove5'] + data['aDown5'] + data['aDie'] | data['aShoot']
 
 class EnemyBehemoth(NPCKind):
     """
@@ -166,7 +166,7 @@ class EnemyBehemoth(NPCKind):
     damage = 50
     score = 5
     weapons = (EnemyGun(-15,-30), EnemyGun(0,-30), EnemyGun(15,-30))
-    actions = actionRandomMovementD3 + actionRandomMovementD3 + actionRandomMovementD3 + actionMove900D6 + actionDieInst | actions.Repeat(actions.RandomDelay(0.5, 2) + actionAimAndShootInst) | actions.Repeat(actions.Delay(0.5) + actionShootInst)
+    actions = data['aRandMove3'] + data['aRandMove3'] + data['aRandMove3'] + data['aDown6'] + data['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + data['aAimShoot']) | actions.Repeat(actions.Delay(0.5) + data['aShoot'])
 
 class EnemySummoner(NPCKind):
     """
@@ -177,7 +177,7 @@ class EnemySummoner(NPCKind):
     damage = 50
     score = 5
     weapons = (EnemySpawnAimer(), EnemyGun(-15,-30), EnemyGun(15,-30))
-    actions = actionRandomMovementD5 + actionRandomMovementD5 + actionRandomMovementD5 + actionMove900D5 + actionDieInst | actions.Repeat(actions.Delay(3) + actionShootInst)
+    actions = data['aRandMove5'] + data['aRandMove5'] + data['aRandMove5'] + data['aDown5'] + data['aDie'] | actions.Repeat(actions.Delay(3) + data['aShoot'])
 
 class EnemyMinador(NPCKind):
     """
@@ -188,7 +188,7 @@ class EnemyMinador(NPCKind):
     damage = 50
     score = 5
     weapons = (EnemySpawnMine(), )
-    actions = actionRandomMovementD5 + actionRandomMovementD5 + actionRandomMovementD5 + actionMove900D5 + actionDieInst | actions.Repeat(actions.Delay(2) + actionShootInst)
+    actions = data['aRandMove5'] + data['aRandMove5'] + data['aRandMove5'] + data['aDown5'] + data['aDie'] | actions.Repeat(actions.Delay(2) + data['aShoot'])
 
 class EnemyMiniBoss(NPCKind):
     """
@@ -199,7 +199,7 @@ class EnemyMiniBoss(NPCKind):
     damage = 1000
     score = 100
     weapons = (EnemyGun(-15,-30), EnemyGun(15,-30))
-    actions =  actions.Repeat(actionRandomMovementD4) | actions.Repeat(actions.Delay(0.2) + actionAimAndShootInst)
+    actions =  actions.Repeat(data['aRandMove4']) | actions.Repeat(actions.Delay(0.2) + data['aAimShoot'])
 
 class EnemyTestBoss(NPCKind):
     """
@@ -211,7 +211,7 @@ class EnemyTestBoss(NPCKind):
     score = 300
     weapons = (EnemyGun(-15,-30), EnemyGun(15,-30), EnemyGun(-40,-35), EnemyGun(40,-35))
     weapons2 = (EnemyGun(-15,-30), EnemyGun(15,-30), EnemyGun(-40,-35), EnemyGun(40,-35), EnemyLaser())
-    actions =  actions.Repeat(actionRandomMovementD4) | actions.Repeat(actions.Delay(0.4) + actionAimAndShootInst)
+    actions =  actions.Repeat(data['aRandMove4']) | actions.Repeat(actions.Delay(0.4) + data['aAimShoot'])
     
     def switchBrains(self, instance, idx):
         if idx == 0:
@@ -219,12 +219,12 @@ class EnemyTestBoss(NPCKind):
             newActions = EnemyTestBoss.actions
         elif idx == 1:
             instance.weapons = EnemyTestBoss.weapons2
-            newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(ActionRandomMovement(duration=8)) | actions.Repeat(actions.Delay(0.5) + actionAimAndShootInst) | actions.Repeat(actions.Delay(2) + actionStopShootingInst)
+            newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(ActionRandomMovement(duration=8)) | actions.Repeat(actions.Delay(0.5) + data['aAimShoot']) | actions.Repeat(actions.Delay(2) + data['aStopShooting'])
         elif idx == 2:
             instance.weapons = EnemyTestBoss.weapons2
-            newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(actionRandomMovementD4) | actions.Repeat(actions.Delay(0.2) + actionAimAndShootInst)    
+            newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(data['aRandMove4']) | actions.Repeat(actions.Delay(0.2) + data['aAimShoot'])    
         instance.stop()
-        instance.do(actionStopShootingInst + newActions)
+        instance.do(data['aStopShooting'] + newActions)
 
 class ShipKindLoader(NPCKind):
     """
@@ -232,6 +232,15 @@ class ShipKindLoader(NPCKind):
     """
     def __init__(self, filename):
         data = jsonLoad(filename)
+        get = data.get
+        self.image = loadAnimation(data['image'], get('image_cols', 1), get('image_rows', 1), get('image_per', 0.1), True)
+        self.life = get('life', 10)
+        self.damage = get('damage', 10)
+        self.score = get('score', 1)
+        
+        # Brains Loader
+        
+        
         
 
 enemies['Dummy'] = EnemyDummy()

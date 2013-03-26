@@ -302,7 +302,7 @@ class Mission(layer.Layer):
         explosion = sprite.Sprite(loadAnimation('data/graphics/basicExplosion.png', 9, 1, 0.05))
         explosion.position = pos
         self.add(explosion)
-        explosion.do(actionDelay03 + actions.CallFuncS(die))
+        explosion.do(data['aDelay03'] + actions.CallFuncS(die))
         sound = loadSound('data/sounds/explosion.wav', 0.7)
         if not sound is None:
             sound.play()
@@ -325,8 +325,8 @@ class Mission(layer.Layer):
     def missionAborted(self):
         self.stopGame()
         director.scene.endMission()
-        self.backgroundLayer.do(actions.Delay(EXITDURATION) + actionDieInst)
-        self.do(actions.Delay(EXITDURATION) + actionDieInst)
+        self.backgroundLayer.do(actions.Delay(EXITDURATION) + data['aDie'])
+        self.do(actions.Delay(EXITDURATION) + data['aDie'])
     
     def stopGame(self):
         stopMusic()
@@ -405,7 +405,7 @@ class Mission(layer.Layer):
                 ray.image.height = int(height)
                 ray.do(actions.Place((x,y)))
                 if not av is None:
-                    if av.takenDamage < av.life and av.timer > self.lastTimerValue:
+                    if av.takenDamage < av.life and self.timer > self.lastTimerValue:
                         av.takeDamage(ray.damage)
                         self.lastTimerValue = self.timer
             else:
@@ -489,7 +489,7 @@ class Game(scene.Scene):
     def endMission(self):
         director.replace(scenes.FadeTransition(self.returnScene, duration=EXITDURATION))
         director.window.set_mouse_visible(True)
-        self.do(actions.Delay(EXITDURATION) + actionDieInst)
+        self.do(actions.Delay(EXITDURATION) + data['aDie'])
     
     def setTimeScale(self, ts):
         pass

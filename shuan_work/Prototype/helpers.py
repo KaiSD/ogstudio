@@ -8,7 +8,7 @@ Shuan gameplay prototype helpers module
 '''
 
 from cocos.director import director
-from cocos import collision_model
+from cocos import collision_model, actions
 from cocos.audio.pygame import mixer
 import pyglet
 from settings import *
@@ -38,6 +38,18 @@ currents = {
             'avatarObject': None,
             'layerObject': None
             }
+
+data = {
+        'aMove': actions.Move(),
+        'aDelay01': actions.Delay(0.1),
+        'aDelay03': actions.Delay(0.3),
+        'aDelay1': actions.Delay(1),
+        'aDown5': actions.MoveBy((0,-900), duration=5),
+        'aDown6': actions.MoveBy((0,-900), duration=6),
+        'aDown9': actions.MoveBy((0,-900), duration=9),
+        'aFloat60': actions.MoveBy((0,60),duration=1),
+        'aFloat100': actions.MoveBy((0,100),duration=1)
+        }
 
 '''
 HELPERS

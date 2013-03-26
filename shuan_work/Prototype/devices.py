@@ -7,7 +7,7 @@ Shuan gameplay prototype core module
 (c) 2012 Opensource Game Studio Team (http://opengamestudio.org)
 '''
 
-from core import *
+from library import *
 
 '''
 ENEMY WEAPONS
@@ -40,7 +40,7 @@ class EnemySpawnMine(DeviceKind):
 
 class EnemyShieldProjector(DeviceKind):
     type = AURA
-    runner = effectDefended
+    runner = data['eDefend']
 
 '''
 HELPER WEAPONS
@@ -107,7 +107,7 @@ AVATAR DEVICES
 class Recharger(DeviceKind):
     type = EFFECT
     name = "Recharger"
-    runner = effectRecharger
+    runner = data['eRecharge']
     ammo = 3
 
 class RocketLauncher(DeviceKind):
