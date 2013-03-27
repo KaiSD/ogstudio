@@ -8,6 +8,7 @@ Shuan gameplay prototype settings module
 '''
 
 import json
+from sys import exc_info
 
 class Settings(object):
     obj = None
@@ -47,7 +48,7 @@ class Settings(object):
                 if not i in ('obj', 'save', 'load') and not i[0] == '_':
                     self.__dict__[i] = data[i]
         except:
-            pass
+            print "Settings loading failed:", exc_info()[0]
     
     def save(self, filename):
         try:
@@ -59,5 +60,5 @@ class Settings(object):
             json.dump(data, f)
             f.close()
         except:
-            print 
+            print "Settings saving failed:", exc_info()[0]
             

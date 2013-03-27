@@ -10,6 +10,15 @@ Shuan gameplay prototype core module
 from library import *
 
 '''
+BASIC DEVICE
+'''
+class Empty(DeviceKind):
+    type = EMPTY
+    name = "None"
+    energy = 0
+    energyIdle = 0
+
+'''
 ENEMY WEAPONS
 '''
 class EnemyGun(DeviceKind):
@@ -40,7 +49,7 @@ class EnemySpawnMine(DeviceKind):
 
 class EnemyShieldProjector(DeviceKind):
     type = AURA
-    runner = data['eDefend']
+    runner = edata['eDefend']
 
 '''
 HELPER WEAPONS
@@ -58,12 +67,6 @@ class HelperGun(DeviceKind):
 '''
 AVATAR WEAPONS
 '''
-class Empty(DeviceKind):
-    type = EMPTY
-    name = "None"
-    energy = 0
-    energyIdle = 0
-
 class Minigun(DeviceKind):
     type = PROJECTILE
     image = 'data/graphics/bullet1.png'
@@ -107,7 +110,7 @@ AVATAR DEVICES
 class Recharger(DeviceKind):
     type = EFFECT
     name = "Recharger"
-    runner = data['eRecharge']
+    runner = edata['eRecharge']
     ammo = 3
 
 class RocketLauncher(DeviceKind):
@@ -123,21 +126,46 @@ class RocketLauncher(DeviceKind):
     name = "Rockets"
     ammo = 10
 
-class Swarm(DeviceKind):
-    type = PROJECTILE
-    image = loadAnimation('data/graphics/rocket.png', 3, 1, 0.1, True)
-    position = 0, -5
-    damage = 20
-    isGood = True
-    velocity = 0, 500
-    lifetime = 1.5
-    name = "Swarm"
-    directions = 10
-    spread = 45
-    ammo = 3
+def loadDeviceKind(filename):
+    data = jsonLoad(filename)
+    get = data.get
+    
+    imgFile = get('image', "")
+    aniInfo = get("animationInfo", [])
+    if aniInfo:
+        img = loadAnimation(imgFile, *aniInfo)
+    else:
+        img =imgFile 
+            
+    class LoadedDeviceKind(DeviceKind):
+        position = get('position', (0, 9))
+        damage = get('damage', 2) 
+        energy = get('energy', 20)
+        energyIdle = get('energyIdle', 5) 
+        damageToShieldsMod = get('damageToShieldMod', 1)
+        ammo = get('ammo', 0)
+        isGood = get('isGood', True)
+        name = get('name', "Unknown device")
+        image = img
+        type = ('EMPTY', 'PROJECTILE', 'RAY', 'TURRET', 'SPAWN', 'AURA', 'EFFECT').index(get('type', 'PROJECTILE')) - 1
+        velocity = tuple(get('velocity', [0, 1600]))
+        lifetime = get('lifetime', 0.5)
+        pof = get('pof', 1)
+        bulletRotation = get('bulletRotation', False)
+        keepTarget = get('keepTarget', False)
+        directions = get('directions', 0)
+        angle = get('angle', 0)
+        spread = get('spread', 0)
+        oneByOne = get('oneByOne', False)
+        anchor = tuple(get('anchor', [0, 0]))
+        spawnID = get('spawnID', '')
+        runner = edata[get('runner', None)]
+        startSound = get('startSound', None)
+        loopSound = get('loopSound', None)
+        endSound = get('endSound', None)
+        soundVolume = get('soundVolume', 0.5)
+    
+    return LoadedDeviceKind
 
-class Satelite(DeviceKind):
-    type = SPAWN
-    spawnID = 'Aimer'
-    name = "Satelite"
-    ammo = 2
+Satelite = loadDeviceKind('data/devices/satelite.json')
+Swarm = loadDeviceKind('data/devices/swarm.json')

@@ -39,7 +39,8 @@ currents = {
             'layerObject': None
             }
 
-data = {
+adata = {
+        None : None,
         'aMove': actions.Move(),
         'aDelay01': actions.Delay(0.1),
         'aDelay03': actions.Delay(0.3),
@@ -50,6 +51,9 @@ data = {
         'aFloat60': actions.MoveBy((0,60),duration=1),
         'aFloat100': actions.MoveBy((0,100),duration=1)
         }
+edata = {
+         None: None
+         }
 
 '''
 HELPERS
@@ -113,4 +117,6 @@ def jsonLoad(filename):
         f.close()
         return data
     except:
-        print 'BAD MISSION DATA:', filename
+        print 'BAD DATA FILE:', filename
+        print exc_info()[0]
+        return {}

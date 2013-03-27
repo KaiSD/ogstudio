@@ -59,7 +59,7 @@ class ActionAimMovement(actions.InstantAction):
         dy = self.speed * math.sin(angle)
         dx = self.speed * math.cos(angle)
         self.target.velocity = dx, dy
-        actor.do(data['aMove'] | actions.Delay(self.lifetime) +  data['aDie'])
+        actor.do(adata['aMove'] | actions.Delay(self.lifetime) +  adata['aDie'])
 
 class ActionFollowAvatar(actions.IntervalAction ):
     def init(self, speed, duration):
@@ -71,7 +71,7 @@ class ActionFollowAvatar(actions.IntervalAction ):
     
     def start(self):
         actor = self.target
-        actor.do(data['aMove'])
+        actor.do(adata['aMove'])
         if not actor in followers:
             followers.append(actor)
         point = followers.index(actor)
@@ -123,16 +123,16 @@ class ActionFadeTimescale(actions.IntervalAction ):
 '''
 LIBRARY ENTRIES
 '''
-data['aDie'] = ActionDie()
-data['aShoot'] = ActionShoot()
-data['aAimShoot'] = ActionAimAndShoot()
-data['aStopShooting'] = ActionStopShooting()
-data['aAimMove400'] = ActionAimMovement(400, 3)
-data['aAimMove100'] = ActionAimMovement(100, 9)
+adata['aDie'] = ActionDie()
+adata['aShoot'] = ActionShoot()
+adata['aAimShoot'] = ActionAimAndShoot()
+adata['aStopShooting'] = ActionStopShooting()
+adata['aAimMove400'] = ActionAimMovement(400, 3)
+adata['aAimMove100'] = ActionAimMovement(100, 9)
 
-data['aRandMove5'] = ActionRandomMovement(duration=5)
-data['aRandMove4'] = ActionRandomMovement(duration=4)
-data['aRandMove3'] = ActionRandomMovement(duration=3) 
+adata['aRandMove5'] = ActionRandomMovement(duration=5)
+adata['aRandMove4'] = ActionRandomMovement(duration=4)
+adata['aRandMove3'] = ActionRandomMovement(duration=3) 
 
 '''
 MAIN KINDS
@@ -166,7 +166,6 @@ class DeviceKind(object):
     
     # Ray params
     anchor = 0, 0
-    rotation = 0
     
     # Spawn params
     spawnID = ''
@@ -310,9 +309,9 @@ class DefenderKind(EffectKind):
         if target.shields == 0:
             target.playShield(-1)
 
-data['eOverload'] = ShieldOverloadKind()
-data['eRecharge'] = RechargerKind()
-data['eDefend'] = DefenderKind()
+edata['eOverload'] = ShieldOverloadKind()
+edata['eRecharge'] = RechargerKind()
+edata['eDefend'] = DefenderKind()
 
 '''
 MAIN GAME ELEMENTS
@@ -440,7 +439,7 @@ class Bullet(ASprite):
         bulletsUsed[kind] = used
         
         currents['layerObject'].add(self, z=5)
-        self._actions = data['aMove'] | actions.Delay(lifetime) + data['aDie']
+        self._actions = adata['aMove'] | actions.Delay(lifetime) + adata['aDie']
         self.do(self._actions)
     
     def aim(self, target=None):
@@ -583,8 +582,8 @@ class Avatar(ASprite):
         self.weapons = tuple(weapons)
         devices = []
         for i in self.settings.avatarDevices:
-            if len(devices) < len(self._wSlots):
-                devices.append(devicesList[i](self._wSlots[len(devices)]))
+            if len(devices) < len(self._dSlots):
+                devices.append(devicesList[i](self._dSlots[len(devices)]))
                 self.consume += devicesList[i].energyIdle
         self.devices = tuple(devices)
         
@@ -595,7 +594,7 @@ class Avatar(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
-                  EffectRunner(data['eOverload'], self)
+                  EffectRunner(edata['eOverload'], self)
             else:
                 self.playShield()
         else:
@@ -643,7 +642,7 @@ class Avatar(ASprite):
         elif idx < 0:
             shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatarBlocked.png', 4, 1, 0.05))
         self.add(shield)
-        shield.do(data['aDelay03'] + actions.CallFuncS(die))
+        shield.do(adata['aDelay03'] + actions.CallFuncS(die))
 
 class NPCShip(ASprite):
     def __init__(self, owner, kind, x, y, target=None, coordZ=4):
@@ -683,7 +682,7 @@ class NPCShip(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
-                  EffectRunner(data['eOverload'], self)
+                  EffectRunner(edata['eOverload'], self)
             else:
                 self.playShield()
         else:
@@ -820,7 +819,7 @@ class NPCShip(ASprite):
             shield = sprite.Sprite(loadAnimation('data/graphics/ShieldEnemyBlocked.png', 4, 1, 0.05))
         shield.scale = self._shieldSize
         self.add(shield)
-        shield.do(data['aDelay03'] + actions.CallFuncS(die))
+        shield.do(adata['aDelay03'] + actions.CallFuncS(die))
 
 class Enemy(NPCShip):
     def __init__(self, owner, kind, x, y, target=None):

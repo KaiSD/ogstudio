@@ -1,0 +1,14 @@
+{
+    "type": "PROJECTILE",
+    "image": "data/graphics/rocket.png",
+    "animationInfo": [3, 1, 0.1, true],
+    "position": [0, -5],
+    "damage": 20,
+    "isGood": true,
+    "velocity": [0, 500],
+    "lifetime": 1.5,
+    "name": "Swarm",
+    "directions": 10,
+    "spread": 45,
+    "ammo": 3
+}
