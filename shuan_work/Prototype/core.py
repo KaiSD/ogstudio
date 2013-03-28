@@ -24,6 +24,11 @@ SPAWN = 3
 AURA = 4
 EFFECT = 5 
 
+SLOTGUN = 0
+SLOTWEAPON = 1
+SLOTDEVICE = 2
+SLOTNONE = 3
+
 EGSIMPLE = 0
 EGNOSHIELDS = 1
 EGBOOSTSHIELDS = 2
@@ -514,7 +519,7 @@ class Ray(ASprite):
     def __init__(self, owner, kind):
         super(Ray, self).__init__(kind.image)
         self.image_anchor = kind.anchor
-        self.rotation = kind.rotation
+        self.rotation = kind.rayRotation
         self.offset = (kind.position[0], kind.position[1])
         self.position = owner.position[0] + kind.position[0], owner.position[1] + kind.position[1]
         self.damage = kind.damage

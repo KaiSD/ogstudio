@@ -1,0 +1,11 @@
+{
+    "rayRotation": 180, 
+    "isGood": false, 
+    "image": "data/graphics/yellowray.png", 
+    "damage": 2, 
+    "anchor": [
+        8, 
+        0
+    ], 
+    "type": "RAY"
+}

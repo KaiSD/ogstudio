@@ -1,0 +1,21 @@
+{
+    "name": "Minigun", 
+    "loopSound": "data/sounds/minigun_loop.wav", 
+    "isGood": true, 
+    "image": "data/graphics/bullet1.png", 
+    "damage": 2, 
+    "lifetime": 0.5, 
+    "soundVolume": 0.3, 
+    "endSound": "data/sounds/minigun_end.wav", 
+    "velocity": [
+        0, 
+        1500
+    ], 
+    "pof": 0.1, 
+    "position": [
+        0, 
+        10
+    ], 
+    "type": "PROJECTILE",
+    "slot": "SLOTGUN"
+}

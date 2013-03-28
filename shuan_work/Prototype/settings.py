@@ -28,6 +28,7 @@ class Settings(object):
     avatarReactor = 0
     avatarShields = 0
     avatarGun = 0
+    
     avatarWeapons = []
     avatarDevices = []
     
@@ -49,6 +50,11 @@ class Settings(object):
                     self.__dict__[i] = data[i]
         except:
             print "Settings loading failed:", exc_info()[0]
+        
+        if not self.avatarWeapons:
+            self.avatarWeapons = [0, 0, 0, 0, 0]
+        if not self.avatarDevices:
+            self.avatarDevices = [0, 0, 0]
     
     def save(self, filename):
         try:

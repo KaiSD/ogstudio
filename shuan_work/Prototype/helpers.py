@@ -10,6 +10,7 @@ Shuan gameplay prototype helpers module
 from cocos.director import director
 from cocos import collision_model, actions
 from cocos.audio.pygame import mixer
+from os import listdir
 import pyglet
 from settings import *
 
@@ -26,6 +27,8 @@ followers = []
 
 enemies = {}
 helpers = {}
+enemyWeapons = {}
+helperWeapons = {}
 playerShips = tuple()
 playerGuns = tuple()
 playerWeapons = tuple()
@@ -71,7 +74,10 @@ def abs2rel(x, y):
     return x/size[0], 1-y/size[1]
 
 def loadAnimation(filename, cols, rows, period, loop=False):
+    if filename == "":
+        return None
     if not filename in animations.keys():
+        print 'Loading', filename
         image = pyglet.image.load(filename)
         image_seq = pyglet.image.ImageGrid(image, rows, cols)
         animations[filename] = pyglet.image.Animation.from_image_sequence(image_seq, period, loop)
@@ -111,6 +117,7 @@ def setCollision(spriteObject):
     spriteObject.cshape = collision_model.AARectShape(pos, size[0]/2, size[1]/2)
 
 def jsonLoad(filename):
+    print 'Loading', filename
     try:
         f = open(filename, 'r')
         data = json.load(f)
@@ -120,3 +127,18 @@ def jsonLoad(filename):
         print 'BAD DATA FILE:', filename
         print exc_info()[0]
         return {}
+
+def exportWeaponClass(cl):
+    d = cl.__dict__.copy()
+    filename = 'data/devices/%s.json' % (cl.__name__)
+    del d['__module__']
+    del d['__doc__']
+    d['type'] = ('EMPTY', 'PROJECTILE', 'RAY', 'TURRET', 'SPAWN', 'AURA', 'EFFECT')[d['type'] + 1]
+    if 'runner' in d:
+        for k in edata.keys():
+            if d['runner'] == edata[k]:
+                d['runner'] = k
+    import json
+    f = open(filename, 'w')
+    json.dump(d, f, indent = 4)
+    f.close()

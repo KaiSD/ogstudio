@@ -55,7 +55,7 @@ class HelperAimer(NPCKind):
     life = 10
     damage = 10
     score = 1
-    weapons = (HelperGun(),)
+    weapons = (helperWeapons['HelperGun'](),)
     actions = actions.Repeat(ActionFollowAvatar(speed=200, duration=0.5)) | actions.Repeat(adata['aDelay1'] + adata['aAimShoot'])
 '''
 ENEMIES
@@ -98,7 +98,7 @@ class EnemyAimer(NPCKind):
     life = 10
     damage = 10
     score = 1
-    weapons = (EnemyGun(),)
+    weapons = (enemyWeapons['EnemyGun'](),)
     actions = adata['aDown6'] + adata['aDie'] | actions.Repeat(actions.RandomDelay(1, 3) + adata['aAimShoot'])
 
 class EnemyStraighter(NPCKind):
@@ -109,7 +109,7 @@ class EnemyStraighter(NPCKind):
     life = 10
     damage = 10
     score = 1
-    weapons = (EnemyGun(),)
+    weapons = (enemyWeapons['EnemyGun'](),)
     actions = actions.MoveTo((int(random.random()*800),-900),duration=6) + adata['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + adata['aShoot'])
 
 class EnemyKami(NPCKind):
@@ -130,7 +130,7 @@ class EnemyRayer(NPCKind):
     life = 30
     damage = 20
     score = 3
-    weapons = (EnemyLaser(),)
+    weapons = (enemyWeapons['EnemyLaser'](),)
     actions = actions.MoveTo((int(random.random()*800),-900),duration=10) + adata['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + adata['aShoot'] + actions.RandomDelay(2, 4) + adata['aStopShooting'])
 
 class EnemyBurster(NPCKind):
@@ -141,7 +141,7 @@ class EnemyBurster(NPCKind):
     life = 20
     damage = 10
     score = 2
-    weapons = (EnemyGun(),)
+    weapons = (enemyWeapons['EnemyGun'](),)
     actions = actions.MoveTo((int(random.random()*800),-900),duration=12) + adata['aDie'] | actions.Repeat(actions.Delay(0.5) + adata['aShoot'])
 
 class EnemyBuffer(NPCKind):
@@ -154,7 +154,7 @@ class EnemyBuffer(NPCKind):
     shields = 20
     shieldsRegen = 1
     score = 5
-    weapons = (EnemyShieldProjector(),)
+    weapons = (enemyWeapons['EnemyShieldProjector'](),)
     actions = adata['aRandMove5'] + adata['aRandMove5'] + adata['aRandMove5'] + adata['aDown5'] + adata['aDie'] | adata['aShoot']
 
 class EnemyBehemoth(NPCKind):
@@ -165,7 +165,7 @@ class EnemyBehemoth(NPCKind):
     life = 100
     damage = 50
     score = 5
-    weapons = (EnemyGun(-15,-30), EnemyGun(0,-30), EnemyGun(15,-30))
+    weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](0,-30), enemyWeapons['EnemyGun'](15,-30))
     actions = adata['aRandMove3'] + adata['aRandMove3'] + adata['aRandMove3'] + adata['aDown6'] + adata['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + adata['aAimShoot']) | actions.Repeat(actions.Delay(0.5) + adata['aShoot'])
 
 class EnemySummoner(NPCKind):
@@ -176,7 +176,7 @@ class EnemySummoner(NPCKind):
     life = 100
     damage = 50
     score = 5
-    weapons = (EnemySpawnAimer(), EnemyGun(-15,-30), EnemyGun(15,-30))
+    weapons = (enemyWeapons['EnemyGun'](), enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30))
     actions = adata['aRandMove5'] + adata['aRandMove5'] + adata['aRandMove5'] + adata['aDown5'] + adata['aDie'] | actions.Repeat(actions.Delay(3) + adata['aShoot'])
 
 class EnemyMinador(NPCKind):
@@ -187,7 +187,7 @@ class EnemyMinador(NPCKind):
     life = 100
     damage = 50
     score = 5
-    weapons = (EnemySpawnMine(), )
+    weapons = (enemyWeapons['EnemySpawnMine'](), )
     actions = adata['aRandMove5'] + adata['aRandMove5'] + adata['aRandMove5'] + adata['aDown5'] + adata['aDie'] | actions.Repeat(actions.Delay(2) + adata['aShoot'])
 
 class EnemyMiniBoss(NPCKind):
@@ -198,7 +198,7 @@ class EnemyMiniBoss(NPCKind):
     life = 1000
     damage = 1000
     score = 100
-    weapons = (EnemyGun(-15,-30), EnemyGun(15,-30))
+    weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30))
     actions =  actions.Repeat(adata['aRandMove4']) | actions.Repeat(actions.Delay(0.2) + adata['aAimShoot'])
 
 class EnemyTestBoss(NPCKind):
@@ -209,8 +209,8 @@ class EnemyTestBoss(NPCKind):
     life = 3000
     damage = 1000
     score = 300
-    weapons = (EnemyGun(-15,-30), EnemyGun(15,-30), EnemyGun(-40,-35), EnemyGun(40,-35))
-    weapons2 = (EnemyGun(-15,-30), EnemyGun(15,-30), EnemyGun(-40,-35), EnemyGun(40,-35), EnemyLaser())
+    weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30), enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35))
+    weapons2 = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30), enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35), enemyWeapons['EnemyLaser']())
     actions =  actions.Repeat(adata['aRandMove4']) | actions.Repeat(actions.Delay(0.4) + adata['aAimShoot'])
     
     def switchBrains(self, instance, idx):
@@ -262,9 +262,6 @@ enemies['TestBoss'] = EnemyTestBoss()
 helpers['Aimer'] = HelperAimer()
 
 playerShips += (AvatarMK1, AvatarMK2, AvatarMK3)
-playerGuns += (Empty, Minigun)
-playerWeapons += (Empty, Laser, Turret)
-playerDevices += (Empty, Recharger, RocketLauncher, Swarm, Satelite)
 playerShields += (('No Shield',0,0,0), ('Shield MK1',10,1,0))
 playerEngines += (('Engine MK1',5.0,12), ('Engine MK2', 10.0,50))
 playerReactors += (('Reactor MK1',100), ('Reactor MK2', 150))

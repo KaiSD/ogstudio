@@ -1,0 +1,16 @@
+{
+    "name": "Laser", 
+    "loopSound": "data/sounds/laser_loop.wav", 
+    "isGood": true, 
+    "image": "data/graphics/blueray.png", 
+    "damage": 2, 
+    "anchor": [
+        8, 
+        16
+    ], 
+    "endSound": "data/sounds/laser_end.wav", 
+    "soundVolume": 0.6, 
+    "rotation": 0, 
+    "type": "RAY",
+    "slot": "SLOTWEAPON"
+}

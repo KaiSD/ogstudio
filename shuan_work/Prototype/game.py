@@ -7,7 +7,6 @@ Shuan gameplay prototype
 (c) 2012 Opensource Game Studio Team (http://opengamestudio.org)
 '''
 
-import os
 import coui
 from sys import exit
 from missions import *
@@ -440,17 +439,18 @@ class Ships(layer.Layer):
 
 if __name__ == "__main__":
     settings = Settings()
-    Settings().load('.settings')
+    settings.load('.settings')
+    
     director.init(width=Settings().width, height=Settings().height, caption="Shuan 2D " + VERSION, fullscreen=Settings().fullscreen, vsync=False)
     
     missionsList.append(SurvivalTemplate())
-    for i in os.listdir('data/missions'):
+    for i in listdir('data/missions'):
         if i.endswith('.seq'):
             m = SequenceTemplate(jsonLoad('data/missions/'+i))
             if m.sequence is None:
                 exit(1)
             m.name = i[:-4]
-            missionsList.append(m)
+            missionsList.append(m) 
     
     startMenu = scene.Scene(Background(), Start())
     director.show_FPS = Settings().fps
