@@ -1,0 +1,3 @@
+MoveBy(0, 0.1, 1)
+AimMove(AnyFriend, 100, 9)
+Die

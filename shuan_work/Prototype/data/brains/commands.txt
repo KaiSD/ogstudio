@@ -1,0 +1,20 @@
+Brain Commands:
+New () - Starts the new commands sequence in parallel to the previous one.
+Repeat () - Repeats the following sequence forever.
+AimMove (TargetSelector, Speed, Time, FixedX, FixedY) - Moves toward the target. 
+Wait (Time) - Wait for some time before the next action.
+Die () - NPC dies now.
+MoveBy (X, Y, Time, RandX, RandY) - Relative move. 
+MoveTo (X, Y, Time, RandX, RandY) - Absolute move.
+RandomDelay (Min, Max) - Waits for random amount of time before the next action.
+RandomMovement (Time[, BX1, BY1, BX2, BY2]) - NPC moves to the random point. You can define the bounds by setting BX and BY values. 
+SelectTarget (TargetSelector) - Sets a target that can later be used with selector "Selected".
+Shoot ([TargetSelector]) - Shoots the weapon toward the target. If there is no target - shoots forward.  
+StopShooting () - NPC stops shooting.
+
+Valid target selectors:
+Avatar - player.
+AvatarTarget - player's target.
+AnyFriend - any player's ally.
+AnyEnemy - any player's enemy.
+Selected - target, that has been selected with command SelectTarget 

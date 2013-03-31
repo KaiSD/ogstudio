@@ -1,194 +1,192 @@
-[
-["Music", "data/music/In a Heartbeat.ogg"],
-["Wait", 3],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.4],
-["Spawn", "Aimer", 0.3],
-["Wait", 1],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Straighter", 0.7],
-["Spawn", "Aimer", 0.8],
-["Wait", 1],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.4],
-["Spawn", "Aimer", 0.3],
-["Wait", 3],
-["Spawn", "Aimer", 0.1],
-["Spawn", "Straighter", 0.15],
-["Wait", 1],
-["Spawn", "Aimer", 0.2],
-["Spawn", "Straighter", 0.25],
-["Wait", 1],
-["Spawn", "Aimer", 0.3],
-["Spawn", "Straighter", 0.35],
-["Wait", 1],
-["Spawn", "Aimer", 0.4],
-["Spawn", "Straighter", 0.45],
-["Wait", 1],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.55],
-["Wait", 1],
-["Spawn", "Aimer", 0.9],
-["Spawn", "Straighter", 0.85],
-["Wait", 1],
-["Spawn", "Aimer", 0.8],
-["Spawn", "Straighter", 0.75],
-["Wait", 1],
-["Spawn", "Aimer", 0.7],
-["Spawn", "Straighter", 0.65],
-["Wait", 1],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Straighter", 0.55],
-["Wait", 1],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.45],
-["Wait", 3],
-["Spawn", "Burster", 0.5],
-["Spawn", "Burster", 0.45],
-["Spawn", "Burster", 0.55],
-["Spawn", "Burster", 0.4],
-["Spawn", "Burster", 0.6],
-["Spawn", "Aimer", 0.7],
-["Spawn", "Aimer", 0.3],
-["Wait", 1],
-["Spawn", "Aimer", 0.3],
-["Wait", 2],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 2],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.4],
-["Spawn", "Aimer", 0.3],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Straighter", 0.7],
-["Spawn", "Aimer", 0.8],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.4],
-["Spawn", "Aimer", 0.3],
-["Spawn", "Straighter", 0.2],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Straighter", 0.7],
-["Spawn", "Aimer", 0.8],
-["Spawn", "Straighter", 0.2],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.5],
-["Wait", 4],
-["Spawn", "Straighter", 0.4],
-["Wait", 4],
-["Spawn", "Aimer", 0.3],
-["Wait", 4],
-["Spawn", "Straighter", 0.2],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Wait", 4],
-["Spawn", "Straighter", 0.7],
-["Wait", 4],
-["Spawn", "Aimer", 0.8],
-["Wait", 4],
-["Spawn", "Straighter", 0.2],
-["Wait", 2],
-["BackgroundSpeed", 0.01, 2],
-["Wait", 5],
-["Spawn", "Miniboss", 0.5, "Miniboss"],
-["WaitEnemyHealth", "Miniboss"],
-["Wait", 3],
-["BackgroundSpeed", 1, 0.1],
-["Wait", 5],
-["Spawn", "Burster", 0.45],
-["Spawn", "Burster", 0.55],
-["Spawn", "Burster", 0.4],
-["Spawn", "Burster", 0.6],
-["Spawn", "Rayer", 0.35],
-["Spawn", "Rayer", 0.65],
-["Spawn", "Straighter", 0.7],
-["Spawn", "Straighter", 0.3],
-["Wait", 1],
-["Spawn", "Straighter", 0.7],
-["Spawn", "Straighter", 0.3],
-["Wait", 4],
-["Spawn", "Rayer", 0.5],
-["Wait", 4],
-["Spawn", "Straighter", 0.4],
-["Wait", 4],
-["Spawn", "Aimer", 0.3],
-["Wait", 4],
-["Spawn", "Straighter", 0.2],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Wait", 4],
-["Spawn", "Straighter", 0.7],
-["Wait", 4],
-["Spawn", "Aimer", 0.8],
-["Wait", 4],
-["Spawn", "Straighter", 0.2],
-["Wait", 2],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Burster", 0.6],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 0.5],
-["Spawn", "Burster", 0.4],
-["Wait", 0.5],
-["Spawn", "Straighter", 0.6],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Straighter", 0.4],
-["Spawn", "Aimer", 0.3],
-["Spawn", "Rayer", 0.2],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Straighter", 0.7],
-["Spawn", "Aimer", 0.8],
-["Spawn", "Rayer", 0.9],
-["Wait", 2],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Burster", 0.4],
-["Spawn", "Aimer", 0.3],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Burster", 0.7],
-["Spawn", "Aimer", 0.8],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.5],
-["Spawn", "Burster", 0.4],
-["Spawn", "Aimer", 0.3],
-["Spawn", "Rayer", 0.2],
-["Wait", 0.5],
-["Spawn", "Aimer", 0.6],
-["Spawn", "Burster", 0.7],
-["Spawn", "Aimer", 0.8],
-["Spawn", "Rayer", 0.9],
-["BackgroundSpeed", 0.01, 2],
-["Wait", 2],
-["Spawn", "TestBoss", 0.5, "Boss"],
-["Wait", 2],
-["WaitEnemyHealth", "Boss", 1500],
-["SwitchBrains", "Boss", 1],
-["WaitEnemyHealth", "Boss", 750],
-["SwitchBrains", "Boss", 2],
-["WaitEnemyHealth", "Boss"],
-["BackgroundSpeed", 1, 0.2]
-]
+Music(data/music/In a Heartbeat.ogg)
+Wait(3)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.4)
+Spawn(Aimer, 0.3)
+Wait(1)
+Spawn(Aimer, 0.6)
+Spawn(Straighter, 0.7)
+Spawn(Aimer, 0.8)
+Wait(1)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.4)
+Spawn(Aimer, 0.3)
+Wait(3)
+Spawn(Aimer, 0.1)
+Spawn(Straighter, 0.15)
+Wait(1)
+Spawn(Aimer, 0.2)
+Spawn(Straighter, 0.25)
+Wait(1)
+Spawn(Aimer, 0.3)
+Spawn(Straighter, 0.35)
+Wait(1)
+Spawn(Aimer, 0.4)
+Spawn(Straighter, 0.45)
+Wait(1)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.55)
+Wait(1)
+Spawn(Aimer, 0.9)
+Spawn(Straighter, 0.85)
+Wait(1)
+Spawn(Aimer, 0.8)
+Spawn(Straighter, 0.75)
+Wait(1)
+Spawn(Aimer, 0.7)
+Spawn(Straighter, 0.65)
+Wait(1)
+Spawn(Aimer, 0.6)
+Spawn(Straighter, 0.55)
+Wait(1)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.45)
+Wait(3)
+Spawn(Burster, 0.5)
+Spawn(Burster, 0.45)
+Spawn(Burster, 0.55)
+Spawn(Burster, 0.4)
+Spawn(Burster, 0.6)
+Spawn(Aimer, 0.7)
+Spawn(Aimer, 0.3)
+Wait(1)
+Spawn(Aimer, 0.3)
+Wait(2)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(0.5)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(0.5)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(0.5)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(2)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.4)
+Spawn(Aimer, 0.3)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Spawn(Straighter, 0.7)
+Spawn(Aimer, 0.8)
+Wait(0.5)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.4)
+Spawn(Aimer, 0.3)
+Spawn(Straighter, 0.2)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Spawn(Straighter, 0.7)
+Spawn(Aimer, 0.8)
+Spawn(Straighter, 0.2)
+Wait(0.5)
+Spawn(Aimer, 0.5)
+Wait(4)
+Spawn(Straighter, 0.4)
+Wait(4)
+Spawn(Aimer, 0.3)
+Wait(4)
+Spawn(Straighter, 0.2)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Wait(4)
+Spawn(Straighter, 0.7)
+Wait(4)
+Spawn(Aimer, 0.8)
+Wait(4)
+Spawn(Straighter, 0.2)
+Wait(2)
+BackgroundSpeed(0.01, 2)
+Wait(5)
+Spawn(Miniboss, 0.5, Miniboss)
+WaitEnemyHealth(Miniboss)
+Wait(3)
+BackgroundSpeed(1, 0.1)
+Wait(5)
+Spawn(Burster, 0.45)
+Spawn(Burster, 0.55)
+Spawn(Burster, 0.4)
+Spawn(Burster, 0.6)
+Spawn(Rayer, 0.35)
+Spawn(Rayer, 0.65)
+Spawn(Straighter, 0.7)
+Spawn(Straighter, 0.3)
+Wait(1)
+Spawn(Straighter, 0.7)
+Spawn(Straighter, 0.3)
+Wait(4)
+Spawn(Rayer, 0.5)
+Wait(4)
+Spawn(Straighter, 0.4)
+Wait(4)
+Spawn(Aimer, 0.3)
+Wait(4)
+Spawn(Straighter, 0.2)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Wait(4)
+Spawn(Straighter, 0.7)
+Wait(4)
+Spawn(Aimer, 0.8)
+Wait(4)
+Spawn(Straighter, 0.2)
+Wait(2)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Burster, 0.6)
+Wait(0.5)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(0.5)
+Spawn(Straighter, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(0.5)
+Spawn(Burster, 0.4)
+Wait(0.5)
+Spawn(Straighter, 0.6)
+Wait(0.5)
+Spawn(Aimer, 0.5)
+Spawn(Straighter, 0.4)
+Spawn(Aimer, 0.3)
+Spawn(Rayer, 0.2)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Spawn(Straighter, 0.7)
+Spawn(Aimer, 0.8)
+Spawn(Rayer, 0.9)
+Wait(2)
+Spawn(Aimer, 0.5)
+Spawn(Burster, 0.4)
+Spawn(Aimer, 0.3)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Spawn(Burster, 0.7)
+Spawn(Aimer, 0.8)
+Wait(0.5)
+Spawn(Aimer, 0.5)
+Spawn(Burster, 0.4)
+Spawn(Aimer, 0.3)
+Spawn(Rayer, 0.2)
+Wait(0.5)
+Spawn(Aimer, 0.6)
+Spawn(Burster, 0.7)
+Spawn(Aimer, 0.8)
+Spawn(Rayer, 0.9)
+BackgroundSpeed(0.01, 2)
+Wait(2)
+Spawn(TestBoss, 0.5, Boss)
+Wait(2)
+WaitEnemyHealth(Boss, 1500)
+SwitchBrains(Boss, 1)
+WaitEnemyHealth(Boss, 750)
+SwitchBrains(Boss, 2)
+WaitEnemyHealth(Boss)
+BackgroundSpeed(1, 0.2)

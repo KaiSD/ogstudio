@@ -446,7 +446,7 @@ if __name__ == "__main__":
     missionsList.append(SurvivalTemplate())
     for i in listdir('data/missions'):
         if i.endswith('.seq'):
-            m = SequenceTemplate(jsonLoad('data/missions/'+i))
+            m = SequenceTemplate(loadScript('data/missions/'+i))
             if m.sequence is None:
                 exit(1)
             m.name = i[:-4]

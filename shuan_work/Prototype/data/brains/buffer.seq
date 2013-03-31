@@ -1,0 +1,7 @@
+RandomMovement(5)
+RandomMovement(5)
+RandomMovement(5)
+MoveBy(0, -1.1, 6)
+Die
+New
+Shoot

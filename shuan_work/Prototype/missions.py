@@ -91,9 +91,9 @@ class SurvivalTemplate(Mission):
             kind = self.enemyKinds[random.randint(0,int(self.timer / (10 + self.timer / self.ecount)))]
             free = shipsFree.get(kind, [])
             if free:
-                free[0].reinstate(random.random(), -0.1, currents['avatarObject'])
+                free[0].reinstate(random.random(), -0.1)
             else:
-                Enemy(self, kind, random.random(), -0.1, currents['avatarObject'])
+                Enemy(self, kind, random.random(), -0.1)
         self.timer += 1
 
 missionsList = (SurvivalTemplate)
@@ -129,9 +129,9 @@ class SequenceTemplate(Mission):
             free = shipsFree.get(kind, [])
             if free:
                 e = free[0]
-                e.reinstate(pos, -0.1, currents['avatarObject'])
+                e.reinstate(pos, -0.1)
             else:
-                e = Enemy(self, kind, pos, -0.1, currents['avatarObject'])
+                e = Enemy(self, kind, pos, -0.1)
             
             if len(args) == 3:
                 meter = text.Label('',

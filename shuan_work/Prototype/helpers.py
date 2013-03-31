@@ -23,7 +23,6 @@ bulletsUsed = {}
 bulletsFree = {} 
 shipsUsed = {}
 shipsFree = {}
-followers = []
 
 enemies = {}
 helpers = {}
@@ -54,7 +53,7 @@ adata = {
         'aFloat60': actions.MoveBy((0,60),duration=1),
         'aFloat100': actions.MoveBy((0,100),duration=1)
         }
-edata = {
+effectsData = {
          None: None
          }
 
@@ -62,16 +61,13 @@ edata = {
 HELPERS
 '''
 def rel(xRel, yRel):
-    size = director.get_window_size()
-    return int(size[0]*xRel), size[1]-int(size[1]*yRel)
+    return int(W*xRel), H-int(H*yRel)
 
 def relY(yRel):
-    size = director.get_window_size()
-    return size[1]-int(size[1]*yRel)
+    return H-int(H*yRel)
 
 def abs2rel(x, y):
-    size = director.get_window_size()
-    return x/size[0], 1-y/size[1]
+    return x/W, 1-y/H
 
 def loadAnimation(filename, cols, rows, period, loop=False):
     if filename == "":
@@ -81,6 +77,7 @@ def loadAnimation(filename, cols, rows, period, loop=False):
         image = pyglet.image.load(filename)
         image_seq = pyglet.image.ImageGrid(image, rows, cols)
         animations[filename] = pyglet.image.Animation.from_image_sequence(image_seq, period, loop)
+#    return animations[filename], filename, (cols, rows, period, loop) # TEMP
     return animations[filename]
 
 def loadSound(filename, volume=1):
@@ -135,10 +132,135 @@ def exportWeaponClass(cl):
     del d['__doc__']
     d['type'] = ('EMPTY', 'PROJECTILE', 'RAY', 'TURRET', 'SPAWN', 'AURA', 'EFFECT')[d['type'] + 1]
     if 'runner' in d:
-        for k in edata.keys():
-            if d['runner'] == edata[k]:
+        for k in effectsData.keys():
+            if d['runner'] == effectsData[k]:
                 d['runner'] = k
     import json
     f = open(filename, 'w')
     json.dump(d, f, indent = 4)
     f.close()
+
+def exportShipClass(cl):
+    def getKey(dic, val):
+        for k in dic.keys():
+            if dic[k] == val:
+                return k
+    d = cl.__dict__.copy()
+    filename = 'data/ships/%s.json' % (cl.__name__)
+    del d['__module__']
+    del d['__doc__']
+    d['image'] = d['imgFile']
+    del d['imgFile']
+    w = []
+    for i in d.get('weapons', []):
+        w.append(i.idString)
+    d['weapons'] = [w]
+    r = []
+    for i in d.get('devices', []):
+        r.append(i.idString)
+    d['devices'] = r
+    d['actions'] = None
+    d['brains'] = [] 
+            
+    import json
+    f = open(filename, 'w')
+    json.dump(d, f, indent = 4)
+    f.close()
+
+def loadScript(filename):
+    print 'Loading', filename
+    try:
+        f = open(filename, 'r')
+        script = f.read()
+        f.close()
+    except:
+        print 'CAN\'T READ DATA FILE:', filename
+        print exc_info()[0]
+        return {}
+    
+    stages = []
+    sequences = []
+    sequence = []
+    key = ''
+    numeric = False
+    comment = False
+    subLevels = []
+    
+    def addseq(k):
+        if k == '':
+            return
+        if numeric:
+            if '.' in k:
+                k = float(k)
+            else:
+                k = int(k)
+        if subLevels:
+            subLevels[-1].append(k)
+        else:
+            sequence.append(k)
+    
+    def lst(*args):
+        return args
+        
+    for i in script:
+        if i in (',', ' ', '\r'):
+            addseq(key)
+            key = ''
+        elif i in ('\n', ';'):
+            addseq(key)
+            key = ''
+            if sequence:
+                sequences.append(sequence[:])
+                del sequence[:]
+            if i == "\n":
+                comment = False
+        elif i == '(':
+            addseq(key)
+            key = ''
+            subLevels.append([])
+        elif i == ')':
+            addseq(key)
+            key = ''
+            if subLevels:
+                item = subLevels[-1]
+                del subLevels[-1]
+                if subLevels:
+                    subLevels[-1].append(item)
+                else:
+                    sequence.append(item)
+            else:
+                print 'SCRIPT STRUCTURE ERROR:', filename, " - trying to close the bracket before opening it"
+                return None
+        elif i == '#':
+            comment = True 
+        elif i in ('-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'):
+            if not comment:
+                if key == '':
+                    numeric = True
+                key += i
+        else:
+            if not comment:
+                numeric = False
+                key += i
+    
+    if subLevels:
+        print 'SCRIPT STRUCTURE ERROR:', filename, " - unclosed brackets"
+        return None
+    
+    addseq(key)
+    sequences.append(sequence)
+    
+    final = []
+    idx = 1
+    
+    for s in sequences:
+        if len(s) == 1:
+            final.append(lst(s[0]))
+        elif len(s) == 2:
+            final.append(lst(s[0], *s[1]))
+        else:
+            print 'SCRIPT STRUCTURE ERROR:', filename, " - incorrect command length at ", idx
+            return None
+        idx += 1
+    
+    return final

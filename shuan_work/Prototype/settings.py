@@ -67,4 +67,6 @@ class Settings(object):
             f.close()
         except:
             print "Settings saving failed:", exc_info()[0]
-            
+
+W = Settings().width
+H = Settings().height

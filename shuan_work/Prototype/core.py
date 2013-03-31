@@ -40,75 +40,137 @@ class ActionDie(actions.InstantAction):
     def start(self):
         self.target.kill()
 
-class ActionShoot(actions.InstantAction):
+class ActionAim(actions.InstantAction):
+    def __init__(self, selector=None):
+        super(ActionAim, self).__init__()
+        self.selector = selector
     def start(self):
-        self.target.shoot()
+        actor = self.target
+        selector = self.selector
+        target = None
+        if selector == 'Avatar':
+            target = currents['avatarObject']
+        elif selector == 'AvatarTarget':
+            target = currents['layerObject'].target
+        elif selector == 'AnyFriend':
+            target = random.choice(currents['layerObject'].avatarHelpers)
+        elif selector == 'AnyEnemy':
+            if currents['layerObject'].enemies:
+                target = random.choice(currents['layerObject'].enemies)
+        elif selector == 'Last':
+            if actor._target:
+                target = actor._target
+        
+        actor._target = target
 
-class ActionAimAndShoot(actions.InstantAction):
+class ActionShoot(ActionAim):
     def start(self):
-        self.target.shoot(True)
+        actor = self.target
+        selector = self.selector
+        target = None
+        if selector == 'Avatar':
+            target = currents['avatarObject']
+        elif selector == 'AvatarTarget':
+            target = currents['layerObject'].target
+        elif selector == 'AnyFriend':
+            target = random.choice(currents['layerObject'].avatarHelpers)
+        elif selector == 'AnyEnemy':
+            if currents['layerObject'].enemies:
+                target = random.choice(currents['layerObject'].enemies)
+        elif selector == 'Last':
+            if actor._target:
+                target = actor._target
+            
+        self.target.shoot(target)
 
 class ActionStopShooting(actions.InstantAction):
     def start(self):
         self.target.stopShooting()
 
 class ActionAimMovement(actions.InstantAction):
-    def __init__(self, speed, lifetime):
+    def __init__(self, selector, speed, duration, bx1=0, by1=0, bx2=1, by2=1):
         super(ActionAimMovement, self).__init__()
         self.speed = speed
-        self.lifetime = lifetime
-    def start(self):
-        actor = self.target
-        target = actor.target
-        angle = math.atan2(target.position[1] - actor.position[1], target.position[0] - actor.position[0])
-        dy = self.speed * math.sin(angle)
-        dx = self.speed * math.cos(angle)
-        self.target.velocity = dx, dy
-        actor.do(adata['aMove'] | actions.Delay(self.lifetime) +  adata['aDie'])
-
-class ActionFollowAvatar(actions.IntervalAction ):
-    def init(self, speed, duration):
         self.duration = duration
-        self.speed = speed
-        self.wait = True
-        shiftX = 0
-        shiftY = 0
+        self.selector = selector
+        self.bounds = (bx1, by1, bx2, by2)
     
     def start(self):
         actor = self.target
-        actor.do(adata['aMove'])
-        if not actor in followers:
-            followers.append(actor)
-        point = followers.index(actor)
         
-        self.shiftX = point % 2 * 60 - 30
-        self.shiftY = point / 2 * -30 + 60
+        selector = self.selector
+        target = None
+        if selector == 'Avatar':
+            target = currents['avatarObject']
+        elif selector == 'AvatarTarget':
+            target = currents['layerObject'].target
+        elif selector == 'AnyFriend':
+            target = random.choice(currents['layerObject'].avatarHelpers)
+        elif selector == 'AnyEnemy':
+            if currents['layerObject'].enemies:
+                target = random.choice(currents['layerObject'].enemies)
+        elif selector == 'Last':
+            if actor._target:
+                target = actor._target
         
-        target = currents['avatarObject']
-        deltaY = target.position[1] + self.shiftY - actor.position[1]
-        deltaX = target.position[0] + self.shiftX - actor.position[0]
+        if not target:
+            actor.do(actions.Delay(self.duration))
+            return
+        
+        destination = list(abs2rel(*target.position))
+        if self.bounds:
+            bounds = self.bounds 
+            destination[0] = max(destination[0], bounds[0])
+            destination[1] = max(destination[1], bounds[1])
+            destination[0] = min(destination[0], bounds[2])
+            destination[1] = min(destination[1], bounds[3])
+        
+        destination = rel(*destination)
+        
+        deltaY = destination[1] - actor.position[1]
+        deltaX = destination[0] - actor.position[0]
         dist = math.sqrt(deltaX**2 + deltaY**2)
-        actor.do(actions.MoveBy((deltaX, deltaY), duration = dist/self.speed))
-    
-    def stop(self):
-        actor = self.target
-        if actor in followers:
-            if actor._gonnaDie: 
-                followers.remove(actor)
+        dur = dist/self.speed
+        coeff = self.duration/dur
+        actor.do(actions.MoveBy((deltaX*coeff, deltaY*coeff), duration = self.duration))
 
 class ActionRandomMovement(actions.IntervalAction):
-    def init(self, duration):
+    def __init__(self, duration, bx1=0, by1=0, bx2=1, by2=1):
+        super(ActionRandomMovement, self).__init__()
         self.duration = duration
         self.initial = None
         self.destination = None
+        self.bounds = (bx1, by1, bx2, by2)
 
     def update(self, t):
         if self.initial == None:
             self.initial = self.target.position
-            self.destination = rel(random.random(), random.random())
+            destination = random.random(), random.random()
+            if self.bounds:
+                bounds = self.bounds 
+                destination[0] = max(destination[0], bounds[0])
+                destination[1] = max(destination[1], bounds[1])
+                destination[0] = min(destination[0], bounds[2])
+                destination[1] = min(destination[1], bounds[3])
+            self.destination = rel(*destination)
+            
         x = self.initial[0] + (self.destination[0] - self.initial[0]) * t
-        y = self.initial[1] + (self.destination[1] - self.initial[1]) * t
+        y = self.initial[1] + (self.initial[1] - self.destination[1]) * t
         self.target.position = x,y
+
+class ActionMoveTo(actions.MoveTo):
+    def __init__(self, x, y, duration, randomOffsetX=0, randomOffsetY=0):
+        x, y = rel(x, y)
+        randomOffsetX, randomOffsetY = rel(randomOffsetX, randomOffsetY)
+        nx, ny = x + int((random.random() - 0.5)*randomOffsetX),  y + int((random.random() - 0.5)*randomOffsetY), 
+        super(ActionMoveTo, self).__init__((nx, -ny), duration=duration)
+
+class ActionMoveBy(actions.MoveBy):
+    def __init__(self, x, y, duration, randomOffsetX=0, randomOffsetY=0):
+        x, y = rel(x, y)
+        randomOffsetX, randomOffsetY = rel(randomOffsetX, randomOffsetY)
+        nx, ny = x + int((random.random() - 0.5)*randomOffsetX),  y + int((random.random() - 0.5)*randomOffsetY),
+        super(ActionMoveBy, self).__init__((nx, ny), duration=duration)
 
 class ActionFadeTimescale(actions.IntervalAction ):
     '''
@@ -130,10 +192,10 @@ LIBRARY ENTRIES
 '''
 adata['aDie'] = ActionDie()
 adata['aShoot'] = ActionShoot()
-adata['aAimShoot'] = ActionAimAndShoot()
+adata['aAimShoot'] = ActionShoot('Avatar')
 adata['aStopShooting'] = ActionStopShooting()
-adata['aAimMove400'] = ActionAimMovement(400, 3)
-adata['aAimMove100'] = ActionAimMovement(100, 9)
+adata['aAimMove400'] = ActionAimMovement('Avatar', 400, 3)
+adata['aAimMove100'] = ActionAimMovement('Avatar', 100, 9)
 
 adata['aRandMove5'] = ActionRandomMovement(duration=5)
 adata['aRandMove4'] = ActionRandomMovement(duration=4)
@@ -222,14 +284,88 @@ class NPCKind(object):
     shieldsRegen = 0
     damage = 10
     score = 1
-    actions = None
+    brains = []
     weapons = tuple()
-
+    
     def __init__(self):
         super(NPCKind, self).__init__()
+        
+        states = []
+        for i in self.brains:
+            l = loadScript(i)
+            blocks = [[]]
+            for j in l:
+                if j[0] == 'New':
+                    if blocks[-1]:
+                        blocks.append([j])
+                elif j[0] == 'Repeat':
+                    if blocks[-1]:
+                        if blocks[-1][-1][0] == 'New':
+                            blocks[-1].append(j)
+                        else:
+                            blocks.append([j])
+                    else:
+                        blocks[-1].append(j)
+                else:
+                    blocks[-1].append(j)
+            states.append(self.translate(blocks))
+        self.states = states
+        
+        if states:
+            if states[0]:
+                self.actions = states[0]
     
-    def switchBrains(self, instance, idx):
-        pass
+    def translate(self, blocks):
+        commands = {
+                    'SelectTarget': ActionAim,
+                    'AimMove': ActionAimMovement,
+                    'Wait': actions.Delay,
+                    'Die': ActionDie,
+                    'MoveBy': ActionMoveBy,
+                    'MoveTo': ActionMoveTo,
+                    'RandomDelay': actions.RandomDelay,
+                    'RandomMovement': ActionRandomMovement,
+                    'Shoot': ActionShoot,
+                    'StopShooting': ActionStopShooting
+                    }
+        
+        isLoop = False
+        isNew = False 
+        acts = None
+        
+        for block in blocks:
+            if block[0][0] == 'New':
+                isNew = True
+                del block[0]
+            else:
+                isNew = False
+            if block:
+                if block[0][0] == 'Repeat':
+                    isLoop = True
+                    del block[0]
+                else:
+                    isLoop = False
+                
+                if block:
+                    cmd = block[0]
+                    current_acts = commands[cmd[0]](*cmd[1:])
+                    del block[0]
+                    
+                    for cmd in block:
+                        current_acts += commands[cmd[0]](*cmd[1:])
+                
+                    if isLoop:
+                        current_acts = actions.Repeat(current_acts)
+                    
+                    if acts and not isNew:
+                        acts += current_acts
+                    if acts and isNew:
+                        acts = acts | current_acts
+                    else:
+                        acts = current_acts
+        return acts
+            
+        
 
 class EffectKind(object):
     name = 'Null'
@@ -251,24 +387,6 @@ class EffectKind(object):
 '''
 EFFECTS
 '''
-class ShieldOverloadKind(EffectKind):
-    name = 'Shields overloaded'
-    group = EGNOSHIELDS
-    
-    def start(self, instance):
-        target = instance.target
-        instance.duration = target.shields / target.shieldsRegen
-        target.playShield(-1)
-    
-    def effect(self, target):
-        target.absorbedDamage = target.shields
-    
-    def end(self, instance):
-        if not instance.timeToDie:
-            target = instance.target
-            target.absorbedDamage = 0
-            target.playShield(1)
-
 class RechargerKind(EffectKind):
     name = "Recharge"
     duration = 2
@@ -289,6 +407,24 @@ class RechargerKind(EffectKind):
     def effect(self, target):
         if target.absorbedDamage > 0:
             target.absorbedDamage -= 1
+
+class ShieldOverloadKind(EffectKind):
+    name = 'Shields overloaded'
+    group = EGNOSHIELDS
+    
+    def start(self, instance):
+        target = instance.target
+        instance.duration = target.shields / target.shieldsRegen
+        target.playShield(-1)
+    
+    def effect(self, target):
+        target.absorbedDamage = target.shields
+    
+    def end(self, instance):
+        if not instance.timeToDie:
+            target = instance.target
+            target.absorbedDamage = target.shields * 3 / 4
+            target.playShield(1)
 
 class DefenderKind(EffectKind):
     name = "Defended"
@@ -314,9 +450,9 @@ class DefenderKind(EffectKind):
         if target.shields == 0:
             target.playShield(-1)
 
-edata['eOverload'] = ShieldOverloadKind()
-edata['eRecharge'] = RechargerKind()
-edata['eDefend'] = DefenderKind()
+effectsData['eOverload'] = ShieldOverloadKind()
+effectsData['eRecharge'] = RechargerKind()
+effectsData['eDefend'] = DefenderKind()
 
 '''
 MAIN GAME ELEMENTS
@@ -599,7 +735,7 @@ class Avatar(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
-                  EffectRunner(edata['eOverload'], self)
+                  EffectRunner(effectsData['eOverload'], self)
             else:
                 self.playShield()
         else:
@@ -650,7 +786,7 @@ class Avatar(ASprite):
         shield.do(adata['aDelay03'] + actions.CallFuncS(die))
 
 class NPCShip(ASprite):
-    def __init__(self, owner, kind, x, y, target=None, coordZ=4):
+    def __init__(self, owner, kind, x, y, coordZ=4):
         super(NPCShip, self).__init__(kind.image)
         self.owner = owner
         self.life = kind.life
@@ -664,21 +800,20 @@ class NPCShip(ASprite):
         self.settings = Settings()
         self.rays = []
         self.position = rel(x,y)
-        self.target = target
         self.soundList = []
-        self.switchBrains = kind.switchBrains
         self.runners = []
         self.aura = None 
-        self.schedule_interval(self.regen, 1)
-        self.do(kind.actions)
         self._gonnaDie = False
         self._shieldSize = kind.image.get_max_height() / 36.0
         self._auraCache = []
         self._kind =  kind
+        self._target = None
         self.velocity = 0, 0
         used = shipsUsed.get(kind, [])
         used.append(self)
         shipsUsed[kind] = used
+        self.schedule_interval(self.regen, 1)
+        self.do(kind.actions)
         owner.add(self, z=coordZ)
     
     def takeDamage(self, damage):
@@ -687,7 +822,7 @@ class NPCShip(ASprite):
             if self.absorbedDamage > self.shields:
                   self.takenDamage += self.absorbedDamage - self.shields
                   self.absorbedDamage = self.shields
-                  EffectRunner(edata['eOverload'], self)
+                  EffectRunner(effectsData['eOverload'], self)
             else:
                 self.playShield()
         else:
@@ -699,7 +834,7 @@ class NPCShip(ASprite):
             self.kill()
             
     
-    def shoot(self, aim=False):
+    def shoot(self, target=None):
         if len(self.rays) > 0:
             laser = False
         else:
@@ -707,11 +842,11 @@ class NPCShip(ASprite):
         for w in self.weapons:
             if w.type == PROJECTILE or w.type == TURRET:
                 free = bulletsFree.get(w, []) 
-                if aim:
+                if target:
                     if free:
-                        free[0].reinstate(self, self.target)
+                        free[0].reinstate(self, target)
                     else:
-                        Bullet(self, w, self.target)
+                        Bullet(self, w, target)
                 else:
                     if free:
                         free[0].reinstate(self)
@@ -723,7 +858,7 @@ class NPCShip(ASprite):
                 self.aura = w.runner
             elif w.type == SPAWN:
                 pos = abs2rel(*self.position)
-                Enemy(self.owner, enemies[w.spawnID], pos[0], pos[1], self.target)
+                Enemy(self.owner, enemies[w.spawnID], pos[0], pos[1])
             if self.settings.sound:
                 if not w.startSound is None:
                     w.startSound.play()
@@ -827,13 +962,13 @@ class NPCShip(ASprite):
         shield.do(adata['aDelay03'] + actions.CallFuncS(die))
 
 class Enemy(NPCShip):
-    def __init__(self, owner, kind, x, y, target=None):
-        super(Enemy, self).__init__(owner, kind, x, y, target)
+    def __init__(self, owner, kind, x, y):
+        super(Enemy, self).__init__(owner, kind, x, y)
         owner.enemies.append(self)
         self.good = False
 
 class Helper(NPCShip):
     def __init__(self, owner, kind, x, y, target=None):
-        super(Helper, self).__init__(owner, kind, x, y, target, 8)
+        super(Helper, self).__init__(owner, kind, x, y, 8)
         owner.avatarHelpers.append(self)
         self.good = True

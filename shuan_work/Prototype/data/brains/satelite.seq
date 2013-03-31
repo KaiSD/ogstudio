@@ -1,0 +1,11 @@
+MoveBy(0, -0.01, 1)
+Repeat
+AimMove (Last, 100, 1, 0.05, 0.75, 0.95, 0.95)
+New
+Repeat
+SelectTarget (AnyEnemy)
+Wait (5)
+New
+Repeat
+Wait (1)
+Shoot (Last)

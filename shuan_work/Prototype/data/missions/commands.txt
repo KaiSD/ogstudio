@@ -1,18 +1,16 @@
 Mission Commands:
-Comment <any comment you like> - Command that does nothing. You can use it to comment your mission code,
-                                 but it consumes one logic tick just like any other commands.
-Wait <Seconds> - Wait for some time.
-Spawn <Enemy Name> [H-Position] [Tagname] - Spawn an enemy. May be enemy with personal tag.
-WaitEnemyHealth <Tagname> [HP Level] - Wait until taged enemy hp will be less then given level. 
-SwitchBrains <Tagname> <Brains index> - Commands taged enemy to switch brains.
-Music <filename> - Play music.
-BackgroundSpeed <Timescale> [Fade Time] - changes the speed of an animated background.
-Var <Varname> <Value> - Creates a variable and set it's a value.
-IncVar <Varname> <Value> - Adds value to variable's value.
-CheckVar <Varname> <Value> [Lines] - Skips some lines if variable's value is not equal to given. 
-Shift <Lines> - Shifts the sequence forward or backward.
-Mark <Mark> - Creates the mark in the Sequence.
-ToMark <Mark> - Shifts the sequence to given mark points.
+Wait (Time) - Wait for some time.
+Spawn (EnemyName, [HPosition,] [Tagname]) - Spawn an enemy. May be enemy with personal tag.
+WaitEnemyHealth (Tagname[, HP Level]) - Wait until taged enemy hp will be less then given level. 
+SwitchBrains (Tagname, BrainsIndex) - Commands taged enemy to switch brains.
+Music (Filename) - Play music.
+BackgroundSpeed (Timescale[, FadeTime]) - changes the speed of an animated background.
+Var (Varname, Value) - Creates a variable and set it's a value.
+IncVar (Varname, Value) - Adds value to variable's value.
+CheckVar (Varname, Value[, Lines]) - Skips some lines if variable's value is not equal to given. 
+Shift (Lines) - Shifts the sequence forward or backward.
+Mark (Mark) - Creates the mark in the Sequence.
+ToMark (Mark) - Shifts the sequence to given mark points.
 
 Mission Variables:
 You can access these Read Only variables in order to get some data for your mission. 

@@ -1,0 +1,6 @@
+MoveTo(0.5, -1.1, 6, 0.9)
+Die
+New
+Repeat
+RandomDelay(0.5, 2)
+Shoot

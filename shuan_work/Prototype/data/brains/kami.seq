@@ -1,0 +1,3 @@
+MoveBy(0, 0.16, 1)
+AimMove(Avatar, 400, 3)
+Die

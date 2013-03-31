@@ -53,7 +53,7 @@ def loadDeviceKind(filename):
         oneByOne = get('oneByOne', False)
         anchor = tuple(get('anchor', (0, 0)))
         spawnID = get('spawnID', '')
-        runner = edata[get('runner', None)]
+        runner = effectsData[get('runner', None)]
         startSound = get('startSound', None)
         loopSound = get('loopSound', None)
         endSound = get('endSound', None)
@@ -71,6 +71,7 @@ for i in listdir('data/devices'):
     name = i[:-5]
     if i.endswith('.json'):
         cl = loadDeviceKind('data/devices/'+i)
+        cl.idString = name
         if cl.isGood:
             if cl.slot == SLOTGUN:
                 pGuns.append(cl)

@@ -56,7 +56,7 @@ class HelperAimer(NPCKind):
     damage = 10
     score = 1
     weapons = (helperWeapons['HelperGun'](),)
-    actions = actions.Repeat(ActionFollowAvatar(speed=200, duration=0.5)) | actions.Repeat(adata['aDelay1'] + adata['aAimShoot'])
+    brains = ['data/brains/satelite.seq'] 
 '''
 ENEMIES
 '''
@@ -68,7 +68,7 @@ class EnemyDummy(NPCKind):
     life = 10
     damage = 10
     score = 1
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=9) + adata['aDie']
+    brains = ['data/brains/dummy.seq']
 
 class EnemyMine(NPCKind):
     """
@@ -78,7 +78,7 @@ class EnemyMine(NPCKind):
     life = 10
     damage = 10
     score = 0
-    actions = adata['aFloat60'] + adata['aAimMove100']
+    brains = ['data/brains/smartmine.seq']
 
 class EnemyDumbMine(NPCKind):
     """
@@ -88,7 +88,7 @@ class EnemyDumbMine(NPCKind):
     life = 10
     damage = 10
     score = 0
-    actions = adata['aFloat60'] + adata['aDown9'] + adata['aDie']
+    brains = ['data/brains/dumbmine.seq']
 
 class EnemyAimer(NPCKind):
     """
@@ -99,7 +99,7 @@ class EnemyAimer(NPCKind):
     damage = 10
     score = 1
     weapons = (enemyWeapons['EnemyGun'](),)
-    actions = adata['aDown6'] + adata['aDie'] | actions.Repeat(actions.RandomDelay(1, 3) + adata['aAimShoot'])
+    brains = ['data/brains/aimer.seq']
 
 class EnemyStraighter(NPCKind):
     """
@@ -110,7 +110,7 @@ class EnemyStraighter(NPCKind):
     damage = 10
     score = 1
     weapons = (enemyWeapons['EnemyGun'](),)
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=6) + adata['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + adata['aShoot'])
+    brains = ['data/brains/straighter.seq']
 
 class EnemyKami(NPCKind):
     """
@@ -120,7 +120,7 @@ class EnemyKami(NPCKind):
     life = 20
     damage = 20
     score = 1
-    actions = adata['aFloat100'] + adata['aAimMove400']
+    brains = ['data/brains/kami.seq']
 
 class EnemyRayer(NPCKind):
     """
@@ -131,7 +131,7 @@ class EnemyRayer(NPCKind):
     damage = 20
     score = 3
     weapons = (enemyWeapons['EnemyLaser'](),)
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=10) + adata['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + adata['aShoot'] + actions.RandomDelay(2, 4) + adata['aStopShooting'])
+    brains = ['data/brains/rayer.seq']
 
 class EnemyBurster(NPCKind):
     """
@@ -142,7 +142,7 @@ class EnemyBurster(NPCKind):
     damage = 10
     score = 2
     weapons = (enemyWeapons['EnemyGun'](),)
-    actions = actions.MoveTo((int(random.random()*800),-900),duration=12) + adata['aDie'] | actions.Repeat(actions.Delay(0.5) + adata['aShoot'])
+    brains = ['data/brains/burster.seq']
 
 class EnemyBuffer(NPCKind):
     """
@@ -155,7 +155,7 @@ class EnemyBuffer(NPCKind):
     shieldsRegen = 1
     score = 5
     weapons = (enemyWeapons['EnemyShieldProjector'](),)
-    actions = adata['aRandMove5'] + adata['aRandMove5'] + adata['aRandMove5'] + adata['aDown5'] + adata['aDie'] | adata['aShoot']
+    brains = ['data/brains/buffer.seq']
 
 class EnemyBehemoth(NPCKind):
     """
@@ -225,23 +225,6 @@ class EnemyTestBoss(NPCKind):
             newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(adata['aRandMove4']) | actions.Repeat(actions.Delay(0.2) + adata['aAimShoot'])    
         instance.stop()
         instance.do(adata['aStopShooting'] + newActions)
-
-class ShipKindLoader(NPCKind):
-    """
-    Загрузчик кайндов кораблей
-    """
-    def __init__(self, filename):
-        data = jsonLoad(filename)
-        get = data.get
-        self.image = loadAnimation(adata['image'], get('image_cols', 1), get('image_rows', 1), get('image_per', 0.1), True)
-        self.life = get('life', 10)
-        self.damage = get('damage', 10)
-        self.score = get('score', 1)
-        
-        # Brains Loader
-        
-        
-        
 
 enemies['Dummy'] = EnemyDummy()
 enemies['Mine'] = EnemyMine()

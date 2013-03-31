@@ -432,7 +432,7 @@ class Mission(layer.Layer):
         # Manage Enemies2Avatar Collision
         for av in self.avatarHelpers:
             setCollision(av)
-            colls = self.cmea.objs_colliding(avatar)
+            colls = self.cmea.objs_colliding(av)
             for i in colls:
                 if av.life > 0:
                     av.takeDamage(i.damage)
