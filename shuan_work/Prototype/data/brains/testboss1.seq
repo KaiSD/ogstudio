@@ -1,0 +1,7 @@
+SwitchWeapons(1)
+Repeat
+RandomMovement(4)
+New
+Repeat
+Wait(0.4)
+Shoot(Avatar)

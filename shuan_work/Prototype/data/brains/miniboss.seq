@@ -1,0 +1,6 @@
+Repeat
+RandomMovement(4)
+New
+Repeat
+Wait(0.2)
+Shoot(Avatar)

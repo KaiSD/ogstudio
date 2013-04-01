@@ -11,8 +11,8 @@ import coui
 from sys import exit
 from missions import *
 
-VERSION = '0.4'
-CPROFILE = True
+VERSION = '0.5'
+CPROFILE = False
 missionsList = []
 pyglet.options['debug_gl'] = False
 

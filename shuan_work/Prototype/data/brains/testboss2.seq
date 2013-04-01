@@ -1,0 +1,12 @@
+SwitchWeapons(2)
+AimMove (Avatar, 0, 2, 0.05, 0.05, 0.95, 0.15)
+Repeat
+RandomMovement(8)
+New
+Repeat
+Wait(0.4)
+Shoot(Avatar)
+New
+Repeat
+Wait(2)
+StopShooting

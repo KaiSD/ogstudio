@@ -1,0 +1,12 @@
+SwitchWeapons(2)
+Repeat
+RandomMovement(3)
+RandomMovement(3)
+RandomMovement(3)
+New
+Repeat
+RandomDelay (1, 3)
+Shoot()
+New
+RandomDelay (3, 6)
+SwitchStates(1)

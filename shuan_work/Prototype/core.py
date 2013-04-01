@@ -41,8 +41,7 @@ class ActionDie(actions.InstantAction):
         self.target.kill()
 
 class ActionAim(actions.InstantAction):
-    def __init__(self, selector=None):
-        super(ActionAim, self).__init__()
+    def init(self, selector=None):
         self.selector = selector
     def start(self):
         actor = self.target
@@ -130,13 +129,15 @@ class ActionAimMovement(actions.InstantAction):
         deltaY = destination[1] - actor.position[1]
         deltaX = destination[0] - actor.position[0]
         dist = math.sqrt(deltaX**2 + deltaY**2)
-        dur = dist/self.speed
-        coeff = self.duration/dur
+        if self.speed:
+            dur = dist/self.speed
+            coeff = self.duration/dur
+        else:
+            coeff = 1
         actor.do(actions.MoveBy((deltaX*coeff, deltaY*coeff), duration = self.duration))
 
 class ActionRandomMovement(actions.IntervalAction):
-    def __init__(self, duration, bx1=0, by1=0, bx2=1, by2=1):
-        super(ActionRandomMovement, self).__init__()
+    def init(self, duration, bx1=0, by1=0, bx2=1, by2=1):
         self.duration = duration
         self.initial = None
         self.destination = None
@@ -145,7 +146,7 @@ class ActionRandomMovement(actions.IntervalAction):
     def update(self, t):
         if self.initial == None:
             self.initial = self.target.position
-            destination = random.random(), random.random()
+            destination = [random.random(), random.random()]
             if self.bounds:
                 bounds = self.bounds 
                 destination[0] = max(destination[0], bounds[0])
@@ -157,6 +158,36 @@ class ActionRandomMovement(actions.IntervalAction):
         x = self.initial[0] + (self.destination[0] - self.initial[0]) * t
         y = self.initial[1] + (self.initial[1] - self.destination[1]) * t
         self.target.position = x,y
+
+class ActionSwitchState(actions.InstantAction):
+    def init(self, state):
+        self.state = state
+    
+    def start(self):
+        actor = self.target
+        idx = self.state
+        states = actor._kind.states
+        if len(states) >= idx:
+            acts = states[idx - 1]
+        else:
+            acte = actor.actions
+        actor.stop()
+        actor.actions = acts
+        actor.do(acts)
+
+class ActionSwitchWeapons(actions.InstantAction):
+    def init(self, set):
+        self.set = set
+    
+    def start(self):
+        actor = self.target
+        self.set = idx
+        if len(actor.sets) >= idx:
+            weapons = actor.set[idx - 1]
+        else:
+            weapons = actor.weapons
+        actor.stopShooting()
+        actor.weapons = weapons
 
 class ActionMoveTo(actions.MoveTo):
     def __init__(self, x, y, duration, randomOffsetX=0, randomOffsetY=0):
@@ -284,7 +315,8 @@ class NPCKind(object):
     shieldsRegen = 0
     damage = 10
     score = 1
-    brains = []
+    brains = tuple()
+    sets = tuple()
     weapons = tuple()
     
     def __init__(self):
@@ -326,7 +358,9 @@ class NPCKind(object):
                     'RandomDelay': actions.RandomDelay,
                     'RandomMovement': ActionRandomMovement,
                     'Shoot': ActionShoot,
-                    'StopShooting': ActionStopShooting
+                    'StopShooting': ActionStopShooting,
+                    'SwitchStates': ActionSwitchState,
+                    'SwitchWeapons': ActionSwitchWeapons,
                     }
         
         isLoop = False

@@ -166,7 +166,7 @@ class EnemyBehemoth(NPCKind):
     damage = 50
     score = 5
     weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](0,-30), enemyWeapons['EnemyGun'](15,-30))
-    actions = adata['aRandMove3'] + adata['aRandMove3'] + adata['aRandMove3'] + adata['aDown6'] + adata['aDie'] | actions.Repeat(actions.RandomDelay(0.5, 2) + adata['aAimShoot']) | actions.Repeat(actions.Delay(0.5) + adata['aShoot'])
+    brains = ['data/brains/behemoth.seq']
 
 class EnemySummoner(NPCKind):
     """
@@ -176,8 +176,9 @@ class EnemySummoner(NPCKind):
     life = 100
     damage = 50
     score = 5
-    weapons = (enemyWeapons['EnemyGun'](), enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30))
-    actions = adata['aRandMove5'] + adata['aRandMove5'] + adata['aRandMove5'] + adata['aDown5'] + adata['aDie'] | actions.Repeat(actions.Delay(3) + adata['aShoot'])
+    sets = ((enemyWeapons['EnemyGun'](), enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30)),
+            (enemyWeapons['EnemySpawnAimer'](),))
+    brains = ('data/brains/summoner1.seq', 'data/brains/summoner2.seq')
 
 class EnemyMinador(NPCKind):
     """
@@ -188,7 +189,7 @@ class EnemyMinador(NPCKind):
     damage = 50
     score = 5
     weapons = (enemyWeapons['EnemySpawnMine'](), )
-    actions = adata['aRandMove5'] + adata['aRandMove5'] + adata['aRandMove5'] + adata['aDown5'] + adata['aDie'] | actions.Repeat(actions.Delay(2) + adata['aShoot'])
+    brains = ['data/brains/minador.seq']
 
 class EnemyMiniBoss(NPCKind):
     """
@@ -199,7 +200,7 @@ class EnemyMiniBoss(NPCKind):
     damage = 1000
     score = 100
     weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30))
-    actions =  actions.Repeat(adata['aRandMove4']) | actions.Repeat(actions.Delay(0.2) + adata['aAimShoot'])
+    brains = ['data/brains/miniboss.seq']
 
 class EnemyTestBoss(NPCKind):
     """
@@ -209,22 +210,11 @@ class EnemyTestBoss(NPCKind):
     life = 3000
     damage = 1000
     score = 300
-    weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30), enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35))
-    weapons2 = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30), enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35), enemyWeapons['EnemyLaser']())
-    actions =  actions.Repeat(adata['aRandMove4']) | actions.Repeat(actions.Delay(0.4) + adata['aAimShoot'])
-    
-    def switchBrains(self, instance, idx):
-        if idx == 0:
-            instance.weapons = EnemyTestBoss.weapons
-            newActions = EnemyTestBoss.actions
-        elif idx == 1:
-            instance.weapons = EnemyTestBoss.weapons2
-            newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(ActionRandomMovement(duration=8)) | actions.Repeat(actions.Delay(0.5) + adata['aAimShoot']) | actions.Repeat(actions.Delay(2) + adata['aStopShooting'])
-        elif idx == 2:
-            instance.weapons = EnemyTestBoss.weapons2
-            newActions = actions.MoveTo((instance.target.position[0], relY(0.1)), duration=1) + actions.Repeat(adata['aRandMove4']) | actions.Repeat(actions.Delay(0.2) + adata['aAimShoot'])    
-        instance.stop()
-        instance.do(adata['aStopShooting'] + newActions)
+    sets = ((enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30),
+             enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35)),
+            (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30),
+             enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35), enemyWeapons['EnemyLaser']()))
+    brains = ('data/brains/testboss1.seq', 'data/brains/testboss2.seq', 'data/brains/testboss3.seq')
 
 enemies['Dummy'] = EnemyDummy()
 enemies['Mine'] = EnemyMine()
