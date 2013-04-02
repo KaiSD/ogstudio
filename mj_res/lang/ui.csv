@@ -427,6 +427,9 @@ Tiempo: %s"
 "NO","No","Нет","Nein","Non","No"
 "NO_DESC","No description","Нет описания","Keine Beschreibung","Pas de description","Sin descripción"
 "OK","OK","OK","OK","OK","OK"
+"ON_LINE_INVALID_DIFFICULTY","The server does not support such game difficulty.",,,,
+"ON_LINE_INVALID_LAYOUT","The server does not support such game layout.",,,,
+"ON_LINE_INVALID_TYPE","The server does not support such game type.",,,,
 "SAVE_GAME_BEFORE_EXIT","Do you want to save the game before exit?","Сохранить игру перед выходом?","Wollen Sie das Spiel vor dem Beenden speichern?","Voulez-vous sauvegarder le jeu avant de quitter ?","¿Quiere salvar antes de salir?"
 "SETTINGS_ANTIALIASING","Anti-aliasing:","Сглаживание:","Anti-Aliasing:","Anti-aliasing :","Anti-aliasing:"
 "SETTINGS_AUDIO","Audio","Аудио","Audio","Audio","Sonido"
