@@ -23,6 +23,7 @@ BUILD_DIRU=`cygpath $BUILD_DIR`
 LIBPNG_VERSION=1.6.1
 LIBXML2_VERSION=2.9.0
 OSG_VERSION=13363
+PCRE_VERSION=8.32
 ZLIB_VERSION=1.2.7
 
 # libxml2. 
@@ -100,5 +101,28 @@ if [ ! -d $OSG ]; then
     make install
 else
     echo "OpenSceneGraph was found in '$OSG'. Skipping."
+fi
+
+# PCRE.
+cd $CWD
+PCRE=$BUILD_DIRU/pcre
+if [ ! -d $PCRE ]; then
+    echo "PCRE is not found. Building it."
+    mkdir -p $PCRE/{src,build}
+    tar -xf $SRC_DIRU/pcre-$PCRE_VERSION.tar.bz2 -C $PCRE/src
+    cd $PCRE/build
+    cmake -G "MinGW Makefiles"                 \
+          -DCMAKE_INSTALL_PREFIX=$MINGW_DIR    \
+          -DBUILD_SHARED_LIBS=ON               \
+          -DPCRE_BUILD_PCRECPP=OFF             \
+          -DPCRE_BUILD_PCREGREP=OFF            \
+          -DPCRE_BUILD_TESTS=OFF               \
+          -DPCRE_SUPPORT_UNICODE_PROPERTIES=ON \
+          -DPCRE_SUPPORT_UTF8=ON               \
+          ../src/pcre-$PCRE_VERSION
+    make
+    make install
+else
+    echo "PCRE was found in '$PCRE'. Skipping."
 fi
 
