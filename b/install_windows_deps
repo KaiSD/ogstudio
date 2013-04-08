@@ -20,6 +20,7 @@ MINGW_DIR="C:/MinGW"
 SRC_DIRU=`cygpath $SRC_DIR`
 BUILD_DIRU=`cygpath $BUILD_DIR`
 # Versions.
+LIBPNG_VERSION=1.6.1
 LIBXML2_VERSION=2.9.0
 ZLIB_VERSION=1.2.7
 
@@ -58,5 +59,22 @@ if [ ! -d $ZLIB ]; then
     make install
 else
     echo "zlib was found in '$ZLIB'. Skipping."
+fi
+
+# libpng. 
+cd $CWD
+LIBPNG=$BUILD_DIRU/libpng
+if [ ! -d $LIBPNG ]; then
+    echo "libpng is not found. Building it."
+    mkdir -p $LIBPNG/{src,build}
+    tar -xf $SRC_DIRU/libpng-$LIBPNG_VERSION.tar.xz -C $LIBPNG/src
+    cd $LIBPNG/build
+    cmake -G "MinGW Makefiles" \
+          -DCMAKE_INSTALL_PREFIX=$MINGW_DIR \
+          ../src/libpng-$LIBPNG_VERSION
+    make
+    make install
+else
+    echo "libpng was found in '$LIBPNG'. Skipping."
 fi
 
