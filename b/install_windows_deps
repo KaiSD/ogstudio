@@ -2,7 +2,10 @@
 #
 # This script builds and installs MJIN2 dependencies for Windows.
 #
-# Run it only after installing MinGW, Cygwin, CMake under Windows.
+# REQUIREMENTS
+#
+# 1. Run it only after installing MinGW, Cygwin, CMake under Windows.
+# 2. Rename Cygwin's sh.exe to sh_.exe, otherwise CMake refuses to work.
 #
 
 SRC_DIR=$1
@@ -18,8 +21,9 @@ SRC_DIRU=`cygpath $SRC_DIR`
 BUILD_DIRU=`cygpath $BUILD_DIR`
 # Versions.
 LIBXML2_VERSION=2.9.0
+ZLIB_VERSION=1.2.7
 
-# LIBXML2.
+# libxml2. 
 cd $CWD
 LIBXML2=$BUILD_DIRU/libxml2
 if [ ! -d $LIBXML2 ]; then
@@ -34,3 +38,25 @@ if [ ! -d $LIBXML2 ]; then
 else
     echo "libxml2 was found in '$LIBXML2'. Skipping."
 fi
+
+# zlib.
+cd $CWD
+ZLIB=$BUILD_DIRU/zlib
+if [ ! -d $ZLIB ]; then
+    echo "zlib is not found. Building it."
+    mkdir -p $ZLIB/{src,build}
+    tar -xf $SRC_DIRU/zlib-$ZLIB_VERSION.tar.bz2 -C $ZLIB/src
+    # CMake complains about the file, so remove it.
+    rm $ZLIB/src/zlib-$ZLIB_VERSION/zconf.h
+    cd $ZLIB/build
+    cmake -G "MinGW Makefiles" \
+          -DCMAKE_INSTALL_PREFIX=$MINGW_DIR \
+          ../src/zlib-$ZLIB_VERSION
+    make
+    # Fix bug for OGRE. Not sure if it's necessary for OSG. Keep it for now.
+    #sed -i 's/MOVEABLE IMPURE LOADONCALL DISCARDABLE//' $ZLIB/src/zlib-$ZLIB_VERSION/win32/zlib1.rc
+    make install
+else
+    echo "zlib was found in '$ZLIB'. Skipping."
+fi
+
