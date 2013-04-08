@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# This script builds and installs MJIN2 dependencies for Windows.
+#
+# Run it only after installing MinGW, Cygwin, CMake under Windows.
+#
+
+SRC_DIR=$1
+BUILD_DIR=$2
+if [ -z $SRC_DIR ] || [ -z $BUILD_DIR ]; then
+    echo "Usage: $0 SRC_DIR BUILD_DIR"
+    exit
+fi
+CWD=`pwd`
+MINGW_DIR="C:/MinGW"
+# Get Unix names for Unix utils.
+SRC_DIRU=`cygpath $SRC_DIR`
+BUILD_DIRU=`cygpath $BUILD_DIR`
+# Versions.
+LIBXML2_VERSION=2.9.0
+
+# LIBXML2.
+cd $CWD
+LIBXML2=$BUILD_DIRU/libxml2
+if [ ! -d $LIBXML2 ]; then
+    echo "libxml2 is not found. Building it."
+    mkdir -p $LIBXML2
+    tar -xf $SRC_DIRU/libxml2-$LIBXML2_VERSION.tar.gz -C $LIBXML2
+    cd $LIBXML2/libxml2-$LIBXML2_VERSION/win32
+    cscript configure.js prefix=C:\\MinGW compiler=mingw iconv=no
+    make
+    make install
+    strip -s $MINGW_DIR/bin/libxml2.dll
+else
+    echo "libxml2 was found in '$LIBXML2'. Skipping."
+fi
