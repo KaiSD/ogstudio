@@ -1,0 +1,25 @@
+--- src/CMakeLists.txt.orig	2013-04-08 03:02:03.556048000 -0700
++++ src/CMakeLists.txt	2013-04-08 03:02:14.842276800 -0700
+@@ -19,7 +19,6 @@
+         osgFX
+         osgManipulator
+         osgParticle
+-        osgPresentation
+         osgShadow
+         osgSim
+         osgTerrain
+--- src/osgPlugins/CMakeLists.txt.orig	2013-04-08 04:45:13.959434600 -0700
++++ src/osgPlugins/CMakeLists.txt	2013-04-08 04:45:21.720594600 -0700
+@@ -125,8 +125,6 @@
+ 
+ ADD_SUBDIRECTORY(3dc)
+ 
+-ADD_SUBDIRECTORY(p3d)
+-
+ IF(CURL_FOUND)
+     ADD_SUBDIRECTORY(curl)
+ ENDIF()
+   osgdb_p3d
+             osgdb_rgb
+             osgdb_openflight
+             osgdb_obj

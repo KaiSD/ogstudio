@@ -1,0 +1,168 @@
+--- src/osgWrappers/serializers/CMakeLists.txt	(revision 13363)
++++ src/osgWrappers/serializers/CMakeLists.txt	(working copy)
+@@ -38,13 +38,3 @@
+ )
+ 
+ ADD_SUBDIRECTORY(osg)
+-ADD_SUBDIRECTORY(osgAnimation)
+-ADD_SUBDIRECTORY(osgFX)
+-ADD_SUBDIRECTORY(osgManipulator)
+-ADD_SUBDIRECTORY(osgParticle)
+-ADD_SUBDIRECTORY(osgSim)
+-ADD_SUBDIRECTORY(osgShadow)
+-ADD_SUBDIRECTORY(osgGA)
+-ADD_SUBDIRECTORY(osgTerrain)
+-ADD_SUBDIRECTORY(osgText)
+-ADD_SUBDIRECTORY(osgVolume)
+--- src/CMakeLists.txt	(revision 13363)
++++ src/CMakeLists.txt	(working copy)
+@@ -13,20 +13,11 @@
+         osgDB 
+         osgUtil 
+         osgGA 
+-        osgText 
++        osgText
+         osgViewer
+-        osgAnimation 
+-        osgFX
+         osgManipulator
+-        osgParticle
+-        osgPresentation
+         osgShadow
+-        osgSim
+-        osgTerrain
+-        osgWidget
+-        osgVolume
+         osgWrappers/serializers
+-        osgWrappers/deprecated-dotosg
+         osgPlugins
+     )
+ 
+--- src/osgPlugins/CMakeLists.txt	(revision 13363)
++++ src/osgPlugins/CMakeLists.txt	(working copy)
+@@ -36,28 +36,17 @@
+ #
+ #  NodeKit/Psudo loader plugins
+ #
+-ADD_SUBDIRECTORY(osga)
+-ADD_SUBDIRECTORY(rot)
+-ADD_SUBDIRECTORY(scale)
+-ADD_SUBDIRECTORY(trans)
+-ADD_SUBDIRECTORY(normals)
+-ADD_SUBDIRECTORY(revisions)
+-ADD_SUBDIRECTORY(view)
+-ADD_SUBDIRECTORY(shadow)
+-ADD_SUBDIRECTORY(terrain)
+ 
+ ############################################################
+ #
+ #  Main native plugins
+ #
+ ADD_SUBDIRECTORY(osg)
+-ADD_SUBDIRECTORY(ive)
+ 
+ ############################################################
+ #
+ #  Viewer plugins
+ #
+-ADD_SUBDIRECTORY(cfg)
+ 
+ ############################################################
+ #
+@@ -69,15 +58,7 @@
+ #
+ #  Image plugins
+ #
+-ADD_SUBDIRECTORY(rgb)
+ ADD_SUBDIRECTORY(bmp)
+-ADD_SUBDIRECTORY(pnm)
+-ADD_SUBDIRECTORY(dds)
+-ADD_SUBDIRECTORY(tga)
+-ADD_SUBDIRECTORY(hdr)
+-ADD_SUBDIRECTORY(dot)
+-ADD_SUBDIRECTORY(vtf)
+-ADD_SUBDIRECTORY(ktx)
+ 
+ IF(JPEG_FOUND)
+     ADD_SUBDIRECTORY(jpeg)
+@@ -123,10 +104,6 @@
+ #  3rd party 3d plugins
+ #
+ 
+-ADD_SUBDIRECTORY(3dc)
+-
+-ADD_SUBDIRECTORY(p3d)
+-
+ IF(CURL_FOUND)
+     ADD_SUBDIRECTORY(curl)
+ ENDIF()
+@@ -157,42 +134,8 @@
+     ADD_SUBDIRECTORY(fbx)
+ ENDIF()
+ 
+-ADD_SUBDIRECTORY(dw)
+-
+-ADD_SUBDIRECTORY(bvh)
+-ADD_SUBDIRECTORY(x)
+-ADD_SUBDIRECTORY(dxf)
+-ADD_SUBDIRECTORY(OpenFlight)
+-# ADD_SUBDIRECTORY(flt)
+-ADD_SUBDIRECTORY(geo)
+-ADD_SUBDIRECTORY(obj)
+-
+-ADD_SUBDIRECTORY(pic)
+-ADD_SUBDIRECTORY(stl)
+-IF(NOT ANDROID)
+-    ADD_SUBDIRECTORY(3ds)
+-ENDIF()
+-ADD_SUBDIRECTORY(ac)
+-ADD_SUBDIRECTORY(pov)
+-
+-ADD_SUBDIRECTORY(logo)
+-ADD_SUBDIRECTORY(lws)
+-ADD_SUBDIRECTORY(md2)
+ ADD_SUBDIRECTORY(osgtgz)
+-ADD_SUBDIRECTORY(tgz)
+ 
+-ADD_SUBDIRECTORY(shp)
+-ADD_SUBDIRECTORY(txf)
+-
+-ADD_SUBDIRECTORY(bsp)
+-ADD_SUBDIRECTORY(mdl)
+-
+-IF(OSG_CPP_EXCEPTIONS_AVAILABLE)
+-    ADD_SUBDIRECTORY(lwo)
+-    ADD_SUBDIRECTORY(ply)
+-    ADD_SUBDIRECTORY(txp)
+-ENDIF()
+-
+ IF(XINE_FOUND)
+     ADD_SUBDIRECTORY(xine)
+ ENDIF()
+@@ -201,14 +144,6 @@
+     ADD_SUBDIRECTORY(ffmpeg)
+ ENDIF()
+ 
+-IF(DIRECTSHOW_FOUND)
+-    ADD_SUBDIRECTORY(directshow)
+-ENDIF()
+-
+-# IF(OPENAL_FOUND)
+-#    ADD_SUBDIRECTORY(OpenAL)
+-# ENDIF()
+-
+ IF(APPLE AND NOT ANDROID)
+     ADD_SUBDIRECTORY(imageio)
+ ENDIF()
+@@ -254,11 +189,6 @@
+     ADD_SUBDIRECTORY(vnc)
+ ENDIF()
+ 
+-ADD_SUBDIRECTORY(pvr)
+-
+-ADD_SUBDIRECTORY(osc)
+-ADD_SUBDIRECTORY(trk)
+-
+ ####################################################
+ #
+ # Device integration plugins

@@ -22,6 +22,7 @@ BUILD_DIRU=`cygpath $BUILD_DIR`
 # Versions.
 LIBPNG_VERSION=1.6.1
 LIBXML2_VERSION=2.9.0
+OSG_VERSION=13363
 ZLIB_VERSION=1.2.7
 
 # libxml2. 
@@ -76,5 +77,28 @@ if [ ! -d $LIBPNG ]; then
     make install
 else
     echo "libpng was found in '$LIBPNG'. Skipping."
+fi
+
+# OpenSceneGraph.
+cd $CWD
+OSG=$BUILD_DIRU/osg
+if [ ! -d $OSG ]; then
+    echo "OpenSceneGraph is not found. Building it."
+    mkdir -p $OSG/{src,build}
+    tar -xf $SRC_DIRU/osg-$OSG_VERSION.tar.bz2 -C $OSG/src
+    cp osgmass.patch $OSG/src
+    # Patch.
+    cd $OSG/src/osg-$OSG_VERSION
+    # Don't compile examples.
+    patch -p0 < ../osgmass.patch
+    cd $OSG/build
+    cmake -G "MinGW Makefiles"              \
+          -DBUILD_OSG_APPLICATIONS=OFF      \
+          -DCMAKE_INSTALL_PREFIX=$MINGW_DIR \
+          ../src/osg-$OSG_VERSION
+    make
+    make install
+else
+    echo "OpenSceneGraph was found in '$OSG'. Skipping."
 fi
 
