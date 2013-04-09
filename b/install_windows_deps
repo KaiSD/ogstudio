@@ -20,8 +20,10 @@ MINGW_DIR="C:/MinGW"
 SRC_DIRU=`cygpath $SRC_DIR`
 BUILD_DIRU=`cygpath $BUILD_DIR`
 # Versions.
+ALURE_VERSION=1.2
 LIBPNG_VERSION=1.6.1
 LIBXML2_VERSION=2.9.0
+OPENAL_VERSION=1.15.1
 OSG_VERSION=13363
 PCRE_VERSION=8.32
 ZLIB_VERSION=1.2.7
@@ -124,5 +126,33 @@ if [ ! -d $PCRE ]; then
     make install
 else
     echo "PCRE was found in '$PCRE'. Skipping."
+fi
+
+# OpenAL.
+cd $CWD
+OPENAL=$BUILD_DIR/openal
+if [ ! -d $OPENAL ]; then
+    echo "OpenAL is not found. Building it."
+    unzip $SRC_DIR/openal-soft-${OPENAL_VERSION}-bin.zip -d $OPENAL
+    cd $OPENAL/openal-soft-${OPENAL_VERSION}-bin
+    cp -R include/* $MINGW_DIR/include
+    cp lib/Win32/* $MINGW_DIR/lib
+    cp Win32/soft_oal.dll $MINGW_DIR/bin/OpenAL32.dll
+else
+    echo "OpenAL was found in '$OPENAL'. Skipping."
+fi
+
+# ALURE.
+cd $CWD
+ALURE=$BUILD_DIR/alure
+if [ ! -d $ALURE ]; then
+    echo "ALURE is not found. Building it."
+    unzip $SRC_DIR/alure-${ALURE_VERSION}-win32-bin.zip -d $ALURE
+    cd $ALURE/alure-${ALURE_VERSION}-bin
+    cp include/alure.h $MINGW_DIR/include/AL
+    cp lib/Win32/libALURE32.dll.a $MINGW_DIR/lib
+    cp dlls/Win32/ALURE32.dll $MINGW_DIR/bin
+else
+    echo "ALURE was found in '$ALURE'. Skipping."
 fi
 
