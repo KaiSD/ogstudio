@@ -1,0 +1,33 @@
+
+= Install MinGW (compiler) =
+- Install the latest MinGW intaller with pre-packaged repository into C:/MinGW from:
+http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/
+-- Only select C and C++ compilers.
+- Add C:/MinGW/bin to %PATH%.
+
+= Install CMake (builder) =
+- Install the latest CMake from: http://www.cmake.org/cmake/resources/software.html
+-- At the Install Options screen select:
+--- Add CMake to the system PATH for all users 
+--- Create CMake Desktop Icon
+
+= Install Cygwin (environment) ==
+- Install it without selecting additional packages into C:/cygwin. Only select at least 2 mirrors from which to download packages (into C:/cygwin_packages, e.g.).
+- Rename sh.exe to sh_.exe, otherwise CMake won't compile anything.
+- Install additional packages by running the following command: 
+```
+setup.exe -P bz2,gz,mercurial,openssh,patch,subversion,vim,wget,unzip
+```
+It will run the same sequence of dialogs. Just keep on pressing "Next", and it will install everything as needed. 
+
+= Download MJIN2 dependencies = 
+- ALURE: http://kcat.strangesoft.net/alure.html
+- Libxml2: ftp://xmlsoft.org/libxml2/
+- libpng: http://libpng.org/pub/png/libpng.html
+- zlib: http://www.zlib.net/
+- OpenAL: http://kcat.strangesoft.net/openal.html
+- OpenSceneGraph: http://www.openscenegraph.org/projects/osg/wiki/Downloads/SVN
+- PCRE: ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+- Python for MinGW: http://code.google.com/p/mingw-and-ndk/downloads/list
+- SWIG for Windows: http://www.swig.org/download.html
+
