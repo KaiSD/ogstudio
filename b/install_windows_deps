@@ -16,12 +16,24 @@ SRC_DIRU=`cygpath $SRC_DIR`
 BUILD_DIRU=`cygpath $BUILD_DIR`
 # Versions.
 ALURE_VERSION=1.2
+CMAKE_VERSION=2.8.10.2
 LIBPNG_VERSION=1.6.1
 LIBXML2_VERSION=2.9.0
 OPENAL_VERSION=1.15.1
 OSG_VERSION=13363
 PCRE_VERSION=8.32
 ZLIB_VERSION=1.2.7
+
+# CMake.
+cd $CWD
+CMAKE=$BUILD_DIRU/cmake
+if [ ! -d $CMAKE ]; then
+    echo "CMake is not found. Building it."
+    unzip $SRC_DIRU/cmake-${CMAKE_VERSION}-win32-x86.zip -d $CMAKE
+    cp -R $CMAKE/cmake-${CMAKE_VERSION}-win32-x86/* $MINGW_DIR
+else
+    echo "CMake was found in '$CMAKE'. Skipping."
+fi
 
 # libxml2. 
 cd $CWD
