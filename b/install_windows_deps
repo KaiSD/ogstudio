@@ -1,11 +1,6 @@
 #!/bin/bash
 #
-# This script builds and installs MJIN2 dependencies for Windows.
-#
-# REQUIREMENTS
-#
-# 1. Run it only after installing MinGW, Cygwin, CMake under Windows.
-# 2. Rename Cygwin's sh.exe to sh_.exe, otherwise CMake refuses to work.
+# This script builds and installs MJIN2 dependencies for MinGW.
 #
 
 SRC_DIR=$1
@@ -130,10 +125,10 @@ fi
 
 # OpenAL.
 cd $CWD
-OPENAL=$BUILD_DIR/openal
+OPENAL=$BUILD_DIRU/openal
 if [ ! -d $OPENAL ]; then
     echo "OpenAL is not found. Building it."
-    unzip $SRC_DIR/openal-soft-${OPENAL_VERSION}-bin.zip -d $OPENAL
+    unzip $SRC_DIRU/openal-soft-${OPENAL_VERSION}-bin.zip -d $OPENAL
     cd $OPENAL/openal-soft-${OPENAL_VERSION}-bin
     cp -R include/* $MINGW_DIR/include
     cp lib/Win32/* $MINGW_DIR/lib
@@ -144,10 +139,10 @@ fi
 
 # ALURE.
 cd $CWD
-ALURE=$BUILD_DIR/alure
+ALURE=$BUILD_DIRU/alure
 if [ ! -d $ALURE ]; then
     echo "ALURE is not found. Building it."
-    unzip $SRC_DIR/alure-${ALURE_VERSION}-win32-bin.zip -d $ALURE
+    unzip $SRC_DIRU/alure-${ALURE_VERSION}-win32-bin.zip -d $ALURE
     cd $ALURE/alure-${ALURE_VERSION}-bin
     cp include/alure.h $MINGW_DIR/include/AL
     cp lib/Win32/libALURE32.dll.a $MINGW_DIR/lib
