@@ -5,12 +5,6 @@ http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/
 -- Only select C and C++ compilers.
 - Add C:/MinGW/bin to %PATH%.
 
-= Install CMake (builder) =
-- Install the latest CMake from: http://www.cmake.org/cmake/resources/software.html
--- At the Install Options screen select:
---- Add CMake to the system PATH for all users 
---- Create CMake Desktop Icon
-
 = Install Cygwin (environment) ==
 - Install it without selecting additional packages into C:/cygwin. Only select at least 2 mirrors from which to download packages (into C:/cygwin_packages, e.g.).
 - Rename sh.exe to sh_.exe, otherwise CMake won't compile anything.
