@@ -28,6 +28,6 @@ It will run the same sequence of dialogs. Just keep on pressing "Next", and it w
 - OpenAL: http://kcat.strangesoft.net/openal.html
 - OpenSceneGraph: http://www.openscenegraph.org/projects/osg/wiki/Downloads/SVN
 - PCRE: ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
-- Python for MinGW: http://code.google.com/p/mingw-and-ndk/downloads/list
+- Python for MinGW: https://sourceforge.net/projects/osrpgcreation/files/BE/ (http://code.google.com/p/mingw-and-ndk/downloads/list)
 - SWIG for Windows: http://www.swig.org/download.html
 

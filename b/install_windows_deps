@@ -22,6 +22,7 @@ LIBXML2_VERSION=2.9.0
 OPENAL_VERSION=1.15.1
 OSG_VERSION=13363
 PCRE_VERSION=8.32
+PYTHON_VERSION=2.7.3
 ZLIB_VERSION=1.2.7
 
 # CMake.
@@ -161,5 +162,17 @@ if [ ! -d $ALURE ]; then
     cp dlls/Win32/ALURE32.dll $MINGW_DIR/bin
 else
     echo "ALURE was found in '$ALURE'. Skipping."
+fi
+
+# Python.
+cd $CWD
+PYTHON=$BUILD_DIRU/python
+if [ ! -d $PYTHON ]; then
+    echo "Python is not found. Building it."
+    mkdir -p $PYTHON
+    tar -xf $SRC_DIRU/python-$PYTHON_VERSION-win32.tar.xz -C $PYTHON
+    cp -R $PYTHON/python-${PYTHON_VERSION}-win32/* $MINGW_DIR
+else
+    echo "Python was found in '$PYTHON'. Skipping."
 fi
 
