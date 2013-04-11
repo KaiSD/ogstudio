@@ -10,6 +10,8 @@ if [ -z $SRC_DIR ] || [ -z $BUILD_DIR ]; then
     exit
 fi
 CWD=`pwd`
+# Script absolute location.
+DIR=`dirname $0`
 MINGW_DIR="C:/MinGW"
 # Get Unix names for Unix utils.
 SRC_DIRU=`cygpath $SRC_DIR`
@@ -25,6 +27,15 @@ PCRE_VERSION=8.32
 PYTHON_VERSION=2.7.3
 SWIG_VERSION=2.0.9
 ZLIB_VERSION=1.2.7
+
+# Rename sh to sh_
+if [ -f /usr/bin/sh.exe ]; then
+    mv /usr/bin/{sh,sh_}.exe
+fi
+# Copy mingw32-make to make
+if [ ! -f $MINGW_DIR/bin/make.exe ]; then
+    cp $MINGW_DIR/bin/{mingw32-,}make.exe
+fi
 
 # CMake.
 cd $CWD
@@ -43,12 +54,12 @@ LIBXML2=$BUILD_DIRU/libxml2
 if [ ! -d $LIBXML2 ]; then
     echo "libxml2 is not found. Building it."
     mkdir -p $LIBXML2
+    MINGW_DIRW=`cygpath -w $MINGW_DIR`
     tar -xf $SRC_DIRU/libxml2-$LIBXML2_VERSION.tar.gz -C $LIBXML2
     cd $LIBXML2/libxml2-$LIBXML2_VERSION/win32
-    cscript configure.js prefix=C:\\MinGW compiler=mingw iconv=no
+    cscript configure.js prefix=$MINGW_DIRW compiler=mingw iconv=no
     make
     make install
-    strip -s $MINGW_DIR/bin/libxml2.dll
 else
     echo "libxml2 was found in '$LIBXML2'. Skipping."
 fi
@@ -98,7 +109,7 @@ if [ ! -d $OSG ]; then
     echo "OpenSceneGraph is not found. Building it."
     mkdir -p $OSG/{src,build}
     tar -xf $SRC_DIRU/osg-$OSG_VERSION.tar.bz2 -C $OSG/src
-    cp osgmass.patch $OSG/src
+    cp $DIR/osgmass.patch $OSG/src
     # Patch.
     cd $OSG/src/osg-$OSG_VERSION
     # Don't compile examples.

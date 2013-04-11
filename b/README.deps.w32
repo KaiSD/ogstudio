@@ -1,20 +1,19 @@
 
-= Install MinGW (compiler) =
+= Install MinGW =
 - Install the latest MinGW intaller with pre-packaged repository into C:/MinGW from:
 http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst/
 -- Only select C and C++ compilers.
 - Add C:/MinGW/bin to %PATH%.
 
-= Install Cygwin (environment) ==
-- Install it without selecting additional packages into C:/cygwin. Only select at least 2 mirrors from which to download packages (into C:/cygwin_packages, e.g.).
-- Rename sh.exe to sh_.exe, otherwise CMake won't compile anything.
-- Install additional packages by running the following command: 
+= Install Cygwin ==
+- Install it without selecting additional packages into C:/cygwin. Only select at least 2 mirrors from which to download packages.
+- After the first installation, install additional packages by running the following command: 
 ```
-setup.exe -P bz2,gz,mercurial,openssh,patch,subversion,vim,wget,unzip
+setup.exe -P bz2,gz,patch,vim,wget,unzip
 ```
 It will run the same sequence of dialogs. Just keep on pressing "Next", and it will install everything as needed. 
 
-= Download MJIN2 dependencies = 
+= Download MJIN2 dependencies into C:/src = 
 - ALURE: http://kcat.strangesoft.net/alure.html
 - Libxml2: ftp://xmlsoft.org/libxml2/
 - libpng: http://libpng.org/pub/png/libpng.html
@@ -25,3 +24,6 @@ It will run the same sequence of dialogs. Just keep on pressing "Next", and it w
 - Python for MinGW: https://sourceforge.net/projects/osrpgcreation/files/BE/ (http://code.google.com/p/mingw-and-ndk/downloads/list)
 - SWIG for Windows: http://www.swig.org/download.html
 
+= Install MJIN2 dependencies =
+- Create C:/b build directory.
+- Run: ./install_windows_deps C:/src C:/b
