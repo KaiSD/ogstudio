@@ -1,0 +1,23 @@
+#!/bin/bash
+
+MINGW_DIR=$1
+SRC_DIR=$2
+BUILD_DIR=$3
+if [ -z $MINGW_DIR ] ||
+   [ -z $SRC_DIR   ] ||
+   [ -z $BUILD_DIR ]; then
+    echo "Usage: $0 MINGW_DIR SRC_DIR BUILD_DIR"
+    exit
+fi
+CWD=`pwd`
+SRC_DIRW=`winepath -w $SRC_DIR`
+
+export WINEDEBUG=-all
+
+# Build MJIN2.
+mkdir -p $BUILD_DIR
+cd $BUILD_DIR
+wine cmd /c "set PATH=%PATH%;$MINGW_DIR\\bin"
+wine cmd /c "echo %PATH%"
+wine cmake -G "MinGW Makefiles" $SRC_DIRW/mjin
+cd $CWD
