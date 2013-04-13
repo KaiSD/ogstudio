@@ -10,9 +10,16 @@ if [ -z $MINGW_DIR ] ||
     exit
 fi
 CWD=`pwd`
+MINGW_DIRW=`winepath -w $MINGW_DIR`
 SRC_DIRW=`winepath -w $SRC_DIR`
 
 export WINEDEBUG=-all
+
+# Temporary REG file to add MinGW/bin into PATH.
+REG_FILE=/tmp/build.w32.path.reg
+echo '[HKEY_CURRENT_USER\Environment]
+"PATH"="'${MINGW_DIRW//\\/\\\\}'\\bin"' > $REG_FILE
+wine regedit $REG_FILE
 
 # Build MJIN2.
 mkdir -p $BUILD_DIR
