@@ -1,14 +1,16 @@
-#!/bin/bash
+#!/bin/bash -e
 
 MINGW_DIR=$1
 MJIN_SRC_DIR=$2
 MJIN_BUILD_DIR=$3
-MJ_BUILD_DIR=$4
+MJ_SRC_DIR=$4
+MJ_BUILD_DIR=$5
 if [ -z $MINGW_DIR      ] ||
    [ -z $MJIN_SRC_DIR   ] ||
    [ -z $MJIN_BUILD_DIR ] ||
+   [ -z $MJ_SRC_DIR     ] ||
    [ -z $MJ_BUILD_DIR   ]; then
-    echo "Usage: $0 MINGW_DIR MJIN_SRC_DIR MJIN_BUILD_DIR MJ_BUILD_DIR"
+    echo "Usage: $0 MINGW_DIR MJIN_SRC_DIR MJIN_BUILD_DIR MJ_SRC_DIR MJ_BUILD_DIR"
     exit
 fi
 CWD=`pwd`
@@ -16,9 +18,14 @@ MINGW_DIRW=`winepath -w $MINGW_DIR`
 MJIN_SRC_DIRW=`winepath -w $MJIN_SRC_DIR`
 MJ_BUILD_DIRW=`winepath -w $MJ_BUILD_DIR`
 
-# Prepare MJ directory.
+function tell
+{
+    echo "======================= $@ ======================="
+}
+
 mkdir -p $MJ_BUILD_DIR/{bin,include,lib}
-if [ ! -f $MINGW_DIR/bin/python.exe ]; then
+if [ ! -f $MJ_BUILD_DIR/bin/python.exe ]; then
+    tell "Copying Python"
     cp $MINGW_DIR/bin/{libpython2.7.dll,python.exe} $MJ_BUILD_DIR/bin
     cp -R $MINGW_DIR/include/python2.7              $MJ_BUILD_DIR/include
     cp -R $MINGW_DIR/lib/python2.7                  $MJ_BUILD_DIR/lib
@@ -32,18 +39,35 @@ echo '[HKEY_CURRENT_USER\Environment]
 "PATH"="'${MJ_BUILD_DIRW//\\/\\\\}'\\bin;'${MINGW_DIRW//\\/\\\\}'\\bin"' > $REG_FILE
 wine regedit $REG_FILE
 
-# Build MJIN2.
+tell "Building MJIN2"
 mkdir -p $MJIN_BUILD_DIR
 cd $MJIN_BUILD_DIR
 wine cmd /c "echo %PATH%"
 wine cmake -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIRW $MJIN_SRC_DIRW
 wine make install
 cd $CWD
-# Remove MJIN2 headers
+tell "Removing MJIN2 headers"
 rm -R $MJ_BUILD_DIR/include/mjin2
-# Copy DLLs.
+tell "Copying and stripping DLLs"
+# Main DLLs.
 for lib in ALURE32 libgcc_s_dw2-1 libOpenThreads libosg libosgDB libosgGA libosgManipulator libosgShadow libosgText libosgViewer libpcre libpng16 libstdc++-6 libzlib OpenAL32; do
     cp $MINGW_DIR/bin/${lib}.dll $MJ_BUILD_DIR/bin
     strip -s $MJ_BUILD_DIR/bin/${lib}.dll
     echo $lib
 done
+# OSG plugin DLLs.
+for lib in mingw_osgdb_{osg,png,serializers_osg}; do
+    cp $MINGW_DIR/bin/osgPlugins*/${lib}.dll $MJ_BUILD_DIR/bin
+    strip -s $MJ_BUILD_DIR/bin/${lib}.dll
+    echo $lib
+done
+tell "Copying pymjin2"
+mkdir -p $MJ_BUILD_DIR/mjin
+cp -R $MJIN_SRC_DIR/pymjin2 $MJ_BUILD_DIR/mjin
+tell "Copying mj2"
+mkdir -p $MJ_BUILD_DIR/mjin.mj2
+cp -R $MJ_SRC_DIR/* $MJ_BUILD_DIR/mjin.mj2
+echo 'set DIR=%~dp0
+set PATH=%PATH%;%DIR%bin
+set PYTHONPATH=%DIR%lib\python2.7\site-packages;%DIR%mjin;%DIR%mjin\pymjin2
+python %DIR%mjin\pymjin2\GameApplication.py %DIR%mjin.mj2\world.xml' > $MJ_BUILD_DIR/run.bat
