@@ -1,30 +1,49 @@
 #!/bin/bash
 
 MINGW_DIR=$1
-SRC_DIR=$2
-BUILD_DIR=$3
-if [ -z $MINGW_DIR ] ||
-   [ -z $SRC_DIR   ] ||
-   [ -z $BUILD_DIR ]; then
-    echo "Usage: $0 MINGW_DIR SRC_DIR BUILD_DIR"
+MJIN_SRC_DIR=$2
+MJIN_BUILD_DIR=$3
+MJ_BUILD_DIR=$4
+if [ -z $MINGW_DIR      ] ||
+   [ -z $MJIN_SRC_DIR   ] ||
+   [ -z $MJIN_BUILD_DIR ] ||
+   [ -z $MJ_BUILD_DIR   ]; then
+    echo "Usage: $0 MINGW_DIR MJIN_SRC_DIR MJIN_BUILD_DIR MJ_BUILD_DIR"
     exit
 fi
 CWD=`pwd`
 MINGW_DIRW=`winepath -w $MINGW_DIR`
-SRC_DIRW=`winepath -w $SRC_DIR`
+MJIN_SRC_DIRW=`winepath -w $MJIN_SRC_DIR`
+MJ_BUILD_DIRW=`winepath -w $MJ_BUILD_DIR`
 
+# Prepare MJ directory.
+mkdir -p $MJ_BUILD_DIR/{bin,include,lib}
+if [ ! -f $MINGW_DIR/bin/python.exe ]; then
+    cp $MINGW_DIR/bin/{libpython2.7.dll,python.exe} $MJ_BUILD_DIR/bin
+    cp -R $MINGW_DIR/include/python2.7              $MJ_BUILD_DIR/include
+    cp -R $MINGW_DIR/lib/python2.7                  $MJ_BUILD_DIR/lib
+fi
+
+# Disable most of the Wine warnings.
 export WINEDEBUG=-all
-
 # Temporary REG file to add MinGW/bin into PATH.
 REG_FILE=/tmp/build.w32.path.reg
 echo '[HKEY_CURRENT_USER\Environment]
-"PATH"="'${MINGW_DIRW//\\/\\\\}'\\bin"' > $REG_FILE
+"PATH"="'${MJ_BUILD_DIRW//\\/\\\\}'\\bin;'${MINGW_DIRW//\\/\\\\}'\\bin"' > $REG_FILE
 wine regedit $REG_FILE
 
 # Build MJIN2.
-mkdir -p $BUILD_DIR
-cd $BUILD_DIR
-wine cmd /c "set PATH=%PATH%;$MINGW_DIR\\bin"
+mkdir -p $MJIN_BUILD_DIR
+cd $MJIN_BUILD_DIR
 wine cmd /c "echo %PATH%"
-wine cmake -G "MinGW Makefiles" $SRC_DIRW/mjin
+wine cmake -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIRW $MJIN_SRC_DIRW
+wine make install
 cd $CWD
+# Remove MJIN2 headers
+rm -R $MJ_BUILD_DIR/include/mjin2
+# Copy DLLs.
+for lib in ALURE32 libgcc_s_dw2-1 libOpenThreads libosg libosgDB libosgGA libosgManipulator libosgShadow libosgText libosgViewer libpcre libpng16 libstdc++-6 libzlib OpenAL32; do
+    cp $MINGW_DIR/bin/${lib}.dll $MJ_BUILD_DIR/bin
+    strip -s $MJ_BUILD_DIR/bin/${lib}.dll
+    echo $lib
+done

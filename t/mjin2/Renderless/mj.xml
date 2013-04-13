@@ -1,0 +1,24 @@
+<Scene>
+    <OnStart>scripts/scenes/mj/onStart.py</OnStart>
+    <!--<OnStart>scripts/scenes/mj/onStartTest.py</OnStart>-->
+    <OnFinish>scripts/scenes/mj/onFinish.py</OnFinish>
+    <Player Name="MainPlayer">
+        <Position x="0" y="0" z="25" />
+        <!--<Position x="0" y="70" z="75" />-->
+        <!--<Rotation x="90" y="5" z="0" />-->
+        <Camera Name="Camera">
+            <Position x="0" y="-70" z="60" />
+            <!--<Position x="0" y="0" z="30" />-->
+            <Rotation x="40" y="0" z="0" />
+            <!--<Rotation x="0" y="0" z="0" />-->
+        </Camera>
+        <Light Name="MainLight">
+            <Ambient  x="0.9" y="0.9" z="0.9" w="1" />
+            <Diffuse  x="1"   y="1"   z="1"   w="1" />
+            <!--<Position x="-10" y="-40" z="15"  w="1" />-->
+        </Light>
+    </Player>
+    <!--<Mesh Name="Table" Mesh="meshes/TableSpace.osgt" Texture="textures/center.png" CastShadows="true" />-->
+    <Mesh Name="Table" Mesh="meshes/Table.osgt" Texture="textures/interior.png" CastShadows="true" />
+    <Mesh Name="Room"  Mesh="meshes/Room.osgt"  Texture="textures/interior.png" CastShadows="false" />
+</Scene>
