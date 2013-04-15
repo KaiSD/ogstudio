@@ -1,0 +1,28 @@
+#!/bin/bash -e
+function tell
+{
+    echo "======================= $@ ======================="
+}
+
+for project in mjin mjin.mj2; do
+    tell "Updating $project"
+    if [ ! -d mjin ]; then
+        hg clone https://code.google.com/p/$project
+    fi
+    cd $project
+    hg pull -u
+    echo -n "$project revision: "
+    hg identify
+    cd ..
+done
+rm -R b
+VERSION=`cat mjin.mj2/VERSION`
+RELEASE=ogs-mahjong2-$VERSION-windows32
+./mj2/build.w32 ./mj2/MinGW ./mjin ./b/mjin.w32 ./mjin.mj2 ./b/$RELEASE
+cd b
+tell "Archiving $RELEASE"
+tar -cJf $RELEASE.tar.xz $RELEASE
+DST_DIR=$BUILD_NUMBER-$BUILD_ID
+mkdir -p $DST_DIR
+mv $RELEASE.tar.xf $DST_DIR
+cd ..

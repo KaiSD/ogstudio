@@ -1,0 +1,23 @@
+#!/bin/bash -e
+
+URL=http://sourceforge.net/projects/osrpgcreation/files/BE/
+MINGW_FILE=MinGW-20130411.tar.xz
+
+function tell
+{
+    echo "======================= $@ ======================="
+}
+
+if [ ! -f $MINGW_FILE ]; then
+    tell "Removing previous MinGW installation"
+    rm -fR MinGW*
+fi
+# Download the specified version or
+# continue to download if it hasn't finished last time.
+wget -c $URL/$MINGW_FILE
+# Unpack MinGW archive.
+if [ ! -d MinGW ]; then
+    tell "Installing MinGW"
+    tar -xf $MINGW_FILE
+fi
+

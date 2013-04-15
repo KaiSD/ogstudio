@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+function tell
+{
+    echo "======================= $@ ======================="
+}
+
+source ~/jenkins.cfg
+
+tell "Uploading to SourceForge"
+DST_DIR=$BUILD_NUMBER-$BUILD_ID
+scp -r $DST_DIR $USERNAME@frs.sourceforge.net:/home/frs/project/osrpgcreation/Mahjong2/jenkins/
