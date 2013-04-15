@@ -21,7 +21,7 @@ RELEASE=ogs-mahjong2-$VERSION-windows32
 ./mj2/build.w32 ./MinGW ./mjin ./b/mjin.w32 ./mjin.mj2 ./b/$RELEASE
 cd b
 tell "Archiving $RELEASE"
-tar -cJf $RELEASE.tar.xz $RELEASE
+7za a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on $RELEASE.7z $RELEASE
 DST_DIR=${BUILD_NUMBER}_${BUILD_ID}_$VERSION
 mkdir -p $DST_DIR
 mv $RELEASE.tar.xz $DST_DIR
