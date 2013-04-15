@@ -18,7 +18,7 @@ done
 rm -R b
 VERSION=`cat mjin.mj2/VERSION`
 RELEASE=ogs-mahjong2-$VERSION-windows32
-./mj2/build.w32 ./mj2/MinGW ./mjin ./b/mjin.w32 ./mjin.mj2 ./b/$RELEASE
+./mj2/build.w32 ./MinGW ./mjin ./b/mjin.w32 ./mjin.mj2 ./b/$RELEASE
 cd b
 tell "Archiving $RELEASE"
 tar -cJf $RELEASE.tar.xz $RELEASE
