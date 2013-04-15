@@ -24,5 +24,5 @@ tell "Archiving $RELEASE"
 tar -cJf $RELEASE.tar.xz $RELEASE
 DST_DIR=$BUILD_NUMBER-$BUILD_ID
 mkdir -p $DST_DIR
-mv $RELEASE.tar.xf $DST_DIR
+mv $RELEASE.tar.xz $DST_DIR
 cd ..
