@@ -22,7 +22,7 @@ RELEASE=ogs-mahjong2-$VERSION-windows32
 cd b
 tell "Archiving $RELEASE"
 tar -cJf $RELEASE.tar.xz $RELEASE
-DST_DIR=$BUILD_NUMBER-$BUILD_ID
+DST_DIR=${BUILD_NUMBER}_${BUILD_ID}_$VERSION
 mkdir -p $DST_DIR
 mv $RELEASE.tar.xz $DST_DIR
 cd ..

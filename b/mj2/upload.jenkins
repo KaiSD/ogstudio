@@ -8,5 +8,6 @@ function tell
 source ~/jenkins.cfg
 
 tell "Uploading to SourceForge"
-DST_DIR=b/$BUILD_NUMBER-$BUILD_ID
+VERSION=`cat mjin.mj2/VERSION`
+DST_DIR=b/${BUILD_NUMBER}_${BUILD_ID}_$VERSION
 scp -r $DST_DIR $USERNAME@frs.sourceforge.net:/home/frs/project/osrpgcreation/Mahjong2/jenkins/
