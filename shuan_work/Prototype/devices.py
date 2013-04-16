@@ -8,6 +8,7 @@ Shuan gameplay prototype core module
 '''
 
 from core import *
+from loadcsv import LoadCSV
 
 '''
 BASIC DEVICE
@@ -18,8 +19,7 @@ class Empty(DeviceKind):
     energy = 0
     energyIdle = 0
 
-def loadDeviceKind(filename):
-    data = jsonLoad(filename)
+def loadDeviceKind(data):
     get = data.get
     
     imgFile = get('image', "")
@@ -40,7 +40,7 @@ def loadDeviceKind(filename):
         name = get('name', "Unknown device")
         image = img
         type = ('EMPTY', 'PROJECTILE', 'RAY', 'TURRET', 'SPAWN', 'AURA', 'EFFECT').index(get('type', 'PROJECTILE')) - 1
-        velocity = tuple(get('velocity', (0, 1600)))
+        velocity = (0, get('velocity', (0, 1600)))
         lifetime = get('lifetime', 0.5)
         pof = get('pof', 1)
         bulletRotation = get('bulletRotation', False)
@@ -59,6 +59,7 @@ def loadDeviceKind(filename):
         endSound = get('endSound', None)
         soundVolume = get('soundVolume', 0.5)
         slot = ('SLOTGUN', 'SLOTWEAPON', 'SLOTDEVICE', 'SLOTNONE').index(get('slot', 'SLOTNONE'))
+        idString = data['idString']
     
     return LoadedDeviceKind
 
@@ -66,23 +67,25 @@ eWeapons = {}
 hWeapons = {}
 pGuns = [Empty]
 pWeapons = [Empty]
-pDevices = [Empty] 
-for i in listdir('data/devices'):
-    name = i[:-5]
-    if i.endswith('.json'):
-        cl = loadDeviceKind('data/devices/'+i)
-        cl.idString = name
-        if cl.isGood:
-            if cl.slot == SLOTGUN:
-                pGuns.append(cl)
-            elif cl.slot == SLOTWEAPON:
-                pWeapons.append(cl)
-            elif cl.slot == SLOTDEVICE:
-                pDevices.append(cl)
-            elif cl.slot == SLOTNONE:
-                hWeapons[name] = cl
-        else:
-            eWeapons[name] = cl
+pDevices = [Empty]
+#for i in listdir('data/devices'):
+devdata = LoadCSV('data/gamedata/devices.csv')
+for i in xrange(0, len(devdata)):
+    cl = loadDeviceKind(devdata.getDictByIndex(i))
+    name = cl.idString
+    if cl.isGood:
+        print name, 'is good'
+        if cl.slot == SLOTGUN:
+            pGuns.append(cl)
+        elif cl.slot == SLOTWEAPON:
+            pWeapons.append(cl)
+        elif cl.slot == SLOTDEVICE:
+            pDevices.append(cl)
+        elif cl.slot == SLOTNONE:
+            hWeapons[name] = cl
+    else:
+        print name, 'is evil'
+        eWeapons[name] = cl
 
 global playerGuns
 global playerWeapons

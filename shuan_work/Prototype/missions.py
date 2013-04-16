@@ -57,7 +57,7 @@ class SurvivalTemplate(Mission):
     max = 0.5
     
     enemyKinds = (
-                  enemies['Dummy'],
+                  enemies['Buffer'],
                   enemies['Dummy'],
                   enemies['Aimer'],
                   enemies['Aimer'],

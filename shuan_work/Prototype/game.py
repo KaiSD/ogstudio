@@ -8,6 +8,7 @@ Shuan gameplay prototype
 '''
 
 import coui
+import cairoui
 from sys import exit
 from missions import *
 
@@ -65,7 +66,7 @@ class MainMenu(layer.Layer):
             ])
         )
         gui.add(dia)
-        self.add(gui, z=99)
+        self.add(gui, z=99) 
     
     def quit(self, *args):
         director.terminate_app = True

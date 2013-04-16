@@ -156,7 +156,7 @@ class ActionRandomMovement(actions.IntervalAction):
             self.destination = rel(*destination)
             
         x = self.initial[0] + (self.destination[0] - self.initial[0]) * t
-        y = self.initial[1] + (self.initial[1] - self.destination[1]) * t
+        y = self.initial[1] - (self.initial[1] - self.destination[1]) * t
         self.target.position = x,y
 
 class ActionSwitchState(actions.InstantAction):
