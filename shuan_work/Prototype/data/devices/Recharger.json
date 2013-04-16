@@ -1,7 +1,0 @@
-{
-    "name": "Recharger", 
-    "runner": "eRecharge", 
-    "type": "EFFECT", 
-    "ammo": 3,
-    "slot": "SLOTDEVICE"
-}

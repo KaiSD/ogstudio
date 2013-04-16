@@ -1,7 +1,0 @@
-{
-	"type": "SPAWN",
-    "spawnID": "Aimer",
-    "name": "Satelite",
-    "ammo": 2,
-    "slot": "SLOTDEVICE"
-}
