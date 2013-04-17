@@ -22,8 +22,8 @@ class Empty(DeviceKind):
 def loadDeviceKind(data):
     get = data.get
     
-    imgFile = get('image', "")
-    aniInfo = get("animationInfo", [])
+    imgFile = get('image', '')
+    aniInfo = get('animationInfo', [])
     if aniInfo:
         img = loadAnimation(imgFile, *aniInfo)
     else:
@@ -68,13 +68,12 @@ hWeapons = {}
 pGuns = [Empty]
 pWeapons = [Empty]
 pDevices = [Empty]
-#for i in listdir('data/devices'):
+
 devdata = LoadCSV('data/gamedata/devices.csv')
 for i in xrange(0, len(devdata)):
     cl = loadDeviceKind(devdata.getDictByIndex(i))
     name = cl.idString
     if cl.isGood:
-        print name, 'is good'
         if cl.slot == SLOTGUN:
             pGuns.append(cl)
         elif cl.slot == SLOTWEAPON:
@@ -84,7 +83,6 @@ for i in xrange(0, len(devdata)):
         elif cl.slot == SLOTNONE:
             hWeapons[name] = cl
     else:
-        print name, 'is evil'
         eWeapons[name] = cl
 
 global playerGuns

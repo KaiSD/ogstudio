@@ -44,195 +44,64 @@ class AvatarMK3(AvatarKind):
     
     def __init__(self):
         super(AvatarKind, self).__init__()
-'''
-HELPERS
-'''
-class HelperAimer(NPCKind):
-    """
-    Добрая тарелка
-    """
-    image = loadAnimation('data/graphics/helper0.png', 3, 1, 0.5, True)
-    life = 10
-    damage = 10
-    score = 1
-    weapons = (helperWeapons['HelperGun'](),)
-    brains = ['data/brains/satelite.seq'] 
-'''
-ENEMIES
-'''
-class EnemyDummy(NPCKind):
-    """
-    Бочка
-    """
-    image = loadAnimation('data/graphics/enemy0.png', 2, 1, 0.5, True)
-    life = 10
-    damage = 10
-    score = 1
-    brains = ['data/brains/dummy.seq']
 
-class EnemyMine(NPCKind):
-    """
-    Мина
-    """
-    image = loadAnimation('data/graphics/enemyMine.png', 2, 1, 0.5, True)
-    life = 10
-    damage = 10
-    score = 0
-    brains = ['data/brains/smartmine.seq']
+def loadNPCKind(data):
+    get = data.get
+    
+    good = get('isGood', False)
+    
+    imgFile = get('image', '')
+    aniInfo = get('animationInfo', (1, 1, 1, True))
+    img = loadAnimation(imgFile, *aniInfo)
+    
+    wl = []
+    gl = get('weapons', [])
+    widx = 1
+    for i in gl:
+        if good:
+            wcl = helperWeapons[i]
+        else:
+            wcl = enemyWeapons[i]
+        wx = get('weaponsX%i' % (widx), 0)
+        wy = get('weaponY%i' % (widx), 0)
+        wl.append(wcl(wx, wy))
+        widx += 1
+    
+    sl = [] 
+    for s in get('set', []):
+        l = []
+        for j in str(s):
+            idx = int(j)
+            if len(wl) > idx:
+                if not wl[idx] in l:
+                    l.append(wl[idx])
+        sl.append(l)
+    
+    if not sl:
+        sl.append(wl)
+    
+    class LoadedNPCKind(NPCKind):
+        image = img
+        brains = get('brains', [])
+        life = get('life', 10)
+        score = get('score', 1)
+        shields = get('shield', 0)
+        shieldsRegen = get('shieldsRegen', 0)
+        weapons = sl[0]
+        sets = sl
+        idString = get('idString', '')
+        isGood = good
+    
+    return LoadedNPCKind
 
-class EnemyDumbMine(NPCKind):
-    """
-    Глупая Мина
-    """
-    image = loadAnimation('data/graphics/enemyMine.png', 2, 1, 0.5, True)
-    life = 10
-    damage = 10
-    score = 0
-    brains = ['data/brains/dumbmine.seq']
-
-class EnemyAimer(NPCKind):
-    """
-    Тарелка
-    """
-    image = loadAnimation('data/graphics/enemy1.png', 2, 1, 0.5, True)
-    life = 10
-    damage = 10
-    score = 1
-    weapons = (enemyWeapons['EnemyGun'](),)
-    brains = ['data/brains/aimer.seq']
-
-class EnemyStraighter(NPCKind):
-    """
-    Мясо
-    """
-    image = loadAnimation('data/graphics/enemy2.png', 2, 1, 0.5, True)
-    life = 10
-    damage = 10
-    score = 1
-    weapons = (enemyWeapons['EnemyGun'](),)
-    brains = ['data/brains/straighter.seq']
-
-class EnemyKami(NPCKind):
-    """
-    Камикадзе
-    """
-    image = loadAnimation('data/graphics/enemy5.png', 2, 1, 0.5, True)
-    life = 20
-    damage = 20
-    score = 1
-    brains = ['data/brains/kami.seq']
-
-class EnemyRayer(NPCKind):
-    """
-    Фонарь
-    """
-    image = loadAnimation('data/graphics/enemy3.png', 2, 1, 0.5, True)
-    life = 30
-    damage = 20
-    score = 3
-    weapons = (enemyWeapons['EnemyLaser'](),)
-    brains = ['data/brains/rayer.seq']
-
-class EnemyBurster(NPCKind):
-    """
-    Спаммер
-    """
-    image = loadAnimation('data/graphics/enemy4.png', 3, 1, 0.1, True)
-    life = 20
-    damage = 10
-    score = 2
-    weapons = (enemyWeapons['EnemyGun'](),)
-    brains = ['data/brains/burster.seq']
-
-class EnemyBuffer(NPCKind):
-    """
-    Болельщица
-    """
-    image = loadAnimation('data/graphics/enemy7.png', 2, 1, 0.5, True)
-    life = 20
-    damage = 20
-    shields = 20
-    shieldsRegen = 1
-    score = 5
-    weapons = (enemyWeapons['EnemyShieldProjector'](),)
-    brains = ['data/brains/buffer.seq']
-
-class EnemyBehemoth(NPCKind):
-    """
-    Бегемот
-    """
-    image = loadAnimation('data/graphics/enemy6.png', 2, 1, 0.1, True)
-    life = 100
-    damage = 50
-    score = 5
-    weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](0,-30), enemyWeapons['EnemyGun'](15,-30))
-    brains = ['data/brains/behemoth.seq']
-
-class EnemySummoner(NPCKind):
-    """
-    Нянька
-    """
-    image = loadAnimation('data/graphics/enemy8.png', 2, 1, 0.1, True)
-    life = 100
-    damage = 50
-    score = 5
-    sets = ((enemyWeapons['EnemyGun'](), enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30)),
-            (enemyWeapons['EnemySpawnAimer'](),))
-    brains = ('data/brains/summoner1.seq', 'data/brains/summoner2.seq')
-
-class EnemyMinador(NPCKind):
-    """
-    Минадор
-    """
-    image = loadAnimation('data/graphics/enemy9.png', 2, 1, 0.1, True)
-    life = 100
-    damage = 50
-    score = 5
-    weapons = (enemyWeapons['EnemySpawnMine'](), )
-    brains = ['data/brains/minador.seq']
-
-class EnemyMiniBoss(NPCKind):
-    """
-    Тестовый минибосс
-    """
-    image = loadAnimation('data/graphics/miniboss.png', 1, 1, 0.1, True)
-    life = 1000
-    damage = 1000
-    score = 100
-    weapons = (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30))
-    brains = ['data/brains/miniboss.seq']
-
-class EnemyTestBoss(NPCKind):
-    """
-    Тестовый босс
-    """
-    image = loadAnimation('data/graphics/boss.png', 1, 1, 0.1, True)
-    life = 3000
-    damage = 1000
-    score = 300
-    sets = ((enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30),
-             enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35)),
-            (enemyWeapons['EnemyGun'](-15,-30), enemyWeapons['EnemyGun'](15,-30),
-             enemyWeapons['EnemyGun'](-40,-35), enemyWeapons['EnemyGun'](40,-35), enemyWeapons['EnemyLaser']()))
-    brains = ('data/brains/testboss1.seq', 'data/brains/testboss2.seq', 'data/brains/testboss3.seq')
-
-enemies['Dummy'] = EnemyDummy()
-enemies['Mine'] = EnemyMine()
-enemies['DumbMine'] = EnemyDumbMine()
-enemies['Aimer'] = EnemyAimer()
-enemies['Straighter'] = EnemyStraighter()
-enemies['Kami'] = EnemyKami()
-enemies['Burster'] = EnemyBurster()
-enemies['Rayer'] = EnemyRayer()
-enemies['Buffer'] = EnemyBuffer()
-enemies['Minador'] = EnemyMinador()
-enemies['Behemoth'] = EnemyBehemoth()
-enemies['Summoner'] = EnemySummoner()
-
-enemies['Miniboss'] = EnemyMiniBoss()
-enemies['TestBoss'] = EnemyTestBoss()
-
-helpers['Aimer'] = HelperAimer()
+devdata = LoadCSV('data/gamedata/npc.csv')
+for i in xrange(0, len(devdata)):
+    cl = loadNPCKind(devdata.getDictByIndex(i))
+    name = cl.idString
+    if cl.isGood:
+        helpers[name] = cl()
+    else:
+        enemies[name] = cl()
 
 playerShips += (AvatarMK1, AvatarMK2, AvatarMK3)
 playerShields += (('No Shield',0,0,0), ('Shield MK1',10,1,0))

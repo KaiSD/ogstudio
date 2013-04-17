@@ -1,7 +1,7 @@
 RandomMovement(3)
 RandomMovement(3)
 RandomMovement(3)
-MoveBy(0, -1.1, 6)
+MoveBy(0, -1.1, 8)
 Die
 New
 Repeat

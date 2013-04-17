@@ -164,10 +164,10 @@ class SequenceTemplate(Mission):
                         del self.meters[args[0]]
                         del self.namedEnemies[args[0]]
         
-        def commandSwitchBrains(*args):
+        def commandSwitchState(*args):
             if len(args) == 2:
                 if args[0] in self.namedEnemies:
-                    self.namedEnemies[args[0]].switchBrains(self.namedEnemies[args[0]], args[1])
+                    self.namedEnemies[args[0]].do(SwitchState(args[1]))
         
         def commandMusic(*args):
             if len(args) == 1:
@@ -247,7 +247,7 @@ class SequenceTemplate(Mission):
                            'Wait':commandWait,
                            'Spawn':commandSpawn,
                            'WaitEnemyHealth':commandWaitHealth,
-                           'SwitchBrains':commandSwitchBrains,
+                           'SwitchState':commandSwitchState,
                            'Music':commandMusic,
                            'BackgroundSpeed':commandBackgroundSpeed,
                            'Var':commandSetVar,

@@ -1,0 +1,16 @@
+"idString";"brains1";"brains2";"brains3";"isGood";"damage";"image";"animationInfo1";"animationInfo2";"animationInfo3";"animationInfo4";"life";"score";"shields";"shieldsRegen";"weapons1";"weapons2";"weapons3";"weapons4";"weapons5";"set1";"set2";"weaponX1";"weaponY1";"weaponX2";"weaponY2";"weaponX3";"weaponY3";"weaponX4";"weaponY4"
+"Summoner";"data/brains/summoner1.seq";"data/brains/summoner2.seq";;"False";50;"data/graphics/enemy8.png";2;1;"0.1";"True";100;5;0;0;"EnemyGun";"EnemyGun";"EnemyGun";"EnemySpawnAimer";;123;4;-15;-30;0;-30;15;-30;;
+"Dummy";"data/brains/dummy.seq";;;"False";10;"data/graphics/enemy0.png";2;1;"0.5";"True";10;1;0;0;;;;;;;;;;;;;;;
+"Aimer";"data/brains/aimer.seq";;;"False";10;"data/graphics/enemy1.png";2;1;"0.5";"True";10;1;0;0;"EnemyGun";;;;;;;;;;;;;;
+"Rayer";"data/brains/rayer.seq";;;"False";20;"data/graphics/enemy3.png";2;1;"0.5";"True";30;3;0;0;"EnemyLaser";;;;;;;;;;;;;;
+"Behemoth";"data/brains/behemoth.seq";;;"False";50;"data/graphics/enemy6.png";2;1;"0.1";"True";100;5;0;0;"EnemyGun";"EnemyGun";"EnemyGun";;;;;-15;-30;0;-30;15;-30;;
+"DumbMine";"data/brains/dumbmine.seq";;;"False";10;"data/graphics/enemyMine.png";2;1;"0.5";"True";10;0;0;0;;;;;;;;;;;;;;;
+"Buffer";"data/brains/buffer.seq";;;"False";20;"data/graphics/enemy7.png";2;1;"0.5";"True";20;5;20;1;"EnemyShieldProjector";;;;;;;;;;;;;;
+"Kami";"data/brains/kami.seq";;;"False";20;"data/graphics/enemy5.png";2;1;"0.5";"True";20;1;0;0;;;;;;;;;;;;;;;
+"Minador";"data/brains/minador.seq";;;"False";50;"data/graphics/enemy9.png";2;1;"0.1";"True";100;5;0;0;"EnemySpawnMine";;;;;;;;;;;;;;
+"SmartMine";"data/brains/smartmine.seq";;;"False";10;"data/graphics/enemyMine.png";2;1;"0.5";"True";10;0;0;0;;;;;;;;;;;;;;;
+"Straighter";"data/brains/straighter.seq";;;"False";10;"data/graphics/enemy2.png";2;1;"0.5";"True";10;1;0;0;"EnemyGun";;;;;;;;;;;;;;
+"Miniboss";"data/brains/miniboss.seq";;;"False";1000;"data/graphics/miniboss.png";1;1;"0.1";"True";1000;100;0;0;"EnemyGun";"EnemyGun";;;;;;;;;;;;;
+"Burster";"data/brains/burster.seq";;;"False";10;"data/graphics/enemy4.png";3;1;"0.1";"True";20;2;0;0;"EnemyGun";;;;;;;;;;;;;;
+"TestBoss";"data/brains/testboss1.seq";"data/brains/testboss2.seq";"data/brains/testboss3.seq";"False";1000;"data/graphics/boss.png";1;1;"0.1";"True";3000;300;0;0;"EnemyGun";"EnemyGun";"EnemyGun";"EnemyGun";"EnemyLaser";1234;12345;-15;-30;15;-30;-40;-35;40;-35
+"Satelite";"data/brains/satelite.seq";;;"True";10;"data/graphics/helper0.png";3;1;"0.5";"True";10;1;0;0;"HelperGun";;;;;;;;;;;;;;

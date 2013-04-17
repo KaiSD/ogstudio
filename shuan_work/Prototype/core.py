@@ -222,15 +222,6 @@ class ActionFadeTimescale(actions.IntervalAction ):
 LIBRARY ENTRIES
 '''
 adata['aDie'] = ActionDie()
-adata['aShoot'] = ActionShoot()
-adata['aAimShoot'] = ActionShoot('Avatar')
-adata['aStopShooting'] = ActionStopShooting()
-adata['aAimMove400'] = ActionAimMovement('Avatar', 400, 3)
-adata['aAimMove100'] = ActionAimMovement('Avatar', 100, 9)
-
-adata['aRandMove5'] = ActionRandomMovement(duration=5)
-adata['aRandMove4'] = ActionRandomMovement(duration=4)
-adata['aRandMove3'] = ActionRandomMovement(duration=3) 
 
 '''
 MAIN KINDS
@@ -398,8 +389,6 @@ class NPCKind(object):
                     else:
                         acts = current_acts
         return acts
-            
-        
 
 class EffectKind(object):
     name = 'Null'
