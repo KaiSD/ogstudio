@@ -1,0 +1,4 @@
+"idString";"name";"image";"animationInfo1";"animationInfo2";"animationInfo3";"animationInfo4";"life";"engine";"weaponSlot1";"weaponSlot2";"weaponSlot3";"weaponSlot4";"weaponSlot5"
+"AvatarMK1";"Avatar MK1";"data/graphics/avatarSmallShip.png";3;1;"0.1";"True";200;1;-5;5;0;;
+"AvatarMK2";"Avatar MK2";"data/graphics/avatarSmallShip.png";3;1;"0.1";"True";250;1;-5;5;-13;13;
+"AvatarMK3";"Avatar MK3";"data/graphics/avatarSmallShip.png";3;1;"0.1";"True";300;1;-5;5;0;-13;13

@@ -429,7 +429,7 @@ class RechargerKind(EffectKind):
     
     def effect(self, target):
         if target.absorbedDamage > 0:
-            target.absorbedDamage -= 1
+            target.absorbedDamage -= 10
 
 class ShieldOverloadKind(EffectKind):
     name = 'Shields overloaded'
@@ -455,8 +455,8 @@ class DefenderKind(EffectKind):
     
     def start(self, instance):
         target = instance.target
-        target.shields += 10
-        target.shieldsRegen += 1
+        target.shields += 80
+        target.shieldsRegen += 8
         target.playShield(1)
     
     def check(self, instance):
@@ -468,8 +468,8 @@ class DefenderKind(EffectKind):
     
     def end(self, instance):
         target = instance.target
-        target.shields -= 10
-        target.shieldsRegen -= 1            
+        target.shields -= 80
+        target.shieldsRegen -= 8            
         if target.shields == 0:
             target.playShield(-1)
 
@@ -723,6 +723,7 @@ class Avatar(ASprite):
         self.sp = self.shields
         self.runners = []
         self.schedule_interval(self.regen, 0.1)
+        self._gonnaDie = False
     
     def setup(self, gunsList, weaponsList, devicesList, shieldsList, enginesList, reactorList):
         settings = self.settings
@@ -807,6 +808,12 @@ class Avatar(ASprite):
             shield = sprite.Sprite(loadAnimation('data/graphics/ShieldAvatarBlocked.png', 4, 1, 0.05))
         self.add(shield)
         shield.do(adata['aDelay03'] + actions.CallFuncS(die))
+    
+    def kill(self):
+        if not self._gonnaDie:
+            self._gonnaDie = True
+            self.stop()
+            super(Avatar, self).kill()
 
 class NPCShip(ASprite):
     def __init__(self, owner, kind, x, y, coordZ=4):

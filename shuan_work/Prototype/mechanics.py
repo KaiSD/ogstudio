@@ -67,10 +67,10 @@ class Mission(layer.Layer):
                                 font_name='Times New Roman',
                                 font_size=16,
                                 anchor_x='center', anchor_y='bottom')
-        self.lifeLabel.position = rel(0.1,0.1)
-        self.energyLaber.position = rel(0.1,0.15)
-        self.scoreLabel.position = rel(0.1,0.2)
-        self.devicesLabel.position = rel(0.5,0.95)
+        self.lifeLabel.position = rel(0.01,0.05)
+        self.energyLaber.position = rel(0.01,0.1)
+        self.scoreLabel.position = rel(0.01,0.15)
+        self.devicesLabel.position = rel(0.5,0.98)
         self.add(self.lifeLabel, z=10)
         self.add(self.energyLaber, z=10)
         self.add(self.scoreLabel, z=10)
@@ -427,7 +427,7 @@ class Mission(layer.Layer):
             for i in colls:
                 if i in self.avatarBullets:
                     i.kill()
-                if enemy.life > 0:
+                if enemy.takenDamage < enemy.life:
                     enemy.takeDamage(i.damage)
         # Manage Enemies2Avatar Collision
         for av in self.avatarHelpers:
@@ -443,8 +443,7 @@ class Mission(layer.Layer):
                     self.addExplosion(i.position)
                     if self.target == i:
                         self.target = None
-                    if i.life > 0:
-                        i.kill()
+                    i.takeDamage(av.life)
                 elif i in self.enemyBullets:
                     i.kill()
         # Updating labels

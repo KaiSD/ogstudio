@@ -1,0 +1,7 @@
+"type";"name";"param1";"param2";"param3"
+"Engine";"Engine MK1";"5.0";12;
+"Engine";"Engine MK2";"10.0";50;
+"Reactor";"Reactor MK1";100;;
+"Reactor";"Reactor MK2";150;;
+"Shield";"No Shield";0;0;0
+"Shield";"Shield MK1";80;8;0

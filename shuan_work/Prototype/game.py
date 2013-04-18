@@ -12,7 +12,7 @@ import cairoui
 from sys import exit
 from missions import *
 
-VERSION = '0.5'
+VERSION = '0.6'
 CPROFILE = False
 missionsList = []
 pyglet.options['debug_gl'] = False

@@ -9,42 +9,6 @@ Shuan gameplay prototype core module
 
 from devices import *
 
-'''
-AVATARS
-'''
-class AvatarMK1(AvatarKind):
-    image = loadAnimation('data/graphics/avatarSmallShip.png', 3, 1, 0.1, True)
-    life = 100
-    engine = 1
-    name = "Avatar MK1"
-    
-    weaponSlots = (-5, 5, 0)
-    
-    def __init__(self):
-        super(AvatarKind, self).__init__()
-
-class AvatarMK2(AvatarKind):
-    image = loadAnimation('data/graphics/avatarSmallShip.png', 3, 1, 0.1, True)
-    life = 125
-    engine = 1
-    name = "Avatar MK2"
-    
-    weaponSlots = (-5, 5, -13, 13)
-    
-    def __init__(self):
-        super(AvatarKind, self).__init__()
-
-class AvatarMK3(AvatarKind):
-    image = loadAnimation('data/graphics/avatarSmallShip.png', 3, 1, 0.1, True)
-    life = 150
-    engine = 1
-    name = "Avatar MK3"
-    
-    weaponSlots = (-5, 5, 0, -13, 13)
-    
-    def __init__(self):
-        super(AvatarKind, self).__init__()
-
 def loadNPCKind(data):
     get = data.get
     
@@ -84,6 +48,7 @@ def loadNPCKind(data):
         image = img
         brains = get('brains', [])
         life = get('life', 10)
+        damage = get('damage', 10)
         score = get('score', 1)
         shields = get('shield', 0)
         shieldsRegen = get('shieldsRegen', 0)
@@ -94,6 +59,22 @@ def loadNPCKind(data):
     
     return LoadedNPCKind
 
+def loadAvatarKind(data):
+    get = data.get
+    
+    imgFile = get('image', '')
+    aniInfo = get('animationInfo', (1, 1, 1, True))
+    img = loadAnimation(imgFile, *aniInfo)
+    
+    class LoadedAvatarKind(AvatarKind):
+        image = img
+        life = get('life', 100)
+        engine = get('engine', 1)
+        name = get('name', 'Avatar')
+        weaponSlots = get('weaponSlot', [])
+    
+    return LoadedAvatarKind
+
 devdata = LoadCSV('data/gamedata/npc.csv')
 for i in xrange(0, len(devdata)):
     cl = loadNPCKind(devdata.getDictByIndex(i))
@@ -103,7 +84,19 @@ for i in xrange(0, len(devdata)):
     else:
         enemies[name] = cl()
 
-playerShips += (AvatarMK1, AvatarMK2, AvatarMK3)
-playerShields += (('No Shield',0,0,0), ('Shield MK1',10,1,0))
-playerEngines += (('Engine MK1',5.0,12), ('Engine MK2', 10.0,50))
-playerReactors += (('Reactor MK1',100), ('Reactor MK2', 150))
+devdata = LoadCSV('data/gamedata/player.csv')
+for i in xrange(0, len(devdata)):
+    cl = loadAvatarKind(devdata.getDictByIndex(i))
+    playerShips += (cl, )
+
+devdata = LoadCSV('data/gamedata/maindevices.csv')
+for i in xrange(0, len(devdata)):
+    data = devdata.getDictByIndex(i)
+    if data['type'] == 'Shield':
+        playerShields += ((data['name'], data['param'][0], data['param'][1], data['param'][2]), )
+    elif data['type'] == 'Engine':
+        playerEngines += ((data['name'], data['param'][0], data['param'][1]), )
+    elif data['type'] == 'Reactor':
+        playerReactors += ((data['name'], data['param'][0]), )
+    else:
+        print 'Unknown device type:', data['type']
