@@ -70,4 +70,4 @@ cp -R $MJ_SRC_DIR/* $MJ_BUILD_DIR/mjin.mj2
 echo 'set DIR=%~dp0
 set PATH=%PATH%;%DIR%bin
 set PYTHONPATH=%DIR%lib\python2.7\site-packages;%DIR%mjin;%DIR%mjin\pymjin2
-python %DIR%mjin\pymjin2\GameApplication.py %DIR%mjin.mj2\world.xml' > $MJ_BUILD_DIR/run.bat
+python "%DIR%mjin\pymjin2\GameApplication.py" "%DIR%mjin.mj2\world.xml"' > $MJ_BUILD_DIR/run.bat
