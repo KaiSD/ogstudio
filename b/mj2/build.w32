@@ -50,7 +50,7 @@ tell "Removing MJIN2 headers"
 rm -R $MJ_BUILD_DIR/include/mjin2
 tell "Copying and stripping DLLs"
 # Main DLLs.
-for lib in ALURE32 libgcc_s_dw2-1 libOpenThreads libosg libosgDB libosgGA libosgManipulator libosgShadow libosgText libosgViewer libpcre libpng16 libstdc++-6 libzlib OpenAL32; do
+for lib in ALURE32 libgcc_s_dw2-1 libOpenThreads libosg libosgDB libosgGA libosgManipulator libosgShadow libosgText libosgUtil libosgViewer libpcre libpng16 libstdc++-6 libzlib OpenAL32; do
     cp $MINGW_DIR/bin/${lib}.dll $MJ_BUILD_DIR/bin
     strip -s $MJ_BUILD_DIR/bin/${lib}.dll
     echo $lib
