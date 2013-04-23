@@ -28,10 +28,11 @@ if [ ! -d $OSG ]; then
     # Don't compile examples.
     patch -p0 < ../osgmass.patch
     cd $OSG/build
-    cmake -G "Xcode"                        \
-          -DBUILD_OSG_APPLICATIONS=OFF      \
+    cmake -G "Xcode"                   \
+          -DBUILD_OSG_APPLICATIONS=OFF \
+          -DCMAKE_BUILD_TYPE="Release" \
           ../src/osg-$OSG_VERSION
-    xcodebuild
+    xcodebuild -configuration Release
 else
     echo "OpenSceneGraph was found in '$OSG'. Skipping."
 fi
