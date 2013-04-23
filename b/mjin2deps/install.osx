@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# This script builds and installs MJIN2 dependencies for OS X 10.8.
+#
+
+SRC_DIR=$1
+BUILD_DIR=$2
+if [ -z $SRC_DIR ] || [ -z $BUILD_DIR ]; then
+    echo "Usage: $0 SRC_DIR BUILD_DIR"
+    exit
+fi
+CWD=`pwd`
+# Script absolute location.
+DIR=`dirname $0`
+# Versions.
+OSG_VERSION=13363
+
+# OpenSceneGraph.
+cd $CWD
+OSG=$BUILD_DIR/osg
+if [ ! -d $OSG ]; then
+    echo "OpenSceneGraph is not found. Building it."
+    mkdir -p $OSG/{src,build}
+    tar -xf $SRC_DIR/osg-$OSG_VERSION.tar.bz2 -C $OSG/src
+    cp $DIR/osgmass.patch $OSG/src
+    # Patch.
+    cd $OSG/src/osg-$OSG_VERSION
+    # Don't compile examples.
+    patch -p0 < ../osgmass.patch
+    cd $OSG/build
+    cmake -G "Xcode"                        \
+          -DBUILD_OSG_APPLICATIONS=OFF      \
+          ../src/osg-$OSG_VERSION
+    xcodebuild
+else
+    echo "OpenSceneGraph was found in '$OSG'. Skipping."
+fi
+
