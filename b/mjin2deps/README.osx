@@ -3,9 +3,10 @@
 - Install the latest Xcode from Mac App Store.
 
 = Install CMake =
-- Install the latest CMake manually.
+- Install the latest CMake manually: http://cmake.org
 
 = Download MJIN2 dependencies into ~/src = 
+- libsndfile: http://www.mega-nerd.com/libsndfile/
 - ALURE: http://kcat.strangesoft.net/alure.html
 - OpenSceneGraph: http://www.openscenegraph.org/projects/osg/wiki/Downloads/SVN
 - SWIG: http://www.swig.org/download.html

@@ -1,0 +1,13 @@
+--- Makefile.in.orig	2013-04-24 15:06:29.000000000 +0700
++++ Makefile.in	2013-04-24 15:06:43.000000000 +0700
+@@ -320,8 +320,8 @@
+ top_srcdir = @top_srcdir@
+ DISTCHECK_CONFIGURE_FLAGS = --enable-gcc-werror
+ @BUILD_OCTAVE_MOD_TRUE@octave_dir = Octave
+-SUBDIRS = M4 man doc Win32 src $(octave_dir) examples regtest tests programs
+-DIST_SUBDIRS = M4 man doc Win32 src Octave examples regtest tests programs
++SUBDIRS = M4 man doc Win32 src $(octave_dir) examples
++DIST_SUBDIRS = M4 man doc Win32 src Octave examples
+ EXTRA_DIST = libsndfile.spec.in sndfile.pc.in
+ CLEANFILES = *~
+ pkgconfigdir = $(libdir)/pkgconfig

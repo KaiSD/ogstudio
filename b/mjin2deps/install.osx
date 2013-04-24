@@ -14,6 +14,7 @@ CWD=`pwd`
 # Script absolute location.
 DIR=`dirname $0`
 # Versions.
+LIBSNDFILE_VERSION=1.0.25
 OSG_VERSION=13363
 SWIG_VERSION=2.0.9
 
@@ -59,3 +60,21 @@ else
     echo "OpenSceneGraph was found in '$OSG'. Skipping."
 fi
 
+# libsndfile.
+cd $CWD
+LIBSNDFILE=$BUILD_DIR/libsndfile
+if [ ! -d $LIBSNDFILE ]; then
+    echo "libsndfile is not found. Building it."
+    mkdir -p $LIBSNDFILE
+    tar -xf $SRC_DIR/libsndfile-$LIBSNDFILE_VERSION.tar.gz -C $LIBSNDFILE
+    cp $DIR/libsndfile.patch $LIBSNDFILE
+    cd $LIBSNDFILE/libsndfile-$LIBSNDFILE_VERSION
+    # Patch.
+    # Don't compile programs.
+    patch -p0 < ../libsndfile.patch
+    ./configure --disable-static --prefix=$DEPS_DIR
+    make
+    make install
+else
+    echo "libsndfile was found in '$LIBSNDFILE'. Skipping."
+fi
