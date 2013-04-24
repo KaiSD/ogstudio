@@ -9,6 +9,7 @@
 - libsndfile: http://www.mega-nerd.com/libsndfile/
 - ALURE: http://kcat.strangesoft.net/alure.html
 - OpenSceneGraph: http://www.openscenegraph.org/projects/osg/wiki/Downloads/SVN
+- PCRE: ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 - SWIG: http://www.swig.org/download.html
 
 = Install MJIN2 dependencies =
