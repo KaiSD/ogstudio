@@ -1,0 +1,15 @@
+
+= Install Xcode =
+- Install the latest Xcode from Mac App Store.
+
+= Install CMake =
+- Install the latest CMake manually.
+
+= Download MJIN2 dependencies into ~/src = 
+- ALURE: http://kcat.strangesoft.net/alure.html
+- OpenSceneGraph: http://www.openscenegraph.org/projects/osg/wiki/Downloads/SVN
+- SWIG: http://www.swig.org/download.html
+
+= Install MJIN2 dependencies =
+- Create ~/b build directory.
+- Run: ./install.osx ~/src ~/b

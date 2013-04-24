@@ -9,11 +9,32 @@ if [ -z $SRC_DIR ] || [ -z $BUILD_DIR ]; then
     echo "Usage: $0 SRC_DIR BUILD_DIR"
     exit
 fi
+DEPS_DIR=$BUILD_DIR/deps
 CWD=`pwd`
 # Script absolute location.
 DIR=`dirname $0`
 # Versions.
 OSG_VERSION=13363
+SWIG_VERSION=2.0.9
+
+# Make target directory for dependencies.
+mkdir -p $DEPS_DIR
+
+# SWIG.
+cd $CWD
+SWIG=$BUILD_DIR/swig
+if [ ! -d $SWIG ]; then
+    echo "SWIG is not found. Building it."
+    mkdir -p $SWIG
+    tar -xf $SRC_DIR/swig-$SWIG_VERSION.tar.gz -C $SWIG
+    cd $SWIG/swig-$SWIG_VERSION
+    ./configure --without-pcre --prefix=$DEPS_DIR
+    make
+    make install
+else
+    echo "SWIG was found in '$SWIG'. Skipping."
+fi
+PATH=$PATH:$DEPS_DIR/bin
 
 # OpenSceneGraph.
 cd $CWD
@@ -28,11 +49,12 @@ if [ ! -d $OSG ]; then
     # Don't compile examples.
     patch -p0 < ../osgmass.patch
     cd $OSG/build
-    cmake -G "Xcode"                   \
-          -DBUILD_OSG_APPLICATIONS=OFF \
-          -DCMAKE_BUILD_TYPE="Release" \
+    cmake -G "Xcode"                       \
+          -DBUILD_OSG_APPLICATIONS=OFF     \
+          -DCMAKE_BUILD_TYPE="Release"     \
+          -DCMAKE_INSTALL_PREFIX=$DEPS_DIR \
           ../src/osg-$OSG_VERSION
-    xcodebuild -configuration Release
+    xcodebuild -target install -configuration Release -sdk macosx10.7
 else
     echo "OpenSceneGraph was found in '$OSG'. Skipping."
 fi
