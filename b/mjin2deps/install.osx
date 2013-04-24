@@ -118,6 +118,7 @@ if [ ! -d $ALURE ]; then
           -DCMAKE_INSTALL_PREFIX=$DEPS_DIR \
           ../src/alure-$ALURE_VERSION
     xcodebuild -target install -configuration Release -sdk $MACOSX_SDK
+    ln -s $DEPS_DIR/include/{Open,}AL
 else
     echo "ALURE was found in '$ALURE'. Skipping."
 fi
