@@ -14,3 +14,5 @@
 = Install MJIN2 dependencies =
 - Create ~/b build directory.
 - Run: ./install.osx ~/src ~/b
+
+At the end, you'll have ~/Darwin directory with all dependencies.

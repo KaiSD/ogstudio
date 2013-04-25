@@ -1,0 +1,31 @@
+#!/bin/bash -e
+
+DARWIN_DIR=$1
+MJIN_SRC_DIR=$2
+MJIN_BUILD_DIR=$3
+MJ_SRC_DIR=$4
+MJ_BUILD_DIR=$5
+if [ -z $DARWIN_DIR     ] ||
+   [ -z $MJIN_SRC_DIR   ] ||
+   [ -z $MJIN_BUILD_DIR ] ||
+   [ -z $MJ_SRC_DIR     ] ||
+   [ -z $MJ_BUILD_DIR   ]; then
+    echo "Usage: $0 DARWIN_DIR MJIN_SRC_DIR MJIN_BUILD_DIR MJ_SRC_DIR MJ_BUILD_DIR"
+    exit
+fi
+CWD=`pwd`
+SDK_VERSION=macosx10.7
+
+function tell
+{
+    echo "======================= $@ ======================="
+}
+
+PATH=$PATH:$DARWIN_DIR/bin
+
+tell "Building MJIN2"
+mkdir -p $MJIN_BUILD_DIR
+echo $PATH
+cd $MJIN_BUILD_DIR
+cmake -G "Xcode" -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIR $MJIN_SRC_DIR
+xcodebuild -target install -configuration Release -sdk $SDK_VERSION

@@ -27,3 +27,5 @@ It will run the same sequence of dialogs. Just keep on pressing "Next", and it w
 = Install MJIN2 dependencies =
 - Create C:/b build directory.
 - Run: ./install.w32 C:/src C:/b
+
+At the end, you'll have C:/MinGW directory with all dependencies.
