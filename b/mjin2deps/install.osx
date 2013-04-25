@@ -9,20 +9,34 @@ if [ -z $SRC_DIR ] || [ -z $BUILD_DIR ]; then
     echo "Usage: $0 SRC_DIR BUILD_DIR"
     exit
 fi
-DEPS_DIR=$BUILD_DIR/deps
+DARWIN_DIR=`dirname ~/Darwin`/Darwin
+SDK_VERSION=macosx10.7
 CWD=`pwd`
 # Script absolute location.
 DIR=`dirname $0`
-MACOSX_SDK=macosx10.7
 # Versions.
 ALURE_VERSION=1.2
+CMAKE_VERSION=2.8.10.2
 LIBSNDFILE_VERSION=1.0.25
 OSG_VERSION=13363
 PCRE_VERSION=8.32
 SWIG_VERSION=2.0.9
 
 # Make target directory for dependencies.
-mkdir -p $DEPS_DIR
+mkdir -p $DARWIN_DIR
+PATH=$PATH:$DARWIN_DIR/bin
+
+# CMake.
+cd $CWD
+CMAKE=$BUILD_DIR/cmake
+if [ ! -d $CMAKE ]; then
+    echo "CMake is not found. Building it."
+    mkdir -p $CMAKE
+    tar -xf $SRC_DIR/cmake-${CMAKE_VERSION}-Darwin64-universal.tar.gz -C $CMAKE
+    cp -R $CMAKE/cmake-${CMAKE_VERSION}-Darwin64-universal/CMake*/Contents/* $DARWIN_DIR
+else
+    echo "CMake was found in '$CMAKE'. Skipping."
+fi
 
 # PCRE.
 cd $CWD
@@ -33,7 +47,7 @@ if [ ! -d $PCRE ]; then
     tar -xf $SRC_DIR/pcre-$PCRE_VERSION.tar.bz2 -C $PCRE/src
     cd $PCRE/build
     cmake -G "Xcode"                           \
-          -DCMAKE_INSTALL_PREFIX=$DEPS_DIR     \
+          -DCMAKE_INSTALL_PREFIX=$DARWIN_DIR     \
           -DBUILD_SHARED_LIBS=ON               \
           -DPCRE_BUILD_PCRECPP=OFF             \
           -DPCRE_BUILD_PCREGREP=OFF            \
@@ -41,7 +55,7 @@ if [ ! -d $PCRE ]; then
           -DPCRE_SUPPORT_UNICODE_PROPERTIES=ON \
           -DPCRE_SUPPORT_UTF8=ON               \
           ../src/pcre-$PCRE_VERSION
-    xcodebuild -target install -configuration Release -sdk $MACOSX_SDK
+    xcodebuild -target install -configuration Release -sdk $SDK_VERSION
 else
     echo "PCRE was found in '$PCRE'. Skipping."
 fi
@@ -54,13 +68,12 @@ if [ ! -d $SWIG ]; then
     mkdir -p $SWIG
     tar -xf $SRC_DIR/swig-$SWIG_VERSION.tar.gz -C $SWIG
     cd $SWIG/swig-$SWIG_VERSION
-    ./configure --without-pcre --prefix=$DEPS_DIR
+    ./configure --without-pcre --prefix=$DARWIN_DIR
     make
     make install
 else
     echo "SWIG was found in '$SWIG'. Skipping."
 fi
-PATH=$PATH:$DEPS_DIR/bin
 
 # OpenSceneGraph.
 cd $CWD
@@ -78,9 +91,9 @@ if [ ! -d $OSG ]; then
     cmake -G "Xcode"                       \
           -DBUILD_OSG_APPLICATIONS=OFF     \
           -DCMAKE_BUILD_TYPE="Release"     \
-          -DCMAKE_INSTALL_PREFIX=$DEPS_DIR \
+          -DCMAKE_INSTALL_PREFIX=$DARWIN_DIR \
           ../src/osg-$OSG_VERSION
-    xcodebuild -target install -configuration Release -sdk $MACOSX_SDK
+    xcodebuild -target install -configuration Release -sdk $SDK_VERSION
 else
     echo "OpenSceneGraph was found in '$OSG'. Skipping."
 fi
@@ -97,7 +110,7 @@ if [ ! -d $LIBSNDFILE ]; then
     # Patch.
     # Don't compile programs.
     patch -p0 < ../libsndfile.patch
-    ./configure --disable-static --prefix=$DEPS_DIR
+    ./configure --disable-static --prefix=$DARWIN_DIR
     make
     make install
 else
@@ -115,10 +128,10 @@ if [ ! -d $ALURE ]; then
     cmake -G "Xcode"                       \
           -DBUILD_STATIC=OFF               \
           -DCMAKE_BUILD_TYPE="Release"     \
-          -DCMAKE_INSTALL_PREFIX=$DEPS_DIR \
+          -DCMAKE_INSTALL_PREFIX=$DARWIN_DIR \
           ../src/alure-$ALURE_VERSION
-    xcodebuild -target install -configuration Release -sdk $MACOSX_SDK
-    ln -s $DEPS_DIR/include/{Open,}AL
+    xcodebuild -target install -configuration Release -sdk $SDK_VERSION
+    ln -s $DARWIN_DIR/include/{Open,}AL
 else
     echo "ALURE was found in '$ALURE'. Skipping."
 fi
