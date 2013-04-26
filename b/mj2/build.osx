@@ -49,9 +49,7 @@ tell "Copying mj2"
 mkdir -p $MJ_BUILD_DIR/mjin.mj2
 cp -R $MJ_SRC_DIR/* $MJ_BUILD_DIR/mjin.mj2
 
-exit
-
-echo 'set DIR=%~dp0
-set PATH=%PATH%;%DIR%bin
-set PYTHONPATH=%DIR%lib\python2.7\site-packages;%DIR%mjin;%DIR%mjin\pymjin2
-python "%DIR%mjin\pymjin2\GameApplication.py" "%DIR%mjin.mj2\world.xml"' > $MJ_BUILD_DIR/run.bat
+echo '#!/bin/bash
+DIR=`dirname $0`
+DYLD_LIBRARY_PATH=$DIR/lib PYTHONPATH=$DIR/Library/Python/2.7/site-packages:$DIR/mjin python $DIR/mjin/pymjin2/GameApplication.py $DIR/mjin.mj2/world.xml' > $MJ_BUILD_DIR/run
+chmod +x $MJ_BUILD_DIR/run
