@@ -29,3 +29,29 @@ echo $PATH
 cd $MJIN_BUILD_DIR
 cmake -G "Xcode" -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIR $MJIN_SRC_DIR
 xcodebuild -target install -configuration Release -sdk $SDK_VERSION
+tell "Removing MJIN2 headers"
+rm -R $MJ_BUILD_DIR/include/mjin2
+tell "Copying libs"
+# Main libs.
+for lib in libalure libOpenThreads libosg libosgDB libosgGA libosgManipulator libosgShadow libosgText libosgUtil libosgViewer libpcre libsndfile; do
+    echo $lib
+    cp $DARWIN_DIR/lib/${lib}.dylib $MJ_BUILD_DIR/lib
+done
+# OSG plugin libs.
+for lib in osgdb_{imageio,osg,serializers_osg}; do
+    echo $lib
+    cp $DARWIN_DIR/lib/osgPlugins*/${lib}.so $MJ_BUILD_DIR/lib
+done
+tell "Copying pymjin2"
+mkdir -p $MJ_BUILD_DIR/mjin
+cp -R $MJIN_SRC_DIR/pymjin2 $MJ_BUILD_DIR/mjin
+tell "Copying mj2"
+mkdir -p $MJ_BUILD_DIR/mjin.mj2
+cp -R $MJ_SRC_DIR/* $MJ_BUILD_DIR/mjin.mj2
+
+exit
+
+echo 'set DIR=%~dp0
+set PATH=%PATH%;%DIR%bin
+set PYTHONPATH=%DIR%lib\python2.7\site-packages;%DIR%mjin;%DIR%mjin\pymjin2
+python "%DIR%mjin\pymjin2\GameApplication.py" "%DIR%mjin.mj2\world.xml"' > $MJ_BUILD_DIR/run.bat
