@@ -8,7 +8,7 @@ source ~/jenkins.cfg
 
 for project in mjin mjin.mj2; do
     tell "Updating $project"
-    if [ ! -d mjin ]; then
+    if [ ! -d $project ]; then
         hg clone https://code.google.com/p/$project
     fi
     cd $project
