@@ -32,4 +32,5 @@ source ~/jenkins.cfg
 
 setup $MINGW_FILE  MinGW  $URL
 setup $DARWIN_FILE Darwin $URL
+rsync -aiv --delete Darwin $OSX_ADDR:~
 
