@@ -16,7 +16,7 @@ for project in mjin mjin.mj2; do
     echo -n "$project revision: "
     hg identify
     cd ..
-    rsync -aiv --delete $project $OSX_HOST:~
+    rsync -aiv --delete $project $OSX_ADDR:~
 done
 rm -R b
 VERSION=`cat mjin.mj2/VERSION`
