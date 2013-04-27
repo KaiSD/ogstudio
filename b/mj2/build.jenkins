@@ -4,6 +4,8 @@ function tell
     echo "======================= $@ ======================="
 }
 
+source ~/jenkins.cfg
+
 for project in mjin mjin.mj2; do
     tell "Updating $project"
     if [ ! -d mjin ]; then
@@ -14,6 +16,7 @@ for project in mjin mjin.mj2; do
     echo -n "$project revision: "
     hg identify
     cd ..
+    rsync -aiv --delete $project $OSX_HOST:~
 done
 rm -R b
 VERSION=`cat mjin.mj2/VERSION`
