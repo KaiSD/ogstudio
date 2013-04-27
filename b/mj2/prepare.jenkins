@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 URL=http://sourceforge.net/projects/osrpgcreation/files/BE/
+DARWIN_FILE=Darwin-20130425.tar.bz2
 MINGW_FILE=MinGW-20130411.tar.xz
 
 function tell
@@ -8,16 +9,27 @@ function tell
     echo "======================= $@ ======================="
 }
 
-if [ ! -f $MINGW_FILE ]; then
-    tell "Removing previous MinGW installation"
-    rm -fR MinGW*
-fi
-# Download the specified version or
-# continue to download if it hasn't finished last time.
-wget -c $URL/$MINGW_FILE
-# Unpack MinGW archive.
-if [ ! -d MinGW ]; then
-    tell "Installing MinGW"
-    tar -xf $MINGW_FILE
-fi
+function setup
+{
+    file=$1
+    dir=$2
+    url=$3
+    if [ ! -f $file ]; then
+        tell "Removing previous $dir installation"
+        rm -fR $dir*
+    fi
+    # Download the specified version or
+    # continue to download if it hasn't finished last time.
+    wget -c $url/$file
+    # Unpack $file archive.
+    if [ ! -d $dir ]; then
+        tell "Installing $dir"
+        tar -xf $file
+    fi
+}
+
+source ~/jenkins.cfg
+
+setup $MINGW_FILE  MinGW  $URL
+setup $DARWIN_FILE Darwin $URL
 
