@@ -18,9 +18,10 @@ for project in mjin mjin.mj2; do
     cd ..
     rsync -aiv --delete $project $OSX_ADDR:~
 done
-rm -R b
 VERSION=`cat mjin.mj2/VERSION`
+rm -R b
 RELEASE=ogs-mahjong2-$VERSION-windows32
+tell "Building for Windows32"
 ./mj2/build.w32 ./MinGW ./mjin ./b/mjin.w32 ./mjin.mj2 ./b/$RELEASE
 cd b
 tell "Archiving $RELEASE"
@@ -28,4 +29,14 @@ tell "Archiving $RELEASE"
 DST_DIR=${BUILD_NUMBER}_${BUILD_ID}_$VERSION
 mkdir -p $DST_DIR
 mv $RELEASE.7z $DST_DIR
+cd ..
+RELEASE=ogs-mahjong2-$VERSION-osx
+tell "Building for OS X"
+ssh $OSX_ADDR "rm -R b; ./mj2/build.osx ~/Darwin ~/mjin ~/b/mjin.osx ~/mjin.mj2 ~/b/$RELEASE;"
+tell "Copying $RELEASE"
+rsync -aiv --delete $OSX_ADDR:~/b/$RELEASE ./b
+cd b
+tell "Archiving $RELEASE"
+tar -cjf $RELEASE.tar.bz2 $RELEASE
+mv $RELEASE.tar.bz2 $DST_DIR
 cd ..

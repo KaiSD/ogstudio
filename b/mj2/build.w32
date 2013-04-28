@@ -42,8 +42,10 @@ wine regedit $REG_FILE
 tell "Building MJIN2"
 mkdir -p $MJIN_BUILD_DIR
 cd $MJIN_BUILD_DIR
+pwd
 wine cmd /c "echo %PATH%"
-wine cmake -G "MinGW Makefiles" -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIRW $MJIN_SRC_DIRW
+echo "wine cmake -G \"MinGW Makefiles\" -DMINGW_DIR=$MINGW_DIRW -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIRW $MJIN_SRC_DIRW"
+wine cmake -G "MinGW Makefiles" -DMINGW_DIR=$MINGW_DIRW -DCMAKE_INSTALL_PREFIX=$MJ_BUILD_DIRW $MJIN_SRC_DIRW
 wine make install
 cd $CWD
 tell "Removing MJIN2 headers"

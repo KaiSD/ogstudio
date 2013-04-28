@@ -20,7 +20,7 @@ function setup
     fi
     # Download the specified version or
     # continue to download if it hasn't finished last time.
-    wget -c $url/$file
+    wget --max-redirect=50 -c $url/$file
     # Unpack $file archive.
     if [ ! -d $dir ]; then
         tell "Installing $dir"
@@ -33,4 +33,5 @@ source ~/jenkins.cfg
 setup $MINGW_FILE  MinGW  $URL
 setup $DARWIN_FILE Darwin $URL
 rsync -aiv --delete Darwin $OSX_ADDR:~
+rsync -aiv --delete mj2 $OSX_ADDR:~
 
