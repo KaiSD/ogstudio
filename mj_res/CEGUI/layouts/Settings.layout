@@ -136,6 +136,29 @@
                 <Property Name="Tooltip" Value="SETTINGS_DESC_UPDATE_CHECK" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.682,0},{0.495,0},{0.749,0}}" />
             </Window>
+            <Window Type="Vanilla/Checkbox" Name="Settings/OnLine" >
+                <Property Name="Text" Value="SETTINGS_ON_LINE" />
+                <Property Name="Tooltip" Value="SETTINGS_DESC_ON_LINE" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.749,0},{0.495,0},{0.816,0}}" />
+            </Window>
+            <Window Type="Vanilla/StaticText" Name="Settings/BoxOnLine" >
+                <Property Name="Tooltip" Value="SETTINGS_DESC_ON_LINE" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.816,0},{0.495,0},{0.941,0}}" />
+                <Window Type="Vanilla/StaticText" Name="Settings/OnLineLogin" >
+                    <Property Name="Text" Value="SETTINGS_ON_LINE_LOGIN" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_ON_LINE_LOGIN" />
+                    <Property Name="FrameEnabled" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.01,0},{0.5,0},{0.5,0}}" />
+                    <Property Name="BackgroundEnabled" Value="False" />
+                </Window>
+                <Window Type="Vanilla/StaticText" Name="Settings/OnLinePassword" >
+                    <Property Name="Text" Value="SETTINGS_ON_LINE_PASSWORD" />
+                    <Property Name="Tooltip" Value="SETTINGS_DESC_ON_LINE_PASSWORD" />
+                    <Property Name="FrameEnabled" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.51,0},{0.5,0},{0.99,0}}" />
+                    <Property Name="BackgroundEnabled" Value="False" />
+                </Window>
+            </Window>
             <Window Type="Vanilla/StaticText" Name="Settings/GameDesc" >
                 <Property Name="Tooltip" Value="SETTINGS_DESC_GAME" />
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
