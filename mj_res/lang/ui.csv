@@ -509,7 +509,19 @@ Tiempo: %s","शैली: %s
 "SETTINGS_DESC_DYNCAM","If enabled, camera is deflected slightly when you move the mouse around","Если включено, камера слегка отклоняется при движении мыши","Wenn aktiviert, neigt sich die Ansicht bei Bewegungen der Maus","Si activée, la caméra défléchit légèrement lorsque vous bougez la souris autour","Si esta habilitado, la cámara se mueve ligeramente cuando se mueve el ratón","अगर सुविधा ऑन है तो कैमरा माउस हिलने पर हल्का सा हिलता है |"
 "SETTINGS_DESC_DYNCAM_DEFLECTION","Camera deflection factor","Степень отклонения камеры","Neigungsfaktor der Ansicht","Faction de déflection de la caméra","Factor de movimiento de la cámara","कैमरा के हिलने का माप"
 "SETTINGS_DESC_FULLSCREEN","Use the whole screen for the game","Использовать весь экран для игры","Benutze den ganzen Bildschirm für das Spiel","Utiliser l'écran entier pour le jeu","Usa toda la pantalla para el videojuego","पूरी स्क्रीन को खेल के लिए उपयोग करे |"
-"SETTINGS_DESC_GAME","Game behaviour","Поведение игры","Spielverhalten","Comportement du jeu","Comportamiento del juego","खेल का व्यवहार"
+"SETTINGS_DESC_GAME","Game behaviour
+ 
+ATTENTION! Your on-line game login and password are stored in plain text in ""online"" file located in OGS Mahjong settings directory. Never share it with anyone. 
+ 
+[window='Settings/OpenSettingsDir']","Поведение игры
+ 
+ВНИМАНИЕ! Ваши логин и пароль он-лайн игры хранятся прямым текстом в файле ""online"", находящемся в директории настроек OGS Mahjong. Никогда никому его не давайте.
+ 
+[window='Settings/OpenSettingsDir']","Spielverhalten
+[window='Settings/OpenSettingsDir']","Comportement du jeu
+[window='Settings/OpenSettingsDir']","Comportamiento del juego
+[window='Settings/OpenSettingsDir']","खेल का व्यवहार
+[window='Settings/OpenSettingsDir']"
 "SETTINGS_DESC_GENERAL_VOLUME","General volume controls the volume of both sound effects and background music. If you disable it, the game will make no sound.","Общая громкость контролирует громкость как звуковых эффектов, так и фоновой музыки. Если вы выключите её, игра будет без звука.","Die Allgemeine Lautstärke regelt die Lautstärke sowohl der Soundeffekte als auch der Musik. Wenn Sie es deaktivieren, wird das Spiel keinen Sound ausgeben.","Le volume général contrôle le volume à la fois des effets sonores et de la musique de fond. Si vous le désactivez, le jeu ne produit aucun son.","Control general de volumen es de los dos efectos de sonido y música de fondo. Si la desactiva, el juego hará ningún sonido.","सामन्य आवाज़ के कंट्रोल्स आवाज़ सांभर और गीत दोनों की तीव्रता को सँभालते है| "
 "SETTINGS_DESC_GFX_QUALITY","Select desired quality instead of tweaking each video parameter. If you want to tweak everything manually, select Custom.","Выберите желаемое качество вместо настройки каждого видеопараметра. Если вы хотите настроить всё самостоятельно, выберите Настроить.","Wählen Sie eine Qualitätseinstellung, wenn Sie nicht jeden einzelnen Grafikparameter einstellen wollen. Wählen Sie Benutzerdefiniert, wenn Sie jede Einstellung selber vornehmen möchten.","Sélectionner la qualité désirée au lieu de régler chaque paramètre vidéo. Si vous voulez régler tout manuellement, sélectionnez Personnalisée.","Seleccione la calidad deseada en lugar de ajustar cada parámetro de video. Si desea ajustar todo manualmente, seleccione Personalizar.","हर एक माप को स्वयं बदले के लिए कस्टम चुने अथवा इनमे से एक श्रेणी को चुने |"
 "SETTINGS_DESC_HIGHLIGHT_LAYERS","Highlight layers of tiles to easier tell them apart","Подсвечивать слои фишек, чтобы легче различать их","Ebenen werden hervorgehoben, um einen besseren Überblick zu bekommen","Surligner les couches pour les distinguer plus facilement","Destacar las capas de fichas para hacer mas fácil apartarlas","टाइल्स की परतों को आसानी से पहचानने के लिए उन्हें चिह्नांकित करे |"
@@ -562,6 +574,7 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "SETTINGS_ON_LINE_LOGIN","Login:",,,,,
 "SETTINGS_ON_LINE_PASSWORD","Password:",,,,,
 "SETTINGS_ONLY_HORIZONTAL","Only horizontal","Только по горизонтали","Nur waagerecht","Horizontal seul","Solo horizontal","केवल क्षैतिज "
+"SETTINGS_OPEN_SETTINGS_DIR","Open settings directory","Открыть директорию настроек",,,,
 "SETTINGS_RES","Resolution:","Разрешение:","Auflösung:","Résolution :","Resolución:","रेसोल्यूशन :"
 "SETTINGS_RESTRICT_CAM_ROTATION","Restrict camera rotation","Ограничивать вращение камеры","Kameradrehung einschränken","Restreindre la rotation de la caméra","Restringir rotación de la cámara","कैमरे के घुमाव को बाधित करे  "
 "SETTINGS_SCENE","Scene:","Сцена:","Szene","Scène :","Escena:","दृश्य :"
@@ -580,6 +593,7 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "STATISTICS_GAME","Game","Игра","Spiel","Jeu","Juego","खेल "
 "STATISTICS_LAYOUT","Layout","Раскладка","Layout","Disposition","Capa","खाका"
 "STATISTICS_NAME","Name","Имя","Name","Nom","Nombre","नाम"
+"STATISTICS_ON_LINE_GAMES","On-line games","Сетевые партии",,,,
 "STATISTICS_SHISENSHO_G","Shisen-Sho g","Шисен-Сё г","Shisen-Sho g","Shisen-Sho g","Shisen-Sho g","शिसेन-सो जी"
 "TEXTURE_FILTERING_ANISOTROPIC","Anisotropic","Анизотропная","Anisotropisch","Anisotropique","Anisotropico","अनिसोत्रोपिक"
 "TEXTURE_FILTERING_BILINEAR","Bilinear","Билинейная","Bilinear","Bilinéaire","Bilineal","बिलिनेअर"

@@ -22,7 +22,11 @@
                 <Property Name="ForceVertScrollbar" Value="True" />
             </Window>
             <Window Type="Vanilla/MultiColumnList" Name="Statistics/MCL" >
-                <Property Name="UnifiedAreaRect" Value="{{0,0},{0.095,0},{1,0},{0.9,0}}" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0.195,0},{1,0},{0.9,0}}" />
+            </Window>
+            <Window Type="Vanilla/Checkbox" Name="Statistics/OnLineGames" >
+                <Property Name="Text" Value="STATISTICS_ON_LINE_GAMES" />
+                <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.089,0},{0.305,0},{0.156,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Statistics/OK" >
                 <Property Name="Text" Value="OK" />
