@@ -172,6 +172,10 @@
                 <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
                 <Property Name="VertFormatting" Value="TopAligned" />
                 <Property Name="UnifiedAreaRect" Value="{{0.505,0},{0.009,0},{0.995,0},{0.991,0}}" />
+                <Window Type="Vanilla/Button" Name="Settings/OpenSettingsDir" >
+                    <Property Name="Text" Value="SETTINGS_OPEN_SETTINGS_DIR" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0.01,0},{0.7,0},{0.07,0}" />
+                </Window>
             </Window>
         </Window>
         <Window Type="Vanilla/StaticText" Name="Settings/Themes" >
