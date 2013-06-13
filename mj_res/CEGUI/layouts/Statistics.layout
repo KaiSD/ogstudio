@@ -28,9 +28,17 @@
                 <Property Name="Text" Value="STATISTICS_ON_LINE_GAMES" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.089,0},{0.305,0},{0.156,0}}" />
             </Window>
+            <Window Type="Vanilla/Button" Name="Statistics/OnLineResultsPrevious" >
+                <Property Name="Text" Value="<" />
+                <Property Name="UnifiedAreaRect" Value="{{0.01,0},{0.915,0},{0.08,0},{0.985,0}}" />
+            </Window>
             <Window Type="Vanilla/Button" Name="Statistics/OK" >
                 <Property Name="Text" Value="OK" />
                 <Property Name="UnifiedAreaRect" Value="{{0.34,0},{0.915,0},{0.66,0},{0.985,0}}" />
+            </Window>
+            <Window Type="Vanilla/Button" Name="Statistics/OnLineResultsNext" >
+                <Property Name="Text" Value=">" />
+                <Property Name="UnifiedAreaRect" Value="{{0.91,0},{0.915,0},{0.99,0},{0.985,0}}" />
             </Window>
         </Window>
     </Window>
