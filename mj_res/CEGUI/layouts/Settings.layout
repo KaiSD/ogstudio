@@ -137,7 +137,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.682,0},{0.495,0},{0.749,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Settings/OnLine" >
-                <Property Name="Text" Value="SETTINGS_ON_LINE" />
+                <Property Name="Text" Value="ON_LINE_RATING" />
                 <Property Name="Tooltip" Value="SETTINGS_DESC_ON_LINE" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.749,0},{0.495,0},{0.816,0}}" />
             </Window>
