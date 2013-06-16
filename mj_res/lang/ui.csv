@@ -8,8 +8,8 @@
 "DESC_DESCRIPTION","Description:","Описание:","Beschreibung:","Description :","Descripción:","वर्णन :"
 "FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:","Entrer votre nom :","Introduce tu nombre:","अपना नाम लिखिए :"
 "FINISHED_ON_LINE_MSG_NONE",,,,,,
-"FINISHED_ON_LINE_MSG_READY","Your game has successfully been rated on-line.",,,,,"आपका खेल सफलता पूर्वक ऑनलाइन रेट कर दिया गया है | "
-"FINISHED_ON_LINE_MSG_WAITING","Please, wait while the server validates your game.",,,,,"कृपया सर्वर द्वारा आपके खेल प्रमाणित होने का इंतज़ार कीजिये |"
+"FINISHED_ON_LINE_MSG_READY","Your game has successfully been rated on-line.","Ваша игра была успешно занесена в общий список он-лайн.",,,,"आपका खेल सफलता पूर्वक ऑनलाइन रेट कर दिया गया है | "
+"FINISHED_ON_LINE_MSG_WAITING","Please, wait while the server validates your game.","Пожалуйста, подождите, пока сервер подтверждает вашу игру.",,,,"कृपया सर्वर द्वारा आपके खेल प्रमाणित होने का इंतज़ार कीजिये |"
 "FINISHED_TITLE_VICTORY","Victory","Победа","Sieg","Victoire","Victoria","जीत"
 "FINISHED_TITLE_LOSS","Loss","Поражение","Niederlage","Perdu","Derrota","हार"
 "GAME_CANNOT_LOAD_LAST_LAYOUT","The layout you've played last time can no longer be found. Another one was used instead.","Раскладка, в которую вы играли в предыдущий раз, не найдена. Другая была использована взамен.","Das beim letzten Mal verwendete Layout kann nicht mehr gefunden werden. Stattdessen wurde ein anderes benutzt.","La disposition jouée la dernière fois est introuvable. Une autre a été utilisée à  la place.","La capa con la que has jugado la última vez no ha sido encontrada. Otra se utilizó una vez.","जो खाका आपने पिछली बार खेला था वह उपलभ्द नहीं है कृपया कोई और चुने"
@@ -593,6 +593,7 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "STATISTICS_GAME","Game","Игра","Spiel","Jeu","Juego","खेल "
 "STATISTICS_LAYOUT","Layout","Раскладка","Layout","Disposition","Capa","खाका"
 "STATISTICS_NAME","Name","Имя","Name","Nom","Nombre","नाम"
+"STATISTICS_ON_LINE_FIND_MYSELF","Find myself","Найти меня",,,,
 "STATISTICS_ON_LINE_GAMES","On-line games","Сетевые партии",,,,
 "STATISTICS_ON_LINE_GAMES_LOADING","Loading","Загрузка",,,,
 "STATISTICS_SHISENSHO_G","Shisen-Sho g","Шисен-Сё г","Shisen-Sho g","Shisen-Sho g","Shisen-Sho g","शिसेन-सो जी"
