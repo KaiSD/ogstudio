@@ -25,7 +25,7 @@
                 <Property Name="UnifiedAreaRect" Value="{{0,0},{0.195,0},{1,0},{0.9,0}}" />
             </Window>
             <Window Type="Vanilla/Checkbox" Name="Statistics/OnLineGames" >
-                <Property Name="Text" Value="ON_LINE_RATING" />
+                <Property Name="Text" Value="ONLINE_SCORING" />
                 <Property Name="UnifiedAreaRect" Value="{{0.005,0},{0.089,0},{0.305,0},{0.156,0}}" />
             </Window>
             <Window Type="Vanilla/Button" Name="Statistics/OnLineResultsPrevious" >
