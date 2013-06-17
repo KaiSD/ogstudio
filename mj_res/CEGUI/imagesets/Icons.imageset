@@ -7,6 +7,7 @@
     <Image Name="New44" XPos="1" YPos="226" Width="44" Height="44" />
     <Image Name="Back32" XPos="46" YPos="199" Width="32" Height="32" />
     <Image Name="Back44" XPos="1" YPos="181" Width="44" Height="44" />
+    <Image Name="Globe32" XPos="46" YPos="496" Width="32" Height="32" />
     <Image Name="Hint32" XPos="46" YPos="67" Width="32" Height="32" />
     <Image Name="Hint44" XPos="1" YPos="136" Width="44" Height="44" />
     <Image Name="Load32" XPos="46" YPos="430" Width="32" Height="32" />
