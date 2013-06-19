@@ -604,6 +604,7 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "STATISTICS_LAYOUT","Layout","Раскладка","Layout","Disposition","Capa","खाका"
 "STATISTICS_NAME","Name","Имя","Name","Nom","Nombre","नाम"
 "STATISTICS_ONLINE_FIND_MYSELF","Find myself","Найти меня","Mich finden",,,
+"STATISTICS_ONLINE_NO_LOGIN","No login provided (Settings > Game tab)","Не указан логин (Настройки > вкладка Игра)",,,,
 "STATISTICS_SHISENSHO_G","Shisen-Sho g","Шисен-Сё г","Shisen-Sho g","Shisen-Sho g","Shisen-Sho g","शिसेन-सो जी"
 "TEXTURE_FILTERING_ANISOTROPIC","Anisotropic","Анизотропная","Anisotropisch","Anisotropique","Anisotropico","अनिसोत्रोपिक"
 "TEXTURE_FILTERING_BILINEAR","Bilinear","Билинейная","Bilinear","Bilinéaire","Bilineal","बिलिनेअर"
