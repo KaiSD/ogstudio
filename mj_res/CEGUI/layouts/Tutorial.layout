@@ -6,18 +6,15 @@
         <Property Name="AlwaysOnTop" Value="True" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
-        <Window Type="Vanilla/StaticText" Name="Tutorial/DynCam" >
+        <Window Type="Vanilla/StaticText" Name="Tutorial/Question" >
             <Property Name="AlwaysOnTop" Value="True" />
             <Property Name="Visible" Value="False" />
-            <Property Name="Text" Value="TUTORIAL_DYNCAM" />
             <Property Name="HorzFormatting" Value="WordWrapCentred" />
             <Property Name="UnifiedAreaRect" Value="{{0.1,0},{0.5,-200},{0.9,0},{0.5,200}}" />
-            <Window Type="Vanilla/Button" Name="Tutorial/LeaveEnabled" >
-                <Property Name="Text" Value="TUTORIAL_DYNCAM_LEAVE_ENABLED" />
+            <Window Type="Vanilla/Button" Name="Tutorial/QuestionYes" >
                 <Property Name="UnifiedAreaRect" Value="{{0,5},{0.85,0},{0.45,0},{1,-5}}" />
             </Window>
-            <Window Type="Vanilla/Button" Name="Tutorial/Disable" >
-                <Property Name="Text" Value="TUTORIAL_DYNCAM_DISABLE" />
+            <Window Type="Vanilla/Button" Name="Tutorial/QuestionNo" >
                 <Property Name="UnifiedAreaRect" Value="{{0.55,0},{0.85,0},{1,-5},{1,-5}}" />
             </Window>
         </Window>
