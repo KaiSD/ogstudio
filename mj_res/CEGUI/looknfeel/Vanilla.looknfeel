@@ -204,7 +204,7 @@
         <StateImagery name="Normal">
             <Layer>
                 <Section look="Vanilla/Shared" section="Frame" controlProperty="UseStandardImagery" >
-                    <Colours topLeft="FF7F7F7F" topRight="FF7F7F7F" bottomLeft="FF7F7F7F" bottomRight="FF7F7F7F" />
+                    <Colours topLeft="ff8e94a2" topRight="ff8e94a2" bottomLeft="ff8e94a2" bottomRight="ff1e2432" />
                 </Section>
                 <Section section="normal_image" />
                 <Section section="label">
