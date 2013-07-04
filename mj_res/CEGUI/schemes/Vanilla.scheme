@@ -2,9 +2,8 @@
 <GUIScheme Name="Vanilla">
 	<Imageset Filename="Vanilla.imageset" />
     <Font Filename="Large.font" />
-    <Font Filename="Medium.font" />
+    <Font Filename="LargeHindi.font" />
     <Font Filename="Small.font" />
-    <Font Filename="Tiny.font" />
 	<LookNFeel Filename="Vanilla.looknfeel" />
 	<WindowRendererSet Filename="CEGUIFalagardWRBase" />
 	<FalagardMapping WindowType="Vanilla/Titlebar" TargetType="CEGUI/Titlebar" Renderer="Falagard/Titlebar" LookNFeel="Vanilla/Titlebar" />

@@ -6,7 +6,6 @@
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
         <Property Name="MousePassThroughEnabled" Value="True" />
         <Window Type="Vanilla/StaticText" Name="Debug/Stats" >
-            <Property Name="Font" Value="Tiny" />
             <Property Name="Text" Value="Stats" />
             <Property Name="TextColours" Value="tl:FF000000 tr:FF000000 bl:FF000000 br:FF000000" />
             <Property Name="FrameEnabled" Value="False" />

@@ -11,7 +11,6 @@
             <Property Name="BackgroundEnabled" Value="False" />
             <Property Name="VertFormatting" Value="BottomAligned" />
             <Property Name="HorzFormatting" Value="HorzCentred" />
-            <Property Name="Font" Value="Large" />
         </Window>
         <Window Type="Vanilla/StaticText" Name="Finished/OnLine" >
             <Window Type="Vanilla/StaticText" Name="Finished/Loading" >
