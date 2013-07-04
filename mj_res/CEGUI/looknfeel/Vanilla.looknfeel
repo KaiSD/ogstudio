@@ -861,6 +861,14 @@
     </WidgetLook>
 
     <WidgetLook name="Vanilla/StaticText">
+        <AnimationDefinition name="AnimationLoading" duration="1" replayMode="infinite">
+            <Affector property="ZRotation" interpolator="float">
+                <KeyFrame position="0.0" value="0.0" />
+                <KeyFrame position="1.0" value="360.0" />
+            </Affector>
+            <Subscription event="AnimationLoadingStart" action="Start" />
+            <Subscription event="AnimationLoadingStop"  action="Stop" />
+        </AnimationDefinition>
         <PropertyDefinition name="TextID" initialValue="" redrawOnWrite="true" />
         <PropertyDefinition name="TooltipID" initialValue="" redrawOnWrite="true" />
         <Property name="BackgroundEnabled" value="True" />

@@ -4,6 +4,7 @@
     <Window Type="DefaultWindow" Name="Load" >
         <Property Name="Alpha" Value="0.7" />
         <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property Name="Visible" Value="False" />
         <Window Type="Vanilla/StaticText" Name="Load/Window" >
             <Property Name="HorzFormatting" Value="HorzCentred" />
             <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
