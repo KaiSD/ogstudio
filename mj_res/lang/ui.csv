@@ -8,7 +8,7 @@
 "DESC_DESCRIPTION","Description:","Описание:","Beschreibung:","Description :","Descripción:","वर्णन :"
 "FINISHED_ENTER_YOUR_NAME","Enter your name:","Введите своё имя:","Geben Sie Ihren Namen ein:","Entrer votre nom :","Introduce tu nombre:","अपना नाम लिखिए :"
 "FINISHED_ONLINE_MSG_NONE",,,,,,
-"FINISHED_ONLINE_MSG_READY","Your game has been successfully submitted.","Ваша игра была успешно добавлена в сетевой рейтинг.","Bitte warten Sie, bis der Server das Spiel geprüft hat.","Votre jeu a été soumis avec succès.","Tu partida ha sido correctamente enviada.","आपका खेल सफलता पूर्वक ऑनलाइन रेट कर दिया गया है | "
+"FINISHED_ONLINE_MSG_READY","Your game has been successfully submitted.","Ваша игра была успешно добавлена в сетевой рейтинг.","Bitte warten Sie, bis der Server das Spiel geprüft hat.","Votre jeu a été soumis avec succès.","Tu partida ha sido correctamente enviada.","अपने खेल सफलतापूर्वक प्रस्तुत किया गया है |"
 "FINISHED_ONLINE_MSG_WAITING","Please, wait while the server validates your game.","Пожалуйста, подождите, пока сервер подтверждает вашу игру.","Ihr spiel wurde erfolgreich übertragen.","S’il vous plaît, patientez pendant que le serveur valide votre jeu.","Por favor, espera a que el servidor valide tu juego.","कृपया सर्वर द्वारा आपके खेल प्रमाणित होने का इंतज़ार कीजिये |"
 "FINISHED_TITLE_VICTORY","Victory","Победа","Sieg","Victoire","Victoria","जीत"
 "FINISHED_TITLE_LOSS","Loss","Поражение","Niederlage","Perdu","Derrota","हार"
@@ -344,12 +344,13 @@ Jürgen Rauscher - Traducción al Aleman.
 Dirk Pervölz - Traducción al Aleman.
 Miguel de Dios - Traducción al Español.
 Stefan Stammberger - Traducción al Aleman.
-Thierry Delaunay - Traducción al Francés.","एकतेरिना कम्शिलिना - जर्मन अनुवाद |
-जुरगेन रौस्चेर - जर्मन अनुवाद को सही करा |
-डर्क पेर्वोल्ज़ - क्गेर्मन अनुवाद को सही करा |
-थिएर्र्य देलौने -फ्रेंच अनुवाद |
-निगुएल दे दिओस - स्पेनिश अनुवाद |
-अभिजीत पोखरियाल - हिंदी अनुवाद |"
+Thierry Delaunay - Traducción al Francés.","अभिजीत पोखरियाल - हिंदी अनुवाद |
+Ekaterina Kamshilina - जर्मन अनुवाद |
+Jürgen Rauscher - जर्मन अनुवाद |
+Dirk Pervölz - जर्मन अनुवाद |
+Miguel de Dios - स्पेनिश अनुवाद |
+Stefan Stammberger - जर्मन अनुवाद |
+Thierry Delaunay - फ्रेंच अनुवाद |"
 "INFO_THIRD_PARTIES","Third parties","Третьи стороны","Software von Drittanbietern","Tierces parties","Terceras librerías","थर्ड पार्टी"
 "INFO_THIRD_PARTIES_LIBRARIES","    Libraries","    Библиотеки","    Bibliotheken","    Bibliothèques","    Librerías","    लाइब्रेरीज़"
 "INFO_THIRD_PARTIES_LIBRARIES_TXT","[image='set:Logos image:OGRE']
@@ -501,14 +502,14 @@ Tiempo: %s","शैली: %s
 अनडू : %s
 समय: %s"
 "LOAD_LOAD","Load","Загрузить","Laden","Charger","Cargar","पुराना खेल"
-"LOADING","Loading","Загрузка","Lade","Chargement","Cargando",
+"LOADING","Loading","Загрузка","Lade","Chargement","Cargando","लदान"
 "NO","No","Нет","Nein","Non","No","नहीं"
 "NO_DESC","No description","Нет описания","Keine Beschreibung","Pas de description","Sin descripción","कोई जानकारी नहीं"
 "OK","OK","OK","OK","OK","OK","OK"
 "ONLINE_INVALID_DIFFICULTY","The server does not support such game difficulty.","Сервер не поддерживат такую игровую сложность.","Der Server unterstützt den gewählten Schwierigkeitsgrad nicht.","Le serveur ne supporte pas une telle difficulté de jeu.","El servidor no soporta partidas de tanta dificultad.","यह सर्वर आपके स्तर की कठनाई वाला नहीं है"
 "ONLINE_INVALID_LAYOUT","The server does not support such game layout.","Сервер не поддерживат такую игровую раскладку.","Der Server unterstützt das gewählte Layout nicht.","Le serveur ne supporte pas une telle disposition de jeu.","El servidor no soporta partidas con esa capa.","यह सर्वर इस खाका वाला नहीं है|"
 "ONLINE_INVALID_TYPE","The server does not support such game type.","Сервер не поддерживат такой тип игры.","Der Server unterstützt den gewählten Spieltyp nicht.","Le serveur ne supporte pas un tel type de jeu.","El servidor no soporta partidas de ese tipo.","यह सर्वर इस खेल की शैली वाला नहीं है |"
-"ONLINE_SCORING","Online scoring","Сетевой рейтинг","Online Highscores.","Score en ligne.","Puntuaciones online",
+"ONLINE_SCORING","Online scoring","Сетевой рейтинг","Online Highscores.","Score en ligne.","Puntuaciones online","ऑनलाइन स्कोरिंग"
 "SAVE_GAME_BEFORE_EXIT","Do you want to save the game before exit?","Сохранить игру перед выходом?","Wollen Sie das Spiel vor dem Beenden speichern?","Voulez-vous sauvegarder le jeu avant de quitter ?","¿Quiere salvar antes de salir?","क्या आप निकास से पहले खेल को संचित करना चाहते है |"
 "SETTINGS_ANTIALIASING","Anti-aliasing:","Сглаживание:","Anti-Aliasing:","Anti-aliasing :","Anti-aliasing:","एंटी-एलिएसिंग"
 "SETTINGS_AUDIO","Audio","Аудио","Audio","Audio","Sonido","आवाज़"
@@ -542,6 +543,9 @@ ATTENTION ! Le nom d’utilisateur et le mot de passe du score en ligne sont sto
 ¡Cuidado! El usuario y password de las puntuaciones online  se guarda en un fichero sin codificar en el directorio de OGS Mahjong. Nunca lo comparta con nadie.
  
 [window='Settings/OpenSettingsDir']","खेल का व्यवहार
+ 
+सावधान! ऑनलाइन स्कोरिंग लॉगिन और पासवर्ड OGS महजोंग सेटिंग्स निर्देशिका में स्थित ""ऑनलाइन"" फाइल में सादे पाठ में संग्रहीत हैं. किसी के साथ साझा न करें.
+ 
 [window='Settings/OpenSettingsDir']"
 "SETTINGS_DESC_GENERAL_VOLUME","General volume controls the volume of both sound effects and background music. If you disable it, the game will make no sound.","Общая громкость контролирует громкость как звуковых эффектов, так и фоновой музыки. Если вы выключите её, игра будет без звука.","Die Allgemeine Lautstärke regelt die Lautstärke sowohl der Soundeffekte als auch der Musik. Wenn Sie es deaktivieren, wird das Spiel keinen Sound ausgeben.","Le volume général contrôle le volume à la fois des effets sonores et de la musique de fond. Si vous le désactivez, le jeu ne produit aucun son.","Control general de volumen es de los dos efectos de sonido y música de fondo. Si la desactiva, el juego hará ningún sonido.","सामन्य आवाज़ के कंट्रोल्स आवाज़ सांभर और गीत दोनों की तीव्रता को सँभालते है| "
 "SETTINGS_DESC_GFX_QUALITY","Select desired quality instead of tweaking each video parameter. If you want to tweak everything manually, select Custom.","Выберите желаемое качество вместо настройки каждого видеопараметра. Если вы хотите настроить всё самостоятельно, выберите Настроить.","Wählen Sie eine Qualitätseinstellung, wenn Sie nicht jeden einzelnen Grafikparameter einstellen wollen. Wählen Sie Benutzerdefiniert, wenn Sie jede Einstellung selber vornehmen möchten.","Sélectionner la qualité désirée au lieu de régler chaque paramètre vidéo. Si vous voulez régler tout manuellement, sélectionnez Personnalisée.","Seleccione la calidad deseada en lugar de ajustar cada parámetro de video. Si desea ajustar todo manualmente, seleccione Personalizar.","हर एक माप को स्वयं बदले के लिए कस्टम चुने अथवा इनमे से एक श्रेणी को चुने |"
@@ -550,7 +554,7 @@ ATTENTION ! Le nom d’utilisateur et le mot de passe du score en ligne sont sto
 "SETTINGS_DESC_MOUSE_SENSITIVITY","The higher the sensitivity, the faster the mouse moves","Чем выше чувствительность, тем быстрее двигается мышь","Je höher die Sensitivität, desto schneller wird sich die Maus bewegen","Plus la sensibilité est haute, plus vite la souris se déplace","Cuanto mayor sea la sensibilidad, más rápido se mueve el ratón","जितनी ज्यादा संवेदनशीलता उतनी तेज़ी से माउस चलेगा"
 "SETTINGS_DESC_MUSIC_PACKS","Music packs contain various groups of music tracks. If you disable them all, there will be no background music.","Музыкальные группы содержат разные комбинации музыкальных дорожек. Если вы выключите их все, фоновой музыки не будет.","Musikpakete enthalten verschiedene Gruppen von Musikstücken. Wenn Sie alle deaktivieren, wird keine Hintergrundmusik ausgegeben.","Les packs de musique contiennent différents groupes de pistes musicales. Si vous les désactivez tous, il n'y aura pas de musique de fond.","Los paquetes de música contienen varios grupos de pistas de música. Si desactivarlos todos, no habrá música de fondo.","गीत माला में भिन्न प्रकार के गीत है | अगर आप सबको बंद कर देंगे तो कोई गीत नहीं बजेगा |"
 "SETTINGS_DESC_MUSIC_VOLUME","Background music volume","Громкость фоновой музыки","Lautstärke Hintergrundmusik","Volume de la musique de fond","Volumen de la música de fondo","गीतों की तीव्रता "
-"SETTINGS_DESC_ONLINE","When you play an online scored game your result is available in the global scoring table.","В случае игры с сетевым рейтингом ваш результат доступен в глобальном рейтинге.","Wenn Sie ein bewertetes Online-Spiel spielen, wird Ihr Highscore weltweit online einsehbar sein.","Lorsque vous jouez à un jeu avec score en ligne, votre résultat est disponible dans le tableau global des scores.","Cuando juegas una partida con las puntuaciones online, tu resultado de la partida estará en la tabla de puntuaciones global.",
+"SETTINGS_DESC_ONLINE","When you play an online scored game your result is available in the global scoring table.","В случае игры с сетевым рейтингом ваш результат доступен в глобальном рейтинге.","Wenn Sie ein bewertetes Online-Spiel spielen, wird Ihr Highscore weltweit online einsehbar sein.","Lorsque vous jouez à un jeu avec score en ligne, votre résultat est disponible dans le tableau global des scores.","Cuando juegas una partida con las puntuaciones online, tu resultado de la partida estará en la tabla de puntuaciones global.","यदि आप एक ऑनलाइन रन बनाए खेल खेलने के अपने परिणाम वैश्विक स्कोरिंग तालिका में उपलब्ध है."
 "SETTINGS_DESC_ONLY_HORIZONTAL","Horizontal deflection only","Отклонение лишь по горизонтали","Nur horizontale Neigung","Déflection horizontale seulement","Movimiento horizontal sólo","केवल क्षैतिज झुकाव "
 "SETTINGS_DESC_RES","Game window resolution. Contains several standard resolutions and current one on the last line if it differs from standard ones. Try to resize the window and you'll see it changing.","Разрешение окна игры. Содержит несколько стандартных разрешений и текущее на последней строке, если оно отличается от стандартных. Попробуйте изменить размер окна и увидите, как оно меняется.","Größe des Spielfensters. Enthält diverse Standardgrößen und die aktuelle Fenstergröße als letzte Linie (wenn es keine Standardgröße ist). Versuchen Sie, die Fenstergröße zu ändern und Sie werden die Änderung sehen.","Résolution de la fenêtre de jeu. Contient différentes résolutions standards et celle courante sur la dernière ligne si elle différère de celles standards. Essayez de redimensionner la fenêtre et vous la verrez changer.","Resolución de la ventana del juego. Contiene varias resoluciones estándar y una corriente en la última línea, si es distinto de los estándar. Trate de cambiar el tamaño de la ventana y vera que cambia.","खेल विंडो की रेसोल्यूशन | इसमें कई मान्य रेसोल्यूशन है और अगर अभी वाली रेसोलुतिओं मान्य नहीं है तो वेह आखरी पंक्ति में मौजूद है| विंडो का आकर बदलते ही आपको अंतर दिख जायेगा|"
 "SETTINGS_DESC_RESTRICT_CAM_ROTATION","When restricted, camera is only allowed to move in a range that is most suitable for playing. However, if you want to look around, you can remove the restriction and rotate freely.","При ограничении камере дозволено двигаться лишь в пределах, наиболее удобных для игры. Тем не менее, если вы хотите осмотреться вокруг, можете убрать ограничение и вращать камеру свободно.","Wenn begrenzt, ist die Spielansicht auf einen Bereich begrenzt, der optimal für das Spielen ist. Wenn Sie sich umschauen wollen, können Sie diese Begrenzung herausnehmen und die Ansicht damit frei auswählen.","Quand elle est restreinte, la caméra est seulement autorisée à se déplacer dans une étendue qui est davantage conçue pour le jeu. Toutefois, si vous voulez voir autour, vous pouvez enlever la restriction et pivoter librement.","Cuando esta restringido, la cámara sólo puede moverse en un rango que es el más adecuado para la reproducción. Sin embargo, si usted quiere mirar a su alrededor, se puede quitar la restricción y girar libremente.","जब कैमरे पर रोक लगी हो तो वह केवल उतना ही हिलेगा जितने में खेल खेलने में आसानी हो |पर अगर आप चाहे तो यह रोक हटा सकते है |"
@@ -591,10 +595,10 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "SETTINGS_MOUSE_SENSITIVITY","Mouse sensitivity:","Чувствительность мыши:","Maus-Empfindlichkeit:","Sensibilité de la souris :","Sensibilidad del ratón:","माउस की संवेदनशीलता :"
 "SETTINGS_MUSIC_PACKS","Music packs:","Музыкальные группы:","Musik-Pakete:","Packs de musique :","Paquetes de música:","गीत माला :"
 "SETTINGS_MUSIC_VOLUME","Music volume:","Громкость музыки:","Musik-Lautstärke:","Volume de la musique :","Volumen de la música:","गीतों की तीव्रता :"
-"SETTINGS_ONLINE_LOGIN","Login:","Логин:","Login:","Utilisateur :","Usuario:",
-"SETTINGS_ONLINE_PASSWORD","Password:","Пароль:","Passwort:","Mot de passe :","Contraseña:",
+"SETTINGS_ONLINE_LOGIN","Login:","Логин:","Login:","Utilisateur :","Usuario:","लॉगिन :"
+"SETTINGS_ONLINE_PASSWORD","Password:","Пароль:","Passwort:","Mot de passe :","Contraseña:","पासवर्ड :"
 "SETTINGS_ONLY_HORIZONTAL","Only horizontal","Только по горизонтали","Nur waagerecht","Horizontal seul","Solo horizontal","केवल क्षैतिज "
-"SETTINGS_OPEN_SETTINGS_DIR","Open settings directory","Открыть директорию настроек","Einstellungsordner öffnen","Ouvrir le dossier des paramètres","Abrir el directorio de configuraciones",
+"SETTINGS_OPEN_SETTINGS_DIR","Open settings directory","Открыть директорию настроек","Einstellungsordner öffnen","Ouvrir le dossier des paramètres","Abrir el directorio de configuraciones","ओपन सेटिंग्स निर्देशिका"
 "SETTINGS_RES","Resolution:","Разрешение:","Auflösung:","Résolution :","Resolución:","रेसोल्यूशन :"
 "SETTINGS_RESTRICT_CAM_ROTATION","Restrict camera rotation","Ограничивать вращение камеры","Kameradrehung einschränken","Restreindre la rotation de la caméra","Restringir rotación de la cámara","कैमरे के घुमाव को बाधित करे  "
 "SETTINGS_SCENE","Scene:","Сцена:","Szene","Scène :","Escena:","दृश्य :"
@@ -613,8 +617,8 @@ Si la configuración de vídeo no fueron seleccionados adecuadamente la primera 
 "STATISTICS_GAME","Game","Игра","Spiel","Jeu","Juego","खेल "
 "STATISTICS_LAYOUT","Layout","Раскладка","Layout","Disposition","Capa","खाका"
 "STATISTICS_NAME","Name","Имя","Name","Nom","Nombre","नाम"
-"STATISTICS_ONLINE_FIND_MYSELF","Find myself","Найти меня","Mich finden","Trouver moi-même","Buscame",
-"STATISTICS_ONLINE_NO_LOGIN","No login provided (Settings > Game tab)","Не указан логин (Настройки > вкладка Игра)","Keine Benutzerdaten eingegeben (Einstellungen > Spiel Reiter)","Pas de nom d’utilisateur fourni (Paramètres > Onglet Jeu)","No se proporcionó usuario (Configuración > Pestaña Partida)",
+"STATISTICS_ONLINE_FIND_MYSELF","Find myself","Найти меня","Mich finden","Trouver moi-même","Buscame","अपने आप को खोजें"
+"STATISTICS_ONLINE_NO_LOGIN","No login provided (Settings > Game tab)","Не указан логин (Настройки > вкладка Игра)","Keine Benutzerdaten eingegeben (Einstellungen > Spiel Reiter)","Pas de nom d’utilisateur fourni (Paramètres > Onglet Jeu)","No se proporcionó usuario (Configuración > Pestaña Partida)","कोई प्रवेश प्रदान की (सेटिंग्स> खेल टैब)"
 "STATISTICS_SHISENSHO_G","Shisen-Sho g","Шисен-Сё г","Shisen-Sho g","Shisen-Sho g","Shisen-Sho g","शिसेन-सो जी"
 "TEXTURE_FILTERING_ANISOTROPIC","Anisotropic","Анизотропная","Anisotropisch","Anisotropique","Anisotropico","अनिसोत्रोपिक"
 "TEXTURE_FILTERING_BILINEAR","Bilinear","Билинейная","Bilinear","Bilinéaire","Bilineal","बिलिनेअर"
@@ -734,7 +738,11 @@ Voulez-vous vous rendre sur le site web pour l’enregistrement et dans les Para
  
 Necesitas registrarte en la web para ser capaz de subir tus puntuaciones online, y es necesario activarlo en las opciones.
  
-¿Quiéres ir a la web para el registro y en las opciones activar las puntuaciones online?",
+¿Quiéres ir a la web para el registro y en las opciones activar las puntuaciones online?","ऑनलाइन रन बनाए खेल अब समर्थित है
+
+आप एक ऑनलाइन रन बनाए खेल खेलते हैं और सेटिंग्स में यह सक्षम करने के लिए सक्षम होने के लिए वेबसाइट पर रजिस्टर करना होगा.
+
+आप ऑनलाइन स्कोरिंग सक्षम करने के लिए पंजीकरण के लिए वेबसाइट के लिए और सेटिंग्स के लिए जाना चाहते हो?"
 "TUTORIAL_SURVEY","Survey
  
 You're using a testing version of OGS Mahjong. It's incomplete and can be unstable. Would you like to participate in a survey to help us make the game better?","Опрос
