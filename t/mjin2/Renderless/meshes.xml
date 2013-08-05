@@ -1,0 +1,5 @@
+<Scene>
+    <!--<Mesh Name="Table" Mesh="meshes/TableSpace.osgt" Texture="textures/center.png" CastShadows="true" />-->
+    <Mesh Name="Table" Mesh="meshes/Table.osgt" Texture="textures/interior.png" CastShadows="true" />
+    <Mesh Name="Room"  Mesh="meshes/Room.osgt"  Texture="textures/interior.png" CastShadows="false" />
+</Scene>

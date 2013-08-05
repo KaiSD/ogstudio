@@ -18,7 +18,5 @@
             <!--<Position x="-10" y="-40" z="15"  w="1" />-->
         </Light>
     </Player>
-    <!--<Mesh Name="Table" Mesh="meshes/TableSpace.osgt" Texture="textures/center.png" CastShadows="true" />-->
-    <Mesh Name="Table" Mesh="meshes/Table.osgt" Texture="textures/interior.png" CastShadows="true" />
-    <Mesh Name="Room"  Mesh="meshes/Room.osgt"  Texture="textures/interior.png" CastShadows="false" />
+    <Scene>meshes.xml</Scene>
 </Scene>
