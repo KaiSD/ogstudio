@@ -1,4 +1,4 @@
 <translations>
-    <t id="CANCEL">Отмена</t>
-    <t id="APPLY">Применить</t>
+    <tr id="CANCEL">Отмена</tr>
+    <tr id="APPLY">Применить</tr>
 </translations>

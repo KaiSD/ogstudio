@@ -1,4 +1,4 @@
 <translations>
-    <t id="CANCEL">Cancel</t>
-    <t id="APPLY">Apply</t>
+    <tr id="CANCEL">Cancel</tr>
+    <tr id="APPLY">Apply</tr>
 </translations>
