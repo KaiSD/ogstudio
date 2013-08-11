@@ -4,19 +4,22 @@ Name[ru]=Петля
 Name[de]=Masche
 Name[fr]=Fils
 Name[es]=Malla
+Name[hi]=जाली
 
 Description=An interweaved structure made up of Mahjongg tiles
 Description[ru]=Плетёная структура из фишек Маджонг
 Description[de]=Eine verflochtene Struktur aus Mahjongg-Spielsteinen.
 Description[fr]=Une structure emmélée de tuiles Mahjongg
 Description[es]=Una estructura entretejida hecha de fichas de Mahjongg
+Description[hi]=एक बुनी हुई जाली जो मह्जंग टाइल्स से बनी हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=mesh.layout.layout
+FileName=mesh.layout
 AuthorEmail=kde-games-devel@kde.org

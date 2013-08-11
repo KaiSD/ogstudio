@@ -4,19 +4,22 @@ Name[ru]=Вихрь
 Name[de]=Wirbel
 Name[fr]=Tourbillon
 Name[es]=Remolino
+Name[hi]=छल्ला
 
 Description=A spiral with thick ends
 Description[ru]=Спираль с толстыми окончаниями
 Description[de]=Eine Spirale mit dicken Enden.
 Description[fr]=Une spirale avec des extrémités élargies
 Description[es]=Una espiral con puntas gruesas
+Description[hi]=एक घुमावदार आकार जिसके मोटे कोने हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=swirl.layout.layout
+FileName=swirl.layout
 AuthorEmail=kde-games-devel@kde.org

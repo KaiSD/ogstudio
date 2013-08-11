@@ -4,19 +4,22 @@ Name[ru]=Vi
 Name[de]=Vi
 Name[fr]=V
 Name[es]=Uve
+Name[hi]=Vi
 
 Description=A V-shaped layout with thick lower corners
 Description[ru]=V-образная раскладка с толстыми краями внизу
 Description[de]=Ein V-förmiges Design mit dicken unteren Ecken.
 Description[fr]=La forme d'un V avec des bords élargis en bas
 Description[es]=Un diseño en forma de V con gruesos ángulos inferiores
+Description[hi]=v  आकार की मोटे निचले कोने  वाली खाका 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=Vi.layout.layout
+FileName=Vi.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,18 +4,21 @@ Name[ru]=Комната
 Name[de]=Raum
 Name[fr]=Pièce
 Name[es]=Habitación
+Name[hi]=कमरा 
 
 Description=Chinese room with a table for Mahjong
 Description[ru]=Китайская комната со столом для Маджонга
 Description[de]=Chinesischer Raum mit einem Tisch für Mahjong
 Description[fr]=Pièce chinoise avec une table de Mahjong
 Description[es]=Habitación china con una mesa de Mahjong
+Description[hi]=चीनी कमरे में रखी महजोंग के लिए एक मेज़ 
 
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
 Author[de]=Das Team von Open Source Game Studio
 Author[fr]=Equipe de Opensource Game Studio
 Author[es]=Equipo de Opensource Game Studio
+Author[hi]=ओपन सोर्स गेम्स स्टूडियो टीम
 
 
-AuthorEmail=main@opengamestudio.org
+AuthorEmail=bugs@opengamestudio.org

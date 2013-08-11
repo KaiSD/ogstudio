@@ -4,19 +4,22 @@ Name[ru]=Ракета
 Name[de]=Rakete
 Name[fr]=Missile
 Name[es]=Cohete
+Name[hi]=बाण हवाई
 
 Description=A rocket for you to launch off the board
 Description[ru]=Можно запустить ракету с доски
 Description[de]=Eine Rakete, die das Spielfeld verlassen möchte.
 Description[fr]=Une roquette à envoyer hors du plateau
 Description[es]=Un cohete para lanzar desde el tablero
+Description[hi]=एक हवा में जाता बाण हवाई
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=rocket.layout.layout
+FileName=rocket.layout
 AuthorEmail=kde-games-devel@kde.org

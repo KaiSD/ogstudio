@@ -4,19 +4,22 @@ Name[ru]=Сетка
 Name[de]=Gitter
 Name[fr]=Grille
 Name[es]=Rejilla
+Name[hi]=जाल
 
 Description=A rectangular grid of varying height
 Description[ru]=Прямоугольная сетка различной высоты
 Description[de]=Ein rechteckiges Gitter unterschiedlicher Höhe.
 Description[fr]=Une grille rectangulaire d'une hauteur variable
 Description[es]=Una rejilla rectangular de altura variable
+Description[hi]=भिन्न उचाई वाला एक समकोण चतुर्भुज
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=grid.layout.layout
+FileName=grid.layout
 AuthorEmail=kde-games-devel@kde.org

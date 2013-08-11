@@ -4,19 +4,22 @@ Name[ru]=Порядок
 Name[de]=Orden
 Name[fr]=Ordre
 Name[es]=Orden
+Name[hi]=नियम
 
 Description=A cross with thick ends
 Description[ru]=Крест с толстыми окончаниями
 Description[de]=Ein Kreuz mit dicken Enden.
 Description[fr]=Une croix avec de larges extrémités
 Description[es]=Una cruz de puntas gruesas
+Description[hi]=एक तिरछा जिसके मोटे कोने हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=order.layout.layout
+FileName=order.layout
 AuthorEmail=kde-games-devel@kde.org

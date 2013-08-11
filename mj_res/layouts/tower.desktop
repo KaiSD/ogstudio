@@ -4,19 +4,22 @@ Name[ru]=Башня
 Name[de]=Turm
 Name[fr]=Tour
 Name[es]=Torre
+Name[hi]=मिनार
 
 Description=Remove the towers
 Description[ru]=Удалите башни
 Description[de]=Entfernen Sie die Türme.
 Description[fr]=Supprimez les tours
 Description[es]=Elimina las torres
+Description[hi]=मिनारों को हटाओ
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=tower.layout.layout
+FileName=tower.layout
 AuthorEmail=kde-games-devel@kde.org

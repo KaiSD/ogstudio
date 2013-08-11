@@ -4,18 +4,21 @@ Name[ru]=Кот
 Name[de]=Katze
 Name[fr]=Chat
 Name[es]=Gato
+Name[hi]=बिल्ली
 
 Description=Vista-styled cat layout
 Description[ru]=Раскладка в виде кота
 Description[de]=Eine Katze im Vista-Stil.
 Description[fr]=Forme d'un chat dans le style Vista
 Description[es]=Diseño en forma de gato estilo Vista
+Description[hi]=विस्टा शैली की बिल्ली की खाका
 
 Author=alchark
 Author[de]=alchark
 Author[fr]=alchark
 Author[es]=alchark
+Author[hi]=अल्चार्क
 
 VersionFormat=1
-FileName=cat.layout.layout
+FileName=cat.layout
 AuthorEmail=alchark@gmail.com

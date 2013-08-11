@@ -4,19 +4,22 @@ Name[ru]=Щит
 Name[de]=Kampfausstattung
 Name[fr]=Bouclier
 Name[es]=Escudo
+Name[hi]=ढाल
 
 Description=A shield and a sword made up of Mahjongg tiles
 Description[ru]=Щит и меч из плиток для маджонга
 Description[de]=Ein Schild und Schwert aus Mahjongg-Spielsteinen.
 Description[fr]=Un bouclier et une épée réalisés en tuiles Mahjongg
 Description[es]=Un escudo y una espada hechos de fichas de Mahjongg
+Description[hi]=महजोंग टाइल्स से बनी एक तलवार और ढाल 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=shield.layout.layout
+FileName=shield.layout
 AuthorEmail=kde-games-devel@kde.org

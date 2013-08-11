@@ -4,19 +4,22 @@ Name[ru]=Вид на замок
 Name[de]=Burgansicht
 Name[fr]=Vue d'un chateau
 Name[es]=Vista de castillo
+Name[hi]=किले का दृश्य
 
 Description=A castle as viewed from one side
 Description[ru]=Замок, показанный с одной стороны
 Description[de]=Eine Burg von der Seite betrachtet.
 Description[fr]=Un chateau vu de côté
 Description[es]=Un castillo visto por un lado
+Description[hi]=किले का एक तरफ से दिखने वाला दृश्य 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=castle2.layout.layout
+FileName=castle2.layout
 AuthorEmail=kde-games-devel@kde.org

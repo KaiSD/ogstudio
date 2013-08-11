@@ -4,19 +4,22 @@ Name[ru]=Жук
 Name[de]=Wanze
 Name[fr]=Insecte
 Name[es]=Bicho
+Name[hi]=बग
 
 Description=The bug. Let us take it apart!
 Description[ru]=Жук. Оставьте нас в стороне!
 Description[de]=Entfernen Sie die Wanze.
 Description[fr]=L'insecte. Essayons de l'éloigner !
 Description[es]=El bicho. ¡Desmontémoslo!
+Description[hi]=बग चलो इसे पराजित करे
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=bug.layout.layout
+FileName=bug.layout
 AuthorEmail=kde-games-devel@kde.org

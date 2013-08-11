@@ -4,19 +4,22 @@ Name[ru]=Стадион
 Name[de]=Stadion
 Name[fr]=Stade
 Name[es]=Estadio
+Name[hi]=मैदान
 
 Description=A layout representing a football field
 Description[ru]=Раскладка в виде футбольного поля
 Description[de]=Dieses Design zeigt einen Fußballplatz.
 Description[fr]=La forme d'un terrain de football
 Description[es]=Un diseño que representa un campo de fútbol
+Description[hi]=एक फुटबॉल मैदान की खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=stadion.layout.layout
+FileName=stadion.layout
 AuthorEmail=kde-games-devel@kde.org

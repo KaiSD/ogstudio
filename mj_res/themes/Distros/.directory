@@ -4,18 +4,21 @@ Name[ru]=Дистрибутивы
 Name[de]=Distributionen
 Name[fr]=Distros
 Name[es]=Distribuciones
+Name[hi]=दिस्त्रोस
 
 Description=Various open source distributions, Linux mostly
 Description[ru]=Разные открытые дистрибутивы, в основном Линукс
 Description[de]=Verschiedene Open Source Distributionen, größtenteils Linux
 Description[fr]=Diverses distributions open source, principalement Linux
 Description[es]=Varias distribuciones de código abierto, Linux la mayoría
+Description[hi]=भिन्न ओपन सोर्स वितरण ,मुख्यतः लिनक्स |
 
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
 Author[de]=Das Team von Open Source Game Studio
 Author[fr]=Equipe de Opensource Game Studio
 Author[es]=Equipo de Opensource Game Studio
+Author[hi]=ओपन सोर्स गेम्स स्टूडियो टीम
 
 
-AuthorEmail=main@opengamestudio.org
+AuthorEmail=bugs@opengamestudio.org

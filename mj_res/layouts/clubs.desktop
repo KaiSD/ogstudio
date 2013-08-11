@@ -4,19 +4,22 @@ Name[ru]=Трефы
 Name[de]=Kreuz
 Name[fr]=Trèfle
 Name[es]=Tréboles
+Name[hi]=चिड़ि
 
 Description=A layout resembling a multitude of card clubs
 Description[ru]=Раскладка, повторяющая множество треф из карт
 Description[de]=Dieses Design zeigt mehrere Kreuzkarten.
 Description[fr]=En forme de trèfle
 Description[es]=Un diseño que se parece a una multitud de tréboles de cartas
+Description[hi]=एक चिड़ि जैसी खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=clubs.layout.layout
+FileName=clubs.layout
 AuthorEmail=kde-games-devel@kde.org

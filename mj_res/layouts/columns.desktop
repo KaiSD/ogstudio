@@ -4,19 +4,22 @@ Name[ru]=Столбики
 Name[de]=Säulen
 Name[fr]=Colonnes
 Name[es]=Columnas
+Name[hi]=खम्बे
 
 Description=A circular arena covered with columns of varying height
 Description[ru]=Круглая арена, покрытая столбиками различной высоты
 Description[de]=Eine kreisförmige Fläche mit unterschiedlich hohen Säulen.
 Description[fr]=Une arène circulaire couverte de colonnes de tailles variées
 Description[es]=Un estadio circular cubierto con columnas de altura variable
+Description[hi]=एक गोल आकार में लगे भिन उचाई के खम्बे
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=columns.layout.layout
+FileName=columns.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=Сады
 Name[de]=Garten
 Name[fr]=Jardin
 Name[es]=Jardín
+Name[hi]=बाग
 
 Description=Regular patterns resembling a classical garden
 Description[ru]=Классический ухоженный сад
 Description[de]=Wiederkehrende Muster stellen einen klassischen Garten dar.
 Description[fr]=Des motifs réguliers ressemblant à un jardin classique
 Description[es]=Motivos regulares que se asemejan a un jardín clásico
+Description[hi]=बाग जैसा स्वरुप
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=garden.layout.layout
+FileName=garden.layout
 AuthorEmail=kde-games-devel@kde.org

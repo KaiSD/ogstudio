@@ -4,19 +4,22 @@ Name[ru]=Арена
 Name[de]=Arena
 Name[fr]=Arène
 Name[es]=Campo de batalla
+Name[hi]=अखाडा
 
 Description=Circular-aligned seats around a performance area
 Description[ru]=Зрительные места вокруг арены
 Description[de]=Kreisförmig-angeordnete Sitze um eine Vorführ-Fläche.
 Description[fr]=Des places alignées de façon circulaire autour d'une zone
 Description[es]=Asientos distribuidos en círculo alrededor de un área de representación
+Description[hi]=एक प्रदर्शन की जगह जिसके चारो ओर गोलाई में कुर्सिया हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=arena.layout.layout
+FileName=arena.layout
 AuthorEmail=kde-games-devel@kde.org

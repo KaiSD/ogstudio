@@ -4,18 +4,21 @@ Name[ru]=Упрощённая комната
 Name[de]=Raum (Lite-Version)
 Name[fr]=Pièce allégée
 Name[es]=Habitación pequeña
+Name[hi]=कमरा लाइट
 
 Description=Lite version of chinese room.
 Description[ru]=Упрощённая версия Китайской комнаты.
 Description[de]=Die Lite-Version des chinesischen Raumes
 Description[fr]=Version allégée de la pièce chinoise,
 Description[es]=Pequeña versión de una habitación china.
+Description[hi]=चीनी कमरे का लाइट रूप
 
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
 Author[de]=Das Team von Open Source Game Studio
 Author[fr]=Equipe Opensource Game Studio
 Author[es]=Equipo de Opensource Game Studio
+Author[hi]=ओपन सोर्स गेम्स स्टूडियो टीम
 
 
-AuthorEmail=main@opengamestudio.org
+AuthorEmail=bugs@opengamestudio.org

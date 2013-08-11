@@ -4,6 +4,7 @@ Name[ru]=Театр
 Name[de]=Theater
 Name[fr]=Théâtre
 Name[es]=Teatro
+Name[hi]=तेअत्रे रंगशाला
 
 
 Author=KDE Games team
@@ -11,7 +12,8 @@ Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=teatre.layout.layout
+FileName=teatre.layout
 AuthorEmail=kde-games-devel@kde.org

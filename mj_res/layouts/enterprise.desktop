@@ -4,19 +4,22 @@ Name[ru]=Энтерпрайз
 Name[de]=Enterprise
 Name[fr]=Enterprise
 Name[es]=Enterprise
+Name[hi]=उद्योग
 
 Description=A layout for Star Trek fans
 Description[ru]=Раскладка для фанатов сериала «Звёздный путь»
 Description[de]=Ein Design für Fans von Star Trek.
 Description[fr]=Une forme réservée aux fans de Star Trek
 Description[es]=Un diseño para los fans de Star Trek
+Description[hi]=एक खाका स्टार ट्रेक के प्रशंसको के लिए
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=enterprise.layout.layout
+FileName=enterprise.layout
 AuthorEmail=kde-games-devel@kde.org

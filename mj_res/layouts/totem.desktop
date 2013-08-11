@@ -4,19 +4,22 @@ Name[ru]=Тотем
 Name[de]=Talisman
 Name[fr]=Totem
 Name[es]=Tótem
+Name[hi]=टोटेम
 
 Description=A T-shaped embossed object with a hole
 Description[ru]=Рельефный объект в форме T с отверстием
 Description[de]=Ein T-förmiges Objekt mit einem Loch.
 Description[fr]=Un objet de la forme d'un T en relief avec un trou
 Description[es]=Un objeto en relieve en forma de T con un agujero
+Description[hi]=एक T आकर की उभरी वास्तु जिसमे एक छेद हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=totem.layout.layout
+FileName=totem.layout
 AuthorEmail=kde-games-devel@kde.org

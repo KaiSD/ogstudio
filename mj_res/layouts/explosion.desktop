@@ -4,19 +4,22 @@ Name[ru]=Взрыв
 Name[de]=Explosion
 Name[fr]=Explosion
 Name[es]=Explosión
+Name[hi]=धमाका
 
 Description=Something has exploded. Collect the pieces.
 Description[ru]=Что-то взорвалось. Соберите кусочки.
 Description[de]=Irgendetwas ist explodiert – sammeln Sie die Teile ein.
 Description[fr]=Quelque chose a explosé. Récoltez les pièces.
 Description[es]=Algo ha explotado. Recoge las piezas.
+Description[hi]=कुछ नष्ट हुआ है उसके तुकडे ढूंडो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=explosion.layout.layout
+FileName=explosion.layout
 AuthorEmail=kde-games-devel@kde.org

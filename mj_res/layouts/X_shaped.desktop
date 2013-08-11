@@ -4,19 +4,22 @@ Name[ru]=Х-образный
 Name[de]=X-förmig
 Name[fr]=Forme X
 Name[es]=En forma de X
+Name[hi]=x-आकार
 
 Description=A large letter X made of mahjongg tiles
 Description[ru]=Большая буква X из фишек Маджонг
 Description[de]=Das große X aus Mahjongg-Spielsteinen.
 Description[fr]=Une grande lettre X faite avec des tuiles Mahjongg
 Description[es]=Una gran letra X hecha de fichas de Mahjongg
+Description[hi]=महजोंग टाइल्स से बना एक बड़ा X
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=X_shaped.layout.layout
+FileName=X_shaped.layout
 AuthorEmail=kde-games-devel@kde.org

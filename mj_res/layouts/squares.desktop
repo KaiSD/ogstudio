@@ -4,19 +4,22 @@ Name[ru]=Квадраты
 Name[de]=Quadrate
 Name[fr]=Carrés
 Name[es]=Cuadrados
+Name[hi]=वर्ग
 
 Description=Concentric squares of alterating height
 Description[ru]=Концентрические квадраты различной высоты
 Description[de]=Konzentrische Quadrate mit verschiedenen Höhen.
 Description[fr]=Des carrés concentriques d'une hauteur différente
 Description[es]=Cuadrados concéntricos de altura alterna
+Description[hi]=भिन्न उचाई वाले समकोणीय चतुर्भुज 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=squares.layout.layout
+FileName=squares.layout
 AuthorEmail=kde-games-devel@kde.org

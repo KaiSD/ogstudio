@@ -4,19 +4,22 @@ Name[ru]=Чужой
 Name[de]=Außerirdischer
 Name[fr]=Extra-terrestre
 Name[es]=Alien
+Name[hi]=परजीवी
 
 Description=A humanoid made up of Mahjongg tiles
 Description[ru]=Похоже, что плитки расставляли гуманоиды
 Description[de]=Ein menschenähnliches Wesen aus Mahjongg-Spielsteinen.
 Description[fr]=Graphisme inspiré des tuiles faites à la main du Mahjongg
 Description[es]=Humanoide hecho de fichas de Mahjongg
+Description[hi]=महजोंग टाइल्स से बना इंसानों जैसा आकार
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=alien.layout.layout
+FileName=alien.layout
 AuthorEmail=kde-games-devel@kde.org

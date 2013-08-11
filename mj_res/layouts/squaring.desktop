@@ -4,19 +4,22 @@ Name[ru]=Квадрат в квадрате
 Name[de]=Quadratur
 Name[fr]=Quadrature
 Name[es]=Cuadrando
+Name[hi]=वर्गाकार बनाना
 
 Description=Who said squares are flat?
 Description[ru]=Кто сказал, что квадраты плоские?
 Description[de]=Wer behauptet, dass Quadrate flach sind?
 Description[fr]=Qui a dit que les carrés sont plats ?
 Description[es]=¿Quién dijo que los cuadrados eran planos?
+Description[hi]=किसने कहा समकोण चतुर्भुज समतल होते है?
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=squaring.layout.layout
+FileName=squaring.layout
 AuthorEmail=kde-games-devel@kde.org

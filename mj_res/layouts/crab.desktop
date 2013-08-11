@@ -4,18 +4,21 @@ Name[ru]=Краб
 Name[de]=Krabbe
 Name[fr]=Crabe
 Name[es]=Cangrejo
+Name[hi]=केकड़ा
 
 Description=Vista-styled crab layout
 Description[ru]=Раскладка в виде краба
 Description[de]=Eine Krabbe im Vista-Stil.
 Description[fr]=Forme d'un crabe dans le style Vista
 Description[es]=Diseño en forma de cangrejo estilo Vista
+Description[hi]=विस्टा शैली में केकड़े की खाका 
 
 Author=alchark
 Author[de]=alchark
 Author[fr]=alchark
 Author[es]=alchark
+Author[hi]=अल्चार्क
 
 VersionFormat=1
-FileName=crab.layout.layout
+FileName=crab.layout
 AuthorEmail=alchark@gmail.com

@@ -4,19 +4,22 @@ Name[ru]=Пираты
 Name[de]=Piraten
 Name[fr]=Pirates
 Name[es]=Piratas
+Name[hi]=समुद्री लुटेरे
 
 Description=A sailing boat under the sun
 Description[ru]=Парусник под солнцем
 Description[de]=Ein segelndes Boot unter der Sonne.
 Description[fr]=Un bateau à voile sous le soleil
 Description[es]=Un barco velero bajo el sol
+Description[hi]=दिन में तैरती एक नाव
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=pirates.layout.layout
+FileName=pirates.layout
 AuthorEmail=kde-games-devel@kde.org

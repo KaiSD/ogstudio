@@ -4,19 +4,22 @@ Name[ru]=Атлантида
 Name[de]=Atlantis
 Name[fr]=Atlantis
 Name[es]=Atlantis
+Name[hi]=अटलांटिस
 
 Description=The starship-city from Stargate Atlantis
 Description[ru]=Корабль-город из сериала «Звёздные врата: Атлантида»
 Description[de]=Ein Sternenschiff aus Stargate Atlantis.
 Description[fr]=La cité stellaire de Stargate Atlantis
 Description[es]=La nave-ciudad de Stargate Atlantis
+Description[hi]=एक उड़नतस्तरी जो स्टार गेट अटलांटिस से आई है
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=atlantis.layout.layout
+FileName=atlantis.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=Лабиринт
 Name[de]=Labyrinth
 Name[fr]=Labyrinthe
 Name[es]=Laberinto
+Name[hi]=घूम घुमैया
 
 Description=A complex yet symmetric labyrinth
 Description[ru]=Симметричный лабиринт
 Description[de]=Ein kompliziertes und symmetrisches Labyrinth.
 Description[fr]=Un labyrinthe complexe et cependant symétrique
 Description[es]=Un laberinto complejo, aunque simétrico
+Description[hi]=एक मुश्किल पर संतुलित घूम घुमैया 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=labyrinth.layout.layout
+FileName=labyrinth.layout
 AuthorEmail=kde-games-devel@kde.org

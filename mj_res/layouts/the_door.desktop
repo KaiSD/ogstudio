@@ -4,19 +4,22 @@ Name[ru]=Дверь
 Name[de]=Die Tür
 Name[fr]=La porte
 Name[es]=La puerta
+Name[hi]=दरवाज़ा
 
 Description=A doorway through a pyramid-shaped wall
 Description[ru]=Дверь в стене пирамиды
 Description[de]=Ein Durchgang durch eine pyramidenförmige Mauer.
 Description[fr]=Une porte au travers d'un mur pyramidal
 Description[es]=Una entrada a través de un muro en forma de pirámide
+Description[hi]=पिरामिड के बीच से द्वारमार्ग
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=the_door.layout.layout
+FileName=the_door.layout
 AuthorEmail=kde-games-devel@kde.org

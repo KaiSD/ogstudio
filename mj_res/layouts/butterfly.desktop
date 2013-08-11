@@ -4,6 +4,7 @@ Name[ru]=Бабочка
 Name[de]=Schmetterling
 Name[fr]=Papillon
 Name[es]=Mariposa
+Name[hi]=तितली
 
 
 Author=KDE Games team
@@ -11,7 +12,8 @@ Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=butterfly.layout.layout
+FileName=butterfly.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=Дырка
 Name[de]=Loch
 Name[fr]=Trou
 Name[es]=Agujero
+Name[hi]=छेद
 
 Description=A pyramid with a hole in the middle
 Description[ru]=Пирамида с дыркой в середине
 Description[de]=Eine Pyramide mit einem Loch in der Mitte.
 Description[fr]=Une pyramide comportant un trou en son centre
 Description[es]=Una pirámide con un agujero en medio
+Description[hi]=एक पिरामिड जिसके बीच में छेद हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=hole.layout.layout
+FileName=hole.layout
 AuthorEmail=kde-games-devel@kde.org

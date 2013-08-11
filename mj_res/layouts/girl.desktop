@@ -4,19 +4,22 @@ Name[ru]=Девушка
 Name[de]=Mädchen
 Name[fr]=Fille
 Name[es]=Niña
+Name[hi]=लड़की
 
 Description=A layout resembling a girl's face
 Description[ru]=Лицо девушки
 Description[de]=Dieses Design stellt das Gesicht eines Mädchens dar.
 Description[fr]=Une forme de visage de fille
 Description[es]=Un diseño que se asemeja a la cara de una niña
+Description[hi]=लड़की के चेहरे जैसा एक खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=girl.layout.layout
+FileName=girl.layout
 AuthorEmail=kde-games-devel@kde.org

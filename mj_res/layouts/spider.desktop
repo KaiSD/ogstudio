@@ -4,18 +4,21 @@ Name[ru]=Паук
 Name[de]=Spinne
 Name[fr]=Araignée
 Name[es]=Araña
+Name[hi]=मकड़ी
 
 Description=Vista-styled spider layout
 Description[ru]=Раскладка в виде паука
 Description[de]=Eine Spinne im Vista-Stil.
 Description[fr]=Forme d'une araignée dans le style Vista
 Description[es]=Diseño en forma de araña estilo Vista
+Description[hi]=विस्टा शैली में मकड़ी की खाका
 
 Author=alchark
 Author[de]=alchark
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=अल्चार्क
 
 VersionFormat=1
-FileName=spider.layout.layout
+FileName=spider.layout
 AuthorEmail=alchark@gmail.com

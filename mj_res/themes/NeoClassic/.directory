@@ -4,18 +4,21 @@ Name[ru]=Нео-Классика
 Name[de]=Neoklassisch
 Name[fr]=Néo classique
 Name[es]=Neo-Clásico
+Name[hi]=नियो क्लासिक
 
 Description=This tileset utilizes the set of images from the famous Gnome Mahjongg tileset called Postmodern""
 Description[ru]=Этот тайлсет использует изображения фишек из известной темы для Gnome Mahjongg под названием Постмодерн""
 Description[de]=Dieses Layout wendet die Zusammenstellung von Bilder vom berühmten Gnome Mahjong Design namens Postmodern
 Description[fr]=Ce jeu de tuiles utilise l'ensemble d'images du fameux Mahjongg Gnome appelé Postmodern
 Description[es]=Este set de fichas utiliza el conjunto de imágenes del famoso juego de fichas Gnome Mahjongg llamado posmoderno ""
+Description[hi]=यह टाइल समूह मशहूर ग्नोम महजोंग के Postmodern नामक टाइल समूह के चित्रों का प्रयोग करता है |
 
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
 Author[de]=Das Team von Open Source Game Studio
 Author[fr]=Equipe Opensource Game Studio
 Author[es]=Equipo de Opensource Game Studio
+Author[hi]=ओपन सोर्स गेम्स स्टूडियो टीम
 
 
-AuthorEmail=main@opengamestudio.org
+AuthorEmail=bugs@opengamestudio.org

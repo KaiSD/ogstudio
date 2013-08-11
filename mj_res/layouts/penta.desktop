@@ -4,19 +4,22 @@ Name[ru]=Пента
 Name[de]=Penta
 Name[fr]=Pentagone
 Name[es]=Penta
+Name[hi]=पेंटा
 
 Description=A fortress with five towers
 Description[ru]=Крепость с пятью башнями
 Description[de]=Eine Festung mit fünf Türmen.
 Description[fr]=Une forteresse à cinq tours
 Description[es]=Una fortaleza con cinco torres
+Description[hi]=एक किला जिसके पांच मीनार हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=penta.layout.layout
+FileName=penta.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,18 +4,21 @@ Name[ru]=Треугольник
 Name[de]=Dreieck
 Name[fr]=Triangle
 Name[es]=Triángulo
+Name[hi]=त्रिकोण
 
 Description=Triangular pyramid
 Description[ru]=Треугольная пирамида
 Description[de]=Eine dreieckige Pyramide.
 Description[fr]=Pyramide triangulaire
 Description[es]=Pirámide triangular
+Description[hi]=त्रिकोण पिरामिड
 
 Author=KDE Games team
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=triangle.layout.layout
+FileName=triangle.layout
 AuthorEmail=kde-games-devel@kde.org

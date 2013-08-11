@@ -4,19 +4,22 @@ Name[ru]=Стрела
 Name[de]=Pfeil
 Name[fr]=Flèche
 Name[es]=Flecha
+Name[hi]=तीर
 
 Description=A big arrow pointing in the right direction
 Description[ru]=Большая стрела, указывающая направо
 Description[de]=Ein großer, nach rechts zeigender Pfeil.
 Description[fr]=Une grosse flèche pointant vers la droite
 Description[es]=Una gran flecha que apunta en la dirección correcta
+Description[hi]=एक बड़ा तीर जो दाहिनी ओर इशारा करे
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=arrow.layout.layout
+FileName=arrow.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=В клеточку
 Name[de]=Schachbrett
 Name[fr]=En échiquier
 Name[es]=A cuadros
+Name[hi]=चेक्केर्ड
 
 Description=What if the chess board was not square?
 Description[ru]=Ну и что, если шахматная доска не квадратная?
 Description[de]=Ein nicht ganz quadratisches Schachbrett.
 Description[fr]=Que faire si le plateau d'échec n'était pas un carré ?
 Description[es]=¿Qué ocurriría si el tablero de ajedrez no fuera cuadrado?
+Description[hi]=अगर चेस बोर्ड चतुर्भुज न होता तो? 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=checkered.layout.layout
+FileName=checkered.layout
 AuthorEmail=kde-games-devel@kde.org

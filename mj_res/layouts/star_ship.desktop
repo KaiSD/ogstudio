@@ -4,19 +4,22 @@ Name[ru]=Звёздный корабль
 Name[de]=Raumschiff
 Name[fr]=Vaisseau spatial
 Name[es]=Nave espacial
+Name[hi]=उड़नतश्तरी
 
 Description=A sci-fi space transport
 Description[ru]=Фантастический звёздный транспорт
 Description[de]=Ein zukunftsmäßiger Raumtransporter.
 Description[fr]=Un transport spatial de science fiction
 Description[es]=Un transporte espacial de ciencia ficción
+Description[hi]=एक साईं-फाई वाहन
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=star_ship.layout.layout
+FileName=star_ship.layout
 AuthorEmail=kde-games-devel@kde.org

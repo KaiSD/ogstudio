@@ -4,19 +4,22 @@ Name[ru]=Алтарь
 Name[de]=Altar
 Name[fr]=Altar
 Name[es]=Altar
+Name[hi]=अलतार
 
 Description=An elevated surface with stairs and columns aside
 Description[ru]=Пьедестал со ступеньками и столбики в углах
 Description[de]=Eine erhöhte Fläche mit Treppen und seitlichen Säulen.
 Description[fr]=Une surface élevée avec des étages et des colonnes à part
 Description[es]=Una superficie elevada con escaleras y columnas a los lados
+Description[hi]=एक उची उठी सतह
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=altar.layout.layout
+FileName=altar.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=Столбы
 Name[de]=Säulen
 Name[fr]=Piliers
 Name[es]=Pilares
+Name[hi]=खम्बे
 
 Description=A couple of vertical pillars supporting a flat surface
 Description[ru]=Пара вертикальных столбов, поддерживающих плоскую поверхность
 Description[de]=Zwei vertikale Säulen als Stütze einer ebenen Fläche.
 Description[fr]=Un couple de piliers verticaux supportant une surface plane
 Description[es]=Un conjunto de pilares verticales que sostienen una superficie plana
+Description[hi]=कुछ खम्बे जिन के ऊपर एक समतल सतह हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=pillars.layout.layout
+FileName=pillars.layout
 AuthorEmail=kde-games-devel@kde.org

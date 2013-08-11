@@ -4,19 +4,22 @@ Name[ru]=Театр
 Name[de]=Theater
 Name[fr]=Théatre
 Name[es]=Teatro
+Name[hi]=रंगशाला
 
 Description=A rectangular building with empty space in the middle
 Description[ru]=Прямоугольное здание с пустотой в середине
 Description[de]=Ein rechteckiges Gebilde mit einen leeren Raum in der Mitte.
 Description[fr]=Un bâtiment rectangulaire avec un espace vide au centre
 Description[es]=Un edificio rectangular con un espacio vacío en el centro
+Description[hi]=एक समकोण चतुर्भुज आकार की ईमारत जिसके बीच में खाली स्थान हो |
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=theatre.layout.layout
+FileName=theatre.layout
 AuthorEmail=kde-games-devel@kde.org

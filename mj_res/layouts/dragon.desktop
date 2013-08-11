@@ -4,18 +4,21 @@ Name[ru]=Дракон
 Name[de]=Drache
 Name[fr]=Dragon
 Name[es]=Dragón
+Name[hi]=दत्य
 
 Description=Vista-styled dragon layout
 Description[ru]=Раскладка в виде дракона
 Description[de]=Ein Drache im Vista-Stil.
 Description[fr]=Forme d'un dragon dans le style Vista
 Description[es]=Diseño en forma de dragón estilo Vista
+Description[hi]=विस्टा शैली में दत्य की खाका
 
 Author=alchark
 Author[de]=alchark
 Author[fr]=alchark
 Author[es]=alchark
+Author[hi]=अल्चार्क
 
 VersionFormat=1
-FileName=dragon.layout.layout
+FileName=dragon.layout
 AuthorEmail=alchark@gmail.com

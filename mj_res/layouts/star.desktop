@@ -4,19 +4,22 @@ Name[ru]=Звезда
 Name[de]=Stern
 Name[fr]=Étoile
 Name[es]=Estrella
+Name[hi]=सितारा
 
 Description=An asterisk-shaped embossed layout
 Description[ru]=Рельефная раскладка в виде звезды
 Description[de]=Ein sternförmiges Design.
 Description[fr]=Une astérisque en relief
 Description[es]=Un diseño en forma de asterisco en relieve
+Description[hi]=एक अस्त्रिक्स के आकार में उभरी खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=star.layout.layout
+FileName=star.layout
 AuthorEmail=kde-games-devel@kde.org

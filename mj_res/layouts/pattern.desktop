@@ -4,19 +4,22 @@ Name[ru]=Орнамент
 Name[de]=Muster
 Name[fr]=Motif
 Name[es]=Diseño
+Name[hi]=स्वरूप
 
 Description=A mysterious pattern atop rectangular blocks
 Description[ru]=Таинственны орнамент из прямоугольных блоков
 Description[de]=Ein geheimnisvolles Muster auf Rechtecken.
 Description[fr]=Un motif mystérieux avec des blocs rectangulaires aux extrémités
 Description[es]=Un diseño misterioso sobre bloques rectangulares
+Description[hi]=एक रेहेस्यपूर्ण स्वरुप जो समकोण चतुर्भुज पर बना हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=pattern.layout.layout
+FileName=pattern.layout
 AuthorEmail=kde-games-devel@kde.org

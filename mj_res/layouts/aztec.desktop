@@ -4,19 +4,22 @@ Name[ru]=Ацтек
 Name[de]=Azteke
 Name[fr]=Aztèque
 Name[es]=Azteca
+Name[hi]=एज़्टेक
 
 Description=A layout resembling Aztec buildings
 Description[ru]=Раскладка, похожая на строения ацтеков
 Description[de]=Ein Design, das einem aztekischen Bauwerk ähnelt.
 Description[fr]=Une forme similaire aux bâtiments Aztèques
 Description[es]=Un diseño que se asemeja a una construcción azteca
+Description[hi]=एक खाका जो एज़्टेक इमारत जैसी हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=aztec.layout.layout
+FileName=aztec.layout
 AuthorEmail=kde-games-devel@kde.org

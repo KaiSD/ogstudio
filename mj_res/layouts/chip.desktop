@@ -4,19 +4,22 @@ Name[ru]=Матрица
 Name[de]=Baustein
 Name[fr]=Puce électronique
 Name[es]=Chip
+Name[hi]=चिप
 
 Description=An electronic component with many connectors
 Description[ru]=Электронный компонент с соединителями
 Description[de]=Ein elektronischer Baustein mit vielen Anschlüssen.
 Description[fr]=Une puce électronique avec de nombreuses pattes
 Description[es]=Un componente electrónico con muchos conectores
+Description[hi]=एक इलेक्ट्रॉनिक पार्ट
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=chip.layout.layout
+FileName=chip.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=Гробница
 Name[de]=Grabstätte
 Name[fr]=Tombe
 Name[es]=Tumba
+Name[hi]=कब्र
 
 Description=Fans of Lara Croft may start digging
 Description[ru]=Фанаты Лары Крофт могут начинать рыться
 Description[de]=Verehrer von Lara Croft könnten jetzt mit dem Graben beginnen.
 Description[fr]=Les fans de Lara Croft vont commencer à creuser
 Description[es]=Los fans de Lara Coft pueden empezar a excavar
+Description[hi]=लारा क्रॉफ्ट के प्रशंसको के लिए
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=tomb.layout.layout
+FileName=tomb.layout
 AuthorEmail=kde-games-devel@kde.org

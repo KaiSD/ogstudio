@@ -4,18 +4,21 @@ Name[ru]=Внутри компьютера
 Name[de]=Innerhalb des Computers
 Name[fr]=A l'intérieur de l'ordinateur
 Name[es]=Dentro del ordenador
+Name[hi]=कंप्यूटर के भीतर
 
 Description=Our view of a digital world.
-Description[ru]=Наш взгляд на цифровой мир.
+Description[ru]=Наш вид цифрового мира.
 Description[de]=Unsere Sicht einer digitalen Welt
 Description[fr]=Notre vision d'un monde numérique.
 Description[es]=Nuestra visión de un mundo digital.
+Description[hi]=डिजिटल दुनिया का हमारा नजरिया|
 
 Author=Opensource Game Studio team
 Author[ru]=Команда Opensource Game Studio
 Author[de]=Das Team von Open Source Game Studio
 Author[fr]=Equipe Opensource Game Studio
 Author[es]=Equipo de Opensource Game Studio
+Author[hi]=ओपन सोर्स गेम्स स्टूडियो टीम
 
 
-AuthorEmail=main@opengamestudio.org
+AuthorEmail=bugs@opengamestudio.org

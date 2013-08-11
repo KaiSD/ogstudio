@@ -4,19 +4,22 @@ Name[ru]=Орёл
 Name[de]=Adler
 Name[fr]=Aigle
 Name[es]=Águila
+Name[hi]=बाज़
 
 Description=A large carnivore bird in Mahjongg tiles
 Description[ru]=Большая хищная птица из плиток для маджонга
 Description[de]=Ein großer fleischfressender Vogel aus Mahjongg-Spielsteinen.
 Description[fr]=Un grand oiseau carnivore fait en tuiles Mahjongg
 Description[es]=Un gran pájaro carnívoro en las fichas de Mahjongg
+Description[hi]=महजोंग टाइल्स में एक बड़ी मांस खोर चिड़िया 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=eagle.layout.layout
+FileName=eagle.layout
 AuthorEmail=kde-games-devel@kde.org

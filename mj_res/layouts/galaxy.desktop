@@ -4,19 +4,22 @@ Name[ru]=Галактика
 Name[de]=Sternsystem
 Name[fr]=Galaxie
 Name[es]=Galaxia
+Name[hi]=भ्रामांड
 
 Description=Diversely sized piles of matter
 Description[ru]=Скопления материи разного размера
 Description[de]=Unterschiedlich große Haufen von Materie.
 Description[fr]=Des piles de matières de tailles diverses
 Description[es]=Montones de materia de diversos tamaños
+Description[hi]=अलग अलग आकर के पदार्थो की गठरी
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=galaxy.layout.layout
+FileName=galaxy.layout
 AuthorEmail=kde-games-devel@kde.org

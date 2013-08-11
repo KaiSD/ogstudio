@@ -4,19 +4,22 @@ Name[ru]=Мотылёк
 Name[de]=Mücke
 Name[fr]=Mite
 Name[es]=Polilla
+Name[hi]=पतंगा
 
 Description=A layout representing a small flying insect
 Description[ru]=Маленькое летающее насекомое
 Description[de]=Dieses Design stellt ein kleines fliegendes Insekt dar.
 Description[fr]=Une forme représentant un petit insecte volant
 Description[es]=Un diseño que representa un pequeño insecto volador
+Description[hi]=एक खाका जो एक छोटे से उड़ने वाले कीड़े जैसा हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=moth.layout.layout
+FileName=moth.layout
 AuthorEmail=kde-games-devel@kde.org

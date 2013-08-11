@@ -4,19 +4,22 @@ Name[ru]=Баланс
 Name[de]=Waage
 Name[fr]=Balance
 Name[es]=Equilibrio
+Name[hi]=संतुलन
 
 Description=Time to weight every decision carefully!
 Description[ru]=Время для тщательного взвешивания каждого решения!
 Description[de]=Zeit für das sichere Abwägen der Entscheidungen.
 Description[fr]=Il est temps de peser chaque décision avec attention !
 Description[es]=¡Hora de sopesar cada decisión con cuidado!
+Description[hi]=हर निश्चय को मापने का समय
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=balance.layout.layout
+FileName=balance.layout
 AuthorEmail=kde-games-devel@kde.org

@@ -4,19 +4,22 @@ Name[ru]=4 крыла
 Name[de]=Vier Winde
 Name[fr]=Les 4 vents
 Name[es]=4 vientos
+Name[hi]=४ हवाए
 
 Description=A layout resembling a fortress
 Description[ru]=Раскладка, похожая на крепость
 Description[de]=Ein Design, das einer Festung ähnelt.
 Description[fr]=Une forme de forteresse
 Description[es]=Un diseño que se asemeja a una fortaleza
+Description[hi]=एक किले की खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=4_winds.layout.layout
+FileName=4_winds.layout
 AuthorEmail=kde-games-devel@kde.org

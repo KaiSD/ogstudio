@@ -4,19 +4,22 @@ Name[ru]=Храм
 Name[de]=Tempelanlage
 Name[fr]=Temple
 Name[es]=Templo
+Name[hi]=मंदिर
 
 Description=A temple-shaped layout
 Description[ru]=Раскладка в виде храма
 Description[de]=Ein tempelförmiges Design.
 Description[fr]=Une forme de temple
 Description[es]=Un diseño en forma de templo
+Description[hi]=एक मंदिर की खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=temple.layout.layout
+FileName=temple.layout
 AuthorEmail=kde-games-devel@kde.org

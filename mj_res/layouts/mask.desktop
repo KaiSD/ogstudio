@@ -4,19 +4,22 @@ Name[ru]=Маска
 Name[de]=Maske
 Name[fr]=Masque
 Name[es]=Máscara
+Name[hi]=मुखोटा
 
 Description=A scary embossed pagan mask
 Description[ru]=Резная языческая маска, наводящая ужас
 Description[de]=Eine unheimlich heidnische Maske.
 Description[fr]=Un effrayant masque païen en relief
 Description[es]=Una terrorífica máscara pagana en relieve
+Description[hi]=एक डरावना उभरा हुआ प्रतिमा पूर्वक मुखोटा
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=mask.layout.layout
+FileName=mask.layout
 AuthorEmail=kde-games-devel@kde.org

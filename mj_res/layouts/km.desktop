@@ -4,19 +4,22 @@ Name[ru]=К и М
 Name[de]=KM
 Name[fr]=KM
 Name[es]=KM
+Name[hi]=KM
 
 Description=Letters K and M. Do you have your favourite extension for that?
 Description[ru]=Буквы К и М. Какая расшифровка вам нравится больше?
 Description[de]=Die Buchstaben „K“ und „M“. Denken Sie dabei an etwas bestimmtes?
 Description[fr]=Les lettres K et M. Avez-vous votre extension préférée pour cet acronyme ?
 Description[es]=Las letras K y M. ¿Tienes una ampliación favorita para esto?
+Description[hi]=k और m अक्षर
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=km.layout.layout
+FileName=km.layout
 AuthorEmail=kde-games-devel@kde.org

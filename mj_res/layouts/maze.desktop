@@ -4,19 +4,22 @@ Name[ru]=Лабиринт Минотавра
 Name[de]=Irrgarten
 Name[fr]=Dédale
 Name[es]=Otro laberinto
+Name[hi]=भूल भुलैया
 
 Description=An extremely twisted maze. Beware of minotaurs!
 Description[ru]=Сильно закрученный лабиринт. Опасайтесь минотавров!
 Description[de]=Ein extrem verdrehtes Labyrinth. Nehmen Sie sich vor Minotauros in Acht!
 Description[fr]=Un dédale extrêmement tarabiscoté. Attention aux minotaures !
 Description[es]=Un laberinto muy retorcido. ¡Cuidado con los minotauros!
+Description[hi]=बहुत ही ज्यादा टेडी मेढ़ी भूल भुलैया | मिनोतौर्स से सावधान
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=maze.layout.layout
+FileName=maze.layout
 AuthorEmail=kde-games-devel@kde.org

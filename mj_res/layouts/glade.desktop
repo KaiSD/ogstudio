@@ -4,19 +4,22 @@ Name[ru]=Поляна
 Name[de]=Lichtung
 Name[fr]=Clairière
 Name[es]=Claro
+Name[hi]=वन मार्ग
 
 Description=A small piece of empty space surrounded by a forest
 Description[ru]=Небольшие поляны, окружённые лесом
 Description[de]=Ein kleines Stück freier Fläche, das von einem Wald umgeben ist.
 Description[fr]=Une petite zone d'espace entourée d'une forêt
 Description[es]=Un pedacito de espacio vacío rodeado por un bosque
+Description[hi]=जंगल से घिरी एक खली जगह 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=glade.layout.layout
+FileName=glade.layout
 AuthorEmail=kde-games-devel@kde.org

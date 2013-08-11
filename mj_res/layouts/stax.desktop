@@ -4,19 +4,22 @@ Name[ru]=Штабели
 Name[de]=Stapel
 Name[fr]=Piles
 Name[es]=Pilas
+Name[hi]=ढेर
 
 Description=Difficult layout with stacks of tiles
 Description[ru]=Сложная раскладка с штабелями из плиток
 Description[de]=Ein schwieriges Design mit Stapeln aus Spielsteinen.
 Description[fr]=Disposition difficile en piles de tuiles
 Description[es]=Diseño difícil con pilas de fichas
+Description[hi]=टाइल्स के ढेर से बनी एक मुश्किल खाका 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=stax.layout.layout
+FileName=stax.layout
 AuthorEmail=kde-games-devel@kde.org

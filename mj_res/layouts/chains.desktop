@@ -4,19 +4,22 @@ Name[ru]=Цепи
 Name[de]=Ketten
 Name[fr]=Chaînes
 Name[es]=Cadenas
+Name[hi]=बेड़िया
 
 Description=Four chains making up a single structure
 Description[ru]=Четыре цепи создают единую структуру
 Description[de]=Ein Gebilde aus vier Ketten.
 Description[fr]=Quatre chaînes formant une seule structure
 Description[es]=Cuatro cadenas que forman una única estructura
+Description[hi]=एक साथ जुड़ने वाली चार बेड़िया
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=chains.layout.layout
+FileName=chains.layout
 AuthorEmail=kde-games-devel@kde.org

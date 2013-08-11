@@ -4,19 +4,22 @@ Name[ru]=Лесенка
 Name[de]=Treppen
 Name[fr]=Étages
 Name[es]=Escaleras
+Name[hi]=सीडिया
 
 Description=A staircase for those who dislike taking the same path twice
 Description[ru]=Лесенка для тех, кто не любит идти по одному пути дважды
 Description[de]=Ein Treppenhaus für alle, die denselben Weg nicht doppelt gehen möchten.
 Description[fr]=Un escalier en colimaçon pour les personnes n'aimant pas prendre deux fois le même chemin
 Description[es]=Una escalera para los que no gustan de seguir dos veces el mismo camino
+Description[hi]=उन लोगो के लिए सीडिया जिन्हें एक ही रस्ते पर बार बार चलना अच नहीं लगता
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=stairs.layout.layout
+FileName=stairs.layout
 AuthorEmail=kde-games-devel@kde.org

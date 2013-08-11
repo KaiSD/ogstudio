@@ -4,19 +4,22 @@ Name[ru]=Цветы
 Name[de]=Blumen
 Name[fr]=Fleurs
 Name[es]=Flores
+Name[hi]=फूल
 
 Description=A layout consisting of six flowers
 Description[ru]=Раскладка, содержащая шесть цветов
 Description[de]=Ein Design aus sechs Blumen.
 Description[fr]=Une forme constituée de six fleurs
 Description[es]=Un diseño que consiste en seis flores
+Description[hi]=एक खाका जिसमे ६ फूल है
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=flowers.layout.layout
+FileName=flowers.layout
 AuthorEmail=kde-games-devel@kde.org

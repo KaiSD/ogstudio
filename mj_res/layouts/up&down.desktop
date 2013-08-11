@@ -4,19 +4,22 @@ Name[ru]=Вверх-вниз
 Name[de]=Auf & Ab
 Name[fr]=Haut et bas
 Name[es]=Arriba y abajo
+Name[hi]=उपर और नीचे
 
 Description=Have you ever tried to represent waves in rectangular blocks?
 Description[ru]=Случалось ли вам выражать волны с помощью прямоугольных блоков?
 Description[de]=Haben Sie jemals versucht Wellen in einem Rechteck darzustellen?
 Description[fr]=Avez-vous déjà essayé de représenter des vagues avec des blocs rectangulaires ?
 Description[es]=¿Alguna vez has intentado representar ondas con bloques rectangulares?
+Description[hi]=क्या आपने कभी लहरों को समकोण चतुर्भुज से बनाने की कोशिश करी है?
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=up&down.layout.layout
+FileName=up&down.layout
 AuthorEmail=kde-games-devel@kde.org

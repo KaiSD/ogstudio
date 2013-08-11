@@ -4,19 +4,22 @@ Name[ru]=Ключ
 Name[de]=Schlüssel
 Name[fr]=Clé
 Name[es]=Llave
+Name[hi]=चाबी
 
 Description=A large key made of Mahjongg tiles
 Description[ru]=Большой ключ из плиток для маджонга
 Description[de]=Ein großer Schlüssel aus Mahjongg-Spielsteinen.
 Description[fr]=Une grande clé faite avec des tuiles Mahjongg
 Description[es]=Una gran llave hecha de fichas de Mahjongg
+Description[hi]=महजोंग टाइल्स से बनी एक बड़ी चाबी
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=key.layout.layout
+FileName=key.layout
 AuthorEmail=kde-games-devel@kde.org

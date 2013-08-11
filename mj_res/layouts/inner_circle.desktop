@@ -4,19 +4,22 @@ Name[ru]=Внутренний круг
 Name[de]=Innenkreis
 Name[fr]=Cercle intérieur
 Name[es]=Círculo interior
+Name[hi]=अंदरूनी घेरा
 
 Description=Concentric boxes with openings pointing in opposite directions
 Description[ru]=Концентрические ящики с отверстиями, указывающими в противоположные направления
 Description[de]=Konzentrische Kästen mit Öffnungen in entgegengesetzter Richtung.
 Description[fr]=Des boîtes concentriques s'ouvrant dans des directions opposées
 Description[es]=Cajas concéntricas con aberturas que apuntan en direcciones opuestas
+Description[hi]=विपरीत दिशाओ में कुलने वाले सुम्केंद्रिये डिब्बे 
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=inner_circle.layout.layout
+FileName=inner_circle.layout
 AuthorEmail=kde-games-devel@kde.org

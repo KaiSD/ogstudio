@@ -4,19 +4,22 @@ Name[ru]=Крест
 Name[de]=Schneeball
 Name[fr]=Croix
 Name[es]=Cruz
+Name[hi]=क्रॉस
 
 Description=A six-ended cross resembling the Cyrillic letter Zh
 Description[ru]=Шестиконечный крест, похожий на букву «Ж»
 Description[de]=Ein Schneeball mit sechs Enden (ähnlich dem kyrillischen Zh). 
 Description[fr]=Une croix à six branches ressemblant à la lettre cyrillique Zh
 Description[es]=Una cruz de seis puntas que se asemeja a la letra cirílica Zh
+Description[hi]=एक छेह सिरों वाला क्रॉस जो सिरिलिक अक्षर Zh जैसा हो
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=cross.layout.layout
+FileName=cross.layout
 AuthorEmail=kde-games-devel@kde.org

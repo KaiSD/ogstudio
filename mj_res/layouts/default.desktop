@@ -4,19 +4,22 @@ Name[ru]=По умолчанию
 Name[de]=Standard
 Name[fr]=Par défaut
 Name[es]=Predeterminado
+Name[hi]=डिफ़ॉल्ट
 
 Description=Default KMahjongg game layout
 Description[ru]=Игровая раскладка по умолчанию
 Description[de]=Standard-Design für KMahjongg.
 Description[fr]=Disposition par défaut du jeu KMahjongg
 Description[es]=Diseño de juego predeterminado de KMahjongg
+Description[hi]=डिफ़ॉल्ट k महजोंग खेल की खाका
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=default.layout.layout
+FileName=default.layout
 AuthorEmail=kde-games-devel@kde.org

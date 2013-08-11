@@ -4,19 +4,22 @@ Name[ru]=Пирамида
 Name[de]=Pyramide
 Name[fr]=Pyramide
 Name[es]=Pirámide
+Name[hi]=पिरामिड
 
 Description=Can you tear the pyramid apart?
 Description[ru]=Вы сможете разобрать пирамиду на части?
 Description[de]=Können Sie die Pyramide zerstören?
 Description[fr]=Viendrez-vous à bout de la pyramide ?
 Description[es]=¿Puede desmontar la pirámide?
+Description[hi]=क्या आप इस पिरामिड को तोड़ सकते है?
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=pyramid.layout.layout
+FileName=pyramid.layout
 AuthorEmail=kde-games-devel@kde.org

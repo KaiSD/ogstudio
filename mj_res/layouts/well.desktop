@@ -4,19 +4,22 @@ Name[ru]=Колодец
 Name[de]=Brunnen
 Name[fr]=Puit
 Name[es]=Pozo
+Name[hi]=कुआ
 
 Description=A rectangular well with stairs at all sides
 Description[ru]=Прямоугольный колодец со ступеньками со всех сторон
 Description[de]=Ein rechteckiger Brunnen mit Stufen auf allen Seiten.
 Description[fr]=Un puit rectangulaire avec des escaliers de chaque côté
 Description[es]=Un pozo rectangular con escaleras por todos los lados
+Description[hi]=एक समकोण चतुर्भुज आकार का कुआ जिसमे सीढिय हो|
 
 Author=KDE Games team
 Author[ru]=Команда KDE Games
 Author[de]=Das Team von KDE Games
 Author[fr]=Equipe des jeux KDE
 Author[es]=Equipo de KDE de juegos
+Author[hi]=KDE खेल दल
 
 VersionFormat=1
-FileName=well.layout.layout
+FileName=well.layout
 AuthorEmail=kde-games-devel@kde.org

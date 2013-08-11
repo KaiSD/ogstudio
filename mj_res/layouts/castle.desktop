@@ -4,18 +4,21 @@ Name[ru]=Замок
 Name[de]=Burg
 Name[fr]=Château
 Name[es]=Castillo
+Name[hi]=किला
 
 Description=Vista-styled castle layout
 Description[ru]=Раскладка замка
 Description[de]=Eine Burg im Vista-Stil.
 Description[fr]=Forme d'un chateau dans le style Vista
 Description[es]=Diseño en forma de castillo estilo Vista
+Description[hi]=विस्टा शैली के किले की खाका
 
 Author=alchark
 Author[de]=alchark
 Author[fr]=alchark
 Author[es]=alchark
+Author[hi]=अल्चार्क
 
 VersionFormat=1
-FileName=castle.layout.layout
+FileName=castle.layout
 AuthorEmail=alchark@gmail.com
