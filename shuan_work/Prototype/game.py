@@ -7,10 +7,9 @@ Shuan gameplay prototype
 (c) 2012 Opensource Game Studio Team (http://opengamestudio.org)
 '''
 
-import coui
-import cairoui
+from modules import coui
 from sys import exit
-from missions import *
+from modules.missions import *
 
 VERSION = '0.6'
 CPROFILE = False
