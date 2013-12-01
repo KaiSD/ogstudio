@@ -20,7 +20,7 @@ class Settings(object):
     sound = True
     music = True
     fps = False
-    debug = True
+    debug = False
     
     mission = 0
     

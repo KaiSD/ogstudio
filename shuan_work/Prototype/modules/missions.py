@@ -139,7 +139,7 @@ class SequenceTemplate(Mission):
                         color = (255, 0, 0, 255),
                         anchor_x='left', anchor_y='center')
                 meter.position = rel(0.8, 0.05*(len(self.meters)+1)+0.05)
-                self.add(meter, z=10)
+                self.add_self(meter, z=10)
                 self.namedEnemies[args[2]] = e
                 self.meters[args[2]] = meter
         
