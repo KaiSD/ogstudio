@@ -1,0 +1,13 @@
+<compositor>
+    <buffer_template name="bufferTemplate" type="rectangle" width="1024" height="1024">
+        <internal_format>rgba16f</internal_format>
+        <source_format>rgba</source_format>
+        <source_type>float</source_type>
+    </buffer_template>
+    <texture_template name="textureTemplate" type="2d">
+        <wrap param="s">repeat</wrap>
+        <wrap param="t">repeat</wrap>
+        <filter param="min_filter">linear_mipmap_linear</filter>
+        <filter param="mag_filter">linear</filter>
+    </texture_template>
+</compositor>
