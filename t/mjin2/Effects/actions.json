@@ -1,0 +1,164 @@
+{
+    "move":
+    [
+        {
+            "name":"moveConveyorBelt",
+            "points":
+            [
+                {
+                    "position":"0 10 0",
+                    "duration":"0"      // default.
+                },
+                {
+                    "position":"22 10 0",
+                    "duration":"5000"
+                }
+            ],
+            "reversed":"0"              // default.
+        },
+        {
+            "name":"placeBox",
+            "instant":"1",
+            "points":
+            [
+                {
+                    "position":"0 0 150"
+                },
+                {
+                    "position":"30 7 10"
+                }
+            ]
+        },
+        {
+            "name":"removeBox",
+            "instant":"1",
+            "points":
+            [
+                {
+                    "position":"-8 7 10"
+                },
+                {
+                    "position":"0 0 150"
+                }
+            ]
+        },
+        {
+            "name":"robot1A",
+            "points":
+            [
+                {
+                    "position":"-30 10 150"
+                },
+                {
+                    "position":"-30 10 0",
+                    "duration":"5000",
+                }
+            ]
+        },
+        {
+            "name":"robot1ABack",
+            "template":"robot1A",
+            "reversed":"1"
+        },
+        {
+            "name":"robot2A",
+            "points":
+            [
+                {
+                    "position":"-8 10 150"
+                },
+                {
+                    "position":"-8 10 0",
+                    "duration":"5000",
+                }
+            ]
+        },
+        {
+            "name":"robot2ABack",
+            "template":"robot2A",
+            "reversed":"1"
+        },
+        {
+            "name":"robot3A",
+            "points":
+            [
+                {
+                    "position":"14 10 150"
+                },
+                {
+                    "position":"14 10 0",
+                    "duration":"5000",
+                }
+            ]
+        },
+        {
+            "name":"robot3ABack",
+            "template":"robot3A",
+            "reversed":"1"
+        },
+    ],
+    "moveBy":
+    [
+        {
+            "name":"moveBox",
+            "points":
+            [
+                {
+                    "position":"22 0 0",
+                    "duration":"5000"
+                }
+            ]
+        },
+        {
+            "name":"movePlane",
+            "template":"moveBox"
+        },
+    ],
+    "moveTo":
+    [
+        {
+            "name":"upliftConveyor",
+            "template":"",              // default.
+            "instant":"0",              // default.
+            "interpolation":"linear",   // default.
+            "points":
+            [
+                {
+                    "position":"0 10 0",
+                    "duration":"1000"
+                }
+            ]
+        }
+    ],
+    "sequence":
+    [
+        {
+            "name":"forward",
+            "actions":
+            [
+                "moveBelt",
+                "robot1A",
+                "placeBox",
+                "robot1ABack",
+                "moveBoxAndBelt",
+                "robot2A",
+                "removeBox",
+                "robot2ABack",
+                "movePlaneAndBelt",
+                "robot3A",
+                "robot3ABack"
+            ]
+        }
+    ]
+    "spawn":
+    [
+        {
+            "name":"moveBoxAndBelt",
+            "actions": ["moveBox", "moveBelt"]
+        },
+        {
+            "name":"movePlaneAndBelt",
+            "actions": ["movePlane", "moveBelt"]
+        }
+    ],
+}
