@@ -82,10 +82,16 @@ class Mission(layer.Layer):
         self.add_self(self.cursor, z=99)
     
     def add(self, item, z=1):
-        self.objectsBatch.add(item, z=z)
+        if issubclass(item.__class__, batch.BatchNode):
+            self.objectsBatch.add(item, z=z)
+        else:
+            self.add_self(item, z)
     
     def remove(self, item):
-        self.objectsBatch.remove(item)
+        if issubclass(item.__class__, batch.BatchNode):
+            self.objectsBatch.remove(item)
+        else:
+            self.remove_self(item)
     
     def add_self(self, item, z=1):
         super(Mission, self).add(item, z=z)

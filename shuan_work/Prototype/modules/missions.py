@@ -142,6 +142,7 @@ class SequenceTemplate(Mission):
                 self.add_self(meter, z=10)
                 self.namedEnemies[args[2]] = e
                 self.meters[args[2]] = meter
+                e.lifeMeter = meter
         
         def commandWaitHealth(*args):
             ship = self.namedEnemies[args[0]]
@@ -150,18 +151,10 @@ class SequenceTemplate(Mission):
                 if args[0] in self.namedEnemies:
                     if h > 0:
                         self.sequenceEntry -= 1
-                    else:
-                        self.meters[args[0]].kill()
-                        del self.meters[args[0]]
-                        del self.namedEnemies[args[0]]
             if len(args) == 2:
                 if args[0] in self.namedEnemies:
                     if h > args[1]:
                         self.sequenceEntry -= 1
-                    elif h <= 0:
-                        self.meters[args[0]].kill()
-                        del self.meters[args[0]]
-                        del self.namedEnemies[args[0]]
         
         def commandSwitchState(*args):
             if len(args) == 2:

@@ -849,6 +849,7 @@ class NPCShip(ASprite):
         self._kind =  kind
         self._target = None
         self.velocity = 0, 0
+        self.lifeMeter = None
         used = shipsUsed.get(kind, [])
         used.append(self)
         shipsUsed[kind] = used
@@ -874,6 +875,9 @@ class NPCShip(ASprite):
             self.owner.addExplosion(self.position)
             self.owner.score += self.score
             self.kill()
+            if self.lifeMeter:
+                self.lifeMeter.kill()
+                self.lifeMeter = None
         log(self._kind.idString, ' takes ', damage, ' dmg from ', source._kind.idString)
             
     
