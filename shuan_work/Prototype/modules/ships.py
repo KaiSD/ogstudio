@@ -9,6 +9,10 @@ Shuan gameplay prototype core module
 
 from devices import *
 
+EFFCONST = 0.25
+ECOUNTCONST = 55
+BASEHP = int(EFFCONST * (AGDPS+AWDPS)*60 / ECOUNTCONST)
+
 def loadNPCKind(data):
     get = data.get
     
@@ -47,8 +51,8 @@ def loadNPCKind(data):
     class LoadedNPCKind(NPCKind):
         image = img
         brains = get('brains', [])
-        life = get('life', 10)
-        damage = get('damage', 10)
+        life = get('life', 1) * BASEHP
+        damage = get('damage', 1) * BASEHP
         score = get('score', 1)
         shields = get('shield', 0)
         shieldsRegen = get('shieldsRegen', 0)

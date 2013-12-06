@@ -96,3 +96,14 @@ playerWeapons = tuple(pWeapons)
 playerDevices = tuple(pDevices)
 enemyWeapons = eWeapons
 helperWeapons = hWeapons
+
+AGDPS = 0
+AWDPS = 0
+
+for i in playerGuns:
+    AGDPS += i.damage/(i.pof * len(playerGuns))
+
+for i in playerWeapons:
+    AWDPS += i.damage/(i.pof * len(playerGuns))
+
+print AGDPS, AWDPS
