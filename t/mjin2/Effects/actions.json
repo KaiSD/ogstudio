@@ -14,7 +14,8 @@
                     "duration":"5000"
                 }
             ],
-            "reversed":"0"              // default.
+            "reversed":"0",             // default.
+            "node":"box1"
         },
         {
             "name":"placeBox",
@@ -51,7 +52,7 @@
                 },
                 {
                     "position":"-30 10 0",
-                    "duration":"5000",
+                    "duration":"5000"
                 }
             ]
         },
@@ -69,7 +70,7 @@
                 },
                 {
                     "position":"-8 10 0",
-                    "duration":"5000",
+                    "duration":"5000"
                 }
             ]
         },
@@ -87,7 +88,7 @@
                 },
                 {
                     "position":"14 10 0",
-                    "duration":"5000",
+                    "duration":"5000"
                 }
             ]
         },
@@ -95,7 +96,7 @@
             "name":"robot3ABack",
             "template":"robot3A",
             "reversed":"1"
-        },
+        }
     ],
     "moveBy":
     [
@@ -107,12 +108,13 @@
                     "position":"22 0 0",
                     "duration":"5000"
                 }
-            ]
+            ],
+            "node":"box2"
         },
         {
             "name":"movePlane",
             "template":"moveBox"
-        },
+        }
     ],
     "moveTo":
     [
@@ -127,7 +129,8 @@
                     "position":"0 10 0",
                     "duration":"1000"
                 }
-            ]
+            ],
+            "node":"box3"
         }
     ],
     "sequence":
@@ -149,7 +152,7 @@
                 "robot3ABack"
             ]
         }
-    ]
+    ],
     "spawn":
     [
         {
@@ -160,5 +163,5 @@
             "name":"movePlaneAndBelt",
             "actions": ["movePlane", "moveBelt"]
         }
-    ],
+    ]
 }
