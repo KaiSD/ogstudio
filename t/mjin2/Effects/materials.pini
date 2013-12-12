@@ -1,0 +1,6 @@
+box1 = bumpySurface
+box3 = crawlingBumpySurface
+box4 = crawlingPlainSurface
+box5 = bumpyGlowingSurface
+box6 = bumpyGlowing2Surface
+deformedbox1 = cubemapped
