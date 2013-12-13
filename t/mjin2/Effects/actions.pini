@@ -1,0 +1,64 @@
+move
+    moveConveyorBelt
+        point = 0 0 10 0
+        point = 5000 22 10 0
+        reversed = 0
+        node = box1
+    placeBox
+        instant = 1
+        point = 0 0 0 150
+        point = 0 30 7 10
+    removeBox
+        instant = 1
+        point = 0 -8 7 10
+        point = 0 0 0 150
+    robot1A
+        point = 0 -30 10 150
+        point = 5000 -30 10 0
+    robot1Back
+        template = robot1A
+        reversed = 1
+    robot2A
+        point = 0 -8 10 150
+        point = 5000 -8 10 0
+    robot2ABack
+        template = robot2A
+        reversed = 1
+    robot3A
+        point = 0 14 10 150
+        point = 5000 14 10 0
+    robot3ABack
+        template = robot3A
+        reversed = 1
+moveBy
+    moveBox
+        point = 5000 22 0 0
+        node = box2
+    movePlane
+        template = moveBox
+moveTo
+    upliftConveyor
+        instant = 0
+        interpolation = linear
+        point = 1000 0 10 0
+        node = box3
+sequence
+    forward
+        actions = moveBelt
+        actions = robot1A
+        actions = placeBox
+        actions = robot1ABack
+        actions = moveBoxAndBelt
+        actions = robot2A
+        actions = removeBox
+        actions = reobot2ABack
+        actions = movePlaneAndBelt
+        actions = robot3A
+        actions = robot3ABack
+spawn
+    moveBoxAndBelt
+        actions = moveBox
+        actions = moveBelt
+    movePlaneAndBelt
+        actions = movePlane
+        actions = moveBelt
