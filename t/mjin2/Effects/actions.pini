@@ -94,7 +94,20 @@ sequence
     backward
         template = forward
         reversed = 1
+    core
+        actions = waitRandom
+        actions = forward
+        actions = waitRandom
+        actions = backward
+repeat
+    overAndOver
+        n = 0
+        action = core
+timeSpeed
+    fast
+        rate = 2.5
+        action = overAndOver
+sequence
     main
         actions = upliftConveyorAndBelt
-        actions = forward
-        actions = backward
+        actions = fast
