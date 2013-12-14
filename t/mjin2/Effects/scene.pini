@@ -8,12 +8,12 @@ models
     conveyorRobot
         file = conveyorRobot.osgt
     lightroom
-        file = lightroom32x32.osgt
+        file = lightroom.osgt
     deformedbox
         file = deformedbox.osgt
 lights
     light
-        position = 0 -3 0
+        position = -30 -30 45
 nodes
     box1
         position = -1.5 0 1.5
@@ -35,18 +35,19 @@ nodes
         model = box
     conveyor1
         model = conveyor
-        position = 0 10 0
+        position = 0 10 -5
     conveyorBelt1
         model = conveyorBelt
-        position = 0 10 0
+        position = 0 10 -5
     conveyorRobot1
         model = conveyorRobot
-        position = 0 0 20
+        position = 0 0 150
     deformedbox1
         position = -1.5 0 4
         model = deformedbox
     room
         model = lightroom
+        position = 0 0 -20
 scene = light
 scene = box1
 scene = box2
