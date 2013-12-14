@@ -1,47 +1,76 @@
 move
-    moveConveyorBelt
+    moveBelt
         point = 0 0 10 0
         point = 5000 22 10 0
         reversed = 0
-        node = box1
+        node = conveyorBelt1
     placeBox
         instant = 1
         point = 0 0 0 150
-        point = 0 30 7 10
+        point = 0 -30 7 8
+        node = box1
+    placeDeformedBox
+        instant = 1
+        point = 0 0 0 150
+        point = 0 -8 7 8
+        node = deformedbox1
     removeBox
         instant = 1
-        point = 0 -8 7 10
+        point = 0 -8 7 8
         point = 0 0 0 150
+        node = box1
+    removeDeformedBox
+        instant = 1
+        point = 0 14 7 8
+        point = 0 0 0 150
+        node = deformedbox1
     robot1A
         point = 0 -30 10 150
         point = 5000 -30 10 0
-    robot1Back
+        node = conveyorRobot1
+    robot1ABack
         template = robot1A
         reversed = 1
     robot2A
         point = 0 -8 10 150
         point = 5000 -8 10 0
+        node = conveyorRobot1
     robot2ABack
         template = robot2A
         reversed = 1
     robot3A
         point = 0 14 10 150
         point = 5000 14 10 0
+        node = conveyorRobot1
     robot3ABack
         template = robot3A
         reversed = 1
 moveBy
     moveBox
         point = 5000 22 0 0
-        node = box2
-    movePlane
+        node = box1
+    moveDeformedBox
         template = moveBox
+        node = deformedbox1
 moveTo
     upliftConveyor
         instant = 0
         interpolation = linear
         point = 1000 0 10 0
-        node = box3
+        node = conveyor1
+    upliftConveyorBelt
+        template = upliftConveyor
+        node = conveyorBelt1
+spawn
+    moveBoxAndBelt
+        actions = moveBox
+        actions = moveBelt
+    moveDeformedBoxAndBelt
+        actions = moveDeformedBox
+        actions = moveBelt
+    upliftConveyorAndBelt
+        actions = upliftConveyor
+        actions = upliftConveyorBelt
 sequence
     forward
         actions = moveBelt
@@ -51,14 +80,17 @@ sequence
         actions = moveBoxAndBelt
         actions = robot2A
         actions = removeBox
-        actions = reobot2ABack
-        actions = movePlaneAndBelt
+        actions = placeDeformedBox
+        actions = robot2ABack
+        actions = moveDeformedBoxAndBelt
         actions = robot3A
+        actions = removeDeformedBox
         actions = robot3ABack
-spawn
-    moveBoxAndBelt
-        actions = moveBox
         actions = moveBelt
-    movePlaneAndBelt
-        actions = movePlane
-        actions = moveBelt
+    backward
+        template = forward
+        reversed = 1
+    main
+        actions = upliftConveyorAndBelt
+        actions = forward
+        actions = backward

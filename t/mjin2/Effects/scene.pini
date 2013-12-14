@@ -16,22 +16,7 @@ lights
         position = -30 -30 45
 nodes
     box1
-        position = -1.5 0 1.5
-        model = box
-    box2
-        position = 1.5 0 1.5
-        model = box
-    box3
-        position = -1.5 0 -1.5
-        model = box
-    box4
-        position = 1.5 0 -1.5
-        model = box
-    box5
-        position = -4 0 -1.5
-        model = box
-    box6
-        position = -4 0 1.5
+        position = 0 0 150
         model = box
     conveyor1
         model = conveyor
@@ -43,19 +28,14 @@ nodes
         model = conveyorRobot
         position = 0 0 150
     deformedbox1
-        position = -1.5 0 4
+        position = -8 7 150
         model = deformedbox
     room
         model = lightroom
-        position = 0 0 -20
+        position = 0 0 0
 scene = light
 scene = box1
-scene = box2
-scene = box3
-scene= box4
-scene =box5
-scene=box6
-scene   = deformedbox1
+scene = deformedbox1
 scene = room
 scene = conveyor1
 scene = conveyorBelt1
