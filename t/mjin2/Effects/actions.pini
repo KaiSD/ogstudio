@@ -1,3 +1,6 @@
+delay
+    wait2000 = 2000
+    waitRandom = 500 1500
 move
     moveBelt
         point = 0 0 10 0
@@ -85,6 +88,7 @@ sequence
         actions = moveDeformedBoxAndBelt
         actions = robot3A
         actions = removeDeformedBox
+        actions = wait2000
         actions = robot3ABack
         actions = moveBelt
     backward
