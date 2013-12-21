@@ -3,24 +3,24 @@
 #Generator osgexport 0.13.0
 
 osg::Group {
-  UniqueID 436
+  UniqueID 76
   Name "Root"
   StateSet TRUE {
     osg::StateSet {
-      UniqueID 437
+      UniqueID 77
       ModeList 1 {
         GL_LIGHT0 ON
       }
       AttributeList 2 {
         osg::LightModel {
-          UniqueID 438
+          UniqueID 78
           AmbientIntensity 0.00000 0.00000 0.00000 1.00000
           ColorControl SEPARATE_SPECULAR_COLOR
           LocalViewer FALSE
         }
         Value OFF
         osg::Material {
-          UniqueID 439
+          UniqueID 79
           Ambient TRUE Front 0.00000 0.00000 0.00000 1.00000 Back 0.00000 0.00000 0.00000 1.00000
           Diffuse TRUE Front 0.64000 0.64000 0.64000 1.00000 Back 0.64000 0.64000 0.64000 1.00000
           Specular TRUE Front 0.50000 0.50000 0.50000 1.00000 Back 0.50000 0.50000 0.50000 1.00000
@@ -33,27 +33,27 @@ osg::Group {
   }
   Children 3 {
     osg::MatrixTransform {
-      UniqueID 400
+      UniqueID 40
       Name "Cube"
       Children 1 {
         osg::Geode {
-          UniqueID 419
+          UniqueID 59
           Name "GeodeCube"
           Drawables 1 {
             osg::Geometry {
-              UniqueID 402
+              UniqueID 42
               Name "Cube"
               StateSet TRUE {
                 osg::StateSet {
-                  UniqueID 403
+                  UniqueID 43
                   Name "Material"
                   DataVariance DYNAMIC
                   UserDataContainer TRUE {
                     osg::DefaultUserDataContainer {
-                      UniqueID 417
+                      UniqueID 57
                       UDC_UserObjects 1 {
                         osg::StringValueObject {
-                          UniqueID 418
+                          UniqueID 58
                           Name "source"
                           Value "blender"
                         }
@@ -62,65 +62,65 @@ osg::Group {
                   }
                   AttributeList 1 {
                     osg::Material {
-                      UniqueID 404
+                      UniqueID 44
                       Name "Material"
                       DataVariance DYNAMIC
                       UserDataContainer TRUE {
                         osg::DefaultUserDataContainer {
-                          UniqueID 405
+                          UniqueID 45
                           UDC_UserObjects 11 {
                             osg::StringValueObject {
-                              UniqueID 406
+                              UniqueID 46
                               Name "source"
                               Value "blender"
                             }
                             osg::StringValueObject {
-                              UniqueID 407
+                              UniqueID 47
                               Name "DiffuseIntensity"
                               Value "0.800000011920929"
                             }
                             osg::StringValueObject {
-                              UniqueID 408
+                              UniqueID 48
                               Name "DiffuseColor"
                               Value "[ 0.800000, 0.800000, 0.800000 ]"
                             }
                             osg::StringValueObject {
-                              UniqueID 409
+                              UniqueID 49
                               Name "SpecularIntensity"
                               Value "0.5"
                             }
                             osg::StringValueObject {
-                              UniqueID 410
+                              UniqueID 50
                               Name "SpecularColor"
                               Value "[ 1.000000, 1.000000, 1.000000 ]"
                             }
                             osg::StringValueObject {
-                              UniqueID 411
+                              UniqueID 51
                               Name "SpecularHardness"
                               Value "50"
                             }
                             osg::StringValueObject {
-                              UniqueID 412
+                              UniqueID 52
                               Name "Emit"
                               Value "0.0"
                             }
                             osg::StringValueObject {
-                              UniqueID 413
+                              UniqueID 53
                               Name "Ambient"
                               Value "1.0"
                             }
                             osg::StringValueObject {
-                              UniqueID 414
+                              UniqueID 54
                               Name "Translucency"
                               Value "0.0"
                             }
                             osg::StringValueObject {
-                              UniqueID 415
+                              UniqueID 55
                               Name "DiffuseShader"
                               Value "LAMBERT"
                             }
                             osg::StringValueObject {
-                              UniqueID 416
+                              UniqueID 56
                               Name "SpecularShader"
                               Value "COOKTORR"
                             }
@@ -138,33 +138,38 @@ osg::Group {
                 }
               }
               PrimitiveSetList 1 {
-                  DrawElementsUInt GL_QUADS 12 {
+                  DrawElementsUInt GL_QUADS 16 {
                     0 1 2 3 
                     4 5 6 7 
                     8 9 10 11 
+                    12 13 14 15 
                   }
               }
               VertexData {
-                Array TRUE ArrayID 40 Vec3fArray 12 {
+                Array TRUE ArrayID 4 Vec3fArray 16 {
                   64.00000 479.99994 0.00000
                   64.00000 -32.00003 0.00000
                   -64.00002 -32.00000 0.00000
-                  -63.99998 480.00006 0.00000
-                  64.00000 479.99994 40.00000
-                  64.00000 479.99994 0.00000
-                  -63.99998 480.00006 0.00000
-                  -63.99998 480.00006 40.00000
-                  64.00000 479.99994 40.00000
-                  -63.99998 480.00006 40.00000
-                  -63.99998 480.00006 55.00000
+                  -64.00000 480.00006 0.00000
                   64.00000 479.99994 55.00000
+                  64.00000 479.99994 0.00000
+                  -64.00000 480.00006 0.00000
+                  -64.00000 480.00006 55.00000
+                  -64.00000 480.00006 0.00000
+                  -64.00002 -32.00000 0.00000
+                  -64.00000 -32.00000 55.00000
+                  -64.00000 480.00006 55.00000
+                  64.00000 -32.00003 0.00000
+                  64.00000 479.99994 0.00000
+                  64.00000 479.99994 55.00000
+                  64.00000 -32.00000 55.00000
                 }
                 Indices FALSE
                 Binding BIND_PER_VERTEX
                 Normalize 0
               }
               NormalData {
-                Array TRUE ArrayID 41 Vec3fArray 12 {
+                Array TRUE ArrayID 5 Vec3fArray 16 {
                   0.00000 0.00000 -1.00000
                   0.00000 0.00000 -1.00000
                   0.00000 0.00000 -1.00000
@@ -173,10 +178,14 @@ osg::Group {
                   0.00000 1.00000 0.00000
                   0.00000 1.00000 0.00000
                   0.00000 1.00000 0.00000
-                  0.00000 1.00000 0.00000
-                  0.00000 1.00000 0.00000
-                  0.00000 1.00000 0.00000
-                  0.00000 1.00000 0.00000
+                  -1.00000 0.00000 0.00000
+                  -1.00000 0.00000 0.00000
+                  -1.00000 0.00000 0.00000
+                  -1.00000 0.00000 0.00000
+                  1.00000 0.00000 0.00000
+                  1.00000 0.00000 0.00000
+                  1.00000 0.00000 0.00000
+                  1.00000 0.00000 0.00000
                 }
                 Indices FALSE
                 Binding BIND_PER_VERTEX
@@ -184,7 +193,7 @@ osg::Group {
               }
               TexCoordData 1 {
                 Data {
-                  Array TRUE ArrayID 42 Vec2fArray 12 {
+                  Array TRUE ArrayID 6 Vec2fArray 16 {
                     1.00000 1.00000
                     1.00000 0.00000
                     0.00000 0.00000
@@ -192,11 +201,15 @@ osg::Group {
                     0.00000 0.00000
                     0.00000 1.00000
                     0.00000 0.00000
+                    0.00000 0.00000
+                    0.00000 0.00000
+                    0.00000 0.00000
+                    0.00000 0.00000
+                    0.00000 0.00000
+                    0.00000 0.00000
                     1.00000 1.00000
-                    1.00000 1.00000
-                    0.00000 1.00000
-                    0.00000 1.00000
-                    1.00000 1.00000
+                    0.00000 0.00000
+                    0.00000 0.00000
                   }
                   Indices FALSE
                   Binding BIND_PER_VERTEX
@@ -215,61 +228,61 @@ osg::Group {
       }
     }
     osg::MatrixTransform {
-      UniqueID 420
+      UniqueID 60
       Name "Lamp"
       Children 1 {
         osg::LightSource {
-          UniqueID 421
+          UniqueID 61
           Name "Lamp"
           Light TRUE {
             osg::Light {
-              UniqueID 422
+              UniqueID 62
               UserDataContainer TRUE {
                 osg::DefaultUserDataContainer {
-                  UniqueID 423
+                  UniqueID 63
                   UDC_UserObjects 9 {
                     osg::StringValueObject {
-                      UniqueID 424
+                      UniqueID 64
                       Name "source"
                       Value "blender"
                     }
                     osg::StringValueObject {
-                      UniqueID 425
+                      UniqueID 65
                       Name "Energy"
                       Value "1.0"
                     }
                     osg::StringValueObject {
-                      UniqueID 426
+                      UniqueID 66
                       Name "Color"
                       Value "[ 1.000000, 1.000000, 1.000000 ]"
                     }
                     osg::StringValueObject {
-                      UniqueID 427
+                      UniqueID 67
                       Name "UseDiffuse"
                       Value "true"
                     }
                     osg::StringValueObject {
-                      UniqueID 428
+                      UniqueID 68
                       Name "UseSpecular"
                       Value "true"
                     }
                     osg::StringValueObject {
-                      UniqueID 429
+                      UniqueID 69
                       Name "Distance"
                       Value "29.999982833862305"
                     }
                     osg::StringValueObject {
-                      UniqueID 430
+                      UniqueID 70
                       Name "FalloffType"
                       Value "INVERSE_SQUARE"
                     }
                     osg::StringValueObject {
-                      UniqueID 431
+                      UniqueID 71
                       Name "UseSphere"
                       Value "false"
                     }
                     osg::StringValueObject {
-                      UniqueID 432
+                      UniqueID 72
                       Name "Type"
                       Value "POINT"
                     }
@@ -299,12 +312,12 @@ osg::Group {
       }
     }
     osg::MatrixTransform {
-      UniqueID 434
+      UniqueID 74
       Name "Camera"
       Matrix {
-        0.68588 0.72763 -0.01082 0.00000
-        -0.31737 0.31247 0.89534 0.00000
-        0.65486 -0.61067 0.44525 0.00000
+        0.99989 -0.00996 -0.01082 0.00000
+        0.01412 0.44515 0.89534 0.00000
+        -0.00410 -0.89540 0.44525 0.00000
         7.48113 -6.50764 5.34367 1.00000
       }
     }
