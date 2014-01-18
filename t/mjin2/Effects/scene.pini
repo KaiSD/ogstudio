@@ -11,6 +11,8 @@ models
         file = lightroom.osgt
     l2_env_floor
         file = l2_env_floor.osgt
+    l2_env_wall
+        file = l2_env_wall.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -38,10 +40,14 @@ nodes
     floor
         model = l2_env_floor
         position = 0 0 0
+    wall
+        model = l2_env_wall
+        position = 0 16 0
 scene = light
 scene = box1
 scene = deformedbox1
 scene = floor
+scene = wall
 scene = conveyor1
 scene = conveyorBelt1
 scene = conveyorRobot1

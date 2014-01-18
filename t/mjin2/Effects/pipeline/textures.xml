@@ -40,4 +40,10 @@
     <texture name="floorNormal" template="textureTemplate">
         <file>l2_env_floor_cell_n.png</file>
     </texture>
+    <texture name="wallDiffuse" template="textureTemplate">
+        <file>cement.jpg</file>
+    </texture>
+    <texture name="wallNormal" template="textureTemplate">
+        <file>cement_n.png</file>
+    </texture>
 </compositor>

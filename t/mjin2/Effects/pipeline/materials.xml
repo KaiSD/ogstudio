@@ -66,4 +66,11 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="wallSurface">
+        <texture unit="0" varname="diffMap">wallDiffuse</texture>
+        <texture unit="1" varname="bumpMap">wallNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
 </compositor>
