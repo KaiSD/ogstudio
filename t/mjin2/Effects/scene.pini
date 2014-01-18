@@ -9,6 +9,8 @@ models
         file = conveyorRobot.osgt
     lightroom
         file = lightroom.osgt
+    l2_env_floor
+        file = l2_env_floor.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -33,10 +35,13 @@ nodes
     room
         model = lightroom
         position = 0 0 0
+    floor
+        model = l2_env_floor
+        position = 0 0 0
 scene = light
 scene = box1
 scene = deformedbox1
-scene = room
+scene = floor
 scene = conveyor1
 scene = conveyorBelt1
 scene = conveyorRobot1

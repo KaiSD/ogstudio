@@ -1,2 +1,3 @@
 box1 = bumpySurface
 deformedbox1 = cubemapped
+floor = floorSurface

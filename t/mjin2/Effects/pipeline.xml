@@ -1,5 +1,6 @@
 <compositor>
     <include>pipeline/templates.xml</include>
+    <include>pipeline/textures.xml</include>
     <include>pipeline/materials.xml</include>
     <shader name="pass1VS" type="vertex">
         <file>pipeline/pass1.vert</file>

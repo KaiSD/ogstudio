@@ -1,0 +1,43 @@
+<compositor>
+    <texture name="cubemap" type="cubemap">
+        <wrap param="s">repeat</wrap>
+        <wrap param="t">repeat</wrap>
+        <filter param="min_filter">linear_mipmap_linear</filter>
+        <filter param="mag_filter">linear</filter>
+        <file index="0">cubemap/posx.jpg</file>
+        <file index="1">cubemap/negx.jpg</file>
+        <file index="2">cubemap/posy.jpg</file>
+        <file index="3">cubemap/negy.jpg</file>
+        <file index="4">cubemap/posz.jpg</file>
+        <file index="5">cubemap/negz.jpg</file>
+    </texture>
+    <!-- defaults begin -->
+    <texture name="noGlow" template="textureTemplate">
+        <file>noglow.png</file>
+    </texture>
+    <texture name="noise" template="textureTemplate">
+        <file>noise_tex.jpg</file>
+    </texture>
+    <!-- defaults end -->
+    <texture name="bump" template="textureTemplate">
+        <file>bump_tex.jpg</file>
+    </texture>
+    <texture name="glow" template="textureTemplate">
+        <file>glow_tex.png</file>
+    </texture>
+    <texture name="glow2" template="textureTemplate">
+        <file>glow2_tex.png</file>
+    </texture>
+    <texture name="reflectionMask" template="textureTemplate">
+        <file>reflection_mask.png</file>
+    </texture>
+    <texture name="reflectionGlow" template="textureTemplate">
+        <file>reflection_glow.png</file>
+    </texture>
+    <texture name="floorDiffuse" template="textureTemplate">
+        <file>l2_env_floor_cell_tex.png</file>
+    </texture>
+    <texture name="floorNormal" template="textureTemplate">
+        <file>l2_env_floor_cell_n.png</file>
+    </texture>
+</compositor>
