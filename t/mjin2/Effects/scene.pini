@@ -13,11 +13,13 @@ models
         file = l2_env_floor.osgt
     l2_env_wall
         file = l2_env_wall.osgt
+    l2_env_roof_plate
+        file = l2_env_roof_plate.osgt
     deformedbox
         file = deformedbox.osgt
 lights
     light
-        position = -30 -30 45
+        position = 0 0 5
 nodes
     box1
         position = 0 0 150
@@ -43,11 +45,15 @@ nodes
     wall
         model = l2_env_wall
         position = 0 16 0
+    roof
+        model = l2_env_roof_plate
+        position = 0 0 10
 scene = light
 scene = box1
 scene = deformedbox1
 scene = floor
 scene = wall
+scene = roof
 scene = conveyor1
 scene = conveyorBelt1
 scene = conveyorRobot1

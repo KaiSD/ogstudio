@@ -73,4 +73,10 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="roofSurface">
+        <texture unit="1" varname="bumpMap">roofNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
 </compositor>
