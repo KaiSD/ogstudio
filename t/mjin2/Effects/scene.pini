@@ -19,7 +19,7 @@ models
         file = deformedbox.osgt
 lights
     light
-        position = 0 0 5
+        position = 0 0 4
 nodes
     box1
         position = 0 0 150

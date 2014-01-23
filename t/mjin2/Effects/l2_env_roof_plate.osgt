@@ -8,46 +8,37 @@ osg::Group {
   Children 1 {
     osg::MatrixTransform {
       UniqueID 0
-      Name "Plane.002"
+      Name "Plane.003"
       Children 1 {
         osg::Geode {
           UniqueID 3
-          Name "GeodePlane.002"
+          Name "GeodePlane.003"
           Drawables 1 {
             osg::Geometry {
               UniqueID 2
-              Name "Plane.002"
+              Name "Plane.003"
               PrimitiveSetList 1 {
-                  DrawElementsUInt GL_QUADS 8 {
+                  DrawElementsUInt GL_QUADS 4 {
                     0 1 2 3 
-                    4 5 6 7 
                   }
               }
               VertexData {
-                Array TRUE ArrayID 0 Vec3fArray 8 {
-                  5.00669 -8.00000 -0.21978
-                  0.00000 -8.00000 0.21825
-                  0.00000 8.00000 0.21825
-                  5.00669 8.00000 -0.21978
-                  -5.00669 -8.00000 -0.21978
-                  -5.00669 8.00000 -0.21978
-                  0.00000 8.00000 0.21825
-                  0.00000 -8.00000 0.21825
+                Array TRUE ArrayID 0 Vec3fArray 4 {
+                  2.50000 -8.00000 0.00000
+                  -2.50000 -8.00000 0.00000
+                  -2.50000 8.00000 0.00000
+                  2.50000 8.00000 0.00000
                 }
                 Indices FALSE
                 Binding BIND_PER_VERTEX
                 Normalize 0
               }
               NormalData {
-                Array TRUE ArrayID 1 Vec3fArray 8 {
-                  -0.08716 0.00000 -0.99619
-                  -0.08716 0.00000 -0.99619
-                  -0.08716 0.00000 -0.99619
-                  -0.08716 0.00000 -0.99619
-                  0.08716 0.00000 -0.99619
-                  0.08716 0.00000 -0.99619
-                  0.08716 0.00000 -0.99619
-                  0.08716 0.00000 -0.99619
+                Array TRUE ArrayID 1 Vec3fArray 4 {
+                  0.00000 -0.00000 -1.00000
+                  0.00000 -0.00000 -1.00000
+                  0.00000 -0.00000 -1.00000
+                  0.00000 -0.00000 -1.00000
                 }
                 Indices FALSE
                 Binding BIND_PER_VERTEX
@@ -55,15 +46,11 @@ osg::Group {
               }
               TexCoordData 1 {
                 Data {
-                  Array TRUE ArrayID 2 Vec2fArray 8 {
+                  Array TRUE ArrayID 2 Vec2fArray 4 {
                     0.00000 1.00000
-                    0.00000 0.50000
-                    1.00000 0.50000
+                    0.00000 0.00000
+                    1.00000 0.00000
                     1.00000 1.00000
-                    0.00000 0.00008
-                    1.00000 0.00008
-                    1.00000 0.50000
-                    0.00000 0.50000
                   }
                   Indices FALSE
                   Binding BIND_PER_VERTEX
