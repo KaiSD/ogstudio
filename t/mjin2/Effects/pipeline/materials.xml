@@ -82,7 +82,11 @@
     <material name="columnSurface">
         <texture unit="0" varname="diffMap">columnDiffuse</texture>
         <texture unit="1" varname="bumpMap">columnNormal</texture>
+        <texture unit="5" varname="heightMap">columnHeight</texture>
         <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useHeightMap" type="int">
             <value>1</value>
         </uniform>
     </material>

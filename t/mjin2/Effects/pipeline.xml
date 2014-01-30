@@ -49,6 +49,10 @@
             <uniform name="crawlBumpMap" type="int">
                 <value>0</value>
             </uniform>
+            <uniform name="useHeightMap" type="int">
+                <value>0</value>
+            </uniform>
+            <vertex_attribute name="Tangent" index="6" />
             <!-- defaults end -->
             <output_buffer target="color0">pass1Positions</output_buffer>
             <output_buffer target="color1">pass1Normals</output_buffer>

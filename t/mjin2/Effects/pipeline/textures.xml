@@ -55,4 +55,7 @@
     <texture name="columnNormal" template="textureTemplate">
         <file>l2_env_column_n.png</file>
     </texture>
+    <texture name="columnHeight" template="textureTemplate">
+        <file>l2_env_column_h.png</file>
+    </texture>
 </compositor>

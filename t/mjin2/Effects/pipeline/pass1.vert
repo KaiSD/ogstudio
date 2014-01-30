@@ -1,6 +1,7 @@
 
 // Execution path controls.
 uniform int useCubeMap;
+uniform int useHeightMap;
 
 uniform mat4 osg_ViewMatrix;
 uniform mat4 osg_ViewMatrixInverse;
@@ -12,6 +13,10 @@ varying vec3 b_worldspace;
 // For cube mapping.
 varying vec3 cubeMapNormal;
 varying vec3 cubeMapEye;
+// For height mapping.
+varying vec3 viewDir_tangentspace;
+
+attribute vec3 Tangent;
 
 void main()
 {
@@ -33,13 +38,29 @@ void main()
     // Normal.
     n_worldspace   = modelMatrix3x3 * gl_Normal;
     // Tangent.
-    t_worldspace   = modelMatrix3x3 * gl_MultiTexCoord1.xyz;
+    t_worldspace   = modelMatrix3x3 * Tangent;
     // Bitangent / binormal.
     b_worldspace   = cross(n_worldspace, t_worldspace);
     if (useCubeMap > 0)
     {
         cubeMapNormal = gl_NormalMatrix * gl_Normal;
         cubeMapEye    = vec3(gl_ModelViewMatrix * gl_Vertex);
+    }
+    if (useHeightMap > 0)
+    {
+        // View direction = Camera position - vertex position.
+        // Since Camera is always at (0, 0, 0) in Camera (eye) space,
+        // we simply get -vertex position.
+        vec3 viewDir_cameraspace = -vec3(gl_ModelViewMatrix * gl_Vertex);
+        viewDir_cameraspace = normalize(viewDir_cameraspace);
+        vec3 n_cameraspace = normalize(gl_NormalMatrix * gl_Normal);
+        vec3 t_cameraspace = normalize(gl_NormalMatrix * Tangent);
+        vec3 b_cameraspace = cross(n_cameraspace, t_cameraspace);
+        // Convert view direction from Camera (eye) space to Tangent one
+        // using the inverse of TBN matrix.
+        viewDir_tangentspace.x = dot(viewDir_cameraspace, t_cameraspace);
+        viewDir_tangentspace.y = dot(viewDir_cameraspace, b_cameraspace);
+        viewDir_tangentspace.z = dot(viewDir_cameraspace, n_cameraspace);
     }
 }
 
