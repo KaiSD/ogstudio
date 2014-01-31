@@ -17,6 +17,8 @@ models
         file = l2_env_roof_plate.osgt
     l2_env_column
         file = l2_env_column.osgt
+    l2_env_pipe
+        file = l2_env_pipe.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -134,6 +136,9 @@ nodes
     r2c5
         model = l2_env_column
         position = 15 16 0
+    pipe
+        model = l2_env_pipe
+        position = -4 -10 6
 scene = light
 scene = box1
 scene = deformedbox1
@@ -167,6 +172,7 @@ scene = r2c2
 scene = r2c3
 scene = r2c4
 scene = r2c5
+scene = pipe
 scene = conveyor1
 scene = conveyorBelt1
 scene = conveyorRobot1
