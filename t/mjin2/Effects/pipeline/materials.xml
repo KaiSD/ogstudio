@@ -93,11 +93,7 @@
     <material name="pipeSurface">
         <texture unit="0" varname="diffMap">columnDiffuse</texture>
         <texture unit="1" varname="bumpMap">pipeNormal</texture>
-        <texture unit="5" varname="heightMap">pipeHeight</texture>
         <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="useHeightMap" type="int">
             <value>1</value>
         </uniform>
     </material>
