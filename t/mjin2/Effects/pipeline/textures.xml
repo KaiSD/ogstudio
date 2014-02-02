@@ -61,7 +61,4 @@
     <texture name="pipeNormal" template="textureTemplate">
         <file>l2_env_pipe_n.png</file>
     </texture>
-    <texture name="pipeHeight" template="textureTemplate">
-        <file>l2_env_pipe_h.png</file>
-    </texture>
 </compositor>

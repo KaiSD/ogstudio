@@ -138,7 +138,7 @@ nodes
         position = 15 16 0
     pipe
         model = l2_env_pipe
-        position = -4 -10 6
+        position = -3.9 0 6.2
 scene = light
 scene = box1
 scene = deformedbox1
