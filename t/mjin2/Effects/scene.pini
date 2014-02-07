@@ -19,6 +19,8 @@ models
         file = l2_env_column.osgt
     l2_env_pipe
         file = l2_env_pipe.osgt
+    l2_env_pipe_disk
+        file = l2_env_pipe_disk.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -139,6 +141,9 @@ nodes
     pipe
         model = l2_env_pipe
         position = -3.9 0 6.2
+    pipeDisk
+        model = l2_env_pipe_disk
+        position = -3.9 0 6.2
 scene = light
 scene = box1
 scene = deformedbox1
@@ -172,7 +177,8 @@ scene = r2c2
 scene = r2c3
 scene = r2c4
 scene = r2c5
-scene = pipe
 scene = conveyor1
 scene = conveyorBelt1
 scene = conveyorRobot1
+scene = pipe
+scene = pipeDisk

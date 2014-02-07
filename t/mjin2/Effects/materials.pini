@@ -31,3 +31,4 @@ r2c3 = columnSurface
 r2c4 = columnSurface
 r2c5 = columnSurface
 pipe = pipeSurface
+pipeDisk = pipeDiskSurface

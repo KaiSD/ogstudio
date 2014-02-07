@@ -61,4 +61,7 @@
     <texture name="pipeNormal" template="textureTemplate">
         <file>l2_env_pipe_n.png</file>
     </texture>
+    <texture name="pipeDiskNormal" template="textureTemplate">
+        <file>l2_env_pipe_disk_n.png</file>
+    </texture>
 </compositor>
