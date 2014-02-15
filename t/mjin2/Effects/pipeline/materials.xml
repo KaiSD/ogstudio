@@ -104,4 +104,11 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="railBaseSurface">
+        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="1" varname="bumpMap">railBaseNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
 </compositor>
