@@ -38,7 +38,7 @@ void main()
     // Normal.
     n_worldspace   = modelMatrix3x3 * gl_Normal;
     // Tangent.
-    t_worldspace   = modelMatrix3x3 * Tangent;
+    t_worldspace   = -modelMatrix3x3 * Tangent;
     // Bitangent / binormal.
     b_worldspace   = cross(n_worldspace, t_worldspace);
     if (useCubeMap > 0)
@@ -54,7 +54,7 @@ void main()
         vec3 viewDir_cameraspace = -vec3(gl_ModelViewMatrix * gl_Vertex);
         viewDir_cameraspace = normalize(viewDir_cameraspace);
         vec3 n_cameraspace = normalize(gl_NormalMatrix * gl_Normal);
-        vec3 t_cameraspace = normalize(gl_NormalMatrix * Tangent);
+        vec3 t_cameraspace = -normalize(gl_NormalMatrix * Tangent);
         vec3 b_cameraspace = cross(n_cameraspace, t_cameraspace);
         // Convert view direction from Camera (eye) space to Tangent one
         // using the inverse of TBN matrix.
