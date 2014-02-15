@@ -67,4 +67,7 @@
     <texture name="railBaseNormal" template="textureTemplate">
         <file>l2_env_rail_base_n.png</file>
     </texture>
+    <texture name="railNormal" template="textureTemplate">
+        <file>l2_env_rail_n.png</file>
+    </texture>
 </compositor>
