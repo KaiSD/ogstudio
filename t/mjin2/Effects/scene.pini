@@ -25,6 +25,8 @@ models
         file = l2_env_rail_base.osgt
     l2_env_rail
         file = l2_env_rail.osgt
+    l2_env_line
+        file = l2_env_line.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -158,6 +160,8 @@ nodes
         model = l2_env_rail_base
     rail
         model = l2_env_rail
+    line
+        model = l2_env_line
 scene = light
 scene = box1
 scene = deformedbox1
@@ -200,3 +204,4 @@ scene = rpipe
 scene = rpipeDisk
 scene = railBase
 scene = rail
+scene = line
