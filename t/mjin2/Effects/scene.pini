@@ -27,6 +27,8 @@ models
         file = l2_env_rail.osgt
     l2_env_line
         file = l2_env_line.osgt
+    l2_env_line_belt
+        file = l2_env_line_belt.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -162,6 +164,15 @@ nodes
         model = l2_env_rail
     line
         model = l2_env_line
+    lineBelt1
+        model = l2_env_line_belt
+        position = 0 10 0
+    lineBelt2
+        model = l2_env_line_belt
+        position = 0 2 0
+    lineBelt3
+        model = l2_env_line_belt
+        position = 0 -6 0
 scene = light
 scene = box1
 scene = deformedbox1
@@ -205,3 +216,6 @@ scene = rpipeDisk
 scene = railBase
 scene = rail
 scene = line
+scene = lineBelt1
+scene = lineBelt2
+scene = lineBelt3

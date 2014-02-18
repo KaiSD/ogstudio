@@ -35,3 +35,6 @@ pipeDisk = pipeDiskSurface
 railBase = railBaseSurface
 rail = railSurface
 line = lineSurface
+lineBelt1 = lineBeltSurface
+lineBelt2 = lineBeltSurface
+lineBelt3 = lineBeltSurface

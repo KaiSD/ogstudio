@@ -73,4 +73,7 @@
     <texture name="lineNormal" template="textureTemplate">
         <file>l2_env_line_n.png</file>
     </texture>
+    <texture name="lineBeltNormal" template="textureTemplate">
+        <file>l2_env_line_belt_n.png</file>
+    </texture>
 </compositor>
