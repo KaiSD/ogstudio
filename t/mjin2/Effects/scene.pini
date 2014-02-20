@@ -29,6 +29,10 @@ models
         file = l2_env_line.osgt
     l2_env_line_belt
         file = l2_env_line_belt.osgt
+    l2_env_processor
+        file = l2_env_processor.osgt
+    l2_env_crane_base
+        file = l2_env_crane_base.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -173,6 +177,11 @@ nodes
     lineBelt3
         model = l2_env_line_belt
         position = 0 -6 0
+    processor
+        model = l2_env_processor
+    craneBase
+        model = l2_env_crane_base
+        position = 0 0 8.1
 scene = light
 scene = box1
 scene = deformedbox1
@@ -219,3 +228,5 @@ scene = line
 scene = lineBelt1
 scene = lineBelt2
 scene = lineBelt3
+scene = processor
+scene = craneBase

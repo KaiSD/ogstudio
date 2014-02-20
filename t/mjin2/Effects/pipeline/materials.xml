@@ -132,4 +132,18 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="processorSurface">
+        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="1" varname="bumpMap">processorNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseSurface">
+        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="1" varname="bumpMap">craneBaseNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
 </compositor>

@@ -76,4 +76,10 @@
     <texture name="lineBeltNormal" template="textureTemplate">
         <file>l2_env_line_belt_n.png</file>
     </texture>
+    <texture name="processorNormal" template="textureTemplate">
+        <file>l2_env_processor_n.png</file>
+    </texture>
+    <texture name="craneBaseNormal" template="textureTemplate">
+        <file>l2_env_crane_base_n.png</file>
+    </texture>
 </compositor>
