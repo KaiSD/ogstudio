@@ -35,6 +35,8 @@ models
         file = l2_env_crane_base.osgt
     l2_env_crane_arms_base
         file = l2_env_crane_arms_base.osgt
+    l2_env_crane_arms_rot
+        file = l2_env_crane_arms_rot.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -187,6 +189,9 @@ nodes
     craneArmsBase
         model = l2_env_crane_arms_base
         position = 0 0 7.9
+    craneArmsRot
+        model = l2_env_crane_arms_rot
+        position = 0 0 7.3
 scene = light
 scene = box1
 scene = deformedbox1
@@ -236,3 +241,4 @@ scene = lineBelt3
 scene = processor
 scene = craneBase
 scene = craneArmsBase
+scene = craneArmsRot
