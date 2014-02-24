@@ -42,3 +42,4 @@ processor = processorSurface
 craneBase = craneBaseSurface
 craneArmsBase = craneArmsBaseSurface
 craneArmsRot = craneArmsRotSurface
+craneArmsPiston = craneArmsPistonSurface

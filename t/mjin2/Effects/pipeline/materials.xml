@@ -160,4 +160,11 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="craneArmsPistonSurface">
+        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="1" varname="bumpMap">craneArmsPistonNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
 </compositor>

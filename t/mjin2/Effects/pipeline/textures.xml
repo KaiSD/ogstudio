@@ -88,4 +88,7 @@
     <texture name="craneArmsRotNormal" template="textureTemplate">
         <file>l2_env_crane_arms_rot_n.png</file>
     </texture>
+    <texture name="craneArmsPistonNormal" template="textureTemplate">
+        <file>l2_env_crane_arms_piston_n.png</file>
+    </texture>
 </compositor>

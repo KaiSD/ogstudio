@@ -37,6 +37,8 @@ models
         file = l2_env_crane_arms_base.osgt
     l2_env_crane_arms_rot
         file = l2_env_crane_arms_rot.osgt
+    l2_env_crane_arms_piston
+        file = l2_env_crane_arms_piston.osgt
     deformedbox
         file = deformedbox.osgt
 lights
@@ -156,16 +158,16 @@ nodes
         position = 15 16 0
     pipe
         model = l2_env_pipe
-        position = -3.9 0 6.2
+        position = -4.5 0 6.1
     pipeDisk
         model = l2_env_pipe_disk
-        position = -3.9 0 6.2
+        position = -4.5 0 6.1
     rpipe
         model = l2_env_pipe
-        position = 3.9 0 6.2
+        position = 4.5 0 6.1
     rpipeDisk
         model = l2_env_pipe_disk
-        position = 3.9 0 6.2
+        position = 4.5 0 6.1
     railBase
         model = l2_env_rail_base
     rail
@@ -192,6 +194,9 @@ nodes
     craneArmsRot
         model = l2_env_crane_arms_rot
         position = 0 0 7.3
+    craneArmsPiston
+        model = l2_env_crane_arms_piston
+        position = 0 0 6.3
 scene = light
 scene = box1
 scene = deformedbox1
@@ -242,3 +247,4 @@ scene = processor
 scene = craneBase
 scene = craneArmsBase
 scene = craneArmsRot
+scene = craneArmsPiston
