@@ -1,113 +1,17 @@
-delay
-    wait2000 = 2000
-    waitRandom = 500 1500
-move
-    moveBelt
-        point = 0 0 10 0
-        point = 5000 22 10 0
-        reversed = 0
-        node = conveyorBelt1
-    placeBox
-        instant = 1
-        point = 0 0 0 150
-        point = 0 -30 7 8
-        node = box1
-    placeDeformedBox
-        instant = 1
-        point = 0 0 0 150
-        point = 0 -8 7 8
-        node = deformedbox1
-    removeBox
-        instant = 1
-        point = 0 -8 7 8
-        point = 0 0 0 150
-        node = box1
-    removeDeformedBox
-        instant = 1
-        point = 0 14 7 8
-        point = 0 0 0 150
-        node = deformedbox1
-    robot1A
-        point = 0 -30 10 150
-        point = 5000 -30 10 0
-        node = conveyorRobot1
-    robot1ABack
-        template = robot1A
-        reversed = 1
-    robot2A
-        point = 0 -8 10 150
-        point = 5000 -8 10 0
-        node = conveyorRobot1
-    robot2ABack
-        template = robot2A
-        reversed = 1
-    robot3A
-        point = 0 14 10 150
-        point = 5000 14 10 0
-        node = conveyorRobot1
-    robot3ABack
-        template = robot3A
-        reversed = 1
 moveBy
-    moveBox
-        point = 5000 22 0 0
-        node = box1
-    moveDeformedBox
-        template = moveBox
-        node = deformedbox1
-moveTo
-    upliftConveyor
-        instant = 0
-        interpolation = linear
-        point = 1000 0 10 0
-        node = conveyor1
-    upliftConveyorBelt
-        template = upliftConveyor
-        node = conveyorBelt1
-spawn
-    moveBoxAndBelt
-        actions = moveBox
-        actions = moveBelt
-    moveDeformedBoxAndBelt
-        actions = moveDeformedBox
-        actions = moveBelt
-    upliftConveyorAndBelt
-        actions = upliftConveyor
-        actions = upliftConveyorBelt
+    moveBelt1Forward
+        point = 0 0 0 0
+        point = 1000 0.2 0 0
+        node = lineBelt3
+    placeBelt1Back
+        point = 0 0 0 0
+        point = 0 -0.2 0 0
+        node = lineBelt3
 sequence
-    forward
-        actions = moveBelt
-        actions = robot1A
-        actions = placeBox
-        actions = robot1ABack
-        actions = moveBoxAndBelt
-        actions = robot2A
-        actions = removeBox
-        actions = placeDeformedBox
-        actions = robot2ABack
-        actions = moveDeformedBoxAndBelt
-        actions = robot3A
-        actions = removeDeformedBox
-        actions = wait2000
-        actions = robot3ABack
-        actions = moveBelt
-    backward
-        template = forward
-        reversed = 1
-    core
-        actions = waitRandom
-        actions = forward
-        actions = waitRandom
-        actions = backward
+    moveBelt1
+        actions = moveBelt1Forward
+        actions = placeBelt1Back
 repeat
-    overAndOver
-        n = 0
-        action = core
-timeSpeed
-    fast
-        rate = 2.5
-        action = overAndOver
-sequence
     main
-        actions = upliftConveyorAndBelt
-        actions = fast
+        n = 0
+        action = moveBelt1
