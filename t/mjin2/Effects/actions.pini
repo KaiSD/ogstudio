@@ -1,11 +1,11 @@
 moveBy
     moveBelt1Forward
         point = 0 0 0 0
-        point = 1000 0.2 0 0
+        point = 20000 10 0 0
         node = lineBelt3
     placeBelt1Back
         point = 0 0 0 0
-        point = 0 -0.2 0 0
+        point = 0 -10 0 0
         node = lineBelt3
 sequence
     moveBelt1
