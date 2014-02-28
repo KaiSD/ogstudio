@@ -46,7 +46,7 @@ moveBy
         node = craneArmsPiston
     lowerCraneArmsPiston
         point = 0 0 0 0
-        point = 2500 0 0 -3
+        point = 2700 0 0 -2.7
         node = craneArmsPiston
 spawn
     moveCraneToLine1

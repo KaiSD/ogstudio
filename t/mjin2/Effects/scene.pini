@@ -171,7 +171,7 @@ nodes
         position = 0 0 7.3
     craneArmsPiston
         model = l2_env_crane_arms_piston
-        position = 0 0 7.2
+        position = 0 0 7.1
     subject
         model = box
         position = -10 10 0.6
