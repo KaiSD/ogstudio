@@ -1,5 +1,5 @@
 delay
-    waitRandom = 1000 2000
+    waitRandom = 500 1500
 moveBy
     placeBelt1Back
         point = 0 0 0 0
@@ -48,6 +48,12 @@ moveBy
         point = 0 0 0 0
         point = 2700 0 0 -2.7
         node = craneArmsPiston
+    liftCraneArmsPiston
+        template = lowerCraneArmsPiston
+        reversed = 1
+    liftSubject
+        template = liftCraneArmsPiston
+        node = subject
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
@@ -64,6 +70,9 @@ spawn
     moveBeltAndSubjectToPostProcessor1
         actions = moveBeltPostProcessor1
         actions = moveSubjectPostProcessor1
+    liftCraneArmsPistonAndSubjectAfterDelay
+        actions = liftCraneArmsPiston
+        actions = liftSubject
 sequence
     subjectToPostProcessor1
         actions = moveBeltAndSubjectToPreProcessor1
@@ -72,6 +81,9 @@ sequence
     craneToPostProcessor1
         actions = moveCraneToLine1
         actions = moveCraneToPostProcessor1
+    liftCraneArmsPistonAndSubject
+        actions = waitRandom
+        actions = liftCraneArmsPistonAndSubjectAfterDelay
 spawn
     postProcessor1
         actions = subjectToPostProcessor1
@@ -80,7 +92,8 @@ sequence
     mainSequence
         actions = postProcessor1
         actions = lowerCraneArmsPiston
+        actions = liftCraneArmsPistonAndSubject
 timeSpeed
     main
-        rate = 5
+        rate = 1
         action = mainSequence
