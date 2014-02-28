@@ -1,14 +1,4 @@
 models
-    box
-        file = box.osgt
-    conveyor
-        file = conveyor.osgt
-    conveyorBelt
-        file = conveyorBelt.osgt
-    conveyorRobot
-        file = conveyorRobot.osgt
-    lightroom
-        file = lightroom.osgt
     l2_env_floor
         file = l2_env_floor.osgt
     l2_env_wall
@@ -39,27 +29,12 @@ models
         file = l2_env_crane_arms_rot.osgt
     l2_env_crane_arms_piston
         file = l2_env_crane_arms_piston.osgt
-    deformedbox
-        file = deformedbox.osgt
+    box
+        file = box.osgt
 lights
     light
         position = 30 -30 30
 nodes
-    box1
-        position = 0 0 150
-        model = box
-    conveyor1
-        model = conveyor
-        position = 0 10 -5
-    conveyorBelt1
-        model = conveyorBelt
-        position = 0 10 -5
-    conveyorRobot1
-        model = conveyorRobot
-        position = 0 0 150
-    deformedbox1
-        position = -8 7 150
-        model = deformedbox
     room
         model = lightroom
         position = 0 0 0
@@ -197,6 +172,9 @@ nodes
     craneArmsPiston
         model = l2_env_crane_arms_piston
         position = 0 0 6.3
+    subject
+        model = box
+        position = -3 0 0
 scene = light
 scene = floor
 scene = wall
@@ -243,3 +221,4 @@ scene = craneBase
 scene = craneArmsBase
 scene = craneArmsRot
 scene = craneArmsPiston
+scene = subject
