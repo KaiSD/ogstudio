@@ -1,17 +1,33 @@
+delay
+    waitRandom = 1000 2000
 moveBy
-    moveBelt1Forward
-        point = 0 0 0 0
-        point = 20000 10 0 0
-        node = lineBelt3
     placeBelt1Back
         point = 0 0 0 0
-        point = 0 -10 0 0
-        node = lineBelt3
+        point = 0 -20 0 0
+        node = lineBelt1
+    moveBeltPreProcessor1
+        point = 0 0 0 0
+        point = 10000 10 0 0
+        node = lineBelt1
+    moveSubjectPreProcessor1
+        template = moveBeltPreProcessor1
+        node = subject
+    moveBeltPostProcessor1
+        point = 0 0 0 0
+        point = 3500 3.5 0 0
+        node = lineBelt1
+    moveSubjectPostProcessor1
+        template = moveBeltPostProcessor1
+        node = subject
+spawn
+    moveSubjectAndBeltPreProcessor1
+        actions = moveBeltPreProcessor1
+        actions = moveSubjectPreProcessor1
+    moveSubjectAndBeltPostProcessor1
+        actions = moveBeltPostProcessor1
+        actions = moveSubjectPostProcessor1
 sequence
-    moveBelt1
-        actions = moveBelt1Forward
-        actions = placeBelt1Back
-repeat
     main
-        n = 0
-        action = moveBelt1
+        actions = moveSubjectAndBeltPreProcessor1
+        actions = waitRandom
+        actions = moveSubjectAndBeltPostProcessor1
