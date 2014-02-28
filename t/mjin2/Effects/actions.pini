@@ -54,6 +54,13 @@ moveBy
     liftSubject
         template = liftCraneArmsPiston
         node = subject
+    shakeSubjectUp
+        point = 0 0 0 0
+        point = 100 0 0 0.01
+        node = subject
+    shakeSubjectDown
+        template = shakeSubjectUp
+        reversed = 1
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
@@ -81,9 +88,16 @@ sequence
     craneToPostProcessor1
         actions = moveCraneToLine1
         actions = moveCraneToPostProcessor1
+    shakeSubjectOnce
+        actions = shakeSubjectUp
+        actions = shakeSubjectDown
     liftCraneArmsPistonAndSubject
         actions = waitRandom
         actions = liftCraneArmsPistonAndSubjectAfterDelay
+repeat
+    shakeSubject
+        n = 270
+        action = shakeSubjectOnce
 spawn
     postProcessor1
         actions = subjectToPostProcessor1
