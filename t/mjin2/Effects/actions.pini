@@ -28,16 +28,16 @@ moveBy
     moveCraneArmsPistonToLine1
         template = moveCraneBaseToLine1
         node = craneArmsPiston
-    moveCraneBaseToPostProcessor1
+    moveCraneBaseToPostProcessor
         template = moveBeltPostProcessor1
         node = craneBase
-    moveCraneArmsBaseToPostProcessor1
+    moveCraneArmsBaseToPostProcessor
         template = moveBeltPostProcessor1
         node = craneArmsBase
-    moveCraneArmsRotToPostProcessor1
+    moveCraneArmsRotToPostProcessor
         template = moveBeltPostProcessor1
         node = craneArmsRot
-    moveCraneArmsPistonToPostProcessor1
+    moveCraneArmsPistonToPostProcessor
         template = moveBeltPostProcessor1
         node = craneArmsPiston
     lowerCraneArmsPiston
@@ -96,16 +96,19 @@ moveBy
     moveBeltPostProcessor2
         template = moveBeltPostProcessor1
         node = lineBelt2
+    moveBeltPreProcessor3
+        template = moveBeltPreProcessor2
+        node = lineBelt3
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
         actions = moveCraneArmsBaseToLine1
         actions = moveCraneArmsRotToLine1
         actions = moveCraneArmsPistonToLine1
-    moveCraneToPostProcessor1
-        actions = moveCraneArmsBaseToPostProcessor1
-        actions = moveCraneArmsRotToPostProcessor1
-        actions = moveCraneArmsPistonToPostProcessor1
+    moveCraneToPostProcessor
+        actions = moveCraneArmsBaseToPostProcessor
+        actions = moveCraneArmsRotToPostProcessor
+        actions = moveCraneArmsPistonToPostProcessor
     moveBeltAndSubjectToPreProcessor1
         actions = moveBeltPreProcessor1
         actions = moveSubjectPreProcessor1
@@ -135,6 +138,9 @@ spawn
     movePostProcessor2
         actions = moveBeltPostProcessor2
         actions = moveSubjectPostProcessor
+    movePreProcessor3
+        actions = moveBeltPreProcessor3
+        actions = moveSubjectPreProcessor
 sequence
     subjectToPostProcessor1
         actions = moveBeltAndSubjectToPreProcessor1
@@ -142,11 +148,25 @@ sequence
         actions = moveBeltAndSubjectToPostProcessor1
     craneToPostProcessor1
         actions = moveCraneToLine1
-        actions = moveCraneToPostProcessor1
+        actions = moveCraneToPostProcessor
+    moveLine2
+        actions = movePreProcessor2
+        actions = waitRandom
+        actions = movePostProcessor2
+    moveLine3
+        actions = movePreProcessor3
+        actions = waitRandom
+repeat
+    craneToPostProcessor2
+        n = 2
+        action = moveCraneToPostProcessor
 spawn
     postProcessor1
         actions = subjectToPostProcessor1
         actions = craneToPostProcessor1
+    postProcessor2
+        actions = moveLine2
+        actions = craneToPostProcessor2
 sequence
     mainSequence
         actions = postProcessor1
@@ -160,9 +180,17 @@ sequence
         actions = lowerCraneArmsPistonAndSubject
         actions = waitRandom
         actions = liftCraneArmsPiston
-        actions = movePreProcessor2
+        actions = postProcessor2
+        actions = lowerCraneArmsPiston
         actions = waitRandom
-        actions = movePostProcessor2
+        actions = liftCraneArmsPistonAndSubject
+        actions = movePostToPreProcessor
+        actions = moveLineDown
+        actions = waitRandom
+        actions = lowerCraneArmsPistonAndSubject
+        actions = waitRandom
+        actions = liftCraneArmsPiston
+        actions = moveLine3
 timeSpeed
     main
         rate = 1
