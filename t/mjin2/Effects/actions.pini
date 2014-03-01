@@ -54,13 +54,42 @@ moveBy
     liftSubject
         template = liftCraneArmsPiston
         node = subject
-    shakeSubjectUp
+    shakeSubjectLeft
         point = 0 0 0 0
-        point = 100 0 0 0.01
+        point = 100 0.01 0 0
         node = subject
-    shakeSubjectDown
-        template = shakeSubjectUp
+    shakeSubjectRight
+        template = shakeSubjectLeft
         reversed = 1
+    moveSubjectPostToPreProcessor
+        point = 0 0 0 0
+        point = 6000 -6 0 0
+        node = subject
+    moveCraneArmsBasePostToPreProcessor
+        template = moveSubjectPostToPreProcessor
+        node = craneArmsBase
+    moveCraneArmsRotPostToPreProcessor
+        template = moveSubjectPostToPreProcessor
+        node = craneArmsRot
+    moveCraneArmsPistonPostToPreProcessor
+        template = moveSubjectPostToPreProcessor
+        node = craneArmsPiston
+    moveSubjectLineDown
+        point = 0 0 0 0
+        point = 8000 0 -8 0
+        node = subject
+    moveCraneBaseLineDown
+        template = moveSubjectLineDown
+        node = craneBase
+    moveCraneArmsBaseLineDown
+        template = moveSubjectLineDown
+        node = craneArmsBase
+    moveCraneArmsRotLineDown
+        template = moveSubjectLineDown
+        node = craneArmsRot
+    moveCraneArmsPistonLineDown
+        template = moveSubjectLineDown
+        node = craneArmsPiston
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
@@ -77,9 +106,23 @@ spawn
     moveBeltAndSubjectToPostProcessor1
         actions = moveBeltPostProcessor1
         actions = moveSubjectPostProcessor1
-    liftCraneArmsPistonAndSubjectAfterDelay
+    liftCraneArmsPistonAndSubject
         actions = liftCraneArmsPiston
         actions = liftSubject
+    movePostToPreProcessor
+        actions = moveCraneArmsBasePostToPreProcessor
+        actions = moveCraneArmsRotPostToPreProcessor
+        actions = moveCraneArmsPistonPostToPreProcessor
+        actions = moveSubjectPostToPreProcessor
+    moveLineDown
+        actions = moveCraneBaseLineDown
+        actions = moveCraneArmsBaseLineDown
+        actions = moveCraneArmsRotLineDown
+        actions = moveCraneArmsPistonLineDown
+        actions = moveSubjectLineDown
+    lowerCraneArmsPistonAndSubject
+        template = liftCraneArmsPistonAndSubject
+        reversed = 1
 sequence
     subjectToPostProcessor1
         actions = moveBeltAndSubjectToPreProcessor1
@@ -88,16 +131,13 @@ sequence
     craneToPostProcessor1
         actions = moveCraneToLine1
         actions = moveCraneToPostProcessor1
-    shakeSubjectOnce
-        actions = shakeSubjectUp
-        actions = shakeSubjectDown
-    liftCraneArmsPistonAndSubject
-        actions = waitRandom
-        actions = liftCraneArmsPistonAndSubjectAfterDelay
+    shakeSubjectOnceH
+        actions = shakeSubjectLeft
+        actions = shakeSubjectRight
 repeat
-    shakeSubject
-        n = 270
-        action = shakeSubjectOnce
+    shakeSubjectH
+        n = 35
+        action = shakeSubjectOnceH
 spawn
     postProcessor1
         actions = subjectToPostProcessor1
@@ -106,7 +146,15 @@ sequence
     mainSequence
         actions = postProcessor1
         actions = lowerCraneArmsPiston
+        actions = waitRandom
         actions = liftCraneArmsPistonAndSubject
+        actions = waitRandom
+        actions = movePostToPreProcessor
+        actions = moveLineDown
+        actions = waitRandom
+        actions = lowerCraneArmsPistonAndSubject
+        actions = waitRandom
+        actions = liftCraneArmsPiston
 timeSpeed
     main
         rate = 1
