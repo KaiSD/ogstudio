@@ -1,10 +1,6 @@
 delay
     waitRandom = 500 1500
 moveBy
-    placeBelt1Back
-        point = 0 0 0 0
-        point = 0 -20 0 0
-        node = lineBelt1
     moveBeltPreProcessor1
         point = 0 0 0 0
         point = 10000 10 0 0
@@ -16,7 +12,7 @@ moveBy
         point = 0 0 0 0
         point = 3000 3 0 0
         node = lineBelt1
-    moveSubjectPostProcessor1
+    moveSubjectPostProcessor
         template = moveBeltPostProcessor1
         node = subject
     moveCraneBaseToLine1
@@ -90,6 +86,16 @@ moveBy
     moveCraneArmsPistonLineDown
         template = moveSubjectLineDown
         node = craneArmsPiston
+    moveBeltPreProcessor2
+        point = 0 0 0 0
+        point = 3000 3 0 0
+        node = lineBelt2
+    moveSubjectPreProcessor
+        template = moveBeltPreProcessor2
+        node = subject
+    moveBeltPostProcessor2
+        template = moveBeltPostProcessor1
+        node = lineBelt2
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
@@ -105,7 +111,7 @@ spawn
         actions = moveSubjectPreProcessor1
     moveBeltAndSubjectToPostProcessor1
         actions = moveBeltPostProcessor1
-        actions = moveSubjectPostProcessor1
+        actions = moveSubjectPostProcessor
     liftCraneArmsPistonAndSubject
         actions = liftCraneArmsPiston
         actions = liftSubject
@@ -123,6 +129,12 @@ spawn
     lowerCraneArmsPistonAndSubject
         template = liftCraneArmsPistonAndSubject
         reversed = 1
+    movePreProcessor2
+        actions = moveBeltPreProcessor2
+        actions = moveSubjectPreProcessor
+    movePostProcessor2
+        actions = moveBeltPostProcessor2
+        actions = moveSubjectPostProcessor
 sequence
     subjectToPostProcessor1
         actions = moveBeltAndSubjectToPreProcessor1
@@ -131,13 +143,6 @@ sequence
     craneToPostProcessor1
         actions = moveCraneToLine1
         actions = moveCraneToPostProcessor1
-    shakeSubjectOnceH
-        actions = shakeSubjectLeft
-        actions = shakeSubjectRight
-repeat
-    shakeSubjectH
-        n = 35
-        action = shakeSubjectOnceH
 spawn
     postProcessor1
         actions = subjectToPostProcessor1
@@ -155,6 +160,9 @@ sequence
         actions = lowerCraneArmsPistonAndSubject
         actions = waitRandom
         actions = liftCraneArmsPiston
+        actions = movePreProcessor2
+        actions = waitRandom
+        actions = movePostProcessor2
 timeSpeed
     main
         rate = 1
