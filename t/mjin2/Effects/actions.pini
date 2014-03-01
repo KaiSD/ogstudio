@@ -99,6 +99,12 @@ moveBy
     moveBeltPreProcessor3
         template = moveBeltPreProcessor2
         node = lineBelt3
+    moveBeltPostProcessor3
+        template = moveBeltPreProcessor1
+        node = lineBelt3
+    moveSubjectPostProcessor3
+        template = moveBeltPreProcessor1
+        node = subject
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
@@ -141,6 +147,9 @@ spawn
     movePreProcessor3
         actions = moveBeltPreProcessor3
         actions = moveSubjectPreProcessor
+    movePostProcessor3
+        actions = moveBeltPostProcessor3
+        actions = moveSubjectPostProcessor3
 sequence
     subjectToPostProcessor1
         actions = moveBeltAndSubjectToPreProcessor1
@@ -156,6 +165,7 @@ sequence
     moveLine3
         actions = movePreProcessor3
         actions = waitRandom
+        actions = movePostProcessor3
 repeat
     craneToPostProcessor2
         n = 2
@@ -184,6 +194,7 @@ sequence
         actions = lowerCraneArmsPiston
         actions = waitRandom
         actions = liftCraneArmsPistonAndSubject
+        actions = waitRandom
         actions = movePostToPreProcessor
         actions = moveLineDown
         actions = waitRandom
