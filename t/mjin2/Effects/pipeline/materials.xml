@@ -126,7 +126,7 @@
         </uniform>
     </material>
     <material name="lineBeltSurface">
-        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="0" varname="diffMap">lineBeltDiffuse</texture>
         <texture unit="1" varname="bumpMap">lineBeltNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
