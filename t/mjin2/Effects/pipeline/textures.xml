@@ -35,7 +35,7 @@
         <file>reflection_glow.png</file>
     </texture>
     <texture name="floorDiffuse" template="textureTemplate">
-        <file>l2_env_floor_cell_tex.png</file>
+        <file>l2_env_floor_cell_tex2.png</file>
     </texture>
     <texture name="floorNormal" template="textureTemplate">
         <file>l2_env_floor_cell_n.png</file>
