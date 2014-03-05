@@ -91,14 +91,14 @@
         </uniform>
     </material>
     <material name="pipeSurface">
-        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="0" varname="diffMap">pipeDiffuse</texture>
         <texture unit="1" varname="bumpMap">pipeNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
         </uniform>
     </material>
     <material name="pipeDiskSurface">
-        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="0" varname="diffMap">pipeDiffuse</texture>
         <texture unit="1" varname="bumpMap">pipeDiskNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>

@@ -52,11 +52,17 @@
     <texture name="columnDiffuse" template="textureTemplate">
         <file>cement.jpg</file>
     </texture>
+    <texture name="columnDiffuse2" template="textureTemplate">
+        <file>cement_tex.png</file>
+    </texture>
     <texture name="columnNormal" template="textureTemplate">
         <file>l2_env_column_n2.png</file>
     </texture>
     <texture name="columnHeight" template="textureTemplate">
         <file>l2_env_column_h.png</file>
+    </texture>
+    <texture name="pipeDiffuse" template="textureTemplate">
+        <file>l2_env_pipe_tex.png</file>
     </texture>
     <texture name="pipeNormal" template="textureTemplate">
         <file>l2_env_pipe_n.png</file>
