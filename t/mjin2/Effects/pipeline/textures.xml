@@ -50,10 +50,10 @@
         <file>l2_env_roof_plate_n.png</file>
     </texture>
     <texture name="columnDiffuse" template="textureTemplate">
-        <file>l2_env_column_tex.png</file>
+        <file>cement.jpg</file>
     </texture>
     <texture name="columnNormal" template="textureTemplate">
-        <file>l2_env_column_n.png</file>
+        <file>l2_env_column_n2.png</file>
     </texture>
     <texture name="columnHeight" template="textureTemplate">
         <file>l2_env_column_h.png</file>
