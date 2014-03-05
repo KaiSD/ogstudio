@@ -79,6 +79,9 @@
     <texture name="railNormal" template="textureTemplate">
         <file>l2_env_rail_n.png</file>
     </texture>
+    <texture name="lineDiffuse" template="textureTemplate">
+        <file>l2_env_line_tex.png</file>
+    </texture>
     <texture name="lineNormal" template="textureTemplate">
         <file>l2_env_line_n.png</file>
     </texture>
