@@ -94,6 +94,9 @@
     <texture name="processorNormal" template="textureTemplate">
         <file>l2_env_processor_n.png</file>
     </texture>
+    <texture name="craneBaseDiffuse" template="textureTemplate">
+        <file>l2_env_crane_base_tex.png</file>
+    </texture>
     <texture name="craneBaseNormal" template="textureTemplate">
         <file>l2_env_crane_base_n.png</file>
     </texture>
