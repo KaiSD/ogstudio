@@ -147,7 +147,7 @@
         </uniform>
     </material>
     <material name="craneArmsBaseSurface">
-        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="0" varname="diffMap">craneBaseDiffuse</texture>
         <texture unit="1" varname="bumpMap">craneArmsBaseNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
