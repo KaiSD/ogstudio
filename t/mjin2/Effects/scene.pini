@@ -175,7 +175,7 @@ nodes
         model = l2_env_crane_arms_piston
         position = 0 0 7.1
     subject
-        model = l2_bakenormalmap
+        model = box
         position = -10 10 0.6
 scene = light
 scene = floor
