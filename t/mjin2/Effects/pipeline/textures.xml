@@ -115,4 +115,7 @@
     <texture name="boxNormal" template="textureTemplate">
         <file>box_n.png</file>
     </texture>
+    <texture name="bakeNormal" template="textureTemplate">
+        <file>bakenormalmap_n.png</file>
+    </texture>
 </compositor>
