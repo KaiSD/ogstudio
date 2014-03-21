@@ -12,7 +12,7 @@ osg::Group {
       Children 1 {
         osg::Geode {
           UniqueID 3
-          Name "GeodeLowPolyRaw2.002"
+          Name "GeodeLowPoly2"
           Drawables 1 {
             osg::Geometry {
               UniqueID 2
