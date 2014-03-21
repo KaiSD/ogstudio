@@ -133,7 +133,7 @@
         </uniform>
     </material>
     <material name="processorSurface">
-        <texture unit="0" varname="diffMap">columnDiffuse</texture>
+        <texture unit="0" varname="diffMap">processorDiffuse</texture>
         <texture unit="1" varname="bumpMap">processorNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
