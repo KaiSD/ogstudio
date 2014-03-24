@@ -1,5 +1,5 @@
 delay
-    waitRandom = 500 1500
+    waitRandom = 2000
 moveBy
     moveBeltPreProcessor1
         point = 0 0 0 0
@@ -42,7 +42,7 @@ moveBy
         node = craneArmsPiston
     lowerCraneArmsPiston
         point = 0 0 0 0
-        point = 2700 0 0 -2.7
+        point = 3000 0 0 -2.7
         node = craneArmsPiston
     liftCraneArmsPiston
         template = lowerCraneArmsPiston
@@ -52,10 +52,17 @@ moveBy
         node = subject
     shakeSubjectLeft
         point = 0 0 0 0
-        point = 100 0.01 0 0
+        point = 100 -0.02 0 0
         node = subject
     shakeSubjectRight
         template = shakeSubjectLeft
+        reversed = 1
+    shakeSubjectUp
+        point = 0 0 0 0
+        point = 100 0 0 -0.02
+        node = subject
+    shakeSubjectDown
+        template = shakeSubjectUp
         reversed = 1
     moveSubjectPostToPreProcessor
         point = 0 0 0 0
@@ -105,6 +112,20 @@ moveBy
     moveSubjectPostProcessor3
         template = moveBeltPreProcessor1
         node = subject
+sequence
+    shakeSubjectHOnce
+        actions = shakeSubjectLeft
+        actions = shakeSubjectRight
+    shakeSubjectVOnce
+        actions = shakeSubjectDown
+        actions = shakeSubjectUp
+repeat
+    shakeSubjectH
+        n = 20
+        action = shakeSubjectHOnce
+    shakeSubjectV
+        n = 90
+        action = shakeSubjectVOnce
 spawn
     moveCraneToLine1
         actions = moveCraneBaseToLine1
@@ -178,27 +199,29 @@ spawn
         actions = moveLine2
         actions = craneToPostProcessor2
 sequence
-    mainSequence
-        actions = postProcessor1
-        actions = lowerCraneArmsPiston
-        actions = waitRandom
+    liftMoveLower
         actions = liftCraneArmsPistonAndSubject
         actions = waitRandom
         actions = movePostToPreProcessor
         actions = moveLineDown
         actions = waitRandom
         actions = lowerCraneArmsPistonAndSubject
+spawn
+    liftMoveLowerShaking
+        actions = liftMoveLower
+        actions = shakeSubjectV
+sequence
+    mainSequence
+        actions = postProcessor1
+        actions = lowerCraneArmsPiston
+        actions = waitRandom
+        actions = liftMoveLowerShaking
         actions = waitRandom
         actions = liftCraneArmsPiston
         actions = postProcessor2
         actions = lowerCraneArmsPiston
         actions = waitRandom
-        actions = liftCraneArmsPistonAndSubject
-        actions = waitRandom
-        actions = movePostToPreProcessor
-        actions = moveLineDown
-        actions = waitRandom
-        actions = lowerCraneArmsPistonAndSubject
+        actions = liftMoveLowerShaking
         actions = waitRandom
         actions = liftCraneArmsPiston
         actions = moveLine3
