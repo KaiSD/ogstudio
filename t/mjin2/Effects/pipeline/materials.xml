@@ -174,4 +174,25 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="subjectSurfaceRed">
+        <texture unit="0" varname="diffMap">subjectDiffuseRed</texture>
+        <texture unit="1" varname="bumpMap">boxNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceGreen">
+        <texture unit="0" varname="diffMap">subjectDiffuseGreen</texture>
+        <texture unit="1" varname="bumpMap">boxNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceBlue">
+        <texture unit="0" varname="diffMap">subjectDiffuseBlue</texture>
+        <texture unit="1" varname="bumpMap">boxNormal</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
 </compositor>

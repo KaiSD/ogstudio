@@ -121,4 +121,13 @@
     <texture name="bakeNormal" template="textureTemplate">
         <file>bakenormalmap_n.png</file>
     </texture>
+    <texture name="subjectDiffuseRed" template="textureTemplate">
+        <file>subjectRed.png</file>
+    </texture>
+    <texture name="subjectDiffuseGreen" template="textureTemplate">
+        <file>subjectGreen.png</file>
+    </texture>
+    <texture name="subjectDiffuseBlue" template="textureTemplate">
+        <file>subjectBlue.png</file>
+    </texture>
 </compositor>

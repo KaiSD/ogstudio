@@ -1,3 +1,13 @@
+nodeMaterial
+    paintSubjectRed
+        node = subject
+        material = subjectSurfaceRed
+    paintSubjectGreen
+        node = subject
+        material = subjectSurfaceGreen
+    paintSubjectBlue
+        node = subject
+        material = subjectSurfaceBlue
 delay
     waitRandom = 2000
 moveBy
@@ -175,6 +185,7 @@ sequence
     subjectToPostProcessor1
         actions = moveBeltAndSubjectToPreProcessor1
         actions = waitRandom
+        actions = paintSubjectRed
         actions = moveBeltAndSubjectToPostProcessor1
     craneToPostProcessor1
         actions = moveCraneToLine1
@@ -182,10 +193,12 @@ sequence
     moveLine2
         actions = movePreProcessor2
         actions = waitRandom
+        actions = paintSubjectGreen
         actions = movePostProcessor2
     moveLine3
         actions = movePreProcessor3
         actions = waitRandom
+        actions = paintSubjectBlue
         actions = movePostProcessor3
 repeat
     craneToPostProcessor2
