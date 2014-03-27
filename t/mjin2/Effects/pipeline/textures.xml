@@ -100,6 +100,9 @@
     <texture name="craneBaseNormal" template="textureTemplate">
         <file>l2_env_crane_base_n.png</file>
     </texture>
+    <texture name="craneBaseGlow" template="textureTemplate">
+        <file>l2_env_crane_base_glow.png</file>
+    </texture>
     <texture name="craneArmsBaseNormal" template="textureTemplate">
         <file>l2_env_crane_arms_base_n.png</file>
     </texture>
@@ -108,6 +111,9 @@
     </texture>
     <texture name="craneArmsRotNormal" template="textureTemplate">
         <file>l2_env_crane_arms_rot_n.png</file>
+    </texture>
+    <texture name="craneArmsRotGlow" template="textureTemplate">
+        <file>l2_env_crane_arms_rot_glow.png</file>
     </texture>
     <texture name="craneArmsPistonDiffuse" template="textureTemplate">
         <file>l2_env_crane_arms_piston_tex.png</file>

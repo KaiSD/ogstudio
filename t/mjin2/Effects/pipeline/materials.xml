@@ -146,6 +146,17 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="craneBaseGlowingSurface">
+        <texture unit="0" varname="diffMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="bumpMap">craneBaseNormal</texture>
+        <texture unit="2" varname="glowMap">craneBaseGlow</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
     <material name="craneArmsBaseSurface">
         <texture unit="0" varname="diffMap">craneBaseDiffuse</texture>
         <texture unit="1" varname="bumpMap">craneArmsBaseNormal</texture>
@@ -157,6 +168,17 @@
         <texture unit="0" varname="diffMap">craneArmsRotDiffuse</texture>
         <texture unit="1" varname="bumpMap">craneArmsRotNormal</texture>
         <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneArmsRotGlowingSurface">
+        <texture unit="0" varname="diffMap">craneArmsRotDiffuse</texture>
+        <texture unit="1" varname="bumpMap">craneArmsRotNormal</texture>
+        <texture unit="2" varname="glowMap">craneArmsRotGlow</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
             <value>1</value>
         </uniform>
     </material>
