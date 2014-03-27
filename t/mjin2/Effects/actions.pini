@@ -8,8 +8,21 @@ nodeMaterial
     paintSubjectBlue
         node = subject
         material = subjectSurfaceBlue
+    makeCraneBaseGlowing
+        node = craneBase
+        material = craneBaseGlowingSurface
+    makeCraneBaseSimple
+        node = craneBase
+        material = craneBaseSurface
+    makeCraneArmsRotGlowing
+        node = craneArmsRot
+        material = craneArmsRotGlowingSurface
+    makeCraneArmsRotSimple
+        node = craneArmsRot
+        material = craneArmsRotSurface
 delay
     waitRandom = 2000
+    blinkDelay = 500
 moveBy
     moveBeltPreProcessor1
         point = 0 0 0 0
@@ -129,6 +142,16 @@ sequence
     shakeSubjectVOnce
         actions = shakeSubjectDown
         actions = shakeSubjectUp
+    blinkCraneBaseOnce
+        actions = makeCraneBaseGlowing
+        actions = blinkDelay
+        actions = makeCraneBaseSimple
+        actions = blinkDelay
+    blinkCraneArmsRotOnce
+        actions = makeCraneArmsRotGlowing
+        actions = blinkDelay
+        actions = makeCraneArmsRotSimple
+        actions = blinkDelay
 repeat
     shakeSubjectH
         n = 20
@@ -136,12 +159,28 @@ repeat
     shakeSubjectV
         n = 90
         action = shakeSubjectVOnce
+    blinkCraneBaseWhileMovingToLine1
+        n = 10
+        action = blinkCraneBaseOnce
+    blinkCraneBaseWhileMovingLineDown
+        n = 8
+        action = blinkCraneBaseOnce
+    blinkCraneArmsRot
+        n = 3
+        action = blinkCraneArmsRotOnce
 spawn
+    lowerCraneArmsPistonAndBlink
+        actions = lowerCraneArmsPiston
+        actions = blinkCraneArmsRot
+    liftCraneArmsPistonAndBlink
+        template = lowerCraneArmsPistonAndBlink
+        reversed = 1
     moveCraneToLine1
         actions = moveCraneBaseToLine1
         actions = moveCraneArmsBaseToLine1
         actions = moveCraneArmsRotToLine1
         actions = moveCraneArmsPistonToLine1
+        actions = blinkCraneBaseWhileMovingToLine1
     moveCraneToPostProcessor
         actions = moveCraneArmsBaseToPostProcessor
         actions = moveCraneArmsRotToPostProcessor
@@ -155,6 +194,7 @@ spawn
     liftCraneArmsPistonAndSubject
         actions = liftCraneArmsPiston
         actions = liftSubject
+        actions = blinkCraneArmsRot
     movePostToPreProcessor
         actions = moveCraneArmsBasePostToPreProcessor
         actions = moveCraneArmsRotPostToPreProcessor
@@ -166,6 +206,7 @@ spawn
         actions = moveCraneArmsRotLineDown
         actions = moveCraneArmsPistonLineDown
         actions = moveSubjectLineDown
+        actions = blinkCraneBaseWhileMovingLineDown
     lowerCraneArmsPistonAndSubject
         template = liftCraneArmsPistonAndSubject
         reversed = 1
@@ -226,17 +267,17 @@ spawn
 sequence
     mainSequence
         actions = postProcessor1
-        actions = lowerCraneArmsPiston
+        actions = lowerCraneArmsPistonAndBlink
         actions = waitRandom
         actions = liftMoveLowerShaking
         actions = waitRandom
-        actions = liftCraneArmsPiston
+        actions = liftCraneArmsPistonAndBlink
         actions = postProcessor2
-        actions = lowerCraneArmsPiston
+        actions = lowerCraneArmsPistonAndBlink
         actions = waitRandom
         actions = liftMoveLowerShaking
         actions = waitRandom
-        actions = liftCraneArmsPiston
+        actions = liftCraneArmsPistonAndBlink
         actions = moveLine3
 timeSpeed
     main
