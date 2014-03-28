@@ -190,13 +190,16 @@ sequence
     lowerCraneArmsPistonAndStopBlinking
         actions = lowerCraneArmsPiston
         actions = stopBlinkCraneArmsRot
+    liftCraneArmsPistonAndStopBlinking
+        actions = liftCraneArmsPiston
+        actions = stopBlinkCraneArmsRot
 spawn
     lowerCraneArmsPistonAndBlink
         actions = lowerCraneArmsPistonAndStopBlinking
         actions = blinkCraneArmsRot
     liftCraneArmsPistonAndBlink
-        template = lowerCraneArmsPistonAndBlink
-        reversed = 1
+        actions = liftCraneArmsPistonAndStopBlinking
+        actions = blinkCraneArmsRot
     moveCraneToLine1
         actions = moveCraneBaseToLine1AndStopBlinking
         actions = moveCraneArmsBaseToLine1
