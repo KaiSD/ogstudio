@@ -3,20 +3,20 @@
 #Generator osgexport 0.13.0
 
 osg::Group {
-  UniqueID 4
+  UniqueID 160
   Name "Root"
-  Children 1 {
+  Children 18 {
     osg::MatrixTransform {
-      UniqueID 0
-      Name "LowPoly"
+      UniqueID 122
+      Name "LowPoly.018"
       Children 1 {
         osg::Geode {
-          UniqueID 3
+          UniqueID 125
           Name "GeodeLowPoly"
           Drawables 1 {
             osg::Geometry {
-              UniqueID 2
-              Name "LowPoly"
+              UniqueID 124
+              Name "LowPoly.018"
               PrimitiveSetList 2 {
                   DrawElementsUInt GL_TRIANGLES 120 {
                     64 65 66 
@@ -150,7 +150,7 @@ osg::Group {
                   }
               }
               VertexData {
-                Array TRUE ArrayID 0 Vec3fArray 240 {
+                Array TRUE ArrayID 12 Vec3fArray 240 {
                   0.25000 -0.23000 0.02000
                   0.25000 0.23000 0.02000
                   0.25000 0.23000 5.98000
@@ -397,7 +397,7 @@ osg::Group {
                 Normalize 0
               }
               NormalData {
-                Array TRUE ArrayID 1 Vec3fArray 240 {
+                Array TRUE ArrayID 13 Vec3fArray 240 {
                   1.00000 0.00000 0.00000
                   1.00000 0.00000 0.00000
                   1.00000 0.00000 0.00000
@@ -645,7 +645,7 @@ osg::Group {
               }
               TexCoordData 1 {
                 Data {
-                  Array TRUE ArrayID 2 Vec2fArray 240 {
+                  Array TRUE ArrayID 14 Vec2fArray 240 {
                     0.09511 0.00054
                     0.17223 0.00056
                     0.17188 0.99968
@@ -900,7 +900,262 @@ osg::Group {
         1.00000 0.00000 0.00000 0.00000
         0.00000 1.00000 0.00000 0.00000
         0.00000 0.00000 1.00000 0.00000
-        0.00000 0.00000 0.00000 1.00000
+        5.00000 0.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 126
+      Name "LowPoly.017"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 4.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 128
+      Name "LowPoly.016"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 8.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 130
+      Name "LowPoly.015"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 12.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 132
+      Name "LowPoly.014"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 16.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 134
+      Name "LowPoly.013"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 -4.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 136
+      Name "LowPoly.012"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 -8.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 138
+      Name "LowPoly.011"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 -12.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 140
+      Name "LowPoly.010"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        5.00000 -16.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 142
+      Name "LowPoly.009"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 -16.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 144
+      Name "LowPoly.008"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 -12.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 146
+      Name "LowPoly.007"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 -8.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 148
+      Name "LowPoly.006"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 -4.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 150
+      Name "LowPoly.005"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 16.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 152
+      Name "LowPoly.004"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 12.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 154
+      Name "LowPoly.003"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 8.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 156
+      Name "LowPoly.002"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 4.00000 0.00000 1.00000
+      }
+    }
+    osg::MatrixTransform {
+      UniqueID 158
+      Name "LowPoly.001"
+      Children 1 {
+        osg::Geode {
+          UniqueID 125
+        }
+      }
+      Matrix {
+        1.00000 0.00000 0.00000 0.00000
+        0.00000 1.00000 0.00000 0.00000
+        0.00000 0.00000 1.00000 0.00000
+        -5.00000 0.00000 0.00000 1.00000
       }
     }
   }

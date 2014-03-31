@@ -73,8 +73,8 @@ nodes
     craneArmsBase
         model = l2_env_crane_arms_base
         position = 0 0 7.9
-    craneArmsRot
-        model = l2_env_crane_arms_rot
+    craneArmsPistonBase
+        model = l2_env_crane_arms_piston_base
         position = 0 0 7.3
     craneArmsPiston
         model = l2_env_crane_arms_piston
@@ -99,6 +99,6 @@ scene = lineBelt3
 scene = processor
 scene = craneBase
 scene = craneArmsBase
-scene = craneArmsRot
+scene = craneArmsPistonBase
 scene = craneArmsPiston
 scene = subject

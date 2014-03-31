@@ -14,6 +14,6 @@ lineBelt3 = lineBeltSurface
 processor = processorSurface
 craneBase = craneBaseSurface
 craneArmsBase = craneArmsBaseSurface
-craneArmsRot = craneArmsRotSurface
+craneArmsPistonBase = craneArmsRotSurface
 craneArmsPiston = craneArmsPistonSurface
 subject = subjectSurface
