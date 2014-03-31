@@ -3,8 +3,6 @@ models
         file = l2_env_floor.osgt
     l2_env_wall
         file = l2_env_wall.osgt
-    l2_env_roof_plate
-        file = l2_env_roof_plate.osgt
     l2_env_column
         file = l2_env_column.osgt
     l2_env_pipe
@@ -25,114 +23,21 @@ models
         file = l2_env_crane_base.osgt
     l2_env_crane_arms_base
         file = l2_env_crane_arms_base.osgt
-    l2_env_crane_arms_rot
-        file = l2_env_crane_arms_rot.osgt
+    l2_env_crane_arms_piston_base
+        file = l2_env_crane_arms_piston_base.osgt
     l2_env_crane_arms_piston
         file = l2_env_crane_arms_piston.osgt
-    box
-        file = box.osgt
-    l2_bakenormalmap
-        file = bakenormalmap.osgt
 lights
     light
         position = 30 -30 30
 nodes
-    room
-        model = lightroom
-        position = 0 0 0
     floor
         model = l2_env_floor
-        position = 0 0 0
     wall
         model = l2_env_wall
         position = 0 16 0
-    roof
-        model = l2_env_roof_plate
-        position = 0 0 10
-    l1c1
+    column
         model = l2_env_column
-        position = -15 0 0
-    l1c2
-        model = l2_env_column
-        position = -15 4 0
-    l1c3
-        model = l2_env_column
-        position = -15 8 0
-    l1c4
-        model = l2_env_column
-        position = -15 12 0
-    l1c5
-        model = l2_env_column
-        position = -15 16 0
-    l2c1
-        model = l2_env_column
-        position = -5 0 0
-    l2c2
-        model = l2_env_column
-        position = -5 4 0
-    l2c3
-        model = l2_env_column
-        position = -5 8 0
-    l2c4
-        model = l2_env_column
-        position = -5 12 0
-    l2c5
-        model = l2_env_column
-        position = -5 16 0
-    l2c6
-        model = l2_env_column
-        position = -5 -4 0
-    l2c7
-        model = l2_env_column
-        position = -5 -8 0
-    l2c8
-        model = l2_env_column
-        position = -5 -12 0
-    l2c9
-        model = l2_env_column
-        position = -5 -16 0
-    r1c1
-        model = l2_env_column
-        position = 5 0 0
-    r1c2
-        model = l2_env_column
-        position = 5 4 0
-    r1c3
-        model = l2_env_column
-        position = 5 8 0
-    r1c4
-        model = l2_env_column
-        position = 5 12 0
-    r1c5
-        model = l2_env_column
-        position = 5 16 0
-    r1c6
-        model = l2_env_column
-        position = 5 -4 0
-    r1c7
-        model = l2_env_column
-        position = 5 -8 0
-    r1c8
-        model = l2_env_column
-        position = 5 -12 0
-    r1c9
-        model = l2_env_column
-        position = 5 -16 0
-    r2c1
-        model = l2_env_column
-        position = 15 0 0
-    r2c2
-        model = l2_env_column
-        position = 15 4 0
-    r2c3
-        model = l2_env_column
-        position = 15 8 0
-    r2c4
-        model = l2_env_column
-        position = 15 12 0
-    r2c5
-        model = l2_env_column
-        position = 15 16 0
     pipe
         model = l2_env_pipe
         position = -4.5 0 6.1
@@ -180,34 +85,7 @@ nodes
 scene = light
 scene = floor
 scene = wall
-scene = l1c1
-scene = l1c2
-scene = l1c3
-scene = l1c4
-scene = l1c5
-scene = l2c1
-scene = l2c2
-scene = l2c3
-scene = l2c4
-scene = l2c5
-scene = l2c6
-scene = l2c7
-scene = l2c8
-scene = l2c9
-scene = r1c1
-scene = r1c2
-scene = r1c3
-scene = r1c4
-scene = r1c5
-scene = r1c6
-scene = r1c7
-scene = r1c8
-scene = r1c9
-scene = r2c1
-scene = r2c2
-scene = r2c3
-scene = r2c4
-scene = r2c5
+scene = column
 scene = pipe
 scene = pipeDisk
 scene = rpipe
