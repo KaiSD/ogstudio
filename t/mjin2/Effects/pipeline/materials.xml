@@ -2,49 +2,6 @@
     <!-- This simply uses the pipeline defaults -->
     <material name="plainSurface">
     </material>
-    <material name="bumpySurface">
-        <texture unit="1" varname="bumpMap">bump</texture>
-        <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
-    <material name="crawlingPlainSurface">
-        <uniform name="crawlDiffMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
-    <material name="crawlingBumpySurface">
-        <texture unit="1" varname="bumpMap">bump</texture>
-        <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="crawlBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="crawlDiffMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
-    <material name="bumpyGlowingSurface">
-        <texture unit="1" varname="bumpMap">bump</texture>
-        <texture unit="2" varname="glowMap">glow</texture>
-        <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="useGlowMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
-    <material name="bumpyGlowing2Surface">
-        <texture unit="1" varname="bumpMap">bump</texture>
-        <texture unit="2" varname="glowMap">glow2</texture>
-        <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="useGlowMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
     <material name="cubemapped">
         <texture unit="1" varname="bumpMap">bump</texture>
         <texture unit="2" varname="glowMap">reflectionGlow</texture>
@@ -82,11 +39,7 @@
     <material name="columnSurface">
         <texture unit="0" varname="diffMap">columnDiffuse</texture>
         <texture unit="1" varname="bumpMap">columnNormal</texture>
-        <texture unit="5" varname="heightMap">columnHeight</texture>
         <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="useHeightMap" type="int">
             <value>1</value>
         </uniform>
     </material>
@@ -164,17 +117,17 @@
             <value>1</value>
         </uniform>
     </material>
-    <material name="craneArmsRotSurface">
-        <texture unit="0" varname="diffMap">craneArmsRotDiffuse</texture>
-        <texture unit="1" varname="bumpMap">craneArmsRotNormal</texture>
+    <material name="craneArmsPistonBaseSurface">
+        <texture unit="0" varname="diffMap">craneArmsPistonBaseDiffuse</texture>
+        <texture unit="1" varname="bumpMap">craneArmsPistonBaseNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
         </uniform>
     </material>
-    <material name="craneArmsRotGlowingSurface">
-        <texture unit="0" varname="diffMap">craneArmsRotDiffuse</texture>
-        <texture unit="1" varname="bumpMap">craneArmsRotNormal</texture>
-        <texture unit="2" varname="glowMap">craneArmsRotGlow</texture>
+    <material name="craneArmsPistonBaseGlowingSurface">
+        <texture unit="0" varname="diffMap">craneArmsPistonBaseDiffuse</texture>
+        <texture unit="1" varname="bumpMap">craneArmsPistonBaseNormal</texture>
+        <texture unit="2" varname="glowMap">craneArmsPistonBaseGlow</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
         </uniform>

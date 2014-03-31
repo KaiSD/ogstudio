@@ -19,20 +19,8 @@
         <file>noise_tex.jpg</file>
     </texture>
     <!-- defaults end -->
-    <texture name="bump" template="textureTemplate">
-        <file>bump_tex.jpg</file>
-    </texture>
-    <texture name="glow" template="textureTemplate">
-        <file>glow_tex.png</file>
-    </texture>
-    <texture name="glow2" template="textureTemplate">
-        <file>glow2_tex.png</file>
-    </texture>
     <texture name="reflectionMask" template="textureTemplate">
         <file>reflection_mask.png</file>
-    </texture>
-    <texture name="reflectionGlow" template="textureTemplate">
-        <file>reflection_glow.png</file>
     </texture>
     <texture name="floorDiffuse" template="textureTemplate">
         <file>l2_env_floor_cell_tex2.png</file>
@@ -46,17 +34,11 @@
     <texture name="wallNormal" template="textureTemplate">
         <file>cement_n.png</file>
     </texture>
-    <texture name="roofNormal" template="textureTemplate">
-        <file>l2_env_roof_plate_n.png</file>
-    </texture>
     <texture name="columnDiffuse" template="textureTemplate">
         <file>cement.jpg</file>
     </texture>
     <texture name="columnNormal" template="textureTemplate">
         <file>l2_env_column_n2.png</file>
-    </texture>
-    <texture name="columnHeight" template="textureTemplate">
-        <file>l2_env_column_h.png</file>
     </texture>
     <texture name="pipeDiffuse" template="textureTemplate">
         <file>l2_env_pipe_tex.png</file>
@@ -106,26 +88,20 @@
     <texture name="craneArmsBaseNormal" template="textureTemplate">
         <file>l2_env_crane_arms_base_n.png</file>
     </texture>
-    <texture name="craneArmsRotDiffuse" template="textureTemplate">
-        <file>l2_env_crane_arms_rot_tex.png</file>
+    <texture name="craneArmsPistonBaseDiffuse" template="textureTemplate">
+        <file>l2_env_crane_arms_piston_base_tex.png</file>
     </texture>
-    <texture name="craneArmsRotNormal" template="textureTemplate">
-        <file>l2_env_crane_arms_rot_n.png</file>
+    <texture name="craneArmsPistonBaseNormal" template="textureTemplate">
+        <file>l2_env_crane_arms_piston_base_n.png</file>
     </texture>
-    <texture name="craneArmsRotGlow" template="textureTemplate">
-        <file>l2_env_crane_arms_rot_glow.png</file>
+    <texture name="craneArmsPistonBaseGlow" template="textureTemplate">
+        <file>l2_env_crane_arms_piston_base_glow.png</file>
     </texture>
     <texture name="craneArmsPistonDiffuse" template="textureTemplate">
         <file>l2_env_crane_arms_piston_tex.png</file>
     </texture>
     <texture name="craneArmsPistonNormal" template="textureTemplate">
         <file>l2_env_crane_arms_piston_n.png</file>
-    </texture>
-    <texture name="boxNormal" template="textureTemplate">
-        <file>box_n.png</file>
-    </texture>
-    <texture name="bakeNormal" template="textureTemplate">
-        <file>bakenormalmap_n.png</file>
     </texture>
     <texture name="subjectDiffuseRed" template="textureTemplate">
         <file>subjectRed.png</file>
