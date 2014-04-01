@@ -44,6 +44,9 @@ moveBy
         point = 0 0 0 0
         point = 10000 0 10 0
         node = craneBase
+    moveCraneArmsBasePostProcessor1
+        template = moveBelt
+        node = craneArmsBase
 sequence
     blinkCraneBaseOnce
         actions = makeCraneBaseSurfaceGlow
@@ -68,7 +71,38 @@ spawn
         actions = moveSubjectPreProcessor1
         actions = blinkCraneBase
         actions = moveCraneBaseToLine1AndStopBlinking
+        actions = moveCraneArmsBasePostProcessor1
+    postProcessor1
+        actions = paintSubjectRed
+        actions = moveBelt
+        actions = moveSubject
+moveBy
+    lowerCraneArmsPiston
+        point = 0 0 0 0
+        point = 3000 0 0 -2.7
+        node = craneArmsPiston
+    liftCraneArmsPiston
+        template = lowerCraneArmsPiston
+        reversed = 1
+    liftSubject
+        template = liftCraneArmsPiston
+        node = subject
+spawn
+    liftCraneArmsPistonAndSubject
+        actions = liftCraneArmsPiston
+        actions = liftSubject
+sequence
+    moveSubjectLineDown
+        actions = lowerCraneArmsPiston
+        actions = wait2
+        actions = liftCraneArmsPistonAndSubject
+sequence
+    mainSequence
+        actions = preProcessor1
+        actions = wait2
+        actions = postProcessor1
+        actions = moveSubjectLineDown
 timeSpeed
     main
         rate = 1
-        action = preProcessor1
+        action = mainSequence
