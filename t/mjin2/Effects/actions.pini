@@ -87,21 +87,40 @@ moveBy
     liftSubject
         template = liftCraneArmsPiston
         node = subject
+sequence
+    blinkCraneArmsPistonBaseOnce
+        actions = makeCraneArmsPistonBaseSurfaceGlow
+        actions = blinkDelay
+        actions = makeCraneArmsPistonBaseSurfaceSimple
+        actions = blinkDelay
+repeat
+    blinkCraneArmsPistonBase
+        n = 0
+        action = blinkCraneArmsPistonBaseOnce
+        autoclone = 0
+stop
+    stopBlinkCraneArmsPistonBase
+        action = blinkCraneArmsPistonBase
 spawn
     liftCraneArmsPistonAndSubject
         actions = liftCraneArmsPiston
         actions = liftSubject
 sequence
-    moveSubjectLineDown
+    takeSubjectFromLine
         actions = lowerCraneArmsPiston
         actions = wait2
         actions = liftCraneArmsPistonAndSubject
+        actions = stopBlinkCraneArmsPistonBase
+spawn
+    takeSubjectFromLineAndBlink
+        actions = takeSubjectFromLine
+        actions = blinkCraneArmsPistonBase
 sequence
     mainSequence
         actions = preProcessor1
         actions = wait2
         actions = postProcessor1
-        actions = moveSubjectLineDown
+        actions = takeSubjectFromLineAndBlink
 timeSpeed
     main
         rate = 1
