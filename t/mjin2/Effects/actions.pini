@@ -44,12 +44,31 @@ moveBy
         point = 0 0 0 0
         point = 10000 0 10 0
         node = craneBase
+sequence
+    blinkCraneBaseOnce
+        actions = makeCraneBaseSurfaceGlow
+        actions = blinkDelay
+        actions = makeCraneBaseSurfaceSimple
+        actions = blinkDelay
+repeat
+    blinkCraneBase
+        n = 0
+        action = blinkCraneBaseOnce
+        autoclone = 0
+stop
+    stopBlinkCraneBase
+        action = blinkCraneBase
+sequence
+    moveCraneBaseToLine1AndStopBlinking
+        actions = moveCraneBaseToLine1
+        actions = stopBlinkCraneBase
 spawn
     preProcessor1
         actions = moveBeltPreProcessor1
         actions = moveSubjectPreProcessor1
-        actions = moveCraneBaseToLine1
+        actions = blinkCraneBase
+        actions = moveCraneBaseToLine1AndStopBlinking
 timeSpeed
     main
-        rate = 2
+        rate = 1
         action = preProcessor1
