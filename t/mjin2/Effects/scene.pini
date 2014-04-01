@@ -27,6 +27,8 @@ models
         file = l2_env_crane_arms_piston_base.osgt
     l2_env_crane_arms_piston
         file = l2_env_crane_arms_piston.osgt
+    box
+        file = box.osgt
 lights
     light
         position = 30 -30 30

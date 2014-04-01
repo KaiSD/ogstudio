@@ -19,6 +19,9 @@
         <file>noise_tex.jpg</file>
     </texture>
     <!-- defaults end -->
+    <texture name="boxNormal" template="textureTemplate">
+        <file>box_n.png</file>
+    </texture>
     <texture name="reflectionMask" template="textureTemplate">
         <file>reflection_mask.png</file>
     </texture>

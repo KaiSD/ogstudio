@@ -8,20 +8,20 @@ nodeMaterial
     paintSubjectBlue
         node = subject
         material = subjectSurfaceBlue
-    makeCraneBaseGlowing
+    makeCraneBaseSurfaceGlow
         node = craneBase
         material = craneBaseGlowingSurface
-    makeCraneBaseSimple
+    makeCraneBaseSurfaceSimple
         node = craneBase
         material = craneBaseSurface
-    makeCraneArmsRotGlowing
-        node = craneArmsRot
-        material = craneArmsRotGlowingSurface
-    makeCraneArmsRotSimple
-        node = craneArmsRot
-        material = craneArmsRotSurface
+    makeCraneArmsPistonBaseSurfaceGlow
+        node = craneArmsPistonBase
+        material = craneArmsPistonBaseGlowingSurface
+    makeCraneArmsPistonBaseSurfaceSimple
+        node = craneArmsPistonBase
+        material = craneArmsPistonBaseSurface
 delay
-    waitRandom
+    wait2
         delay = 2000
     blinkDelay
         delay = 500
@@ -33,277 +33,23 @@ moveBy
     moveSubjectPreProcessor1
         template = moveBeltPreProcessor1
         node = subject
-    moveBeltPostProcessor1
+    moveBelt
         point = 0 0 0 0
         point = 3000 3 0 0
         node = lineBelt1
-    moveSubjectPostProcessor
-        template = moveBeltPostProcessor1
+    moveSubject
+        template = moveBelt
         node = subject
     moveCraneBaseToLine1
         point = 0 0 0 0
         point = 10000 0 10 0
         node = craneBase
-    moveCraneArmsBaseToLine1
-        template = moveCraneBaseToLine1
-        node = craneArmsBase
-    moveCraneArmsRotToLine1
-        template = moveCraneBaseToLine1
-        node = craneArmsRot
-    moveCraneArmsPistonToLine1
-        template = moveCraneBaseToLine1
-        node = craneArmsPiston
-    moveCraneBaseToPostProcessor
-        template = moveBeltPostProcessor1
-        node = craneBase
-    moveCraneArmsBaseToPostProcessor
-        template = moveBeltPostProcessor1
-        node = craneArmsBase
-    moveCraneArmsRotToPostProcessor
-        template = moveBeltPostProcessor1
-        node = craneArmsRot
-    moveCraneArmsPistonToPostProcessor
-        template = moveBeltPostProcessor1
-        node = craneArmsPiston
-    lowerCraneArmsPiston
-        point = 0 0 0 0
-        point = 3000 0 0 -2.7
-        node = craneArmsPiston
-    liftCraneArmsPiston
-        template = lowerCraneArmsPiston
-        reversed = 1
-    liftSubject
-        template = liftCraneArmsPiston
-        node = subject
-    shakeSubjectLeft
-        point = 0 0 0 0
-        point = 100 -0.02 0 0
-        node = subject
-    shakeSubjectRight
-        template = shakeSubjectLeft
-        reversed = 1
-    shakeSubjectUp
-        point = 0 0 0 0
-        point = 100 0 0 -0.02
-        node = subject
-    shakeSubjectDown
-        template = shakeSubjectUp
-        reversed = 1
-    moveSubjectPostToPreProcessor
-        point = 0 0 0 0
-        point = 6000 -6 0 0
-        node = subject
-    moveCraneArmsBasePostToPreProcessor
-        template = moveSubjectPostToPreProcessor
-        node = craneArmsBase
-    moveCraneArmsRotPostToPreProcessor
-        template = moveSubjectPostToPreProcessor
-        node = craneArmsRot
-    moveCraneArmsPistonPostToPreProcessor
-        template = moveSubjectPostToPreProcessor
-        node = craneArmsPiston
-    moveSubjectLineDown
-        point = 0 0 0 0
-        point = 8000 0 -8 0
-        node = subject
-    moveCraneBaseLineDown
-        template = moveSubjectLineDown
-        node = craneBase
-    moveCraneArmsBaseLineDown
-        template = moveSubjectLineDown
-        node = craneArmsBase
-    moveCraneArmsRotLineDown
-        template = moveSubjectLineDown
-        node = craneArmsRot
-    moveCraneArmsPistonLineDown
-        template = moveSubjectLineDown
-        node = craneArmsPiston
-    moveBeltPreProcessor2
-        point = 0 0 0 0
-        point = 3000 3 0 0
-        node = lineBelt2
-    moveSubjectPreProcessor
-        template = moveBeltPreProcessor2
-        node = subject
-    moveBeltPostProcessor2
-        template = moveBeltPostProcessor1
-        node = lineBelt2
-    moveBeltPreProcessor3
-        template = moveBeltPreProcessor2
-        node = lineBelt3
-    moveBeltPostProcessor3
-        template = moveBeltPreProcessor1
-        node = lineBelt3
-    moveSubjectPostProcessor3
-        template = moveBeltPreProcessor1
-        node = subject
-sequence
-    shakeSubjectHOnce
-        actions = shakeSubjectLeft
-        actions = shakeSubjectRight
-    shakeSubjectVOnce
-        actions = shakeSubjectDown
-        actions = shakeSubjectUp
-    blinkCraneBaseOnce
-        actions = makeCraneBaseGlowing
-        actions = blinkDelay
-        actions = makeCraneBaseSimple
-        actions = blinkDelay
-    blinkCraneArmsRotOnce
-        actions = blinkDelay
-        actions = makeCraneArmsRotGlowing
-        actions = blinkDelay
-        actions = makeCraneArmsRotSimple
-repeat
-    shakeSubjectH
-        n = 20
-        action = shakeSubjectHOnce
-    shakeSubjectV
-        n = 90
-        action = shakeSubjectVOnce
-    blinkCraneBaseWhileMovingToLine1
-        n = 0
-        action = blinkCraneBaseOnce
-        autoclone = 0
-    blinkCraneBaseWhileMovingLineDown
-        n = 0
-        action = blinkCraneBaseOnce
-        autoclone = 0
-    blinkCraneArmsRot
-        n = 0
-        action = blinkCraneArmsRotOnce
-        autoclone = 0
-stop
-    stopBlinkCraneBaseWhileMovingToLine1
-        action = blinkCraneBaseWhileMovingToLine1
-    stopBlinkCraneBaseWhileMovingLineDown
-        action = blinkCraneBaseWhileMovingLineDown
-    stopBlinkCraneArmsRot
-        action = blinkCraneArmsRot
-sequence
-    moveCraneBaseToLine1AndStopBlinking
-        actions = moveCraneBaseToLine1
-        actions = stopBlinkCraneBaseWhileMovingToLine1
-    moveCraneBaseLineDownAndStopBlinking
-        actions = moveCraneBaseLineDown
-        actions = stopBlinkCraneBaseWhileMovingLineDown
-    lowerCraneArmsPistonAndStopBlinking
-        actions = lowerCraneArmsPiston
-        actions = stopBlinkCraneArmsRot
-    liftCraneArmsPistonAndStopBlinking
-        actions = liftCraneArmsPiston
-        actions = stopBlinkCraneArmsRot
 spawn
-    lowerCraneArmsPistonAndBlink
-        actions = lowerCraneArmsPistonAndStopBlinking
-        actions = blinkCraneArmsRot
-    liftCraneArmsPistonAndBlink
-        actions = liftCraneArmsPistonAndStopBlinking
-        actions = blinkCraneArmsRot
-    moveCraneToLine1
-        actions = moveCraneBaseToLine1AndStopBlinking
-        actions = moveCraneArmsBaseToLine1
-        actions = moveCraneArmsRotToLine1
-        actions = moveCraneArmsPistonToLine1
-        actions = blinkCraneBaseWhileMovingToLine1
-    moveCraneToPostProcessor
-        actions = moveCraneArmsBaseToPostProcessor
-        actions = moveCraneArmsRotToPostProcessor
-        actions = moveCraneArmsPistonToPostProcessor
-    moveBeltAndSubjectToPreProcessor1
+    preProcessor1
         actions = moveBeltPreProcessor1
         actions = moveSubjectPreProcessor1
-    moveBeltAndSubjectToPostProcessor1
-        actions = moveBeltPostProcessor1
-        actions = moveSubjectPostProcessor
-    liftCraneArmsPistonAndSubject
-        actions = liftCraneArmsPistonAndBlink
-        actions = liftSubject
-    movePostToPreProcessor
-        actions = moveCraneArmsBasePostToPreProcessor
-        actions = moveCraneArmsRotPostToPreProcessor
-        actions = moveCraneArmsPistonPostToPreProcessor
-        actions = moveSubjectPostToPreProcessor
-    moveLineDown
-        actions = moveCraneBaseLineDownAndStopBlinking
-        actions = moveCraneArmsBaseLineDown
-        actions = moveCraneArmsRotLineDown
-        actions = moveCraneArmsPistonLineDown
-        actions = moveSubjectLineDown
-        actions = blinkCraneBaseWhileMovingLineDown
-    lowerCraneArmsPistonAndSubject
-        template = liftCraneArmsPistonAndSubject
-        reversed = 1
-    movePreProcessor2
-        actions = moveBeltPreProcessor2
-        actions = moveSubjectPreProcessor
-    movePostProcessor2
-        actions = moveBeltPostProcessor2
-        actions = moveSubjectPostProcessor
-    movePreProcessor3
-        actions = moveBeltPreProcessor3
-        actions = moveSubjectPreProcessor
-    movePostProcessor3
-        actions = moveBeltPostProcessor3
-        actions = moveSubjectPostProcessor3
-sequence
-    subjectToPostProcessor1
-        actions = moveBeltAndSubjectToPreProcessor1
-        actions = waitRandom
-        actions = paintSubjectRed
-        actions = moveBeltAndSubjectToPostProcessor1
-    craneToPostProcessor1
-        actions = moveCraneToLine1
-        actions = moveCraneToPostProcessor
-    moveLine2
-        actions = movePreProcessor2
-        actions = waitRandom
-        actions = paintSubjectGreen
-        actions = movePostProcessor2
-    moveLine3
-        actions = movePreProcessor3
-        actions = waitRandom
-        actions = paintSubjectBlue
-        actions = movePostProcessor3
-repeat
-    craneToPostProcessor2
-        n = 2
-        action = moveCraneToPostProcessor
-spawn
-    postProcessor1
-        actions = subjectToPostProcessor1
-        actions = craneToPostProcessor1
-    postProcessor2
-        actions = moveLine2
-        actions = craneToPostProcessor2
-sequence
-    liftMoveLower
-        actions = liftCraneArmsPistonAndSubject
-        actions = waitRandom
-        actions = movePostToPreProcessor
-        actions = moveLineDown
-        actions = waitRandom
-        actions = lowerCraneArmsPistonAndSubject
-spawn
-    liftMoveLowerShaking
-        actions = liftMoveLower
-        actions = shakeSubjectV
-sequence
-    mainSequence
-        actions = postProcessor1
-        actions = lowerCraneArmsPistonAndBlink
-        actions = waitRandom
-        actions = liftMoveLowerShaking
-        actions = waitRandom
-        actions = liftCraneArmsPistonAndBlink
-        actions = postProcessor2
-        actions = lowerCraneArmsPistonAndBlink
-        actions = waitRandom
-        actions = liftMoveLowerShaking
-        actions = waitRandom
-        actions = liftCraneArmsPistonAndBlink
-        actions = moveLine3
+        actions = moveCraneBaseToLine1
 timeSpeed
     main
         rate = 2
-        action = mainSequence
+        action = preProcessor1
