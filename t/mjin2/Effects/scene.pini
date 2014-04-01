@@ -72,13 +72,16 @@ nodes
         position = 0 0 8.1
     craneArmsBase
         model = l2_env_crane_arms_base
-        position = 0 0 7.9
+        position = 0 0 -0.2
+        parent = craneBase
     craneArmsPistonBase
         model = l2_env_crane_arms_piston_base
-        position = 0 0 7.3
+        position = 0 0 -0.6
+        parent = craneArmsBase
     craneArmsPiston
         model = l2_env_crane_arms_piston
-        position = 0 0 7.1
+        position = 0 0 -0.2
+        parent = craneArmsPistonBase
     subject
         model = box
         position = -10 10 0.6
@@ -98,7 +101,4 @@ scene = lineBelt2
 scene = lineBelt3
 scene = processor
 scene = craneBase
-scene = craneArmsBase
-scene = craneArmsPistonBase
-scene = craneArmsPiston
 scene = subject
