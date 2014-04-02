@@ -116,6 +116,9 @@ spawn
     takeSubjectFromLineAndBlink
         actions = takeSubjectFromLine
         actions = blinkCraneArmsPistonBase
+    lowerCraneArmsPistonAndSubject
+        template = liftCraneArmsPistonAndSubject
+        reversed = 1
 moveBy
     moveCraneBaseLineDown
         point = 0 0 0 0
@@ -142,6 +145,12 @@ sequence
     moveCraneBaseLineDownAndStopBlinking
         actions = moveCraneBaseLineDown
         actions = stopBlinkCraneBase
+    putSubjectToLine
+        actions = wait2
+        actions = lowerCraneArmsPistonAndSubject
+        actions = wait2
+        actions = liftCraneArmsPiston
+        actions = stopBlinkCraneArmsPistonBase
 spawn
     moveCraneAndSubjectLineDown
         actions = moveSubjectLeft
@@ -149,6 +158,13 @@ spawn
         actions = moveSubjectLineDown
         actions = blinkCraneBase
         actions = moveCraneBaseLineDownAndStopBlinking
+    putSubjectToLineAndBlink
+        actions = putSubjectToLine
+        actions = blinkCraneArmsPistonBase
+spawn
+    putSubjectToLineAndBlink
+        actions = putSubjectToLine
+        actions = blinkCraneArmsPistonBase
 sequence
     mainSequence
         actions = preProcessor1
@@ -156,7 +172,8 @@ sequence
         actions = postProcessor1
         actions = takeSubjectFromLineAndBlink
         actions = moveCraneAndSubjectLineDown
+        actions = putSubjectToLineAndBlink
 timeSpeed
     main
-        rate = 1
+        rate = 2
         action = mainSequence
