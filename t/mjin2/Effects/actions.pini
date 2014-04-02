@@ -170,22 +170,37 @@ repeat
         n = 2
         action = moveCraneArmsBasePostProcessor
 spawn
-    moveBeltAndSubjectPreProcessor2
-        actions = moveBelt2
-        actions = moveSubject
-    moveBeltAndSubjectPostProcessor2
+    moveBeltAndSubjectPrePostProcessor2
         actions = moveBelt2
         actions = moveSubject
 sequence
     moveBeltAndSubjectProcessor2
-        actions = moveBeltAndSubjectPreProcessor2
+        actions = moveBeltAndSubjectPrePostProcessor2
         actions = wait2
         actions = paintSubjectGreen
-        actions = moveBeltAndSubjectPostProcessor2
+        actions = moveBeltAndSubjectPrePostProcessor2
 spawn
     moveBeltSubjectAndCraneArmsBaseProcessor2
         actions = moveBeltAndSubjectProcessor2
         actions = moveCraneArmsBase
+moveBy
+    moveBelt3
+        template = moveBelt1
+        node = lineBelt3
+spawn
+    moveBeltAndSubjectPrePostProcessor3
+        actions = moveBelt3
+        actions = moveSubject
+repeat
+    moveBeltAndSubjectAway
+        n = 4
+        action = moveBeltAndSubjectPrePostProcessor3
+sequence
+    moveBeltAndSubjectProcessor3
+        actions = moveBeltAndSubjectPrePostProcessor3
+        actions = wait2
+        actions = paintSubjectBlue
+        actions = moveBeltAndSubjectAway
 sequence
     stage1
         actions = preProcessor1
@@ -196,14 +211,23 @@ sequence
         actions = moveCraneAndSubjectLineDown
         actions = putSubjectToLineAndBlink
         actions = moveBeltSubjectAndCraneArmsBaseProcessor2
+        actions = takeSubjectFromLineAndBlink
+    stage3
+        actions = moveCraneAndSubjectLineDown
+        actions = putSubjectToLineAndBlink
+        actions = moveBeltAndSubjectProcessor3
 timeSpeed
     finalStage1
-        rate = 4
+        rate = 1
         action = stage1
     finalStage2
         rate = 1
         action = stage2
+    finalStage3
+        rate = 1
+        action = stage3
 sequence
     main
         actions = finalStage1
         actions = finalStage2
+        actions = finalStage3
