@@ -161,19 +161,23 @@ spawn
     putSubjectToLineAndBlink
         actions = putSubjectToLine
         actions = blinkCraneArmsPistonBase
-spawn
-    putSubjectToLineAndBlink
-        actions = putSubjectToLine
-        actions = blinkCraneArmsPistonBase
 sequence
-    mainSequence
+    stage1
         actions = preProcessor1
         actions = wait2
         actions = postProcessor1
         actions = takeSubjectFromLineAndBlink
+    stage2
         actions = moveCraneAndSubjectLineDown
         actions = putSubjectToLineAndBlink
 timeSpeed
+    finalStage1
+        rate = 4
+        action = stage1
+    finalStage2
+        rate = 1
+        action = stage2
+sequence
     main
-        rate = 2
-        action = mainSequence
+        actions = finalStage1
+        actions = finalStage2
