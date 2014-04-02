@@ -111,16 +111,49 @@ sequence
         actions = wait2
         actions = liftCraneArmsPistonAndSubject
         actions = stopBlinkCraneArmsPistonBase
+        actions = wait2
 spawn
     takeSubjectFromLineAndBlink
         actions = takeSubjectFromLine
         actions = blinkCraneArmsPistonBase
+moveBy
+    moveCraneBaseLineDown
+        point = 0 0 0 0
+        point = 8000 0 -8 0
+        node = craneBase
+    moveSubjectBack
+        template = moveSubject
+        reversed = 1
+    moveCraneArmsBaseBack
+        template = moveSubjectBack
+        node = craneArmsBase
+    moveSubjectLineDown
+        point = 0 0 0 0
+        point = 8000 0 -8 0
+        node = subject
+    moveCraneArmsBaseLineDown
+        template = moveSubjectLineDown
+        node = craneArmsBase
+repeat
+    moveSubjectLeft
+        n = 2
+        action = moveSubjectBack
+    moveCraneArmsBaseLeft
+        n = 2
+        action = moveCraneArmsBaseBack
+spawn
+    moveCraneAndSubjectLineDown
+        actions = moveSubjectLeft
+        actions = moveCraneArmsBaseLeft
+        actions = moveCraneBaseLineDown
+        actions = moveSubjectLineDown
 sequence
     mainSequence
         actions = preProcessor1
         actions = wait2
         actions = postProcessor1
         actions = takeSubjectFromLineAndBlink
+        actions = moveCraneAndSubjectLineDown
 timeSpeed
     main
         rate = 1
