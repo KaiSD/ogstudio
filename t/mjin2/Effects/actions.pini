@@ -76,6 +76,7 @@ spawn
         actions = paintSubjectRed
         actions = moveBelt1
         actions = moveSubject
+        autoclone = 0
 moveBy
     lowerCraneArmsPiston
         point = 0 0 0 0
@@ -227,7 +228,16 @@ timeSpeed
         rate = 1
         action = stage3
 sequence
-    main
+    mainSequence
         actions = finalStage1
         actions = finalStage2
         actions = finalStage3
+runWhile
+    blinkCraneBaseWhileMovingToPostProcessor1
+        action = blinkCraneBaseOnce
+        actions = postProcessor1
+        actions = postProcessor1
+spawn
+    main
+        actions = mainSequence
+        actions = blinkCraneBaseWhileMovingToPostProcessor1
