@@ -76,7 +76,6 @@ spawn
         actions = paintSubjectRed
         actions = moveBelt1
         actions = moveSubject
-        autoclone = 0
 moveBy
     lowerCraneArmsPiston
         point = 0 0 0 0
@@ -232,12 +231,24 @@ sequence
         actions = finalStage1
         actions = finalStage2
         actions = finalStage3
+moveBy
+    shakeSubjectUp
+        point = 0 0 0 0
+        point = 100 0 0 -0.02
+        node = subject
+    shakeSubjectDown
+        template = shakeSubjectUp
+        reversed = 1
+sequence
+    shakeSubjectOnce
+        actions = shakeSubjectDown
+        actions = shakeSubjectUp
 runWhile
-    blinkCraneBaseWhileMovingToPostProcessor1
-        action = blinkCraneBaseOnce
-        actions = postProcessor1
-        actions = postProcessor1
+    shakeSubjectWhileMovingSubject
+        action = shakeSubjectOnce
+        actions = takeSubjectFromLineAndBlink
+        actions = lowerCraneArmsPistonAndSubject
 spawn
     main
         actions = mainSequence
-        actions = blinkCraneBaseWhileMovingToPostProcessor1
+        actions = shakeSubjectWhileMovingSubject
