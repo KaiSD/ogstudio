@@ -1,0 +1,6 @@
+delay
+    nothing
+        delay = 2000
+spawn
+    main
+        actions = nothing
