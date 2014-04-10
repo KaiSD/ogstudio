@@ -58,19 +58,23 @@ repeat
         n = 0
         action = blinkCraneBaseOnce
         autoclone = 0
-stop
-    stopBlinkCraneBase
-        action = blinkCraneBase
+add
+    startBlinkingCraneBase
+        parent = main
+        child = blinkCraneBase
+    stopBlinkingCraneBase
+        template = startBlinkingCraneBase
+        reversed = 1
 sequence
-    moveCraneBaseToLine1AndStopBlinking
+    moveCraneBaseToLine1AndBlink
+        actions = startBlinkingCraneBase
         actions = moveCraneBaseToLine1
-        actions = stopBlinkCraneBase
+        actions = stopBlinkingCraneBase
 spawn
     preProcessor1
         actions = moveBelt1PreProcessor1
         actions = moveSubjectPreProcessor1
-        actions = blinkCraneBase
-        actions = moveCraneBaseToLine1AndStopBlinking
+        actions = moveCraneBaseToLine1AndBlink
         actions = moveCraneArmsBasePostProcessor
     postProcessor1
         actions = paintSubjectRed
@@ -98,9 +102,13 @@ repeat
         n = 0
         action = blinkCraneArmsPistonBaseOnce
         autoclone = 0
-stop
-    stopBlinkCraneArmsPistonBase
-        action = blinkCraneArmsPistonBase
+add
+    startBlinkingCraneArmsPistonBase
+        parent = main
+        child = blinkCraneArmsPistonBase
+    stopBlinkingCraneArmsPistonBase
+        template = startBlinkingCraneArmsPistonBase
+        reversed = 1
 spawn
     liftCraneArmsPistonAndSubject
         actions = liftCraneArmsPiston
@@ -131,18 +139,15 @@ add
         reversed = 1
 sequence
     takeSubjectFromLine
+        actions = startBlinkingCraneArmsPistonBase
         actions = lowerCraneArmsPiston
         actions = wait2
         actions = startShakingSubject
         actions = liftCraneArmsPistonAndSubject
-        actions = stopBlinkCraneArmsPistonBase
+        actions = stopBlinkingCraneArmsPistonBase
         actions = wait2
-spawn
-    takeSubjectFromLineAndBlink
-        actions = takeSubjectFromLine
-        actions = blinkCraneArmsPistonBase
-    lowerCraneArmsPistonAndSubject
-        template = liftCraneArmsPistonAndSubject
+    putSubjectToLine
+        template = takeSubjectFromLine
         reversed = 1
 moveBy
     moveCraneBaseLineDown
@@ -167,26 +172,16 @@ repeat
         n = 2
         action = moveCraneArmsBaseBack
 sequence
-    moveCraneBaseLineDownAndStopBlinking
+    moveCraneBaseLineDownAndBlink
+        actions = startBlinkingCraneBase
         actions = moveCraneBaseLineDown
-        actions = stopBlinkCraneBase
-    putSubjectToLine
-        actions = wait2
-        actions = lowerCraneArmsPistonAndSubject
-        actions = stopShakingSubject
-        actions = wait2
-        actions = liftCraneArmsPiston
-        actions = stopBlinkCraneArmsPistonBase
+        actions = stopBlinkingCraneBase
 spawn
     moveCraneAndSubjectLineDown
         actions = moveSubjectLeft
         actions = moveCraneArmsBaseLeft
         actions = moveSubjectLineDown
-        actions = blinkCraneBase
-        actions = moveCraneBaseLineDownAndStopBlinking
-    putSubjectToLineAndBlink
-        actions = putSubjectToLine
-        actions = blinkCraneArmsPistonBase
+        actions = moveCraneBaseLineDownAndBlink
 moveBy
     moveBelt2
         template = moveBelt1
@@ -232,15 +227,15 @@ sequence
         actions = preProcessor1
         actions = wait2
         actions = postProcessor1
-        actions = takeSubjectFromLineAndBlink
+        actions = takeSubjectFromLine
     stage2
         actions = moveCraneAndSubjectLineDown
-        actions = putSubjectToLineAndBlink
+        actions = putSubjectToLine
         actions = moveBeltSubjectAndCraneArmsBaseProcessor2
-        actions = takeSubjectFromLineAndBlink
+        actions = takeSubjectFromLine
     stage3
         actions = moveCraneAndSubjectLineDown
-        actions = putSubjectToLineAndBlink
+        actions = putSubjectToLine
         actions = moveBeltAndSubjectProcessor3
 timeSpeed
     finalStage1
