@@ -201,12 +201,38 @@ sequence
         actions = wait2
         actions = paintSubjectBlue
         actions = moveBeltAndSubjectAway
+moveBy
+    shakeSubjectUp
+        point = 0 0 0 0
+        point = 100 0 0 -2
+        node = subject
+    shakeSubjectDown
+        template = shakeSubjectUp
+        reversed = 1
+sequence
+    shakeSubjectOnce
+        actions = shakeSubjectDown
+        actions = shakeSubjectUp
+repeat
+    shakeSubject
+        n = 0
+        action = shakeSubjectOnce
+        autoclone = 0
+add
+    startShakingSubject
+        parent = main
+        child = shakeSubject
+    stopShakingSubject
+        template = startShakingSubject
+        reversed = 1
 sequence
     stage1
+        actions = startShakingSubject
         actions = preProcessor1
         actions = wait2
         actions = postProcessor1
         actions = takeSubjectFromLineAndBlink
+        actions = stopShakingSubject
     stage2
         actions = moveCraneAndSubjectLineDown
         actions = putSubjectToLineAndBlink
@@ -218,7 +244,7 @@ sequence
         actions = moveBeltAndSubjectProcessor3
 timeSpeed
     finalStage1
-        rate = 1
+        rate = 2
         action = stage1
     finalStage2
         rate = 1
@@ -231,24 +257,6 @@ sequence
         actions = finalStage1
         actions = finalStage2
         actions = finalStage3
-moveBy
-    shakeSubjectUp
-        point = 0 0 0 0
-        point = 100 0 0 -0.02
-        node = subject
-    shakeSubjectDown
-        template = shakeSubjectUp
-        reversed = 1
-sequence
-    shakeSubjectOnce
-        actions = shakeSubjectDown
-        actions = shakeSubjectUp
-runWhile
-    shakeSubjectWhileMovingSubject
-        action = shakeSubjectOnce
-        actions = takeSubjectFromLineAndBlink
-        actions = lowerCraneArmsPistonAndSubject
 spawn
     main
         actions = mainSequence
-        actions = shakeSubjectWhileMovingSubject
