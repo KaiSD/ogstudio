@@ -116,12 +116,18 @@
         <uniform name="useBumpMap" type="int">
             <value>1</value>
         </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>0</value>
+        </uniform>
     </material>
     <material name="craneArmsPistonBaseSurface">
         <texture unit="0" varname="diffMap">craneArmsPistonBaseDiffuse</texture>
         <texture unit="1" varname="bumpMap">craneArmsPistonBaseNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>0</value>
         </uniform>
     </material>
     <material name="craneArmsPistonBaseGlowingSurface">
@@ -140,6 +146,9 @@
         <texture unit="1" varname="bumpMap">craneArmsPistonNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>0</value>
         </uniform>
     </material>
     <material name="subjectSurface">
