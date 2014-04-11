@@ -1,4 +1,2 @@
 craneBase = craneBaseSurface
-craneArmsBase = craneArmsBaseSurface
-craneArmsPistonBase = craneArmsPistonBaseSurface
 craneArmsPiston = craneArmsPistonSurface

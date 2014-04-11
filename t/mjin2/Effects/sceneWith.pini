@@ -14,17 +14,9 @@ nodes
     craneBase
         model = l2_env_crane_base
         position = 0 0 8.1
-    craneArmsBase
-        model = l2_env_crane_arms_base
-        position = 0 0 -0.2
-        parent = craneBase
-    craneArmsPistonBase
-        model = l2_env_crane_arms_piston_base
-        position = 0 0 -0.6
-        parent = craneArmsBase
     craneArmsPiston
         model = l2_env_crane_arms_piston
         position = 0 0 -0.2
-        parent = craneArmsPistonBase
+        parent = craneBase
 scene = light
 scene = craneBase
