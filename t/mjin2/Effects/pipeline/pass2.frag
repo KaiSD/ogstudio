@@ -6,6 +6,7 @@ uniform sampler2DRect normalMap;
 uniform sampler2DRect colorMap;
 uniform sampler2DRect glowMap;
 uniform sampler2DRect cubeMap;
+uniform sampler2DRect shadowMap;
 
 vec3 glowBlur(sampler2DRect glowMap,
               vec2          xy,
@@ -29,6 +30,7 @@ void main()
     vec3 p_worldspace = texture2DRect(posMap,    gl_FragCoord.xy).xyz;
     vec3 n_worldspace = texture2DRect(normalMap, gl_FragCoord.xy).xyz;
     vec3 c_worldspace = texture2DRect(colorMap,  gl_FragCoord.xy).xyz;
+    vec3 s_worldspace = texture2DRect(shadowMap, gl_FragCoord.xy).xyz;
     //vec3 glow         = texture2DRect(glowMap,   gl_FragCoord.xy).xyz;
     // Direction from point to light (not vice versa!)
     vec3 lightDir_worldspace = normalize(lightPos - p_worldspace);
@@ -52,4 +54,5 @@ void main()
     if (cube == vec4(0, 0, 0, 0))
         cube = vec4(1, 1, 1, 1);
     gl_FragColor = vec4(glow + color * cube, 1.0);
+    //gl_FragColor = vec4(s_worldspace, 1.0);
 }

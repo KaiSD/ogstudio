@@ -66,6 +66,8 @@
             <input_buffer unit="2" varname="colorMap">pass1Colors</input_buffer>
             <input_buffer unit="3" varname="glowMap">pass1Glow</input_buffer>
             <input_buffer unit="4" varname="cubeMap">pass1Cube</input_buffer>
+            <!-- Just a place holder for in-code changes -->
+            <input_buffer unit="5" varname="shadowMap">pass1Glow</input_buffer>
             <shader>pass2VS</shader>
             <shader>pass2FS</shader>
             <uniform>lightPos</uniform>
