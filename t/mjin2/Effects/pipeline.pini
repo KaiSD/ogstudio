@@ -1,3 +1,4 @@
+file = pipeline.xml
 compositor = pipeline.xml
 shadowCompositor = shadowPipeline.xml
 shadowJitteringScale = 16
