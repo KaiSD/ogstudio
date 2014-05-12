@@ -23,6 +23,9 @@
     <texture name="rockwallBump" template="textureTemplate">
         <file>rockwall_NH.png</file>
     </texture>
+    <uniform name="lightPos" type="vec3">
+        <value>0 0 80</value>
+    </uniform>
     
     <technique>
         <forward_pass name="pass2">
@@ -43,6 +46,9 @@
             <input_buffer unit="0" varname="posMap">pass2Positions</input_buffer>
             <input_buffer unit="1" varname="normalMap">pass2Normals</input_buffer>
             <input_buffer unit="2" varname="colorMap">pass2Colors</input_buffer>
+            <!-- Just a place holder for shadow map. Changed in code-->
+            <input_buffer unit="3" varname="shadowMap">pass2Colors</input_buffer>
+            <uniform>lightPos</uniform>
             <shader>pass3VS</shader>
             <shader>pass3FS</shader>
             <output_buffer target="color">pass3Final</output_buffer>
