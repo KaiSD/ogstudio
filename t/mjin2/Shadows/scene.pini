@@ -1,0 +1,18 @@
+models
+    simpleroom
+        file = simpleroom.osgt
+    torusmodel
+        file = torus.osgt
+nodes
+    room
+        model = simpleroom
+        position = 0 0 1
+    torus
+        model = torusmodel
+        position = 0 0 15
+lights
+    light
+        position = 0 0 80
+scene = light
+scene = torus
+scene = room
