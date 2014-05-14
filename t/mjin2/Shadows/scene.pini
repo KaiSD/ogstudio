@@ -13,6 +13,11 @@ nodes
 lights
     light
         position = 0 0 80
+shadows
+    shadow
+        shader = pass1Shadow.frag
+        jitteringScale = 16
+        light = light
 scene = light
 scene = torus
 scene = room
