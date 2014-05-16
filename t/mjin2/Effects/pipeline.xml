@@ -33,7 +33,7 @@
             <texture unit="0" varname="diffMap">noise</texture>
             <texture unit="2" varname="glowMap">noGlow</texture>
             <texture unit="3" varname="cubeMap">cubemap</texture>
-            <texture unit="4" varname="cubeMapMask">glow</texture>
+            <!--<texture unit="4" varname="cubeMapMask">glow</texture>-->
             <uniform name="useBumpMap" type="int">
                 <value>0</value>
             </uniform>

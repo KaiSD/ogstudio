@@ -2,6 +2,7 @@
     <!-- This simply uses the pipeline defaults -->
     <material name="plainSurface">
     </material>
+    <!--
     <material name="cubemapped">
         <texture unit="1" varname="bumpMap">bump</texture>
         <texture unit="2" varname="glowMap">reflectionGlow</texture>
@@ -16,6 +17,7 @@
             <value>1</value>
         </uniform>
     </material>
+    -->
     <material name="floorSurface">
         <texture unit="0" varname="diffMap">floorDiffuse</texture>
         <texture unit="1" varname="bumpMap">floorNormal</texture>
@@ -26,12 +28,6 @@
     <material name="wallSurface">
         <texture unit="0" varname="diffMap">wallDiffuse</texture>
         <texture unit="1" varname="bumpMap">wallNormal</texture>
-        <uniform name="useBumpMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
-    <material name="roofSurface">
-        <texture unit="1" varname="bumpMap">roofNormal</texture>
         <uniform name="useBumpMap" type="int">
             <value>1</value>
         </uniform>
