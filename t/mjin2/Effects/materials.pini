@@ -1,19 +1,39 @@
-floor = floorSurface
-wall = wallSurface
-column = columnSurface
-pipe = pipeSurface
-pipeDisk = pipeDiskSurface
-rpipe = pipeSurface
-rpipeDisk = pipeDiskSurface
-railBase = railBaseSurface
-rail = railSurface
-line = lineSurface
-lineBelt1 = lineBeltSurface
-lineBelt2 = lineBeltSurface
-lineBelt3 = lineBeltSurface
-processor = processorSurface
-craneBase = craneBaseSurface
-craneArmsBase = craneArmsBaseSurface
-craneArmsPistonBase = craneArmsPistonBaseSurface
-craneArmsPiston = craneArmsPistonSurface
-subject = subjectSurface
+nodes
+    floor
+        material = floorSurface
+    wall
+        material = wallSurface
+    column
+        material = columnSurface
+    pipe
+        material = pipeSurface
+    pipeDisk
+        material = pipeDiskSurface
+    rpipe
+        material = pipeSurface
+    rpipeDisk
+        material = pipeDiskSurface
+    railBase
+        material = railBaseSurface
+    rail
+        material = railSurface
+    line
+        material = lineSurface
+    lineBelt1
+        material = lineBeltSurface
+    lineBelt2
+        material = lineBeltSurface
+    lineBelt3
+        material = lineBeltSurface
+    processor
+        material = processorSurface
+    craneBase
+        material = craneBaseSurface
+    craneArmsBase
+        material = craneArmsBaseSurface
+    craneArmsPistonBase
+        material = craneArmsPistonBaseSurface
+    craneArmsPiston
+        material = craneArmsPistonSurface
+    subject
+        material = subjectSurface
