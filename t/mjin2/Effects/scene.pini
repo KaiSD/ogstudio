@@ -1,34 +1,34 @@
 models
     l2_env_floor
-        file = l2_env_floor.osgt
+        file = models/l2_env_floor.osgt
     l2_env_wall
-        file = l2_env_wall.osgt
+        file = models/l2_env_wall.osgt
     l2_env_column
-        file = l2_env_column.osgt
+        file = models/l2_env_column.osgt
     l2_env_pipe
-        file = l2_env_pipe.osgt
+        file = models/l2_env_pipe.osgt
     l2_env_pipe_disk
-        file = l2_env_pipe_disk.osgt
+        file = models/l2_env_pipe_disk.osgt
     l2_env_rail_base
-        file = l2_env_rail_base.osgt
+        file = models/l2_env_rail_base.osgt
     l2_env_rail
-        file = l2_env_rail.osgt
+        file = models/l2_env_rail.osgt
     l2_env_line
-        file = l2_env_line.osgt
+        file = models/l2_env_line.osgt
     l2_env_line_belt
-        file = l2_env_line_belt.osgt
+        file = models/l2_env_line_belt.osgt
     l2_env_processor
-        file = l2_env_processor.osgt
+        file = models/l2_env_processor.osgt
     l2_env_crane_base
-        file = l2_env_crane_base.osgt
+        file = models/l2_env_crane_base.osgt
     l2_env_crane_arms_base
-        file = l2_env_crane_arms_base.osgt
+        file = models/l2_env_crane_arms_base.osgt
     l2_env_crane_arms_piston_base
-        file = l2_env_crane_arms_piston_base.osgt
+        file = models/l2_env_crane_arms_piston_base.osgt
     l2_env_crane_arms_piston
-        file = l2_env_crane_arms_piston.osgt
+        file = models/l2_env_crane_arms_piston.osgt
     box
-        file = box.osgt
+        file = models/box.osgt
 lights
     light
         position = 30 -30 30

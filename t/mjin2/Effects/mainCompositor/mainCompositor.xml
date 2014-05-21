@@ -1,18 +1,18 @@
 <compositor>
-    <include>pipeline/templates.xml</include>
-    <include>pipeline/textures.xml</include>
-    <include>pipeline/materials.xml</include>
+    <include>templates.xml</include>
+    <include>mainCompositor/textures.xml</include>
+    <include>mainCompositor/materials.xml</include>
     <shader name="pass1VS" type="vertex">
-        <file>pipeline/pass1.vert</file>
+        <file>mainCompositor/pass1.vert</file>
     </shader>
     <shader name="pass1FS" type="fragment">
-        <file>pipeline/pass1.frag</file>
+        <file>mainCompositor/pass1.frag</file>
     </shader>
     <shader name="pass2VS" type="vertex">
-        <file>pipeline/pass2.vert</file>
+        <file>mainCompositor/pass2.vert</file>
     </shader>
     <shader name="pass2FS" type="fragment">
-        <file>pipeline/pass2.frag</file>
+        <file>mainCompositor/pass2.frag</file>
     </shader>
     <buffer name="pass1Positions" template="bufferTemplate" />
     <buffer name="pass1Normals"   template="bufferTemplate" />

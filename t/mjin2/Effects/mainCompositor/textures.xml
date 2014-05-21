@@ -4,115 +4,115 @@
         <wrap param="t">repeat</wrap>
         <filter param="min_filter">linear_mipmap_linear</filter>
         <filter param="mag_filter">linear</filter>
-        <file index="0">cubemap/posx.jpg</file>
-        <file index="1">cubemap/negx.jpg</file>
-        <file index="2">cubemap/posy.jpg</file>
-        <file index="3">cubemap/negy.jpg</file>
-        <file index="4">cubemap/posz.jpg</file>
-        <file index="5">cubemap/negz.jpg</file>
+        <file index="0">mainCompositor/textures/cubemap/posx.jpg</file>
+        <file index="1">mainCompositor/textures/cubemap/negx.jpg</file>
+        <file index="2">mainCompositor/textures/cubemap/posy.jpg</file>
+        <file index="3">mainCompositor/textures/cubemap/negy.jpg</file>
+        <file index="4">mainCompositor/textures/cubemap/posz.jpg</file>
+        <file index="5">mainCompositor/textures/cubemap/negz.jpg</file>
     </texture>
     <!-- defaults begin -->
     <texture name="noGlow" template="textureTemplate">
-        <file>noglow.png</file>
+        <file>mainCompositor/textures/noglow.png</file>
     </texture>
     <texture name="noise" template="textureTemplate">
-        <file>noise_tex.jpg</file>
+        <file>mainCompositor/textures/noise_tex.jpg</file>
     </texture>
     <!-- defaults end -->
     <texture name="boxNormal" template="textureTemplate">
-        <file>box_n.png</file>
+        <file>mainCompositor/textures/box_n.png</file>
     </texture>
     <texture name="reflectionMask" template="textureTemplate">
-        <file>reflection_mask.png</file>
+        <file>mainCompositor/textures/reflection_mask.png</file>
     </texture>
     <texture name="floorDiffuse" template="textureTemplate">
-        <file>l2_env_floor_cell_tex2.png</file>
+        <file>mainCompositor/textures/l2_env_floor_cell_tex2.png</file>
     </texture>
     <texture name="floorNormal" template="textureTemplate">
-        <file>l2_env_floor_cell_n.png</file>
+        <file>mainCompositor/textures/l2_env_floor_cell_n.png</file>
     </texture>
     <texture name="wallDiffuse" template="textureTemplate">
-        <file>cement.jpg</file>
+        <file>mainCompositor/textures/cement.jpg</file>
     </texture>
     <texture name="wallNormal" template="textureTemplate">
-        <file>cement_n.png</file>
+        <file>mainCompositor/textures/cement_n.png</file>
     </texture>
     <texture name="columnDiffuse" template="textureTemplate">
-        <file>cement.jpg</file>
+        <file>mainCompositor/textures/cement.jpg</file>
     </texture>
     <texture name="columnNormal" template="textureTemplate">
-        <file>l2_env_column_n2.png</file>
+        <file>mainCompositor/textures/l2_env_column_n2.png</file>
     </texture>
     <texture name="pipeDiffuse" template="textureTemplate">
-        <file>l2_env_pipe_tex.png</file>
+        <file>mainCompositor/textures/l2_env_pipe_tex.png</file>
     </texture>
     <texture name="pipeNormal" template="textureTemplate">
-        <file>l2_env_pipe_n.png</file>
+        <file>mainCompositor/textures/l2_env_pipe_n.png</file>
     </texture>
     <texture name="pipeDiskNormal" template="textureTemplate">
-        <file>l2_env_pipe_disk_n.png</file>
+        <file>mainCompositor/textures/l2_env_pipe_disk_n.png</file>
     </texture>
     <texture name="railBaseNormal" template="textureTemplate">
-        <file>l2_env_rail_base_n.png</file>
+        <file>mainCompositor/textures/l2_env_rail_base_n.png</file>
     </texture>
     <texture name="railDiffuse" template="textureTemplate">
-        <file>dark-metal-texture.jpg</file>
+        <file>mainCompositor/textures/dark-metal-texture.jpg</file>
     </texture>
     <texture name="railNormal" template="textureTemplate">
-        <file>l2_env_rail_n.png</file>
+        <file>mainCompositor/textures/l2_env_rail_n.png</file>
     </texture>
     <texture name="lineDiffuse" template="textureTemplate">
-        <file>l2_env_line_tex.png</file>
+        <file>mainCompositor/textures/l2_env_line_tex.png</file>
     </texture>
     <texture name="lineNormal" template="textureTemplate">
-        <file>l2_env_line_n.png</file>
+        <file>mainCompositor/textures/l2_env_line_n.png</file>
     </texture>
     <texture name="lineBeltDiffuse" template="textureTemplate">
-        <file>l2_env_line_belt_tex.png</file>
+        <file>mainCompositor/textures/l2_env_line_belt_tex.png</file>
     </texture>
     <texture name="lineBeltNormal" template="textureTemplate">
-        <file>l2_env_line_belt_n.png</file>
+        <file>mainCompositor/textures/l2_env_line_belt_n.png</file>
     </texture>
     <texture name="processorDiffuse" template="textureTemplate">
-        <file>l2_env_processor_tex.png</file>
+        <file>mainCompositor/textures/l2_env_processor_tex.png</file>
     </texture>
     <texture name="processorNormal" template="textureTemplate">
-        <file>l2_env_processor_n.png</file>
+        <file>mainCompositor/textures/l2_env_processor_n.png</file>
     </texture>
     <texture name="craneBaseDiffuse" template="textureTemplate">
-        <file>l2_env_crane_base_tex.png</file>
+        <file>mainCompositor/textures/l2_env_crane_base_tex.png</file>
     </texture>
     <texture name="craneBaseNormal" template="textureTemplate">
-        <file>l2_env_crane_base_n.png</file>
+        <file>mainCompositor/textures/l2_env_crane_base_n.png</file>
     </texture>
     <texture name="craneBaseGlow" template="textureTemplate">
-        <file>l2_env_crane_base_glow.png</file>
+        <file>mainCompositor/textures/l2_env_crane_base_glow.png</file>
     </texture>
     <texture name="craneArmsBaseNormal" template="textureTemplate">
-        <file>l2_env_crane_arms_base_n.png</file>
+        <file>mainCompositor/textures/l2_env_crane_arms_base_n.png</file>
     </texture>
     <texture name="craneArmsPistonBaseDiffuse" template="textureTemplate">
-        <file>l2_env_crane_arms_piston_base_tex.png</file>
+        <file>mainCompositor/textures/l2_env_crane_arms_piston_base_tex.png</file>
     </texture>
     <texture name="craneArmsPistonBaseNormal" template="textureTemplate">
-        <file>l2_env_crane_arms_piston_base_n.png</file>
+        <file>mainCompositor/textures/l2_env_crane_arms_piston_base_n.png</file>
     </texture>
     <texture name="craneArmsPistonBaseGlow" template="textureTemplate">
-        <file>l2_env_crane_arms_piston_base_glow.png</file>
+        <file>mainCompositor/textures/l2_env_crane_arms_piston_base_glow.png</file>
     </texture>
     <texture name="craneArmsPistonDiffuse" template="textureTemplate">
-        <file>l2_env_crane_arms_piston_tex.png</file>
+        <file>mainCompositor/textures/l2_env_crane_arms_piston_tex.png</file>
     </texture>
     <texture name="craneArmsPistonNormal" template="textureTemplate">
-        <file>l2_env_crane_arms_piston_n.png</file>
+        <file>mainCompositor/textures/l2_env_crane_arms_piston_n.png</file>
     </texture>
     <texture name="subjectDiffuseRed" template="textureTemplate">
-        <file>subjectRed.png</file>
+        <file>mainCompositor/textures/subjectRed.png</file>
     </texture>
     <texture name="subjectDiffuseGreen" template="textureTemplate">
-        <file>subjectGreen.png</file>
+        <file>mainCompositor/textures/subjectGreen.png</file>
     </texture>
     <texture name="subjectDiffuseBlue" template="textureTemplate">
-        <file>subjectBlue.png</file>
+        <file>mainCompositor/textures/subjectBlue.png</file>
     </texture>
 </compositor>
