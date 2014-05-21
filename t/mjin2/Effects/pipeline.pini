@@ -1,9 +1,0 @@
-file = pipeline.xml
-compositor = pipeline.xml
-shadowCompositor = shadowPipeline.xml
-shadowJitteringScale = 16
-shadowOutputBuffer = pass1Shadows
-finalPassName = pass2
-finalPassShadowMapUniformID = 5
-outputBuffer = pass2Final
-lightPosition = 0 0 0
