@@ -1,5 +1,5 @@
 <compositor>
-    <include>pipeline/templates.xml</include>
+    <include>templates.xml</include>
     <buffer name="pass1Shadows" template="bufferTemplate" />
     <technique>
         <forward_pass name="pass1Shadow">
