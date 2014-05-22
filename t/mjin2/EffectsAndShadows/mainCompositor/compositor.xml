@@ -1,0 +1,56 @@
+<compositor>
+    <include>templates.xml</include>
+    <include>materials.xml</include>
+    <shader name="pass1VS" type="vertex">
+        <file>pass1.vert</file>
+    </shader>
+    <shader name="pass1FS" type="fragment">
+        <file>pass1.frag</file>
+    </shader>
+    <shader name="pass2VS" type="vertex">
+        <file>pass2.vert</file>
+    </shader>
+    <shader name="pass2FS" type="fragment">
+        <file>pass2.frag</file>
+    </shader>
+    <buffer name="pass1Positions" template="bufferTemplate" />
+    <buffer name="pass1Normals"   template="bufferTemplate" />
+    <buffer name="pass1Colors"    template="bufferTemplate" />
+    <buffer name="pass2Final"     template="bufferTemplate" />
+    <texture name="rockwall" template="textureTemplate">
+        <file>textures/rockwall.png</file>
+    </texture>
+    <texture name="rockwallBump" template="textureTemplate">
+        <file>textures/rockwall_NH.png</file>
+    </texture>
+    <uniform name="lightPos" type="vec3">
+        <value>0 0 80</value>
+    </uniform>
+    
+    <technique>
+        <forward_pass name="pass1">
+            <clear_color>0 0 0 1</clear_color>
+            <texture unit="0" varname="diffMap">rockwall</texture>
+            <texture unit="1" varname="bumpMap">rockwallBump</texture>
+            <shader>pass1VS</shader>
+            <shader>pass1FS</shader>
+            <uniform name="useBumpMap" type="int">
+                <value>1</value>
+            </uniform>
+            <output_buffer target="color0">pass1Positions</output_buffer>
+            <output_buffer target="color1">pass1Normals</output_buffer>
+            <output_buffer target="color2">pass1Colors</output_buffer>
+        </forward_pass>
+        <deferred_pass name="pass2">
+            <input_buffer unit="0" varname="posMap">pass1Positions</input_buffer>
+            <input_buffer unit="1" varname="normalMap">pass1Normals</input_buffer>
+            <input_buffer unit="2" varname="colorMap">pass1Colors</input_buffer>
+            <!-- Just a place holder for shadow map. Changed in code-->
+            <input_buffer unit="3" varname="shadowMap">pass1Colors</input_buffer>
+            <uniform>lightPos</uniform>
+            <shader>pass2VS</shader>
+            <shader>pass2FS</shader>
+            <output_buffer target="color">pass2Final</output_buffer>
+        </deferred_pass>
+    </technique>
+</compositor>

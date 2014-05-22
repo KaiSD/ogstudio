@@ -1,23 +1,33 @@
 
-uniform sampler2D diffMap;
-uniform sampler2D bumpMap;
-
-uniform int useBumpMap;
-
-varying vec3 pos_worldspace;
-varying vec3 n_worldspace;
-varying vec3 t_worldspace;
-varying vec3 b_worldspace;
+uniform mat4 osg_ViewMatrixInverse;
+uniform vec3 lightPos;
+uniform sampler2DRect posMap;
+uniform sampler2DRect normalMap;
+uniform sampler2DRect colorMap;
+uniform sampler2DRect shadowMap;
 
 void main()
 {
-    gl_FragData[0] = vec4(pos_worldspace, gl_FragCoord.z);
-    vec3 nn = vec3(1.0);
-    if (useBumpMap > 0)
-        // Convert [0; 1] range to [-1; 1].
-        nn = 2.0 * texture2D(bumpMap, gl_TexCoord[0].xy).xyz - vec3(1.0);
-    // Convert Tangent space to World space with TBN matrix.
-    gl_FragData[1] = vec4(nn.x * t_worldspace + nn.y * b_worldspace + nn.z * n_worldspace, 1.0);
-    gl_FragData[2] = texture2D(diffMap, gl_TexCoord[0].xy);
+    vec3 p_worldspace = texture2DRect(posMap,    gl_FragCoord.xy).xyz;
+    vec3 n_worldspace = texture2DRect(normalMap, gl_FragCoord.xy).xyz;
+    vec3 c_worldspace = texture2DRect(colorMap,  gl_FragCoord.xy).xyz;
+    vec3 s_worldspace = texture2DRect(shadowMap, gl_FragCoord.xy).xyz;
+    // Direction from point to light (not vice versa!)
+    vec3 lightDir_worldspace = normalize(lightPos - p_worldspace);
+    // Lambertian diffuse color.
+    float diff = max(0.2, dot(lightDir_worldspace, n_worldspace));
+    // Convert camera position from Camera (eye) space (it's always at 0, 0, 0
+    // in there) to World space. Don't forget to use mat4 and vec4!
+    vec4 cameraPos_worldspace = osg_ViewMatrixInverse * vec4(0, 0, 0, 1);
+    // Direction from point to camera.
+    vec3 viewDir_worldspace = normalize(vec3(cameraPos_worldspace) - p_worldspace);
+    // Blinn-Phong specular highlights.
+    vec3 h_worldspace = normalize(lightDir_worldspace + viewDir_worldspace);
+    float spec = pow(max(0.0, dot(h_worldspace, n_worldspace)), 40.0);
+    // Final fragment color.
+    vec3 color = diff * c_worldspace * s_worldspace;
+    // Only add specular if the fragment is NOT in the shadow.
+    if (s_worldspace.x == 1)
+        color += spec;
+    gl_FragColor = vec4(color, 1.0);
 }
-
