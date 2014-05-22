@@ -1,23 +1,41 @@
 models
-    simpleroom
-        file = models/simpleroom.osgt
-    torusmodel
-        file = models/torus.osgt
+    l2_env_crane_base
+        file = models/l2_env_crane_base.osgt
+    l2_env_floor
+        file = models/l2_env_floor.osgt
+    l2_env_line
+        file = models/l2_env_line.osgt
+    l2_env_line_belt
+        file = models/l2_env_line_belt.osgt
 nodes
-    room
-        model = simpleroom
-        position = 0 0 1
-    torus
-        model = torusmodel
-        position = 0 0 15
+    craneBase
+        model = l2_env_crane_base
+        position = 0 0 8.1
+    floor
+        model = l2_env_floor
+    line
+        model = l2_env_line
+    lineBelt1
+        model = l2_env_line_belt
+        position = 0 10 0
+    lineBelt2
+        model = l2_env_line_belt
+        position = 0 2 0
+    lineBelt3
+        model = l2_env_line_belt
+        position = 0 -6 0
 lights
     light
-        position = 0 0 80
+        position = 30 -30 30
 shadows
     shadow
         shader = shadowCompositor/pass1Shadow.frag
         jitteringScale = 16
         light = light
+scene = craneBase
+scene = floor
 scene = light
-scene = torus
-scene = room
+scene = line
+scene = lineBelt1
+scene = lineBelt2
+scene = lineBelt3
