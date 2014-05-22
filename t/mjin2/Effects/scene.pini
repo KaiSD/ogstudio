@@ -87,6 +87,11 @@ nodes
     subject
         model = box
         position = -10 10 0.6
+shadows
+    shadow
+        shader = shadowCompositor/shadowShader.frag
+        jitteringScale = 16
+        light = light
 scene = light
 scene = floor
 scene = wall

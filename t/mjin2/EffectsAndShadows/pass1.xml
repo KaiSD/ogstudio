@@ -1,0 +1,10 @@
+<compositor>
+    <include>templates.xml</include>
+    <buffer name="pass1Shadows" template="bufferTemplate" />
+    <technique>
+        <forward_pass name="pass1Shadow">
+            <clear_color>0 0 0 1</clear_color>
+            <output_buffer target="color">pass1Shadows</output_buffer>
+        </forward_pass>
+    </technique>
+</compositor>

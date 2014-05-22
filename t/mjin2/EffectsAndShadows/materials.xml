@@ -1,0 +1,11 @@
+<compositor>
+    <texture name="diffMap" template="textureTemplate">
+        <file>wall.png</file>
+    </texture>
+    <material name="wallPlain">
+        <texture unit="0" varname="diffMap">diffMap</texture>
+        <uniform name="useBumpMap" type="int">
+            <value>0</value>
+        </uniform>
+    </material>
+</compositor>
