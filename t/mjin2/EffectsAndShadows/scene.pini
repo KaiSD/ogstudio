@@ -1,8 +1,8 @@
 models
     simpleroom
-        file = simpleroom.osgt
+        file = models/simpleroom.osgt
     torusmodel
-        file = torus.osgt
+        file = models/torus.osgt
 nodes
     room
         model = simpleroom
@@ -15,7 +15,7 @@ lights
         position = 0 0 80
 shadows
     shadow
-        shader = pass1Shadow.frag
+        shader = shadowCompositor/pass1Shadow.frag
         jitteringScale = 16
         light = light
 scene = light

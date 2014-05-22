@@ -1,6 +1,6 @@
 <compositor>
     <texture name="diffMap" template="textureTemplate">
-        <file>wall.png</file>
+        <file>mainCompositor/textures/wall.png</file>
     </texture>
     <material name="wallPlain">
         <texture unit="0" varname="diffMap">diffMap</texture>
