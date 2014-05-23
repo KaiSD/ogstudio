@@ -86,6 +86,34 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="pipeSurface">
+        <texture unit="0" varname="diffuseMap">pipeDiffuse</texture>
+        <texture unit="1" varname="normalMap">pipeNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="pipeDiskSurface">
+        <texture unit="0" varname="diffuseMap">pipeDiffuse</texture>
+        <texture unit="1" varname="normalMap">pipeDiskNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="processorSurface">
+        <texture unit="0" varname="diffuseMap">processorDiffuse</texture>
+        <texture unit="1" varname="normalMap">processorNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="railBaseSurface">
+        <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
+        <texture unit="1" varname="normalMap">railBaseNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
     <material name="wallSurface">
         <texture unit="0" varname="diffuseMap">wallDiffuse</texture>
         <texture unit="1" varname="normalMap">wallNormal</texture>

@@ -58,6 +58,27 @@
     <texture name="lineBeltNormal" template="textureTemplate">
         <file>textures/l2_env_line_belt_n.png</file>
     </texture>
+    <texture name="pipeDiffuse" template="textureTemplate">
+        <file>textures/l2_env_pipe_tex.png</file>
+    </texture>
+    <texture name="pipeDiskNormal" template="textureTemplate">
+        <file>textures/l2_env_pipe_disk_n.png</file>
+    </texture>
+    <texture name="pipeNormal" template="textureTemplate">
+        <file>textures/l2_env_pipe_n.png</file>
+    </texture>
+    <texture name="processorDiffuse" template="textureTemplate">
+        <file>textures/l2_env_processor_tex.png</file>
+    </texture>
+    <texture name="processorNormal" template="textureTemplate">
+        <file>textures/l2_env_processor_n.png</file>
+    </texture>
+    <texture name="railBaseDiffuse" template="textureTemplate">
+        <file>textures/noise_tex.jpg</file>
+    </texture>
+    <texture name="railBaseNormal" template="textureTemplate">
+        <file>textures/l2_env_rail_base_n.png</file>
+    </texture>
     <texture name="wallDiffuse" template="textureTemplate">
         <file>textures/cement.jpg</file>
     </texture>

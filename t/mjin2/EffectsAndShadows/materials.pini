@@ -19,5 +19,17 @@ nodes
         material = lineBeltSurface
     lineBelt3
         material = lineBeltSurface
+    pipe
+        material = pipeSurface
+    pipeDisk
+        material = pipeDiskSurface
+    processor
+        material = processorSurface
+    railBase
+        material = railBaseSurface
+    rpipe
+        material = pipeSurface
+    rpipeDisk
+        material = pipeDiskSurface
     wall
         material = wallSurface
