@@ -47,11 +47,12 @@
             <output_buffer target="color3">pass1Glow</output_buffer>
         </forward_pass>
         <deferred_pass name="pass2">
-            <input_buffer unit="0" varname="posMap">pass1Positions</input_buffer>
-            <input_buffer unit="1" varname="normalMap">pass1Normals</input_buffer>
-            <input_buffer unit="2" varname="colorMap">pass1Colors</input_buffer>
+            <input_buffer unit="0" varname="positionMap">pass1Positions</input_buffer>
+            <input_buffer unit="1" varname="colorMap">pass1Colors</input_buffer>
+            <input_buffer unit="2" varname="normalMap">pass1Normals</input_buffer>
+            <input_buffer unit="3" varname="glowMap">pass1Glow</input_buffer>
             <!-- Just a place holder for shadow map. Changed in code-->
-            <input_buffer unit="3" varname="shadowMap">pass1Colors</input_buffer>
+            <input_buffer unit="4" varname="shadowMap">pass1Colors</input_buffer>
             <uniform>lightPos</uniform>
             <shader>pass2VS</shader>
             <shader>pass2FS</shader>
