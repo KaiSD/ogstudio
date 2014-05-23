@@ -3,6 +3,12 @@ nodes
         material = columnSurface
     craneBase
         material = craneBaseSurface
+    craneArmsBase
+        material = craneArmsBaseSurface
+    craneArmsPiston
+        material = craneArmsPistonSurface
+    craneArmsPistonBase
+        material = craneArmsPistonBaseSurface
     floor
         material = floorSurface
     line

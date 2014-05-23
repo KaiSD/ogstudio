@@ -13,14 +13,32 @@
     <texture name="columnNormal" template="textureTemplate">
         <file>textures/l2_env_column_n.png</file>
     </texture>
+    <texture name="craneArmsBaseNormal" template="textureTemplate">
+        <file>textures/l2_env_crane_arms_base_n.png</file>
+    </texture>
+    <texture name="craneArmsPistonBaseDiffuse" template="textureTemplate">
+        <file>textures/l2_env_crane_arms_piston_base_tex.png</file>
+    </texture>
+    <texture name="craneArmsPistonBaseGlow" template="textureTemplate">
+        <file>textures/l2_env_crane_arms_piston_base_glow.png</file>
+    </texture>
+    <texture name="craneArmsPistonBaseNormal" template="textureTemplate">
+        <file>textures/l2_env_crane_arms_piston_base_n.png</file>
+    </texture>
+    <texture name="craneArmsPistonDiffuse" template="textureTemplate">
+        <file>textures/l2_env_crane_arms_piston_tex.png</file>
+    </texture>
+    <texture name="craneArmsPistonNormal" template="textureTemplate">
+        <file>textures/l2_env_crane_arms_piston_n.png</file>
+    </texture>
     <texture name="craneBaseDiffuse" template="textureTemplate">
         <file>textures/l2_env_crane_base_tex.png</file>
     </texture>
-    <texture name="craneBaseNormal" template="textureTemplate">
-        <file>textures/l2_env_crane_base_n.png</file>
-    </texture>
     <texture name="craneBaseGlow" template="textureTemplate">
         <file>textures/l2_env_crane_base_glow.png</file>
+    </texture>
+    <texture name="craneBaseNormal" template="textureTemplate">
+        <file>textures/l2_env_crane_base_n.png</file>
     </texture>
     <texture name="floorDiffuse" template="textureTemplate">
         <file>textures/l2_env_floor_cell_tex.png</file>
