@@ -1,4 +1,8 @@
 nodes
+    column
+        material = columnSurface
+    craneBase
+        material = craneBaseSurface
     floor
         material = floorSurface
     line
@@ -9,5 +13,5 @@ nodes
         material = lineBeltSurface
     lineBelt3
         material = lineBeltSurface
-    craneBase
-        material = craneBaseSurface
+    wall
+        material = wallSurface

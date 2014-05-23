@@ -7,6 +7,21 @@
         <file>textures/rockwall_NH.png</file>
     </texture>
     <!-- defaults end -->
+    <texture name="columnDiffuse" template="textureTemplate">
+        <file>textures/cement.jpg</file>
+    </texture>
+    <texture name="columnNormal" template="textureTemplate">
+        <file>textures/l2_env_column_n.png</file>
+    </texture>
+    <texture name="craneBaseDiffuse" template="textureTemplate">
+        <file>textures/l2_env_crane_base_tex.png</file>
+    </texture>
+    <texture name="craneBaseNormal" template="textureTemplate">
+        <file>textures/l2_env_crane_base_n.png</file>
+    </texture>
+    <texture name="craneBaseGlow" template="textureTemplate">
+        <file>textures/l2_env_crane_base_glow.png</file>
+    </texture>
     <texture name="floorDiffuse" template="textureTemplate">
         <file>textures/l2_env_floor_cell_tex.png</file>
     </texture>
@@ -25,13 +40,10 @@
     <texture name="lineBeltNormal" template="textureTemplate">
         <file>textures/l2_env_line_belt_n.png</file>
     </texture>
-    <texture name="craneBaseDiffuse" template="textureTemplate">
-        <file>textures/l2_env_crane_base_tex.png</file>
+    <texture name="wallDiffuse" template="textureTemplate">
+        <file>textures/cement.jpg</file>
     </texture>
-    <texture name="craneBaseNormal" template="textureTemplate">
-        <file>textures/l2_env_crane_base_n.png</file>
-    </texture>
-    <texture name="craneBaseGlow" template="textureTemplate">
-        <file>textures/l2_env_crane_base_glow.png</file>
+    <texture name="wallNormal" template="textureTemplate">
+        <file>textures/cement_n.png</file>
     </texture>
 </compositor>

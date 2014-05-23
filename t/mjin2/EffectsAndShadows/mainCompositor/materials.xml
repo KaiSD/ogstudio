@@ -1,4 +1,29 @@
 <compositor>
+    <material name="columnSurface">
+        <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
+        <texture unit="1" varname="normalMap">columnNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseGlowingSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+        <texture unit="2" varname="glowMap">craneBaseGlow</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
     <material name="floorSurface">
         <texture unit="0" varname="diffuseMap">floorDiffuse</texture>
         <texture unit="1" varname="normalMap">floorNormal</texture>
@@ -20,21 +45,10 @@
             <value>1</value>
         </uniform>
     </material>
-    <material name="craneBaseSurface">
-        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
-        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+    <material name="wallSurface">
+        <texture unit="0" varname="diffuseMap">wallDiffuse</texture>
+        <texture unit="1" varname="normalMap">wallNormal</texture>
         <uniform name="useNormalMap" type="int">
-            <value>1</value>
-        </uniform>
-    </material>
-    <material name="craneBaseGlowingSurface">
-        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
-        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
-        <texture unit="2" varname="glowMap">craneBaseGlow</texture>
-        <uniform name="useNormalMap" type="int">
-            <value>1</value>
-        </uniform>
-        <uniform name="useGlowMap" type="int">
             <value>1</value>
         </uniform>
     </material>
