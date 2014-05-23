@@ -1,5 +1,7 @@
 
 uniform mat4 osg_ViewMatrixInverse;
+// Tangent calculated in code.
+attribute vec3 Tangent;
 
 varying vec3 pos_worldspace;
 varying vec3 n_worldspace;
@@ -26,7 +28,7 @@ void main()
     // Normal.
     n_worldspace   = modelMatrix3x3 * gl_Normal;
     // Tangent.
-    t_worldspace   = modelMatrix3x3 * gl_MultiTexCoord1.xyz;
+    t_worldspace   = modelMatrix3x3 * Tangent;
     // Bitangent / binormal.
     b_worldspace   = cross(n_worldspace, t_worldspace);
 }
