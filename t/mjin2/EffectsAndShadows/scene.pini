@@ -15,6 +15,10 @@ models
         file = models/l2_env_line.osgt
     l2_env_line_belt
         file = models/l2_env_line_belt.osgt
+    l2_env_pipe
+        file = models/l2_env_pipe.osgt
+    l2_env_pipe_disk
+        file = models/l2_env_pipe_disk.osgt
     l2_env_wall
         file = models/l2_env_wall.osgt
 nodes
@@ -48,6 +52,18 @@ nodes
     lineBelt3
         model = l2_env_line_belt
         position = 0 -6 0
+    pipe
+        model = l2_env_pipe
+        position = -4.5 0 6.1
+    pipeDisk
+        model = l2_env_pipe_disk
+        position = -4.5 0 6.1
+    rpipe
+        model = l2_env_pipe
+        position = 4.5 0 6.1
+    rpipeDisk
+        model = l2_env_pipe_disk
+        position = 4.5 0 6.1
     wall
         model = l2_env_wall
         position = 0 16 0
@@ -67,4 +83,8 @@ scene = line
 scene = lineBelt1
 scene = lineBelt2
 scene = lineBelt3
+scene = pipe
+scene = pipeDisk
+scene = rpipe
+scene = rpipeDisk
 scene = wall
