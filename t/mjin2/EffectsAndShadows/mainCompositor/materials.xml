@@ -1,11 +1,41 @@
 <compositor>
-    <texture name="diffMap" template="textureTemplate">
-        <file>textures/wall.png</file>
-    </texture>
-    <material name="wallPlain">
-        <texture unit="0" varname="diffMap">diffMap</texture>
-        <uniform name="useBumpMap" type="int">
-            <value>0</value>
+    <material name="floorSurface">
+        <texture unit="0" varname="diffuseMap">floorDiffuse</texture>
+        <texture unit="1" varname="normalMap">floorNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="lineSurface">
+        <texture unit="0" varname="diffuseMap">lineDiffuse</texture>
+        <texture unit="1" varname="normalMap">lineNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="lineBeltSurface">
+        <texture unit="0" varname="diffuseMap">lineBeltDiffuse</texture>
+        <texture unit="1" varname="normalMap">lineBeltNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseGlowingSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+        <texture unit="2" varname="glowMap">craneBaseGlow</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
         </uniform>
     </material>
 </compositor>

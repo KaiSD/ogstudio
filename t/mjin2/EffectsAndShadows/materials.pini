@@ -1,0 +1,13 @@
+nodes
+    floor
+        material = floorSurface
+    line
+        material = lineSurface
+    lineBelt1
+        material = lineBeltSurface
+    lineBelt2
+        material = lineBeltSurface
+    lineBelt3
+        material = lineBeltSurface
+    craneBase
+        material = craneBaseSurface
