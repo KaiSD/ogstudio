@@ -25,11 +25,15 @@ nodes
         material = pipeDiskSurface
     processor
         material = processorSurface
+    rail
+        material = railSurface
     railBase
         material = railBaseSurface
     rpipe
         material = pipeSurface
     rpipeDisk
         material = pipeDiskSurface
+    subject
+        material = subjectSurface
     wall
         material = wallSurface

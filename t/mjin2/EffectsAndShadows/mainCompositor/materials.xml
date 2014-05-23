@@ -108,8 +108,42 @@
         </uniform>
     </material>
     <material name="railBaseSurface">
-        <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
         <texture unit="1" varname="normalMap">railBaseNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="railSurface">
+        <texture unit="0" varname="diffuseMap">railDiffuse</texture>
+        <texture unit="1" varname="normalMap">railNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurface">
+        <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceRed">
+        <texture unit="0" varname="diffuseMap">subjectDiffuseRed</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceGreen">
+        <texture unit="0" varname="diffuseMap">subjectDiffuseGreen</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceBlue">
+        <texture unit="0" varname="diffuseMap">subjectDiffuseBlue</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
         <uniform name="useNormalMap" type="int">
             <value>1</value>
         </uniform>

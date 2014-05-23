@@ -1,12 +1,12 @@
 <compositor>
     <!-- defaults begin -->
-    <texture name="rockwall" template="textureTemplate">
-        <file>textures/rockwall.png</file>
-    </texture>
-    <texture name="rockwallBump" template="textureTemplate">
-        <file>textures/rockwall_NH.png</file>
+    <texture name="noise" template="textureTemplate">
+        <file>textures/noise_tex.jpg</file>
     </texture>
     <!-- defaults end -->
+    <texture name="boxNormal" template="textureTemplate">
+        <file>textures/box_n.png</file>
+    </texture>
     <texture name="columnDiffuse" template="textureTemplate">
         <file>textures/cement.jpg</file>
     </texture>
@@ -73,11 +73,23 @@
     <texture name="processorNormal" template="textureTemplate">
         <file>textures/l2_env_processor_n.png</file>
     </texture>
-    <texture name="railBaseDiffuse" template="textureTemplate">
-        <file>textures/noise_tex.jpg</file>
-    </texture>
     <texture name="railBaseNormal" template="textureTemplate">
         <file>textures/l2_env_rail_base_n.png</file>
+    </texture>
+    <texture name="railDiffuse" template="textureTemplate">
+        <file>textures/dark-metal-texture.jpg</file>
+    </texture>
+    <texture name="railNormal" template="textureTemplate">
+        <file>textures/l2_env_rail_n.png</file>
+    </texture>
+    <texture name="subjectDiffuseRed" template="textureTemplate">
+        <file>textures/subjectRed.png</file>
+    </texture>
+    <texture name="subjectDiffuseGreen" template="textureTemplate">
+        <file>textures/subjectGreen.png</file>
+    </texture>
+    <texture name="subjectDiffuseBlue" template="textureTemplate">
+        <file>textures/subjectBlue.png</file>
     </texture>
     <texture name="wallDiffuse" template="textureTemplate">
         <file>textures/cement.jpg</file>

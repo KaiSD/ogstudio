@@ -28,10 +28,9 @@
         <forward_pass name="pass1">
             <clear_color>0 0 0 1</clear_color>
             <!-- Defaults begin -->
-            <texture unit="0" varname="diffuseMap">rockwall</texture>
-            <texture unit="1" varname="normalMap">rockwallBump</texture>
+            <texture unit="0" varname="diffuseMap">noise</texture>
             <uniform name="useNormalMap" type="int">
-                <value>1</value>
+                <value>0</value>
             </uniform>
             <uniform name="useGlowMap" type="int">
                 <value>0</value>
