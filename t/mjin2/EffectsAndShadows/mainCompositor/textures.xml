@@ -1,0 +1,37 @@
+<compositor>
+    <!-- defaults begin -->
+    <texture name="rockwall" template="textureTemplate">
+        <file>textures/rockwall.png</file>
+    </texture>
+    <texture name="rockwallBump" template="textureTemplate">
+        <file>textures/rockwall_NH.png</file>
+    </texture>
+    <!-- defaults end -->
+    <texture name="floorDiffuse" template="textureTemplate">
+        <file>textures/l2_env_floor_cell_tex.png</file>
+    </texture>
+    <texture name="floorNormal" template="textureTemplate">
+        <file>textures/l2_env_floor_cell_n.png</file>
+    </texture>
+    <texture name="lineDiffuse" template="textureTemplate">
+        <file>textures/l2_env_line_tex.png</file>
+    </texture>
+    <texture name="lineNormal" template="textureTemplate">
+        <file>textures/l2_env_line_n.png</file>
+    </texture>
+    <texture name="lineBeltDiffuse" template="textureTemplate">
+        <file>textures/l2_env_line_belt_tex.png</file>
+    </texture>
+    <texture name="lineBeltNormal" template="textureTemplate">
+        <file>textures/l2_env_line_belt_n.png</file>
+    </texture>
+    <texture name="craneBaseDiffuse" template="textureTemplate">
+        <file>textures/l2_env_crane_base_tex.png</file>
+    </texture>
+    <texture name="craneBaseNormal" template="textureTemplate">
+        <file>textures/l2_env_crane_base_n.png</file>
+    </texture>
+    <texture name="craneBaseGlow" template="textureTemplate">
+        <file>textures/l2_env_crane_base_glow.png</file>
+    </texture>
+</compositor>
