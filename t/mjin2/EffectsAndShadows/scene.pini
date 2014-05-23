@@ -90,7 +90,7 @@ lights
 shadows
     shadow
         shader = shadowCompositor/pass1Shadow.frag
-        jitteringScale = 16
+        jitteringScale = 2
         light = light
 scene = column
 scene = craneBase

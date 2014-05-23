@@ -1,0 +1,257 @@
+nodeMaterial
+    paintSubjectRed
+        node = subject
+        material = subjectSurfaceRed
+    paintSubjectGreen
+        node = subject
+        material = subjectSurfaceGreen
+    paintSubjectBlue
+        node = subject
+        material = subjectSurfaceBlue
+    makeCraneBaseSurfaceGlow
+        node = craneBase
+        material = craneBaseGlowingSurface
+    makeCraneBaseSurfaceSimple
+        node = craneBase
+        material = craneBaseSurface
+    makeCraneArmsPistonBaseSurfaceGlow
+        node = craneArmsPistonBase
+        material = craneArmsPistonBaseGlowingSurface
+    makeCraneArmsPistonBaseSurfaceSimple
+        node = craneArmsPistonBase
+        material = craneArmsPistonBaseSurface
+delay
+    wait2
+        delay = 2000
+    blinkDelay
+        delay = 500
+moveBy
+    moveBelt1PreProcessor1
+        point = 0 0 0 0
+        point = 10000 10 0 0
+        node = lineBelt1
+    moveSubjectPreProcessor1
+        template = moveBelt1PreProcessor1
+        node = subject
+    moveBelt1
+        point = 0 0 0 0
+        point = 3000 3 0 0
+        node = lineBelt1
+    moveSubject
+        template = moveBelt1
+        node = subject
+    moveCraneBaseToLine1
+        point = 0 0 0 0
+        point = 10000 0 10 0
+        node = craneBase
+    moveCraneArmsBasePostProcessor
+        template = moveBelt1
+        node = craneArmsBase
+sequence
+    blinkCraneBaseOnce
+        actions = makeCraneBaseSurfaceGlow
+        actions = blinkDelay
+        actions = makeCraneBaseSurfaceSimple
+        actions = blinkDelay
+repeat
+    blinkCraneBase
+        n = 0
+        action = blinkCraneBaseOnce
+        autoclone = 0
+add
+    startBlinkingCraneBase
+        parent = main
+        child = blinkCraneBase
+    stopBlinkingCraneBase
+        template = startBlinkingCraneBase
+        reversed = 1
+sequence
+    moveCraneBaseToLine1AndBlink
+        actions = startBlinkingCraneBase
+        actions = moveCraneBaseToLine1
+        actions = stopBlinkingCraneBase
+spawn
+    preProcessor1
+        actions = moveBelt1PreProcessor1
+        actions = moveSubjectPreProcessor1
+        actions = moveCraneBaseToLine1AndBlink
+        actions = moveCraneArmsBasePostProcessor
+    postProcessor1
+        actions = paintSubjectRed
+        actions = moveBelt1
+        actions = moveSubject
+moveBy
+    lowerCraneArmsPiston
+        point = 0 0 0 0
+        point = 3000 0 0 -2.7
+        node = craneArmsPiston
+    liftCraneArmsPiston
+        template = lowerCraneArmsPiston
+        reversed = 1
+    liftSubject
+        template = liftCraneArmsPiston
+        node = subject
+sequence
+    blinkCraneArmsPistonBaseOnce
+        actions = makeCraneArmsPistonBaseSurfaceGlow
+        actions = blinkDelay
+        actions = makeCraneArmsPistonBaseSurfaceSimple
+        actions = blinkDelay
+repeat
+    blinkCraneArmsPistonBase
+        n = 0
+        action = blinkCraneArmsPistonBaseOnce
+        autoclone = 0
+add
+    startBlinkingCraneArmsPistonBase
+        parent = main
+        child = blinkCraneArmsPistonBase
+    stopBlinkingCraneArmsPistonBase
+        template = startBlinkingCraneArmsPistonBase
+        reversed = 1
+spawn
+    liftCraneArmsPistonAndSubject
+        actions = liftCraneArmsPiston
+        actions = liftSubject
+moveBy
+    shakeSubjectUp
+        point = 0 0 0 0
+        point = 100 0 0 -0.02
+        node = subject
+    shakeSubjectDown
+        template = shakeSubjectUp
+        reversed = 1
+sequence
+    shakeSubjectOnce
+        actions = shakeSubjectDown
+        actions = shakeSubjectUp
+repeat
+    shakeSubject
+        n = 0
+        action = shakeSubjectOnce
+        autoclone = 0
+add
+    startShakingSubject
+        parent = main
+        child = shakeSubject
+    stopShakingSubject
+        template = startShakingSubject
+        reversed = 1
+sequence
+    takeSubjectFromLine
+        actions = startBlinkingCraneArmsPistonBase
+        actions = lowerCraneArmsPiston
+        actions = wait2
+        actions = startShakingSubject
+        actions = liftCraneArmsPistonAndSubject
+        actions = stopBlinkingCraneArmsPistonBase
+        actions = wait2
+    putSubjectToLine
+        template = takeSubjectFromLine
+        reversed = 1
+moveBy
+    moveCraneBaseLineDown
+        point = 0 0 0 0
+        point = 8000 0 -8 0
+        node = craneBase
+    moveSubjectBack
+        template = moveSubject
+        reversed = 1
+    moveCraneArmsBaseBack
+        template = moveSubjectBack
+        node = craneArmsBase
+    moveSubjectLineDown
+        point = 0 0 0 0
+        point = 8000 0 -8 0
+        node = subject
+repeat
+    moveSubjectLeft
+        n = 2
+        action = moveSubjectBack
+    moveCraneArmsBaseLeft
+        n = 2
+        action = moveCraneArmsBaseBack
+sequence
+    moveCraneBaseLineDownAndBlink
+        actions = startBlinkingCraneBase
+        actions = moveCraneBaseLineDown
+        actions = stopBlinkingCraneBase
+spawn
+    moveCraneAndSubjectLineDown
+        actions = moveSubjectLeft
+        actions = moveCraneArmsBaseLeft
+        actions = moveSubjectLineDown
+        actions = moveCraneBaseLineDownAndBlink
+moveBy
+    moveBelt2
+        template = moveBelt1
+        node = lineBelt2
+repeat
+    moveCraneArmsBase
+        n = 2
+        action = moveCraneArmsBasePostProcessor
+spawn
+    moveBeltAndSubjectPrePostProcessor2
+        actions = moveBelt2
+        actions = moveSubject
+sequence
+    moveBeltAndSubjectProcessor2
+        actions = moveBeltAndSubjectPrePostProcessor2
+        actions = wait2
+        actions = paintSubjectGreen
+        actions = moveBeltAndSubjectPrePostProcessor2
+spawn
+    moveBeltSubjectAndCraneArmsBaseProcessor2
+        actions = moveBeltAndSubjectProcessor2
+        actions = moveCraneArmsBase
+moveBy
+    moveBelt3
+        template = moveBelt1
+        node = lineBelt3
+spawn
+    moveBeltAndSubjectPrePostProcessor3
+        actions = moveBelt3
+        actions = moveSubject
+repeat
+    moveBeltAndSubjectAway
+        n = 4
+        action = moveBeltAndSubjectPrePostProcessor3
+sequence
+    moveBeltAndSubjectProcessor3
+        actions = moveBeltAndSubjectPrePostProcessor3
+        actions = wait2
+        actions = paintSubjectBlue
+        actions = moveBeltAndSubjectAway
+sequence
+    stage1
+        actions = preProcessor1
+        actions = wait2
+        actions = postProcessor1
+        actions = takeSubjectFromLine
+    stage2
+        actions = moveCraneAndSubjectLineDown
+        actions = putSubjectToLine
+        actions = moveBeltSubjectAndCraneArmsBaseProcessor2
+        actions = takeSubjectFromLine
+    stage3
+        actions = moveCraneAndSubjectLineDown
+        actions = putSubjectToLine
+        actions = moveBeltAndSubjectProcessor3
+timeSpeed
+    finalStage1
+        rate = 1
+        action = stage1
+    finalStage2
+        rate = 1
+        action = stage2
+    finalStage3
+        rate = 1
+        action = stage3
+sequence
+    mainSequence
+        actions = finalStage1
+        actions = finalStage2
+        actions = finalStage3
+spawn
+    main
+        actions = mainSequence
