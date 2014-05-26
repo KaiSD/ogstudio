@@ -26,13 +26,6 @@ delay
     blinkDelay
         delay = 500
 moveBy
-    moveBelt1PreProcessor1
-        point = 0 0 0 0
-        point = 10000 10 0 0
-        node = lineBelt1
-    moveSubjectPreProcessor1
-        template = moveBelt1PreProcessor1
-        node = subject
     moveBelt1
         point = 0 0 0 0
         point = 3000 3 0 0
@@ -212,16 +205,12 @@ spawn
     moveBeltAndSubjectPrePostProcessor3
         actions = moveBelt3
         actions = moveSubject
-repeat
-    moveBeltAndSubjectAway
-        n = 4
-        action = moveBeltAndSubjectPrePostProcessor3
 sequence
     moveBeltAndSubjectProcessor3
         actions = moveBeltAndSubjectPrePostProcessor3
         actions = wait2
         actions = paintSubjectBlue
-        actions = moveBeltAndSubjectAway
+        actions = moveBeltAndSubjectPrePostProcessor3
 sequence
     stage1
         actions = preProcessor1
