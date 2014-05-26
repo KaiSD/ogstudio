@@ -80,7 +80,7 @@ nodes
         position = 4.5 0 6.1
     subject
         model = box
-        position = -10 10 0.6
+        position = -3 10 0.6
     wall
         model = l2_env_wall
         position = 0 16 0

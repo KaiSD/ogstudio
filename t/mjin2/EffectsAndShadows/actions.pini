@@ -72,8 +72,8 @@ sequence
         actions = stopBlinkingCraneBase
 spawn
     preProcessor1
-        actions = moveBelt1PreProcessor1
-        actions = moveSubjectPreProcessor1
+        actions = moveBelt1
+        actions = moveSubject
         actions = moveCraneBaseToLine1AndBlink
         actions = moveCraneArmsBasePostProcessor
     postProcessor1
