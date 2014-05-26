@@ -92,6 +92,7 @@ shadows
         shader = shadowCompositor/pass1Shadow.frag
         jitteringScale = 2
         light = light
+        textureSize = 4096 x 4096
 scene = column
 scene = craneBase
 scene = floor
