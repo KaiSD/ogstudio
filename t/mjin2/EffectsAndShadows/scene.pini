@@ -1,3 +1,8 @@
+cameratrack
+    noname
+        positions = x x x x
+        positions = y y y y
+        positions = z z z z
 models
     box
         file = models/box.osgt
