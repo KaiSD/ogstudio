@@ -1,14 +1,14 @@
 <compositor>
     <!-- defaults begin -->
     <texture name="noise" template="textureTemplate">
-        <file>textures/noise_tex.jpg</file>
+        <file>textures/noise_tex.png</file>
     </texture>
     <!-- defaults end -->
     <texture name="boxNormal" template="textureTemplate">
         <file>textures/box_n.png</file>
     </texture>
     <texture name="columnDiffuse" template="textureTemplate">
-        <file>textures/cement.jpg</file>
+        <file>textures/cement.png</file>
     </texture>
     <texture name="columnNormal" template="textureTemplate">
         <file>textures/l2_env_column_n.png</file>
@@ -77,7 +77,7 @@
         <file>textures/l2_env_rail_base_n.png</file>
     </texture>
     <texture name="railDiffuse" template="textureTemplate">
-        <file>textures/dark-metal-texture.jpg</file>
+        <file>textures/dark-metal-texture.png</file>
     </texture>
     <texture name="railNormal" template="textureTemplate">
         <file>textures/l2_env_rail_n.png</file>
@@ -92,7 +92,7 @@
         <file>textures/subjectBlue.png</file>
     </texture>
     <texture name="wallDiffuse" template="textureTemplate">
-        <file>textures/cement.jpg</file>
+        <file>textures/cement.png</file>
     </texture>
     <texture name="wallNormal" template="textureTemplate">
         <file>textures/cement_n.png</file>
