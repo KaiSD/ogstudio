@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="img">
+    <file>new.png</file>
+    <file>enable.png</file>
+    <file>play.jpg</file>
+    <file>plus.jpg</file>
+    <file>minus.png</file>
+    <file>position.png</file>
+    <file>open.png</file>
+  </qresource>
+</RCC>
