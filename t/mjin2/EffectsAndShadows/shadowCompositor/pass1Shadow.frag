@@ -64,6 +64,6 @@ void main()
         }
     }
     // apply shadow, modulo the ambient bias
-    gl_FragColor = osgShadow_ambientBias.x + shadow * osgShadow_ambientBias.y;
+    gl_FragColor = vec4(osgShadow_ambientBias.x + shadow * osgShadow_ambientBias.y);
 }
 

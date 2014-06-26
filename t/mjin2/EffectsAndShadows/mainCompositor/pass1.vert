@@ -1,4 +1,4 @@
-
+#version 120
 uniform mat4 osg_ViewMatrixInverse;
 // Tangent calculated in code.
 attribute vec3 Tangent;
@@ -24,7 +24,7 @@ void main()
     mat3 modelMatrix3x3 = mat3(modelMatrix);
     // Convert everything to World space.
     // Position.
-    pos_worldspace = modelMatrix * gl_Vertex;
+    pos_worldspace = vec3(modelMatrix * gl_Vertex);
     // Normal.
     n_worldspace   = modelMatrix3x3 * gl_Normal;
     // Tangent.

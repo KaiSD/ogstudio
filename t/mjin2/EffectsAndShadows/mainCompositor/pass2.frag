@@ -21,7 +21,7 @@ vec3 glowBlur(sampler2DRect glowMap,
             vec2 offset = vec2(x, y) * blurSizeFactor;
             result += texture2DRect(glowMap, xy + offset).xyz;
         }
-    return (result / (blurSamples * blurSamples)) + glow;
+    return (result / float(blurSamples * blurSamples)) + glow;
 }
 
 void main()
@@ -46,7 +46,7 @@ void main()
     // Final fragment color.
     vec3 color = diff * c_worldspace * s_worldspace;
     // Only add specular if the fragment is NOT in the shadow.
-    if (s_worldspace.x == 1)
+    if (s_worldspace.x == 1.0)
         color += spec;
     // Add glow.
     color += g_worldspace;
