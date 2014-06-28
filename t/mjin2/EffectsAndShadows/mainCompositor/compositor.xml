@@ -42,6 +42,7 @@
             <output_buffer target="color1">pass1Colors</output_buffer>
             <output_buffer target="color2">pass1Normals</output_buffer>
             <output_buffer target="color3">pass1Glow</output_buffer>
+            <vertex_attribute name="Tangent" index="6" />
         </forward_pass>
         <deferred_pass name="pass2">
             <input_buffer unit="0" varname="positionMap">pass1Positions</input_buffer>

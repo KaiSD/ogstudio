@@ -1,0 +1,11 @@
+models
+    box
+        file = box.osgt
+nodes
+    subject
+        model = box
+    subject2
+        model = box
+        position = -2 0 0
+scene = subject
+scene = subject2
