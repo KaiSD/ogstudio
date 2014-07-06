@@ -1,0 +1,5 @@
+fonts      = datafiles/fonts
+imagesets  = datafiles/imagesets
+layouts    = datafiles/layouts
+looknfeels = datafiles/looknfeel
+schemes    = datafiles/schemes
