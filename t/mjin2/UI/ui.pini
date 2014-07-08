@@ -1,5 +1,7 @@
-fonts      = datafiles/fonts
-imagesets  = datafiles/imagesets
-layouts    = datafiles/layouts
-looknfeels = datafiles/looknfeel
-schemes    = datafiles/schemes
+fonts       = datafiles/fonts
+imagesets   = datafiles/imagesets
+layouts     = datafiles/layouts
+looknfeels  = datafiles/looknfeel
+schemes     = datafiles/schemes
+defaultFont = DejaVuSans-12
+scheme      = TaharezLook
