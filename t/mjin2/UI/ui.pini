@@ -1,7 +1,8 @@
-fonts       = datafiles/fonts
-imagesets   = datafiles/imagesets
-layouts     = datafiles/layouts
-looknfeels  = datafiles/looknfeel
-schemes     = datafiles/schemes
+fonts       = ui
+imagesets   = ui
+layouts     = ui/layouts
+looknfeels  = ui
+schemes     = ui
 defaultFont = DejaVuSans-12
-scheme      = TaharezLook
+scheme      = VanillaSkin
+layout      = MessageBox
