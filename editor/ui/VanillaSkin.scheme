@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <GUIScheme version="5" name="VanillaSkin">
-	<Font filename="DejaVuSans-12.font" />
+	<Font filename="DejaVuSans-10.font" />
 	<Imageset filename="Vanilla.imageset" />
 	<LookNFeel filename="Vanilla.looknfeel" />
 	<WindowRendererSet filename="CEGUICoreWindowRendererSet" />
