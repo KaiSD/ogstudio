@@ -38,6 +38,10 @@
                 <Property name="Text" value="Del" />
                 <Property name="Area" value="{{0,260},{0,55},{0,300},{0,95}}" />
             </Window>
+            <Window type="Vanilla/Spinner" name="CurrentTime" >
+                <Property name="Text" value="100" />
+                <Property name="Area" value="{{0,5},{0,105},{1,-5},{0,145}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>

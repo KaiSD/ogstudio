@@ -5,6 +5,8 @@
 	<LookNFeel filename="Vanilla.looknfeel" />
 	<WindowRendererSet filename="CEGUICoreWindowRendererSet" />
 
+	<FalagardMapping windowType="Vanilla/Spinner" targetType="CEGUI/Spinner" renderer="Core/Default" lookNFeel="Vanilla/Spinner" />
+	<FalagardMapping windowType="Vanilla/ImageButton" targetType="CEGUI/PushButton"  renderer="Core/Button"       lookNFeel="Vanilla/ImageButton" />
 	<FalagardMapping windowType="Vanilla/Label" targetType="DefaultWindow" renderer="Core/Default" lookNFeel="Vanilla/Label" />
 	<FalagardMapping windowType="Vanilla/Titlebar" targetType="CEGUI/Titlebar" renderer="Core/Titlebar" lookNFeel="Vanilla/Titlebar" />
 	<FalagardMapping windowType="Vanilla/Button" targetType="CEGUI/PushButton" renderer="Core/Button" lookNFeel="Vanilla/Button" />
