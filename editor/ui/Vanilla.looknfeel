@@ -217,7 +217,7 @@
                 <Dim type="RightEdge" >
                     <OperatorDim op="Subtract">
                         <UnifiedDim scale="1" type="RightEdge" />
-                        <ImageDim name="Vanilla-Images/VertScrollUpNormal" dimension="Width" />
+                        <ImageDim name="Vanilla-Images/SpinnerUpNormal" dimension="Width" />
                     </OperatorDim>
                 </Dim>
             </Area>
@@ -225,29 +225,26 @@
         <Child  type="Vanilla/ImageButton" nameSuffix="__auto_incbtn__">
             <Area>
                 <Dim type="Width">
-                    <OperatorDim op="Multiply">
-                        <ImageDim name="Vanilla-Images/VertScrollUpNormal" dimension="Width" />
-                        <AbsoluteDim value="2.0" />
-                    </OperatorDim>
+                    <ImageDim name="Vanilla-Images/SpinnerUpNormal" dimension="Width" />
                 </Dim>
                 <Dim type="Height" ><UnifiedDim scale="0.5" type="Height" /></Dim>
             </Area>
             <HorzAlignment type="RightAligned" />
-            <Property name="NormalImage" value="Vanilla-Images/VertScrollUpNormal" />
-            <Property name="HoverImage" value="Vanilla-Images/VertScrollUpHover" />
-            <Property name="PushedImage" value="Vanilla-Images/VertScrollUpNormal" />
+            <Property name="NormalImage" value="Vanilla-Images/SpinnerUpNormal" />
+            <Property name="HoverImage" value="Vanilla-Images/SpinnerUpHover" />
+            <Property name="PushedImage" value="Vanilla-Images/SpinnerUpPushed" />
         </Child>
         <Child  type="Vanilla/ImageButton" nameSuffix="__auto_decbtn__">
             <Area>
                 <Dim type="LeftEdge" ><AbsoluteDim value="0" /></Dim>
                 <Dim type="TopEdge" ><UnifiedDim scale="0.5" type="TopEdge" /></Dim>
-                <Dim type="Width" ><ImageDim name="Vanilla-Images/VertScrollUpNormal" dimension="Width" /></Dim>
+                <Dim type="Width" ><ImageDim name="Vanilla-Images/SpinnerUpNormal" dimension="Width" /></Dim>
                 <Dim type="Height" ><UnifiedDim scale="0.5" type="Height" /></Dim>
             </Area>
             <HorzAlignment type="RightAligned" />
-            <Property name="NormalImage" value="Vanilla-Images/VertScrollDownNormal" />
-            <Property name="HoverImage" value="Vanilla-Images/VertScrollDownHover" />
-            <Property name="PushedImage" value="Vanilla-Images/VertScrollDownNormal" />
+            <Property name="NormalImage" value="Vanilla-Images/SpinnerDownNormal" />
+            <Property name="HoverImage" value="Vanilla-Images/SpinnerDownHover" />
+            <Property name="PushedImage" value="Vanilla-Images/SpinnerDownPushed" />
         </Child>
         <StateImagery name="Enabled" />
         <StateImagery name="Disabled" />
