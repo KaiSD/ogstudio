@@ -4,6 +4,6 @@ layouts     = ui/layouts
 looknfeels  = ui
 schemes     = ui
 defaultFont = DejaVuSans-10
-scheme      = VanillaSkin
+scheme      = TaharezLook
 layout      = CameraTracker
 layout      = Properties

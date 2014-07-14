@@ -5,9 +5,9 @@
         <Property name="Alpha" value="0.7" />
         <Property name="AlwaysOnTop" value="True" />
         <Property name="Area" value="{{1,-305},{0,0},{1,0},{1,0}}" />
-        <Window type="Vanilla/StaticText" name="Text" >
+        <Window type="TaharezLook/StaticText" name="Text" >
             <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
-            <Window type="Vanilla/StaticText" name="Text" >
+            <Window type="TaharezLook/StaticText" name="Text" >
                 <Property name="FrameEnabled" value="False" />
                 <Property name="BackgroundEnabled" value="False" />
                 <Property name="Text" value="Properties" />
