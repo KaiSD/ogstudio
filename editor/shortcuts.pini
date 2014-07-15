@@ -1,0 +1,5 @@
+shortcuts
+    quit
+        key = INPUT_KEY_ESCAPE
+    toggleEditor
+        key = INPUT_KEY_C
