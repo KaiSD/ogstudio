@@ -5,9 +5,9 @@
         <Property name="Alpha" value="0.7" />
         <Property name="AlwaysOnTop" value="True" />
         <Property name="Area" value="{{0,0},{0,0},{0,305},{1,0}}" />
-        <Window type="TaharezLook/StaticText" name="Text" >
+        <Window type="TaharezLook/StaticText" name="Pane" >
             <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
-            <Window type="TaharezLook/StaticText" name="Text" >
+            <Window type="TaharezLook/StaticText" name="Caption" >
                 <Property name="FrameEnabled" value="False" />
                 <Property name="BackgroundEnabled" value="False" />
                 <Property name="Text" value="CameraTracker" />
