@@ -3,7 +3,20 @@ imagesets   = ui
 layouts     = ui/layouts
 looknfeels  = ui
 schemes     = ui
-defaultFont = DejaVuSans-10
 scheme      = TaharezLook
+defaultFont = DejaVuSans-10
 layout      = CameraTracker
 layout      = Properties
+spinners
+    CameraTracker/Pane/CurrentTime
+        acceptEvents = 1
+        minValue = 0
+    CameraTracker/Pane/SelectedNode
+        acceptEvents = 1
+lists
+    CameraTracker/Pane/Nodes
+        acceptEvents = 1
+        itemType = TaharezLook/ListboxItem
+buttons
+    CameraTracker/Pane/Insert
+        acceptEvents = 1

@@ -26,12 +26,12 @@
                 <Property name="Text" value="Play" />
                 <Property name="Area" value="{{0,105},{0,55},{0,145},{0,95}}" />
             </Window>
-            <Window type="TaharezLook/Button" name="Centr" >
-                <Property name="Text" value="Centr" />
+            <Window type="TaharezLook/Button" name="Center" >
+                <Property name="Text" value="Center" />
                 <Property name="Area" value="{{0,160},{0,55},{0,200},{0,95}}" />
             </Window>
-            <Window type="TaharezLook/Button" name="Add" >
-                <Property name="Text" value="Add" />
+            <Window type="TaharezLook/Button" name="Insert" >
+                <Property name="Text" value="Insert" />
                 <Property name="Area" value="{{0,205},{0,55},{0,245},{0,95}}" />
             </Window>
             <Window type="TaharezLook/Button" name="Del" >
