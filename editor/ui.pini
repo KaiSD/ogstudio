@@ -7,10 +7,14 @@ scheme      = TaharezLook
 defaultFont = DejaVuSans-10
 layout      = CameraTracker
 layout      = Properties
+windows
+    CameraTracker/Pane/SelectedNode
+        enabled = 0
 spinners
     CameraTracker/Pane/CurrentTime
         acceptEvents = 1
         minValue = 0
+        value = 100
     CameraTracker/Pane/SelectedNode
         acceptEvents = 1
 lists
