@@ -1,8 +1,6 @@
 shortcuts
-    quit
-        key = INPUT_KEY_ESCAPE
-    toggleEditor
-        key = INPUT_KEY_C
+    deletePoint
+        key = INPUT_KEY_X
     insertPoint
         key = INPUT_KEY_I
     moveForward
@@ -13,3 +11,7 @@ shortcuts
         key = INPUT_KEY_A
     moveRight
         key = INPUT_KEY_D
+    toggleEditor
+        key = INPUT_KEY_C
+    quit
+        key = INPUT_KEY_ESCAPE
