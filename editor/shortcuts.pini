@@ -11,6 +11,8 @@ shortcuts
         key = INPUT_KEY_A
     moveRight
         key = INPUT_KEY_D
+    resetCamera
+        key = INPUT_KEY_V
     toggleEditor
         key = INPUT_KEY_C
     quit

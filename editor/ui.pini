@@ -22,6 +22,8 @@ lists
         acceptEvents = 1
         itemType = TaharezLook/ListboxItem
 buttons
+    CameraTracker/Pane/Center
+        acceptEvents = 1
     CameraTracker/Pane/Delete
         acceptEvents = 1
     CameraTracker/Pane/Insert
