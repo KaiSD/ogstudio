@@ -15,5 +15,7 @@ shortcuts
         key = INPUT_KEY_V
     toggleEditor
         key = INPUT_KEY_C
+    toggleMouse
+        key = INPUT_MOUSE_BUTTON_RIGHT
     quit
         key = INPUT_KEY_ESCAPE

@@ -21,6 +21,12 @@ lists
     CameraTracker/Pane/Nodes
         acceptEvents = 1
         itemType = TaharezLook/ListboxItem
+    Properties/Pane/Names
+        acceptEvents = 1
+        itemType = TaharezLook/ListboxItem
+    Properties/Pane/Values
+        acceptEvents = 1
+        itemType = TaharezLook/ListboxItem
 buttons
     CameraTracker/Pane/Center
         acceptEvents = 1
