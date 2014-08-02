@@ -17,6 +17,8 @@ spinners
         value = 100
     CameraTracker/Pane/SelectedNode
         acceptEvents = 1
+    Properties/Pane/Value
+        acceptEvents = 1
 lists
     CameraTracker/Pane/Nodes
         acceptEvents = 1
