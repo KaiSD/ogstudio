@@ -10,6 +10,8 @@ layout      = Properties
 windows
     CameraTracker/Pane/SelectedNode
         enabled = 0
+    Properties/Pane/Values
+        enabled = 0
 spinners
     CameraTracker/Pane/CurrentTime
         acceptEvents = 1
@@ -27,7 +29,6 @@ lists
         acceptEvents = 1
         itemType = TaharezLook/ListboxItem
     Properties/Pane/Values
-        acceptEvents = 1
         itemType = TaharezLook/ListboxItem
 buttons
     CameraTracker/Pane/Center
