@@ -40,3 +40,7 @@ buttons
         acceptEvents = 1
     CameraTracker/Pane/Insert
         acceptEvents = 1
+    CameraTracker/Pane/Open
+        acceptEvents = 1
+    CameraTracker/Pane/Save
+        acceptEvents = 1
