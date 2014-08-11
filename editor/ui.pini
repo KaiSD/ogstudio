@@ -6,9 +6,12 @@ schemes     = ui
 scheme      = TaharezLook
 defaultFont = DejaVuSans-10
 layout      = CameraTracker
+layout      = Message
 layout      = OpenSave
 layout      = Properties
 windows
+    Message
+        visible = 0
     OpenSave
         visible = 0
 spinners
