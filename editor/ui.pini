@@ -6,7 +6,11 @@ schemes     = ui
 scheme      = TaharezLook
 defaultFont = DejaVuSans-10
 layout      = CameraTracker
+layout      = OpenSave
 layout      = Properties
+windows
+    OpenSave
+        visible = 0
 spinners
     CameraTracker/Pane/CurrentTime
         acceptChars = 1
@@ -43,4 +47,8 @@ buttons
     CameraTracker/Pane/Open
         acceptEvents = 1
     CameraTracker/Pane/Save
+        acceptEvents = 1
+    OpenSave/Pane/Cancel
+        acceptEvents = 1
+    OpenSave/Pane/OK
         acceptEvents = 1
