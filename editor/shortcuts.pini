@@ -14,6 +14,8 @@ shortcuts
     open
         key = INPUT_KEY_CONTROL_L
         key = INPUT_KEY_O
+    play
+        key = INPUT_KEY_P
     quit
         key = INPUT_KEY_ESCAPE
     resetCamera
