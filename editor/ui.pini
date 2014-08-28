@@ -44,6 +44,9 @@ buttons
         acceptEvents = 1
     CameraTracker/Pane/Open
         acceptEvents = 1
+    CameraTracker/Pane/Play
+        acceptEvents = 1
+        enabled = 0
     CameraTracker/Pane/Save
         acceptEvents = 1
         enabled = 0
