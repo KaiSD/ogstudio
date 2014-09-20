@@ -3,6 +3,6 @@ imagesets   = ui
 layouts     = ui/layouts
 looknfeels  = ui
 schemes     = ui
-defaultFont = DejaVuSans-12
 scheme      = VanillaSkin
 layout      = MessageBox
+defaultFont = DejaVuSans-12
