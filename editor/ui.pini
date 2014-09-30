@@ -11,18 +11,15 @@ layout = Message
 layout = OpenSave
 spinners
     CameraTracker/Pane/CurrentTime
-        acceptChars = 1
         acceptEvents = 1
         maxValue = 1000000
         minValue = 0
         value = 100
     CameraTracker/Pane/SelectedNode
-        acceptChars = 1
         acceptEvents = 1
         enabled = 0
         maxValue = 1000000
     Properties/Pane/Value
-        acceptChars = 1
         acceptEvents = 1
         maxValue = 1000000
 lists
@@ -69,7 +66,6 @@ lists
         itemType = TaharezLook/ListboxItem
 edits
     OpenSave/Pane/Track
-        acceptChars = 1
         acceptEvents = 1
 
 buttons
