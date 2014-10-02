@@ -16,7 +16,6 @@ shortcuts
         key = INPUT_KEY_D
     moveUp
         key = INPUT_KEY_W
-#        key = INPUT_KEY_Z
         key = INPUT_KEY_ALT_L
     open
         key = INPUT_KEY_CONTROL_L
@@ -25,7 +24,6 @@ shortcuts
         key = INPUT_KEY_P
     quit
         key = INPUT_KEY_CONTROL_L
-#        key = INPUT_KEY_Z
         key = INPUT_KEY_Q
     resetCamera
         key = INPUT_KEY_V
