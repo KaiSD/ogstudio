@@ -61,11 +61,11 @@ windows
     OpenSave
         visible = 0
 lists
-    OpenSave/Pane/Tracks
+    OpenSave/Pane/Items
         acceptEvents = 1
         itemType = TaharezLook/ListboxItem
 edits
-    OpenSave/Pane/Track
+    OpenSave/Pane/Item
         acceptEvents = 1
 
 buttons
