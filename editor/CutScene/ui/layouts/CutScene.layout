@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout version="4">
+    <Window type="DefaultWindow" name="CameraTracker" >
+        <Property name="Alpha" value="0.7" />
+        <Property name="AlwaysOnTop" value="True" />
+        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window type="TaharezLook/StaticText" name="Pane" >
+            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+            <Window type="TaharezLook/StaticText" name="Caption" >
+                <Property name="FrameEnabled" value="False" />
+                <Property name="BackgroundEnabled" value="False" />
+                <Property name="Text" value="CameraTracker" />
+                <Property name="Area" value="{{0,5},{0,5},{1,-5},{0,45}}" />
+                <Property name="HorzFormatting" value="WordWrapCentreAligned" />
+            </Window>
+            <Window type="TaharezLook/Button" name="New" >
+                <Property name="Text" value="New" />
+                <Property name="Area" value="{{0,5},{0,55},{0,65},{0,95}}" />
+            </Window>
+            <Window type="TaharezLook/Button" name="Open" >
+                <Property name="Text" value="Open" />
+                <Property name="Area" value="{{0,75},{0,55},{0,135},{0,95}}" />
+            </Window>
+            <Window type="TaharezLook/Button" name="Save" >
+                <Property name="Text" value="Save" />
+                <Property name="Area" value="{{0,145},{0,55},{0,205},{0,95}}" />
+            </Window>
+            <Window type="TaharezLook/Button" name="Play" >
+                <Property name="Text" value="Play" />
+                <Property name="Area" value="{{0,5},{0,105},{0,65},{0,145}}" />
+            </Window>
+            <Window type="TaharezLook/Button" name="Center" >
+                <Property name="Text" value="Center" />
+                <Property name="Area" value="{{0,5},{0,155},{0,65},{0,195}}" />
+            </Window>
+            <Window type="TaharezLook/Button" name="Insert" >
+                <Property name="Text" value="Insert" />
+                <Property name="Area" value="{{0,75},{0,155},{0,135},{0,195}}" />
+            </Window>
+            <Window type="TaharezLook/Button" name="Delete" >
+                <Property name="Text" value="Delete" />
+                <Property name="Area" value="{{0,145},{0,155},{0,205},{0,195}}" />
+            </Window>
+            <Window type="TaharezLook/Spinner" name="CurrentTime" >
+                <Property name="Text" value="100" />
+                <Property name="StepSize" value="100" />
+                <Property name="Area" value="{{0,5},{0,205},{1,-5},{0,245}}" />
+            </Window>
+            <Window type="TaharezLook/Spinner" name="SelectedNode" >
+                <Property name="Text" value="100" />
+                <Property name="StepSize" value="100" />
+                <Property name="Area" value="{{0,5},{0,255},{1,-5},{0,295}}" />
+            </Window>
+            <Window type="TaharezLook/ItemListbox" name="Nodes" >
+                <Property name="Area" value="{{0,5},{0,305},{1,-5},{1,-5}}" />
+            </Window>
+        </Window>
+    </Window>
+</GUILayout>

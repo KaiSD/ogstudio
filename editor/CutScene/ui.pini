@@ -1,0 +1,30 @@
+layout = CutScene
+spinners
+    CutScene/Pane/CurrentTime
+        acceptEvents = 1
+        maxValue = 1000000
+        minValue = 0
+        value = 100
+    CutScene/Pane/SelectedNode
+        acceptEvents = 1
+        enabled = 0
+        maxValue = 1000000
+lists
+    CutScene/Pane/Nodes
+        acceptEvents = 1
+        itemType = TaharezLook/ListboxItem
+buttons
+    CutScene/Pane/Center
+        acceptEvents = 1
+    CutScene/Pane/Delete
+        acceptEvents = 1
+    CutScene/Pane/Insert
+        acceptEvents = 1
+    CutScene/Pane/Open
+        acceptEvents = 1
+    CutScene/Pane/Play
+        acceptEvents = 1
+        enabled = 0
+    CutScene/Pane/Save
+        acceptEvents = 1
+        enabled = 0
