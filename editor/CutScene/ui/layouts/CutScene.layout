@@ -4,7 +4,7 @@
     <Window type="DefaultWindow" name="CameraTracker" >
         <Property name="Alpha" value="0.7" />
         <Property name="AlwaysOnTop" value="True" />
-        <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Property name="Area" value="{{0,0},{0,0},{0,210},{1,0}}" />
         <Window type="TaharezLook/StaticText" name="Pane" >
             <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}" />
             <Window type="TaharezLook/StaticText" name="Caption" >
