@@ -73,3 +73,8 @@ buttons
         acceptEvents = 1
     OpenSave/Pane/OK
         acceptEvents = 1
+buttons
+    Plugins/CutScene
+        acceptEvents = 1
+    Plugins/Scene
+        acceptEvents = 1

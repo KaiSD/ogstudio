@@ -1,0 +1,7 @@
+Scene
+    open
+        key = INPUT_KEY_CONTROL_L
+        key = INPUT_KEY_O
+    save
+        key = INPUT_KEY_CONTROL_L
+        key = INPUT_KEY_S

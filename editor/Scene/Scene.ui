@@ -1,0 +1,7 @@
+layout = Scene
+buttons
+    Scene/Pane/Open
+        acceptEvents = 1
+    Scene/Pane/Save
+        acceptEvents = 1
+        enabled = 0
