@@ -5,10 +5,10 @@ looknfeels  = ui
 schemes     = ui
 scheme      = TaharezLook
 defaultFont = DejaVuSans-10
-#layout      = CameraTracker
 layout      = Properties
-layout = Message
-layout = OpenSave
+layout      = Plugins
+layout      = Message
+layout      = OpenSave
 spinners
 #    CameraTracker/Pane/CurrentTime
 #        acceptEvents = 1
