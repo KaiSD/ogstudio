@@ -1,8 +1,8 @@
 editor
-    deletePoint
-        key = INPUT_KEY_X
-    insertPoint
-        key = INPUT_KEY_I
+#    deletePoint
+#        key = INPUT_KEY_X
+#    insertPoint
+#        key = INPUT_KEY_I
     moveBackward
         key = INPUT_KEY_S
     moveDown
@@ -17,20 +17,20 @@ editor
     moveUp
         key = INPUT_KEY_W
         key = INPUT_KEY_ALT_L
-    open
-        key = INPUT_KEY_CONTROL_L
-        key = INPUT_KEY_O
-    play
-        key = INPUT_KEY_P
+#    open
+#        key = INPUT_KEY_CONTROL_L
+#        key = INPUT_KEY_O
+#    play
+#        key = INPUT_KEY_P
     quit
         key = INPUT_KEY_CONTROL_L
         key = INPUT_KEY_Q
-    resetCamera
-    key = INPUT_KEY_V
-    save
-        key = INPUT_KEY_CONTROL_L
-        key = INPUT_KEY_S
-    toggleEditor
-        key = INPUT_KEY_C
+#    resetCamera
+#    key = INPUT_KEY_V
+#    save
+#        key = INPUT_KEY_CONTROL_L
+#        key = INPUT_KEY_S
+#    toggleEditor
+#        key = INPUT_KEY_C
     toggleMouse
         key = INPUT_MOUSE_BUTTON_RIGHT

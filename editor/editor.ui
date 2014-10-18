@@ -5,48 +5,48 @@ looknfeels  = ui
 schemes     = ui
 scheme      = TaharezLook
 defaultFont = DejaVuSans-10
-layout      = CameraTracker
+#layout      = CameraTracker
 layout      = Properties
 layout = Message
 layout = OpenSave
 spinners
-    CameraTracker/Pane/CurrentTime
-        acceptEvents = 1
-        maxValue = 1000000
-        minValue = 0
-        value = 100
-    CameraTracker/Pane/SelectedNode
-        acceptEvents = 1
-        enabled = 0
-        maxValue = 1000000
+#    CameraTracker/Pane/CurrentTime
+#        acceptEvents = 1
+#        maxValue = 1000000
+#        minValue = 0
+#        value = 100
+#    CameraTracker/Pane/SelectedNode
+#        acceptEvents = 1
+#        enabled = 0
+#        maxValue = 1000000
     Properties/Pane/Value
         acceptEvents = 1
         maxValue = 1000000
 lists
-    CameraTracker/Pane/Nodes
-        acceptEvents = 1
-        itemType = TaharezLook/ListboxItem
+#    CameraTracker/Pane/Nodes
+#        acceptEvents = 1
+#        itemType = TaharezLook/ListboxItem
     Properties/Pane/Names
         acceptEvents = 1
         itemType = TaharezLook/ListboxItem
     Properties/Pane/Values
         enabled = 0
         itemType = TaharezLook/ListboxItem
-buttons
-    CameraTracker/Pane/Center
-        acceptEvents = 1
-    CameraTracker/Pane/Delete
-        acceptEvents = 1
-    CameraTracker/Pane/Insert
-        acceptEvents = 1
-    CameraTracker/Pane/Open
-        acceptEvents = 1
-    CameraTracker/Pane/Play
-        acceptEvents = 1
-        enabled = 0
-    CameraTracker/Pane/Save
-        acceptEvents = 1
-        enabled = 0
+#buttons
+#    CameraTracker/Pane/Center
+#        acceptEvents = 1
+#    CameraTracker/Pane/Delete
+#        acceptEvents = 1
+#    CameraTracker/Pane/Insert
+#        acceptEvents = 1
+#    CameraTracker/Pane/Open
+#        acceptEvents = 1
+#    CameraTracker/Pane/Play
+#        acceptEvents = 1
+#        enabled = 0
+#    CameraTracker/Pane/Save
+#        acceptEvents = 1
+#        enabled = 0
 
 windows
     Message
