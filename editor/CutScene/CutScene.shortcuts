@@ -5,6 +5,8 @@ CutScene
         key = INPUT_KEY_X
     insert
         key = INPUT_KEY_I
+    new
+        key = INPUT_KEY_N
     open
         key = INPUT_KEY_CONTROL_L
         key = INPUT_KEY_O

@@ -1,6 +1,6 @@
 models
     box
-        file = box.osgt
+        file = models/box.osgt
 nodes
     subject
         model = box

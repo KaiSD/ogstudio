@@ -20,6 +20,8 @@ buttons
         acceptEvents = 1
     CutScene/Pane/Insert
         acceptEvents = 1
+    CutScene/Pane/New
+        acceptEvents = 1
     CutScene/Pane/Open
         acceptEvents = 1
     CutScene/Pane/Play
