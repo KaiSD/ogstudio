@@ -19,6 +19,9 @@
                 <Property name="Text" value="Save" />
                 <Property name="Area" value="{{0,145},{0,5},{0,205},{0,45}}" />
             </Window>
+            <Window type="TaharezLook/Tree" name="Nodes" >
+                <Property name="Area" value="{{0,5},{0,255},{1,-5},{1,-5}}" />
+            </Window>
         </Window>
     </Window>
 </GUILayout>
