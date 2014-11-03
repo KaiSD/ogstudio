@@ -12,6 +12,7 @@ trees
         items
             centralBox
                 title = Central box
+                open = 1
             leftBox
                 title = Left box
                 parent = centralBox
