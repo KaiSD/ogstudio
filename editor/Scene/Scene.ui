@@ -9,17 +9,3 @@ trees
     Scene/Pane/Nodes
         acceptEvents = 1
         selectionBrush = TaharezLook/TextSelectionBrush
-        items
-            centralBox
-                title = Central box
-                open = 1
-            leftBox
-                title = Left box
-                parent = centralBox
-            rightBox
-                title = Right box
-                parent = centralBox
-            otherBox
-                title = Other box
-                parent = rightBox
-        selectedItem = centralBox
