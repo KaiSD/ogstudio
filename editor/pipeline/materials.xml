@@ -1,0 +1,158 @@
+<compositor>
+    <material name="columnSurface">
+        <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
+        <texture unit="1" varname="normalMap">columnNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneArmsBaseSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneArmsBaseNormal</texture>
+        <uniform name="useGlowMap" type="int">
+            <value>0</value>
+        </uniform>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneArmsPistonBaseSurface">
+        <texture unit="0" varname="diffuseMap">craneArmsPistonBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneArmsPistonBaseNormal</texture>
+        <uniform name="useGlowMap" type="int">
+            <value>0</value>
+        </uniform>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneArmsPistonBaseGlowingSurface">
+        <texture unit="0" varname="diffuseMap">craneArmsPistonBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneArmsPistonBaseNormal</texture>
+        <texture unit="2" varname="glowMap">craneArmsPistonBaseGlow</texture>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneArmsPistonSurface">
+        <texture unit="0" varname="diffuseMap">craneArmsPistonDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneArmsPistonNormal</texture>
+        <uniform name="useGlowMap" type="int">
+            <value>0</value>
+        </uniform>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="craneBaseGlowingSurface">
+        <texture unit="0" varname="diffuseMap">craneBaseDiffuse</texture>
+        <texture unit="1" varname="normalMap">craneBaseNormal</texture>
+        <texture unit="2" varname="glowMap">craneBaseGlow</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="floorSurface">
+        <texture unit="0" varname="diffuseMap">floorDiffuse</texture>
+        <texture unit="1" varname="normalMap">floorNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="lineSurface">
+        <texture unit="0" varname="diffuseMap">lineDiffuse</texture>
+        <texture unit="1" varname="normalMap">lineNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="lineBeltSurface">
+        <texture unit="0" varname="diffuseMap">lineBeltDiffuse</texture>
+        <texture unit="1" varname="normalMap">lineBeltNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="pipeSurface">
+        <texture unit="0" varname="diffuseMap">pipeDiffuse</texture>
+        <texture unit="1" varname="normalMap">pipeNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="pipeDiskSurface">
+        <texture unit="0" varname="diffuseMap">pipeDiffuse</texture>
+        <texture unit="1" varname="normalMap">pipeDiskNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="processorSurface">
+        <texture unit="0" varname="diffuseMap">processorDiffuse</texture>
+        <texture unit="1" varname="normalMap">processorNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="railBaseSurface">
+        <texture unit="1" varname="normalMap">railBaseNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="railSurface">
+        <texture unit="0" varname="diffuseMap">railDiffuse</texture>
+        <texture unit="1" varname="normalMap">railNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurface">
+        <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceRed">
+        <texture unit="0" varname="diffuseMap">subjectDiffuseRed</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceGreen">
+        <texture unit="0" varname="diffuseMap">subjectDiffuseGreen</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="subjectSurfaceBlue">
+        <texture unit="0" varname="diffuseMap">subjectDiffuseBlue</texture>
+        <texture unit="1" varname="normalMap">boxNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+    <material name="wallSurface">
+        <texture unit="0" varname="diffuseMap">wallDiffuse</texture>
+        <texture unit="1" varname="normalMap">wallNormal</texture>
+        <uniform name="useNormalMap" type="int">
+            <value>1</value>
+        </uniform>
+    </material>
+</compositor>

@@ -1,0 +1,60 @@
+<compositor>
+    <include>pipeline/templates.xml</include>
+    <include>pipeline/textures.xml</include>
+    <include>pipeline/materials.xml</include>
+    <shader name="pass1VS" type="vertex">
+        <file>pipeline/pass1.vert</file>
+    </shader>
+    <shader name="pass1FS" type="fragment">
+        <file>pipeline/pass1.frag</file>
+    </shader>
+    <shader name="pass2VS" type="vertex">
+        <file>pipeline/pass2.vert</file>
+    </shader>
+    <shader name="pass2FS" type="fragment">
+        <file>pipeline/pass2.frag</file>
+    </shader>
+    <buffer name="pass1Positions" template="bufferTemplate" />
+    <buffer name="pass1Colors"    template="bufferTemplate" />
+    <buffer name="pass1Normals"   template="bufferTemplate" />
+    <buffer name="pass1Glow"      template="bufferTemplate" />
+    <buffer name="pass2Final"     template="bufferTemplate" />
+    <uniform name="lightPos" type="vec3">
+        <!-- Just a place holder. Altered in code. -->
+        <value>0 0 0</value>
+    </uniform>
+    
+    <technique>
+        <forward_pass name="pass1">
+            <clear_color>0 0 0 1</clear_color>
+            <!-- Defaults begin -->
+            <texture unit="0" varname="diffuseMap">noise</texture>
+            <uniform name="useNormalMap" type="int">
+                <value>0</value>
+            </uniform>
+            <uniform name="useGlowMap" type="int">
+                <value>0</value>
+            </uniform>
+            <!-- Defaults end -->
+            <shader>pass1VS</shader>
+            <shader>pass1FS</shader>
+            <output_buffer target="color0">pass1Positions</output_buffer>
+            <output_buffer target="color1">pass1Colors</output_buffer>
+            <output_buffer target="color2">pass1Normals</output_buffer>
+            <output_buffer target="color3">pass1Glow</output_buffer>
+            <vertex_attribute name="Tangent" index="6" />
+        </forward_pass>
+        <deferred_pass name="pass2">
+            <input_buffer unit="0" varname="positionMap">pass1Positions</input_buffer>
+            <input_buffer unit="1" varname="colorMap">pass1Colors</input_buffer>
+            <input_buffer unit="2" varname="normalMap">pass1Normals</input_buffer>
+            <input_buffer unit="3" varname="glowMap">pass1Glow</input_buffer>
+            <!-- Just a place holder for shadow map. Changed in code-->
+            <input_buffer unit="4" varname="shadowMap">pass1Colors</input_buffer>
+            <uniform>lightPos</uniform>
+            <shader>pass2VS</shader>
+            <shader>pass2FS</shader>
+            <output_buffer target="color">pass2Final</output_buffer>
+        </deferred_pass>
+    </technique>
+</compositor>
