@@ -1,0 +1,39 @@
+nodes
+    column
+        material = columnSurface
+    craneBase
+        material = craneBaseSurface
+    craneArmsBase
+        material = craneArmsBaseSurface
+    craneArmsPiston
+        material = craneArmsPistonSurface
+    craneArmsPistonBase
+        material = craneArmsPistonBaseSurface
+    floor
+        material = floorSurface
+    line
+        material = lineSurface
+    lineBelt1
+        material = lineBeltSurface
+    lineBelt2
+        material = lineBeltSurface
+    lineBelt3
+        material = lineBeltSurface
+    pipe
+        material = pipeSurface
+    pipeDisk
+        material = pipeDiskSurface
+    processor
+        material = processorSurface
+    rail
+        material = railSurface
+    railBase
+        material = railBaseSurface
+    rpipe
+        material = pipeSurface
+    rpipeDisk
+        material = pipeDiskSurface
+    subject
+        material = subjectSurface
+    wall
+        material = wallSurface

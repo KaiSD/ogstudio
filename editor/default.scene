@@ -89,7 +89,7 @@ lights
         position = 30 -30 30
 shadows
     shadow
-        shader = shadowCompositor/pass1Shadow.frag
+        shader = pipeline/pass1Shadow.frag
         jitteringScale = 5
         light = light
         textureSize = 4096 x 4096
