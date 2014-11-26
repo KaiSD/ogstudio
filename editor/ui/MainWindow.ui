@@ -111,6 +111,7 @@
      <string>&amp;File</string>
     </property>
     <addaction name="action_New"/>
+    <addaction name="action_OPen"/>
     <addaction name="action_File"/>
     <addaction name="actionSave_as"/>
     <addaction name="separator"/>
@@ -173,6 +174,11 @@
   <action name="actionAbout_Qt">
    <property name="text">
     <string>About &amp;Qt</string>
+   </property>
+  </action>
+  <action name="action_OPen">
+   <property name="text">
+    <string>&amp;Open</string>
    </property>
   </action>
  </widget>
