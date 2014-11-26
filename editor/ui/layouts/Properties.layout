@@ -14,10 +14,15 @@
                 <Property name="Area" value="{{0,5},{0,5},{1,-5},{0,45}}" />
                 <Property name="HorzFormatting" value="WordWrapCentreAligned" />
             </Window>
-            <Window type="TaharezLook/Spinner" name="Value" >
+            <Window type="TaharezLook/Spinner" name="ValueSpinner" >
                 <Property name="Text" value="0" />
                 <Property name="TextInputMode" value="FloatingPoint" />
                 <Property name="StepSize" value="0.01" />
+                <Property name="Area" value="{{0,5},{0,55},{1,-5},{0,95}}" />
+            </Window>
+            <Window type="TaharezLook/Combobox" name="ValueCombobox" >
+                <Property name="ReadOnly" value="True" />
+                <Property name="Text" value="[None]" />
                 <Property name="Area" value="{{0,5},{0,55},{1,-5},{0,95}}" />
             </Window>
             <Window type="TaharezLook/ItemListbox" name="Names" >

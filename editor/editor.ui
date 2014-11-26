@@ -19,7 +19,7 @@ spinners
 #        acceptEvents = 1
 #        enabled = 0
 #        maxValue = 1000000
-    Properties/Pane/Value
+    Properties/Pane/ValueSpinner
         acceptEvents = 1
         maxValue = 1000000
 lists

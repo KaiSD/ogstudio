@@ -1845,7 +1845,8 @@
                     </OperatorDim>
                 </Dim>
                 <Dim type="Height" >
-                    <FontDim type="LineSpacing" padding="10" />
+                    <UnifiedDim scale="1" type="Height" />
+                    <!--<FontDim type="LineSpacing" padding="10" />-->
                 </Dim>
             </Area>
         </Child>
