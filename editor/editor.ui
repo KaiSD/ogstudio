@@ -26,10 +26,10 @@ comboboxes
     Properties/Pane/ValueCombobox
         acceptEvents = 1
         selectionBrush = TaharezLook/TextSelectionBrush
-        item = None 4 real
-        item = Something else
-        item = The third item
-        selectedItemID = 1
+#        item = None 4 real
+#        item = Something else
+#        item = The third item
+#        selectedItemID = 1
 lists
 #    CameraTracker/Pane/Nodes
 #        acceptEvents = 1

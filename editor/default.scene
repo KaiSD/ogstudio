@@ -32,57 +32,76 @@ models
 nodes
     column
         model = l2_env_column
+        material = columnSurface
     craneBase
         model = l2_env_crane_base
+        material = craneBaseSurface
         position = 0 0 8.1
     craneArmsBase
         model = l2_env_crane_arms_base
+        material = craneArmsBaseSurface
         position = 0 0 -0.2
         parent = craneBase
     craneArmsPistonBase
         model = l2_env_crane_arms_piston_base
+        material = craneArmsPistonBaseSurface
         position = 0 0 -0.6
         parent = craneArmsBase
     craneArmsPiston
         model = l2_env_crane_arms_piston
+        material = craneArmsPistonSurface
         position = 0 0 -0.2
         parent = craneArmsPistonBase
     floor
         model = l2_env_floor
+        material = floorSurface
     line
         model = l2_env_line
+        material = lineSurface
     lineBelt1
         model = l2_env_line_belt
+        material = lineBeltSurface
         position = 0 10 0
     lineBelt2
         model = l2_env_line_belt
+        material = lineBeltSurface
         position = 0 2 0
     lineBelt3
         model = l2_env_line_belt
+        material = lineBeltSurface
         position = 0 -6 0
     pipe
         model = l2_env_pipe
+        material = pipeSurface
         position = -4.5 0 6.1
     pipeDisk
         model = l2_env_pipe_disk
+        material = pipeDiskSurface
         position = -4.5 0 6.1
     processor
         model = l2_env_processor
+        material = processorSurface
     railBase
         model = l2_env_rail_base
+        material = railBaseSurface
     rail
         model = l2_env_rail
+        material = railSurface
     rpipe
         model = l2_env_pipe
+        material = pipeSurface
         position = 4.5 0 6.1
     rpipeDisk
         model = l2_env_pipe_disk
+        material = pipeDiskSurface
         position = 4.5 0 6.1
     subject
         model = box
+        material = subjectSurface
         position = -3 10 0.6
     wall
         model = l2_env_wall
+        material = wallSurface
         position = 0 16 0
 lights
     light
