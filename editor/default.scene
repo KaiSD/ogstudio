@@ -1,6 +1,8 @@
 models
     box
         file = models/box.osgt
+    selectionbox
+        file = models/selectionbox.osgt
     l2_env_column
         file = models/l2_env_column.osgt
     l2_env_crane_base
