@@ -82,6 +82,9 @@
     <texture name="railNormal" template="textureTemplate">
         <file>pipeline/textures/l2_env_rail_n.png</file>
     </texture>
+    <texture name="selection" template="textureTemplate">
+        <file>pipeline/textures/selection.png</file>
+    </texture>
     <texture name="subjectDiffuseRed" template="textureTemplate">
         <file>pipeline/textures/subjectRed.png</file>
     </texture>

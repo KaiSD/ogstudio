@@ -120,6 +120,19 @@
             <value>1</value>
         </uniform>
     </material>
+    <material name="selectionSurface">
+        <texture unit="0" varname="diffuseMap">selection</texture>
+        <texture unit="2" varname="glowMap">selection</texture>
+        <uniform name="useGlowMap" type="int">
+            <value>1</value>
+        </uniform>
+        <!--
+        <uniform name="useNormalMap" type="int">
+            <value>0</value>
+        </uniform>
+-->
+        <polygonMode>line</polygonMode>
+    </material>
     <material name="subjectSurface">
         <texture unit="0" varname="diffuseMap">columnDiffuse</texture>
         <texture unit="1" varname="normalMap">boxNormal</texture>
