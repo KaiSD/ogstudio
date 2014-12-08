@@ -1,8 +1,6 @@
 models
     box
         file = models/box.osgt
-    selectionbox
-        file = models/selectionbox.osgt
     l2_env_column
         file = models/l2_env_column.osgt
     l2_env_crane_base
@@ -114,6 +112,14 @@ shadows
         jitteringScale = 5
         light = light
         textureSize = 4096 x 4096
+# Selection.
+models
+    selectionbox
+        file = models/selectionbox.osgt
+nodes
+    selection
+        model = selectionbox
+        material = selectionSurface
 scene = column
 scene = craneBase
 scene = floor
@@ -131,3 +137,4 @@ scene = rpipe
 scene = rpipeDisk
 scene = subject
 scene = wall
+scene = selection
