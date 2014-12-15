@@ -1,10 +1,16 @@
 layout = Scene
 buttons
+    Scene/Pane/Delete
+        acceptEvents = 1
+#        enabled = 0
+    Scene/Pane/Insert
+        acceptEvents = 1
+    Scene/Pane/New
+        acceptEvents = 1
     Scene/Pane/Open
         acceptEvents = 1
     Scene/Pane/Save
         acceptEvents = 1
-        enabled = 0
 trees
     Scene/Pane/Nodes
         acceptEvents = 1
