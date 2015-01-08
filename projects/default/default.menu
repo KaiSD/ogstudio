@@ -1,0 +1,11 @@
+action
+    MainWindow/FileQuit
+        title = &Quit
+        shortcut = SYSTEM_QUIT
+menu
+    MainWindow/File
+        title = &File
+        action = MainWindow/FileQuit
+menubar
+    MainWindow/MenuBar
+        menu = MainWindow/File

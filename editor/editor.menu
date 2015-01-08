@@ -1,0 +1,23 @@
+action
+    MainWindow/FileOpen
+        title = &Open
+        shortcut = SYSTEM_OPEN
+    MainWindow/FileSave
+        title = &Save
+        shortcut = SYSTEM_SAVE
+    MainWindow/FileSaveAs
+        title = Save &as
+        shortcut = SYSTEM_SAVE_AS
+    MainWindow/FileQuit
+        title = &Quit
+        shortcut = SYSTEM_QUIT
+menu
+    MainWindow/File
+        title = &File
+        action = MainWindow/FileOpen
+        action = MainWindow/FileSave
+        action = MainWindow/FileSaveAs
+        action = MainWindow/FileQuit
+menubar
+    MainWindow/MenuBar
+        menu = MainWindow/File
