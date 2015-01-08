@@ -1,16 +1,16 @@
 action
     MainWindow/FileOpen
         title = &Open
-        shortcut = SYSTEM_OPEN
+        shortcut = STANDARD_KEY_OPEN
     MainWindow/FileSave
         title = &Save
-        shortcut = SYSTEM_SAVE
+        shortcut = STANDARD_KEY_SAVE
     MainWindow/FileSaveAs
         title = Save &as
-        shortcut = SYSTEM_SAVE_AS
+        shortcut = STANDARD_KEY_SAVE_AS
     MainWindow/FileQuit
         title = &Quit
-        shortcut = SYSTEM_QUIT
+        shortcut = STANDARD_KEY_QUIT
 menu
     MainWindow/File
         title = &File
