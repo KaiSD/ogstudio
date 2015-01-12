@@ -1,0 +1,2 @@
+mainwindow = ui/MainWindow.ui
+visible = 1
