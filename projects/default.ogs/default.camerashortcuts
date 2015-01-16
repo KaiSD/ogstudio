@@ -1,0 +1,15 @@
+editor
+    moveBackward
+        key = INPUT_KEY_S
+    moveDown
+        key = INPUT_KEY_S
+        key = INPUT_KEY_ALT_L
+    moveForward
+        key = INPUT_KEY_W
+    moveLeft
+        key = INPUT_KEY_A
+    moveRight
+        key = INPUT_KEY_D
+    moveUp
+        key = INPUT_KEY_W
+        key = INPUT_KEY_ALT_L
