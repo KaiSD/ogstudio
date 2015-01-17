@@ -6,7 +6,6 @@ uniform sampler2DRect colorMap;
 uniform sampler2DRect normalMap;
 uniform sampler2DRect glowMap;
 uniform sampler2DRect shadowMap;
-uniform sampler2DRect uiMap;
 
 vec3 glowBlur(sampler2DRect glowMap,
               vec2          xy,
@@ -32,7 +31,6 @@ void main()
     vec3 n_worldspace = texture2DRect(normalMap,   gl_FragCoord.xy).xyz;
     vec3 s_worldspace = texture2DRect(shadowMap,   gl_FragCoord.xy).xyz;
     vec3 g_worldspace = glowBlur(glowMap, gl_FragCoord.xy, 10, vec2(3, 3));
-    vec4 ui_worldspace = texture2DRect(uiMap, gl_FragCoord.xy);
     // Direction from point to light (not vice versa!)
     vec3 lightDir_worldspace = normalize(lightPos - p_worldspace);
     // Lambertian diffuse color.
@@ -52,6 +50,5 @@ void main()
         color += spec;
     // Add glow.
     color += g_worldspace;
-    //gl_FragColor = vec4(color, 1.0);
-    gl_FragColor = vec4(mix(color, ui_worldspace.xyz, ui_worldspace.a), 1.0);
+    gl_FragColor = vec4(color, 1.0);
 }
