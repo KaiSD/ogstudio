@@ -1,4 +1,7 @@
 action
+    FileNew
+        title = &New
+        shortcut = STANDARD_KEY_NEW
     FileOpen
         title = &Open
         shortcut = STANDARD_KEY_OPEN
@@ -14,6 +17,7 @@ action
 menu
     File
         title = &File
+        action = FileNew
         action = FileOpen
         action = FileSave
         action = FileSaveAs
