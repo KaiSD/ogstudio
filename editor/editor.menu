@@ -8,9 +8,6 @@ action
     FileSave
         title = &Save
         shortcut = STANDARD_KEY_SAVE
-    FileSaveAs
-        title = Save &as
-        shortcut = STANDARD_KEY_SAVE_AS
     FileQuit
         title = &Quit
         shortcut = STANDARD_KEY_QUIT
@@ -20,7 +17,6 @@ menu
         action = FileNew
         action = FileOpen
         action = FileSave
-        action = FileSaveAs
         action = FileQuit
 menubar
     MenuBar

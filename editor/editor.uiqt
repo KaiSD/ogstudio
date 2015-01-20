@@ -1,2 +1,8 @@
 mainwindow = ui/MainWindow.ui
 visible = 1
+filedialog
+    NewProject
+        title = New project
+    OpenProject
+        title = Open project
+
