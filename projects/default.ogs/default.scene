@@ -1,17 +1,26 @@
 
+lights
+    light
+        position = 30.000000 -30.000000 30.000000
+shadows
+    shadow
+        shader = pipeline/pass1Shadow.frag
+        jitteringScale = 5.000000
+        light = light
+        textureSize = 4096 x 4096
 nodemodel
     box
         file = models/box.osgt
     l2_env_column
         file = models/l2_env_column.osgt
-    l2_env_crane_base
-        file = models/l2_env_crane_base.osgt
     l2_env_crane_arms_base
         file = models/l2_env_crane_arms_base.osgt
     l2_env_crane_arms_piston
         file = models/l2_env_crane_arms_piston.osgt
     l2_env_crane_arms_piston_base
         file = models/l2_env_crane_arms_piston_base.osgt
+    l2_env_crane_base
+        file = models/l2_env_crane_base.osgt
     l2_env_floor
         file = models/l2_env_floor.osgt
     l2_env_line
@@ -24,95 +33,86 @@ nodemodel
         file = models/l2_env_pipe_disk.osgt
     l2_env_processor
         file = models/l2_env_processor.osgt
-    l2_env_rail_base
-        file = models/l2_env_rail_base.osgt
     l2_env_rail
         file = models/l2_env_rail.osgt
+    l2_env_rail_base
+        file = models/l2_env_rail_base.osgt
     l2_env_wall
         file = models/l2_env_wall.osgt
 node
     column
-        model = l2_env_column
         material = columnSurface
+        model = l2_env_column
     craneBase
-        model = l2_env_crane_base
+        position = 0.000000 0.000000 8.100000
         material = craneBaseSurface
-        position = 0 0 8.1
+        model = l2_env_crane_base
     craneArmsBase
-        model = l2_env_crane_arms_base
+        position = 0.000000 0.000000 -0.200000
         material = craneArmsBaseSurface
-        position = 0 0 -0.2
+        model = l2_env_crane_arms_base
         parent = craneBase
     craneArmsPistonBase
-        model = l2_env_crane_arms_piston_base
+        position = 0.000000 0.000000 -0.600000
         material = craneArmsPistonBaseSurface
-        position = 0 0 -0.6
+        model = l2_env_crane_arms_piston_base
         parent = craneArmsBase
     craneArmsPiston
-        model = l2_env_crane_arms_piston
+        position = 0.000000 0.000000 -0.200000
         material = craneArmsPistonSurface
-        position = 0 0 -0.2
+        model = l2_env_crane_arms_piston
         parent = craneArmsPistonBase
     floor
-        model = l2_env_floor
         material = floorSurface
+        model = l2_env_floor
     line
-        model = l2_env_line
         material = lineSurface
+        model = l2_env_line
     lineBelt1
-        model = l2_env_line_belt
+        position = 0.000000 10.000000 0.000000
         material = lineBeltSurface
-        position = 0 10 0
+        model = l2_env_line_belt
     lineBelt2
-        model = l2_env_line_belt
+        position = 0.000000 2.000000 0.000000
         material = lineBeltSurface
-        position = 0 2 0
+        model = l2_env_line_belt
     lineBelt3
-        model = l2_env_line_belt
+        position = 0.000000 -6.000000 0.000000
         material = lineBeltSurface
-        position = 0 -6 0
+        model = l2_env_line_belt
     pipe
-        model = l2_env_pipe
+        position = -4.500000 0.000000 6.100000
         material = pipeSurface
-        position = -4.5 0 6.1
+        model = l2_env_pipe
     pipeDisk
-        model = l2_env_pipe_disk
+        position = -4.500000 0.000000 6.100000
         material = pipeDiskSurface
-        position = -4.5 0 6.1
+        model = l2_env_pipe_disk
     processor
-        model = l2_env_processor
         material = processorSurface
-    railBase
-        model = l2_env_rail_base
-        material = railBaseSurface
+        model = l2_env_processor
     rail
-        model = l2_env_rail
         material = railSurface
+        model = l2_env_rail
+    railBase
+        material = railBaseSurface
+        model = l2_env_rail_base
     rpipe
-        model = l2_env_pipe
+        position = 4.500000 0.000000 6.100000
         material = pipeSurface
-        position = 4.5 0 6.1
+        model = l2_env_pipe
     rpipeDisk
-        model = l2_env_pipe_disk
+        position = 4.500000 0.000000 6.100000
         material = pipeDiskSurface
-        position = 4.5 0 6.1
+        model = l2_env_pipe_disk
     subject
-        model = box
+        position = -3.000000 10.000000 0.600000
         material = subjectSurface
-        position = -3 10 0.6
+        model = box
     wall
-        model = l2_env_wall
+        position = 0.000000 16.000000 0.000000
         material = wallSurface
-        position = 0 16 0
-lights
-    light
-        position = 30 -30 30
-shadows
-    shadow
-        shader = pipeline/pass1Shadow.frag
-        jitteringScale = 5
-        light = light
-        textureSize = 4096 x 4096
+        model = l2_env_wall
 scene = column
 scene = craneBase
 scene = floor
