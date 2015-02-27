@@ -22,4 +22,4 @@ menubar
     MenuBar
         menu = File
 
-menubar = MenuBar
+mainwindow.menubar = MenuBar

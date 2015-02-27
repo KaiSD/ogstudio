@@ -1,8 +1,13 @@
-mainwindow = ui/MainWindow.ui
-visible = 1
 filedialog
     NewProject
         title = New project
     OpenProject
         title = Open project
+dock
+    SceneTree
+        title = Scene tree
+mainwindow
+    file = ui/MainWindow.ui
+    dock = SceneTree right
+    visible = 1
 
