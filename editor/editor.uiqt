@@ -3,8 +3,16 @@ filedialog
         title = New project
     OpenProject
         title = Open project
+treeitem
+    Scene
+        fake
+            open = 1
+tree
+    Scene
+        item = fake
 dock
     SceneTree
+        child = tree.Scene
         title = Scene tree
 mainwindow
     file = ui/MainWindow.ui
