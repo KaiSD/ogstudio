@@ -3,13 +3,9 @@ filedialog
         title = New project
     OpenProject
         title = Open project
-treeitem
-    Scene
-        fake
-            open = 1
 tree
     Scene
-        item = fake
+        count = 0
 dock
     SceneTree
         child = tree.Scene
