@@ -3,9 +3,21 @@ filedialog
         title = New project
     OpenProject
         title = Open project
+action
+    SceneAddNode
+        title = Add node
+    SceneDeleteNode
+        title = Delete node
+menu
+    SceneItemMenu
+        action = SceneDeleteNode
+    SceneMenu
+        action = SceneAddNode
 tree
     Scene
         count = 0
+        itemmenu = SceneItemMenu
+        menu = SceneMenu
 dock
     SceneTree
         child = tree.Scene
