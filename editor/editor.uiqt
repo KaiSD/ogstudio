@@ -22,8 +22,34 @@ dock
     SceneTree
         child = tree.Scene
         title = Scene tree
+propertybrowseritem
+    PropertyBrowser
+        positionx
+            title = position.x
+            group = geometry
+            value = 1.2
+        positiony
+            title = position.y
+            group = geometry
+            value = 0.999
+        positionz
+            title = position.z
+            group = geometry
+            value = 230.7
+propertybrowsergroup
+    PropertyBrowser
+        geometry
+            title = Geometry
+propertybrowser
+    PropertyBrowser
+        group = geometry
+dock
+    ScenePropertyBrowser
+        child = propertybrowser.PropertyBrowser
+        title = Property browser
 mainwindow
     file = ui/MainWindow.ui
     dock = SceneTree right
+    dock = ScenePropertyBrowser right
     visible = 1
 
