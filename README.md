@@ -1,1 +1,1 @@
-The primary goal of The Opensource Game Studio Team is the creation of the free Toolset for creating the computer games, and also the creation of games with its aid. At present we developing the game engine, in which, we try to combine the best things, that we managed to find in the the world Opensource and Freeware with our own developments.
+Old and new resources.
