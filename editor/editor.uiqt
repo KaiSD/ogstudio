@@ -26,23 +26,21 @@ propertybrowseritem
     PropertyBrowser
         positionx
             title = position.x
-            group = geometry
+            group = Geometry
             value = 1.2
         positiony
             title = position.y
-            group = geometry
+            group = Geometry
             value = 0.999
         positionz
             title = position.z
-            group = geometry
+            group = Geometry
             value = 230.7
-propertybrowsergroup
-    PropertyBrowser
-        geometry
-            title = Geometry
 propertybrowser
     PropertyBrowser
-        group = geometry
+        item = positionx
+        item = positiony
+        item = positionz
 dock
     ScenePropertyBrowser
         child = propertybrowser.PropertyBrowser
